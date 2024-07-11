@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-<div class="container-mx">
-    <div class="row">
-        <div class="col-md-12 text-center p-3">
-            <div class="header">
-                <h1>Faridpur Engineering College</h1>
-            </div>
-        </div>
-    </div>
-</div>
-=======
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
@@ -46,4 +35,3 @@
 
     </div>
 </header>
->>>>>>> Stashed changes
