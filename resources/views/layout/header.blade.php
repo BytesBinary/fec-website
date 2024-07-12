@@ -31,6 +31,19 @@
                                 <li><a href="#">Civil Engineering</a></li>
                     </ul>
                 </li>
+                <li class="dropdown"><a href="#"><span>Clubs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                                <li><a href="#">RIC-Research & Innovation Center</a></li>
+                                <li><a href="#">FECCDC-Cyber Defense Club</a></li>
+                                <li><a href="#">FECDC-Debating Club</a></li>
+                                <li><a href="#">FECSA-Sports Association</a></li>
+                                <li><a href="#">FECPC-Photographic Club</a></li>
+                                <li><a href="#">FECCP-Club of Profession</a></li>
+                                <li><a href="#">FECPC-Programming Club</a></li>
+                                <li><a href="#">FECIRDC-Islamic Research & Dawah Center</a></li>
+                                <li><a href="#">FECRSG-Rover Scout Group</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown"><a href="#"><span>Admission</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                                 <li><a href="#">Admission Information</a></li>
