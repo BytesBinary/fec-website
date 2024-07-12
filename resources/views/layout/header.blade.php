@@ -9,7 +9,7 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="" class="active">Home</a></li>
-                <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li class="dropdown"><a href="#"><span>Sabit Testing</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li class="dropdown"><a href="#"><span>College</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
