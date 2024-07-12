@@ -9,29 +9,48 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="" class="active">Home</a></li>
-                <li class="dropdown"><a href="#"><span>Sabit Testing</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li class="dropdown"><a href="#"><span>About College</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li class="dropdown"><a href="#"><span>College</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">History</a></li>
+                                <li><a href="#">At a glance</a></li>
                                 <li><a href="#">Vision & Mission </a></li>
                                 <li><a href="#">Infrastructure</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#"><span>Principal</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">About Principal</a></li>
                                 <li><a href="#">Message From Principal</a></li>
-                                <li><a href="#">Previous Principals</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </li>
+                <li class="dropdown"><a href="#"><span>Academic</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                                <li><a href="#">Syllabus</a></li>
+                                <li><a href="#">Semester Plan</a></li>
+                                <li><a href="#">Login</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Departments</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                                <li><a href="#">Computer Science & Engineering</a></li>
+                                <li><a href="#">Electrical & Electronic Engineering</a></li>
+                                <li><a href="#">Civil Engineering</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Admission</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                                <li><a href="#">Admission Information</a></li>
+                                <li><a href="#">Admission Test Result</a></li>
+                                <li><a href="https://collegeadmission.eis.du.ac.bd/bn/b45de047fde9788cadae3cfe8e88dcc2" target="_blank">Apply Online</a></li>
+                    </ul>
+                </li>
+                <li class=" ">
+                    <a class="nav-link disabled" aria-disabled="true" style="color: rgba(93, 90, 90, 0.729)">Research</a>
+                  </li>
+                  <li><a href="" class=" ">Notices</a></li>
+                  <li><a href="" class=" ">Contact Us</a></li>
+
+                    </ul>
+
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
 
     </div>
 </header>
