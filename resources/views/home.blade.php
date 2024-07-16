@@ -22,8 +22,8 @@
                     <img src="{{asset('assets/img/FEClogo.png')}}" class="img-fluid hero-img" alt="" style="height: 255pt" data-aos="zoom-out" data-aos-delay="300">
                 </div>
             </div>
-
-        </section><!-- /Hero Section -->
+        </section>
+        <!-- /Hero Section -->
 
         <!-- Featured Services Section -->
         <section id="featured-services" class="featured-services section light-background">
