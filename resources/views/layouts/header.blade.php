@@ -6,7 +6,7 @@
         </a>
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="{{route('home')}}" class="{{ is_active_route('home') }}">Home</a></li>
+                <li><a href="{{ route('home')  }}" class="{{ is_active_route('home') }}">Home</a></li>
                 <li class="dropdown"><a href="#"><span>About College</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li><a href="#">At a glance</a></li>
