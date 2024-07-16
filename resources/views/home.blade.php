@@ -7,6 +7,7 @@
 @section('content')
     <main class="main">
         <!-- Hero Section -->
+
         <section id="hero" class="hero section">
             <div class="hero-bg">
                 <img src="{{asset('assets/img/'.$hero_section['img'])}}" alt="{{$hero_section['img_alt']}}">
@@ -34,33 +35,38 @@
 
                     <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-                            <div>
-                                <h4 class="title"><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <div class="icon flex-shrink-0"><i class="bi bi-mortarboard-fill" style="color: red"></i></div>
+
+                            <div class="col-md-3">
+                                <div class="h-about-body">
+                                    <h5>Established</h5>
+                                    <h3>2010</h3>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                     <!-- End Service Item -->
 
                     <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-buildings" style="color: red"></i></div>
                             <div>
-                                <h4 class="title"><a href="#" class="stretched-link">Dolor Sitema</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exa</p>
+                                <h4 class="title"><a href="#" class="stretched-link" style="color: red ">Departments</a></h4>
+                                <h3>3</h3>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-people-fill" style="color: red"></i></div>
                             <div>
-                                <h4 class="title"><a href="#" class="stretched-link">Sed ut perspiciatis</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                                <h4 class="title"><a href="#" class="stretched-link">Students</a></h4>
+                               <h3>800+</h3>
                             </div>
                         </div>
+                    </section>
                     </div><!-- End Service Item -->
 
                 </div>
@@ -745,70 +751,42 @@
                         </div>
                     </div>
                     <!-- End Info Item -->
-                    {{-- exam control --}}
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: black; padding-left: 30px;">
-                                    <i class=" "></i>Incharge - Exam Control Room
-                                </button>
-                            </h2>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                             FEC Library
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Email :<a href="mailto:library@fec.ac.bd"> <strong></strong> library@fec.ac.bd</a></div>
+                          </div>
                         </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion" style="margin-left: 32px;">
-                            <div class="card-body">
-                                <p><strong>Email:</strong>exam.control@fec.ac.bd</p>
-                            </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Registrar Section
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Email :<a href="mailto:registrar@fec.ac.bd"> <strong>registrar@fec.ac.bd</strong>
+                            </a></div>
+                          </div>
                         </div>
-                    </div>
-                    {{-- library --}}
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color: black; padding-left: 30px;">
-                                    <i class="fas fa-book"></i>FEC Library
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion" style="margin-left: 32px;">
-                            <div class="card-body">
-                                <p><strong>Email:</strong>library@fec.ac.bd</p>
-                                <p><strong>Email:</strong>rafiqul.islam@fec.ac.bd</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ending --}}
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Accounts Section
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 
-                    {{-- accountant --}}
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: black; padding-left: 30px;">
-                                    <i class=" "></i>Accountant Section
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion" style="margin-left: 32px;">
-                            <div class="card-body">
-                                <p><strong>Email:</strong>accountant@fec.ac.bd</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ending --}}
+                            <div class="accordion-body">Email :<a href="mailto: accountant@fec.ac.bd"> <strong>accountant@fec.ac.bd</strong>
+                            </a></div>
 
-                    <div class="card">
-                        <div class="card-header" id="headingSix">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: black; padding-left: 30px;">
-                                    <i class=" "></i>Registrar Section
-                                </button>
-                            </h2>
+                          </div>
                         </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion" style="margin-left: 32px;">
-                            <div class="card-body">
-                                <p><strong>Email:</strong>registrar@fec.ac.bd</p>
-                            </div>
-                        </div>
-                    </div>
+                      </div>
                 </div>
 
                 <div class="row gy-4 mt-1">
