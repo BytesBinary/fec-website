@@ -36,7 +36,7 @@ class PageSeeder extends Seeder
                 'get_started_btn' => 'Get Started',
                 'get_started_btn_url' => '#about',
                 'watch_video_btn' => 'Watch Video',
-                'watch_video_btn_url' => '#',
+                'watch_video_btn_url' => 'https://youtu.be/_H9B4iynTY0?si=tGqF7He1rRQdkuA8',
             ]),
             'meta_type' => 'json',
         ]);
