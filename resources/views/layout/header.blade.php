@@ -8,7 +8,8 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="" class="active">Home</a></li>
+                <li><a href="{{route('home')}}" class="{{ is_active_route('home') }}">Home</a></li>
+                <li><a href="">Notices</a></li>
                 <li class="dropdown"><a href="#"><span>About College</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                             <li><a href="#">At a glance</a></li>
@@ -46,9 +47,9 @@
                 </li>
                 <li class="dropdown"><a href="#"><span>Admission</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                                <li><a href="#">Admission Information</a></li>
-                                <li><a href="#">Admission Test Result</a></li>
-                                <li><a href="https://collegeadmission.eis.du.ac.bd/bn/b45de047fde9788cadae3cfe8e88dcc2" target="_blank">Apply Online</a></li>
+                        <li><a href="#">Admission Information</a></li>
+                        <li><a href="#">Admission Test Result</a></li>
+                        <li><a href="https://collegeadmission.eis.du.ac.bd/bn/b45de047fde9788cadae3cfe8e88dcc2" target="_blank">Apply Online</a></li>
                     </ul>
                 </li>
                 <li class=" ">
@@ -56,9 +57,6 @@
                   </li>
                   <li><a href="" class=" ">Notices</a></li>
                   <li><a href="" class=" ">Contact Us</a></li>
-
-                    </ul>
-
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

@@ -9,7 +9,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section">
             <div class="hero-bg">
-                <img src="assets/img/bg-image.jpg" alt="">
+                <img src="{{asset('assets/img/bg-image.jpg')}}" alt="">
             </div>
             <div class="container text-center">
                 <div class="d-flex flex-column justify-content-center align-items-center">
@@ -19,7 +19,7 @@
                         <a href="#about" class="btn-get-started">Get Started</a>
                         <a href="https://youtu.be/_H9B4iynTY0?si=tGqF7He1rRQdkuA8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
-                    <img src="assets/img/FEClogo.png" class="img-fluid hero-img" alt="" style="height: 255pt" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="{{asset('assets/img/FEClogo.png')}}" class="img-fluid hero-img" alt="" style="height: 255pt" data-aos="zoom-out" data-aos-delay="300">
                 </div>
             </div>
 
