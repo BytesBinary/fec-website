@@ -9,19 +9,20 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section">
             <div class="hero-bg">
-                <img src="assets/img/hero-bg-light.webp" alt="">
+                <img src="assets/img/bg-image.jpg" alt="">
             </div>
             <div class="container text-center">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <h1 data-aos="fade-up">Welcome to <span>QuickStart</span></h1>
+                    <h1 data-aos="fade-up">Welcome to <br><span>Faridpur Enginnering College</span></h1>
                     <p data-aos="fade-up" data-aos-delay="100">Quickly start your project now and set the stage for success<br></p>
                     <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                         <a href="#about" class="btn-get-started">Get Started</a>
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                        <a href="https://youtu.be/_H9B4iynTY0?si=tGqF7He1rRQdkuA8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
-                    <img src="assets/img/hero-services-img.webp" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="assets/img/FEClogo.png" class="img-fluid hero-img" alt="" style="height: 255pt" data-aos="zoom-out" data-aos-delay="300">
                 </div>
             </div>
+
         </section><!-- /Hero Section -->
 
         <!-- Featured Services Section -->
@@ -712,7 +713,7 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
+                <h2>Contact Us</h2>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div><!-- End Section Title -->
 
@@ -720,11 +721,11 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
                             <i class="bi bi-geo-alt"></i>
                             <h3>Address</h3>
-                            <p>A108 Adam Street, New York, NY 535022</p>
+                            <p style="text-align: center">Dr Kaji Motaher Hossain Rd,Komlapur,Baytul Aman,Faridpur-7800</p>
                         </div>
                     </div><!-- End Info Item -->
 
@@ -732,7 +733,7 @@
                         <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-telephone"></i>
                             <h3>Call Us</h3>
-                            <p>+1 5589 55488 55</p>
+                            <p>0247884754 5</p>
                         </div>
                     </div><!-- End Info Item -->
 
@@ -740,15 +741,79 @@
                         <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
                             <i class="bi bi-envelope"></i>
                             <h3>Email Us</h3>
-                            <p>info@example.com</p>
+                            <p>principal@fec.ac.bd</p>
                         </div>
-                    </div><!-- End Info Item -->
+                    </div>
+                    <!-- End Info Item -->
+                    {{-- exam control --}}
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: black; padding-left: 30px;">
+                                    <i class=" "></i>Incharge - Exam Control Room
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion" style="margin-left: 32px;">
+                            <div class="card-body">
+                                <p><strong>Email:</strong>exam.control@fec.ac.bd</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- library --}}
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color: black; padding-left: 30px;">
+                                    <i class="fas fa-book"></i>FEC Library
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion" style="margin-left: 32px;">
+                            <div class="card-body">
+                                <p><strong>Email:</strong>library@fec.ac.bd</p>
+                                <p><strong>Email:</strong>rafiqul.islam@fec.ac.bd</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ending --}}
 
+                    {{-- accountant --}}
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: black; padding-left: 30px;">
+                                    <i class=" "></i>Accountant Section
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion" style="margin-left: 32px;">
+                            <div class="card-body">
+                                <p><strong>Email:</strong>accountant@fec.ac.bd</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ending --}}
+
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: black; padding-left: 30px;">
+                                    <i class=" "></i>Registrar Section
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion" style="margin-left: 32px;">
+                            <div class="card-body">
+                                <p><strong>Email:</strong>registrar@fec.ac.bd</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row gy-4 mt-1">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7312.402406850009!2d89.854812!3d23.597116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe2535f9df3a73%3A0x820055c30208a76c!2z4Kar4Kaw4Ka_4Kam4Kaq4KeB4KawIOCmh-CmnuCnjeCmnOCmv-CmqOCmv-Cmr-CmvOCmvuCmsOCmv-CmgiDgppXgprLgp4fgppw!5e0!3m2!1sbn!2sbd!4v1720968348137!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when+-downgrade"></iframe>
                     </div><!-- End Google Maps -->
 
                     <div class="col-lg-6">
