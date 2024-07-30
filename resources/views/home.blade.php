@@ -36,7 +36,7 @@
                             <div class="icon flex-shrink-0"><i class="bi bi-mortarboard-fill" style="color: red"></i></div>
                             <div class="col-md-3">
                                 <div class="h-about-body">
-                                    <h5>Established</h5>
+                                    <h5>Establish</h5>
                                     <h3>2010</h3>
                                 </div>
                             </div>
