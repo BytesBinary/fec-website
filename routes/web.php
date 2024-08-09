@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomePageController::class, 'load_page'] )->name('home');
+Route::get('/notices', [HomePageController::class, 'load_page'] )->name('notices');
+Route::get('/contactus', [HomePageController::class, 'load_page'] )->name('contactus');
+
