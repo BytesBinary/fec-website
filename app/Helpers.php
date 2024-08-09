@@ -22,11 +22,12 @@ if( ! function_exists( 'get_pages' ) ) {
             $pageData = $page->toArray();
             if( $page->page_parent ) {
                 $slug = get_page_slug($page->page_parent);
-                $convertedPages[$slug]['subpage'][$page->page_slug] = $pageData;
+                $convertedPages[$slug]['subpages'][$page->page_slug] = $pageData;
             } else {
                 if( $page->page_type === 'parent' ) {
-                    if( array_key_exists('subpage', $convertedPages[$page->page_slug] ) ) {
-                        $pageData['subpage'] = $convertedPages[$page->page_slug]['subpage'];
+                    $slug = get_page_slug($page->id);
+                    if( array_key_exists($slug, $convertedPages) && array_key_exists('subpages', $convertedPages[$page->page_slug] ) ) {
+                        $pageData['subpages'] = $convertedPages[$page->page_slug]['subpages'];
                     }
                     $convertedPages[$page->page_slug] = $pageData;
                 }
