@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Pages;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Pages;
 
-class PageSeeder extends Seeder
+class HomePageSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,6 +19,7 @@ class PageSeeder extends Seeder
             'page_title' => 'Home',
             'page_content' => '',
             'page_sections' => '',
+            'page_status' => 'publish',
             'page_slug' => 'home'
         ]);
 

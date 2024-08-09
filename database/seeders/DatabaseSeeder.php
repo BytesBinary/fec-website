@@ -15,7 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(
-          PageSeeder::class
+          HomePageSeeder::class
+        );
+        $this->call(
+          AboutCollegePageSeeder::class
         );
     }
 }

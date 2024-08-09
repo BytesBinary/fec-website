@@ -19,7 +19,8 @@ return new class extends Migration
             $table->longText('page_content')->nullable();
             $table->string('page_sections');
             $table->string('page_type')->nullable();
-            $table->string('page_parent')->nullable()->unique();
+            $table->string('page_parent')->nullable();
+            $table->string('page_status')->default('publish');
             $table->string('page_slug')->unique();
             $table->timestamps();
         });
