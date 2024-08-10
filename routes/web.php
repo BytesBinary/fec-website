@@ -22,9 +22,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomePageController::class, 'load_page'] )->name('home');
+
 Route::group(['prefix' => 'about-college'], function () {
     Route::get('/at-a-glance', [AboutPageController::class, 'at_a_glance'] )->name('about-college/at-a-glance');
-    Route::get('/vision-mission', [AboutPageController::class, 'vision_mission'] )->name('about-college/vision--mission');
+    Route::get('/vision-mission', [AboutPageController::class, 'vision_mission'] )->name('about-college/vision-&-mission');
     Route::get('/infrastructure', [AboutPageController::class, 'infrastructure'] )->name('about-college/infrastructure');
     Route::get('/message-from-principal', [AboutPageController::class, 'message_from_principal'] )->name('about-college/message-from-principal');
 });
