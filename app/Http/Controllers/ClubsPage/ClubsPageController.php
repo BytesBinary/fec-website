@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\clubsPage;
+namespace App\Http\Controllers\ClubsPage;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -32,5 +32,8 @@ class ClubsPageController extends Controller
         return view('clubs.fecirdc-islamic-research-&-dawah-center');
     }
 
-
+    public function FECRSG()
+    {
+        return view('clubs.fecrsg-rover-scout-group');
+    }
 }

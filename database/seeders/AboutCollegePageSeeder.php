@@ -39,7 +39,7 @@ class AboutCollegePageSeeder extends Seeder
                 'page_title' => $subpage,
                 'page_content' => '',
                 'page_sections' => '',
-                'page_slug' => $slug . '/' . strtolower(str_replace(' ', '-', $subpage)),
+                'page_slug' => $slug . '/' . strtolower(str_replace(array(' '), '-', $subpage)),
                 'page_parent' => $id
             ]);
         }

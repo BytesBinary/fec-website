@@ -11,13 +11,13 @@ $pages = get_pages();
             <ul>
                 @foreach ($pages as $page)
                     @if ( $page['page_type'] !== 'parent' )
-                        <li><a href="" class="{{ is_active_route($page['page_slug']) }}">{{ $page['page_title'] }}</a></li>
+                        <li><a href="{{ route($page['page_slug'])  }}" class="{{ is_active_route($page['page_slug']) }}">{{ $page['page_title'] }}</a></li>
                     @else
                     <li class="dropdown"><a href="#"><span>{{ $page['page_title'] }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             @if( isset($page['subpages']) )
                                 @foreach ($page['subpages'] as $subpage )
-                                    <li href=""><a href="">{{ $subpage['page_title'] }}</a></li>
+                                    <li><a href="{{ route( $subpage['page_slug'] )  }}">{{ $subpage['page_title'] }}</a></li>
                                 @endforeach
                             @endif
                         </ul>
