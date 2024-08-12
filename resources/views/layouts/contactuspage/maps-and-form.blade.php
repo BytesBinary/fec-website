@@ -1,0 +1,30 @@
+<div class="row gy-4 mt-1">
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7312.402406850009!2d89.854812!3d23.597116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe2535f9df3a73%3A0x820055c30208a76c!2z4Kar4Kaw4Ka_4Kam4Kaq4KeB4KawIOCmh-CmnuCnjeCmnOCmv-CmqOCmv-Cmr-CmvOCmvuCmsOCmv-CmgiDgppXgprLgp4fgppw!5e0!3m2!1sbn!2sbd!4v1720968348137!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when+-downgrade"></iframe>
+    </div>
+
+    <div class="col-lg-6">
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <div class="row gy-4">
+                <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+                <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+                <div class="col-md-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+                <div class="col-md-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <button type="submit">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
