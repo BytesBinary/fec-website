@@ -1,45 +1,18 @@
 @extends("layouts.app")
 
-@section('content')
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
+@section('title')
+    {{ $page['page_title']  }}
+@endsection
 
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-down">
-                <br>
-                <br>
-                <br>
-                <h2>Contact Us</h2>
-            </div><!-- End Section Title -->
+@section('content')
+        <section id="contact" class="contact section">
+            <div class="container section-title page-top-headline" data-aos="fade-down">
+                <h2>{{ $page['page_title']  }}</h2>
+            </div>
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
                 <div class="row gy-4">
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-                            <i class="bi bi-geo-alt"></i>
-                            <h3>Address</h3>
-                            <p style="text-align: center">Dr Kaji Motaher Hossain Rd,Komlapur,Baytul Aman,Faridpur-7800</p>
-                        </div>
-                    </div><!-- End Info Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-                            <i class="bi bi-telephone"></i>
-                            <h3>Call Us</h3>
-                            <p>0247884754 5</p>
-                        </div>
-                    </div><!-- End Info Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-                            <i class="bi bi-envelope"></i>
-                            <h3>Email Us</h3>
-                            <p>principal@fec.ac.bd</p>
-                        </div>
-                    </div>
-                    <!-- End Info Item -->
+                    @include('layouts.contactuspage.main-address')
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header">
@@ -108,13 +81,12 @@
                                         <td><a href="mailto:caretaker@fec.ac.bd
                                         ">caretaker@fec.ac.bd</td>
                                       </tr>
-
                                     </tbody>
                                   </table>
                             </div>
                           </div>
                         </div>
-
+                    </div>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -177,11 +149,11 @@
                                         <td><a href="mailto:sameya.akter@fec.ac.bd">sameya.akter@fec.ac.bd</td>
                                       </tr>
                                 </tbody>
-                                </table>
+                            </table>
                         </div>
                         </div>
                     </div>
-
+                    </div>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">

@@ -4,7 +4,7 @@ use App\Http\Controllers\AboutPage\AboutPageController;
 use App\Http\Controllers\AcademicPage\AcademicPageController;
 use App\Http\Controllers\AdmissionPage\AdmissionPageController;
 use App\Http\Controllers\ClubsPage\ClubsPageController;
-use App\Http\Controllers\Contacts\ContactUsPageController;
+use App\Http\Controllers\ContactUsPage\ContactUsPageController;
 use App\Http\Controllers\DepartmentsPage\DepartmentsPageController;
 use App\Http\Controllers\HomePage\HomePageController;
 use App\Http\Controllers\NoticePage\NoticePageController;
