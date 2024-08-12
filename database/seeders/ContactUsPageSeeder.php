@@ -23,11 +23,16 @@ class ContactUsPageSeeder extends Seeder{
         ]);
 
         $page -> metas() -> create([
-            'meta_key' => 'hero_section',
+            'meta_key' => 'main_address',
             'meta_value' => json_encode([
-                'title' => 'Contact Us',
-                'college_name' => 'Faridpur Engineering College',
-                'address' => 'Faridpur sadar, Faridpur 7800'
+                'location' => array(
+                    'title' => 'Address',
+                    'details' => '',
+                ),
+                'phone' => array(
+                    'title' => 'Call Us',
+                    'details' => '01700000000',
+                ),
             ]),
             'meta_type' => 'json'
         ]);

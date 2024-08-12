@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Home
+    {{ $page['page_title']  }}
 @endsection
 
 @section('style')

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Pages;
+
 if( ! function_exists( 'is_active_route' ) ) {
     function is_active_route($route) : string
     {
@@ -37,5 +39,13 @@ if( ! function_exists( 'get_pages' ) ) {
             }
         }
         return $convertedPages;
+    }
+}
+
+if( ! function_exists('get_page_details') ) {
+    function get_page_details( $slug )
+    {
+        $page = Pages::where('page_slug', $slug )->first();
+        return $page->toArray();
     }
 }
