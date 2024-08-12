@@ -225,7 +225,7 @@ class ContactUsPageSeeder extends Seeder
                         ],
                     ]
                 ),
-                'non_tech_department' =>array(
+                'non_tech_department' => array(
                     'title' => 'Non-Tech Department',
                     'members' => [
                         [
@@ -233,19 +233,19 @@ class ContactUsPageSeeder extends Seeder
                             'name' => '	Head - Nontech',
                             'designation_section' => 'Head of the Dept. of Non-Tech',
                             'web_mail' => 'head.nontech@fec.ac.bd',
-                        ],                        
+                        ],
                         [
                             'sl' => '2',
                             'name' => 'Prof. Fakir Mohammad Nurujjaman',
                             'designation_section' => 'Professor (Economics)',
                             'web_mail' => 'fmjaman@fec.ac.bd',
-                        ],                        
+                        ],
                         [
                             'sl' => '3',
                             'name' => 'Abdus Satter Mia',
                             'designation_section' => 'Associate Professor (Physics)',
                             'web_mail' => 'satter.mia@fec.ac.bd',
-                        ],                        
+                        ],
                         [
                             'sl' => '4',
                             'name' => 'Muhammad Younus Ali',
@@ -281,28 +281,40 @@ class ContactUsPageSeeder extends Seeder
                 'library_section' => array(
                     'title' => 'Library section',
                     'members' => [
-                        'sl' => '8',
-                            'name' => 'Afia Begum',
-                            'designation_section' => 'Lecturer (Physics)',
-                            'web_mail' => 'afia.begum@fec.ac.bd',
+                        'sl' => '1',
+                        'name' => 'Library,Faridpur Engineering College',
+                        'designation_section' => 'Library',
+                        'web_mail' => 'library@fec.ac.bd',
+                    ],
+                    'members' => [
+                        'sl' => '2',
+                        'name' => 'MD. RAFIQUL ISLAM',
+                        'designation_section' => 'Librarian',
+                        'web_mail' => 'rafiqul.islam@fec.ac.bd',
                     ]
                 ),
                 'registrar_section' => array(
                     'title' => 'Registrar section',
                     'members' => [
-                        'sl' => '8',
-                            'name' => 'Afia Begum',
-                            'designation_section' => 'Lecturer (Physics)',
-                            'web_mail' => 'afia.begum@fec.ac.bd',
+                        'sl' => '1',
+                        'name' => 'Registrar,Faridpur Engineering College',
+                        'designation_section' => 'Registrar',
+                        'web_mail' => 'registrar@fec.ac.bd',
                     ]
                 ),
                 'accounts_section' => array(
                     'title' => 'Accounts section',
                     'members' => [
-                        'sl' => '8',
-                            'name' => 'Afia Begum',
-                            'designation_section' => 'Lecturer (Physics)',
-                            'web_mail' => 'afia.begum@fec.ac.bd',
+                        'sl' => '1',
+                        'name' => 'Accountant,Faridpur Engineering College',
+                        'designation_section' => 'Accountant',
+                        'web_mail' => 'accountant@fec.ac.bd',
+                    ],
+                    'members' => [
+                        'sl' => '2',
+                        'name' => 'Cashier, Faridpur Engineering College',
+                        'designation_section' => 'cashier',
+                        'web_mail' => 'cashier@fec.ac.bd',
                     ]
                 ),
             ]),
