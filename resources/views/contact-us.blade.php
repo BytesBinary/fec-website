@@ -86,74 +86,73 @@
                             </div>
                           </div>
                         </div>
-                    </div>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
-                        Computer Science & Engineering Department
-                        </button>
-                        </h2>
-                        <div id="flush-collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <table class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">SL</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Designation/Section</th>
-                                    <th scope="col">Web-mail</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <th scope="row">1</th>
-                                    <td>Head - Dept. of CSE</td>
-                                    <td>Head of the Dept. of CSE</td>
-                                    <td><a href="mailto:head.cse@fec.ac.bd">head.cse@fec.ac.bd</td>
-                                    </tr>
-                                    <tr>
-                                    <th scope="row">2</th>
-                                    <td>MD. KHALIL UDDIN</td>
-                                    <td>Associate Professor (CSE)</td>
-                                    <td><a href="mailto:khalil.uddin@fec.ac.bd">khalil.uddin@fec.ac.bd</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Dr. Sujit Biswas</td>
-                                        <td>Associate Professor (CSE)</td>
-                                        <td><a href="mailto:sujitedu@fec.ac.bd">sujitedu@fec.ac.bd</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">4</th>
-                                        <td>MD. TUHIN REZA</td>
-                                        <td>Lecturer (CSE)</td>
-                                        <td><a href="mailto:tuhin.reza@fec.ac.bd">tuhin.reza@fec.ac.bd</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">5</th>
-                                        <td>Md. Rasel Ahmed</td>
-                                        <td>Lecturer (CSE)</td>
-                                        <td><a href="mailto:rasel.ahmed@fec.ac.bd">rasel.ahmed@fec.ac.bd</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">6</th>
-                                        <td>Md. Sumon Reza</td>
-                                        <td>Lecturer (CSE)</td>
-                                        <td><a href="mailto:suman.reza@fec.ac.bd">suman.reza@fec.ac.bd</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">7</th>
-                                        <td>SAMEYA AKTER</td>
-                                        <td>Lecturer (CSE)</td>
-                                        <td><a href="mailto:sameya.akter@fec.ac.bd">sameya.akter@fec.ac.bd</td>
-                                      </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
+                                Computer Science & Engineering Department
+                                </button>
+                              </h2>
+                              <div id="flush-collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                            <th scope="col">SL</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Designation/Section</th>
+                                            <th scope="col">Web-mail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                            <th scope="row">1</th>
+                                            <td>Head - Dept. of CSE</td>
+                                            <td>Head of the Dept. of CSE</td>
+                                            <td><a href="mailto:head.cse@fec.ac.bd">head.cse@fec.ac.bd</td>
+                                            </tr>
+                                            <tr>
+                                            <th scope="row">2</th>
+                                            <td>MD. KHALIL UDDIN</td>
+                                            <td>Associate Professor (CSE)</td>
+                                            <td><a href="mailto:khalil.uddin@fec.ac.bd">khalil.uddin@fec.ac.bd</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Dr. Sujit Biswas</td>
+                                                <td>Associate Professor (CSE)</td>
+                                                <td><a href="mailto:sujitedu@fec.ac.bd">sujitedu@fec.ac.bd</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">4</th>
+                                                <td>MD. TUHIN REZA</td>
+                                                <td>Lecturer (CSE)</td>
+                                                <td><a href="mailto:tuhin.reza@fec.ac.bd">tuhin.reza@fec.ac.bd</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">5</th>
+                                                <td>Md. Rasel Ahmed</td>
+                                                <td>Lecturer (CSE)</td>
+                                                <td><a href="mailto:rasel.ahmed@fec.ac.bd">rasel.ahmed@fec.ac.bd</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">6</th>
+                                                <td>Md. Sumon Reza</td>
+                                                <td>Lecturer (CSE)</td>
+                                                <td><a href="mailto:suman.reza@fec.ac.bd">suman.reza@fec.ac.bd</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">7</th>
+                                                <td>SAMEYA AKTER</td>
+                                                <td>Lecturer (CSE)</td>
+                                                <td><a href="mailto:sameya.akter@fec.ac.bd">sameya.akter@fec.ac.bd</td>
+                                              </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                            </div>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -343,7 +342,6 @@
                             </div>
                         </div>
 
-
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header">
@@ -380,6 +378,7 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -407,6 +406,7 @@
                               </table></div>
                           </div>
                         </div>
+
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
