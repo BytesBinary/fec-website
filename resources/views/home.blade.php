@@ -13,6 +13,8 @@
 
         @include('layouts.homepage.features')
 
+        @include('layouts.homepage.online-service')
+
         @include('layouts.homepage.service')
 
         @include('layouts.homepage.faq')

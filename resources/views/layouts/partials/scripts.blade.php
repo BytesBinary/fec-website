@@ -10,3 +10,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- Main JS File -->
 <script src="{{asset('assets/js/main.js')}}"></script>
+

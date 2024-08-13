@@ -21,7 +21,7 @@
                 <div class="service-item d-flex">
                     <div class="icon flex-shrink-0"><i class="bi bi-buildings" style="color: red"></i></div>
                     <div>
-                        <h4 class="title"><a href="#" class="stretched-link" style="color: red ">Departments</a></h4>
+                        <h4 style="color: red ">Departments</h4>
                         <h3>3</h3>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="service-item d-flex">
                     <div class="icon flex-shrink-0"><i class="bi bi-people-fill" style="color: red"></i></div>
                     <div>
-                        <h4 class="title"><a href="#" class="stretched-link" style="color: red ">Students</a></h4>
+                        <h4 style="color: red ">Students</h4>
                         <h3>800+</h3>
                     </div>
                 </div>
