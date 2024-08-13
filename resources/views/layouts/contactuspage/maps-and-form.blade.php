@@ -1,6 +1,6 @@
 <div class="row gy-4 mt-1">
     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-        <iframe src="{{ $main_address['location']['link_address']}}"></iframe>
+        { $main_address['location']['link_address']}
     </div>
 
     <div class="col-lg-6">

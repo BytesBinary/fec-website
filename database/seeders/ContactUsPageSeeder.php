@@ -31,7 +31,7 @@ class ContactUsPageSeeder extends Seeder
                 'location' => array(
                     'title' => 'Address',
                     'details' => 'Dr Kaji Motaher Hossain Rd,Komlapur,Baytul Aman,Faridpur-7800',
-                    'link_address' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7312.402406850009!2d89.854812!3d23.597116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe2535f9df3a73%3A0x820055c30208a76c!2z4Kar4Kaw4Ka_4Kam4Kaq4KeB4KawIOCmh-CmnuCnjeCmnOCmv-CmqOCmv-Cmr-CmvOCmvuCmsOCmv-CmgiDgppXgprLgp4fgppw!5e0!3m2!1sbn!2sbd!4v1720968348137!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when+-downgrade'
+                    'link_address' => '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7312.402406850009!2d89.854812!3d23.597116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe2535f9df3a73%3A0x820055c30208a76c!2z4Kar4Kaw4Ka_4Kam4Kaq4KeB4KawIOCmh-CmnuCnjeCmnOCmv-CmqOCmv-Cmr-CmvOCmvuCmsOCmv-CmgiDgppXgprLgp4fgppw!5e0!3m2!1sbn!2sbd!4v1720968348137!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when+-downgrade"></iframe>'
                 ),
                 'phone' => array(
                     'title' => 'Call Us',
