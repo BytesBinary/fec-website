@@ -13,7 +13,7 @@
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gy-4">
                     @include('layouts.contactuspage.main-address')
-                    @include('layouts.contactuspage.others-details-accordion')
+                    @include('layouts.contactuspage.contact-details-accordion')
                     @include('layouts.contactuspage.maps-and-form')
                 </div>
             </div>

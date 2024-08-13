@@ -12,10 +12,10 @@ class HomePageController extends Controller
     public function load_page()
     {
         $page = get_page_details('home');
-        $hero_section = json_decode( PageMetas::where('page_id', $page['id'])->where('meta_key', 'hero_section')->first()->meta_value, true);
-        return view('home', array(
-            'page' => $page,
-            'hero_section' => $hero_section
-        ));
+        $hero_section = json_decode(
+            PageMetas::where('page_id', $page['id'])->where('meta_key', 'hero_section')->first()->meta_value,
+            true
+        );
+        return view('home', compact('page', 'hero_section'));
     }
 }

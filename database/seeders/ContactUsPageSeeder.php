@@ -30,15 +30,16 @@ class ContactUsPageSeeder extends Seeder
             'meta_value' => json_encode([
                 'location' => array(
                     'title' => 'Address',
-                    'details' => '',
+                    'details' => 'Dr Kaji Motaher Hossain Rd,Komlapur,Baytul Aman,Faridpur-7800',
+                    'link_address' => '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7312.402406850009!2d89.854812!3d23.597116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe2535f9df3a73%3A0x820055c30208a76c!2z4Kar4Kaw4Ka_4Kam4Kaq4KeB4KawIOCmh-CmnuCnjeCmnOCmv-CmqOCmv-Cmr-CmvOCmvuCmsOCmv-CmgiDgppXgprLgp4fgppw!5e0!3m2!1sbn!2sbd!4v1720968348137!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when+-downgrade"></iframe>'
                 ),
                 'phone' => array(
                     'title' => 'Call Us',
-                    'details' => '01700000000',
+                    'details' => '02478847545',
                 ),
                 'email' => array(
                     'title' => 'Email US',
-                    'details' => 'principal@fec.ac.bd',
+                    'details' => 'principal.fec@gmail.com',
                 ),
             ]),
             'meta_type' => 'json'
@@ -230,7 +231,7 @@ class ContactUsPageSeeder extends Seeder
                     'members' => [
                         [
                             'sl' => '1',
-                            'name' => '	Head - Nontech',
+                            'name' => 'Head - Nontech',
                             'designation_section' => 'Head of the Dept. of Non-Tech',
                             'web_mail' => 'head.nontech@fec.ac.bd',
                         ],
@@ -281,40 +282,46 @@ class ContactUsPageSeeder extends Seeder
                 'library_section' => array(
                     'title' => 'Library section',
                     'members' => [
-                        'sl' => '1',
-                        'name' => 'Library,Faridpur Engineering College',
-                        'designation_section' => 'Library',
-                        'web_mail' => 'library@fec.ac.bd',
-                    ],
-                    'members' => [
-                        'sl' => '2',
-                        'name' => 'MD. RAFIQUL ISLAM',
-                        'designation_section' => 'Librarian',
-                        'web_mail' => 'rafiqul.islam@fec.ac.bd',
+                        [
+                            'sl' => '1',
+                            'name' => 'Library,Faridpur Engineering College',
+                            'designation_section' => 'Library',
+                            'web_mail' => 'library@fec.ac.bd',
+                        ],
+                        [
+                            'sl' => '2',
+                            'name' => 'MD. RAFIQUL ISLAM',
+                            'designation_section' => 'Librarian',
+                            'web_mail' => 'rafiqul.islam@fec.ac.bd',
+                        ]
                     ]
                 ),
                 'registrar_section' => array(
                     'title' => 'Registrar section',
                     'members' => [
-                        'sl' => '1',
-                        'name' => 'Registrar,Faridpur Engineering College',
-                        'designation_section' => 'Registrar',
-                        'web_mail' => 'registrar@fec.ac.bd',
+                        [
+                            'sl' => '1',
+                            'name' => 'Registrar,Faridpur Engineering College',
+                            'designation_section' => 'Registrar',
+                            'web_mail' => 'registrar@fec.ac.bd',
+                        ]
                     ]
                 ),
                 'accounts_section' => array(
                     'title' => 'Accounts section',
                     'members' => [
-                        'sl' => '1',
-                        'name' => 'Accountant,Faridpur Engineering College',
-                        'designation_section' => 'Accountant',
-                        'web_mail' => 'accountant@fec.ac.bd',
-                    ],
-                    'members' => [
-                        'sl' => '2',
-                        'name' => 'Cashier, Faridpur Engineering College',
-                        'designation_section' => 'cashier',
-                        'web_mail' => 'cashier@fec.ac.bd',
+                        [
+                            'sl' => '1',
+                            'name' => 'Accountant,Faridpur Engineering College',
+                            'designation_section' => 'Accountant',
+                            'web_mail' => 'accountant@fec.ac.bd',
+                        ],
+                        [
+                            'sl' => '2',
+                            'name' => 'Cashier, Faridpur Engineering College',
+                            'designation_section' => 'cashier',
+                            'web_mail' => 'cashier@fec.ac.bd',
+                        ]
                     ]
                 ),
             ]),
