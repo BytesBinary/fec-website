@@ -22,10 +22,10 @@
                         <tbody>
                         @foreach($contact_detail['members'] as $contact)
                             <tr>
-                                <th scope="row">{{ $contact['sl'] ?? '' }}</th>
-                                <td>{{ $contact['name'] ?? '' }}</td>
-                                <td>{{ $contact['designation_section'] ?? '' }}</td>
-                                <td><a href="mailto:{{ $contact['web_mail'] ?? '' }}">{{ $contact['web_mail'] ?? '' }}</a></td>
+                                <th scope="row">{{ $contact['sl'] }}</th>
+                                <td>{{ $contact['name'] }}</td>
+                                <td>{{ $contact['designation_section'] }}</td>
+                                <td><a href="mailto:{{ $contact['web_mail'] }}">{{ $contact['web_mail'] }}</a></td>
                             </tr>
                         @endforeach
                         </tbody>
