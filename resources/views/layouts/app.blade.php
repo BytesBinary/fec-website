@@ -10,6 +10,7 @@
     @include('layouts.partials.styles')
 
     @yield('style')
+
 </head>
 <body>
 
@@ -24,6 +25,7 @@
 @yield('script')
 
 @include('layouts.partials.scripts')
+
 
 </body>
 </html>
