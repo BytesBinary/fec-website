@@ -8,12 +8,12 @@
     class AdmissionPageSeeder extends Seeder{
         /**
          * Run the database seeds
-         * 
+         *
          * @return void
          */
 
          public function run(){
-            //create the "Admission" Page
+            //create the "Admission" Pages
             $admissionPage = Pages::create([
                 'page_title' => 'Admission',
                 'page_type' => 'parent',

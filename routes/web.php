@@ -10,16 +10,6 @@ use App\Http\Controllers\HomePage\HomePageController;
 use App\Http\Controllers\NoticePage\NoticePageController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', [HomePageController::class, 'load_page'] )->name('home');
 
@@ -64,3 +54,4 @@ Route::group(['prefix'=>'admission'],function(){
 });
 
 Route::get('/contact-us', [ContactUsPageController::class, 'load_page'])->name('contactus');
+

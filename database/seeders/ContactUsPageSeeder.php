@@ -330,22 +330,16 @@ class ContactUsPageSeeder extends Seeder
         $page->metas()->create([
             'meta_key' => 'map_and_forms',
             'meta_value' => json_encode([
-                'map_section' => array(
+                'map' => array(
                     'map_url' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7312.402406850009!2d89.854812!3d23.597116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe2535f9df3a73%3A0x820055c30208a76c!2z4Kar4Kaw4Ka_4Kam4Kaq4KeB4KawIOCmh-CmnuCnjeCmnOCmv-CmqOCmv-Cmr-CmvOCmvuCmsOCmv-CmgiDgppXgprLgp4fgppw!5e0!3m2!1sbn!2sbd!4v1720968348137!5m2!1sbn!2sbd',
                 ),
-                'form_section' => array(
+                'form' => array(
+                    'name' => 'Your Name',
+                    'email' => 'Your Email',
+                    'subject' => 'Subject',
+                    'message' => 'Message',
                     'button_text' => 'Send Message',
-                    'form' => [
-                        'name' => 'Your Name',
-                        'email' => 'Your Email',
-                        'subject' => 'Subject',
-                        'message' => 'Message'
-                    ]
                 ),
-                'error_section' => array(
-                    'loading' => 'loading',
-                    'sent_message' => 'Your message has been sent. Thank you!'
-                )
             ]),
             'meta_type' => 'json'
         ]);

@@ -22,10 +22,9 @@
 
 @include('layouts.partials.below-footer')
 
-@yield('script')
-
 @include('layouts.partials.scripts')
 
+@yield('script')
 
 </body>
 </html>
