@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Notices;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Pages;
@@ -9,7 +10,7 @@ use App\Models\Pages;
 class AcademicPageSeeder extends Seeder{
         /**
      * Run the database seeds.
-     * 
+     *
      * @return void
      */
     public function run(){
@@ -27,7 +28,7 @@ class AcademicPageSeeder extends Seeder{
         $subpages = array(
            'Syllabus',
            'Semester Plan',
-           'Login' 
+           'Login'
         );
 
         foreach($subpages as $subpage){
@@ -39,5 +40,9 @@ class AcademicPageSeeder extends Seeder{
                 'page_parent' => $id
             ]);
         }
+
+        Notices::factory()->count(100)->create([
+            'type' => 'syllabus'
+        ]);
     }
 }

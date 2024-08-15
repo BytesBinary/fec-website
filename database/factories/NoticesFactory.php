@@ -18,6 +18,7 @@ class NoticesFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence,
+            'session' => $this->faker->year(),
             'file' => $this->faker->filePath(),
         ];
     }

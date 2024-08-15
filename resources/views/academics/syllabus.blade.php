@@ -1,1 +1,43 @@
 @extends("layouts.app")
+
+@section('title')
+    {{ $page['page_title']  }}
+@endsection
+
+@section('style')
+    @include('layouts.partials.datatable.datatable-style')
+@endsection
+
+@section('content')
+    <div class="container section-title page-top-section" data-aos="fade-down">
+        <h2>{{ $page['page_title']  }}</h2>
+        <div class="table-responsive">
+            <table id="example" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center">Serial</th>
+                    <th class="text-center">Session</th>
+                    <th class="text-center">Title</th>
+                    <th class="text-center">Syllabus</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach( $syllabuses as $syllabus )
+                    <tr>
+                        <td>{{ $loop->iteration  }}</td>
+                        <td>{{ $syllabus->session }}</td>
+                        <td>{{ $syllabus->title }}</td>
+                        <td>
+                            <a href="{{ asset('storage/notice/'.$syllabus->file) }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+@endsection
+
+@section('script')
+    @include('layouts.partials.datatable.datatable-script')
+@endsection
