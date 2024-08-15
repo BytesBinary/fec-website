@@ -12,7 +12,7 @@ class NoticePageController extends Controller
     public function load_page()
     {
         $page = get_page_details('notices');
-        $notices = Notices::all();
+        $notices = Notices::orderBy('created_at', 'desc')->get();
         return view('notice', compact('page', 'notices'));
     }
 }

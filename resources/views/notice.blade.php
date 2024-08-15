@@ -15,20 +15,20 @@
             <table id="example" class="table table-striped table-bordered">
                 <thead>
                 <tr>
-                    <th><input type="checkbox" id="select-all"></th>
-                    <th>Publish Date</th>
-                    <th>Notice Title</th>
-                    <th>Download</th>
+                    <th class="text-center">Serial</th>
+                    <th class="text-center">Publish Date</th>
+                    <th class="text-center">Notice Title</th>
+                    <th class="text-center">Download</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach( $notices as $notice )
                     <tr>
-                        <td><input type="checkbox" class="row-select"></td>
+                        <td>{{ $loop->iteration  }}</td>
                         <td>{{ $notice->created_at->format('d-m-Y') }}</td>
                         <td>{{ $notice->title }}</td>
                         <td>
-                            <a href="{{ asset('storage/notice/'.$notice->file) }}" class="btn btn-primary btn-sm" download>Download</a>
+                            <a href="{{ asset('storage/notice/'.$notice->file) }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
                         </td>
                     </tr>
                 @endforeach
