@@ -3,12 +3,16 @@
 namespace App\Http\Controllers\NoticePage;
 
 use App\Http\Controllers\Controller;
+use App\Models\Notices;
 use Illuminate\Http\Request;
+use Mockery\Matcher\Not;
 
 class NoticePageController extends Controller
 {
     public function load_page()
     {
-        return view('notice');
+        $page = get_page_details('notices');
+        $notices = Notices::orderBy('created_at', 'desc')->get();
+        return view('notice', compact('page', 'notices'));
     }
 }
