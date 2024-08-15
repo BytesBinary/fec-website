@@ -27,8 +27,7 @@ class AcademicPageSeeder extends Seeder{
 
         $subpages = array(
            'Syllabus',
-           'Semester Plan',
-           'Login'
+            'calender'
         );
 
         foreach($subpages as $subpage){

@@ -13,10 +13,7 @@ class AcademicPageController extends Controller
         $syllabuses = Notices::where('type','syllabus')->orderBy('created_at', 'desc')->get();
         return view('academics.syllabus',compact('page','syllabuses'));
     }
-    public function semester_plan(){
-        return view('academics.semester-plan');
-    }
-    public function login(){
-        return view('academics.login');
+    public function calender(){
+        return view('academics.calender');
     }
 }
