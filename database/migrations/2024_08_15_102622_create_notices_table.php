@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('file');
+            $table->string('description')->nullable();
+            $table->string('session')->nullable();
             $table->string('type')->default('notice');
             $table->timestamps();
         });

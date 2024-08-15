@@ -24,8 +24,7 @@ Route::get('/notices', [NoticePageController::class, 'load_page'] )->name('notic
 
 Route::group(['prefix' => 'academics'],function(){
     Route::get('/syllabus',[AcademicPageController::class,'syllabus'])-> name('academics/syllabus');
-    Route::get('/semester-plan',[AcademicPageController::class,'semester_plan'])->name('academics/semester-plan');
-    Route::get('/login',[AcademicPageController::class,'login'])->name('academics/login');
+    Route::get('/calender',[AcademicPageController::class,'calender'])->name('academics/calender');
 });
 
 Route::group(['prefix' => 'departments'],function(){
