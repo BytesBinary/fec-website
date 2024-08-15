@@ -9,6 +9,7 @@ class NoticePageController extends Controller
 {
     public function load_page()
     {
-        return view('notice');
+        $page = get_page_details('notices');
+        return view('notice', compact('page'));
     }
 }
