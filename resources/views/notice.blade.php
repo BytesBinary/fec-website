@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section('title')
-    Notice
+    {{ $page['page_title']  }}
 @endsection
 
 @section('style')
