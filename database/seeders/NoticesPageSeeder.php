@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Notices;
 use Illuminate\Database\Seeder;
 use App\Models\Pages;
+use PHPUnit\Framework\TestStatus\Notice;
 
 class NoticesPageSeeder extends seeder{
         /**
@@ -29,5 +30,7 @@ class NoticesPageSeeder extends seeder{
             ]),
             'meta_type' => 'json'
         ]);
+
+        Notices::factory()->count(100)->create();
     }
 }

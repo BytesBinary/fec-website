@@ -5,20 +5,7 @@
 @endsection
 
 @section('style')
-    <style>
-        .dataTables_length label{
-            float: left !important;
-        }
-        .dataTables_info{
-            float: left !important;
-        }
-        .dataTables_filter label{
-            float: right !important;
-        }
-        .dataTables_paginate ul {
-            float: right !important;
-        }
-    </style>
+    @include('layouts.partials.datatable.datatable-style')
 @endsection
 
 @section('content')
@@ -29,30 +16,22 @@
                 <thead>
                 <tr>
                     <th><input type="checkbox" id="select-all"></th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Actions</th>
+                    <th>Publish Date</th>
+                    <th>Notice Title</th>
+                    <th>Download</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><input type="checkbox" class="row-select"></td>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>
-                        <button class="btn btn-primary btn-sm">Edit</button>
-                        <button class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <!-- Add more rows as needed -->
+                @foreach( $notices as $notice )
+                    <tr>
+                        <td><input type="checkbox" class="row-select"></td>
+                        <td>{{ $notice->created_at->format('d-m-Y') }}</td>
+                        <td>{{ $notice->title }}</td>
+                        <td>
+                            <a href="{{ asset('storage/notice/'.$notice->file) }}" class="btn btn-primary btn-sm" download>Download</a>
+                        </td>
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>
