@@ -1,1 +1,1 @@
-@extends("contact-us")
+@extends('layouts.app')
