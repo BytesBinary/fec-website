@@ -13,7 +13,7 @@
          */
 
          public function run(){
-            //create the "Admission" Pages
+            //create the "Admission" pages
             $admissionPage = Pages::create([
                 'page_title' => 'Admission',
                 'page_type' => 'parent',

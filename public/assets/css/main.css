@@ -213,13 +213,13 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Index Pages Header
+/* Index pages Header
 ------------------------------*/
 .index-page .header {
   --background-color: rgba(255, 255, 255, 0);
 }
 
-/* Index Pages Header on Scroll
+/* Index pages Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
   --background-color: #ffffff;
@@ -756,7 +756,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Pages Titles & Breadcrumbs
+# Global pages Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
   --background-color: color-mix(in srgb, var(--default-color), transparent 96%);

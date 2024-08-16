@@ -13,6 +13,6 @@ class NoticePageController extends Controller
     {
         $page = get_page_details('notices');
         $notices = Notices::where('type','notice')->orderBy('created_at', 'desc')->get();
-        return view('notice', compact('page', 'notices'));
+        return view('pages.notice', compact('page', 'notices'));
     }
 }

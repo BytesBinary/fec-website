@@ -16,6 +16,6 @@ class HomePageController extends Controller
             PageMetas::where('page_id', $page['id'])->where('meta_key', 'hero_section')->first()->meta_value,
             true
         );
-        return view('home', compact('page', 'hero_section'));
+        return view('pages.home', compact('page', 'hero_section'));
     }
 }
