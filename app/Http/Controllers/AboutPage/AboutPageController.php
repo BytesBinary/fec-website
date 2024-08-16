@@ -9,21 +9,21 @@ class AboutPageController extends Controller
 {
     public function at_a_glance()
     {
-        return view('about.at-a-glance');
+        return view('pages.about.at-a-glance');
     }
 
     public function vision_mission()
     {
-        return view('about.vision-mission');
+        return view('pages.about.vision-mission');
     }
 
     public function infrastructure()
     {
-        return view('about.infrastructure');
+        return view('pages.about.infrastructure');
     }
 
     public function message_from_principal()
     {
-        return view('about.message-from-principal');
+        return view('pages.about.message-from-principal');
     }
 }

@@ -22,6 +22,6 @@ class ContactUsPageController extends Controller
             PageMetas::where('page_id', $page['id']) -> where('meta_key','map_and_forms')->first()->meta_value,true
         );
 
-        return view('contact-us', compact('page', 'contact_details', 'main_address','map_and_forms'));
+        return view('pages.contact-us', compact('page', 'contact_details', 'main_address','map_and_forms'));
     }
 }
