@@ -18,7 +18,7 @@ class LoginPageSeeder extends Seeder
     {
 
         $LoginPage = Pages::create([
-            'page_title' => 'Login Page',
+            'page_title' => 'Login',
             'page_type' => 'parent',
             'page_content' => '',
             'page_sections' => '',
