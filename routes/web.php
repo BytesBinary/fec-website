@@ -58,5 +58,5 @@ Route::get('/contact-us', [ContactUsPageController::class, 'load_page'])->name('
 Route::group(['prefix' => 'login'],function(){
     Route::get('/students-login',[LoginPageController::class,'students_login'])->name('login/students-login');
     Route::get('/teachers-login',[LoginPageController::class,'teachers_login'])->name('login/teachers-login');
-    Route::get('/admin-login',[LoginPageController::class,'admin_login'])->name('login/amdin-login');
+    Route::get('/admin-login',[LoginPageController::class,'admin_login'])->name('login/admin-login');
 });
