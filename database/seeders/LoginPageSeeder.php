@@ -30,7 +30,8 @@ class LoginPageSeeder extends Seeder
 
         $subpages = array(
             'Students Login',
-            'Teachers Login'
+            'Teachers Login',
+            'Admin Login'
         );
 
         foreach ($subpages as $subpage) {
