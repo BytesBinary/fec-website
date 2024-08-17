@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
                 DepartmentsPageSeeder::class,
                 ClubsPageSeeder::class,
                 AdmissionPageSeeder::class,
-                ContactUsPageSeeder::class
+                ContactUsPageSeeder::class,
+                LoginPageSeeder::class
             ]
         );
     }

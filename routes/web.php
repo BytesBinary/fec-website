@@ -7,6 +7,7 @@ use App\Http\Controllers\ClubsPage\ClubsPageController;
 use App\Http\Controllers\ContactUsPage\ContactUsPageController;
 use App\Http\Controllers\DepartmentsPage\DepartmentsPageController;
 use App\Http\Controllers\HomePage\HomePageController;
+use App\Http\Controllers\LoginPage\LoginPageController;
 use App\Http\Controllers\NoticePage\NoticePageController;
 use Illuminate\Support\Facades\Route;
 
@@ -54,3 +55,7 @@ Route::group(['prefix'=>'admission'],function(){
 
 Route::get('/contact-us', [ContactUsPageController::class, 'load_page'])->name('contactus');
 
+Route::group(['prefix' => 'login'],function(){
+    Route::get('/students-login',[LoginPageController::class,'students_login'])->name('login/students-login');
+    Route::get('/teachers-login',[LoginPageController::class,'teachers_login'])->name('login/teachers-login');
+});
