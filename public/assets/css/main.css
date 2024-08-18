@@ -1,23 +1,9 @@
-/**
-* Template Name: QuickStart
-* Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Nunito",  sans-serif;
   --nav-font: "Inter",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #3d4348; /* Default color used for the majority of the text content across the entire website */
@@ -27,7 +13,6 @@
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #313336;  /* The default color of the main navmenu links */
   --nav-hover-color: #77b6ca; /* Applied to main navmenu links when they are hovered over or active */
@@ -36,8 +21,6 @@
   --nav-dropdown-color: #313336; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #77b6ca; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f8fbfc;
@@ -52,7 +35,7 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
+
 :root {
   scroll-behavior: smooth;
 }
@@ -67,14 +50,14 @@ body {
 }
 
 a {
-  color: var(--accent-color);
-  text-decoration: none !important;
-  transition: 0.3s;
+    color: var(--accent-color);
+    text-decoration: none !important;
+    transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
 }
 
 h1,
@@ -85,58 +68,6 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
-}
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -858,50 +789,6 @@ section,
   overflow: hidden;
 }
 
-.temp-herotxt-margintop{
-    margin-top: -48px;
-}
-.hero-txt {
-    position: relative;
-    color: transparent !important;
-    -webkit-text-stroke: 0.1vw gray;
-    display: inline-block;
-}
-
-.hero-txt::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    -webkit-text-stroke: 0vw gray;
-    overflow: hidden;
-    width: 0;
-    white-space: nowrap;
-    animation: animate 1.5s linear forwards;
-    animation-delay: 1s;
-}
-.visually-hidden-with-space {
-    visibility: hidden;
-  }
-@keyframes animate {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes animate{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100%;
-    }
-}
-
 .hero .hero-bg img {
   position: absolute;
   inset: 0;
@@ -937,54 +824,15 @@ section,
   font-weight: 400;
 }
 
+.hero .carousel-overlay {
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+}
+
 @media (min-width: 768px) {
   .hero .hero-img {
     max-width: 600px;
   }
-}
-
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
-
-.hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
-
-.hero .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: whitesmoke;
-  font-weight: 600;
-}
-
-.hero .btn-watch-video i {
-  color: var(--accent-color);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-}
-
-.hero .btn-watch-video:hover {
-  color: var(--accent-color);
-}
-
-.hero .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
 @media (max-width: 640px) {
@@ -1006,27 +854,75 @@ section,
 }
 
 /*--------------------------------------------------------------
-# AdministrationSays
+# Administration Section
 --------------------------------------------------------------*/
-.professor-intro {
-    padding: 2rem;
+.administration-section h2 {
+    text-align: center;
 }
-.card-img-top {
+.administration-section .card-img-top {
     object-fit: cover;
-    height: 200px; /* Adjust as needed */
+    height: 200px;
 }
-.card-body {
+.administration-section .card-body {
     padding: 1.5rem;
 }
-.card-title {
+.administration-section .card-title {
     font-size: 1.25rem;
     font-weight: bold;
 }
-.card-text {
+.administration-section .card-text {
     font-size: 1rem;
 }
 
+.administration-section .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
 
+.administration-section .card .title {
+    color: grey;
+    font-size: 18px;
+}
+
+.administration-section a {
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Short Details Section
+ ----------------------------------------------------------------*/
+.short-description {
+    background-image: url('../img/hero-img.jpg');
+    background-attachment: fixed;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.short-description .proper-circle {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(243, 237, 221,0.4) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;  /* Center the circle within the column */
+}
+.short-description .proper-circle i {
+    font-size: 80px;
+    color: #ffa600;
+}
+.short-description .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.short-description .container {
+    z-index: 2;
+}
+.short-description .container p {
+    font-size: 22px;
+    color: white;
+}
 
 
 /*--------------------------------------------------------------
@@ -2004,41 +1900,3 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
-
-/*--------------------------------------------------------------
-# card principal Section
---------------------------------------------------------------*/
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-  }
-
-  .title {
-    color: grey;
-    font-size: 18px;
-  }
-
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-  }
-
-  button:hover, a:hover {
-    opacity: 0.7;
-  }

@@ -9,9 +9,9 @@
     <main class="main">
         @include('pages.layouts.homepage.hero')
 
-        @include('pages.layouts.homepage.administration-says')
+        @include('pages.layouts.homepage.administration-section')
 
-        @include('pages.layouts.homepage.feature-service')
+        @include('pages.layouts.homepage.short-details')
 
         @include('pages.layouts.homepage.features')
 
