@@ -145,11 +145,51 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 }
+.temp-herotxt-margintop{
+    margin-top: -48px;
+}
+.hero-txt {
+    position: relative;
+    color: transparent !important;
+    -webkit-text-stroke: 0.1vw gray;
+    display: inline-block;
+}
 
+.hero-txt::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    -webkit-text-stroke: 0vw gray;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+    animation: animate 1.5s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
 .header .logo {
   line-height: 1;
 }
