@@ -149,47 +149,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
 }
-.temp-herotxt-margintop{
-    margin-top: -48px;
-}
-.hero-txt {
-    position: relative;
-    color: transparent !important;
-    -webkit-text-stroke: 0.1vw gray;
-    display: inline-block;
-}
 
-.hero-txt::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    -webkit-text-stroke: 0vw gray;
-    overflow: hidden;
-    width: 0;
-    white-space: nowrap;
-    animation: animate 1.5s linear forwards;
-    animation-delay: 1s;
-}
-
-@keyframes animate {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes animate{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100%;
-    }
-}
 .header .logo {
   line-height: 1;
 }
@@ -890,12 +850,56 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 70vh;
+  height: 100vh !important;
   position: relative;
   padding: 180px 0 40px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+.temp-herotxt-margintop{
+    margin-top: -48px;
+}
+.hero-txt {
+    position: relative;
+    color: transparent !important;
+    -webkit-text-stroke: 0.1vw gray;
+    display: inline-block;
+}
+
+.hero-txt::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    -webkit-text-stroke: 0vw gray;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+    animation: animate 1.5s linear forwards;
+    animation-delay: 1s;
+}
+.visually-hidden-with-space {
+    visibility: hidden;
+  }
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
 }
 
 .hero .hero-bg img {
@@ -1000,6 +1004,30 @@ section,
     font-size: 13px;
   }
 }
+
+/*--------------------------------------------------------------
+# AdministrationSays
+--------------------------------------------------------------*/
+.professor-intro {
+    padding: 2rem;
+}
+.card-img-top {
+    object-fit: cover;
+    height: 200px; /* Adjust as needed */
+}
+.card-body {
+    padding: 1.5rem;
+}
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 1rem;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Featured Services Section
