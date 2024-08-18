@@ -3,10 +3,10 @@
     <div id="heroCarousel" class="carousel slide position-absolute w-100 h-100 carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner h-100">
             <div class="carousel-item active h-100" data-bs-interval="6000">
-                <img src="{{ asset('assets/img/about-company-1.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                <img src="{{ asset('assets/img/hero-img.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
             </div>
             <div class="carousel-item h-100" data-bs-interval="6000">
-                <img src="{{ asset('assets/img/about-company-2.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                <img src="{{ asset('assets/img/hero-img1.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
             </div>
             <div class="carousel-item h-100" data-bs-interval="6000">
                 <img src="{{ asset('assets/img/about-company-3.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
