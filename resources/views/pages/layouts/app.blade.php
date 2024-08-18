@@ -7,22 +7,22 @@
         @yield('title')
     </title>
 
-    @include('layouts.partials.styles')
+    @include('pages.layouts.partials.styles')
 
     @yield('style')
 
 </head>
 <body>
 
-@include('layouts.header')
+@include('pages.layouts.header')
 
 @yield('content')
 
-@include('layouts.footer')
+@include('pages.layouts.footer')
 
-@include('layouts.partials.below-footer')
+@include('pages.layouts.partials.below-footer')
 
-@include('layouts.partials.scripts')
+@include('pages.layouts.partials.scripts')
 
 @yield('script')
 
