@@ -1,11 +1,11 @@
-@extends("layouts.app")
+@extends("pages.layouts.app")
 
 @section('title')
     {{ $page['page_title']  }}
 @endsection
 
 @section('style')
-    @include('layouts.partials.datatable.datatable-style')
+    @include('assets.css.datatable-style')
 @endsection
 
 @section('content')
@@ -39,5 +39,5 @@
 @endsection
 
 @section('script')
-    @include('layouts.partials.datatable.datatable-script')
+    @include('assets.js.datatable-script')
 @endsection
