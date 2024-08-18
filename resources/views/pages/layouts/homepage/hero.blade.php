@@ -9,7 +9,7 @@
                 <img src="{{ asset('assets/img/hero-img1.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
             </div>
             <div class="carousel-item h-100" data-bs-interval="6000">
-                <img src="{{ asset('assets/img/about-company-3.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                <img src="{{ asset('assets/img/hero-bg2.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
