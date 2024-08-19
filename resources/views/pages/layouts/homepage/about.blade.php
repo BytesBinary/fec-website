@@ -10,7 +10,7 @@
                         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
                     </p>
                     <div class="d-grid">
-                        <button class="btn btn-primary" type="button">Button <i class="bi-arrow-down"></i> </button>
+                        <button class="btn btn-outline-primary" type="button">Button <i class="bi-arrow-down"></i> </button>
                     </div>
                 </div>
             </div>

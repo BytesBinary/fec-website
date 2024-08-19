@@ -73,14 +73,21 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+#header {
+    background-color: transparent;
+    transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#header.scrolled {
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 10px 0;
+  padding: 8px 0;
   transition: all 0.5s;
   z-index: 997;
 }
-
 .header .logo {
   line-height: 1;
 }
@@ -440,15 +447,21 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--contrast-color);
+  background-color: var(--nav-color);
   font-size: 14px;
-  padding-bottom: 50px;
+  padding-bottom: 5px;
   position: relative;
+}
+.foot-img{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .1;
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .footer .footer-about .logo {
@@ -466,7 +479,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
-  color: var(--heading-color);
+  color: var(--accent-color);
 }
 
 .footer .footer-about p {
@@ -481,9 +494,9 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -494,10 +507,11 @@ h6 {
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: var(--contrast-color);
 }
 
 .footer .footer-links {
@@ -527,9 +541,11 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   display: inline-block;
-  line-height: 1;
+  line-height: .7;
+  font-size: 15px;
+  z-index: 1;
 }
 
 .footer .footer-links ul a:hover {
@@ -560,8 +576,8 @@ h6 {
   border: 0;
   padding: 4px 10px;
   width: 100%;
-  background-color: var(--contrsast-color);
-  color: var(--default-color);
+  background-color: var(--contrast-color);
+  color: var(--contrast-color);
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
@@ -586,7 +602,7 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--contrast-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -783,7 +799,6 @@ section,
   width: 100%;
   height: 100vh !important;
   position: relative;
-  padding: 180px 0 40px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -893,11 +908,14 @@ section,
 /*--------------------------------------------------------------
 # Short Details Section
  ----------------------------------------------------------------*/
+
 .short-description {
     background-image: url('../img/hero-img.jpg');
     background-attachment: fixed;
     padding-top: 100px;
     padding-bottom: 100px;
+    background-position: center;
+    background-size: cover;
 }
 .short-description .proper-circle {
     height: 150px;
