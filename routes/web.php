@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutPage\AboutPageController;
 use App\Http\Controllers\AcademicPage\AcademicPageController;
+use App\Http\Controllers\AdminPage\AdminPageController;
 use App\Http\Controllers\AdmissionPage\AdmissionPageController;
 use App\Http\Controllers\ClubsPage\ClubsPageController;
 use App\Http\Controllers\ContactUsPage\ContactUsPageController;
@@ -60,3 +61,5 @@ Route::group(['prefix' => 'login'],function(){
     Route::get('/teachers-login',[LoginPageController::class,'teachers_login'])->name('login/teachers-login');
     Route::get('/admin-login',[LoginPageController::class,'admin_login'])->name('login/admin-login');
 });
+
+Route::get('/admin',[AdminPageController::class,'admin']) -> name('admin');
