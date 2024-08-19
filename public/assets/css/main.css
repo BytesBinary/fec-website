@@ -922,6 +922,7 @@ section,
 .short-description .container p {
     font-size: 22px;
     color: white;
+    font-family: var(--heading-font);
 }
 
 
