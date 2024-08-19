@@ -6,12 +6,12 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class ShortDetails extends Component
+class SectionTitle extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(public $iconClass, public $text, public $animation)
+    public function __construct(public $des, public $title)
     {
         //
     }
@@ -21,6 +21,6 @@ class ShortDetails extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.short-details');
+        return view('components.section-title');
     }
 }
