@@ -30,7 +30,7 @@ $pages = get_pages();
     </div>
 </header>
 
-{{-- This is the scroll animation js. You may, move it as you like. --}}
+@section('script')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var header = document.getElementById("header");
@@ -44,3 +44,4 @@ $pages = get_pages();
         });
     });
 </script>
+@endsection
