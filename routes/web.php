@@ -62,4 +62,19 @@ Route::group(['prefix' => 'login'],function(){
     Route::get('/admin-login',[LoginPageController::class,'admin_login'])->name('login/admin-login');
 });
 
-Route::get('/admin',[AdminPageController::class,'admin']) -> name('admin');
+Route::prefix('admin')->group(function () {
+    Route::get('/', [AdminPageController::class, 'admin'])->name('admin.dashboard');
+
+    Route::get('/charts', [AdminPageController::class, 'charts'])->name('admin.charts');
+    Route::get('/forms', [AdminPageController::class, 'forms'])->name('admin.forms');
+    Route::get('/icons', [AdminPageController::class, 'icons'])->name('admin.icons');
+    Route::get('/blankpage', [AdminPageController::class, 'blankpage'])->name('admin.blankpage');
+    Route::get('/error404', [AdminPageController::class, 'error404'])->name('admin.error404');
+    Route::get('/error500', [AdminPageController::class, 'error500'])->name('admin.error500');
+    Route::get('/login', [AdminPageController::class, 'login'])->name('admin.login');
+    Route::get('/register', [AdminPageController::class, 'register'])->name('admin.register');
+    Route::get('/tables', [AdminPageController::class, 'tables'])->name('admin.tables');
+    Route::get('/buttons', [AdminPageController::class, 'buttons'])->name('admin.buttons');
+    Route::get('/dropdowns', [AdminPageController::class, 'dropdowns'])->name('admin.dropdowns');
+    Route::get('/typography', [AdminPageController::class, 'typography'])->name('admin.typography');
+});

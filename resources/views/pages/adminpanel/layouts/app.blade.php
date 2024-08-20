@@ -4,9 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>
-        @yield('title')
-    </title>
+    <title>@yield('title', 'Admin Panel')</title>
 
     @include('pages.adminpanel.layouts.partials.admin-styles')
 
@@ -15,9 +13,6 @@
 </head>
 
 <body>
-
-    @include('pages.adminpanel.layouts.admin-nav')
-
     @yield('content')
 
     @include('pages.adminpanel.layouts.admin-footer')
