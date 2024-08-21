@@ -1,8 +1,11 @@
 @extends('pages.layouts.app')
 
-
 @section('title')
     {{ $page['page_title']  }}
+@endsection
+
+@section('style')
+    @include('pages.layouts.homepage.css.style')
 @endsection
 
 @section('content')
