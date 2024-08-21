@@ -18,9 +18,9 @@
 
         @include('pages.layouts.homepage.about')
 
-        @include('pages.layouts.homepage.features')
-
         @include('pages.layouts.homepage.online-service')
+
+        @include('pages.layouts.homepage.features')
 
         @include('pages.layouts.homepage.service')
 
