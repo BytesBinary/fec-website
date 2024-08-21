@@ -1,39 +1,22 @@
 <section id="features-details" class="features-details section">
     <div class="container">
         <x-section-title title="About Us" des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-        <div class="row gy-4 justify-content-between features-item">
-            <div class="col-lg-5 d-flex align-items-center" data-aos="flip-up" data-aos-delay="400">
-                <div class="content">
-                    <h3>Lab Facilities</h3>
-                    <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                    </p>
-                    <div class="d-grid">
-                        <button class="btn btn-outline-primary" type="button">Button <i class="bi-arrow-down"></i> </button>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p>
+                    Why do we use it?
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                </p>
+                <p>
+                    Where does it come from?
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
+                </p>
             </div>
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
-                <div id="lab-facilities" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#lab-facilities" data-slide-to="0" class="active"></li>
-                        <li data-target="#lab-facilities" data-slide-to="1"></li>
-                        <li data-target="#lab-facilities" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="assets/img/features-1.jpg" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/img/features-1.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/img/features-1.jpg" alt="Third slide">
-                        </div>
-                    </div>
-
-                </div>
+            <div class="col-sm-6">
+                <img src="{{ asset('assets/img/mia-bhai.jpg') }}" class="img-fluid float-left mr-4 mb-4" alt="Image Description"/>
             </div>
         </div>
     </div>
