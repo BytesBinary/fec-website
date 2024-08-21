@@ -943,6 +943,20 @@ section,
     font-family: var(--heading-font);
 }
 
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about-section .text button i {
+    float: right;
+}
+
+.about-section .text button:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 69, 0, 0.2), 0 6px 20px 0 rgba(255, 69, 0, 0.19);
+}
+
+.about-section .text p {
+    text-align: justify;
+}
 
 /*--------------------------------------------------------------
 # Featured Services Section
