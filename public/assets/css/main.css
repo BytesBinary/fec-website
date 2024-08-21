@@ -992,6 +992,26 @@ section,
         }
     }
 /*--------------------------------------------------------------
+# Online Services Section
+--------------------------------------------------------------*/
+.online-services-section .card-container .icon {
+    max-height: 80px;
+    margin-top: 20px;
+}
+
+.online-services-section .card-container .card-holder:hover {
+    transform: translateY(-5px);
+}
+
+.online-services-section .card-container a {
+    text-decoration: none;
+}
+
+.online-services-section .card-container button:hover {
+    color: white;
+}
+
+/*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services {
