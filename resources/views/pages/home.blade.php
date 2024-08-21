@@ -20,9 +20,9 @@
 
         @include('pages.layouts.homepage.online-service')
 
-        @include('pages.layouts.homepage.features')
+        @include('pages.layouts.homepage.latest-news')
 
-        @include('pages.layouts.homepage.service')
+        @include('pages.layouts.homepage.features')
 
         @include('pages.layouts.homepage.faq')
 
