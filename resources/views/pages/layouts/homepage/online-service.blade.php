@@ -3,46 +3,46 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-12" data-aos="fade-down-up" data-aos-duration="1000">
                 <p class="fourth-header text-center">
-                    <h1 style="text-align: center">Our Online Services</h1>
+                <h1 style="text-align: center">Our Online Services</h1>
                 </p>
                 <p class="fourth-details text-center">
                     Dame tu cosita <br>
                     yahooooooooo
                 </p>
             </div>
-            <div class="col-lg-4 mt-3"data-aos="flip-left">
-                <div class="card card-fourth shadow-sm">
+            <div class="col-lg-4 mt-3" data-aos="flip-left">
+                <div class="card card-fourth shadow-sm h-100 ">
                     <div class="card-body text-center">
-                        <img src="assets/img/notice.svg" height="80px" alt="">
-                        <p class="card-title card-title-fourth text-center my-3">Notices</p>
-                        <p class="card-text card-text-fourth">
+                        <img src="assets/img/notice.svg" class="img-fluid mb-3" alt="Notices"
+                            style="max-height: 80px;">
+                        <h5 class="card-title card-title-fourth my-3">Notices</h5>
+                        <p class="card-text card-text-fourth mb-4">
                             Anyone can get any notices of this institution from here.
                         </p>
-                        <a href="notices">
-                            <div class="button">
-                                <button class="btn btn-success">
-                                    View All Notices
-                                </button>
-                            </div>
+                        <a href="notices" class="stretched-link">
+                            <button class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm">
+                                View All Notices
+                            </button>
                         </a>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 mt-3"data-aos="flip-left">
-                <div class="card card-fourth shadow-sm">
+                <div class="card card-fourth shadow-sm h-100 ">
                     <div class="card-body text-center">
                         <img src="assets/img/result .svg" height="80px" alt="">
                         <p class="card-title card-title-fourth text-center my-3">Result</p>
                         <p class="card-text card-text-fourth">
                             You can get all information from this sections.
                         </p>
-                            <a href="academics/login">
-                                <div class="button">
-                                    <button class="btn btn-success">
-                                        View Results
-                                    </button>
-                                </div>
-                            </a>
+                        <a href="academics/login">
+                            <div class="button">
+                                <button class="btn btn-success">
+                                    View Results
+                                </button>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,8 @@
                         <p class="card-text card-text-fourth">
                             Students Can Apply Online from here
                         </p>
-                        <a href="https://collegeadmission.eis.du.ac.bd/bn/b45de047fde9788cadae3cfe8e88dcc2" target="_blank">
+                        <a href="https://collegeadmission.eis.du.ac.bd/bn/b45de047fde9788cadae3cfe8e88dcc2"
+                            target="_blank">
                             <div class="button">
                                 <button class="btn btn-success">
                                     Apply Now

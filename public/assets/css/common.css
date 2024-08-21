@@ -5,3 +5,48 @@
 .page-top-section {
     margin-top: 100px;
 }
+
+/* Card styling */
+.card-fourth {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On hover, the card will slightly elevate and shadow will become more pronounced */
+.card-fourth:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect - smooth color change and shadow increase */
+.btn-success:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Ensure the image is centered and has a margin */
+.img-fluid {
+    margin-bottom: 15px;
+}
+
+/* Title and text styling */
+.card-title-fourth {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-text-fourth {
+    color: #666;
+    font-size: 1rem;
+}
