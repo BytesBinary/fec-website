@@ -1,7 +1,7 @@
 @extends('pages.layouts.app')
 
 @section('title')
-    {{ $page['page_title']  }}
+    {{ $page['page_title'] }}
 @endsection
 
 @section('style')
@@ -22,12 +22,12 @@
 
         @include('pages.layouts.homepage.latest-news')
 
-        @include('pages.layouts.homepage.features')
+        @include('pages.layouts.homepage.events')
+
+        @include('pages.layouts.homepage.research')
 
         @include('pages.layouts.homepage.faq')
 
-        @include('pages.layouts.homepage.testimonial')
-
-        @include('pages.layouts.homepage.client-section')
+   
     </main>
 @endsection
