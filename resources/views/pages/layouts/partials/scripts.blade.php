@@ -8,6 +8,7 @@
 <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
 <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
 <script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+<script src="{{asset('assets/js/common.js')}}"></script>
 <!-- Main JS File -->
 <script src="{{asset('assets/js/main.js')}}"></script>
 
