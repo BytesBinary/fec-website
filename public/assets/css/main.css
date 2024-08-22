@@ -101,7 +101,6 @@ h6 {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
 }
 
 @media (max-width: 480px) {
@@ -379,7 +378,7 @@ h6 {
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
     background-color: var(--accent-color);
-    color: var(--contrast-color);
+    color: var(--contrast-colo);
   }
 
   .navmenu a:hover,
@@ -458,6 +457,10 @@ h6 {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: .1;
+}
+
+.foot-img img{
+    height: 255pt;
 }
 
 .footer .footer-top {
@@ -821,7 +824,7 @@ section,
 }
 
 .hero h1 {
-  margin: 0;
+  margin: 100px 0 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -950,6 +953,8 @@ section,
     float: right;
 }
 
+
+
 .about-section .text button:hover {
     box-shadow: 0 4px 8px 0 rgba(255, 69, 0, 0.2), 0 6px 20px 0 rgba(255, 69, 0, 0.19);
 }
@@ -991,6 +996,13 @@ section,
             box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
         }
     }
+
+@media (max-width: 640px) {
+    .about-section .mobile-height{
+        min-height: 50vh;
+        margin-top: 16px;
+    }
+  }
 /*--------------------------------------------------------------
 # Online Services Section
 --------------------------------------------------------------*/
