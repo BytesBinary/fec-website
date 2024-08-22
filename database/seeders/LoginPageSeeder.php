@@ -43,5 +43,14 @@ class LoginPageSeeder extends Seeder
                 'page_parent' => $id
             ]);
         }
+
+        $LoginPage->metas()->create([
+            'meta_key' => 'admin_login',
+            'meta_value' => json_encode([
+                'page_title' => 'Admin Login',
+                'page_logo' => 'assets/img/FEClogo.png',
+            ]),
+            'meta_type' => 'json',
+        ]);
     }
 }
