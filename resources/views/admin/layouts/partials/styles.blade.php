@@ -6,6 +6,5 @@
 <link rel="stylesheet" href="{{ asset('assets/admin-panel/assets/vendors/font-awesome/css/font-awesome.min.css') }}" />
 <link rel="stylesheet" href="{{ asset('assets/admin-panel/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/admin-panel/assets/css/style.css') }}">
-<!-- End layout styles -->
-<link rel="shortcut icon" href="{{ asset('assets/admin-panel/assets/images/favicon.png') }}" />
+<link rel="shortcut icon" href="{{ asset('assets/admin-panel/assets/images/favicon.png')}}" />
 

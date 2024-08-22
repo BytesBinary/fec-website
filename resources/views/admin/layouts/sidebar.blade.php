@@ -3,9 +3,8 @@
       <li class="nav-item nav-profile">
         <a href="#" class="nav-link">
           <div class="nav-profile-image">
-            <img src="{{ asset('admin-panel/assets/images/faces/face1.jpg') }}" alt="profile" />
+            <img src="{{ asset('admin-panel/assets/images/faces/face1') }}" alt="profile" />
             <span class="login-status online"></span>
-            <!--change to offline or busy as needed-->
           </div>
           <div class="nav-profile-text d-flex flex-column">
             <span class="font-weight-bold mb-2">David Grey. H</span>
