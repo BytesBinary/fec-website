@@ -25033,7 +25033,7 @@ dl li {
   }
 }
 .auth .brand-logo {
-  margin-bottom: 2rem;
+    margin-bottom: 5px;
 }
 .auth .brand-logo img {
   width: 150px;
