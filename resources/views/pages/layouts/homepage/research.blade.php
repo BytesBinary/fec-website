@@ -1,4 +1,4 @@
-<section>
+<section class="section research-section">
     <x-section-title title="Research Activities"
         des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         animation="fade-up" />

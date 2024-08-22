@@ -1,4 +1,4 @@
-<section>
+<section class="section events-section">
     <x-section-title title="Recent and Upcoming Events"
         des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         animation="fade-up" />

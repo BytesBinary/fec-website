@@ -1,4 +1,4 @@
-<section id="latest-news" class="latest-news section">
+<section id="latest-news" class="latest-news-section section">
     <x-section-title title="Latest News" des="Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit" animation="fade-up" />
     <div class="container">
         <div class="row g-5">

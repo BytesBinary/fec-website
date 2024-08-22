@@ -1006,6 +1006,9 @@ section,
 /*--------------------------------------------------------------
 # Online Services Section
 --------------------------------------------------------------*/
+.online-services-section{
+    background-color: rgba(57, 57, 57, 0.1);
+}
 .online-services-section .card-container .icon {
     max-height: 80px;
     margin-top: 20px;
@@ -1024,62 +1027,28 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Featured Services Section
+# Latest News Section
 --------------------------------------------------------------*/
-.featured-services {
-  padding: 40px 0;
+
+
+
+
+/*--------------------------------------------------------------
+# Events Section
+--------------------------------------------------------------*/
+.events-section{
+    background-color: rgba(57, 57, 57, 0.1);
+
 }
 
-.featured-services .service-item {
-  position: relative;
-  padding-top: 20px;
-}
 
-.featured-services .service-item .icon {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
-  width: 72px;
-  height: 72px;
-  position: relative;
-  margin-right: 15px;
-  line-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: ease-in-out 0.3s;
-}
 
-.featured-services .service-item .icon i {
-  color: var(--accent-color);
-  font-size: 32px;
-  z-index: 2;
-  position: relative;
-}
 
-.featured-services .service-item .title {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
+/*--------------------------------------------------------------
+# Research Section
+--------------------------------------------------------------*/
 
-.featured-services .service-item .title a {
-  color: var(--heading-color);
-}
 
-.featured-services .service-item .title a:hover {
-  color: var(--accent-color);
-}
-
-.featured-services .service-item .description {
-  font-size: 14px;
-}
-
-.featured-services .service-item:hover .icon {
-  background-color: var(--accent-color);
-}
-
-.featured-services .service-item:hover .icon i {
-  color: var(--contrast-color);
-}
 
 /*--------------------------------------------------------------
 # About Section
@@ -1599,6 +1568,10 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+.faq{
+    background-color: rgba(57, 57, 57, 0.1);
+}
+
 .faq .section-title {
   padding-bottom: 20px;
 }
