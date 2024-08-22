@@ -12,9 +12,9 @@
             </div>
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gy-4">
-                    @include('pages.layouts.contactuspage.main-address')
-                    @include('pages.layouts.contactuspage.contact-details-accordion')
-                    @include('pages.layouts.contactuspage.maps-and-form')
+                    @include('pages.partials.contactus.main-address')
+                    @include('pages.partials.contactus.contact-details-accordion')
+                    @include('pages.partials.contactus.maps-and-form')
                 </div>
             </div>
         </section>
