@@ -1,16 +1,15 @@
 <section class="about-section section">
     <div class="container">
-        <x-section-title title="About Us" des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." animation="fade-up" />
+        <x-section-title title="About Us" des="Faridpur Engineering College is located about 2.7 kilometers away from the main city of Faridpur." animation="fade-up" />
         <div class="row temp">
             <div class="col-sm-6 text" data-aos="fade-up-right">
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Faridpur Engineering College is established to conduct B.Sc in Engineering degree in Bangladesh. Administrative activities are controlled by the Directorate of Technical Education (DTE), under Technical and Madrasha Education Division (TMED), Ministry of Education.
                 </p>
                 <p>
-                    Why do we use it?
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    This College is affiliated with the University of Dhaka under the Faculty of Engineering & Technology for certification of a four (04) years B.Sc.(Engg.) degree. Its academic journey was launched in 2013 with two departments by 120 students. In the 2017-2018 Session, the College added another feather in its cap ‘Computer Science and Engineering’ (CSE) Department under the same University since then.
                 </p>
-                <a href="{{ route('about-college/at-a-glance') }}">
+                <a href="{{ route('about-college/infrastructure') }}">
                     <div class="d-grid">
                         <button class="btn btn-warning" type="button">Read More <span><i class="bi bi-box-arrow-in-right"></i></span></button>
                     </div>
