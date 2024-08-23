@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class ClubsPageController extends Controller
 {
+    public function main_page(){
+        return view('pages.clubs.main_page');
+    }
     public function RIC(){
         return view("pages.clubs.ric-research-&-innovation-center");
     }
