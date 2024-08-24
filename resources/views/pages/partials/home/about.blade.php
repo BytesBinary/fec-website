@@ -7,7 +7,7 @@
                     Faridpur Engineering College is established to conduct B.Sc in Engineering degree in Bangladesh. Administrative activities are controlled by the Directorate of Technical Education (DTE), under Technical and Madrasha Education Division (TMED), Ministry of Education.
                 </p>
                 <p>
-                    This College is affiliated with the University of Dhaka under the Faculty of Engineering & Technology for certification of a four (04) years B.Sc.(Engg.) degree. Its academic journey was launched in 2013 with two departments by 120 students. In the 2017-2018 Session, the College added another feather in its cap ‘Computer Science and Engineering’ (CSE) Department under the same University since then.
+                    Faridpur Engineering College (FEC) is a public undergraduate college in Faridpur, Bangladesh. It was established in 2010. The college is just 2.7 km away from Faridpur city Located at Dr. Kazi Motaher Hossain Road, Char Kamalapur, Baitul Aman, Faridpur. The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. Every year, around 180 students get accepted to undergraduate programs in Electrical and Electronic Engineering (EEE), Civil Engineering (CE) and Computer Science and Engineering (CSE).
                 </p>
                 <a href="{{ route('about-college/infrastructure') }}">
                     <div class="d-grid">
