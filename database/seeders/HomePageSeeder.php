@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Pages;
+use Carbon\Carbon;
 
 class HomePageSeeder extends Seeder
 {
@@ -37,6 +38,185 @@ class HomePageSeeder extends Seeder
                 'get_started_btn_url' => '#about',
                 'watch_video_btn' => 'Watch Video',
                 'watch_video_btn_url' => 'https://youtu.be/_H9B4iynTY0?si=tGqF7He1rRQdkuA8',
+            ], JSON_UNESCAPED_UNICODE),
+            'meta_type' => 'json',
+        ]);
+
+        $members = [
+            ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)'],
+            ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)'],
+            ['name' => 'Md. Sanowar Hossain', 'designation' => 'Head of the Dept. (EEE)'],
+            ['name' => 'Rayhan Khan Opu', 'designation' => 'Head of the Dept. (CE)'],
+        ];
+
+        $page->metas()->create([
+            'meta_key' => 'administration',
+            'meta_value' => json_encode([
+                'title' => 'Administration',
+                'members' => $members,
+            ], JSON_UNESCAPED_UNICODE),
+            'meta_type' => 'json',
+        ]);
+
+        $page->metas()->create([
+            'meta_key' => 'short_description',
+            'meta_value' => json_encode([
+                'Departments' => '3',
+                'Established' => '2010',
+                'Students' => '800',
+                'Faculty Members' => '30',
+            ]),
+            'meta_type' => 'json',
+        ]);
+
+        $page->metas()->create([
+            'meta_key' => 'about_section',
+            'meta_value' => json_encode([
+                'section_title' => 'About Us',
+                'section_heading' => 'Faridpur Engineering College is located about 2.7 kilometers away from the main city of Faridpur.',
+                'section_des' => 'Faridpur Engineering College (FEC) is a public undergraduate college in Faridpur, Bangladesh. It was established in 2010. The college is just 2.7 km away from Faridpur city Located at Dr. Kazi Motaher Hossain Road, Char Kamalapur, Baitul Aman, Faridpur. The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. Every year, around 180 students get accepted to undergraduate programs in Electrical and Electronic Engineering (EEE), Civil Engineering (CE) and Computer Science and Engineering (CSE).',
+                'video_url' => 'https://www.youtube.com/embed/_H9B4iynTY0?si=hssoHPSX4b3isoSt',
+            ]),
+            'meta_type' => 'json',
+        ]);
+
+        $page->metas()->create([
+            'meta_key' => 'online_services',
+            'meta_value' => json_encode([
+                'section_title' => 'Online Services',
+                'section_heading' => 'Here are our online services from which you can get your information instantly.',
+                'services' => [
+                    [
+                        'name' => 'Notices',
+                        'description' => 'Anyone can get any notices of this institution from here.',
+                        'url' => '/notices',
+                        'icon' => 'fas fa-bullhorn',
+                    ],
+                    [
+                        'name' => 'Result',
+                        'description' => 'Check your academic results by logging into your student account.',
+                        'url' => '/results',
+                        'icon' => 'fas fa-graduation-cap',
+                    ],
+                    [
+                        'name' => 'Apply Online',
+                        'description' => 'Want to get admission here? Click here to start your admission process.',
+                        'url' => '/apply',
+                        'icon' => 'fas fa-user-plus',
+                    ],
+                    [
+                        'name' => 'Academic Syllabus',
+                        'description' => 'Click to view the syllabus.',
+                        'url' => '/syllabus',
+                        'icon' => 'fas fa-book',
+                    ],
+                    [
+                        'name' => 'Academic Calendar',
+                        'description' => 'Click to view your academic calendar.',
+                        'url' => '/calendar',
+                        'icon' => 'fas fa-calendar-alt',
+                    ],
+                ],
+            ]),
+            'meta_type' => 'json',
+        ]);
+
+        $page->metas()->create([
+            'meta_key' => 'latest_news',
+            'meta_value' => json_encode([
+                'section_title' => 'Latest News',
+                'news_items' => [
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Ashol news!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Pain invaded FEC!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Pain invaded FEC!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                ],
+            ]),
+            'meta_type' => 'json',
+        ]);
+
+        $page->metas()->create([
+            'meta_key' => 'events',
+            'meta_value' => json_encode([
+                'section_title' => 'Recent and Upcoming Events',
+                'section_heading' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+
+                'events_items' => [
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Event hoitese!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Pain invaded FEC!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Pain invaded FEC!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                ],
+            ]),
+            'meta_type' => 'json',
+        ]);
+
+        $page->metas()->create([
+            'meta_key' => 'research',
+            'meta_value' => json_encode([
+                'section_title' => 'Research Activities',
+                'section_heading' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+
+                'research_items' => [
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Fec er unnoyon',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Pain invaded FEC!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                    [
+                        'date_created' => Carbon::now()->format('d M, Y'),
+                        'headline' => 'Pain invaded FEC!',
+                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                    ],
+                ],
+            ]),
+            'meta_type' => 'json',
+        ]);
+        $page->metas()->create([
+            'meta_key' => 'faq',
+            'meta_value' => json_encode([
+                'section_title' => 'Frequently Asked Questions',
+                'question_item' => [
+                    [
+                        'question_title' => 'Non consectetur a erat nam at lectus urna duis?',
+                        'question_description' => 'Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.',
+                    ],
+                    [
+                        'question_title' => 'Non consectetur a erat nam at lectus urna duis?',
+                        'question_description' => 'Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.',
+                    ],
+                    [
+                        'question_title' => 'Non consectetur a erat nam at lectus urna duis?',
+                        'question_description' => 'Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.',
+                    ]
+                ],
             ]),
             'meta_type' => 'json',
         ]);
