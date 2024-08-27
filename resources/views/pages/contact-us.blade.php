@@ -1,8 +1,6 @@
 @extends("pages.layouts.app")
 
-@section('title')
-    {{ $page['page_title']  }}
-@endsection
+@section('title','Contact Us | Faridpur Engineering College')
 
 @section('content')
     <main class="main">

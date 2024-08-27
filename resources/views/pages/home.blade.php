@@ -1,8 +1,6 @@
 @extends('pages.layouts.app')
 
-@section('title')
-    {{ $page['page_title'] }}
-@endsection
+@section('title','Home | Faridpur Engineering College')
 
 @section('style')
     @include('pages.partials.home.css.style')

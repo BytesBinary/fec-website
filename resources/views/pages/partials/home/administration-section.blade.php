@@ -1,6 +1,6 @@
 <section class="section administration-section">
     <div class="container">
-        <x-section-title title="{{ $administration['title'] }}"
+       <x-section-title title="{{ $administration['title'] }}"
             des="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             animation="fade-up" />
         <div class="row g-4">

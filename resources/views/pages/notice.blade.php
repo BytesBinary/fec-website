@@ -1,8 +1,6 @@
 @extends("pages.layouts.app")
 
-@section('title')
-    {{ $page['page_title']  }}
-@endsection
+@section('title','Notices | Faridpur Engineering College')
 
 @section('style')
     @include('assets.css.datatable-style')

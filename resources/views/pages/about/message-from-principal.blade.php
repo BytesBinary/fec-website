@@ -1,5 +1,7 @@
 @extends("pages.layouts.app")
 
+@section('title','Principal | FEC')
+
 @section('content')
 <main class="main page-top-section">
     <h1 class="text-center">Message from Principal</h1>

@@ -1,16 +1,15 @@
 <section class="about-section section">
     <div class="container">
-        <x-section-title title="About Us" des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." animation="fade-up" />
+        <x-section-title title="About Us" des="Faridpur Engineering College is located about 2.7 kilometers away from the main city of Faridpur." animation="fade-up" />
         <div class="row temp">
             <div class="col-sm-6 text" data-aos="fade-up-right">
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Faridpur Engineering College is established to conduct B.Sc in Engineering degree in Bangladesh. Administrative activities are controlled by the Directorate of Technical Education (DTE), under Technical and Madrasha Education Division (TMED), Ministry of Education.
                 </p>
                 <p>
-                    Why do we use it?
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    Faridpur Engineering College (FEC) is a public undergraduate college in Faridpur, Bangladesh. It was established in 2010. The college is just 2.7 km away from Faridpur city Located at Dr. Kazi Motaher Hossain Road, Char Kamalapur, Baitul Aman, Faridpur. The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. Every year, around 180 students get accepted to undergraduate programs in Electrical and Electronic Engineering (EEE), Civil Engineering (CE) and Computer Science and Engineering (CSE).
                 </p>
-                <a href="{{ route('about-college/at-a-glance') }}">
+                <a href="{{ route('about-college/infrastructure') }}">
                     <div class="d-grid">
                         <button class="btn btn-warning" type="button">Read More <span><i class="bi bi-box-arrow-in-right"></i></span></button>
                     </div>
