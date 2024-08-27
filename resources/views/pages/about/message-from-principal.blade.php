@@ -1,4 +1,6 @@
-@extends("layouts.app")
+@extends("pages.layouts.app")
+
+@section('title','Principal | FEC')
 
 @section('content')
 <main class="main page-top-section">

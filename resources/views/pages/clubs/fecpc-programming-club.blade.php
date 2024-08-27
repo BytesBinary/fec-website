@@ -1,1 +1,3 @@
-@extends('layouts.app')
+@extends('pages.layouts.app')
+
+@section('title','Programming Club | FEC')

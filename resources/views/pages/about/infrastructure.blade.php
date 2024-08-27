@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('pages.layouts.app')
+
+@section('title','Infrastructure | FEC')
 
 @section('content')
     <div class="container page-top-section">
