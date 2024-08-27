@@ -10,6 +10,10 @@ $pages = get_pages();
         <nav id="navmenu" class="navmenu">
             <ul>
                 @foreach ($pages as $page)
+                    @if ( $page['page_slug'] === 'clubs' )
+                        <li><a href="{{ route($page['page_slug'])  }}" class="{{ is_active_route($page['page_slug']) }}">{{ $page['page_title'] }}</a></li>
+                        @continue
+                    @endif
                     @if ( $page['page_type'] !== 'parent' )
                         <li><a href="{{ route($page['page_slug'])  }}" class="{{ is_active_route($page['page_slug']) }}">{{ $page['page_title'] }}</a></li>
                     @else

@@ -3,9 +3,9 @@
     <div class="container position-relative">
         <div class="row justify-content-center align-items-center ">
             <x-short-details iconClass="bi bi-bank" text="Established: <br/> <span class='count-up' data-count='2010'>0</span>" animation="fade-up" />
-            <x-short-details iconClass="bi bi-bank" text="Established: <br/> <span class='count-up' data-count='2010'>0</span>" animation="fade-down" />
-            <x-short-details iconClass="bi bi-bank" text="Established: <br/> <span class='count-up' data-count='2010'>0</span>" animation="fade-up" />
-            <x-short-details iconClass="bi bi-bank" text="Established: <br/> <span class='count-up' data-count='2010'>0</span>" animation="fade-down" />
+            <x-short-details iconClass="bi bi-buildings" text="Departments: <br/> <span class='count-up' data-count='3'>0</span>" animation="fade-down" />
+            <x-short-details iconClass="bi bi-mortarboard" text="Students: <br/> <span class='count-up' data-count='800'>0</span>" animation="fade-up" />
+            <x-short-details iconClass="bi bi-people" text="Faculty Members: <br/> <span class='count-up' data-count='30'>0</span>" animation="fade-down" />
         </div>
     </div>
 </section>
