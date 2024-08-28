@@ -32,7 +32,7 @@ class HomePageSeeder extends Seeder
                 'sub_title' => 'A place to learn and grow',
                 'img' => 'bg-image.jpg',
                 'img_alt' => 'Hero Image',
-                'logo' => 'FECLogo.png',
+                'logo' => 'FEClogo.png',
                 'logo_alt' => 'Logo Image',
                 'get_started_btn' => 'Get Started',
                 'get_started_btn_url' => '#about',
