@@ -43,10 +43,10 @@ class HomePageSeeder extends Seeder
         ]);
 
         $members = [
-            ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)'],
-            ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)'],
-            ['name' => 'Md. Sanowar Hossain', 'designation' => 'Head of the Dept. (EEE)'],
-            ['name' => 'Rayhan Khan Opu', 'designation' => 'Head of the Dept. (CE)'],
+            ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)','img' =>'assets\img\administration\mizanur-rahman.jpg'],
+            ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)','img' => 'assets\img\administration\shamsul-islam.jpg'],
+            ['name' => 'Md. Sanowar Hossain', 'designation' => 'Head of the Dept. (EEE)','img'=>'assets\img\administration\sanowar-hossain.jpg'],
+            ['name' => 'Rayhan Khan Opu', 'designation' => 'Head of the Dept. (CE)','img'=>'assets\img\administration\rayhan-khan.jpg'],
         ];
 
         $page->metas()->create([
@@ -58,13 +58,17 @@ class HomePageSeeder extends Seeder
             'meta_type' => 'json',
         ]);
 
+        $details = [
+            ['title' => 'Established','value' => '2010', 'icon' => 'bi bi-bank','animation' => 'fade-up'],
+            ['title' => 'Departments','value' => '3', 'icon' => 'bi bi-buildings','animation' => 'fade-down'],
+            ['title' => 'Students','value' => '800', 'icon' => 'bi bi-mortarboard','animation' => 'fade-up'],
+            ['title' => 'Faculty Members','value' => '30', 'icon' => 'bi bi-people','animation' => 'fade-down'],
+        ];
+
         $page->metas()->create([
-            'meta_key' => 'short_description',
+            'meta_key' => 'short_details',
             'meta_value' => json_encode([
-                'Departments' => '3',
-                'Established' => '2010',
-                'Students' => '800',
-                'Faculty Members' => '30',
+                'short_details' => $details,
             ]),
             'meta_type' => 'json',
         ]);
