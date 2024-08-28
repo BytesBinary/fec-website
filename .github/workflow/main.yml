@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - main
+name: 🚀 Deploy website push main
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        timeout: 10000000
+        server: ftp.jakiurrahman.me
+        username: ${{ secrets.FTPUSERNAME }}
+        password: ${{ secrets.FTPPASSWORD }}
+        protocol: ftps
+        port: 21
+        server-dir: /
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          .editorconfig
+          .env.example
+          vite.config.js
+          tailwind.config.js
+          README.md
+          phpunit.xml
+          postcss.config.js
+          package-lock.json
+          package.json
+          error_log
+          robots.txt
