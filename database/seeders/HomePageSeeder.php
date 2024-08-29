@@ -32,7 +32,7 @@ class HomePageSeeder extends Seeder
                 'sub_title' => 'A place to learn and grow',
                 'img' => 'bg-image.jpg',
                 'img_alt' => 'Hero Image',
-                'logo' => 'FECLogo.png',
+                'logo' => 'FEClogo.png',
                 'logo_alt' => 'Logo Image',
                 'get_started_btn' => 'Get Started',
                 'get_started_btn_url' => '#about',
@@ -43,10 +43,10 @@ class HomePageSeeder extends Seeder
         ]);
 
         $members = [
-            ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)','img' =>'assets\img\administration\mizanur-rahman.jpg'],
-            ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)','img' => 'assets\img\administration\shamsul-islam.jpg'],
-            ['name' => 'Md. Sanowar Hossain', 'designation' => 'Head of the Dept. (EEE)','img'=>'assets\img\administration\sanowar-hossain.jpg'],
-            ['name' => 'Rayhan Khan Opu', 'designation' => 'Head of the Dept. (CE)','img'=>'assets\img\administration\rayhan-khan.jpg'],
+            ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)','img' =>'images\administration\mizanur-rahman.jpg'],
+            ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)','img' => 'images\administration\shamsul-islam.jpg'],
+            ['name' => 'Md. Sanowar Hossain', 'designation' => 'Head of the Dept. (EEE)','img'=>'images\administration\sanowar-hossain.jpg'],
+            ['name' => 'Rayhan Khan Opu', 'designation' => 'Head of the Dept. (CE)','img'=>'images\administration\rayhan-khan.jpg'],
         ];
 
         $page->metas()->create([

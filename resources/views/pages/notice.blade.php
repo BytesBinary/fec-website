@@ -10,7 +10,7 @@
     <div class="container section-title page-top-section" data-aos="fade-down">
         <h2>{{ $page['page_title']  }}</h2>
         <div class="table-responsive">
-            <table id="example" class="table table-striped table-bordered">
+            <table id="use-datatable" class="table table-striped table-bordered">
                 <thead>
                 <tr>
                     <th class="text-center">Serial</th>
