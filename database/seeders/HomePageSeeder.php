@@ -32,7 +32,7 @@ class HomePageSeeder extends Seeder
                 'sub_title' => 'A place to learn and grow',
                 'img' => 'bg-image.jpg',
                 'img_alt' => 'Hero Image',
-                'logo' => 'FECLogo.png',
+                'logo' => 'FEClogo.png',
                 'logo_alt' => 'Logo Image',
                 'get_started_btn' => 'Get Started',
                 'get_started_btn_url' => '#about',
@@ -43,10 +43,10 @@ class HomePageSeeder extends Seeder
         ]);
 
         $members = [
-            ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)'],
-            ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)'],
-            ['name' => 'Md. Sanowar Hossain', 'designation' => 'Head of the Dept. (EEE)'],
-            ['name' => 'Rayhan Khan Opu', 'designation' => 'Head of the Dept. (CE)'],
+            ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)','img' =>'images\administration\mizanur-rahman.jpg'],
+            ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)','img' => 'images\administration\shamsul-islam.jpg'],
+            ['name' => 'Md. Sanowar Hossain', 'designation' => 'Head of the Dept. (EEE)','img'=>'images\administration\sanowar-hossain.jpg'],
+            ['name' => 'Rayhan Khan Opu', 'designation' => 'Head of the Dept. (CE)','img'=>'images\administration\rayhan-khan.jpg'],
         ];
 
         $page->metas()->create([
@@ -58,13 +58,17 @@ class HomePageSeeder extends Seeder
             'meta_type' => 'json',
         ]);
 
+        $details = [
+            ['title' => 'Established','value' => '2010', 'icon' => 'bi bi-bank','animation' => 'fade-up'],
+            ['title' => 'Departments','value' => '3', 'icon' => 'bi bi-buildings','animation' => 'fade-down'],
+            ['title' => 'Students','value' => '800', 'icon' => 'bi bi-mortarboard','animation' => 'fade-up'],
+            ['title' => 'Faculty Members','value' => '30', 'icon' => 'bi bi-people','animation' => 'fade-down'],
+        ];
+
         $page->metas()->create([
-            'meta_key' => 'short_description',
+            'meta_key' => 'short_details',
             'meta_value' => json_encode([
-                'Departments' => '3',
-                'Established' => '2010',
-                'Students' => '800',
-                'Faculty Members' => '30',
+                'short_details' => $details,
             ]),
             'meta_type' => 'json',
         ]);
@@ -89,32 +93,37 @@ class HomePageSeeder extends Seeder
                     [
                         'name' => 'Notices',
                         'description' => 'Anyone can get any notices of this institution from here.',
-                        'url' => '/notices',
-                        'icon' => 'fas fa-bullhorn',
+                        'image_url'=> 'assets/img/services/notice.svg',
+                        'button_url' => 'notices',
+                        'button_text' => 'view All Notices',
                     ],
                     [
                         'name' => 'Result',
                         'description' => 'Check your academic results by logging into your student account.',
-                        'url' => '/results',
-                        'icon' => 'fas fa-graduation-cap',
+                        'image_url' => 'assets/img/services/result .svg',
+                        'button_url' => 'login/students-login',
+                        'button_text' => 'view Result',
                     ],
                     [
                         'name' => 'Apply Online',
                         'description' => 'Want to get admission here? Click here to start your admission process.',
-                        'url' => '/apply',
-                        'icon' => 'fas fa-user-plus',
+                        'image_url' => 'assets/img/services/application.svg',
+                        'button_url' => 'https://collegeadmission.eis.du.ac.bd/bn/b45de047fde9788cadae3cfe8e88dcc2',
+                        'button_text' => 'Apply Online',
                     ],
                     [
                         'name' => 'Academic Syllabus',
                         'description' => 'Click to view the syllabus.',
-                        'url' => '/syllabus',
-                        'icon' => 'fas fa-book',
+                        'image_url' => 'assets/img/services/syllabus.svg',
+                        'button_url' => 'academics/syllabus',
+                        'button_text' => 'View Syllabus'
                     ],
                     [
                         'name' => 'Academic Calendar',
                         'description' => 'Click to view your academic calendar.',
-                        'url' => '/calendar',
-                        'icon' => 'fas fa-calendar-alt',
+                        'image_url' => 'assets/img/services/calendar.svg',
+                        'button_url' => 'academics/calender',
+                        'button_text' => 'View Calender'
                     ],
                 ],
             ]),
@@ -128,24 +137,29 @@ class HomePageSeeder extends Seeder
                 'news_items' => [
                     [
                         'date_created' => Carbon::now()->format('d M, Y'),
-                        'headline' => 'Ashol news!',
+                        'headline' => 'Pain invaded FEC!',
                         'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                        'image_url' => 'assets/img/latest-news/pain.jpeg',
+                        'card_link_url' => '#',
                     ],
                     [
                         'date_created' => Carbon::now()->format('d M, Y'),
-                        'headline' => 'Pain invaded FEC!',
-                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                        'headline' => 'Dangers Alert',
+                        'short_des' => 'Muzan bhaya coming so aggressively toward FEC for destroying cafeteria.',
+                        'image_url' => 'assets/img/latest-news/muzan.jpg',
+                        'card_link_url' => '#',
                     ],
                     [
                         'date_created' => Carbon::now()->format('d M, Y'),
-                        'headline' => 'Pain invaded FEC!',
-                        'short_des' => 'Faridpur Engineering College’s destruction at the height of the invasion.',
+                        'headline' => 'New Non-Tech Dept. Head',
+                        'short_des' => 'Dr. Senku will be the new department head of Non-tech Dept. from next week.',
+                        'image_url' => 'assets/img/latest-news/senku.jpg',
+                        'card_link_url' => '#',
                     ],
                 ],
             ]),
             'meta_type' => 'json',
         ]);
-
         $page->metas()->create([
             'meta_key' => 'events',
             'meta_value' => json_encode([
