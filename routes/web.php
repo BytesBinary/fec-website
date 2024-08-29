@@ -37,6 +37,7 @@ Route::group(['prefix' => 'departments'],function(){
 });
 
 Route::group(['prefix'=>'clubs'],function(){
+    Route::get('/', [ClubsPageController::class, 'main_page'])->name('clubs');
     Route::get('/ric',[ClubsPageController::class,'RIC'])->name('clubs/ric-research-&-innovation-center');
     Route::get('/feccdc',[ClubsPageController::class,'FECCDC'])->name('clubs/feccdc-cyber-defense-club');
     Route::get('/fecdc',[ClubsPageController::class,'FECDC'])->name('clubs/fecdc-debating-club');

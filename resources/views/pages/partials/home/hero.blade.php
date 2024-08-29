@@ -3,13 +3,13 @@
     <div id="heroCarousel" class="carousel slide position-absolute w-100 h-100 carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner h-100">
             <div class="carousel-item active h-100" data-bs-interval="6000">
-                <img src="{{ asset('assets/img/hero-img.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                <img src="{{ asset('images/hero-img.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
             </div>
             <div class="carousel-item h-100" data-bs-interval="6000">
-                <img src="{{ asset('assets/img/hero-img1.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                <img src="{{ asset('images/hero-img1.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
             </div>
             <div class="carousel-item h-100" data-bs-interval="6000">
-                <img src="{{ asset('assets/img/hero-bg2.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
+                <img src="{{ asset('images/hero-bg2.jpg') }}" alt="" class="d-block w-100 h-100 object-fit-cover">
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
                 </span>
             </h1>
             <p data-aos="fade-up" data-aos-delay="100">{{$hero_section['sub_title']}}<br></p>
-            <img src="{{asset('assets/img/'.$hero_section['logo'])}}" class="img-fluid hero-img" alt="{{$hero_section['logo_alt']}}" style="height: 255pt" data-aos="zoom-out" data-aos-delay="300">
+            <img src="{{asset('images/'.$hero_section['logo'])}}" class="img-fluid hero-img" alt="{{$hero_section['logo_alt']}}" style="height: 255pt" data-aos="zoom-out" data-aos-delay="300">
         </div>
     </div>
 </section>

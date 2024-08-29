@@ -1,5 +1,7 @@
 @extends("pages.layouts.app")
 
+@section('title','Principal | FEC')
+
 @section('content')
 <main class="main page-top-section">
     <h1 class="text-center">Message from Principal</h1>
@@ -7,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <div class="card" style="align-items: right">
-        <img src="{{ asset('assets/img/mia-bhai.jpg') }}" alt="principal" class="img-fluid mx-auto d-block" style="width:70%;">
+        <img src="{{ asset('images/mia-bhai.jpg') }}" alt="principal" class="img-fluid mx-auto d-block" style="width:70%;">
     <h3>Prof. Dr. Engr. Md. Mizanur Rahman</h3>
     <p class="title">Principal</p>
     <p>Faridpur Engineering College</p>

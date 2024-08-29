@@ -4,12 +4,16 @@ $pages = get_pages();
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="#" class="logo d-flex align-items-center me-auto">
-            <img src="{{asset('assets\img\FEClogo.png')}}" alt="">
+            <img src="{{asset('images\FEClogo.png')}}" alt="">
             <h1 class="sitename">FEC</h1>
         </a>
         <nav id="navmenu" class="navmenu">
             <ul>
                 @foreach ($pages as $page)
+                    @if ( $page['page_slug'] === 'clubs' )
+                        <li><a href="{{ route($page['page_slug'])  }}" class="{{ is_active_route($page['page_slug']) }}">{{ $page['page_title'] }}</a></li>
+                        @continue
+                    @endif
                     @if ( $page['page_type'] !== 'parent' )
                         <li><a href="{{ route($page['page_slug'])  }}" class="{{ is_active_route($page['page_slug']) }}">{{ $page['page_title'] }}</a></li>
                     @else

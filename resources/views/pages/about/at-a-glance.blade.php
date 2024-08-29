@@ -1,5 +1,7 @@
 @extends('pages.layouts.app')
 
+@section('title','At a Glance | FEC')
+
 @section('content')
     <div class="container page-top-section">
         <div class="row">
