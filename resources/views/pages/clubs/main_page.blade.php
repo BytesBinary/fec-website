@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row g-5">
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                    image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                    image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="Reasearch & innovation Center" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -17,7 +17,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                    image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                    image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="FEC Sports Association" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -25,7 +25,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                    image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                    image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="FEC Photographic Club" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -33,7 +33,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="FEC Programming Club" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -41,7 +41,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="FEC Cyber Defense Club" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -49,7 +49,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="Islamic Dawah & Reasearch Center" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -57,7 +57,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                    image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                    image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="FEC Debating Club" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -65,7 +65,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                    image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                    image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="Club of Profession" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
@@ -73,7 +73,7 @@
                     card-url-text="Visit the Club"/>
 
                 <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true"
-                    image-url="{{ asset('assets/img/events/events.jpeg') }}" image-alt="Features 3"
+                    image-url="{{ asset('images/events/events.jpeg') }}" image-alt="Features 3"
                     image-class="card-img-top img-fluid"
                     card-title="FEC Rover Scout Group" title-class="fw-bold mb-3"
                     card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur."
