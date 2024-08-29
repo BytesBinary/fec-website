@@ -1,7 +1,8 @@
 <section class="section online-services-section">
     <div class="container">
-        <x-section-title title="Online Services" des="Here is our online services from which you can get your information instant." animation="fade-up"/>
-        <div class="row justify-content-center align-items-center card-container">
+        <x-section-title title="{{ $online_services['section_title'] }}" des="{{ $online_services['section_heading'] }}"
+            animation="fade-up" />
+        <div class="row justify-content-center align-items-center card-container">                         
             <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{asset('images/services/notice.svg')}}"
                     image-class="img-fluid mb-3 card-image icon" image-alt="Notices" title-class="card-title card-title-fourth my-3" card-title="Notices"
                     text-class="card-text card-text-fourth mb-4" card-text="Anyone can get any notices of this institution from here."
