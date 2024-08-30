@@ -18,7 +18,7 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">SL</th>
+                                <th scope="col">SL no.</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Designation/Section</th>
                                 <th scope="col">Web-mail</th>

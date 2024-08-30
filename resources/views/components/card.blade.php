@@ -11,11 +11,13 @@
                     <h5 class="card-title {{$titleClass}}">{{$cardTitle}}</h5>
                     <p class="card-text {{$textClass}}">{!! $cardText !!}</p>
                     @if($button)
-                        <a href="{{$buttonUrl}}" class="{{$urlClass}}">
-                            <button class="{{$buttonClass}}">
-                                {{$buttonText}}
-                            </button>
-                        </a>
+                        <div class="{{$cardConClass}}">
+                            <a href="{{$buttonUrl}}" class="{{$urlClass}}">
+                                <button class="{{$buttonClass}}">
+                                    {{$buttonText}}
+                                </button>
+                            </a>
+                        </div>
                     @endif
                     @if($cardlink)
                         <a href="{{$cardLinkUrl}}" class="{{$cardLinkClass}}">
