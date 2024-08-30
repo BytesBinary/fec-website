@@ -17,6 +17,6 @@ class LoginPageController extends Controller
     }
     public function admin_login()
     {
-        return view('pages.login.admin-login');
+        return view('admin.login');
     }
 }
