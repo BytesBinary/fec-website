@@ -4,18 +4,21 @@
 
 @section('style')
     <style>
-        .header .logo h1, .navmenu a{
+        .header .logo h1, .navmenu a {
             color: var(--background-color);
         }
-        #header.scrolled .navmenu a{
+
+        #header.scrolled .navmenu a {
             color: var(--nav-color);
         }
-        #header.scrolled .navmenu li:hover>a,
+
+        #header.scrolled .navmenu li:hover > a,
         #header.scrolled .navmenu .active,
-        #header.scrolled .navmenu .active:focus{
+        #header.scrolled .navmenu .active:focus {
             color: var(--nav-hover-color);
         }
-        #header.scrolled h1, #header.scrolled .mobile-nav-toggle{
+
+        #header.scrolled h1, #header.scrolled .mobile-nav-toggle {
             color: var(--nav-color);
         }
 
@@ -23,13 +26,16 @@
             .mobile-nav-toggle {
                 color: var(--background-color);
             }
-            .navmenu ul{
+
+            .navmenu ul {
                 background-color: var(--background-color);
             }
-            .navmenu ul a{
+
+            .navmenu ul a {
                 color: var(--nav-color);
             }
-            .foot-img img{
+
+            .foot-img img {
                 height: auto;
             }
         }
@@ -38,22 +44,22 @@
 
 @section('content')
     <main class="main homepage">
-        @include('pages.partials.home.hero')
+        @include('pages.home.hero')
 
-        @include('pages.partials.home.administration-section')
+        @include('pages.home.administration-section')
 
-        @include('pages.partials.home.short-details')
+        @include('pages.home.short-details')
 
-        @include('pages.partials.home.about')
+        @include('pages.home.about')
 
-        @include('pages.partials.home.online-service')
+        @include('pages.home.online-service')
 
-        @include('pages.partials.home.latest-news')
+        @include('pages.home.latest-news')
 
-        @include('pages.partials.home.events')
+        @include('pages.home.events')
 
-        @include('pages.partials.home.research')
+        @include('pages.home.research')
 
-        @include('pages.partials.home.faq')
+        @include('pages.home.faq')
     </main>
 @endsection

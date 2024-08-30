@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 class DepartmentsPageController extends Controller
 {
     public function computer_science(){
-        return view('pages.departments.computer-science-&-engineering');
+        return view('pages.computer-science-&-engineering');
     }
 
     public function electrical_electronics(){
-        return view('pages.departments.electrical-&-electronic-engineering');
+        return view('pages.electrical-&-electronic-engineering');
     }
     public function civil(){
-        return view('pages.departments.civil');
+        return view('pages.civil');
     }
     public function non_tech(){
-        return view('pages.departments.non-tech');
+        return view('pages.non-tech');
     }
 }
