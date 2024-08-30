@@ -1380,9 +1380,19 @@ section,
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+/*--------------------------------------------------------------*/
 /*--------------------------------------------------------------
     # ALL CSS OF ADMIN PAGE GOES FROM HERE
  -------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+:root {
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 56px;
+}
+
+/*--------------------------------------------------------------
+    # Admin Login Page
+ --------------------------------------------------------------*/
 .admin-login-page .sign-in-container {
     display: flex;
     justify-content: center;
@@ -1410,4 +1420,50 @@ section,
 .admin-login-page .sign-in-card .btn-primary:hover {
     background-color: #218838;
     border-color: #218838;
+}
+
+/*--------------------------------------------------------------
+    # Admin Dashboard Page Header
+ --------------------------------------------------------------*/
+.admin-navbar .admin-navbar-brand {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+/*--------------------------------------------------------------
+    # Admin Side Navigation
+ --------------------------------------------------------------*/
+
+.admin-side-nav .sidebar-nav {
+    width: var(--offcanvas-width);
+}
+.admin-side-nav .sidebar-link {
+    display: flex;
+    align-items: center;
+}
+.admin-side-nav .sidebar-link .right-icon {
+    display: inline-flex;
+}
+.admin-side-nav .sidebar-link[aria-expanded="true"] .right-icon {
+    transform: rotate(180deg);
+}
+.admin-side-nav hr {
+    height: 0.5px !important;
+}
+@media (min-width: 992px) {
+    .admin-dashboard-page main {
+        margin-left: var(--offcanvas-width);
+    }
+    /* this is to remove the backdrop */
+    .admin-side-nav .offcanvas-backdrop::before {
+        display: none;
+    }
+    .admin-side-nav .sidebar-nav {
+        -webkit-transform: none;
+        transform: none;
+        visibility: visible !important;
+        height: calc(100% - var(--topNavbarHeight));
+        top: var(--topNavbarHeight);
+    }
 }

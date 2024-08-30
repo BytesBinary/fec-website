@@ -63,4 +63,8 @@ Route::group(['prefix' => 'login'],function(){
     Route::post('/admin-login', [LoginPageController::class, 'admin_login'])->name('login/admin-login');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/logout', [LoginPageController::class, 'logout'])->name('logout');
+});
+
 require_once __DIR__.'/admin.php';

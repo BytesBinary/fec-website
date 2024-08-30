@@ -18,6 +18,10 @@ class LoginPageController extends Controller
     }
     public function admin_login_page()
     {
+        if(Auth::check() && Auth::user()->role == 'admin')
+        {
+            return redirect()->route('admin.dashboard');
+        }
         return view('pages.admin-login');
     }
 
@@ -30,10 +34,21 @@ class LoginPageController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('dashboard');
+            return redirect()->intended('admin/dashboard');
         }
         return back()->withErrors([
             'failed' => 'The provided credentials do not match our records.',
         ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }
