@@ -78,7 +78,7 @@ class HomePageSeeder extends Seeder
             'meta_value' => json_encode([
                 'section_title' => 'About Us',
                 'section_heading' => 'Faridpur Engineering College is located about 2.7 kilometers away from the main city of Faridpur.',
-                'section_des' => 'Faridpur Engineering College (FEC) is a public undergraduate college in Faridpur, Bangladesh. It was established in 2010. The college is just 2.7 km away from Faridpur city Located at Dr. Kazi Motaher Hossain Road, Char Kamalapur, Baitul Aman, Faridpur. The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. Every year, around 180 students get accepted to undergraduate programs in Electrical and Electronic Engineering (EEE), Civil Engineering (CE) and Computer Science and Engineering (CSE).',
+                'section_des' => 'Faridpur Engineering College (FEC) is a public undergraduate college in Faridpur, Bangladesh. It was established in 2010. The college is just 2.7 km away from Faridpur city Located at Dr. Kazi Motaher Hossain Road, Char Kamalapur, Baitul Aman, Faridpur. <br><br> The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. Every year, around 180 students get accepted to undergraduate programs in Electrical and Electronic Engineering (EEE), Civil Engineering (CE) and Computer Science and Engineering (CSE).',
                 'video_url' => 'https://www.youtube.com/embed/_H9B4iynTY0?si=hssoHPSX4b3isoSt',
             ]),
             'meta_type' => 'json',
