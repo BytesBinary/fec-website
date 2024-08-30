@@ -1379,3 +1379,14 @@ section,
 .contact .php-email-form button[type=submit]:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/*--------------------------------------------------------------
+# Club Section
+--------------------------------------------------------------*/
+.club-hero-section{
+    background-image: url('/images/hero-img.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    /* background-blend-mode: overlay; */
+}
