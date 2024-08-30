@@ -1379,3 +1379,35 @@ section,
 .contact .php-email-form button[type=submit]:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/*--------------------------------------------------------------
+    # ALL CSS OF ADMIN PAGE GOES FROM HERE
+ -------------------------------------------------------------*/
+.admin-login-page .sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-login-page .sign-in-card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.admin-login-page .sign-in-card .img-container {
+    text-align: center;
+}
+.admin-login-page .sign-in-card img {
+    height: 150px;
+    width: 150px;
+}
+.admin-login-page .sign-in-card .form-control:focus {
+    box-shadow: none;
+    border-color: #28A745;
+}
+.admin-login-page .sign-in-card .btn-primary {
+    background-color: #28A745;
+    border-color: #28A745;
+}
+.admin-login-page .sign-in-card .btn-primary:hover {
+    background-color: #218838;
+    border-color: #218838;
+}

@@ -2,10 +2,6 @@
 
 @section('title','Notices | Faridpur Engineering College')
 
-@section('style')
-    @include('assets.css.datatable-style')
-@endsection
-
 @section('content')
     <div class="container section-title page-top-section" data-aos="fade-down">
         <h2>{{ $page['page_title']  }}</h2>
@@ -34,8 +30,4 @@
             </table>
         </div>
     </div>
-@endsection
-
-@section('script')
-    @include('assets.js.datatable-script')
 @endsection

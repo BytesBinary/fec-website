@@ -42,6 +42,15 @@ $(document).ready(function() {
     };
     $(window).on('scroll', checkScroll);
     checkScroll(); // Initial check
+
+    // Show password when click in the eye icon
+    $(document).ready(function() {
+        $('#togglePassword').on('click', function() {
+            const type = $('#password').attr('type') === 'password' ? 'text' : 'password';
+            $('#password').attr('type', type);
+            $('#eyeIcon').toggleClass('bi-eye bi-eye-slash');
+        });
+    });
 });
 
 
