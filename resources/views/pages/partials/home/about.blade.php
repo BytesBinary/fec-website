@@ -7,7 +7,7 @@
         <div class="row temp">
             <div class="col-sm-6 text" data-aos="fade-up-right">
                 <p>
-                    {{ $about_section['section_des'] }}
+                    {!! ($about_section['section_des']) !!}
                 </p>
                 <a href="{{ route('about-college/infrastructure') }}">
                     <div class="d-grid">
