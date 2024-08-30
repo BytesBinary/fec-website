@@ -58,388 +58,131 @@
 
 <section class="examiners bg-dark text-light py-5" id="advisory_commitee">
     <div class="container">
-        <div class="text-center my-4">
-            <h2 class="text-purple" data-aos="fade-down">Advisory Committee</h2>
-        </div>
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="text-center">
+                <h2 class="text-primary">Advisory Committee</h2>
+                <h3 class="text-info">Chief Advisor</h3>
 
-        <div class="text-center my-3">
-            <h3 class="text-cyan" data-aos="fade-down">Chief Advisor</h3>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 mb-4" data-aos="zoom-in">
-                <div class="card bg-secondary text-white shadow">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/image.jpeg" class="card-img-top rounded-lg" alt="">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Md. Shamsul Islam</h5>
-                        <p class="card-text text-cyan">Assistant Professor &amp; Head, Dept. of CSE</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/facebook.png" alt="Facebook" class="icon">
-                            </a>
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/whatsapp.png" alt="WhatsApp" class="icon">
-                            </a>
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/gmail.png" alt="Gmail" class="icon">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <x-card row-class="col-sm-12" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
             </div>
         </div>
 
         <div class="text-center mt-5">
-            <h3 class="text-cyan" data-aos="fade-down">Honorary Advisors</h3>
-        </div>
-
-        <div class="row justify-content-center my-4">
-            <!-- Honorary Advisor 1 -->
-            <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in">
-                <div class="card bg-secondary text-white shadow">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/image.jpeg" class="card-img-top rounded-lg" alt="">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Md. Aklasur Rahman</h5>
-                        <p class="card-text text-cyan">Head, Non-tech Dept.</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/facebook.png" alt="Facebook" class="icon">
-                            </a>
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/whatsapp.png" alt="WhatsApp" class="icon">
-                            </a>
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/gmail.png" alt="Gmail" class="icon">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="text-info" data-aos="fade-down">Honorary Advisors</h3>
+            <div class="row g-4">
+                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
             </div>
+        </div>
+        <div class="text-center mt-5">
+            <h3 class="text-info" data-aos="fade-down">Advisors</h3>
+            <div class="row g-4">
+                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+            </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Honorary Advisor 2 -->
-            <!-- Repeat structure for other advisors -->
 
+<section class="examiners bg-black text-light py-5" id="advisory_commitee">
+    <div class="container">
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="text-center">
+                <h2 class="text-primary">Committee</h2>
+                <h3 class="text-info">President</h3>
+
+                <x-card row-class="col-sm-12" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+            </div>
         </div>
 
         <div class="text-center mt-5">
-            <h3 class="text-cyan" data-aos="fade-down">Advisors</h3>
+            <h3 class="text-info" data-aos="fade-down">Vice President</h3>
+            <div class="row g-4">
+                <x-card row-class="col-sm-6" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-6" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+            </div>
+        </div>
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="text-center">
+                <h3 class="text-info">General Secretary</h3>
+
+                <x-card row-class="col-sm-12" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+            </div>
         </div>
 
-        <div class="row justify-content-center my-4">
-            <!-- Advisor 1 -->
-            <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in">
-                <div class="card bg-secondary text-white shadow">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/image.jpeg" class="card-img-top rounded-lg" alt="">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Partha Mandal</h5>
-                        <p class="card-text text-cyan">Lecturer, EEE</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/facebook.png" alt="Facebook" class="icon">
-                            </a>
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/whatsapp.png" alt="WhatsApp" class="icon">
-                            </a>
-                            <a href="#" class="btn btn-purple mx-1">
-                                <img src="https://clubhub.jakiurrahman.info/assets/images/gmail.png" alt="Gmail" class="icon">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="text-center mt-5">
+            <h3 class="text-info" data-aos="fade-down">Joint Secretary</h3>
+            <div class="row g-4">
+                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
             </div>
-
-            <!-- Repeat structure for other advisors -->
+        </div>
+        <div class="text-center mt-5">
+            <h3 class="text-info" data-aos="fade-down">Other Commitee Members</h3>
+            <div class="row g-4">
+                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
+            </div>
         </div>
     </div>
 </section>
 
-<section class="examiners bg-gray-900 px-5 pt-10 pb-10" id="committee">
+<section class="review bg-dark pb-10 pt-10 px-5" id="events">
     <div class="container mx-auto">
-        <div class="text-4xl text-center my-10 text-purple-500" data-aos="fade-down">
-            Committee
-        </div>
-
-        <!-- President Section -->
-        <div class="text-4xl text-center text-cyan-300 mb-3" data-aos="fade-down">
-            President
-        </div>
-        <div class="grid grid-cols-1 gap-3 justify-center lg:mx-[250px] md:mx-[200px]">
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="{{ asset('images/image.jpeg') }}" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">
-                    Md. Abid Hasan Roni Bokshi
-                </p>
-                <p class="text-lg text-cyan-400 text-center my-5">
-                    <!-- Dynamic content -->
-                </p>
-                <div class="text-center mt-3 grid grid-cols-3 w-full gap-1">
-                    @foreach (['facebook', 'whatsapp', 'gmail'] as $social)
-                    <div class="bg-purple-500 p-2 rounded-md cursor-pointer" onclick="window.location.href='#'">
-                        <img src="{{ asset('images/' . $social . '.png') }}" alt="{{ $social }}" class="h-6 mx-auto">
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-
-        <!-- Vice President Section -->
-        <div class="text-3xl text-center text-cyan-300 mt-10" data-aos="fade-down">
-            Vice President
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-3 justify-center my-5">
-            @foreach ([['Abu Nakib Siddique', 'images/image.jpeg'], ['Siam - Ur - Rahman', 'images/image.jpeg']] as $vp)
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="{{ asset($vp[1]) }}" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">
-                    {{ $vp[0] }}
-                </p>
-                <p class="text-lg text-cyan-400 text-center my-5">
-                    <!-- Dynamic content -->
-                </p>
-                <div class="text-center mt-3 grid grid-cols-3 w-full gap-1">
-                    @foreach (['facebook', 'whatsapp', 'gmail'] as $social)
-                    <div class="bg-purple-500 p-2 rounded-md cursor-pointer" onclick="window.location.href='#'">
-                        <img src="{{ asset('images/' . $social . '.png') }}" alt="{{ $social }}" class="h-6 mx-auto">
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-        <!-- General Secretary Section -->
-        <div class="text-3xl text-center text-cyan-300 mt-10" data-aos="fade-down">
-            General Secretary
-        </div>
-        <div class="grid grid-cols-1 gap-3 justify-center my-5 lg:mx-[250px] md:mx-[200px]">
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="{{ asset('images/image.jpeg') }}" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">
-                    Abu Bakkar Siddque
-                </p>
-                <p class="text-lg text-cyan-400 text-center my-5">
-                    <!-- Dynamic content -->
-                </p>
-                <div class="text-center mt-3 grid grid-cols-3 w-full gap-1">
-                    @foreach (['facebook', 'whatsapp', 'gmail'] as $social)
-                    <div class="bg-purple-500 p-2 rounded-md cursor-pointer" onclick="window.location.href='#'">
-                        <img src="{{ asset('images/' . $social . '.png') }}" alt="{{ $social }}" class="h-6 mx-auto">
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-
-        <!-- Joint Secretary Section -->
-        <div class="text-3xl text-center text-cyan-300 mt-10" data-aos="fade-down">
-            Joint Secretary
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-3 justify-center my-5">
-            @foreach ([['Md. Mahmudun Nobi', 'images/image.jpeg'], ['Irin Akter', 'images/image.jpeg'], ['Mosharrof Hossain Sarkar', 'images/image.jpeg']] as $js)
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="{{ asset($js[1]) }}" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">
-                    {{ $js[0] }}
-                </p>
-                <p class="text-lg text-cyan-400 text-center my-5">
-                    <!-- Dynamic content -->
-                </p>
-                <div class="text-center mt-3 grid grid-cols-3 w-full gap-1">
-                    @foreach (['facebook', 'whatsapp', 'gmail'] as $social)
-                    <div class="bg-purple-500 p-2 rounded-md cursor-pointer" onclick="window.location.href='#'">
-                        <img src="{{ asset('images/' . $social . '.png') }}" alt="{{ $social }}" class="h-6 mx-auto">
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-        <!-- Other Committee Members Section -->
-        <div class="text-3xl text-center text-cyan-300 mt-10" data-aos="fade-down">
-            Other Committee Members
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-3 justify-center my-5">
-            @foreach ([['Istiak Hossain Shawon', 'Organizing Secretary'], ['JM Jakaria', 'Joint Organizing Secretary'], ['Mashrafi Bin Moin', 'Joint Organizing Secretary'], ['Sharmin Sultana Mim', 'Joint Organizing Secretary']] as $member)
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="{{ asset('images/image.jpeg') }}" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">
-                    {{ $member[0] }}
-                </p>
-                <p class="text-lg text-cyan-400 text-center my-5">
-                    {{ $member[1] }}
-                </p>
-                <div class="text-center mt-3 grid grid-cols-3 w-full gap-1">
-                    @foreach (['facebook', 'whatsapp', 'gmail'] as $social)
-                    <div class="bg-purple-500 p-2 rounded-md cursor-pointer" onclick="window.location.href='#'">
-                        <img src="{{ asset('images/' . $social . '.png') }}" alt="{{ $social }}" class="h-6 mx-auto">
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-<section class="review bg-gray-800 pb-10 pt-10 px-5" id="events">
-    <div class="container mx-auto">
-        <div class="text-center text-white my-3 p-3 text-4xl" data-aos="fade-up">
+        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-up">
             Events - Ongoing
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 justify-center">
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ric.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">Techno Fest 2K24</p>
-                <p class="text-lg text-red-500 text-center my-5"></p>
-                <div class="flex lg:flex flex-row justify-center">
-                    <button onclick="window.location.href='https://clubhub.jakiurrahman.info/events'" class="py-2 bg-gradient-to-r rounded-md shadow-md text-white px-10 mx-2 from-pink-500 to-yellow-600 hover:from-pink-600 hover:to-yellow-900 active:from-yellow-700 active:to-yellow-500">
-                        View Details
-                    </button>
-                </div>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ongoing-2.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">Blockchain technology Quiz</p>
-                <p class="text-lg text-red-500 text-center my-5"></p>
-                <div class="flex lg:flex flex-row justify-center">
-                    <button onclick="window.location.href='https://clubhub.jakiurrahman.info/events'" class="py-2 bg-gradient-to-r rounded-md shadow-md text-white px-10 mx-2 from-pink-500 to-yellow-600 hover:from-pink-600 hover:to-yellow-900 active:from-yellow-700 active:to-yellow-500">
-                        View Details
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div class="row justify-content-evenly align-items-center card-container">
+            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
 
-        <div class="text-center text-white my-10 mb-3 p-3 text-4xl" data-aos="fade-up">
+            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
+
+        </div>
+        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-up">
             Events - Upcoming
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 justify-center">
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/coming-soon.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">Coming soon 1</p>
-                <p class="text-lg text-red-500 text-center my-5"></p>
-                <div class="flex lg:flex flex-row justify-center">
-                    <button onclick="window.location.href='https://clubhub.jakiurrahman.info/events'" class="py-2 bg-gradient-to-r rounded-md shadow-md text-white px-10 mx-2 from-pink-500 to-yellow-600 hover:from-pink-600 hover:to-yellow-900 active:from-yellow-700 active:to-yellow-500">
-                        View Details
-                    </button>
-                </div>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/coming-soon.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">Coming soon 2</p>
-                <p class="text-lg text-red-500 text-center my-5"></p>
-                <div class="flex lg:flex flex-row justify-center">
-                    <button onclick="window.location.href='https://clubhub.jakiurrahman.info/events'" class="py-2 bg-gradient-to-r rounded-md shadow-md text-white px-10 mx-2 from-pink-500 to-yellow-600 hover:from-pink-600 hover:to-yellow-900 active:from-yellow-700 active:to-yellow-500">
-                        View Details
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div class="row justify-content-evenly align-items-center card-container">
+            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
 
-        <div class="text-center text-white my-10 mb-3 p-3 text-4xl" data-aos="fade-up">
+            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
+
+        </div>
+        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-up">
             Events - Previous
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 justify-center">
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/past.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">Previous Event 1</p>
-                <p class="text-lg text-red-500 text-center my-5"></p>
-                <div class="flex lg:flex flex-row justify-center">
-                    <button onclick="window.location.href='https://clubhub.jakiurrahman.info/events'" class="py-2 bg-gradient-to-r rounded-md shadow-md text-white px-10 mx-2 from-pink-500 to-yellow-600 hover:from-pink-600 hover:to-yellow-900 active:from-yellow-700 active:to-yellow-500">
-                        View Details
-                    </button>
-                </div>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-800 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/past.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-xl mt-5 text-center">Previous Event 2</p>
-                <p class="text-lg text-red-500 text-center my-5"></p>
-                <div class="flex lg:flex flex-row justify-center">
-                    <button onclick="window.location.href='https://clubhub.jakiurrahman.info/events'" class="py-2 bg-gradient-to-r rounded-md shadow-md text-white px-10 mx-2 from-pink-500 to-yellow-600 hover:from-pink-600 hover:to-yellow-900 active:from-yellow-700 active:to-yellow-500">
-                        View Details
-                    </button>
-                </div>
-            </div>
+        <div class="row justify-content-evenly align-items-center card-container">
+            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
+
+            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
+
         </div>
     </div>
 </section>
 
-<section class="examiners bg-gray-900 px-5 pt-10 pb-10" id="achievement">
+<section class="examiners bg-black px-5 pt-10 pb-10" id="achievement">
     <div class="container mx-auto">
-        <div class="text-4xl text-center my-10 text-purple-500" data-aos="fade-down">
+        <div class="fs-1 text-center my-10 text-purple-500" data-aos="fade-down">
             Achievement
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-y-5">
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-900 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ach.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-md mt-5 text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut mauris aliquet, ultrices ex vitae, interdum ipsum. Integer sagittis nisl vel tortor elementum, nec mattis massa accumsan. Maecenas vestibulum sem non luctus mattis. Sed lectus velit, ultricies eu fermentum nec, efficitur sed tortor. Integer quis iaculis justo, et rhoncus justo.
-                </p>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-900 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ach.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-md mt-5 text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut mauris aliquet, ultrices ex vitae, interdum ipsum. Integer sagittis nisl vel tortor elementum, nec mattis massa accumsan. Maecenas vestibulum sem non luctus mattis. Sed lectus velit, ultricies eu fermentum nec, efficitur sed tortor. Integer quis iaculis justo, et rhoncus justo.
-                </p>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-900 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ach.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-md mt-5 text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut mauris aliquet, ultrices ex vitae, interdum ipsum. Integer sagittis nisl vel tortor elementum, nec mattis massa accumsan. Maecenas vestibulum sem non luctus mattis. Sed lectus velit, ultricies eu fermentum nec, efficitur sed tortor. Integer quis iaculis justo, et rhoncus justo.
-                </p>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-900 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ach.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-md mt-5 text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut mauris aliquet, ultrices ex vitae, interdum ipsum. Integer sagittis nisl vel tortor elementum, nec mattis massa accumsan. Maecenas vestibulum sem non luctus mattis. Sed lectus velit, ultricies eu fermentum nec, efficitur sed tortor. Integer quis iaculis justo, et rhoncus justo.
-                </p>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-900 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ach.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-md mt-5 text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut mauris aliquet, ultrices ex vitae, interdum ipsum. Integer sagittis nisl vel tortor elementum, nec mattis massa accumsan. Maecenas vestibulum sem non luctus mattis. Sed lectus velit, ultricies eu fermentum nec, efficitur sed tortor. Integer quis iaculis justo, et rhoncus justo.
-                </p>
-            </div>
-            <div class="mx-auto w-full shadow-lg text-white p-5 bg-gray-900 rounded-md md:w-4/5" data-aos="zoom-in">
-                <div class="text-center mx-auto">
-                    <img src="https://clubhub.jakiurrahman.info/assets/images/ach.jpeg" alt="" class="rounded-lg h-[200px] mx-auto">
-                </div>
-                <p class="text-md mt-5 text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut mauris aliquet, ultrices ex vitae, interdum ipsum. Integer sagittis nisl vel tortor elementum, nec mattis massa accumsan. Maecenas vestibulum sem non luctus mattis. Sed lectus velit, ultricies eu fermentum nec, efficitur sed tortor. Integer quis iaculis justo, et rhoncus justo.
-                </p>
-            </div>
+        <div class="row g-5">
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="FEC er unnoyon" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Visit of srilanka cheif officer" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Lufy declare war against world government" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="FEC er unnoyon" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Visit of srilanka cheif officer" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Lufy declare war against world government" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
         </div>
     </div>
 </section>
