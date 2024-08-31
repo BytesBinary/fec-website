@@ -10,6 +10,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         ->name('admin.dashboard');
     Route::get('/pages',[PagesController::class, 'all_pages'])
         ->name('admin.pages');
-    Route::get('/pages/edit/{slug}',[PagesController::class, 'edit_page'])
+    Route::get('/pages/edit/{slug}/{section}',[PagesController::class, 'edit_page'])
+        ->name('admin.pages.edit');
+    Route::post('/pages/edit/{slug}/{section}',[PagesController::class, 'save_page'])
         ->name('admin.pages.edit');
 });

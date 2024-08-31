@@ -28,7 +28,7 @@
             {{ $attributes->merge(['class' => 'form-control ' . $class]) }}
         >
         @error($name)
-        <div class="invalid-feedback">
+        <div class="text-danger">
             {{ $message }}
         </div>
         @enderror

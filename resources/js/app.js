@@ -9,6 +9,7 @@ import 'datatables.net-bs5/js/dataTables.bootstrap5.min.js';
 import AOS from 'aos';
 import GLightbox from 'glightbox';
 import Swiper from 'swiper/bundle';
+import Swal from 'sweetalert2'
 
 $(document).ready(function() {
     // Short details counter
@@ -189,32 +190,6 @@ $(document).ready(function() {
             "targets": 0,
             "orderable": false
         }]
-    });
-
-    // Handle select all checkbox
-    $('#select-all').on('click', function(){
-        var rows = table.rows({ 'search': 'applied' }).nodes();
-        $('input[type="checkbox"]', rows).prop('checked', this.checked);
-    });
-
-    // Handle individual row selection
-    $('#use-datatable tbody').on('change', 'input[type="checkbox"]', function(){
-        if(!this.checked){
-            var el = $('#select-all').get(0);
-            if(el && el.checked && ('indeterminate' in el)){
-                el.indeterminate = true;
-            }
-        }
-    });
-
-    $('#use-datatable tbody').on('click', '.btn-primary', function(){
-        var data = table.row($(this).parents('tr')).data();
-        alert('You are editing the record of: ' + data[1]);
-    });
-
-    $('#use-datatable tbody').on('click', '.btn-danger', function(){
-        var data = table.row($(this).parents('tr')).data();
-        alert('You are deleting the record of: ' + data[1]);
     });
 });
 
