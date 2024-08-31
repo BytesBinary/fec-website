@@ -46,7 +46,7 @@
     <main class="main homepage">
         @include('pages.home.hero')
 
-{{--        @include('pages.home.administration-section')--}}
+        @include('pages.home.administration-section')
 
 {{--        @include('pages.home.short-details')--}}
 
@@ -63,3 +63,4 @@
 {{--        @include('pages.home.faq')--}}
     </main>
 @endsection
+

@@ -10,8 +10,12 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         ->name('admin.dashboard');
     Route::get('/pages',[PagesController::class, 'all_pages'])
         ->name('admin.pages');
+    Route::get('/pages/{slug}/{action}', [PagesController::class, 'change_page_status'])
+        ->name('admin.page.status');
     Route::get('/pages/edit/{slug}/{section}',[PagesController::class, 'edit_page'])
         ->name('admin.pages.edit');
+    Route::get('/pages/meta/delete/{id}',[PagesController::class, 'delete_meta'])
+        ->name('admin.pages.meta-delete');
     Route::post('/pages/edit/{slug}/{section}',[PagesController::class, 'save_page'])
         ->name('admin.pages.edit');
 });

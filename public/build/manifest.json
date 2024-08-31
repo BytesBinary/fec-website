@@ -1,4 +1,8 @@
 {
+  "_jquery-vEc8DvAz.js": {
+    "file": "assets/jquery-vEc8DvAz.js",
+    "name": "jquery"
+  },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
     "file": "assets/bootstrap-icons-BOrJxbIo.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
@@ -13,9 +17,21 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-KTZOAGnz.js",
+    "file": "assets/app-M38JsKMh.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_jquery-vEc8DvAz.js"
+    ]
+  },
+  "resources/js/home.js": {
+    "file": "assets/home-BIBHlVPs.js",
+    "name": "home",
+    "src": "resources/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-vEc8DvAz.js"
+    ]
   }
 }

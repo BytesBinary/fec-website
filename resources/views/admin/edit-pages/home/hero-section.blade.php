@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <x-forms action="" method="POST" enctype="multipart/form-data">
+    <x-forms action="{{route('admin.pages.edit',['slug'=>'home','section'=>'hero_section'])}}" method="POST" enctype="multipart/form-data">
         <div class="row">
             <h2 class="text-center">Edit Hero Section</h2>
 
@@ -23,7 +23,10 @@
             <h6>Hero Background Image</h6>
             <div id="background-images" class="row">
                 <div class="col-sm-4">
-                    <input type="file" name="bg_image[1]" id="bg_image" class="form-control">
+                    <input type="file" name="bg_image[]" id="bg_image" class="form-control">
+                    <small class="text-danger">@error('bg_image.*')
+                        {{ $message }}
+                        @enderror</small>
                 </div>
             </div>
 
@@ -37,6 +40,6 @@
 @endsection
 @section('script')
     <script>
-        @vite(['resources/js/home/hero-section.js'])
+        @vite(['resources/js/home.js'])
     </script>
 @endsection

@@ -17,8 +17,8 @@ if( ! function_exists( 'get_page_slug' ) ) {
 }
 
 if( ! function_exists( 'get_pages' ) ) {
-    function get_pages() {
-        $pages = \App\Models\Pages::all();
+    function get_pages($status = 'publish') {
+        $pages = \App\Models\Pages::where('page_status', $status)->get();
         $convertedPages = [];
         foreach($pages as $page) {
             $pageData = $page->toArray();
@@ -43,9 +43,11 @@ if( ! function_exists( 'get_pages' ) ) {
 }
 
 if( ! function_exists('get_page_details') ) {
-    function get_page_details( $slug )
+    function get_page_details( $slug, $status = 'publish' )
     {
-        return Pages::where('page_slug', $slug )->first();
+        return Pages::where('page_slug', $slug )
+            ->where('page_status',$status)
+            ->first();
     }
 }
 

@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-@if(isset($hero_section))
+@if(!empty($hero_section))
     <section id="hero" class="hero section position-relative">
         <div id="heroCarousel" class="carousel slide position-absolute w-100 h-100 carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner h-100">

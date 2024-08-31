@@ -33,7 +33,8 @@
                         <p class="fw-normal mb-1">{{$page->page_type}}</p>
                     </td>
                     <td>
-                        <span class="badge badge-success rounded-pill d-inline">{{$page->page_status}}</span>
+                        <p class="fw-normal mb-1">{{$page->page_status}}</p>
+                        <a href="{{route('admin.page.status',['action'=>('publish'===$page->page_status) ? 'unpublish' : 'publish', 'slug'=> $page->page_slug] )}}">Click to {{ ('publish'===$page->page_status) ? 'unpublish' : 'publish'  }}</a>
                     </td>
                     <td>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{$page->page_slug}}">
