@@ -25,7 +25,7 @@
 
     @include('admin.layouts.side-nav')
 
-    <main>
+    <main class="px-3">
         @yield('content')
     </main>
 </div>

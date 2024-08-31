@@ -45,7 +45,14 @@ if( ! function_exists( 'get_pages' ) ) {
 if( ! function_exists('get_page_details') ) {
     function get_page_details( $slug )
     {
-        $page = Pages::where('page_slug', $slug )->first();
-        return $page->toArray();
+        return Pages::where('page_slug', $slug )->first();
+    }
+}
+
+if( ! function_exists('convertToCamelCase') ) {
+    function convertToCamelCase( $string )
+    {
+        $string = ucwords(str_replace(['-', '_'], ' ', $string));
+        return str_replace(' ', ' ', $string);
     }
 }

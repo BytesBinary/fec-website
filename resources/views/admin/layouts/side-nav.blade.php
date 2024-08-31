@@ -27,7 +27,7 @@
 
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#notice">
-                            <span class="me-2"><i class="bi bi-bell-fill"></i></span>
+                            <span class="me-2"><i class="bi bi-file-earmark-fill"></i></span>
                             <span>Pages</span>
                             <span class="ms-auto">
                                 <span class="right-icon">
@@ -38,9 +38,9 @@
                         <div class="collapse" id="notice">
                             <ul class="navbar-nav ps-3">
                                 <li>
-                                    <a href="{{url('/')}}/admin/uploadnotice" class="nav-link px-3">
+                                    <a href="{{route('admin.pages')}}" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-cloud-arrow-up-fill"></i></span>
-                                        <span>Upload Notice</span>
+                                        <span>All Pages</span>
                                     </a>
                                 </li>
                             </ul>
@@ -48,9 +48,9 @@
                         <div class="collapse" id="notice">
                             <ul class="navbar-nav ps-3">
                                 <li>
-                                    <a href="{{url('/')}}/admin/modifynotice" class="nav-link px-3">
+                                    <a href="" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-pencil-square"></i></span>
-                                        <span>Modify Notice</span>
+                                        <span>Add New Page</span>
                                     </a>
                                 </li>
                             </ul>
