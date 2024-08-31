@@ -33,7 +33,27 @@
     <div class="container">
         <div class="row align-items-center g-4">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" data-aos="fade-down">
-                <img src="https://clubhub.jakiurrahman.info/assets/images/ric-banner.jpeg" alt="RIC Banner" class="img-fluid">
+                <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="{{asset('images/events/events.jpeg')}}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{{asset('images/events/events.jpeg')}}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{{asset('images/events/events.jpeg')}}" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 p-5">
                 <div class="text-primary h3 mb-4" data-aos="fade-down">About Research And Innovation Centre</div>
@@ -56,133 +76,57 @@
     </div>
 </section>
 
-<section class="examiners bg-dark text-light py-5" id="advisory_commitee">
-    <div class="container">
-        <div class="container d-flex justify-content-center align-items-center vh-100">
-            <div class="text-center">
-                <h2 class="text-primary">Advisory Committee</h2>
-                <h3 class="text-info">Chief Advisor</h3>
-
-                <x-card row-class="col-sm-12" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-
-        <div class="text-center mt-5">
-            <h3 class="text-info" data-aos="fade-down">Honorary Advisors</h3>
-            <div class="row g-4">
-                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <h3 class="text-info" data-aos="fade-down">Advisors</h3>
-            <div class="row g-4">
-                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-left" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="examiners bg-black text-light py-5" id="advisory_commitee">
-    <div class="container">
-        <div class="container d-flex justify-content-center align-items-center vh-100">
-            <div class="text-center">
-                <h2 class="text-primary">Committee</h2>
-                <h3 class="text-info">President</h3>
-
-                <x-card row-class="col-sm-12" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-
-        <div class="text-center mt-5">
-            <h3 class="text-info" data-aos="fade-down">Vice President</h3>
-            <div class="row g-4">
-                <x-card row-class="col-sm-6" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-6" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-        <div class="container d-flex justify-content-center align-items-center vh-100">
-            <div class="text-center">
-                <h3 class="text-info">General Secretary</h3>
-
-                <x-card row-class="col-sm-12" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-
-        <div class="text-center mt-5">
-            <h3 class="text-info" data-aos="fade-down">Joint Secretary</h3>
-            <div class="row g-4">
-                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <h3 class="text-info" data-aos="fade-down">Other Commitee Members</h3>
-            <div class="row g-4">
-                <x-card row-class="col-sm-4" link="#" animation="fade-right" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-                <x-card row-class="col-sm-4" link="#" animation="fade-up" image="true" image-class="rounded-top" cardimage="true" imageUrl="{{ asset('images/research/research.png') }}" imageAlt="" body-class="text-center" cardTitle="Md. Aklasur Rahman" title-class="mb-3 fw-bold" cardText="Head, Non-tech Dept." text-class="text-muted mb-4" />
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="review bg-dark pb-10 pt-10 px-5" id="events">
     <div class="container mx-auto">
-        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-up">
-            Events - Ongoing
+        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-down">
+            Events
         </div>
         <div class="row justify-content-evenly align-items-center card-container">
-            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
+            <x-card row-class="col-lg-3 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{asset('images/latest-news/muzan.jpg')}}" image-alt="loading" image-class="card-img-top img-fluid"
+            custom-html-in-card='<hr class="custom-line"><p class="text-muted mb-2 date"><i class="bi bi-calendar"></i> 21 Aug, 2024</p><hr class="custom-line">' card-title="Dangers Alert"
+            title-class="fw-bold mb-3" card-text="Muzan bhaya coming so agressively toward FEC for destroying cafeteria" cardlink="true" card-link-url="#"
+            card-link-class="btn btn-outline-primary rounded-pill" card-url-text="Read More" card-link-icon="bi bi-plus-lg"  />
 
-            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
+            <x-card row-class="col-lg-3 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{asset('images/latest-news/muzan.jpg')}}" image-alt="loading" image-class="card-img-top img-fluid"
+            custom-html-in-card='<hr class="custom-line"><p class="text-muted mb-2 date"><i class="bi bi-calendar"></i> 21 Aug, 2024</p><hr class="custom-line">' card-title="Dangers Alert"
+            title-class="fw-bold mb-3" card-text="Muzan bhaya coming so agressively toward FEC for destroying cafeteria" cardlink="true" card-link-url="#"
+            card-link-class="btn btn-outline-primary rounded-pill" card-url-text="Read More" card-link-icon="bi bi-plus-lg"  />
 
-        </div>
-        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-up">
-            Events - Upcoming
-        </div>
-        <div class="row justify-content-evenly align-items-center card-container">
-            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
-
-            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
-
-        </div>
-        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-up">
-            Events - Previous
-        </div>
-        <div class="row justify-content-evenly align-items-center card-container">
-            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
-
-            <x-card row-class="col-lg-4 mt-3 card-holder" animation="zoom-in-up" card-class="shadow-lg rounded-md h-100" body-class="text-center" image="true" image-url="{{ asset('images/research/research.png') }}" image-class="img-fluid mb-3 card-image icon" image-alt="" title-class="card-title card-title-fourth my-3" card-title="dfsdfsdfsdfsd" text-class="card-text card-text-fourth mb-4" card-text="kdfjklsjdflisjdlfjsdlfjl" button="true" button-url="" url-class="text-white stretched-link" button-class="btn btn-success btn-outline-light px-4 py-2 rounded-pill shadow-sm" button-text="Fuck" />
+            <x-card row-class="col-lg-3 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{asset('images/latest-news/muzan.jpg')}}" image-alt="loading" image-class="card-img-top img-fluid"
+            custom-html-in-card='<hr class="custom-line"><p class="text-muted mb-2 date"><i class="bi bi-calendar"></i> 21 Aug, 2024</p><hr class="custom-line">' card-title="Dangers Alert"
+            title-class="fw-bold mb-3" card-text="Muzan bhaya coming so agressively toward FEC for destroying cafeteria" cardlink="true" card-link-url="#"
+            card-link-class="btn btn-outline-primary rounded-pill" card-url-text="Read More" card-link-icon="bi bi-plus-lg"  />
 
         </div>
     </div>
 </section>
 
-<section class="examiners bg-black px-5 pt-10 pb-10" id="achievement">
+<section class="review bg-dark pb-10 pt-10 px-5" id="achievement">
     <div class="container mx-auto">
-        <div class="fs-1 text-center my-10 text-purple-500" data-aos="fade-down">
+        <div class="text-center text-white my-3 p-3 fs-1" data-aos="fade-up">
             Achievement
         </div>
         <div class="row g-5">
-            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="FEC er unnoyon" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{asset('images/latest-news/muzan.jpg')}}" image-alt="loading" image-class="card-img-top img-fluid"
+            card-title="Dangers Alert"
+            title-class="fw-bold mb-3" card-text="Muzan bhaya coming so agressively toward FEC for destroying cafeteria" cardlink="true" card-link-url="#"
+            card-link-class="btn btn-outline-primary rounded-pill" card-url-text="Read More" card-link-icon="bi bi-chevron-double-right"  />
 
-            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Visit of srilanka cheif officer" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{asset('images/latest-news/muzan.jpg')}}" image-alt="loading" image-class="card-img-top img-fluid"
+            card-title="Dangers Alert"
+            title-class="fw-bold mb-3" card-text="Muzan bhaya coming so agressively toward FEC for destroying cafeteria" cardlink="true" card-link-url="#"
+            card-link-class="btn btn-outline-primary rounded-pill" card-url-text="Read More" card-link-icon="bi bi-chevron-double-right"  />
 
-            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Lufy declare war against world government" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
-            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="FEC er unnoyon" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{asset('images/latest-news/muzan.jpg')}}" image-alt="loading" image-class="card-img-top img-fluid"
+            card-title="Dangers Alert"
+            title-class="fw-bold mb-3" card-text="Muzan bhaya coming so agressively toward FEC for destroying cafeteria" cardlink="true" card-link-url="#"
+            card-link-class="btn btn-outline-primary rounded-pill" card-url-text="Read More" card-link-icon="bi bi-chevron-double-right"  />
 
-            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Visit of srilanka cheif officer" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
+            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{asset('images/latest-news/muzan.jpg')}}" image-alt="loading" image-class="card-img-top img-fluid"
+            card-title="Dangers Alert"
+            title-class="fw-bold mb-3" card-text="Muzan bhaya coming so agressively toward FEC for destroying cafeteria" cardlink="true" card-link-url="#"
+            card-link-class="btn btn-outline-primary rounded-pill" card-url-text="Read More" card-link-icon="bi bi-chevron-double-right"  />
 
-            <x-card row-class="col-lg-4 col-md-6 mb-4" card-class="h-100 shadow-lg border-0" image="true" image-url="{{ asset('images/research/research.png') }}" image-alt="Features 3" image-class="card-img-top img-fluid" card-title="Lufy declare war against world government" title-class="fw-bold mb-3" card-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate dolore eveniet autem expedita consectetur." />
         </div>
     </div>
 </section>
