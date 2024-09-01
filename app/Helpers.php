@@ -58,3 +58,9 @@ if( ! function_exists('convertToCamelCase') ) {
         return str_replace(' ', ' ', $string);
     }
 }
+
+if( ! function_exists('sanitize_request') ) {
+    function sanitize_request( $request ) {
+        return $request->except(['_token', 'submit']);
+    }
+}
