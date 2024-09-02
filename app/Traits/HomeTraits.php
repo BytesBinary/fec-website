@@ -4,7 +4,8 @@ namespace App\Traits;
 
 use App\Models\PageMetas;
 
-trait HomeTraits {
+trait HomeTraits
+{
     public function update_hero_section($request, $id)
     {
         $request->validate([
@@ -55,12 +56,12 @@ trait HomeTraits {
         ]);
 
         $destinationPath = public_path('/images/home');
-        $image = 'admin_img_.'.$request->designation .'.'. $request->image->extension();
+        $image = 'admin_img_.' . $request->designation . '.' . $request->image->extension();
         $request->image->move($destinationPath, $image);
 
         PageMetas::updateOrCreate([
             'page_id' => $id,
-            'meta_key' => 'administration_section_'.$request->designation
+            'meta_key' => 'administration_section_' . $request->designation
         ], [
             'page_id' => $id,
             'meta_value' => json_encode(sanitize_request($request)),
@@ -71,7 +72,8 @@ trait HomeTraits {
         return redirect()->back();
     }
 
-    public function short_details_section($request, $id) {
+    public function short_details_section($request, $id)
+    {
         $request->validate([
             "established_text" => "required|string",
             "established_year" => "required|digits:4",
@@ -83,16 +85,65 @@ trait HomeTraits {
             "faculty_member_value" => "required|integer",
         ]);
 
-        PageMetas::updateOrCreate([
-            'page_id' => $id,
-            'meta_key' => 'short_details_section'
-        ],[
-            'page_id' => $id,
-            'meta_value' => json_encode(sanitize_request($request)),
-            'meta_type' => 'short_details',
-        ]);
+        PageMetas::updateOrCreate(
+            [
+                'page_id' => $id,
+                'meta_key' => 'short_details_section'
+            ],
+            [
+                'page_id' => $id,
+                'meta_value' => json_encode(sanitize_request($request)),
+                'meta_type' => 'short_details',
+            ]
+        );
 
         session()->flash('message', 'Short Details Section Updated Sucessfully');
+        return redirect()->back();
+    }
+
+    public function update_online_services_section($request, $id)
+    {
+        $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'btn-url' => 'required|string',
+            'btn-txt' => 'required|string',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        // Define the destination path
+        $destinationPath = public_path('/images/home');
+
+        // Generate a unique filename for the image
+        $imageName = 'admin_img_' . time() . '.' . $request->image->extension();
+
+        // Move the uploaded image to the destination path
+        $request->image->move($destinationPath, $imageName);
+
+        // Prepare the data to be stored in the database
+        $metaValue = [
+            'title' => $request->title,
+            'description' => $request->description,
+            'btn-url' => $request->input('btn-url'),
+            'btn-txt' => $request->input('btn-txt'),
+            'image' => '/images/home/' . $imageName,  // Save the image path
+        ];
+
+        // Update or create the record in the PageMetas table
+        PageMetas::updateOrCreate(
+            [
+                'page_id' => $id,
+                'meta_key' => 'online_services_section',
+            ],
+            [
+                'page_id' => $id,
+                'meta_value' => json_encode($metaValue), // Encode the meta value to JSON
+                'meta_type' => 'online_services'
+            ]
+        );
+
+        // Set a success message and redirect back
+        session()->flash('message', 'Online Services Section Updated Successfully');
         return redirect()->back();
     }
 }

@@ -27,12 +27,23 @@ class HomePageController extends Controller
                 $section->meta_value = json_decode($section->meta_value, true);
             }
             $administration_section = $administration_section->toArray();
+
+            // Fetch online services section from the database
+            $online_services_section = PageMetas::where('page_id', $page['id'])
+                ->where('meta_type', 'online_services')
+                ->get();
+
+            foreach( $online_services_section as $section){
+                $section->meta_value = json_decode($section->meta_value, true);
+            }
+            $online_services_section = $online_services_section -> toArray();
         }
 
         return view('pages.home', array(
             'page' => $page,
             'hero_section' => $hero_section ?? '',
             'administration' => $administration_section ?? '',
+            'online_services_section' => $online_services_section ?? '',
         ));
     }
 

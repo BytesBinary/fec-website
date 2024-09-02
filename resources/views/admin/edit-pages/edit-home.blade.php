@@ -27,7 +27,7 @@
         <x-modal modal-id="online_services_section" modal-title="Online Services">
             <x-forms action="" method="POST" >
                 <div class="row">
-                    <h2 class="text-center"> Edit Short Online Services Section </h2>
+                    <h2 class="text-center"> Edit Online Services Section </h2>
                     <x-form-input name="title" label="Title" placeholder="Enter The Title" container-class="col-sm-12" />
                     <x-form-input name="description" label="Description" placeholder="Description" container-class="col-sm-12" />
                     <x-form-input name="btn-url" label="Button URL" placeholder="Button URL" container-class="col-sm-12" />

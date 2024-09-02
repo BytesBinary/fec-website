@@ -18,6 +18,7 @@
             <x-form-input name="designation" label="Name" placeholder="Designation" container-class="col-sm-12" />
             <x-form-input type="file" name="image" label="Image" container-class="col-sm-12" />
             <x-form-input type="submit" name="submit" value="Submit" container-class="col-sm-12" class="btn btn-primary" />
+            
         </div>
     </x-forms>
     <table class="table table-striped">
