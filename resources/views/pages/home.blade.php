@@ -50,7 +50,7 @@
 
         @include('pages.home.short-details')
 
-{{--        @include('pages.home.about')--}}
+       @include('pages.home.about')
 
 {{--        @include('pages.home.online-service')--}}
 
