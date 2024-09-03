@@ -40,18 +40,15 @@ class EditPage extends Controller
         }
 
          else if ('online_services_section' === $section) {
-            // Fetch online services section from the database
             $online_services_section = PageMetas::where('page_id', $id)
                 ->where('meta_type', 'online_services')
                 ->get();
 
-            // Decode the meta_value for each section
             $online_services_section->transform(function ($item) {
                 $item->meta_value = json_decode($item->meta_value, true);
                 return $item;
             });
 
-            // Convert the collection to an array for passing to the view
             return view('admin.edit-pages.home.online-services', [
                 'online_services' => $online_services_section->toArray()
             ]);

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PageMetas;
 use App\Models\Pages;
 
 if( ! function_exists( 'is_active_route' ) ) {
@@ -77,5 +78,19 @@ if( ! function_exists('sanitize_request') ) {
         }
 
         return $data;
+    }
+}
+
+if( !function_exists( 'create_unique_meta_key' ) ) {
+    function create_unique_meta_key( $base_key )
+    {
+        $metaKey = $base_key;
+        $count = 1;
+        while( PageMetas::where('meta_key', $metaKey)->exists() ) {
+            $metaKey = $base_key . '_' . $count;
+            $count++;
+        }
+
+        return $metaKey;
     }
 }

@@ -111,38 +111,23 @@ trait HomeTraits
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        // Define the destination path
+        $metaKey = create_unique_meta_key('online_services_section');
         $destinationPath = public_path('/images/home');
-
-        // Generate a unique filename for the image
         $imageName = 'admin_img_' . time() . '.' . $request->image->extension();
-
-        // Move the uploaded image to the destination path
         $request->image->move($destinationPath, $imageName);
 
-        // Prepare the data to be stored in the database
-        $metaValue = [
-            'title' => $request->title,
-            'description' => $request->description,
-            'btn-url' => $request->input('btn-url'),
-            'btn-txt' => $request->input('btn-txt'),
-            'image' => '/images/home/' . $imageName,  // Save the image path
-        ];
-
-        // Update or create the record in the PageMetas table
         PageMetas::updateOrCreate(
             [
                 'page_id' => $id,
-                'meta_key' => 'online_services_section',
+                'meta_key' => $metaKey,
             ],
             [
                 'page_id' => $id,
-                'meta_value' => json_encode($metaValue), // Encode the meta value to JSON
+                'meta_value' => json_encode(sanitize_request($request, ['image' => '/images/home/' . $imageName])),
                 'meta_type' => 'online_services'
             ]
         );
 
-        // Set a success message and redirect back
         session()->flash('message', 'Online Services Section Updated Successfully');
         return redirect()->back();
     }
