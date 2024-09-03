@@ -108,7 +108,7 @@ trait HomeTraits
             'description' => 'required|string',
             'btn-url' => 'required|string',
             'btn-txt' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:svg|max:2048',
         ]);
 
         $metaKey = create_unique_meta_key('online_services_section');
