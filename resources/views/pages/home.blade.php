@@ -52,7 +52,7 @@
 
        @include('pages.home.about')
 
-{{--        @include('pages.home.online-service')--}}
+        @include('pages.home.online-services')
 
 {{--        @include('pages.home.latest-news')--}}
 
