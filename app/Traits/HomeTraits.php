@@ -64,11 +64,11 @@ trait HomeTraits
             'meta_key' => 'administration_section_' . $request->designation
         ], [
             'page_id' => $id,
-            'meta_value' => json_encode(sanitize_request($request)),
+            'meta_value' => json_encode(sanitize_request($request, ['image' => 'images/home/'. $image])),
             'meta_type' => 'administration'
         ]);
 
-        session()->flash('message', 'Hero section updated successfully');
+        session()->flash('message', 'Administration section updated successfully');
         return redirect()->back();
     }
 

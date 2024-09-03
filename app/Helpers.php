@@ -60,7 +60,22 @@ if( ! function_exists('convertToCamelCase') ) {
 }
 
 if( ! function_exists('sanitize_request') ) {
-    function sanitize_request( $request ) {
-        return $request->except(['_token', 'submit']);
+    function sanitize_request($request, $exchanges = [], $excepts = []) {
+        $data = $request->all();
+        foreach ($exchanges as $key => $exchange) {
+            if (array_key_exists($key, $data)) {
+                $data[$key] = $exchange;
+            } else {
+                $data[$key] = $exchange;
+            }
+        }
+
+        $excepts = array_merge($excepts, ['_token', 'submit']);
+
+        foreach ($excepts as $except) {
+            unset($data[$except]);
+        }
+
+        return $data;
     }
 }

@@ -28,11 +28,14 @@ class HomePageController extends Controller
             }
             $administration_section = $administration_section->toArray();
 
-            // Fetch online services section from the database
+            $short_details = PageMetas::where('page_id', $page['id'])
+                ->where('meta_type', 'short_details')
+                ->first();
+            $short_details->meta_value = json_decode($short_details->meta_value, true);
+
             $online_services_section = PageMetas::where('page_id', $page['id'])
                 ->where('meta_type', 'online_services')
                 ->get();
-
             foreach( $online_services_section as $section){
                 $section->meta_value = json_decode($section->meta_value, true);
             }
@@ -43,6 +46,7 @@ class HomePageController extends Controller
             'page' => $page,
             'hero_section' => $hero_section ?? '',
             'administration' => $administration_section ?? '',
+            'short_details' => $short_details->meta_value ?? '',
             'online_services_section' => $online_services_section ?? '',
         ));
     }

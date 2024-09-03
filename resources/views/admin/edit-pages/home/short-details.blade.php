@@ -40,19 +40,37 @@
             </tr>
         </thead>
         <tbody>
-            @if (! empty($short_details_section->meta_value) )
+            @if (! empty($short_details) )
                 <tr>
                     <td>
-                        {{$sh['establish_text']}}
+                        {{ $short_details['established_text'] }}
                     </td>
                     <td>
-                        {{$section['meta_value']['designation']}}
+                       {{ $short_details['established_year'] }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ $short_details['departments_text'] }}
                     </td>
                     <td>
-                        <img src="{{asset($section['meta_value']['image'])}}" alt="{{$section['meta_value']['name']}}" style="width: 50px; height: 50px;">
+                        {{ $short_details['departments_value'] }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ $short_details['students_text'] }}
                     </td>
                     <td>
-                        <a href="{{route('admin.pages.meta-delete',['id'=>$section['id']])}}" class="btn btn-danger">Delete</a>
+                        {{ $short_details['students_value'] }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ $short_details['faculty_member_text'] }}
+                    </td>
+                    <td>
+                        {{ $short_details['faculty_member_value'] }}
                     </td>
                 </tr>
             @endif

@@ -34,8 +34,9 @@ class EditPage extends Controller
         }
 
         else if ('short_details_section' === $section) {
-            $short_details_section = $page_metas->where('meta_key', 'short_details_section')->first();
-            return view('admin.edit-pages.home.short-details', array('short_details_meta'));
+            $short_details = $page_metas->where('meta_key', 'short_details_section')->first();
+            $meta = $short_details->meta_value ?? array();
+            return view('admin.edit-pages.home.short-details', array('short_details' => $meta));
         }
 
          else if ('online_services_section' === $section) {
