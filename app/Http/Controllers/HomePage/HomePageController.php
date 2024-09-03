@@ -14,9 +14,10 @@ class HomePageController extends Controller
     {
         $page = get_page_details('home');
 
-        if( $page ) {
+        if ($page) {
             $hero_section = json_decode(
-                PageMetas::where('page_id', $page['id'])->where('meta_key', 'hero_section')->first()->meta_value,true
+                PageMetas::where('page_id', $page['id'])->where('meta_key', 'hero_section')->first()->meta_value,
+                true
             );
             $hero_section['bg_images'] = json_decode($hero_section['bg_images']);
 
@@ -36,10 +37,17 @@ class HomePageController extends Controller
             $online_services_section = PageMetas::where('page_id', $page['id'])
                 ->where('meta_type', 'online_services')
                 ->get();
-            foreach( $online_services_section as $section){
+            foreach ($online_services_section as $section) {
                 $section->meta_value = json_decode($section->meta_value, true);
             }
-            $online_services_section = $online_services_section -> toArray();
+            $online_services_section = $online_services_section->toArray();
+            $faq_section = PageMetas::where('page_id', $page['id'])
+                ->where('meta_type', 'faq')
+                ->get();
+            foreach ($faq_section as $section) {
+                $section->meta_value = json_decode($section->meta_value, true);
+            }
+            $faq_section = $faq_section->toArray();
         }
 
         return view('pages.home', array(
@@ -48,6 +56,7 @@ class HomePageController extends Controller
             'administration' => $administration_section ?? '',
             'short_details' => $short_details->meta_value ?? '',
             'online_services_section' => $online_services_section ?? '',
+            'faq_section' => $faq_section ?? '',
         ));
     }
 

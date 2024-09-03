@@ -64,7 +64,7 @@ trait HomeTraits
             'meta_key' => 'administration_section_' . $request->designation
         ], [
             'page_id' => $id,
-            'meta_value' => json_encode(sanitize_request($request, ['image' => 'images/home/'. $image])),
+            'meta_value' => json_encode(sanitize_request($request, ['image' => 'images/home/' . $image])),
             'meta_type' => 'administration'
         ]);
 
@@ -129,6 +129,36 @@ trait HomeTraits
         );
 
         session()->flash('message', 'Online Services Section Updated Successfully');
+        return redirect()->back();
+    }
+    public function update_faq_section($request, $id)
+    {
+        $request->validate([
+            'question' => 'required|string',
+            'ans' => 'required|string',
+        ]);
+
+        // Prepare the data to be stored in the database
+        $metaValue = [
+            'question' => $request->question,
+            'ans' => $request->ans,
+        ];
+        $metaKey = create_unique_meta_key('faq_section');
+        // Update or create the record in the PageMetas table
+        PageMetas::updateOrCreate(
+            [
+                'page_id' => $id,
+                'meta_key' => $metaKey,
+            ],
+            [
+                'page_id' => $id,
+                'meta_value' => json_encode($metaValue), // Encode the meta value to JSON
+                'meta_type' => 'faq'
+            ]
+        );
+
+        // Set a success message and redirect back
+        session()->flash('message', 'FAQ Section Updated Successfully');
         return redirect()->back();
     }
 }

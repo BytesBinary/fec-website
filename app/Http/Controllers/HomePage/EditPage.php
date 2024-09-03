@@ -20,9 +20,7 @@ class EditPage extends Controller
         if ('hero_section' === $section) {
             $hero_section = $page_metas->where('meta_key', 'hero_section')->first();
             return view('admin.edit-pages.home.hero-section', array('hero_section' => $hero_section));
-        }
-
-        else if ('administration_section' === $section) {
+        } else if ('administration_section' === $section) {
             $administration_section = PageMetas::where('page_id', $id)
                 ->where('meta_type', 'administration')
                 ->get();
@@ -31,15 +29,11 @@ class EditPage extends Controller
             }
             $administration_section = $administration_section->toArray();
             return view('admin.edit-pages.home.administration-section', array('administration_section' => $administration_section));
-        }
-
-        else if ('short_details_section' === $section) {
+        } else if ('short_details_section' === $section) {
             $short_details = $page_metas->where('meta_key', 'short_details_section')->first();
             $meta = $short_details->meta_value ?? array();
             return view('admin.edit-pages.home.short-details', array('short_details' => $meta));
-        }
-
-         else if ('online_services_section' === $section) {
+        } else if ('online_services_section' === $section) {
             $online_services_section = PageMetas::where('page_id', $id)
                 ->where('meta_type', 'online_services')
                 ->get();
@@ -51,6 +45,19 @@ class EditPage extends Controller
 
             return view('admin.edit-pages.home.online-services', [
                 'online_services' => $online_services_section->toArray()
+            ]);
+        } else if ('faq_section' === $section) {
+            $faq_section = PageMetas::where('page_id', $id)
+                ->where('meta_type', 'faq')
+                ->get();
+
+            $faq_section->transform(function ($item) {
+                $item->meta_value = json_decode($item->meta_value, true);
+                return $item;
+            });
+
+            return view('admin.edit-pages.home.faq', [
+                'faq' => $faq_section->toArray()
             ]);
         }
 
@@ -68,7 +75,9 @@ class EditPage extends Controller
             return $this->short_details_section($request, $id);
         } else if ('online_services_section' === $section) {
             return $this->update_online_services_section($request, $id);
+        } else if ('faq_section' === $section) {
+            return $this->update_faq_section($request, $id);
         }
-        return  redirect()->back();
+        return redirect()->back();
     }
 }
