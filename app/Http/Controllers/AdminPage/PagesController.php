@@ -55,6 +55,9 @@ class PagesController extends Controller
     public function delete_meta($id)
     {
         $meta = PageMetas::find($id);
+        if( is_string($id) ) {
+            $meta = PageMetas::where('meta_key',$id)->first();
+        }
         if( $meta ) {
             $meta_value = json_decode($meta->meta_value, true);
             if( isset($meta_value['image']) ) {

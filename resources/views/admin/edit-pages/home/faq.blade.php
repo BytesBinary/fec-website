@@ -44,6 +44,12 @@ Edit FAQ Section
                     <a href="{{route('admin.pages.meta-delete',['id'=>$value['id']])}}" class="btn btn-danger">Delete</a>
                 </td>
             @endforeach
+            @else
+            <tr>
+                <td colspan="4">
+                    <div class="alert alert-info mt-4">No Questions Available. Please Add Some.</div>
+                </td>
+            </tr>
          @endif
     </tbody>
 </table>
