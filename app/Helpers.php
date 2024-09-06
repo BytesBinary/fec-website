@@ -109,7 +109,7 @@ if( ! function_exists( 'get_page_id_by_slug') ) {
 }
 
 if( ! function_exists('get_page_meta' )) {
-    function get_page_meta( $pageId, $keyName = "meta_key", $keyValue )
+    function get_page_meta( $pageId, $keyName , $keyValue )
     {
         $metas = PageMetas::where('page_id', $pageId)
             ->where($keyName, $keyValue)
@@ -126,5 +126,27 @@ if( ! function_exists('get_page_meta' )) {
         }
 
         return $metas;
+    }
+}
+
+if( ! function_exists('getFirstTenWords') ) {
+    function getFirstTenWords($htmlContent) {
+        // Strip HTML tags
+        $text = strip_tags($htmlContent);
+
+        // Normalize spaces and trim the text
+        $text = preg_replace('/\s+/', ' ', $text);
+        $text = trim($text);
+
+        // Split text into words
+        $words = preg_split('/\s+/', $text);
+
+        // Get the first 10 words
+        $firstTenWords = array_slice($words, 0, 10);
+
+        // Join words into a string
+        $result = implode(' ', $firstTenWords);
+
+        return $result;
     }
 }

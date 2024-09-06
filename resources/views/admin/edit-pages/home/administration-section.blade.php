@@ -23,7 +23,7 @@
 
             <x-form-input name="name" label="Name" placeholder="Enter your name" container-class="col-sm-12" />
             <x-form-input name="designation" label="Name" placeholder="Designation" container-class="col-sm-12" />
-            <x-form-input type="file" name="image" label="Image" container-class="col-sm-12" />
+            <x-form-input type="file" name="cover" label="Image" container-class="col-sm-12" />
             <x-form-input type="submit" name="submit" value="Submit" container-class="col-sm-12"
                 class="btn btn-primary" />
 

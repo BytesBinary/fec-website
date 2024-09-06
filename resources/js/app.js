@@ -9,7 +9,7 @@ import 'datatables.net-bs5/js/dataTables.bootstrap5.min.js';
 import AOS from 'aos';
 import GLightbox from 'glightbox';
 import Swiper from 'swiper/bundle';
-import Swal from 'sweetalert2'
+import Quill from 'quill';
 
 $(document).ready(function() {
     // Short details counter
@@ -193,3 +193,66 @@ $(document).ready(function() {
     });
 });
 
+// quil for writing text
+$(document).ready(function() {
+    const quill = new Quill('#content', {
+        theme: 'snow',
+        modules: {
+            toolbar: {
+                container: [
+                    [{ 'header': [1, 2, 3, false] }],
+                    ['bold', 'italic', 'underline'],
+                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                    ['link', 'image']
+                ],
+                handlers: {
+                    image: imageHandler
+                }
+            }
+        },
+        placeholder: 'Compose an epic...',
+        readOnly: false,
+        scrollable: true
+    });
+
+    function imageHandler() {
+        const input = document.createElement('input');
+        input.setAttribute('type', 'file');
+        input.setAttribute('accept', 'image/*');
+        input.click();
+
+        input.onchange = () => {
+            const file = input.files[0];
+            if (file) {
+                const formData = new FormData();
+                formData.append('image', file);
+                const csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+                $.ajax({
+                    url: '/admin/posts/quil-editor/upload-image', // Your image upload URL
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken // Include CSRF token in the headers
+                    },
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        // Insert image into the editor
+                        const range = quill.getSelection();
+                        quill.insertEmbed(range.index, 'image', response.imageUrl);
+                    },
+                    error: function(error) {
+                        console.error('Error uploading image:', error);
+                    }
+                });
+            }
+        };
+    }
+
+    // Update the hidden textarea with Quill's content before form submission
+    $('form').on('submit', function() {
+        const html = quill.root.innerHTML;
+        $('#hidden-content').val(html);
+    });
+});

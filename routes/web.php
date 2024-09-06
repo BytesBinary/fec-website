@@ -6,7 +6,7 @@ use App\Http\Controllers\AdmissionPage\AdmissionPageController;
 use App\Http\Controllers\ClubsPage\ClubsPageController;
 use App\Http\Controllers\ContactUsPage\ContactUsPageController;
 use App\Http\Controllers\DepartmentsPage\DepartmentsPageController;
-use App\Http\Controllers\Events\EventsController;
+use App\Http\Controllers\EventsPage\EventsController;
 use App\Http\Controllers\HomePage\HomePageController;
 use App\Http\Controllers\LoginPage\LoginPageController;
 use App\Http\Controllers\NoticePage\NoticePageController;
@@ -67,6 +67,7 @@ Route::group(['prefix' => 'login'],function(){
 
 Route::group(['prefix' => 'activities'], function () {
     Route::get('/events', [EventsController::class, 'load_page'] )->name('activities/events');
+    Route::get('/events/{slug}', [EventsController::class, 'view_event'])->name('event.view');
     Route::get('/researches', [ResearchesController::class, 'load_page'] )->name('activities/researches');
 });
 

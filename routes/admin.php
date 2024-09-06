@@ -4,11 +4,13 @@ use App\Http\Controllers\Admin\AdminPageController;
 use App\Http\Controllers\Admin\EditPages;
 use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\Admin\PagesAction;
+use App\Http\Controllers\Admin\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminPageController::class,'load_dashboard_page'])
         ->name('admin.dashboard');
+
     Route::get('/pages',[AdminPageController::class, 'get_all_editable_pages'])
         ->name('admin.pages');
     Route::get('/pages/edit/{slug}', [EditPages::class, 'edit_page'])
@@ -23,4 +25,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         ->name('admin.pages.meta-delete');
     Route::get('/notice',[NoticeController::class, 'uploadNotice'])
         ->name('admin.notice');
+
+    Route::get('/posts/create', [PostController::class, 'create'])->name('admin.posts.create');
+    Route::post('/posts', [PostController::class, 'store'])->name('admin.posts.store');
+    Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('admin.posts.edit');
+    Route::put('/posts/{post}', [PostController::class, 'update'])->name('admin.posts.update');
+    Route::post('/posts/quil-editor/upload-image', [PostController::class, 'upload'])->name('admin.quil-editor.upload-image');
 });

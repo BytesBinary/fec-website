@@ -4,5 +4,5 @@
 
 @section('content')
     <x-admin.page-title title="Upload Notice" />
-    
+
 @endsection

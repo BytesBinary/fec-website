@@ -89,6 +89,38 @@
                         </div>
                     </li>
 
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#post">
+                            <span class="me-2"><i class="bi bi-file-earmark-post"></i></span>
+                            <span>Posts</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="post">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="{{route('admin.posts.create')}}" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-cloud-arrow-up-fill"></i></span>
+                                        <span>Add New Post</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="post">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-pencil-square"></i></span>
+                                        <span>Modify Post</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
                     <li class="my-4">
                         <hr class="dropdown-divider bg-light" />
                     </li>
