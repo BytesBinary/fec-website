@@ -1347,6 +1347,13 @@ section,
     --offcanvas-width: 270px;
     --topNavbarHeight: 56px;
 }
+.edit-section-btn {
+    width: 100%;
+}
+.admin-panel-table-image {
+    height: 50px;
+    width: 50px;
+}
 
 /*--------------------------------------------------------------
     # Admin Login Page

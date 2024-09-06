@@ -61,7 +61,7 @@ trait HomeTraits
 
         PageMetas::updateOrCreate([
             'page_id' => $id,
-            'meta_key' => 'administration_section_' . $request->designation
+            'meta_key' => create_unique_meta_key('administration_section'),
         ], [
             'page_id' => $id,
             'meta_value' => json_encode(sanitize_request($request, ['image' => 'images/home/' . $image])),

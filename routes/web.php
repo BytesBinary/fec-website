@@ -6,13 +6,15 @@ use App\Http\Controllers\AdmissionPage\AdmissionPageController;
 use App\Http\Controllers\ClubsPage\ClubsPageController;
 use App\Http\Controllers\ContactUsPage\ContactUsPageController;
 use App\Http\Controllers\DepartmentsPage\DepartmentsPageController;
+use App\Http\Controllers\Events\EventsController;
 use App\Http\Controllers\HomePage\HomePageController;
 use App\Http\Controllers\LoginPage\LoginPageController;
 use App\Http\Controllers\NoticePage\NoticePageController;
+use App\Http\Controllers\Researches\ResearchesController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [HomePageController::class, 'load_page'] )->name('home');
+Route::get('/', [HomePageController::class, 'load_home_page'] )->name('home');
 
 Route::group(['prefix' => 'about-college'], function () {
     Route::get('/at-a-glance', [AboutPageController::class, 'at_a_glance'] )->name('about-college/at-a-glance');
@@ -62,6 +64,13 @@ Route::group(['prefix' => 'login'],function(){
     Route::get('/admin-login',[LoginPageController::class,'admin_login_page'])->name('login/admin-login');
     Route::post('/admin-login', [LoginPageController::class, 'admin_login'])->name('login/admin-login');
 });
+
+Route::group(['prefix' => 'activities'], function () {
+    Route::get('/events', [EventsController::class, 'load_page'] )->name('activities/events');
+    Route::get('/researches', [ResearchesController::class, 'load_page'] )->name('activities/researches');
+});
+
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/logout', [LoginPageController::class, 'logout'])->name('logout');

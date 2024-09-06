@@ -41,21 +41,21 @@
             </tr>
         </thead>
         <tbody>
-            @if (!empty($administration_section))
-                @foreach ($administration_section as $key => $section)
+            @if (!empty($section))
+                @foreach ($section as $key => $sec)
                     <tr>
                         <td>
-                            {{ $section['meta_value']['name'] }}
+                            {{ $sec['meta_value']['name'] }}
                         </td>
                         <td>
-                            {{ $section['meta_value']['designation'] }}
+                            {{ $sec['meta_value']['designation'] }}
                         </td>
                         <td>
-                            <img src="{{ asset($section['meta_value']['image']) }}"
-                                alt="{{ $section['meta_value']['name'] }}" style="width: 50px; height: 50px;">
+                            <img src="{{ asset($sec['meta_value']['image']) }}"
+                                alt="{{ $sec['meta_value']['name'] }}" class="admin-panel-table-image">
                         </td>
                         <td>
-                            <a href="{{ route('admin.pages.meta-delete', ['id' => $section['id']]) }}"
+                            <a href="{{ route('admin.pages.meta-delete', ['id' => $sec['id']]) }}"
                                 class="btn btn-danger">Delete</a>
                         </td>
                     </tr>

@@ -1,4 +1,4 @@
-@if(!empty($administration))
+@if(!$administration->isEmpty())
     <section class="section administration-section">
         <div class="container">
             <x-section-title title="Administration Section"

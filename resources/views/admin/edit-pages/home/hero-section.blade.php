@@ -9,7 +9,12 @@
         enctype="multipart/form-data">
         <div class="row">
             <h2 class="text-center">Edit Hero Section</h2>
-
+            <x-breadcrumbs :breadcrumbs="[
+                'Dashboard' => route('admin.dashboard'),
+                'Pages' => route('admin.pages'),
+                'Edit Home' => route('admin.page.view', ['slug' => 'home']),
+                'Edit Hero Section' => route('admin.pages.edit', ['slug' => 'home', 'section' => 'hero_section']),
+            ]" />
             @if (session('message'))
                 <div class="alert alert-success">
                     {{ session('message') ?? '' }}
@@ -65,23 +70,24 @@
             </tr>
         </thead>
         <tbody>
-
-            @if (!empty($hero_section))
+            @if (!empty($section))
                 <tr>
                     <td>
-                        {{ $hero_section['title'] }}
+                        {{ $section['title'] }}
                     </td>
                     <td>
-                        {{ $hero_section['name'] }}
+                        {{ $section['name'] }}
                     </td>
                     <td>
-                        {{ $hero_section['slogan'] }}
+                        {{ $section['slogan'] }}
                     </td>
                     <td>
-                        <img src="{{ asset($hero_section['image']) }}" alt="img" style="width: 50px; height: 50px;">
+                        <img src="{{ asset($section['image']) }}" alt="img" class="admin-panel-table-image" />
                     </td>
                     <td>
-
+                        @foreach($section['bg_images'] as $image)
+                            <img src="{{ asset($image) }}" alt="img" class="admin-panel-table-image" />
+                        @endforeach
                     </td>
                     <td>
                         <a href="{{ route('admin.pages.meta-delete', ['id' => 'hero_section']) }}"
