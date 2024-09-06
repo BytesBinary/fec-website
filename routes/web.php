@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AboutPage\AboutPageController;
 use App\Http\Controllers\AcademicPage\AcademicPageController;
-use App\Http\Controllers\AdminPage\AdminPageController;
 use App\Http\Controllers\AdmissionPage\AdmissionPageController;
 use App\Http\Controllers\ClubsPage\ClubsPageController;
 use App\Http\Controllers\ContactUsPage\ContactUsPageController;
@@ -58,10 +57,14 @@ Route::group(['prefix'=>'admission'],function(){
 Route::get('/contact-us', [ContactUsPageController::class, 'load_page'])->name('contactus');
 
 Route::group(['prefix' => 'login'],function(){
-    Route::get('/students-login',[LoginPageController::class,'students_login'])->name('login/students-login');
-    Route::get('/teachers-login',[LoginPageController::class,'teachers_login'])->name('login/teachers-login');
-    Route::get('/admin-login',[LoginPageController::class,'admin_login'])->name('login/admin-login');
+    Route::get('/students-login',[LoginPageController::class,'students_login_page'])->name('login/students-login');
+    Route::get('/teachers-login',[LoginPageController::class,'teachers_login_page'])->name('login/teachers-login');
+    Route::get('/admin-login',[LoginPageController::class,'admin_login_page'])->name('login/admin-login');
+    Route::post('/admin-login', [LoginPageController::class, 'admin_login'])->name('login/admin-login');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/logout', [LoginPageController::class, 'logout'])->name('logout');
+});
 
-Route::get('/admin', [AdminPageController::class, 'load_page'])->name('admin');
+require_once __DIR__.'/admin.php';

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PageMetas;
 use App\Models\Pages;
 
 if( ! function_exists( 'is_active_route' ) ) {
@@ -17,8 +18,8 @@ if( ! function_exists( 'get_page_slug' ) ) {
 }
 
 if( ! function_exists( 'get_pages' ) ) {
-    function get_pages() {
-        $pages = \App\Models\Pages::all();
+    function get_pages($status = 'publish') {
+        $pages = \App\Models\Pages::where('page_status', $status)->get();
         $convertedPages = [];
         foreach($pages as $page) {
             $pageData = $page->toArray();
@@ -43,9 +44,53 @@ if( ! function_exists( 'get_pages' ) ) {
 }
 
 if( ! function_exists('get_page_details') ) {
-    function get_page_details( $slug )
+    function get_page_details( $slug, $status = 'publish' )
     {
-        $page = Pages::where('page_slug', $slug )->first();
-        return $page->toArray();
+        return Pages::where('page_slug', $slug )
+            ->where('page_status',$status)
+            ->first();
+    }
+}
+
+if( ! function_exists('convertToCamelCase') ) {
+    function convertToCamelCase( $string )
+    {
+        $string = ucwords(str_replace(['-', '_'], ' ', $string));
+        return str_replace(' ', ' ', $string);
+    }
+}
+
+if( ! function_exists('sanitize_request') ) {
+    function sanitize_request($request, $exchanges = [], $excepts = []) {
+        $data = $request->all();
+        foreach ($exchanges as $key => $exchange) {
+            if (array_key_exists($key, $data)) {
+                $data[$key] = $exchange;
+            } else {
+                $data[$key] = $exchange;
+            }
+        }
+
+        $excepts = array_merge($excepts, ['_token', 'submit']);
+
+        foreach ($excepts as $except) {
+            unset($data[$except]);
+        }
+
+        return $data;
+    }
+}
+
+if( !function_exists( 'create_unique_meta_key' ) ) {
+    function create_unique_meta_key( $base_key )
+    {
+        $metaKey = $base_key;
+        $count = 1;
+        while( PageMetas::where('meta_key', $metaKey)->exists() ) {
+            $metaKey = $base_key . '_' . $count;
+            $count++;
+        }
+
+        return $metaKey;
     }
 }

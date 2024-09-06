@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
                 ClubsPageSeeder::class,
                 AdmissionPageSeeder::class,
                 ContactUsPageSeeder::class,
-                LoginPageSeeder::class
+                LoginPageSeeder::class,
+                UserSeeder::class,
             ]
         );
     }

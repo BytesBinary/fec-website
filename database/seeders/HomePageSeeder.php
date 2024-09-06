@@ -24,24 +24,6 @@ class HomePageSeeder extends Seeder
             'page_slug' => 'home'
         ]);
 
-        $page->metas()->create([
-            'meta_key' => 'hero_section',
-            'meta_value' => json_encode([
-                'short_title' => 'Welcome To',
-                'main_title' => 'Faridpur Engineering College',
-                'sub_title' => 'A place to learn and grow',
-                'img' => 'bg-image.jpg',
-                'img_alt' => 'Hero Image',
-                'logo' => 'FEClogo.png',
-                'logo_alt' => 'Logo Image',
-                'get_started_btn' => 'Get Started',
-                'get_started_btn_url' => '#about',
-                'watch_video_btn' => 'Watch Video',
-                'watch_video_btn_url' => 'https://youtu.be/_H9B4iynTY0?si=tGqF7He1rRQdkuA8',
-            ], JSON_UNESCAPED_UNICODE),
-            'meta_type' => 'json',
-        ]);
-
         $members = [
             ['name' => 'Professor Dr. Mizanur Rahman', 'designation' => 'Principal (Administration)','img' =>'images\administration\mizanur-rahman.jpg'],
             ['name' => 'Md. Shamsul Islam', 'designation' => 'Head of the Dept. (CSE)','img' => 'images\administration\shamsul-islam.jpg'],
