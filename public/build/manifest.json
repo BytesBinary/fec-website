@@ -12,8 +12,13 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-nr3A6wsh.css",
+    "file": "assets/app-ClqbDiXp.css",
     "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/home.css": {
+    "file": "assets/home-BEzOTWgH.css",
+    "src": "resources/css/home.css",
     "isEntry": true
   },
   "resources/js/app.js": {

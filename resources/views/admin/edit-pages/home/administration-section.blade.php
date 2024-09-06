@@ -9,6 +9,12 @@
         enctype="multipart/form-data">
         <div class="row">
             <h2 class="text-center"> Edit Administration Section </h2>
+            <x-breadcrumbs :breadcrumbs="[
+                'Dashboard' => route('admin.dashboard'),
+                'Pages' => route('admin.pages'),
+                'Edit Home' => route('admin.page.view', ['slug' => 'home']),
+                'Edit Administration Section' => route('admin.pages.edit', ['slug' => 'home', 'section' => 'administration_section']),
+            ]" />
             @if (session('message'))
                 <div class="alert alert-success">
                     {{ session('message') ?? '' }}
@@ -23,7 +29,8 @@
 
         </div>
     </x-forms>
-    <table class="table table-striped">
+    @if (!empty($section))
+    <table class="table table-striped" id="use-datatable">
         <thead>
             <tr>
                 <th>
@@ -41,7 +48,6 @@
             </tr>
         </thead>
         <tbody>
-            @if (!empty($section))
                 @foreach ($section as $key => $sec)
                     <tr>
                         <td>
@@ -60,13 +66,9 @@
                         </td>
                     </tr>
                 @endforeach
-            @else
-                <tr>
-                    <td colspan="4">
-                        <div class="alert alert-info mt-4">No Administrator available. Please add some.</div>
-                    </td>
-                </tr>
-            @endif
         </tbody>
     </table>
+    @else
+        <div class="alert alert-info mt-4">No Administrator available. Please add some.</div>
+    @endif
 @endsection

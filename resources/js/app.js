@@ -180,7 +180,7 @@ $(document).ready(function() {
 
 // DataTables
 $(document).ready(function() {
-    var table = $('#use-datatable').DataTable({
+     $('#use-datatable').DataTable({
         "paging": true,
         "searching": true,
         "ordering": true,

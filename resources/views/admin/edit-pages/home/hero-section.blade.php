@@ -48,61 +48,56 @@
                 class="btn btn-primary" />
         </div>
     </x-forms>
-
-    <table class="table table-striped">
+@if(!empty($section))
+    <table class="table table-striped" id="use-datatable">
         <thead>
-            <tr>
-                <th>
-                    Title
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Slogan
-                </th>
-                <th>
-                    Image
-                </th>
-                <th>
-                    BG-Image
-                </th>
-            </tr>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Slogan
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                BG-Image
+            </th>
+        </tr>
         </thead>
         <tbody>
-            @if (!empty($section))
-                <tr>
-                    <td>
-                        {{ $section['title'] }}
-                    </td>
-                    <td>
-                        {{ $section['name'] }}
-                    </td>
-                    <td>
-                        {{ $section['slogan'] }}
-                    </td>
-                    <td>
-                        <img src="{{ asset($section['image']) }}" alt="img" class="admin-panel-table-image" />
-                    </td>
-                    <td>
-                        @foreach($section['bg_images'] as $image)
-                            <img src="{{ asset($image) }}" alt="img" class="admin-panel-table-image" />
-                        @endforeach
-                    </td>
-                    <td>
-                        <a href="{{ route('admin.pages.meta-delete', ['id' => 'hero_section']) }}"
-                            class="btn btn-danger">Delete</a>
-                    </td>
-                @else
-                <tr>
-                    <td colspan="5">
-                        <div class="alert alert-info mt-4">No Data Available. Please Add Some.</div>
-                    </td>
-                </tr>
-            @endif
+            <tr>
+                <td>
+                    {{ $section['title'] }}
+                </td>
+                <td>
+                    {{ $section['name'] }}
+                </td>
+                <td>
+                    {{ $section['slogan'] }}
+                </td>
+                <td>
+                    <img src="{{ asset($section['image']) }}" alt="img" class="admin-panel-table-image" />
+                </td>
+                <td>
+                    @foreach($section['bg_images'] as $image)
+                        <img src="{{ asset($image) }}" alt="img" class="admin-panel-table-image" />
+                    @endforeach
+                </td>
+                <td>
+                    <a href="{{ route('admin.pages.meta-delete', ['id' => 'hero_section']) }}"
+                       class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
         </tbody>
     </table>
-
+@else
+    <div class="alert alert-info mt-4">No Data Available. Please Add Some.</div>
+@endif
 @endsection
 @section('script')
     <script>

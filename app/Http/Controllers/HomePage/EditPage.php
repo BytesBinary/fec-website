@@ -9,15 +9,6 @@ use App\Traits\HomeTraits;
 class EditPage extends Controller
 {
     use HomeTraits;
-
-    protected $views = [
-        'hero_section' => 'admin.edit-pages.home.hero-section',
-        'administration_section' => 'admin.edit-pages.home.administration-section',
-        'short_details_section' => 'admin.edit-pages.home.short-details',
-        'online_services_section' => 'admin.edit-pages.home.online-services',
-        'faq_section' => 'admin.edit-pages.home.faq',
-    ];
-
     protected $updateMethods = [
         'hero_section' => 'update_hero_section',
         'administration_section' => 'update_administration_section',
@@ -40,11 +31,12 @@ class EditPage extends Controller
                 $view = 'admin.edit-pages.home.administration-section';
                 break;
             case 'short_details_section':
-                $section = get_page_meta( $id, 'meta_key', 'short_details' );
+                $section = get_page_meta( $id, 'meta_key', 'short_details_section' );
+                $section = (count($section) > 0) ? current($section)['meta_value'] : '';
                 $view = 'admin.edit-pages.home.short-details';
                 break;
             case 'online_services_section':
-                $section = get_page_meta($id, 'meta_type', 'online_services_section');
+                $section = get_page_meta($id, 'meta_type', 'online_services');
                 $view = 'admin.edit-pages.home.online-services';
                 break;
             case 'faq_section':
