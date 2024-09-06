@@ -50,7 +50,6 @@ class PagesSeeder extends Seeder
         $slug = $aboutCollegePage->page_slug;
         $subpages = [
             'At A Glance',
-            'Vision & Mission',
             'Infrastructure',
             'Message from Principal',
         ];

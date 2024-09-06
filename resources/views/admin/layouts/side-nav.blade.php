@@ -80,7 +80,7 @@
                         <div class="collapse" id="notice">
                             <ul class="navbar-nav ps-3">
                                 <li>
-                                    <a href="" class="nav-link px-3">
+                                    <a href="{{route('admin.notice.modify')}}" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-pencil-square"></i></span>
                                         <span>Modify Notices</span>
                                     </a>
