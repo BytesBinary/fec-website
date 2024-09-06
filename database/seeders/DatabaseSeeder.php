@@ -15,15 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(
             [
-                HomePageSeeder::class,
-                AboutCollegePageSeeder::class,
-                NoticesPageSeeder::class,
-                AcademicPageSeeder::class,
-                DepartmentsPageSeeder::class,
-                ClubsPageSeeder::class,
-                AdmissionPageSeeder::class,
-                ContactUsPageSeeder::class,
-                LoginPageSeeder::class,
+                PagesSeeder::class,
                 UserSeeder::class,
             ]
         );
