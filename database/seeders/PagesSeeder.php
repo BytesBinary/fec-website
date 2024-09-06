@@ -15,7 +15,7 @@ class PagesSeeder extends Seeder
         $this->createHomePage('true');
         $this->createAboutCollegePage('true');
         $this->createNoticesPage();
-        $this->createDepartmentsPage('true');
+        $this->createDepartmentsPage();
         $this->createClubsPage();
         $this->createActivitiesPage();
         $this->createAcademicsPage();

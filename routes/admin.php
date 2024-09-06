@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminPageController;
 use App\Http\Controllers\Admin\EditPages;
+use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\Admin\PagesAction;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         ->name('admin.page.status');
     Route::get('/pages/meta/delete/{id}',[PagesAction::class, 'delete_meta'])
         ->name('admin.pages.meta-delete');
+    Route::get('/notice',[NoticeController::class, 'uploadNotice'])
+        ->name('admin.notice');
 });
