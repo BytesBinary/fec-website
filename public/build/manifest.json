@@ -12,12 +12,12 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Dmsz77qr.css",
+    "file": "assets/app-nr3A6wsh.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-CBJq0nSr.js",
+    "file": "assets/app-DpDJnR84.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
