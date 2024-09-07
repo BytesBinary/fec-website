@@ -37,7 +37,7 @@
                 <div>
                     <label for="content">Content</label>
                     <div id="content" style="height:400px;"></div>
-                    <textarea name="content" id="hidden-content" style="display:none;"></textarea>
+                    <textarea name="main_content" id="hidden-content" style="display:none;"></textarea>
                 </div>
                 <x-form-input type="submit" name="submit" value="Submit" container-class="col-sm-12 my-3"
                               class="btn btn-primary" />

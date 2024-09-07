@@ -20,15 +20,15 @@ class PostController extends Controller
             'title' => 'required|string|max:255',
             'type' => 'required|string',
             'date' => 'required|date',
-            'content' => 'required',
+            'main_content' => 'required',
             'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif|max:2048',
         ]);
 
 
         // Move images from temp-uploads to the permanent location
-        $content = $request->content;
-        $modified_content = $content;
-        preg_match_all('/<img src="(.*?)"/', $content, $matches);
+        $main_content = $request->main_content;
+        $modified_content = $main_content;
+        preg_match_all('/<img src="(.*?)"/', $main_content, $matches);
 
         foreach ($matches[1] as $imageUrl) {
             $imageName = basename(parse_url($imageUrl, PHP_URL_PATH)); // Extract image name
@@ -39,7 +39,7 @@ class PostController extends Controller
             if (file_exists($oldImagePath)) {
                 if (rename($oldImagePath, $newImagePath)) {
                     $newImageUrl = asset('/post/' . $imageName);
-                    $modified_content = str_replace($imageUrl, $newImageUrl, $content);
+                    $modified_content = str_replace($imageUrl, $newImageUrl, $main_content);
                     if( file_exists(public_path('/post/temp-store/' . $imageName)) ) {
                         unlink(public_path('/post/temp-store/' . $imageName));
                     }

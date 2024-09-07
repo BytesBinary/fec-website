@@ -11,7 +11,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title text-center">Sign In</h5>
-                    <form action="{{route('login/admin-login')}}" method="post">
+                    <form action="{{route('admin-login')}}" method="post">
                             @error('failed')
                             <div class="alert alert-danger">
                                 {{ $message }}

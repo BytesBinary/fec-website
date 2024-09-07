@@ -1006,7 +1006,7 @@ section,
 }
 
 .about-section .img-side {
-    background-image: url('/images/hero-img1.jpg');
+    background-image: url('/images/at_a_glance.png');
     background-size: cover;
     background-position: center;
     filter: brightness(.7);

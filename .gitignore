@@ -5,6 +5,7 @@
 /storage/*.key
 /vendor
 /public/images
+/public/documents
 /public/post
 .env
 .env.backup
