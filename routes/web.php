@@ -75,4 +75,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/logout', [LoginPageController::class, 'logout'])->name('logout');
 });
 
+Route::fallback(function () {
+    return view('404');
+});
+
 require_once __DIR__.'/admin.php';
