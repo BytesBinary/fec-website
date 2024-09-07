@@ -2,14 +2,9 @@
 
 @section('title','Syllabus | FEC')
 
-
-@section('style')
-    @include('assets.css.datatable-style')
-@endsection
-
 @section('content')
     <div class="container section-title page-top-section" data-aos="fade-down">
-        <h2>{{ $page['page_title']  }}</h2>
+        <x-section-title title="{{ $page['page_title'] }}" des="" animation="fade-up" />
         <div class="table-responsive">
             <table id="use-datatable" class="table table-striped table-bordered">
                 <thead>
@@ -23,11 +18,11 @@
                 <tbody>
                 @foreach( $syllabuses as $syllabus )
                     <tr>
-                        <td>{{ $loop->iteration  }}</td>
+                        <td class="text-center">{{ $loop->iteration  }}</td>
                         <td>{{ $syllabus->session }}</td>
                         <td>{{ $syllabus->title }}</td>
                         <td>
-                            <a href="{{ asset('storage/notice/'.$syllabus->file) }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
+                            <a href="{{ $syllabus->pdf }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -37,6 +32,3 @@
     </div>
 @endsection
 
-@section('script')
-    @include('assets.js.datatable-script')
-@endsection
