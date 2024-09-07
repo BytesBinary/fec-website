@@ -8,7 +8,7 @@
         @if(!empty($section))
             <x-section-title title="At a Glance" des="" animation="fade-up" />
             <div class="row justify-content-center align-items-center">
-                <div class="col-sm-12 img-side rounded px-3 mobile-height d-flex align-items-center" data-aos="fade-up-left">
+                <div class="col-sm-6 img-side rounded px-3 mobile-height d-flex align-items-center" data-aos="fade-up-left">
                     <div class="position-relative w-100">
                         <img src="{{asset('images/'.$section->image)}}" class="img-fluid rounded px-3 mobile-height" alt="FEC Image" style="object-fit: cover;">
                         <div class="play-button-container rounded-circle position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center bg-warning pulse" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
