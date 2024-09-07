@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("title");
             $table->enum("type",['notice','syllabus','curriculumns','others']);
             $table->string("date");
+            $table->string("session")->nullable();
             $table->string("pdf");
             $table->timestamps();
         });

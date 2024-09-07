@@ -15,7 +15,7 @@
                     custom-html-in-card='<hr class="custom-line"><p class="text-muted mb-2 date"><i class="bi bi-calendar"></i> 21 Aug, 2024</p><hr class="custom-line">'
                     card-title="{{ $event->title }}" title-class="fw-bold mb-3"
                     card-text="{{ Str::limit(strip_tags($event->content), 100) }}"
-                    cardlink="true" card-link-url="#" card-link-class="btn btn-outline-primary rounded-pill"
+                    cardlink="true" card-link-url="{{ route('event.view',['slug'=>$event->slug]) }}" card-link-class="btn btn-outline-primary rounded-pill"
                     card-url-text="Read More" card-link-icon="bi bi-plus-lg" />
 
                 @endforeach

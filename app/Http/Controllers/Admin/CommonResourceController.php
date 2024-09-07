@@ -15,6 +15,7 @@ class CommonResourceController extends Controller
             "date" => "required|date",
             "type" => "required|string",
             "pdf" => "required|mimes:pdf|max:10024",
+            "session" =>"nullable|string",
         ]);
 
         $resource = new CommonResource();
@@ -23,8 +24,9 @@ class CommonResourceController extends Controller
         $pdf->move(public_path('/documents/'), $newName);
         $resource->type = $request->type;
         $resource->date = $request->date;
-        $resource->pdf = '/documents' . $newName;
+        $resource->pdf = '/documents/' . $newName;
         $resource->title = $request->title;
+        $resource->session = $request->session;
         $resource->save();
 
         session()->flash('message', 'File uploaded Successfully');
@@ -33,7 +35,7 @@ class CommonResourceController extends Controller
 
     public function deleteResource($id)
     {
-        $resource = CommonResource::findOrFail($id);
+        $resource = CommonResource::find($id);
         if (file_exists(public_path($resource->pdf))) {
             unlink(public_path($resource->pdf));
         }

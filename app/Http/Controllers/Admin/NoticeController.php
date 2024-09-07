@@ -16,7 +16,7 @@ class NoticeController extends Controller
     }
 
     public function modifyNotice(){
-        $resources = CommonResource::where('type', 'notice')->get();
+        $resources = CommonResource::orderBy('date','desc')->get();
         return view('admin.notices.modify-notices', compact('resources'));
     }
 

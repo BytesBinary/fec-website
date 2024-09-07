@@ -13,4 +13,8 @@ class ResearchesController extends Controller
         $researches = Post::where('type', 'research')->get();
         return view('pages.activities.researches', compact('researches'));
     }
+    public function view_research($slug){
+        $research = Post::where('slug',$slug)->first();
+        return view('pages.research.view',compact('research'));
+    }
 }

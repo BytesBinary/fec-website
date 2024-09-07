@@ -68,6 +68,7 @@ Route::group(['prefix' => 'activities'], function () {
     Route::get('/events', [EventsController::class, 'load_page'] )->name('activities/events');
     Route::get('/events/{slug}', [EventsController::class, 'view_event'])->name('event.view');
     Route::get('/researches', [ResearchesController::class, 'load_page'] )->name('activities/researches');
+    Route::get('/researches/{slug}', [ResearchesController::class, 'view_research'] )->name('research.view');
 });
 
 Route::middleware(['auth'])->group(function () {

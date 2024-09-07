@@ -14,4 +14,8 @@ class EventsController extends Controller
         $events = Post::where('type', 'event')->get();
         return view('pages.activities.events', compact('events'));
     }
+    public function view_event( $slug ){
+        $event = Post::where('slug',$slug)->first();
+        return view('pages.event.view',compact('event'));
+    }
 }

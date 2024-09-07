@@ -10,7 +10,6 @@
                 {{ session('message') ?? '' }}
             </div>
         @endif
-
         <div class="container d-flex align-items-center justify-content-center">
 
             <div class="col-sm-6">
@@ -18,6 +17,7 @@
                     @csrf
                     <x-form-input name="title" label="Notice Title" placeholder="Add Title" container-class="col-sm-12" />
                     <x-form-input type="date" name="date" label="Publish Date" container-class="col-sm-12" />
+                    <x-form-input  name="session" label="Session" placeholder="If needed" container-class="col-sm-12" />
                     <div class="form-group col-sm-12">
                         <label for="type">File Type</label>
                         <select name="type" id="type" class="form-control">
@@ -36,8 +36,6 @@
             </div>
         </div>
     </div>
-
-
 @endsection
 
 @section('script')

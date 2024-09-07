@@ -17,6 +17,8 @@
                 <tr>
                     <th>Serial</th>
                     <th>Publish Date</th>
+                    <th>Type</th>
+                    <th>Session</th>
                     <th>Notice Title</th>
                     <th>Actions</th>
                 </tr>
@@ -26,7 +28,9 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $resource->date }}</td>
+                        <td>{{ $resource->type }}</td>
                         <td>{{ $resource->title }}</td>
+                        <td>{{ $resource->session }}</td>
                         <td>
                             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#resourceModal{{ $resource->id }}">
                                 Edit
