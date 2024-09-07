@@ -1,5 +1,5 @@
 <footer id="footer" class="footer position-relative bg-gradient">
-    <div class="foot-img position-absolute"><img src="{{asset('images/FECLogo.png')}}" class="img-fluid hero-img" alt=""></div>
+    <div class="foot-img position-absolute"><img src="{{asset('static/logo.png')}}" class="img-fluid hero-img" alt=""></div>
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
