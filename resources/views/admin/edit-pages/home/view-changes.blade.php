@@ -4,10 +4,6 @@
 Edit - Home Page
 @endsection
 
-@section('style')
-@vite(['resources/css/home.css', 'resources/js/home.js'])
-@endsection
-
 @section('content')
 <x-admin.page-title title="Edit Home Page" />
 <x-breadcrumbs :breadcrumbs="[
@@ -21,8 +17,6 @@ Edit - Home Page
             <button class="btn btn-primary my-3 edit-section-btn">
                 Click To Edit Hero Section
             </button>
-            @include('pages.home.hero')
-            <span class="edit-page-hover-text">Edit More</span>
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'administration_section'])}}">
@@ -30,8 +24,6 @@ Edit - Home Page
             <button class="btn btn-primary my-3 edit-section-btn">
                 Click To Edit Administration Section
             </button>
-            @include('pages.home.administration-section')
-            <span class="edit-page-hover-text">Edit More</span>
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'short_details_section'])}}">
@@ -39,8 +31,6 @@ Edit - Home Page
             <button class="btn btn-primary my-3 edit-section-btn">
                 Click To Edit Short Details Section
             </button>
-            @include('pages.home.short-details')
-            <span class="edit-page-hover-text">Edit More</span>
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'online_services_section'])}}">
@@ -48,8 +38,6 @@ Edit - Home Page
             <button class="btn btn-primary my-3 edit-section-btn">
                 Click To Edit Online Services Section
             </button>
-            @include('pages.home.online-services')
-            <span class="edit-page-hover-text">Edit More</span>
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'faq_section'])}}">
@@ -57,8 +45,6 @@ Edit - Home Page
             <button class="btn btn-primary my-3 edit-section-btn">
                 Click To Edit FAQ Section
             </button>
-            @include('pages.home.faq')
-            <span class="edit-page-hover-text">Edit More</span>
         </div>
     </a>
 </div>

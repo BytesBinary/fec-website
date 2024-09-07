@@ -11,7 +11,7 @@ use PhpParser\JsonDecoder;
 
 class HomePageController extends Controller
 {
-    public function load_home_page( $get_data = false )
+    public function load_home_page()
     {
         $page = get_page_details('home');
 
@@ -59,16 +59,6 @@ class HomePageController extends Controller
             $events = Post::where('type', 'event')->take(3)->get();
 
             $research = Post::where('type', 'research')->take(3)->get();
-        }
-
-        if( $get_data ) {
-            return array([
-                'hero_section' => $hero_section ?? '',
-                'administration' => $administration_section ?? '',
-                'short_details' => $short_details->meta_value ?? '',
-                'online_services_section' => $online_services_section ?? '',
-                'faq_section' => $faq_section ?? '',
-            ]);
         }
 
         return view('pages.home', array(
