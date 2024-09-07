@@ -9,13 +9,11 @@
         <div class="row">
             <div class="clearfix">
                 <div class="col-sm-6 float-md-end mb-3 ms-md-3" style="z-index: 1;" data-aos="flip-right">
-                    <div class="position-relative w-100">
-                        <img src="{{asset('images/'.$section->image)}}" class="img-fluid rounded px-3 mobile-height" alt="FEC Image" style="object-fit: cover;">
-                        <div class="play-button-container rounded-circle position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center bg-warning pulse" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                            <a href="{{$section->video_url}}" class="glightbox btn-watch-video d-flex align-items-center">
-                                <i class="bi bi-caret-right-fill text-light"></i>
-                            </a>
-                        </div>
+                    <img src="{{asset('images/'.$section->image)}}" class="img-fluid rounded px-3 mobile-height" alt="FEC Image" style="object-fit: cover;">
+                    <div class="play-button-container rounded-circle position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center bg-warning pulse" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        <a href="{{$section->video_url}}" class="glightbox btn-watch-video d-flex align-items-center" style="height: 50px; width: 50px;">
+                            <i class="bi bi-caret-right-fill text-light"></i>
+                        </a>
                     </div>
                 </div>
                 <p data-aos="zoom-in-down">
