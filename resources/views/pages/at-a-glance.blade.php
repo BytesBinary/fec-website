@@ -6,7 +6,7 @@
 <div class="container page-top-section">
     <div class="row">
         @if(!empty($section))
-            <x-section-title title="At a Glance" des="" animation="fade-up" />
+            <x-section-title title="At a Glance" des="" />
             <div class="row justify-content-center align-items-center">
                 <div class="col-sm-6 img-side rounded px-3 mobile-height d-flex align-items-center" data-aos="fade-up-left">
                     <div class="position-relative w-100">
@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-12" data-aos="fade-up-right">
+            <div class="col-sm-12">
                 <p style="text-align: justify">
                     {!! nl2br(e($section->content))  !!}
                 </p>
