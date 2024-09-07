@@ -15,6 +15,9 @@ class EditPages extends Controller
             case 'home':
                 $controller = \App\Http\Controllers\HomePage\EditPage::class;
                 break;
+            case 'at-a-glance' :
+                $controller = \App\Http\Controllers\AboutPage\AtAGlance::class;
+                break;
             default:
                 return redirect()->back();
         }
@@ -40,6 +43,9 @@ class EditPages extends Controller
         switch ($slug) {
             case 'home':
                 $controller = \App\Http\Controllers\HomePage\EditPage::class;
+                break;
+            case 'at-a-glance' :
+                $controller = \App\Http\Controllers\AboutPage\AtAGlance::class;
                 break;
             default:
                 return redirect()->back();

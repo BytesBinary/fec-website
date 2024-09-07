@@ -5,6 +5,7 @@ namespace App\Http\Controllers\HomePage;
 use App\Http\Controllers\Controller;
 use App\Models\PageMetas;
 use App\Models\Pages;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use PhpParser\JsonDecoder;
 
@@ -49,6 +50,15 @@ class HomePageController extends Controller
             foreach ($faq_section as $section) {
                 $section->meta_value = json_decode($section->meta_value, true);
             }
+
+            $aboutUs = PageMetas::where('meta_key', 'at_a_glance')->first();
+            if( $aboutUs ) {
+                $aboutUs = json_decode($aboutUs->meta_value);
+            }
+
+            $events = Post::where('type', 'event')->take(3)->get();
+
+            $research = Post::where('type', 'research')->take(3)->get();
         }
 
         if( $get_data ) {
@@ -68,6 +78,9 @@ class HomePageController extends Controller
             'short_details' => $short_details->meta_value ?? '',
             'online_services_section' => $online_services_section ?? '',
             'faq_section' => $faq_section ?? '',
+            'aboutUs' => $aboutUs ?? '',
+            'events' => $events ?? '',
+            'researches' => $research ?? '',
         ));
     }
 }
