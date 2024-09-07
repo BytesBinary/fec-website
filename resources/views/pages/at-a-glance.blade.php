@@ -4,11 +4,11 @@
 
 @section('content')
 <div class="container page-top-section">
-    <div class="row">
-        @if(!empty($section))
-            <x-section-title title="At a Glance" des="" animation="" />
-            <div class="row justify-content-center align-items-center">
-                <div class="col-sm-6 img-side rounded px-3 mobile-height d-flex align-items-center">
+    <x-section-title title="At a Glance" des="" animation="" />
+    @if(!empty($section))
+        <div class="row">
+            <div class="clearfix">
+                <div class="col-sm-6 float-md-end mb-3 ms-md-3" style="z-index: 1;" data-aos="flip-right">
                     <div class="position-relative w-100">
                         <img src="{{asset('images/'.$section->image)}}" class="img-fluid rounded px-3 mobile-height" alt="FEC Image" style="object-fit: cover;">
                         <div class="play-button-container rounded-circle position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center bg-warning pulse" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
@@ -18,15 +18,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-12">
-                <p style="text-align: justify">
+                <p data-aos="zoom-in-down">
                     {!! nl2br(e($section->content))  !!}
                 </p>
             </div>
-        @endif
-    </div>
+        </div>
+    @endif
 </div>
 
 @endsection
