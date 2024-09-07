@@ -482,7 +482,7 @@ h6 {
     color: var(--contrast-color);
     background-color: var(--nav-color);
     font-size: 14px;
-    padding-bottom: 5px;
+    padding:25px 0;
     position: relative;
 }
 
@@ -587,6 +587,7 @@ h6 {
 
 .footer .footer-links ul a:hover {
     color: var(--accent-color);
+    cursor: pointer;
 }
 
 .footer .footer-contact p {
@@ -650,7 +651,11 @@ h6 {
     margin-top: 6px;
     font-size: 13px;
 }
-
+@media (max-width: 1199px) {
+    .foot-img img {
+        height: auto;
+    }
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
