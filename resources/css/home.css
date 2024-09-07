@@ -30,8 +30,4 @@
     .navmenu ul a {
         color: var(--nav-color);
     }
-
-    .foot-img img {
-        height: auto;
-    }
 }

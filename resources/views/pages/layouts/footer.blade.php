@@ -1,67 +1,64 @@
 <footer id="footer" class="footer position-relative bg-gradient">
     <div class="foot-img position-absolute"><img src="{{asset('static/logo.png')}}" class="img-fluid hero-img" alt=""></div>
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">Faridpur Engineering College</span>
-                    </a>
-                    <div class="footer-contact pt-3">
-                        <p>Dr Kaji Motaher Hossain Rd,Komlapur</p>
-                        <p>Baytul Aman,Faridpur-7800</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>02478847545</span></p>
-                        <p><strong>Email:</strong> <span>principal@fec.ac.bd</span></p>
-                    </div>
-                    <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
+    <div class="container footer-top">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <span class="sitename">Faridpur Engineering College</span>
+                </a>
+                <div class="footer-contact pt-3">
+                    <p>Dr Kaji Motaher Hossain Rd,Komlapur</p>
+                    <p>Baytul Aman,Faridpur-7800</p>
+                    <p class="mt-3"><strong>Phone:</strong> <span>02478847545</span></p>
+                    <p><strong>Email:</strong> <span>principal@fec.ac.bd</span></p>
                 </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                    </ul>
+                <div class="social-links d-flex mt-4">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-12 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-                    <form action="forms/newsletter.php" method="post" class="php-email-form">
-                        <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-                    </form>
-                </div>
-
             </div>
-        </div>
 
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">BytesBinary</strong><span>All Rights Reserved</span></p>
-            <div class="credits">
-                Designed by <a href="https://bytesbinary.com/">BytesBinary</a>
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="{{route('home')}}">Home</a></li>
+                    <li><a href="{{route('at-a-glance')}}">At A Glance</a></li>
+                    <li><a href="{{route('researches')}}">Researches</a></li>
+                    <li><a href="{{route('notices')}}">Notices</a></li>
+                    <li><a href="{{route('events')}}">Events</a></li>
+                </ul>
             </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="{{route('admission-information')}}">Admission Information</a></li>
+                    <li><a href="{{route('admission-test-result')}}">Admission Test Result</a></li>
+                    <li><a href="{{route('syllabus')}}">Syllabus</a></li>
+                    <li><a href="{{route('calender')}}">Calander</a></li>
+                    <li><a href="{{route('apply-online')}}">Apply Online</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12 footer-newsletter">
+                <h4>FEC Letter Box</h4>
+                <p>Share your vision with us! It is the ability to see beyond the present, envisioning possibilities that others might overlook and guiding decisions toward a brighter future.</p>
+                <form action="forms/newsletter.php" method="post" class="php-email-form">
+                    <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Deliver"></div>
+                </form>
+            </div>
+
         </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">BytesBinary</strong><span>All Rights Reserved</span></p>
+        <div class="credits">
+            Designed by <a href="https://bytesbinary.com/">BytesBinary</a>
+        </div>
+    </div>
 
 
 </footer>
