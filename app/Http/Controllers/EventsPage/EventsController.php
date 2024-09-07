@@ -16,7 +16,7 @@ class EventsController extends Controller
     }
     public function view_event( $slug ){
         $event = Post::where('slug',$slug)->first();
-        if( $event->isEmpty() ){
+        if( empty($event->toArray()) ){
             return view('404');
         }
         return view('pages.event.view',compact('event'));
