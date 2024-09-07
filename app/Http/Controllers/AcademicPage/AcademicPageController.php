@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class AcademicPageController extends Controller
 {
     public function syllabus(){
-        $page = get_page_details('academics/syllabus');
+        $page = get_page_details('syllabus');
         $syllabuses = CommonResource::where('type','syllabus')->orderBy('created_at', 'desc')->get();
         return view('pages.syllabus',compact('page','syllabuses'));
     }
