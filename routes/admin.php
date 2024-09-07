@@ -39,5 +39,5 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         ->name('admin.notice.modify');
     Route::get('/resources/type/{type}', [CommonResourceController::class, 'getResourcesByType']);
     Route::get('/admin/resources/delete/{id}', [CommonResourceController::class, 'deleteResource'])
-    ->name('resources.delete');
+        ->name('resources.delete');
 });

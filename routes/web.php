@@ -13,7 +13,6 @@ use App\Http\Controllers\NoticePage\NoticePageController;
 use App\Http\Controllers\Researches\ResearchesController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', [HomePageController::class, 'load_home_page'] )->name('home');
 
 Route::group(['prefix' => 'about-college'], function () {
@@ -70,8 +69,6 @@ Route::group(['prefix' => 'activities'], function () {
     Route::get('/events/{slug}', [EventsController::class, 'view_event'])->name('event.view');
     Route::get('/researches', [ResearchesController::class, 'load_page'] )->name('activities/researches');
 });
-
-
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/logout', [LoginPageController::class, 'logout'])->name('logout');
