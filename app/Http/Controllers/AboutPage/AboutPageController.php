@@ -3,13 +3,18 @@
 namespace App\Http\Controllers\AboutPage;
 
 use App\Http\Controllers\Controller;
+use App\Models\PageMetas;
 use Illuminate\Http\Request;
 
 class AboutPageController extends Controller
 {
     public function at_a_glance()
     {
-        return view('pages.at-a-glance');
+        $section = PageMetas::where('meta_key', 'at_a_glance')->first();
+        if( $section ) {
+            $section = json_decode($section->meta_value);
+        }
+        return view('pages.at-a-glance', compact('section'));
     }
 
     public function vision_mission()
