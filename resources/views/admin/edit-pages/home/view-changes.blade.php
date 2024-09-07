@@ -22,7 +22,9 @@ Edit - Home Page
                 Click To Edit Hero Section
             </button>
             @include('pages.home.hero')
-            <span class="edit-page-hover-text">Edit More</span>
+            @if(!empty($hero_section))
+            <button class="edit-page-hover-text btn btn-info">Edit More</button>
+            @endif
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'administration_section'])}}">
@@ -31,7 +33,9 @@ Edit - Home Page
                 Click To Edit Administration Section
             </button>
             @include('pages.home.administration-section')
-            <span class="edit-page-hover-text">Edit More</span>
+            @if(!$administration->isEmpty())
+            <button class="edit-page-hover-text btn btn-info">Edit More</button>
+            @endif
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'short_details_section'])}}">
@@ -40,7 +44,9 @@ Edit - Home Page
                 Click To Edit Short Details Section
             </button>
             @include('pages.home.short-details')
-            <span class="edit-page-hover-text">Edit More</span>
+            @if(!empty($short_details))
+            <button class="edit-page-hover-text btn btn-info">Edit More</button>
+            @endif
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'online_services_section'])}}">
@@ -49,7 +55,9 @@ Edit - Home Page
                 Click To Edit Online Services Section
             </button>
             @include('pages.home.online-services')
-            <span class="edit-page-hover-text">Edit More</span>
+            @if(! $online_services_section->isEmpty())
+            <button class="edit-page-hover-text btn btn-info">Edit More</button>
+            @endif
         </div>
     </a>
     <a href="{{route('admin.pages.edit',['slug'=>'home','section'=>'faq_section'])}}">
@@ -58,7 +66,9 @@ Edit - Home Page
                 Click To Edit FAQ Section
             </button>
             @include('pages.home.faq')
-            <span class="edit-page-hover-text">Edit More</span>
+            @if(! $faq_section->isEmpty())
+            <button class="edit-page-hover-text btn btn-info">Edit More</button>
+            @endif
         </div>
     </a>
 </div>
