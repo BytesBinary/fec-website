@@ -9,7 +9,12 @@
         enctype="multipart/form-data">
         <div class="row">
             <h2 class="text-center">Edit Hero Section</h2>
-
+            <x-breadcrumbs :breadcrumbs="[
+                'Dashboard' => route('admin.dashboard'),
+                'Pages' => route('admin.pages'),
+                'Edit Home' => route('admin.page.view', ['slug' => 'home']),
+                'Edit Hero Section' => route('admin.pages.edit', ['slug' => 'home', 'section' => 'hero_section']),
+            ]" />
             @if (session('message'))
                 <div class="alert alert-success">
                     {{ session('message') ?? '' }}
@@ -43,60 +48,59 @@
                 class="btn btn-primary" />
         </div>
     </x-forms>
-
-    <table class="table table-striped">
+@if(!empty($section))
+    <table class="table table-striped" id="use-datatable">
         <thead>
-            <tr>
-                <th>
-                    Title
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Slogan
-                </th>
-                <th>
-                    Image
-                </th>
-                <th>
-                    BG-Image
-                </th>
-            </tr>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Slogan
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                BG-Image
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
         </thead>
         <tbody>
-
-            @if (!empty($hero_section))
-                <tr>
-                    <td>
-                        {{ $hero_section['title'] }}
-                    </td>
-                    <td>
-                        {{ $hero_section['name'] }}
-                    </td>
-                    <td>
-                        {{ $hero_section['slogan'] }}
-                    </td>
-                    <td>
-                        <img src="{{ asset($hero_section['image']) }}" alt="img" style="width: 50px; height: 50px;">
-                    </td>
-                    <td>
-
-                    </td>
-                    <td>
-                        <a href="{{ route('admin.pages.meta-delete', ['id' => 'hero_section']) }}"
-                            class="btn btn-danger">Delete</a>
-                    </td>
-                @else
-                <tr>
-                    <td colspan="5">
-                        <div class="alert alert-info mt-4">No Data Available. Please Add Some.</div>
-                    </td>
-                </tr>
-            @endif
+            <tr>
+                <td>
+                    {{ $section['title'] }}
+                </td>
+                <td>
+                    {{ $section['name'] }}
+                </td>
+                <td>
+                    {{ $section['slogan'] }}
+                </td>
+                <td>
+                    <img src="{{ asset($section['image']) }}" alt="img" class="admin-panel-table-image" />
+                </td>
+                <td>
+                    @foreach($section['bg_images'] as $image)
+                        <img src="{{ asset($image) }}" alt="img" class="admin-panel-table-image" />
+                    @endforeach
+                </td>
+                <td>
+                    <a href="{{ route('admin.pages.meta-delete', ['id' => 'hero_section']) }}"
+                       class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
         </tbody>
     </table>
-
+@else
+    <div class="alert alert-info mt-4">No Data Available. Please Add Some.</div>
+@endif
 @endsection
 @section('script')
     <script>

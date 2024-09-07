@@ -94,3 +94,59 @@ if( !function_exists( 'create_unique_meta_key' ) ) {
         return $metaKey;
     }
 }
+
+if( ! function_exists( 'get_page_id_by_slug') ) {
+    function get_page_id_by_slug( $slug )
+    {
+        $page =  Pages::where('page_slug', $slug)->first();
+
+        if( $page ) {
+            return $page->id;
+        }
+
+        return false;
+    }
+}
+
+if( ! function_exists('get_page_meta' )) {
+    function get_page_meta( $pageId, $keyName , $keyValue )
+    {
+        $metas = PageMetas::where('page_id', $pageId)
+            ->where($keyName, $keyValue)
+            ->get();
+
+        $metas = $metas->toArray();
+
+        if( isset( $metas->meta_value ) ) {
+            $metas['meta_value'] = json_decode($metas['meta_value'], true);
+        }
+
+        foreach ( $metas as $key=>$meta ) {
+            $metas[$key]['meta_value'] = json_decode($metas[$key]['meta_value'], true);
+        }
+
+        return $metas;
+    }
+}
+
+if( ! function_exists('getFirstTenWords') ) {
+    function getFirstTenWords($htmlContent) {
+        // Strip HTML tags
+        $text = strip_tags($htmlContent);
+
+        // Normalize spaces and trim the text
+        $text = preg_replace('/\s+/', ' ', $text);
+        $text = trim($text);
+
+        // Split text into words
+        $words = preg_split('/\s+/', $text);
+
+        // Get the first 10 words
+        $firstTenWords = array_slice($words, 0, 10);
+
+        // Join words into a string
+        $result = implode(' ', $firstTenWords);
+
+        return $result;
+    }
+}

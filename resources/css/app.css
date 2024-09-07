@@ -10,48 +10,9 @@
 
 @import 'swiper/swiper-bundle.css';
 
+@import 'quill/dist/quill.snow.css';
 
-:root {
-    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --heading-font: "Nunito", sans-serif;
-    --nav-font: "Inter", sans-serif;
-}
-
-:root {
-    --background-color: #ffffff;
-    --default-color: #3d4348;
-    --heading-color: #3e5055;
-    --accent-color: #388da8;
-    --surface-color: #ffffff;
-    --contrast-color: #ffffff;
-}
-
-:root {
-    --nav-color: #313336;
-    --nav-hover-color: #77b6ca;
-    --nav-mobile-background-color: #ffffff;
-    --nav-dropdown-background-color: #ffffff;
-    --nav-dropdown-color: #313336;
-    --nav-dropdown-hover-color: #77b6ca;
-}
-
-.light-background {
-    --background-color: #f8fbfc;
-    --surface-color: #ffffff;
-}
-
-.dark-background {
-    --background-color: #060606;
-    --default-color: #ffffff;
-    --heading-color: #ffffff;
-    --surface-color: #252525;
-    --contrast-color: #ffffff;
-}
-
-
-:root {
-    scroll-behavior: smooth;
-}
+@import "root.css";
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -1045,7 +1006,7 @@ section,
 }
 
 .about-section .img-side {
-    background-image: url('/images/hero-img1.jpg');
+    background-image: url('/images/at_a_glance.png');
     background-size: cover;
     background-position: center;
     filter: brightness(.7);
@@ -1388,6 +1349,44 @@ section,
     --offcanvas-width: 270px;
     --topNavbarHeight: 56px;
 }
+.edit-section-btn {
+    width: 100%;
+}
+.admin-panel-table-image {
+    height: 50px;
+    width: 50px;
+}
+.edit-page-hover-button{
+    position: relative;
+}
+.edit-page-hover-button {
+    position: relative; /* Ensure positioning for absolute children */
+}
+
+.edit-page-hover-button .edit-page-hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    font-size: 50px;
+    display: none;
+    color: black;
+    font-weight: bold;
+    z-index: 10; /* Ensure the text stays above other elements */
+}
+
+.edit-page-hover-button:hover .edit-page-hover-text {
+    display: block; /* Show text on hover */
+}
+
+.edit-page-hover-button:hover {
+    filter: brightness(0.6); /* Dim the whole container */
+}
+
+.edit-page-hover-button:hover .edit-page-hover-text {
+    filter: brightness(1); /* Keep text at full brightness */
+}
+
 
 /*--------------------------------------------------------------
     # Admin Login Page

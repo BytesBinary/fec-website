@@ -4,7 +4,9 @@
 
 @section('content')
     <div class="container section-title page-top-section" data-aos="fade-down">
-        <h2>{{ $page['page_title']  }}</h2>
+
+        <x-section-title title="{{ $page['page_title'] }}" des="" animation="fade-up" />
+
         <div class="table-responsive">
             <table id="use-datatable" class="table table-striped table-bordered">
                 <thead>
@@ -18,12 +20,15 @@
                 <tbody>
                 @foreach( $notices as $notice )
                     <tr>
-                        <td>{{ $loop->iteration  }}</td>
+                        <td class="text-center">{{ $loop->iteration  }}</td>
                         <td>{{ $notice->created_at->format('d-m-Y') }}</td>
                         <td>{{ $notice->title }}</td>
                         <td>
-                            <a href="{{ asset('storage/notice/'.$notice->file) }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
+                            <a href="{{ $notice->pdf }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
                         </td>
+                        {{-- @php
+                            dd($notice)
+                        @endphp --}}
                     </tr>
                 @endforeach
                 </tbody>

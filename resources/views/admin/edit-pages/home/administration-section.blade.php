@@ -9,6 +9,12 @@
         enctype="multipart/form-data">
         <div class="row">
             <h2 class="text-center"> Edit Administration Section </h2>
+            <x-breadcrumbs :breadcrumbs="[
+                'Dashboard' => route('admin.dashboard'),
+                'Pages' => route('admin.pages'),
+                'Edit Home' => route('admin.page.view', ['slug' => 'home']),
+                'Edit Administration Section' => route('admin.pages.edit', ['slug' => 'home', 'section' => 'administration_section']),
+            ]" />
             @if (session('message'))
                 <div class="alert alert-success">
                     {{ session('message') ?? '' }}
@@ -23,7 +29,8 @@
 
         </div>
     </x-forms>
-    <table class="table table-striped">
+    @if (!empty($section))
+    <table class="table table-striped" id="use-datatable">
         <thead>
             <tr>
                 <th>
@@ -41,32 +48,27 @@
             </tr>
         </thead>
         <tbody>
-            @if (!empty($administration_section))
-                @foreach ($administration_section as $key => $section)
+                @foreach ($section as $key => $sec)
                     <tr>
                         <td>
-                            {{ $section['meta_value']['name'] }}
+                            {{ $sec['meta_value']['name'] }}
                         </td>
                         <td>
-                            {{ $section['meta_value']['designation'] }}
+                            {{ $sec['meta_value']['designation'] }}
                         </td>
                         <td>
-                            <img src="{{ asset($section['meta_value']['image']) }}"
-                                alt="{{ $section['meta_value']['name'] }}" style="width: 50px; height: 50px;">
+                            <img src="{{ asset($sec['meta_value']['image']) }}"
+                                alt="{{ $sec['meta_value']['name'] }}" class="admin-panel-table-image">
                         </td>
                         <td>
-                            <a href="{{ route('admin.pages.meta-delete', ['id' => $section['id']]) }}"
+                            <a href="{{ route('admin.pages.meta-delete', ['id' => $sec['id']]) }}"
                                 class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
-            @else
-                <tr>
-                    <td colspan="4">
-                        <div class="alert alert-info mt-4">No Administrator available. Please add some.</div>
-                    </td>
-                </tr>
-            @endif
         </tbody>
     </table>
+    @else
+        <div class="alert alert-info mt-4">No Administrator available. Please add some.</div>
+    @endif
 @endsection

@@ -9,15 +9,6 @@ use App\Traits\HomeTraits;
 class EditPage extends Controller
 {
     use HomeTraits;
-
-    protected $views = [
-        'hero_section' => 'admin.edit-pages.home.hero-section',
-        'administration_section' => 'admin.edit-pages.home.administration-section',
-        'short_details_section' => 'admin.edit-pages.home.short-details',
-        'online_services_section' => 'admin.edit-pages.home.online-services',
-        'faq_section' => 'admin.edit-pages.home.faq',
-    ];
-
     protected $updateMethods = [
         'hero_section' => 'update_hero_section',
         'administration_section' => 'update_administration_section',
@@ -28,28 +19,35 @@ class EditPage extends Controller
 
     public function edit_page($id, $slug, $section)
     {
-        $page_metas = PageMetas::where('page_id', $id)->get()->each(function ($meta) {
-            $meta->meta_value = json_decode($meta->meta_value, true);
-        });
-
-        if (isset($this->views[$section])) {
-            if (in_array($section, ['administration_section', 'online_services_section', 'faq_section'])) {
-                $section_data = PageMetas::where('page_id', $id)
-                    ->where('meta_type', str_replace('_section', '', $section))
-                    ->get()
-                    ->each(function ($item) {
-                        $item->meta_value = json_decode($item->meta_value, true);
-                    });
-                return view($this->views[$section], [
-                    str_replace('_section', '', $section) => $section_data->toArray()
-                ]);
-            } else {
-                $meta = $page_metas->where('meta_key', $section)->first()->meta_value ?? [];
-                return view($this->views[$section], [$section => $meta]);
-            }
+        switch ($section) {
+            case 'hero_section':
+                $section = get_page_meta($id, 'meta_key', 'hero_section');
+                $section = (count($section) > 0) ? current($section)['meta_value'] : '';
+                isset($section['bg_images']) ? $section['bg_images'] = json_decode($section['bg_images']) : '';
+                $view = 'admin.edit-pages.home.hero-section';
+                break;
+            case 'administration_section':
+                $section = get_page_meta($id, 'meta_type', 'administration');
+                $view = 'admin.edit-pages.home.administration-section';
+                break;
+            case 'short_details_section':
+                $section = get_page_meta( $id, 'meta_key', 'short_details_section' );
+                $section = (count($section) > 0) ? current($section)['meta_value'] : '';
+                $view = 'admin.edit-pages.home.short-details';
+                break;
+            case 'online_services_section':
+                $section = get_page_meta($id, 'meta_type', 'online_services');
+                $view = 'admin.edit-pages.home.online-services';
+                break;
+            case 'faq_section':
+                $section = get_page_meta($id, 'meta_type', 'faq');
+                $view = 'admin.edit-pages.home.faq';
+                break;
+            default:
+                return redirect()->back();
         }
 
-        return redirect()->back();
+        return view($view, compact('section'));
     }
 
     public function edit_section($section, $request, $id)
@@ -57,5 +55,22 @@ class EditPage extends Controller
         return isset($this->updateMethods[$section])
             ? $this->{$this->updateMethods[$section]}($request, $id)
             : redirect()->back();
+    }
+
+    public function view_edited_changes()
+    {
+        $data = (new HomePageController())->load_home_page(true);
+
+        if( $data ) {
+            $data = current($data);
+        }
+
+        return view('admin.edit-pages.home.view-changes', array(
+            'hero_section' => $data['hero_section'],
+            'administration' => $data['administration'],
+            'short_details' => $data['short_details'],
+            'online_services_section' => $data['online_services_section'],
+            'faq_section' => $data['faq_section'],
+        ));
     }
 }

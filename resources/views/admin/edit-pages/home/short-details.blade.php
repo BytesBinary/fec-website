@@ -8,6 +8,12 @@
     <x-forms action="{{route('admin.pages.edit', ['slug' => 'home', 'section'=> 'short_details_section'])}}" method="POST" >
         <div class="row">
             <h2 class="text-center"> Edit Short Details Section </h2>
+            <x-breadcrumbs :breadcrumbs="[
+                'Dashboard' => route('admin.dashboard'),
+                'Pages' => route('admin.pages'),
+                'Edit Home' => route('admin.page.view', ['slug' => 'home']),
+                'Edit Short Details Section' => route('admin.pages.edit', ['slug' => 'home', 'section'=> 'short_details_section']),
+            ]" />
             @if(session('message'))
                 <div class="alert alert-success">
                     {{ session('message') ?? '' }}
@@ -28,53 +34,55 @@
             <x-form-input type="submit" name="submit" value="Submit" container-class="col-sm-12" class="btn btn-primary" />
         </div>
     </x-forms>
-    <table class="table table-striped">
+@if(!empty($section))
+    <table class="table table-striped" id="use-datatable">
         <thead>
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Count
-                </th>
-            </tr>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Count
+            </th>
+        </tr>
         </thead>
         <tbody>
-            @if (! empty($short_details) )
-                <tr>
-                    <td>
-                        {{ $short_details['established_text'] }}
-                    </td>
-                    <td>
-                       {{ $short_details['established_year'] }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ $short_details['departments_text'] }}
-                    </td>
-                    <td>
-                        {{ $short_details['departments_value'] }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ $short_details['students_text'] }}
-                    </td>
-                    <td>
-                        {{ $short_details['students_value'] }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ $short_details['faculty_member_text'] }}
-                    </td>
-                    <td>
-                        {{ $short_details['faculty_member_value'] }}
-                    </td>
-                </tr>
-            @endif
-
+            <tr>
+                <td>
+                    {{ $section['established_text'] }}
+                </td>
+                <td>
+                    {{ $section['established_year'] }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ $section['departments_text'] }}
+                </td>
+                <td>
+                    {{ $section['departments_value'] }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ $section['students_text'] }}
+                </td>
+                <td>
+                    {{ $section['students_value'] }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ $section['faculty_member_text'] }}
+                </td>
+                <td>
+                    {{ $section['faculty_member_value'] }}
+                </td>
+            </tr>
         </tbody>
     </table>
+@else
+    <div class="alert alert-info mt-4">No Data Available. Please Add Some.</div>
+@endif
+
 @endsection

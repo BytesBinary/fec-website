@@ -26,7 +26,7 @@
                     <!--- Notice goes here -->
 
                     <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#notice">
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#home">
                             <span class="me-2"><i class="bi bi-file-earmark-fill"></i></span>
                             <span>Pages</span>
                             <span class="ms-auto">
@@ -35,7 +35,7 @@
                                 </span>
                             </span>
                         </a>
-                        <div class="collapse" id="notice">
+                        <div class="collapse" id="home">
                             <ul class="navbar-nav ps-3">
                                 <li>
                                     <a href="{{route('admin.pages')}}" class="nav-link px-3">
@@ -45,12 +45,76 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="collapse" id="notice">
+                        <div class="collapse" id="home">
                             <ul class="navbar-nav ps-3">
                                 <li>
                                     <a href="" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-pencil-square"></i></span>
                                         <span>Add New Page</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#notice">
+                            <span class="me-2"><i class="bi bi-bell-fill"></i></span>
+                            <span>Notices</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="notice">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="{{route('admin.notice')}}" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-cloud-arrow-up-fill"></i></span>
+                                        <span>Upload Notice</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="notice">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="{{route('admin.notice.modify')}}" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-pencil-square"></i></span>
+                                        <span>Modify Notices</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#post">
+                            <span class="me-2"><i class="bi bi-file-earmark-post"></i></span>
+                            <span>Posts</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="post">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="{{route('admin.posts.create')}}" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-cloud-arrow-up-fill"></i></span>
+                                        <span>Add New Post</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="post">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-pencil-square"></i></span>
+                                        <span>Modify Post</span>
                                     </a>
                                 </li>
                             </ul>

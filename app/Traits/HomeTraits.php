@@ -16,14 +16,14 @@ trait HomeTraits
             'bg_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $destinationPath = public_path('/images/home');
+        $destinationPath = public_path('/images/');
         $logo = 'hero_img_logo.' . $request->image->extension();
 
         $request->image->move($destinationPath, $logo);
         foreach ($request->bg_image as $key => $image) {
             $imageName = 'hero_bg_img_' . $key . '.' . $image->extension();
             $image->move($destinationPath, $imageName);
-            $bg_images[$key] = '/images/home/' . $imageName;
+            $bg_images[$key] = '/images/' . $imageName;
         }
 
         PageMetas::updateOrCreate([
@@ -35,7 +35,7 @@ trait HomeTraits
                 'title' => $request->title,
                 'name' => $request->name,
                 'slogan' => $request->slogan,
-                'image' => '/images/home/' . $logo,
+                'image' => '/images/' . $logo,
                 'bg_images' => json_encode(
                     $bg_images
                 )
@@ -55,16 +55,16 @@ trait HomeTraits
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $destinationPath = public_path('/images/home');
+        $destinationPath = public_path('/images/');
         $image = 'admin_img_.' . $request->designation . '.' . $request->image->extension();
         $request->image->move($destinationPath, $image);
 
         PageMetas::updateOrCreate([
             'page_id' => $id,
-            'meta_key' => 'administration_section_' . $request->designation
+            'meta_key' => create_unique_meta_key('administration_section'),
         ], [
             'page_id' => $id,
-            'meta_value' => json_encode(sanitize_request($request, ['image' => 'images/home/' . $image])),
+            'meta_value' => json_encode(sanitize_request($request, ['image' => 'images/' . $image])),
             'meta_type' => 'administration'
         ]);
 
@@ -112,7 +112,7 @@ trait HomeTraits
         ]);
 
         $metaKey = create_unique_meta_key('online_services_section');
-        $destinationPath = public_path('/images/home');
+        $destinationPath = public_path('/images');
         $imageName = 'admin_img_' . time() . '.' . $request->image->extension();
         $request->image->move($destinationPath, $imageName);
 
@@ -123,7 +123,7 @@ trait HomeTraits
             ],
             [
                 'page_id' => $id,
-                'meta_value' => json_encode(sanitize_request($request, ['image' => '/images/home/' . $imageName])),
+                'meta_value' => json_encode(sanitize_request($request, ['image' => '/images/' . $imageName])),
                 'meta_type' => 'online_services'
             ]
         );
