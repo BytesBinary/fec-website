@@ -18,8 +18,6 @@
 
         @include('pages.home.online-services')
 
-{{--    @include('pages.home.latest-news')  --}}
-
         @include('pages.home.events')
 
         @include('pages.home.research')
