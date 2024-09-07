@@ -15,7 +15,7 @@ class ResearchesController extends Controller
     }
     public function view_research($slug){
         $research = Post::where('slug',$slug)->first();
-        if( empty($research->toArray()) ){
+        if( empty($research) ){
             return view('404');
         }
         return view('pages.research.view',compact('research'));
