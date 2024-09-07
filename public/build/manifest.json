@@ -12,7 +12,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-_yUQO2pV.css",
+    "file": "assets/app-7sOz70gQ.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -22,7 +22,7 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-B3cPvXTC.js",
+    "file": "assets/app-D5uFBsR5.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

@@ -26,5 +26,20 @@ class CommonResourceController extends Controller
         $resource->pdf = '/documents' . $newName;
         $resource->title = $request->title;
         $resource->save();
+
+        session()->flash('message', 'File uploaded Successfully');
+        return redirect()->back();
     }
+
+    public function deleteResource($id)
+    {
+        $resource = CommonResource::findOrFail($id);
+        if (file_exists(public_path($resource->pdf))) {
+            unlink(public_path($resource->pdf));
+        }
+        $resource->delete();
+        session()->flash('message', 'File deleted successfully');
+        return redirect()->back();
+    }
+
 }

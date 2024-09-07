@@ -37,4 +37,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         ->name('admin.resources.store');
     Route::get('/modify-notice', [NoticeController::class, 'modifyNotice'])
         ->name('admin.notice.modify');
+    Route::get('/resources/type/{type}', [CommonResourceController::class, 'getResourcesByType']);
+    Route::get('/admin/resources/delete/{id}', [CommonResourceController::class, 'deleteResource'])
+    ->name('resources.delete');
 });
