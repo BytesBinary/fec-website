@@ -18,7 +18,7 @@
                 image="true"
                 image-class="rounded-top"
                 cardimage="true"
-                imageUrl="{{ asset('images/administration/mizanur-rahman.jpg') }}"
+                imageUrl="{{ asset('static/mia-bhai.jpg') }}"
                 imageAlt="mia bhai"
                 body-class="text-center"
                 cardTitle="Prof. Dr. Mizanur Rahman"
