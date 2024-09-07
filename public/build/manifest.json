@@ -11,8 +11,12 @@
     "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
+  "public/static/hero-img.jpg": {
+    "file": "assets/hero-img-CegJmjrN.jpg",
+    "src": "public/static/hero-img.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-3-9CFERv.css",
+    "file": "assets/app-DrOgvuz_.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

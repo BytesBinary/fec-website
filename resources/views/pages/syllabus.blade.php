@@ -3,6 +3,7 @@
 @section('title','Syllabus | FEC')
 
 @section('content')
+    @if ( ! empty($page) )
     <div class="container section-title page-top-section" data-aos="fade-down">
         <x-section-title title="{{ $page['page_title'] }}" des="" animation="fade-up" />
         <div class="table-responsive">
@@ -30,5 +31,6 @@
             </table>
         </div>
     </div>
+    @endif
 @endsection
 

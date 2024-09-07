@@ -1,3 +1,4 @@
+@if(!empty($map_and_forms))
 <div class="row gy-4 mt-1">
     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
     <iframe src="{{$map_and_forms['map']['map_url']}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when+-downgrade"></iframe>
@@ -29,3 +30,5 @@
         </form>
     </div>
 </div>
+
+@endif

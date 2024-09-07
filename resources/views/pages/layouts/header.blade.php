@@ -4,7 +4,7 @@ $pages = get_pages();
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="#" class="logo d-flex align-items-center me-auto">
-            <img src="{{asset('images\FEClogo.png')}}" alt="">
+            <img src="{{asset('static/logo.png')}}" alt="">
             <h1 class="sitename">FEC</h1>
         </a>
         <nav id="navmenu" class="navmenu">

@@ -1,7 +1,7 @@
 @if(!$events->isEmpty())
     <section class="section my-5">
         <x-section-title title="Recent and Upcoming Events"
-                         des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                         des=""
                          animation="fade-up" />
 
         <div class="container">
