@@ -1356,6 +1356,37 @@ section,
     height: 50px;
     width: 50px;
 }
+.edit-page-hover-button{
+    position: relative;
+}
+.edit-page-hover-button {
+    position: relative; /* Ensure positioning for absolute children */
+}
+
+.edit-page-hover-button .edit-page-hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    font-size: 50px;
+    display: none;
+    color: black;
+    font-weight: bold;
+    z-index: 10; /* Ensure the text stays above other elements */
+}
+
+.edit-page-hover-button:hover .edit-page-hover-text {
+    display: block; /* Show text on hover */
+}
+
+.edit-page-hover-button:hover {
+    filter: brightness(0.6); /* Dim the whole container */
+}
+
+.edit-page-hover-button:hover .edit-page-hover-text {
+    filter: brightness(1); /* Keep text at full brightness */
+}
+
 
 /*--------------------------------------------------------------
     # Admin Login Page
