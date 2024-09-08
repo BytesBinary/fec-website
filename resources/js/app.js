@@ -9,6 +9,7 @@ import 'datatables.net-bs5/js/dataTables.bootstrap5.min.js';
 import AOS from 'aos';
 import GLightbox from 'glightbox';
 import Swiper from 'swiper/bundle';
+import Quill from 'quill';
 
 $(document).ready(function() {
     // Short details counter
@@ -42,6 +43,15 @@ $(document).ready(function() {
     };
     $(window).on('scroll', checkScroll);
     checkScroll(); // Initial check
+
+    // Show password when click in the eye icon
+    $(document).ready(function() {
+        $('#togglePassword').on('click', function() {
+            const type = $('#password').attr('type') === 'password' ? 'text' : 'password';
+            $('#password').attr('type', type);
+            $('#eyeIcon').toggleClass('bi-eye bi-eye-slash');
+        });
+    });
 });
 
 
@@ -170,7 +180,7 @@ $(document).ready(function() {
 
 // DataTables
 $(document).ready(function() {
-    var table = $('#use-datatable').DataTable({
+     $('#use-datatable').DataTable({
         "paging": true,
         "searching": true,
         "ordering": true,
@@ -181,31 +191,68 @@ $(document).ready(function() {
             "orderable": false
         }]
     });
-
-    // Handle select all checkbox
-    $('#select-all').on('click', function(){
-        var rows = table.rows({ 'search': 'applied' }).nodes();
-        $('input[type="checkbox"]', rows).prop('checked', this.checked);
-    });
-
-    // Handle individual row selection
-    $('#use-datatable tbody').on('change', 'input[type="checkbox"]', function(){
-        if(!this.checked){
-            var el = $('#select-all').get(0);
-            if(el && el.checked && ('indeterminate' in el)){
-                el.indeterminate = true;
-            }
-        }
-    });
-
-    $('#use-datatable tbody').on('click', '.btn-primary', function(){
-        var data = table.row($(this).parents('tr')).data();
-        alert('You are editing the record of: ' + data[1]);
-    });
-
-    $('#use-datatable tbody').on('click', '.btn-danger', function(){
-        var data = table.row($(this).parents('tr')).data();
-        alert('You are deleting the record of: ' + data[1]);
-    });
 });
 
+// quil for writing text
+$(document).ready(function() {
+    const quill = new Quill('#content', {
+        theme: 'snow',
+        modules: {
+            toolbar: {
+                container: [
+                    [{ 'header': [1, 2, 3, false] }],
+                    ['bold', 'italic', 'underline'],
+                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                    ['link', 'image']
+                ],
+                handlers: {
+                    image: imageHandler
+                }
+            }
+        },
+        placeholder: 'Compose an epic...',
+        readOnly: false,
+        scrollable: true
+    });
+
+    function imageHandler() {
+        const input = document.createElement('input');
+        input.setAttribute('type', 'file');
+        input.setAttribute('accept', 'image/*');
+        input.click();
+
+        input.onchange = () => {
+            const file = input.files[0];
+            if (file) {
+                const formData = new FormData();
+                formData.append('image', file);
+                const csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+                $.ajax({
+                    url: '/admin/posts/quil-editor/upload-image', // Your image upload URL
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken // Include CSRF token in the headers
+                    },
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        // Insert image into the editor
+                        const range = quill.getSelection();
+                        quill.insertEmbed(range.index, 'image', response.imageUrl);
+                    },
+                    error: function(error) {
+                        console.error('Error uploading image:', error);
+                    }
+                });
+            }
+        };
+    }
+
+    // Update the hidden textarea with Quill's content before form submission
+    $('form').on('submit', function() {
+        const html = quill.root.innerHTML;
+        $('#hidden-content').val(html);
+    });
+});

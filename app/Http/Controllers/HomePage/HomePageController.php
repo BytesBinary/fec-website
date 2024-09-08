@@ -5,55 +5,82 @@ namespace App\Http\Controllers\HomePage;
 use App\Http\Controllers\Controller;
 use App\Models\PageMetas;
 use App\Models\Pages;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use PhpParser\JsonDecoder;
 
 class HomePageController extends Controller
 {
-    public function load_page()
+    public function load_home_page( $get_data = false )
     {
         $page = get_page_details('home');
 
-        $hero_section = json_decode(
-            PageMetas::where('page_id', $page['id'])->where('meta_key', 'hero_section')->first()->meta_value,true
-        );
+        if ($page) {
+            $hero_section = PageMetas::where('page_id', $page['id'])->where('meta_key', 'hero_section')->first();
+            if( $hero_section ) {
+                $hero_section = $hero_section->toArray();
+                $hero_section['meta_value'] = json_decode($hero_section['meta_value'], true);
+                $hero_section['meta_value']['bg_images'] = json_decode($hero_section['meta_value']['bg_images'], true);
+            }
 
-        $administration = json_decode(
-            PageMetas::where('page_id', $page['id'])->where('meta_key','administration')->first()->meta_value,true
-        );
+            $administration_section = PageMetas::where('page_id', $page['id'])
+                ->where('meta_type', 'administration')
+                ->get();
+            foreach ($administration_section as $section) {
+                $section->meta_value = json_decode($section->meta_value, true);
+            }
 
-        $short_details = json_decode(
-            PageMetas::where('page_id',$page['id']) -> where('meta_key','short_details')->first()->meta_value, true
-        );
+            $short_details = PageMetas::where('page_id', $page['id'])
+                ->where('meta_type', 'short_details')
+                ->first();
+            if( $short_details ) {
+                $short_details->meta_value = json_decode($short_details->meta_value, true);
+            }
 
-        $about_section = json_decode(
-            PageMetas::where('page_id', $page['id'])->where('meta_key', 'about_section')->first()->meta_value,
-            true
-        );
+            $online_services_section = PageMetas::where('page_id', $page['id'])
+                ->where('meta_type', 'online_services')
+                ->get();
+            foreach ($online_services_section as $section) {
+                $section->meta_value = json_decode($section->meta_value, true);
+            }
 
-        $online_services = json_decode(
-            PageMetas::where('page_id', $page['id'])->where('meta_key', 'online_services')->first()->meta_value,
-            true
-        );
+            $faq_section = PageMetas::where('page_id', $page['id'])
+                ->where('meta_type', 'faq')
+                ->get();
+            foreach ($faq_section as $section) {
+                $section->meta_value = json_decode($section->meta_value, true);
+            }
 
-        $latest_news = json_decode(
-            PageMetas::where('page_id', $page['id'])->where('meta_key', 'latest_news')->first()->meta_value,
-            true
-        );
+            $aboutUs = PageMetas::where('meta_key', 'at_a_glance')->first();
+            if( $aboutUs ) {
+                $aboutUs = json_decode($aboutUs->meta_value);
+            }
 
-        $events = json_decode(
-            PageMetas::where('page_id',$page['id'])->where('meta_key', 'events')->first()->meta_value, true
-        );
+            $events = Post::where('type', 'event')->take(3)->get();
 
-        $research = json_decode(
-            PageMetas::where('page_id',$page['id'])->where('meta_key', 'research')->first()->meta_value, true
-        );
+            $research = Post::where('type', 'research')->take(3)->get();
+        }
 
-        $faq = json_decode(
-            PageMetas::where('page_id',$page['id'])-> where('meta_key','faq')->first()->meta_value,true
-        );
+        if( $get_data ) {
+            return array([
+                'hero_section' => $hero_section ?? '',
+                'administration' => $administration_section ?? '',
+                'short_details' => $short_details->meta_value ?? '',
+                'online_services_section' => $online_services_section ?? '',
+                'faq_section' => $faq_section ?? '',
+            ]);
+        }
 
-        return view('pages.home', compact('page', 'hero_section', 'administration', 'short_details', 'about_section', 'online_services', 'latest_news', 'events', 'research', 'faq'));
+        return view('pages.home', array(
+            'page' => $page,
+            'hero_section' => $hero_section ?? '',
+            'administration' => $administration_section ?? '',
+            'short_details' => $short_details->meta_value ?? '',
+            'online_services_section' => $online_services_section ?? '',
+            'faq_section' => $faq_section ?? '',
+            'aboutUs' => $aboutUs ?? '',
+            'events' => $events ?? '',
+            'researches' => $research ?? '',
+        ));
     }
-
 }

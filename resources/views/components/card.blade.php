@@ -12,11 +12,15 @@
                     <p class="card-text {{$textClass}}">{!! $cardText !!}</p>
                     @if($button)
                         <div class="{{$cardConClass}}">
+                            @if($buttonUrl)
                             <a href="{{$buttonUrl}}" class="{{$urlClass}}">
-                                <button class="{{$buttonClass}}">
+                            @endif
+                                <button class="{{$buttonClass}}" data-bs-toggle="modal" data-bs-target="#{{$modalId}}">
                                     {{$buttonText}}
                                 </button>
+                            @if($buttonUrl)
                             </a>
+                            @endif
                         </div>
                     @endif
                     @if($cardlink)

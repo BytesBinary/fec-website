@@ -3,17 +3,28 @@
 @section('title','At a Glance | FEC')
 
 @section('content')
-    <div class="container page-top-section">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">At a Glance | Faridpur Engineering College</h1>
-                <p class="text-center">Located about 2.7 kilometers away from the main city of Faridpur.</p>
-                <hr>
-                <h2 class="mt-4">About Us</h2>
-                <p>Faridpur Engineering College is established to conduct B.Sc in Engineering degree in Bangladesh. Administrative activities are controlled by the Directorate of Technical Education (DTE), under Technical and Madrasha Education Division (TMED), Ministry of Education.</p>
-                <p>This College is affiliated with the University of Dhaka under the Faculty of Engineering & Technology for certification of a four (04) years B.Sc.(Engg.) degree. Its academic journey was launched in 2013 with two departments by 120 students. In the 2017-2018 Session, the College added another feather in its cap ‘Computer Science and Engineering’ (CSE) Department under the same University since then.</p>
+<div class="container page-top-section">
+    <div class="row clearfix">
+        <x-section-title title="At a Glance" des="" animation="fade-up" />
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-6 img-side rounded px-3 mobile-height d-flex align-items-center" data-aos="fade-up-left">
+                <div class="position-relative w-100">
+                    <img src="{{asset('images/'.$section->image)}}" class="img-fluid rounded px-3 mobile-height" alt="FEC Image" style="object-fit: cover;">
+                    <div class="play-button-container rounded-circle position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center bg-warning pulse" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        <a href="{{$section->video_url}}" class="glightbox btn-watch-video d-flex align-items-center">
+                            <i class="bi bi-caret-right-fill text-light"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-@endsection
 
+        <div class="col-sm-12" data-aos="fade-up-right">
+            <p style="text-align: justify">
+               {!! nl2br(e($section->content))  !!}
+            </p>
+        </div>
+    </div>
+</div>
+
+@endsection

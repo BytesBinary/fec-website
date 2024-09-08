@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('page_parent')->nullable();
             $table->string('page_status')->default('publish');
             $table->string('page_slug')->unique();
+            $table->enum('is_editable', ['true','false'])->default('true');
             $table->timestamps();
         });
     }
