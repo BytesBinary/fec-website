@@ -59,18 +59,6 @@ class EditPage extends Controller
 
     public function view_edited_changes()
     {
-        $data = (new HomePageController())->load_home_page(true);
-
-        if( $data ) {
-            $data = current($data);
-        }
-
-        return view('admin.edit-pages.home.view-changes', array(
-            'hero_section' => $data['hero_section'],
-            'administration' => $data['administration'],
-            'short_details' => $data['short_details'],
-            'online_services_section' => $data['online_services_section'],
-            'faq_section' => $data['faq_section'],
-        ));
+        return view('admin.edit-pages.home.view-changes');
     }
 }

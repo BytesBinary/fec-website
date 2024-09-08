@@ -5,29 +5,27 @@
 @section('content')
     <main class="main page-top-section">
 
-        <x-section-title title="Message from Principal" animation="fade-up" des="" />
-
-        <div class="container mb-5">
-            <div class="row">
-                <div class="col-sm-3">
-                    <x-card
-                    row-class="col-sm-"
-                    card-class="col-sm-12"
-                    link="#"
-                    animation="fade-down"
-                    image="true"
-                    image-class="rounded-top"
-                    cardimage="true"
-                    imageUrl="{{ asset('images/administration/mia-bhai.jpg') }}"
-                    imageAlt="mia bhai"
-                    body-class="text-center"
-                    cardTitle="Prof. Dr. Mizanur Rahman"
-                    title-class="mb-3 fw-bold"
-                    cardText="Principal"
-                    text-class="text-muted"
-                />
-                </div>
-
+    <x-section-title title="Message from Principal" animation="fade-up" des="" />
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-sm-3">
+                <x-card
+                row-class="col-sm-"
+                card-class="col-sm-12"
+                link="#"
+                animation="fade-down"
+                image="true"
+                image-class="rounded-top"
+                cardimage="true"
+                imageUrl="{{ asset('static/mia-bhai.jpg') }}"
+                imageAlt="mia bhai"
+                body-class="text-center"
+                cardTitle="Prof. Dr. Mizanur Rahman"
+                title-class="mb-3 fw-bold"
+                cardText="Principal"
+                text-class="text-muted"
+            />
+            </div>
                 <div class="col-md-8">
                     <p>
                         It is very pleasure to introduce my heart-touching engineering institution “The Faridpur Engineering College” that set out its journey since 2010. Its short form is FEC whereas Bangla pronunciation is “ফরিদপুর ইঞ্জিনিয়ারিং কলেজ (ফইক)”। The college is situated nearby Baitul Aman Bazar, about three km distance from the heart of Faridpur town.

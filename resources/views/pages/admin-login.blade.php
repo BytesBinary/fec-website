@@ -7,7 +7,7 @@
         <div class="sign-in-container page-top-section mb-5">
             <div class="card sign-in-card p-4" style="max-width: 400px;">
                 <div class="img-container">
-                    <img src="{{asset('images/FEClogo.png')}}" class="card-img-top img-fluid rounded" alt="Beach">
+                    <img src="{{asset('static/logo.png')}}" class="card-img-top img-fluid rounded" alt="Beach">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title text-center">Sign In</h5>

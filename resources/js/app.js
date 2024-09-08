@@ -99,7 +99,7 @@ $(document).ready(function() {
 
         // Initialize AOS
         AOS.init({
-            duration: 700,
+            duration: 400,
             easing: "ease-in-out",
             once: true,
         });

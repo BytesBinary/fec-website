@@ -11,18 +11,22 @@
     "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
+  "public/static/hero-img.jpg": {
+    "file": "assets/hero-img-CegJmjrN.jpg",
+    "src": "public/static/hero-img.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-3-9CFERv.css",
+    "file": "assets/app-C10TSJT9.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/home.css": {
-    "file": "assets/home-BEzOTWgH.css",
+    "file": "assets/home-D9SwJhek.css",
     "src": "resources/css/home.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-C_5wsblt.js",
+    "file": "assets/app-DTIgikex.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

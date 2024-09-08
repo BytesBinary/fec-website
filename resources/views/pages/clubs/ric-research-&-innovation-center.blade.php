@@ -15,8 +15,7 @@
 @vite(['resources/css/ric-header.css'])
 @endsection
 
-@section('content')
-<x-club.header logo="{{asset('images/clubs/ric.jpg')}}" name="RIC" />
+<x-club.header logo="{{asset('static/logo.png')}}" name="RIC" />
 
 <section class="club-hero-section bg-light min-vh-100 text-white p-5 d-flex align-items-center" id="home">
     <div class="container">

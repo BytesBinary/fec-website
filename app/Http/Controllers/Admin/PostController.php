@@ -24,10 +24,22 @@ class PostController extends Controller
             'cover_image' => 'required|image|mimes:jpg,png,jpeg,gif|max:2048',
         ]);
 
-
-        // Move images from temp-uploads to the permanent location
         $main_content = $request->main_content;
         $modified_content = $main_content;
+
+        $modified_content = preg_replace_callback('/<img[^>]+src="(.*?)"[^>]*>/', function($matches) {
+            $imageTag = $matches[0];
+            $imageUrl = $matches[1];
+
+            // Add the class 'img-fluid' to the img tag
+            $newImageTag = preg_replace('/<img/', '<img class="img-fluid"', $imageTag);
+
+            // Wrap the img tag in a div with the classes 'post-image-container' and 'col-sm-12'
+            $wrappedImage = '<div class="post-image-container col-sm-12">' . $newImageTag . '</div>';
+
+            return $wrappedImage;
+        }, $main_content);
+
         preg_match_all('/<img src="(.*?)"/', $main_content, $matches);
 
         foreach ($matches[1] as $imageUrl) {
@@ -39,8 +51,9 @@ class PostController extends Controller
             if (file_exists($oldImagePath)) {
                 if (rename($oldImagePath, $newImagePath)) {
                     $newImageUrl = asset('/post/' . $imageName);
-                    $modified_content = str_replace($imageUrl, $newImageUrl, $main_content);
-                    if( file_exists(public_path('/post/temp-store/' . $imageName)) ) {
+                    // Replace the old image URL with the new one in the modified content
+                    $modified_content = str_replace($imageUrl, $newImageUrl, $modified_content);
+                    if (file_exists(public_path('/post/temp-store/' . $imageName))) {
                         unlink(public_path('/post/temp-store/' . $imageName));
                     }
                 }
@@ -53,7 +66,6 @@ class PostController extends Controller
                 $name = 'cover_'. time() . '.' . $cover->getClientOriginalExtension();
                 $cover->move(public_path('/post/covers/'), $name);
             } else {
-                // Handle invalid file upload
                 return response()->json(['error' => 'Invalid file upload'], 400);
             }
         } else {

@@ -7,7 +7,7 @@
         @yield('title')
     </title>
 
-    <link href="{{asset('images/FEClogo.png')}}" rel="icon">
+    <link href="{{asset('static/logo.png')}}" rel="icon">
     <link href="{{asset('images/apple-touch-icon.png')}}" rel="apple-touch-icon">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>

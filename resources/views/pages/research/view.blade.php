@@ -2,13 +2,12 @@
 
 @section('content')
     <div class="container page-top-section">
-        <div class="container">
+        <div class="row post-cover-image">
             <x-section-title title="{{ $research->title }}" des="" animation="fade-up" />
-            <img class="img-fluid align-item-center" src="{{ $research->cover }}" alt="img">
+            <img class="img-fluid align-item-center text-center" src="{{ $research->cover }}" alt="img">
         </div>
-    </div>
-    <div class="container p-3 m-5">
-        {!! $research->content !!}
-    </div>
+        <div class="p-3">
+            {!! $research->content !!}
+        </div>
     </div>
 @endsection

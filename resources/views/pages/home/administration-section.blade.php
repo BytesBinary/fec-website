@@ -2,7 +2,7 @@
     <section class="section administration-section">
         <div class="container">
             <x-section-title title="Administration Section"
-                             des="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                             des=""
                              animation="fade-up" />
             <div class="row g-4">
                 @foreach ( $administration as $key => $member )

@@ -482,7 +482,7 @@ h6 {
     color: var(--contrast-color);
     background-color: var(--nav-color);
     font-size: 14px;
-    padding-bottom: 5px;
+    padding:25px 0;
     position: relative;
 }
 
@@ -587,6 +587,7 @@ h6 {
 
 .footer .footer-links ul a:hover {
     color: var(--accent-color);
+    cursor: pointer;
 }
 
 .footer .footer-contact p {
@@ -650,7 +651,11 @@ h6 {
     margin-top: 6px;
     font-size: 13px;
 }
-
+@media (max-width: 1199px) {
+    .foot-img img {
+        height: auto;
+    }
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -951,7 +956,7 @@ section,
  ----------------------------------------------------------------*/
 
 .short-description {
-    background-image: url('/images/hero-img.jpg');
+    background-image: url('/public/static/hero-img.jpg');
     background-attachment: fixed;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1005,7 +1010,7 @@ section,
     text-align: justify;
 }
 
-.about-section .img-side {
+.about-section .img-side, .at-a-glance .img-side {
     background-image: url('/images/at_a_glance.png');
     background-size: cover;
     background-position: center;
@@ -1014,9 +1019,9 @@ section,
     background-blend-mode: overlay;
 }
 
-.about-section .play-button-container {
-    width: 60px;
-    height: 60px;
+.about-section .play-button-container, .at-a-glance .play-button-container {
+    width: 60px !important;
+    height: 60px !important;
     font-size: 24px;
     cursor: pointer;
 }
@@ -1339,6 +1344,32 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+/*---------------------------------------------------------------
+# Post
+ */
+.post-cover-image{
+    text-align: center;
+}
+
+.post-cover-image img {
+    width: 100%;
+    max-height: 400px; /* Set the minimum height */
+    object-fit: contain; /* Ensure the entire image is visible without cropping */
+    border-radius: 10px; /* Optional styling */
+}
+
+.post-image-container {
+    text-align: center;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.post-image-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
 }
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------

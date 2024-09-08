@@ -16,16 +16,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach( $syllabuses as $syllabus )
-                    <tr>
-                        <td class="text-center">{{ $loop->iteration  }}</td>
-                        <td>{{ $syllabus->session }}</td>
-                        <td>{{ $syllabus->title }}</td>
-                        <td>
-                            <a href="{{ $syllabus->pdf }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
-                        </td>
-                    </tr>
-                @endforeach
+                @if(! empty($syllabuses))
+                    @foreach( $syllabuses as $syllabus )
+                        <tr>
+                            <td class="text-center">{{ $loop->iteration  }}</td>
+                            <td>{{ $syllabus->session }}</td>
+                            <td>{{ $syllabus->title }}</td>
+                            <td>
+                                <a href="{{ $syllabus->pdf }}" class="btn btn-primary btn-md" download><i class="bi bi-download"></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
                 </tbody>
             </table>
         </div>

@@ -2,7 +2,7 @@
     @php
         $content = strip_tags($aboutUs->content);
         $words = explode(' ', $content);
-        $first100Words = implode(' ', array_slice($words, 0, 100));
+        $first100Words = implode(' ', array_slice($words, 0, 100)) . '.....';
     @endphp
     <section class="about-section section">
         <div class="container">
