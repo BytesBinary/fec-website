@@ -18,19 +18,23 @@
     <div x-show="currentDropdown === 'academics'" class="bg-gray-700">
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Life</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Calendar</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Department</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Syllabus</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Notices</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Departments</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Institutes</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Library</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Student Statistics</a>
     </div>
 
     <button @click="currentDropdown = currentDropdown === 'research' ? null : 'research'" class="w-full text-left px-4 py-2 flex justify-between">
-        Research
+        Researches & Events
         <x-svg-icon.drop-down-icon />
     </button>
     <div x-show="currentDropdown === 'research'" class="bg-gray-700">
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Publications</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Research Group</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Researches</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Events</a>
     </div>
 
     <button @click="currentDropdown = currentDropdown === 'campus_life' ? null : 'campus_life'" class="w-full text-left px-4 py-2 flex justify-between">

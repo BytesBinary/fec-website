@@ -25,7 +25,9 @@
         <div x-show="currentDropdown === 'academics'" class="absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg" x-transition>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Life</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Calendar</a>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Department</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Notices</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Syllabus</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Departments</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Institutes</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Library</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Student Statistics</a>
@@ -35,12 +37,14 @@
     <!-- Research Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'research'" @mouseleave="currentDropdown = null">
         <button class="flex items-center hover:bg-gray-700 px-3 py-2 rounded">
-            Research
+            Researches & Events
             <x-svg-icon.drop-down-icon />
         </button>
         <div x-show="currentDropdown === 'research'" class="absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg" x-transition>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Publications</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Research Group</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Researches</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Events</a>
         </div>
     </div>
 
