@@ -19,7 +19,6 @@ class PagesSeeder extends Seeder
         $this->createClubsPage();
         $this->createActivitiesPage();
         $this->createAcademicsPage();
-        $this->createAdmissionPage();
         $this->createContactUsPage('true');
         $this->createLoginPage();
     }
@@ -162,35 +161,6 @@ class PagesSeeder extends Seeder
         $subpages = [
             'Syllabus',
             'Calender'
-        ];
-        foreach ($subpages as $subpage) {
-            Pages::create([
-                'page_title' => $subpage,
-                'page_content' => '',
-                'page_sections' => '',
-                'page_slug' => strtolower(str_replace(' ', '-', $subpage)),
-                'page_parent' => $id,
-                'is_editable' => $is_editable,
-            ]);
-        }
-    }
-
-    private function createAdmissionPage($is_editable = 'false'): void
-    {
-        $admissionPage = Pages::create([
-            'page_title' => 'Admission',
-            'page_type' => 'parent',
-            'page_content' => '',
-            'page_sections' => '',
-            'page_slug' => 'admission',
-            'is_editable' => $is_editable,
-        ]);
-        $id = $admissionPage->id;
-        $slug = $admissionPage->page_slug;
-        $subpages = [
-            'Admission Information',
-            'Admission Test Result',
-            'Apply Online'
         ];
         foreach ($subpages as $subpage) {
             Pages::create([
