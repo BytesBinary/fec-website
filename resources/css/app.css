@@ -1010,7 +1010,7 @@ section,
     text-align: justify;
 }
 
-.about-section .img-side {
+.about-section .img-side, .at-a-glance .img-side {
     background-image: url('/images/at_a_glance.png');
     background-size: cover;
     background-position: center;
@@ -1019,9 +1019,9 @@ section,
     background-blend-mode: overlay;
 }
 
-.about-section .play-button-container {
-    width: 60px;
-    height: 60px;
+.about-section .play-button-container, .at-a-glance .play-button-container {
+    width: 60px !important;
+    height: 60px !important;
     font-size: 24px;
     cursor: pointer;
 }
