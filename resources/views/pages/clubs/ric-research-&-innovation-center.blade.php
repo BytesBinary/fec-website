@@ -3,18 +3,11 @@
 @section('title','Reaserch & Innovation Center | FEC')
 
 @section('style')
-<style>
-    #home {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('{{asset('images/clubs/ric.jpg')}}');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-</style>
-@vite(['resources/css/ric-header.css'])
+@vite(['resources/css/club-header.css'])
 @endsection
 
+
+@section('content')
 <x-club.header logo="{{asset('static/logo.png')}}" name="RIC" />
 
 <section class="club-hero-section bg-light min-vh-100 text-white p-5 d-flex align-items-center" id="home">
@@ -251,6 +244,4 @@
         </div>
     </div>
 </section>
-
-
 @endsection

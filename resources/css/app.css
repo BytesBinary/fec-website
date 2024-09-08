@@ -103,6 +103,10 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+/* Top section styling */
+#header.scrolled {
+    top: 0; /* Move to the top when the top section is hidden */
+}
 #header {
     background-color: transparent;
     transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;

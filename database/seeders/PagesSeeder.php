@@ -125,6 +125,7 @@ class PagesSeeder extends Seeder
             'page_type' => 'parent',
             'page_content' => '',
             'page_sections' => '',
+            'page_status' => 'unpublish',
             'page_slug' => 'activities',
             'is_editable' => $is_editable,
         ]);
@@ -139,6 +140,7 @@ class PagesSeeder extends Seeder
                 'page_title' => $subpage,
                 'page_content' => '',
                 'page_sections' => '',
+                'page_status' => 'unpublish',
                 'page_slug' => strtolower(str_replace(' ', '-', $subpage)),
                 'page_parent' => $id,
                 'is_editable' => $is_editable,
@@ -180,7 +182,7 @@ class PagesSeeder extends Seeder
             'page_title' => 'Contact Us',
             'page_content' => '',
             'page_sections' => '',
-            'page_status' => 'publish',
+            'page_status' => 'unpublish',
             'page_slug' => 'contactus',
             'is_editable' => $is_editable,
         ]);
@@ -193,6 +195,7 @@ class PagesSeeder extends Seeder
             'page_type' => 'parent',
             'page_content' => '',
             'page_sections' => '',
+            'page_status' => 'unpublish',
             'page_slug' => 'login',
             'is_editable' => $is_editable
         ]);
@@ -201,13 +204,13 @@ class PagesSeeder extends Seeder
         $subpages = [
             'Students Login',
             'Teachers Login',
-            'Admin Login'
         ];
         foreach ($subpages as $subpage) {
             Pages::create([
                 'page_title' => $subpage,
                 'page_content' => '',
                 'page_sections' => '',
+                'page_status' => 'unpublish',
                 'page_slug' => strtolower(str_replace(' ', '-', $subpage)),
                 'page_parent' => $id,
                 'is_editable' => $is_editable,

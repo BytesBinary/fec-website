@@ -35,23 +35,28 @@ $(document).ready(function() {
     $('.count-up').each(function() {
         observer.observe(this);
     });
-
-    // Fixed navbar on scroll
+// Hide top-section on scroll and move header to the top
+    const $topSection = $('#top-section');
     const $header = $('#header');
+    let lastScrollTop = 0;
+
     const checkScroll = () => {
-        $header.toggleClass('scrolled', $(window).scrollTop() > 50);
+        const st = $(window).scrollTop();
+        if (st > lastScrollTop && st > 50) {
+            // Scroll down: hide top section and move header to the top
+            $topSection.addClass('scrolled');
+            $header.addClass('scrolled');
+        } else {
+            // Scroll up: show top section and reset header position
+            $topSection.removeClass('scrolled');
+            $header.removeClass('scrolled');
+        }
+        lastScrollTop = st;
     };
+
     $(window).on('scroll', checkScroll);
     checkScroll(); // Initial check
 
-    // Show password when click in the eye icon
-    $(document).ready(function() {
-        $('#togglePassword').on('click', function() {
-            const type = $('#password').attr('type') === 'password' ? 'text' : 'password';
-            $('#password').attr('type', type);
-            $('#eyeIcon').toggleClass('bi-eye bi-eye-slash');
-        });
-    });
 });
 
 

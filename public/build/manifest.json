@@ -16,8 +16,13 @@
     "src": "public/static/hero-img.jpg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-C10TSJT9.css",
+    "file": "assets/app-CyIx5Ieh.css",
     "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/club-header.css": {
+    "file": "assets/club-header-hHeWM9xX.css",
+    "src": "resources/css/club-header.css",
     "isEntry": true
   },
   "resources/css/home.css": {

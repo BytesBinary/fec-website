@@ -1,5 +1,52 @@
 @import "root.css";
 
+#top-section {
+    background-color: rgb(64, 74, 90);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.3s ease; /* Smooth transition when hiding */
+}
+
+#top-section a {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    background-color: rgb(59, 126, 49);
+}
+
+#top-section a:hover{
+    transform: scale(1.04);
+    background-color: rgb(67, 172, 54);
+}
+
+#top-section.scrolled {
+    top: -60px; /* Hide the top section off-screen */
+}
+
+#header {
+    position: fixed;
+    top: 60px; /* Initially, below the top section */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Keep it above the content but below the top section */
+}
+
 .header .logo h1, .navmenu a {
     color: var(--background-color);
 }
