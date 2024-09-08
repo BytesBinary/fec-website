@@ -8,7 +8,8 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/home.css',
                 'resources/js/app.js',
-                'resources/js/home.js'
+                'resources/js/home.js',
+                'resources/css/ric-header.css',
             ],
             refresh: true,
         }),
