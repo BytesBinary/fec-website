@@ -61,17 +61,6 @@
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Board Members</a>
     </div>
 
-    <button @click="currentDropdown = currentDropdown === 'message' ? null : 'message'" class="w-full text-left px-4 py-2 flex justify-between">
-        Message
-        <x-svg-icon.drop-down-icon />
-    </button>
-    <div x-show="currentDropdown === 'message'" class="bg-gray-700">
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Principal</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Dept Head Of CSE</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Dept Head Of EEE</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Dept Head Of CIVIL</a>
-    </div>
-
     <button @click="currentDropdown = currentDropdown === 'links' ? null : 'links'" class="w-full text-left px-4 py-2 flex justify-between">
         Links
         <x-svg-icon.drop-down-icon />

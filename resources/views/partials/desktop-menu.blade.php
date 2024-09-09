@@ -78,20 +78,6 @@
         </div>
     </div>
 
-    <!-- Message Dropdown -->
-    <div class="relative" @mouseover="currentDropdown = 'message'" @mouseleave="currentDropdown = null">
-        <button class="flex items-center hover:bg-gray-700 px-3 py-2 rounded">
-            Messages
-            <x-svg-icon.drop-down-icon />
-        </button>
-        <div x-show="currentDropdown === 'message'" class="absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg" x-transition>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Principal</a>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Dept Head Of CSE</a>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Dept Head Of EEE</a>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Message From Dept Head Of CIVIL</a>
-        </div>
-    </div>
-
     <!-- Links Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'links'" @mouseleave="currentDropdown = null">
         <button class="flex items-center hover:bg-gray-700 px-3 py-2 rounded">
