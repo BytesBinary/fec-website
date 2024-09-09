@@ -19,7 +19,7 @@
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Life</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Calendar</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Syllabus</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Notices</a>
+        <a href="{{route('notices')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Notices</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Departments</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Institutes</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Library</a>
