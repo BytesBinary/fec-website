@@ -13,6 +13,17 @@ class AcademicsController extends Controller
                     ->orderBy('created_at', 'asc')
                     ->paginate(30);
 
-        return view('notices', ['notices' => $notices]);
+        if( $notices ) {
+            $firstNoticeId = json_encode($notices->first()->id);
+            $firstNoticeTitle = json_encode($notices->first()->title);
+            $firstNoticePdf = $notices->first()->pdf;
+        }
+
+        return view('notices', [
+            'notices' => $notices,
+            'firstNoticeTitle' => $firstNoticeTitle ?? '',
+            'firstNoticeId' => $firstNoticeId ?? '',
+            'firstNoticePdf' => $firstNoticePdf ?? '',
+        ]);
     }
 }

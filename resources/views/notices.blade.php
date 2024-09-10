@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container mx-auto py-8"
-         x-data="noticeBoard({{ json_encode($notices->first()->title) }}, '{{ asset('storage/' . $notices->first()->pdf) }}')">
+         x-data="noticeBoard({{ $firstNoticeId }}, '{{ $firstNoticeTitle }}', '{{ asset('storage/' . $firstNoticePdf) }}')">
         <x-breadcrumb :links="[
             ['label' => 'Home', 'url' => '/', 'icon' => 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z', 'active' => false],
             ['label' => 'Notices', 'icon' => 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z']
@@ -20,9 +20,10 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
             <div class="col-span-1 cursor-pointer">
                 <ul class="space-y-4">
-                    <template x-for="(notice, index) in filteredNotices" :key="index">
-                        <li class="bg-white p-4 rounded-lg shadow hover:bg-gray-200"
-                            @click="changeNotice(notice.title, notice.pdf)">
+                    <template x-for="(notice, index) in filteredNotices" :key="notice.id">
+                        <li :class="currentId === notice.id ? 'bg-gray-200' : 'bg-white'"
+                            class="p-4 rounded-lg shadow hover:bg-gray-300"
+                            @click="changeNotice(notice.id, notice.title, notice.pdf)">
                             <a href="#" class="text-md font-semibold" x-text="notice.title"></a>
                             <p class="text-sm text-gray-600" x-text="formatDate(notice.publish_date)"></p>
                         </li>
@@ -45,14 +46,16 @@
     </div>
 
     <script>
-        function noticeBoard(defaultTitle, defaultPdf) {
+        function noticeBoard(defaultId, defaultTitle, defaultPdf) {
             return {
+                currentId: defaultId,
                 currentTitle: defaultTitle,
                 currentPdf: defaultPdf,
                 searchQuery: '',
                 filteredNotices: @json($notices->items()),
 
-                changeNotice(title, pdfUrl) {
+                changeNotice(id, title, pdfUrl) {
+                    this.currentId = id;
                     this.currentTitle = title;
                     this.currentPdf = pdfUrl;
                 },
