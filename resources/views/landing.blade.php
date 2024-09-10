@@ -4,4 +4,5 @@
 
 @section('content')
     @include('partials.landing.hero')
+    @include('partials.landing.key-features')
 @endsection
