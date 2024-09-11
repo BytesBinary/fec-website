@@ -7,10 +7,8 @@
         <x-svg-icon.drop-down-icon />
     </button>
     <div x-show="currentDropdown === 'academics'" class="bg-gray-700">
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Life</a>
         <a href="{{route('notices')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Notices</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Departments</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Institutes</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Library</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Student Statistics</a>
     </div>
@@ -21,7 +19,6 @@
     </button>
     <div x-show="currentDropdown === 'research'" class="bg-gray-700">
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Publications</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Research Group</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Researches</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Events</a>
     </div>
@@ -32,7 +29,6 @@
     </button>
     <div x-show="currentDropdown === 'campus_life'" class="bg-gray-700">
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Discover FEC</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Culture and Diversity</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Residence and Cafeteria</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Clubs</a>
     </div>
