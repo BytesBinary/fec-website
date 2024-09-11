@@ -13,7 +13,7 @@
             <h1 class="text-2xl font-bold mb-2">Notice Board</h1>
             <!-- Search Bar -->
             <div class="mb-4">
-                <input type="text" placeholder="Search by title..." class="w-full p-2 border rounded"
+                <input type="text" placeholder="Search by title..." class="w-full p-2 bg-white border rounded"
                        x-model="searchQuery"
                        @input="filterNotices" />
             </div>
@@ -46,9 +46,6 @@
             </div>
         </div>
     @endif
-@endsection
-
-@push('script')
     <script>
         function noticeBoard(defaultId, defaultTitle, defaultPdf) {
             return {
@@ -78,4 +75,4 @@
             }
         }
     </script>
-@endpush
+@endsection

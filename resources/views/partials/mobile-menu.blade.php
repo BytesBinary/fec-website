@@ -1,15 +1,6 @@
 <!-- Mobile Menu -->
 <div x-show="open" class="md:hidden bg-gray-800 text-white" @click.away="open = false">
     <a href="/" class="block px-4 py-2">Home</a>
-    <button @click="currentDropdown = currentDropdown === 'admission' ? null : 'admission'" class="w-full text-left px-4 py-2 flex justify-between">
-        Admission
-        <x-svg-icon.drop-down-icon />
-    </button>
-    <div x-show="currentDropdown === 'admission'" class="bg-gray-700">
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Student Fees</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Admission Roadmap</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Campus Life</a>
-    </div>
 
     <button @click="currentDropdown = currentDropdown === 'academics' ? null : 'academics'" class="w-full text-left px-4 py-2 flex justify-between">
         Academics
@@ -17,8 +8,6 @@
     </button>
     <div x-show="currentDropdown === 'academics'" class="bg-gray-700">
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Life</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Academic Calendar</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Syllabus</a>
         <a href="{{route('notices')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Notices</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Departments</a>
         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Institutes</a>
