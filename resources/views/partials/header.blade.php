@@ -1,7 +1,7 @@
 <div x-data="{ isMobile: window.innerWidth < 768 }" x-init="window.addEventListener('resize', () => isMobile = window.innerWidth < 768)" class="bg-gray-600 text-white p-4 hidden md:flex items-center justify-between">
     <!-- Left Side: University Logo -->
     <div class="flex items-center">
-        <img src="{{asset('images/logo.png')}}" alt="University Logo" class="h-32">
+        <img src="{{asset('images/logo.png')}}" alt="University Logo" class="h-24">
     </div>
     <!-- Middle: University Details -->
     <div class="text-center">
@@ -11,6 +11,6 @@
     </div>
     <!-- Right Side: Another Image -->
     <div class="flex items-center">
-        <img src="{{asset('images/logo.png')}}" alt="University Logo" class="h-32">
+        <img src="{{asset('images/logo.png')}}" alt="University Logo" class="h-24">
     </div>
 </div>
