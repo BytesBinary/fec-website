@@ -11,7 +11,7 @@
         </button>
         <div x-show="currentDropdown === 'academics'" class="absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg" x-transition>
             <a href="{{route('notices')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Notices</a>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Departments</a>
+            <a href="{{route('departments')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Departments</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Library</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Student Statistics</a>
         </div>

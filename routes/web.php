@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/notices', [AcademicsController::class , 'notices'])->name('notices');
+Route::get('/departments', [AcademicsController::class , 'departments'])->name('departments');
