@@ -4,7 +4,7 @@
 
 @section('content')
     @if( !$notices->isEmpty() )
-        <div class="container mx-auto py-8"
+        <div class="container mx-auto p-5 my-3 shadow-lg shadow-gray-500 bg-gray-100 rounded"
              x-data="noticeBoard({{ json_encode($notices->first()->id) }}, '{{ json_encode($notices->first()->title) }}', '{{ asset('storage/' . $notices->first()->pdf ) }}')">
             <x-breadcrumb :links="[
             ['label' => 'Home', 'url' => '/', 'icon' => 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z', 'active' => false],

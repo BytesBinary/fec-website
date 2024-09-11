@@ -37,7 +37,7 @@
             <x-svg-icon.drop-down-icon />
         </button>
         <div x-show="currentDropdown === 'campus_life'" class="absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg" x-transition>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Discover FEC</a>
+            <a href="{{route('discover-fec')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Discover FEC</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Residence and Cafeteria</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Clubs</a>
         </div>
@@ -79,7 +79,7 @@
 </div>
 
 <!-- Mobile Menu Toggle -->
-<button class="md:hidden text-white focus:outline-none" @click="open = !open">
+<button class="md:hidden text-white focus:outline-none p-5" @click="open = !open">
     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
     </svg>

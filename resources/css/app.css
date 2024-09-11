@@ -6,3 +6,10 @@
 body {
     font-family: 'Inter', sans-serif !important;
 }
+
+.off-canvas-enter-active, .off-canvas-leave-active {
+    transition: transform 0.3s ease-in-out;
+}
+.off-canvas-enter, .off-canvas-leave-to {
+    transform: translateX(-100%);
+}

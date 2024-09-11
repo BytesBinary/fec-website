@@ -19,8 +19,8 @@
                 {{$description}}
             </p>
             <div class="card-actions justify-end">
-                <button @click="window.location.href='{{$url}}'" type="button" class="btn w-full mt-3 bg-gray-400 text-gray-900 hover:text-white glass">
-                    Start Your Journey
+                <button onclick="window.location.href='{{$url}}'" type="button" class="btn w-full mt-3 bg-gray-400 text-gray-900 hover:text-white glass text-lg">
+                    Explore <x-svg-icon.external-url />
                 </button>
             </div>
         </div>

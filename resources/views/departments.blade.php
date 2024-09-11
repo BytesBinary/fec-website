@@ -3,7 +3,7 @@
 @section('title', 'Departments')
 
 @section('content')
-    <div class="container mx-auto my-5">
+    <div class="container mx-auto my-5 p-5 bg-white shadow-lg shadow-gray-500 bg-gray-100 rounded">
         <h1 class="text-5xl font-bold text-center pt-10">Departments</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 mb-16 border-0 rounded md:my-10 dark:bg-gray-700">
         <div class="grid justify-center align-center gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

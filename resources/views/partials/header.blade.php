@@ -1,4 +1,4 @@
-<div x-data="{ isMobile: window.innerWidth < 768 }" x-init="window.addEventListener('resize', () => isMobile = window.innerWidth < 768)" class="bg-gray-600 text-white p-4 hidden md:flex items-center justify-between">
+<div x-data="{ isMobile: window.innerWidth < 768 }" x-init="window.addEventListener('resize', () => isMobile = window.innerWidth < 768)" class="bg-gray-900 text-white p-4 hidden md:flex items-center justify-between">
     <!-- Left Side: University Logo -->
     <div class="flex items-center">
         <img src="{{asset('images/logo.png')}}" alt="University Logo" class="h-24">
