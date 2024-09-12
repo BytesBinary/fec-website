@@ -1,10 +1,45 @@
-<div class="col-lg-3 col-md-6 col-sm-12 text-center">
-    <div class="icon-container" data-aos="{{ $animation }}">
-        <div class="rounded-circle bg-white p-3 proper-circle d-flex align-items-center justify-content-center">
-            <i class="{{ $iconClass }}"></i>
-        </div>
-        <div class="icon-text mt-3 text-white">
-            <p>{!! $text !!}</p>
-        </div>
+@props([
+    'url' => 'images/bytebinary.png',
+    'number' => '200',
+    'Name' => 'Students',
+])
+
+<div x-data="countUp()" class="p-4 rounded-lg" data-aos="fade-right">
+    <!-- Image container with transparent background -->
+    <div class="rounded-full w-36 h-36 flex items-center justify-center overflow-hidden shadow-lg shadow-gray-500 mb-4 bg-zinc-50/60 mx-auto">
+        <img class="w-full h-full object-cover" src="{{ asset($url) }}" alt="{{ $Name }}" />
+    </div>
+    <!-- Text container -->
+    <div class="text-center text-gray-800">
+        <!-- Count-up animation -->
+        <p x-ref="count" class="font-bold text-3xl text-white">{!! $number !!}</p>
+        <p class="text-lg text-white">{{ $Name }}</p>
     </div>
 </div>
+
+<script>
+    function countUp() {
+        return {
+            init() {
+                let countElement = this.$refs.count;
+                let endValue = parseInt(countElement.textContent.replace(/[^0-9]/g, ''));
+                let duration = 2000; // Duration in milliseconds
+                let startTime = null;
+
+                function animateCount(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    let progress = timestamp - startTime;
+                    let currentCount = Math.min(Math.floor((progress / duration) * endValue), endValue);
+                    countElement.textContent = currentCount.toLocaleString(); // Add commas for thousands
+                    if (progress < duration) {
+                        requestAnimationFrame(animateCount);
+                    } else {
+                        countElement.textContent = endValue.toLocaleString();
+                    }
+                }
+
+                requestAnimationFrame(animateCount);
+            }
+        }
+    }
+</script>

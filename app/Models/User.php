@@ -44,9 +44,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
-    public function metas()
-    {
-        return $this->hasMany(UserMeta::class, 'user_id');
-    }
 }
