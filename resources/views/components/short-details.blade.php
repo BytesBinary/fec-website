@@ -1,19 +1,19 @@
 @props([
-'url' => 'images/bytebinary.png',
-'number' => '200',
-'Name' => 'Students',
+    'url' => 'images/bytebinary.png',
+    'number' => '200',
+    'Name' => 'Students',
 ])
 
-<div x-data="countUp()" class="container mx-auto flex flex-col items-center justify-center">
+<div x-data="countUp()" class="p-4 rounded-lg">
     <!-- Image container with transparent background -->
-    <div class="rounded-full w-36 h-36 flex items-center justify-center overflow-hidden shadow-lg shadow-gray-500 mb-4 bg-zinc-50/60">
-        <img class="w-full h-full object-cover" src="{{ asset($url) }}" alt="FEC" />
+    <div class="rounded-full w-36 h-36 flex items-center justify-center overflow-hidden shadow-lg shadow-gray-500 mb-4 bg-zinc-50/60 mx-auto">
+        <img class="w-full h-full object-cover" src="{{ asset($url) }}" alt="{{ $Name }}" />
     </div>
     <!-- Text container -->
-    <div class="text-center text-white">
+    <div class="text-center text-gray-800">
         <!-- Count-up animation -->
-        <p x-ref="count" class="font-bold text-3xl">{!! $number !!}</p>
-        <p>{{$Name}}</p>
+        <p x-ref="count" class="font-bold text-3xl text-white">{!! $number !!}</p>
+        <p class="text-lg text-white">{{ $Name }}</p>
     </div>
 </div>
 
@@ -42,5 +42,4 @@
             }
         }
     }
-
 </script>
