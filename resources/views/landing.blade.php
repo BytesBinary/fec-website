@@ -7,4 +7,5 @@
     @include('partials.landing.administration')
     @include('partials.landing.key-features')
     @include('partials.landing.alumni')
+    @include('partials.landing.short-details')
 @endsection
