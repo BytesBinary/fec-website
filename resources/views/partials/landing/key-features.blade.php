@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto p-6">
+<div class="container mx-auto p-6 shadow-2xl shadow-gray-100">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Future Students Card -->
       <div class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-8 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
