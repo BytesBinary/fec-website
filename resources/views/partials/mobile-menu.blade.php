@@ -46,7 +46,7 @@
             <div x-show="currentDropdown === 'campus_life'" class="bg-gray-700">
                 <a href="{{route('discover-fec')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Discover FEC</a>
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Residence and Cafeteria</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Clubs</a>
+                <a href="{{ route('clubs') }}" class="block px-4 py-2 text-sm hover:bg-gray-600">Clubs</a>
             </div>
 
             <button @click="currentDropdown = currentDropdown === 'administration' ? null : 'administration'"

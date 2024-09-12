@@ -39,7 +39,7 @@
         <div x-show="currentDropdown === 'campus_life'" class="absolute left-0 mt-2 w-48 bg-gray-700 rounded shadow-lg" x-transition>
             <a href="{{route('discover-fec')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Discover FEC</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Residence and Cafeteria</a>
-            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Clubs</a>
+            <a href="{{ route('clubs') }}" class="block px-4 py-2 text-sm hover:bg-gray-600">Clubs</a>
         </div>
     </div>
 

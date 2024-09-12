@@ -10,4 +10,8 @@ class CampusLifeController extends Controller
     {
         return view('discover-fec');
     }
+    public function clubs()
+    {
+        return view('clubs');
+    }
 }
