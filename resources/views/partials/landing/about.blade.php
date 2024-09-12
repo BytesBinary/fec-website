@@ -1,26 +1,36 @@
-<div class="container mx-auto bg-white p-5 my-10 rounded-lg shadow-inner">
-    <p class="text-center mt-10 mb-8 text-5xl font-bold text-gray-950">About Us</p>
+<!-- Ensure you have Heroicons in your project. Install via npm if needed -->
+<!-- npm install @heroicons/react -->
+
+<div class="landing-about container mx-auto bg-white pt-5 px-5 pb-10 my-10 rounded-lg shadow-inner">
+    <p class="text-center mt-10 mb-8 text-5xl font-bold text-gray-950" data-aos="fade-up">About Us</p>
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
-    <div class="flex flex-wrap -mx-4">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <!-- Text Section -->
-        <div class="w-full sm:w-1/2 px-4 mb-8" data-aos="fade-up-right">
-            <p class="text-base text-gray-800">
-                Here will go about us
+        <div class="w-full p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer" data-aos="fade-right">
+            <p class="text-lg text-gray-800">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maiores quidem dignissimos consectetur. In molestias adipisci, eaque corrupti exercitationem cupiditate obcaecati. Asperiores ipsum facilis eos. Nemo asperiores eligendi perspiciatis numquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reiciendis eveniet nesciunt voluptas, nobis non perferendis cupiditate consectetur voluptates odit eos quia facilis officiis eius molestias quis corrupti repudiandae! Tempora.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quod, animi laboriosam quasi odit quibusdam fugit minima nesciunt nostrum, rem maxime neque repellat omnis eius. Repellendus hic esse facilis ullam!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </p>
             <a href="" class="block mt-4">
                 <div class="flex justify-center">
-                    <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" type="button">
-                        Read More <span><i class="bi bi-box-arrow-in-right"></i></span>
+                    <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer" type="button">
+                        <span class="text-base">Read More</span>
+                        <x-svg-icon.external-url class="w-5 h-5" />
                     </button>
                 </div>
-            </a>
+            </a>                    
         </div>
         
-        <!-- Image Section -->
-        <div class="w-full sm:w-1/2 px-4 relative h-64 sm:h-auto">
-            <div class="absolute inset-0 flex justify-center items-center bg-yellow-500 rounded-full p-4">
-                <a href="#" class="flex items-center justify-center bg-yellow-400 text-white p-4 rounded-full hover:bg-yellow-300 transition-all">
-                    <i class="bi bi-caret-right-fill text-2xl"></i>
+        <!-- Image Section with Background Image and Overlay -->
+        <div class="relative w-full h-96 bg-cover bg-center p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer" style="background-image: url('{{ asset('images/gallery/3.jpg') }}');" data-aos="fade-left">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
+                <!-- Play Button with Animation -->
+                <a href="https://www.youtube.com/watch?v=_H9B4iynTY0" class="glightbox pulse p-4 bg-yellow-400 text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 active:scale-90 active:shadow-inner">
+                    <!-- Heroicon Play Icon -->
+                    <x-svg-icon.play-button class="size-10" />                                       
                 </a>
             </div>
         </div>

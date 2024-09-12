@@ -3,6 +3,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "glightbox/dist/css/glightbox.min.css";
+@import 'aos/dist/aos.css';
 
 body {
     font-family: 'Inter', sans-serif !important;
@@ -13,4 +14,30 @@ body {
 }
 .off-canvas-enter, .off-canvas-leave-to {
     transform: translateX(-100%);
+}
+
+.landing-about .pulse {
+    animation: animate 3s linear infinite
+}
+
+.landing-about .pulse svg {
+    font-size: 28px;
+}
+
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    40% {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    80% {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
 }

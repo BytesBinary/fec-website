@@ -26,7 +26,7 @@
     </a>
 
     <!-- Top Instructors Card -->
-    <a href="{{ asset('images/gallery/7.jpg') }}" class="glightbox" data-glightbox="instructors-gallery" data-title="Top Instructors">
+    <a href="{{ asset('images/gallery/4.jpg') }}" class="glightbox" data-glightbox="top-instructor" data-title="Top Instructor">
       <div class="bg-gradient-to-r from-teal-400 to-cyan-500 text-white p-8 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-zoom-in">
         <div class="mb-4">
           <x-svg-icon.academic-cap />
@@ -37,7 +37,7 @@
     </a>
 
     <!-- Great Fellowship Card -->
-    <a href="{{ asset('images/gallery/4.jpg') }}" class="glightbox" data-glightbox="fellowship-gallery" data-title="Great Fellowship">
+    <a href="{{ asset('images/gallery/4.jpg') }}" class="glightbox" data-glightbox="<h1>fellowship-gallery</h1>" data-title="Great Fellowship">
       <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white p-8 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-zoom-in">
         <div class="mb-4">
           <x-svg-icon.academic-cap />
