@@ -55,11 +55,11 @@
                 <x-svg-icon.drop-down-icon />
             </button>
             <div x-show="currentDropdown === 'administration'" class="bg-gray-700">
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Principal</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of CSE</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of EEE</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of CE</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of Non-Tech</a>
+                <a href="{{route('principal')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Principal</a>
+                <a href="{{route('dept-cse')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of CSE</a>
+                <a href="{{route('dept-eee')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of EEE</a>
+                <a href="{{route('dept-ce')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of CE</a>
+                <a href="{{route('dept-non-tech')}}" class="block px-4 py-2 text-sm hover:bg-gray-600">Department Head Of Non-Tech</a>
                 <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-600">Board Members</a>
             </div>
 
