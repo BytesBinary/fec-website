@@ -4,7 +4,7 @@
     'Name' => 'Students',
 ])
 
-<div x-data="countUp()" class="p-4 rounded-lg" data-aos="fade-right">
+<div x-data="countUp()" class="p-4 rounded-lg" data-aos="fade-up">
     <!-- Image container with transparent background -->
     <div class="rounded-full w-36 h-36 flex items-center justify-center overflow-hidden shadow-lg shadow-gray-500 mb-4 bg-zinc-50/60 mx-auto">
         <img class="w-full h-full object-cover" src="{{ asset($url) }}" alt="{{ $Name }}" />

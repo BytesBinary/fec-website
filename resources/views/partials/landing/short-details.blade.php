@@ -4,7 +4,7 @@
     <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
     <!-- Heading Section -->
     <div class="relative z-10 text-center py-8">
-        <h2 class="text-4xl font-bold text-white mb-4" data-aos="fade-down">Short Details of FEC</h2>
+        <h2 class="text-3xl md:text-4xlfont-bold text-white mb-4" data-aos="fade-up">Short Details of FEC</h2>
         <div class="border-t-4 border-yellow-500 w-28 mx-auto mb-8 mt-5"></div>
     </div>
     <!-- Content -->
