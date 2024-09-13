@@ -2,8 +2,10 @@
     <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" data-aos="fade-up">Administration</p>
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
     <div class="grid gap-5 grid-cols-1 mt-5 lg:grid-cols-4">
-        <x-administration-card name="Prof. Dr. Engr. Md. Mizanur Rahman" designation="Principal" image="images/administration/mia-bhai.jpg" url="{{route('principal')}}" animation="fade-up" />       
-        <div class="lg:col-span-3 card w-full shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer" data-aos="fade-up">
+        <div class="grid-cols-2 lg:grid-cols-1">
+            <x-administration-card name="Prof. Dr. Engr. Md. Mizanur Rahman" designation="Principal" image="images/administration/mia-bhai.jpg" url="{{route('principal')}}" animation="fade-up" />       
+        </div>
+        <div class="lg:grid-cols-3 lg:col-span-3 card w-full shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer" data-aos="fade-up">
             <div class="card-body">
                 <h1 class="text-2xl">Message From Principal</h1>
                 <p class="mt-3 md:text-lg text-gray-950 text-justify">
