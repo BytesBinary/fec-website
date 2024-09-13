@@ -1,5 +1,5 @@
 <div class="container mx-auto p-5 my-10 bg-white shadow-inner py-16 rounded-lg">
-  <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Our Facilities</p>
+  <p class="text-center mt-10 mb-8 text-2xl md:text-3xl font-bold text-gray-950">Our Facilities</p>
   <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
   <div class="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
