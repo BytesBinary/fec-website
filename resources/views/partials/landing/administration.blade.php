@@ -16,9 +16,9 @@
                 <p class="mt-3 md:text-lg text-gray-950 text-justify">
                     The academic and intellectual discovery college is standing with three engineering disciplines civil engineering, Electrical and Electronics Engineering and Computer Science & Engineering where labs are well decorated with cutting age technologies ....
                     <a href="{{route('principal')}}">
-                        <button id="toggle-btn" class=" text-blue-500 focus:outline-none">
+                        {{-- <button id="toggle-btn" class=" text-blue-500 focus:outline-none">
                             Read More
-                        </button>
+                        </button> --}}
                     </a>
                 </p>
             </div>
