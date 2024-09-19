@@ -1,5 +1,5 @@
 <!-- Image and Stats Section -->
-<div class="relative bg-fixed bg-cover bg-center py-16" style="background-image: url('{{ asset('images/gallery/5.jpg') }}');">
+<div class="relative bg-fixed bg-cover bg-center py-16 " style="background-image: url('{{ asset('images/gallery/5.jpg') }}');">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
     <!-- Heading Section -->
