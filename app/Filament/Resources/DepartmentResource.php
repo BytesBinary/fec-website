@@ -70,7 +70,9 @@ class DepartmentResource extends Resource
                     ->label('Permanently Delete')
                     ->icon('heroicon-o-trash')
                     ->color('danger')
-                    ->action(fn ($record) => $record->forceDelete())
+                    ->action(function($record){
+                        $record->forceDelete();
+                    })
                     ->visible(fn ($record) => $record->trashed())
                     ->requiresConfirmation()
             ])
