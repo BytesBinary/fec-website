@@ -1,7 +1,16 @@
+<<<<<<< Updated upstream
 <div class="container mx-auto p-5 my-10 bg-white shadow-inner py-16 rounded-lg">
   <p class="text-center mt-10 mb-8 text-2xl md:text-3xl font-bold text-gray-950">Our Facilities</p>
   <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
   <div class="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-4 gap-6">
+=======
+<div class="relative mx-auto p-5 my-10 py-16 bg-fixed bg-cover bg-center" style="background-image: url('{{ asset('images/gallery/4.jpg') }}');">
+  {{-- <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Our Facilities</p>
+  <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700"> --}}
+  <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+>>>>>>> Stashed changes
 
     <!-- Organized Campus Card -->
     <a href="{{ asset('images/gallery/1.jpg') }}" class="glightbox" data-glightbox="campus-gallery" data-title="Organized Campus">
@@ -13,7 +22,7 @@
         <p class="text-lg"></p>
       </div>
     </a>
-    
+
     <!-- Best Lab Facilities Card -->
     <a href="{{ asset('images/gallery/4.jpg') }}" class="glightbox" data-glightbox="lab-gallery" data-title="Best Lab Facilities">
       <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-8 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-zoom-in">
