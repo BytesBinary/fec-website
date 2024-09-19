@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
-<div class="container mx-auto bg-white p-5 my-10 rounded-lg shadow-inner">
-    <p class="text-center mt-10 mb-8 text-2xl md:text-3xl font-bold text-gray-950" data-aos="fade-up">Administration</p>
-=======
 <div class="container mx-auto p-5 my-10">
     <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" data-aos="fade-up">Administration</p>
->>>>>>> Stashed changes
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
     <div class="grid gap-5 grid-cols-1 mt-5 lg:grid-cols-4">
         <div class="grid-cols-2 lg:grid-cols-1">
