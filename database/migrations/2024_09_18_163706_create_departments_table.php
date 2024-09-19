@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('academics_resources', function (Blueprint $table) {
+        Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->string("publish_date");
-            $table->enum("type", ["notice", "syllabus", "calendar"]);
-            $table->string("pdf");
+            $table->string('title');
+            $table->string('short_title')->unique();
+            $table->string('slug')->unique();
+            $table->longText('description')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('academics_resources');
+        Schema::dropIfExists('departments');
     }
 };
