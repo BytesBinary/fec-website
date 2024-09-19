@@ -9,8 +9,13 @@ export default {
   theme: {
     extend: {
         fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            sans: ['Poppins', 'sans-serif'],
         },
+        colors: {
+            bgColor: "#abef5f",
+            txtColor: "#212121",
+            borderColor: "#a1a1a1",
+          },
     },
   },
   plugins: [
