@@ -1,15 +1,6 @@
-<!-- Ensure you have Heroicons in your project. Install via npm if needed -->
-<!-- npm install @heroicons/react -->
-
-<<<<<<< Updated upstream
-<div class="landing-about container mx-auto bg-white pt-5 px-5 pb-10 my-10 rounded-lg shadow-inner">
-    <p class="text-center mt-10 mb-8 text-3xl md:text-3xl font-bold text-gray-950" data-aos="fade-up">About Us</p>
-    <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 mb-5 rounded dark:bg-gray-700">
-=======
 <div class="landing-about container mx-auto pt-5 px-5 pb-10 my-10">
     <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" data-aos="fade-up">About Us</p>
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
->>>>>>> Stashed changes
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <!-- Text Section -->
         <div class="w-full p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer rounded-lg" data-aos="fade-up">

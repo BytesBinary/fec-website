@@ -9,7 +9,7 @@
     @vite('resources/js/app.js')
     @stack('styles')
 </head>
-<body class="text-gray-900">
+<body>
 <header>
     @include('partials.header')
     @include('partials.navbar')
