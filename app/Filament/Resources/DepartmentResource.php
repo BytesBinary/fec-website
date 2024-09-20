@@ -66,17 +66,14 @@ class DepartmentResource extends Resource
                     ->visible(fn ($record) => ! $record->trashed()),
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\RestoreAction::make(),
-                Tables\Actions\Action::make('forceDelete')
-                    ->label('Permanently Delete')
-                    ->icon('heroicon-o-trash')
-                    ->color('danger')
-                    ->action(fn ($record) => $record->forceDelete())
-                    ->visible(fn ($record) => $record->trashed())
-                    ->requiresConfirmation()
+                Tables\Actions\ForceDeleteAction::make()
+                ->label('Permanently Delete'),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\ForceDeleteBulkAction::make()
+                        ->label('Permanently delete'),
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ]);

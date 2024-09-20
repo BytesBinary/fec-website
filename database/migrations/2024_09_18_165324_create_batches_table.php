@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('batches', function (Blueprint $table) {
             $table->id();
-            $table->integer('batch_number');
-            $table->string('batch_name');
-            $table->string('session');
+            $table->integer('number')->unique();
+            $table->string('name')->nullable()->unique();
+            $table->string('session')->unique();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
