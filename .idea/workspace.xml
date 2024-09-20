@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cf1a20-476a-4d9a-822a-b251a4929ff2" name="Changes" comment="" />
+    <list default="true" id="66cf1a20-476a-4d9a-822a-b251a4929ff2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/BatchResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/BatchResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/DepartmentResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/DepartmentResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_09_18_165431_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_09_18_165431_create_courses_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +176,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.laravel-idea.update-module-directories&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;upcoming&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;admin-panel&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/ajdmjakiurrahman/Documents/Github/fec/public/static&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -260,6 +266,7 @@
       <workItem from="1725778964461" duration="5866000" />
       <workItem from="1725796923541" duration="298000" />
       <workItem from="1726756278489" duration="347000" />
+      <workItem from="1726826451892" duration="387000" />
     </task>
     <servers />
   </component>

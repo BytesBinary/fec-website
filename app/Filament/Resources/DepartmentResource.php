@@ -39,7 +39,8 @@ class DepartmentResource extends Resource
                     }),
                 TextInput::make('slug')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->unique(table:'departments', column: 'slug'),
                 TextInput::make('short_title')
                     ->required()
                     ->maxLength(255),
@@ -54,9 +55,18 @@ class DepartmentResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('title'),
-                TextColumn::make('short_title'),
-                TextColumn::make('slug'),
+                TextColumn::make('title')
+                    ->label('Title')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('short_title')
+                    ->label('Short Title')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('slug')
+                    ->label('Slug')
+                    ->searchable()
+                    ->sortable(),
             ])
             ->filters([
                 //
@@ -67,7 +77,7 @@ class DepartmentResource extends Resource
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\RestoreAction::make(),
                 Tables\Actions\ForceDeleteAction::make()
-                ->label('Permanently Delete'),
+                    ->label('Permanently Delete'),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

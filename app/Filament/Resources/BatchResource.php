@@ -31,23 +31,23 @@ class BatchResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')
-                ->maxLength(255)
-                ->placeholder('Batch name (Optional)')
-                ->unique(table: 'batches', column: 'name')
-                ->label('Batch name')
-                ->helperText('Batch name is not required'),
+                    ->maxLength(255)
+                    ->placeholder('Batch name (Optional)')
+                    ->unique(table: 'batches', column: 'name')
+                    ->label('Batch name')
+                    ->helperText('Batch name is not required'),
                 TextInput::make('number')
-                ->required()
-                ->numeric()
-                ->placeholder('10')
-                ->unique(table: 'batches', column: 'number')
-                ->label('Batch number'),
+                    ->required()
+                    ->numeric()
+                    ->placeholder('10')
+                    ->unique(table: 'batches', column: 'number')
+                    ->label('Batch number'),
                 TextInput::make('session')
-                ->required()
-                ->maxLength(255)
-                ->placeholder('Session')
-                ->unique(table: 'batches', column: 'session')
-                ->label('Batch session'),
+                    ->required()
+                    ->maxLength(255)
+                    ->placeholder('Session')
+                    ->unique(table: 'batches', column: 'session')
+                    ->label('Batch session'),
             ]);
     }
 
@@ -56,28 +56,34 @@ class BatchResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')
-                ->label('Batch name'),
+                    ->label('Batch name')
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('number')
-                ->label('Batch number'),
+                    ->label('Batch number')
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('session')
-                ->label('Batch session'),
+                    ->label('Batch session')
+                    ->searchable()
+                    ->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
-                ->visible(fn (Batch $record) => ! $record->trashed()),
+                    ->visible(fn (Batch $record) => ! $record->trashed()),
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\RestoreAction::make(),
                 Tables\Actions\ForceDeleteAction::make()
-                ->label('Permanently delete'),
+                    ->label('Permanently delete'),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                     Tables\Actions\ForceDeleteBulkAction::make()
-                    ->label('Permanently delete'),
+                        ->label('Permanently delete'),
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ]);
