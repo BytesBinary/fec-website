@@ -5,7 +5,7 @@
 
     <!-- Academics Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'academics'" @mouseleave="currentDropdown = null">
-        <button :class="{'bg-white': currentDropdown === 'academics', 'hover:bg-white': currentDropdown !== 'academics'}" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-3 py-2 rounded">
+        <button :class="{'bg-white': currentDropdown === 'academics', 'hover:bg-white': currentDropdown !== 'academics'}" class="flex items-center  px-3 py-2 rounded">
             Academics
             <x-svg-icon.drop-down-icon />
         </button>
@@ -19,7 +19,7 @@
 
     <!-- Research Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'research'" @mouseleave="currentDropdown = null">
-        <button :class="{'bg-white': currentDropdown === 'research', 'hover:bg-white': currentDropdown !== 'research'}" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-3 py-2 rounded">
+        <button :class="{'bg-white': currentDropdown === 'research', 'hover:bg-white': currentDropdown !== 'research'}" class="flex items-center  px-3 py-2 rounded">
             Activities
             <x-svg-icon.drop-down-icon />
         </button>
@@ -32,7 +32,7 @@
 
     <!-- Campus Life Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'campus_life'" @mouseleave="currentDropdown = null">
-        <button :class="{'bg-white': currentDropdown === 'campus_life', 'hover:bg-white': currentDropdown !== 'campus_life'}" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-3 py-2 rounded">
+        <button :class="{'bg-white': currentDropdown === 'campus_life', 'hover:bg-white': currentDropdown !== 'campus_life'}" class="flex items-center  px-3 py-2 rounded">
             Campus Life
             <x-svg-icon.drop-down-icon />
         </button>
@@ -45,7 +45,7 @@
 
     <!-- Administration Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'administration'" @mouseleave="currentDropdown = null">
-        <button :class="{'bg-white': currentDropdown === 'administration', 'hover:bg-white': currentDropdown !== 'administration'}" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-3 py-2 rounded">
+        <button :class="{'bg-white': currentDropdown === 'administration', 'hover:bg-white': currentDropdown !== 'administration'}" class="flex items-center  px-3 py-2 rounded">
             Administration
             <x-svg-icon.drop-down-icon />
         </button>
@@ -60,7 +60,7 @@
 
     <!-- Links Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'links'" @mouseleave="currentDropdown = null">
-        <button :class="{'bg-white': currentDropdown === 'links', 'hover:bg-white': currentDropdown !== 'links'}" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-3 py-2 rounded">
+        <button :class="{'bg-white': currentDropdown === 'links', 'hover:bg-white': currentDropdown !== 'links'}" class="flex items-center  px-3 py-2 rounded">
             Links
             <x-svg-icon.drop-down-icon />
         </button>

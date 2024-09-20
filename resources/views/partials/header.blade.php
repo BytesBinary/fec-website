@@ -1,7 +1,4 @@
-<div x-data="{ isMobile: window.innerWidth < 768 }" x-init="window.addEventListener('resize', () => isMobile = window.innerWidth < 768)" class="bg-gray-900 text-white p-4 hidden md:flex items-center justify-between relative overflow-hidden">
-    <!-- Shiny Effect -->
-    <span class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-zinc-400  to-transparent opacity-40 transform scale-x-[2.5rem] scale-y-[1.5rem] rotate-45 transition duration-1000 ease-in-out"></span>
-
+<div x-data="{ isMobile: window.innerWidth < 768 }" x-init="window.addEventListener('resize', () => isMobile = window.innerWidth < 768)" class="bg-gradient-to-b from-gray-600 via-slate-600 to-gray-800 text-white p-4 hidden md:flex items-center justify-between relative overflow-hidden">
     <!-- Left: University Logo -->
     <div class="flex items-center">
         <img src="{{asset('images/logo.png')}}" alt="University Logo" class="h-24">
