@@ -40,7 +40,7 @@ class DepartmentResource extends Resource
                 TextInput::make('slug')
                     ->required()
                     ->maxLength(255)
-                    ->unique(table:'departments', column: 'slug'),
+                    ->unique(table:'departments', column: 'slug', ignoreRecord: true),
                 TextInput::make('short_title')
                     ->required()
                     ->maxLength(255),

@@ -33,20 +33,20 @@ class BatchResource extends Resource
                 TextInput::make('name')
                     ->maxLength(255)
                     ->placeholder('Batch name (Optional)')
-                    ->unique(table: 'batches', column: 'name')
+                    ->unique(table: 'batches', column: 'name', ignoreRecord: true)
                     ->label('Batch name')
                     ->helperText('Batch name is not required'),
                 TextInput::make('number')
                     ->required()
                     ->numeric()
                     ->placeholder('10')
-                    ->unique(table: 'batches', column: 'number')
+                    ->unique(table: 'batches', column: 'number', ignoreRecord: true)
                     ->label('Batch number'),
                 TextInput::make('session')
                     ->required()
                     ->maxLength(255)
                     ->placeholder('Session')
-                    ->unique(table: 'batches', column: 'session')
+                    ->unique(table: 'batches', column: 'session', ignoreRecord: true)
                     ->label('Batch session'),
             ]);
     }
