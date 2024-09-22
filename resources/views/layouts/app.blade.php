@@ -10,10 +10,8 @@
     @stack('styles')
 </head>
 <body>
-<header>
-    @include('partials.header')
-    @include('partials.navbar')
-</header>
+@include('partials.header')
+@include('partials.navbar')
 
 <main>
     @yield('content')
