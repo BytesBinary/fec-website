@@ -9,7 +9,7 @@ AOS.init({
 });
 
 const lightbox = GLightbox({
-    selector: '.glightbox' 
+    selector: '.glightbox'
 });
 
 import Alpine from 'alpinejs';
