@@ -1,39 +1,60 @@
-<div x-data="carousel()" class="relative w-full overflow-hidden">
-    <!-- Carousel Inner Wrapper -->
-    <div class="relative w-full h-[550px]">
-        <template x-for="(image, index) in images" :key="index">
-            <div x-show="currentIndex === index" class="absolute inset-0 w-full h-full bg-cover bg-center"
-                :style="`background-image: url(${image.src})`">
-                
-                <!-- Overlay -->
-                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                
-                <!-- Dynamic Text on Image with Animation -->
-                <div :class="image.position" class="absolute text-center text-white px-4 w-full"
-                     x-transition:enter="transition ease-out duration-700"
-                     x-transition:enter-start="opacity-0 translate-y-10" 
-                     x-transition:enter-end="opacity-100 translate-y-0"
-                     x-transition:leave="transition ease-in duration-500"
-                     x-transition:leave-start="opacity-100 translate-y-0" 
-                     x-transition:leave-end="opacity-0 translate-y-10">
-                    <div>
-                        <h2 class="text-3xl font-bold" x-text="image.text"
-                            x-transition:enter="transition ease-out duration-1000"
-                            x-transition:enter-start="opacity-0 scale-50"
-                            x-transition:enter-end="opacity-100 scale-100"
-                            x-transition:leave="transition ease-in duration-500"
-                            x-transition:leave-start="opacity-100 scale-100"
-                            x-transition:leave-end="opacity-0 scale-50"></h2>
-                        <p class="mt-4 text-lg" x-text="image.description"
-                            x-transition:enter="transition ease-out duration-1000"
-                            x-transition:enter-start="opacity-0 translate-y-5"
-                            x-transition:enter-end="opacity-100 translate-y-0"
-                            x-transition:leave="transition ease-in duration-500"
-                            x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 translate-y-5"></p>
-                    </div>
+<style>
+    @keyframes zoomIn {
+        0% {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes zoomOut {
+        0% {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .zoom-in {
+        animation: zoomIn 2s ease forwards;
+        /* Increased duration for smoother zoom-in */
+    }
+
+    .zoom-out {
+        animation: zoomOut 2s ease forwards;
+        /* Increased duration for smoother zoom-out */
+    }
+
+</style>
+
+
+<div x-data="carousel()" class="relative h-screen w-full overflow-hidden">
+    <template x-for="(image, index) in images" :key="index">
+        <div x-show="currentIndex === index" class="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out zoom-in-out" :class="{'zoom-in': currentIndex === index, 'zoom-out': currentIndex !== index}">
+            <img :src="image.src" alt="Background Image" class="absolute inset-0 w-full h-full object-cover filter blur-sm">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+                    <h1 class="text-5xl font-bold leading-tight mb-4" style="color: whitesmoke" x-text="image.title"></h1>
+                    <p class="text-xl text-gray-300 mb-8" x-text="image.description"></p>
+                    <a href="#administration" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 mt-5 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
                 </div>
             </div>
+        </div>
+    </template>
+
+    <!-- Indicators -->
+    <div class="absolute bottom-4 w-full flex justify-center space-x-2">
+        <template x-for="(image, index) in images" :key="index">
+            <div @click="currentIndex = index" :class="{'bg-gray-300': currentIndex === index, 'bg-gray-600': currentIndex !== index}" class="w-3 h-3 rounded-full cursor-pointer transition-colors duration-300 ease-in-out"></div>
         </template>
     </div>
 
@@ -46,48 +67,41 @@
     </button>
 </div>
 
-<!-- Alpine.js Script -->
 <script>
     function carousel() {
         return {
-            currentIndex: 0,
-            images: [
-                { 
-                    src: 'images/gallery/2.jpg', 
-                    text: 'Image 1 Text', 
-                    description: 'Description for image 1',
-                    position: 'top-10'  // Text position at the top
-                },
-                { 
-                    src: 'images/gallery/4.jpg', 
-                    text: 'Image 2 Text', 
-                    description: 'Description for image 2',
-                    position: 'bottom-10'  // Text position at the bottom
-                },
-                { 
-                    src: 'images/gallery/6.jpg', 
-                    text: 'Image 3 Text', 
-                    description: 'Description for image 3',
-                    position: 'left-10'  // Text position on the left
-                },
-                { 
-                    src: 'images/gallery/8.jpg', 
-                    text: 'Image 4 Text', 
-                    description: 'Description for image 4',
-                    position: 'right-10'  // Text position on the right
+            currentIndex: 0
+            , images: [{
+                    src: '{{ asset('
+                    images / hero - img.jpg ') }}'
+                    , title: 'Welcome to Faridpur Engineering College'
+                    , description: 'A Place to learn and Grow.'
                 }
-            ],
-            init() {
+                , {
+                    src: '{{ asset('
+                    images / hero - img1.jpg ') }}'
+                    , title: 'Explore New Opportunities'
+                    , description: 'Join us in our journey.'
+                }
+                , {
+                    src: '{{ asset('
+                    images / hero - bg2.jpg ') }}'
+                    , title: 'Innovative Learning'
+                    , description: 'Embrace the future of education.'
+                }
+            ]
+            , prev() {
+                this.currentIndex = this.currentIndex === 0 ? this.images.length - 1 : this.currentIndex - 1;
+            }
+            , next() {
+                this.currentIndex = this.currentIndex === this.images.length - 1 ? 0 : this.currentIndex + 1;
+            }
+            , init() {
                 setInterval(() => {
                     this.next();
-                }, 3000);
-            },
-            prev() {
-                this.currentIndex = (this.currentIndex === 0) ? this.images.length - 1 : this.currentIndex - 1;
-            },
-            next() {
-                this.currentIndex = (this.currentIndex === this.images.length - 1) ? 0 : this.currentIndex + 1;
+                }, 3000); // Auto-play every 3 seconds
             }
         };
     }
+
 </script>
