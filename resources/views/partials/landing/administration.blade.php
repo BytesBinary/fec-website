@@ -1,93 +1,34 @@
-<div class="flex justify-center">
-    <div class="container max-w-5xl mx-auto p-5 my-10">
-        <div class="container mx-auto p-5 my-10">
-            <p class="text-center mb-8 text-3xl md:text-5xl font-bold text-lime-800" data-aos="fade-up">
-                Administration</p>
-            <hr class="w-48 h-1 mx-auto bg-lime-400 border-0 rounded" data-aos="fade-down">
-
-
-            <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4" data-aos="fade-right">
-                <div class="flex justify-center transform transition duration-300 hover:shadow-2xl" data-aos="fade-left"
-                    data-aos-delay="200">
-                    <div class="max-w-[18rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden h-[28rem]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai.jpg"
-                            alt="Principal Image">
-                        <div class="p-6">
-                            <hr class="border-lime-300">
-                            <h2 class="text-2xl font-semibold text-lime-800">Prof. Dr. Engr. Md. Mizanur Rahman</h2>
-                            <p class="text-lime-800 mt-2">Principal</p>
-                            <hr class="border-lime-300">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-3 flex" data-aos="fade-up">
-                    <div
-                        class="w-full bg-lime-100 shadow-xl rounded-lg overflow-scroll lg:overflow-hidden md:overflow-hidden transform transition duration-300 hover:shadow-2xl h-[28rem] flex flex-col justify-between">
-                        <div class="p-8">
-                            <h1 class="text-xl md:text-3xl font-bold text-lime-900 mt-4">Message From Principal</h1>
-                            <p class="mt-3 md:text-lg text-lime-900 text-justify">
-                                It is my pleasure to introduce my heart-touching engineering institution “The Faridpur
-                                Engineering College,” which has been on its journey since 2010. Its short form is FEC,
-                                whereas the Bangla pronunciation is “ফরিদপুর ইঞ্জিনিয়ারিং কলেজ (ফইক).
-                            </p>
-                            <p class="mt-3 md:text-lg text-lime-900 text-justify">
-                                The college is situated nearby Baitul Aman Bazar, about three km from the heart of
-                                Faridpur town. Faridpur Engineering College is a mainstream government undergraduate
-                                college in engineering disciplines and is affiliated with the University of Dhaka under
-                                the Faculty of Engineering & Technology...
-                                <a href="{{ route('principal') }}"
-                                    class="text-lime-800 font-semibold hover:underline">Read More</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<section id="administration" class="py-10">
+    <div class="container mx-auto p-5 my-5">
+        <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" data-aos="fade-up">Administration</p>
+        <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
+        <div class="grid gap-5 grid-cols-1 mt-5 lg:grid-cols-4">
+            <div class="grid-cols-2 lg:grid-cols-1">
+                <x-administration-card name="Prof. Dr. Engr. Md. Mizanur Rahman" designation="Principal" image="images/administration/mia-bhai.jpg" url="{{route('principal')}}" animation="fade-up" />
             </div>
-
-            <div class="grid gap-6 grid-cols-1 mt-10 pb-5 lg:grid-cols-3">
-                <div class="flex justify-center" data-aos="fade-right" data-aos-delay="200">
-                    <div
-                        class="max-w-[20rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai3.jpg"
-                            alt="Image of Md. Shamsul Islam">
-                        <div class="p-6">
-                            <hr class="border-lime-300">
-                            <h2 class="text-xl font-semibold text-lime-800">Md. Shamsul Islam</h2>
-                            <p class="text-lime-800 mt-2">Head of the Dept. CSE</p>
-                            <hr class="border-lime-300">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center" data-aos="fade-up" data-aos-delay="200">
-                    <div
-                        class="max-w-[20rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai2.jpg"
-                            alt="Image of Md. Sanowar Hossain">
-                        <div class="p-6">
-                            <hr class="border-lime-300">
-                            <h2 class="text-xl font-semibold text-lime-800">Md. Sanowar Hossain</h2>
-                            <p class="text-lime-800 mt-2">Head of the Dept. EEE</p>
-                            <hr class="border-lime-300">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="200">
-                    <div
-                        class="max-w-[20rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai1.jpg"
-                            alt="Image of Md. Rayhan Khan Apu">
-                        <div class="p-6">
-                            <hr class="border-lime-300">
-                            <h2 class="text-xl font-semibold text-lime-800">Md. Rayhan Khan Apu</h2>
-                            <p class="text-lime-800 mt-2">Head of the Dept. CE</p>
-                            <hr class="border-lime-300">
-                        </div>
-                    </div>
+            <div class="lg:grid-cols-3 lg:col-span-3 card w-full shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer" data-aos="fade-up">
+                <div class="card-body">
+                    <h1 class="text-md md:text-xl">Message From Principal</h1>
+                    <p class="mt-3 md:text-md text-gray-950 text-justify">
+                        It is very pleasure to introduce my heart-touching engineering institution “The Faridpur Engineering College” that set out its journey since 2010. It's short form is FEC whereas Bangla pronunciation is “ফরিদপুর ইঞ্জিনিয়ারিং কলেজ (ফইক)”।
+                    </p>
+                    <p class="mt-3 md:text-md text-gray-950 text-justify">The college is situated nearby Baitul Aman Bazar, about three km distance from the heart of Faridpur town. Faridpur Engineering College is a mainstream government undergraduate college in engineering disciplines and affiliated with the University of Dhaka under the Faculty of Engineering & Technology. Students’ admission test is being taken and finalized the merit list by its mother institution the Faculty of Engineering & Technology, University of Dhaka.
+                    </p>
+                    <p class="mt-3 md:text-md text-gray-950 text-justify">
+                        The academic and intellectual discovery college is standing with three engineering disciplines civil engineering, Electrical and Electronics Engineering and Computer Science & Engineering where labs are well decorated with cutting age technologies ....
+                        <a href="{{route('principal')}}">
+                            <button id="toggle-btn" class=" text-blue-500 focus:outline-none">
+                                Read More
+                            </button>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
-
+        <div class="grid gap-6 grid-cols-1 mt-10 pb-5 lg:grid-cols-3">
+            <x-administration-card name="Md. Shamsul Islam" designation="Head of the Dept. CSE" image="images/administration/mia-bhai3.jpg" url="{{route('dept-cse')}}" animation="fade-up"  />
+            <x-administration-card name="Md. Sanowar Hossain" designation="Head of the Dept. EEE" image="images/administration/mia-bhai2.jpg" url="{{route('dept-eee')}}" animation="fade-up" />
+            <x-administration-card name="Md. Rayhan Khan Apu" designation="Head of the Dept. CE" image="images/administration/mia-bhai1.jpg" url="{{route('dept-ce')}}" animation="fade-up" />
+        </div>
     </div>
-</div>
+</section>
