@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->longText('description')->nullable();
-            $table->string('semester');
+            $table->enum('semester',['1st','2nd','3rd', '4th', '5th', '6th', '7th', '8th']);
             $table->bigInteger('enrolled_teacher_id')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
