@@ -1,37 +1,3 @@
-<style>
-    @keyframes zoomIn {
-        0% {
-            transform: scale(1.2);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    @keyframes zoomOut {
-        0% {
-            transform: scale(1.2);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    .zoom-in {
-        animation: zoomIn 2s ease forwards; /* Increased duration for smoother zoom-in */
-    }
-
-    .zoom-out {
-        animation: zoomOut 2s ease forwards; /* Increased duration for smoother zoom-out */
-    }
-
-</style>
-
-
 <div x-data="carousel()" class="relative h-screen w-full overflow-hidden">
     <template x-for="(image, index) in images" :key="index">
         <div
@@ -75,20 +41,30 @@
         return {
             currentIndex: 0,
             images: [
-                { src: '{{ asset('images/hero-img.jpg') }}', title:  'Welcome to Faridpur Engineering College', description: 'A Place to learn and Grow.' },
+                { src: '{{ asset('images/hero-img.jpg') }}', title: 'Welcome to Faridpur Engineering College', description: 'A Place to learn and Grow.' },
                 { src: '{{ asset('images/hero-img1.jpg') }}', title: 'Explore New Opportunities', description: 'Join us in our journey.' },
                 { src: '{{ asset('images/hero-bg2.jpg') }}', title: 'Innovative Learning', description: 'Embrace the future of education.' }
             ],
+            interval: null,
+            startAutoPlay() {
+                this.interval = setInterval(() => {
+                    this.next();
+                }, 5000);
+            },
+            resetAutoPlay() {
+                clearInterval(this.interval);
+                this.startAutoPlay();
+            },
             prev() {
                 this.currentIndex = this.currentIndex === 0 ? this.images.length - 1 : this.currentIndex - 1;
+                this.resetAutoPlay();
             },
             next() {
                 this.currentIndex = this.currentIndex === this.images.length - 1 ? 0 : this.currentIndex + 1;
+                this.resetAutoPlay();
             },
             init() {
-                setInterval(() => {
-                    this.next();
-                }, 3000); // Auto-play every 3 seconds
+                this.startAutoPlay();
             }
         };
     }
