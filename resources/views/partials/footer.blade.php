@@ -1,4 +1,4 @@
-<footer class="bg-gray-800 text-white p-16">
+<footer class="bg-gray-800 text-white p-16 bg-gradient-to-b from-gray-600 via-slate-800 to-gray-800">
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div>
             <img src="{{ asset('images/FEClogo.png') }}" alt="" class="max-h-24 max-w-24 mx-auto">
