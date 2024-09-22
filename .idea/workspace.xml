@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cf1a20-476a-4d9a-822a-b251a4929ff2" name="Changes" comment="" />
+    <list default="true" id="66cf1a20-476a-4d9a-822a-b251a4929ff2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/administration/mia-bhai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/administration/principal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/administration/mia-bhai1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/administration/ce-head.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/administration/mia-bhai2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/administration/eee-head.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/administration/mia-bhai3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/administration/cse-head.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/landing/administration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/landing/administration.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,22 +173,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.update-module-directories&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;upcoming&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ajdmjakiurrahman/Documents/Github/fec/public/static&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/PhpStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.laravel-idea.update-module-directories": "true",
+    "git-widget-placeholder": "administration-redesign",
+    "last_opened_file_path": "/Users/ajdmjakiurrahman/Documents/Github/fec/public/static",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "web.server",
+    "ts.external.directory.path": "/Applications/PhpStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/static" />
