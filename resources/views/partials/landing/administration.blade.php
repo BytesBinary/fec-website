@@ -4,13 +4,11 @@
             <p class="text-center mb-8 text-3xl md:text-5xl font-bold text-green-900" data-aos="fade-up">
                 Administration</p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded" data-aos="fade-down">
-
-
-            <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4" data-aos="fade-right">
+            <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4 hover:cursor-pointer" data-aos="fade-right">
                 <div class="flex justify-center transform transition duration-300 hover:shadow-2xl" data-aos="fade-left"
                     data-aos-delay="200">
                     <div class="max-w-[18rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden h-[28rem]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai.jpg"
+                        <img class="w-full h-56 object-cover" src="{{asset('images/administration/principal.jpg')}}"
                             alt="Principal Image">
                         <div class="p-6">
                             <hr class="border-green-300">
@@ -45,10 +43,10 @@
             </div>
 
             <div class="grid gap-6 grid-cols-1 mt-10 pb-5 lg:grid-cols-3">
-                <div class="flex justify-center" data-aos="fade-right" data-aos-delay="200">
+                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-right" data-aos-delay="200">
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai3.jpg"
+                        <img class="w-full h-56 object-cover" src="{{asset("images/administration/cse-head.jpg")}}"
                             alt="Image of Md. Shamsul Islam">
                         <div class="p-6">
                             <hr class="border-green-300">
@@ -59,10 +57,10 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-up" data-aos-delay="200">
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai2.jpg"
+                        <img class="w-full h-56 object-cover" src="{{asset("images/administration/eee-head.jpg")}}"
                             alt="Image of Md. Sanowar Hossain">
                         <div class="p-6">
                             <hr class="border-green-300">
@@ -73,10 +71,10 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="200">
+                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-left" data-aos-delay="200">
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[]">
-                        <img class="w-full h-56 object-cover" src="images/administration/mia-bhai1.jpg"
+                        <img class="w-full h-56 object-cover" src="{{asset("images/administration/ce-head.jpg")}}"
                             alt="Image of Md. Rayhan Khan Apu">
                         <div class="p-6">
                             <hr class="border-green-300">
