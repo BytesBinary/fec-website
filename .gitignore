@@ -4,7 +4,6 @@
 /public/storage
 /storage/*.key
 /vendor
-/public/build
 .env
 .env.backup
 .env.production
@@ -21,6 +20,4 @@ yarn-error.log
 /.idea/.workspace.xml
 .idea/.workspace.xml
 /.idea/
-package-lock.json
-composer.lock
 
