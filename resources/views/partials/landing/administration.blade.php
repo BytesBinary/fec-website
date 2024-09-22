@@ -6,12 +6,12 @@
             <hr class="w-48 h-1 mx-auto bg-lime-400 border-0 rounded" data-aos="fade-down">
 
 
-            <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4 rounded-xl p-3" data-aos="fade-right">
-                <div class="flex justify-center" data-aos="fade-left"
+            <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4" data-aos="fade-right">
+                <div class="flex justify-center transform transition duration-300 hover:shadow-2xl" data-aos="fade-left"
                     data-aos-delay="200">
-                    <div class="max-w-[18rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden h-[28rem] transform transition duration-300 lg:hover:shadow-2xl hover:scale-105">
+                    <div class="max-w-[18rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden h-[28rem]">
                         <img class="w-full h-56 object-cover" src="images/administration/mia-bhai.jpg"
-                            alt="Principal ">
+                            alt="Principal Image">
                         <div class="p-6">
                             <hr class="border-lime-300">
                             <h2 class="text-2xl font-semibold text-lime-800">Prof. Dr. Engr. Md. Mizanur Rahman</h2>
@@ -23,7 +23,7 @@
 
                 <div class="lg:col-span-3 flex" data-aos="fade-up">
                     <div
-                        class="w-full bg-lime-100 shadow-xl rounded-lg overflow-scroll lg:overflow-hidden md:overflow-hidden transform transition duration-300 hover:shadow-2xl hover:scale-[102%] h-[28rem] flex flex-col justify-between">
+                        class="w-full bg-lime-100 shadow-xl rounded-lg overflow-scroll lg:overflow-hidden md:overflow-hidden transform transition duration-300 hover:shadow-2xl h-[28rem] flex flex-col justify-between">
                         <div class="p-8">
                             <h1 class="text-xl md:text-3xl font-bold text-lime-900 mt-4">Message From Principal</h1>
                             <p class="mt-3 md:text-lg text-lime-900 text-justify">
@@ -49,7 +49,7 @@
                     <div
                         class="max-w-[20rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
                         <img class="w-full h-56 object-cover" src="images/administration/mia-bhai3.jpg"
-                            alt="Md. Shamsul Islam">
+                            alt="Image of Md. Shamsul Islam">
                         <div class="p-6">
                             <hr class="border-lime-300">
                             <h2 class="text-xl font-semibold text-lime-800">Md. Shamsul Islam</h2>
@@ -63,7 +63,7 @@
                     <div
                         class="max-w-[20rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
                         <img class="w-full h-56 object-cover" src="images/administration/mia-bhai2.jpg"
-                            alt="Md. Sanowar Hossain">
+                            alt="Image of Md. Sanowar Hossain">
                         <div class="p-6">
                             <hr class="border-lime-300">
                             <h2 class="text-xl font-semibold text-lime-800">Md. Sanowar Hossain</h2>
@@ -77,7 +77,7 @@
                     <div
                         class="max-w-[20rem] w-full bg-lime-100 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[]">
                         <img class="w-full h-56 object-cover" src="images/administration/mia-bhai1.jpg"
-                            alt="Md. Rayhan Khan Apu">
+                            alt="Image of Md. Rayhan Khan Apu">
                         <div class="p-6">
                             <hr class="border-lime-300">
                             <h2 class="text-xl font-semibold text-lime-800">Md. Rayhan Khan Apu</h2>
