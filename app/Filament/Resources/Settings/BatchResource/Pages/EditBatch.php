@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\BatchResource\Pages;
+namespace App\Filament\Resources\Settings\BatchResource\Pages;
 
-use App\Filament\Resources\BatchResource;
+use App\Filament\Resources\Settings\BatchResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 

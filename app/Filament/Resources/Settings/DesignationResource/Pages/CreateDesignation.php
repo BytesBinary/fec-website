@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\DesignationResource\Pages;
+namespace App\Filament\Resources\Settings\DesignationResource\Pages;
 
-use App\Filament\Resources\DesignationResource;
-use Filament\Actions;
+use App\Filament\Resources\Settings\DesignationResource;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateDesignation extends CreateRecord
