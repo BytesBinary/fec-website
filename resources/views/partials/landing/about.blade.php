@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <!-- Text Section -->
         <div class="w-full p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer rounded-lg" data-aos="fade-up">
-            <p class="md:text-md text-gray-800">
+            <p class="md:text-md text-gray-800 text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maiores quidem dignissimos consectetur. In molestias adipisci, eaque corrupti exercitationem cupiditate obcaecati. Asperiores ipsum facilis eos. Nemo asperiores eligendi perspiciatis numquam.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reiciendis eveniet nesciunt voluptas, nobis non perferendis cupiditate consectetur voluptates odit eos quia facilis officiis eius molestias quis corrupti repudiandae! Tempora.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quod, animi laboriosam quasi odit quibusdam fugit minima nesciunt nostrum, rem maxime neque repellat omnis eius. Repellendus hic esse facilis ullam!
