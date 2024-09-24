@@ -4,7 +4,7 @@
             x-show="currentIndex === index"
             class="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out zoom-in-out"
             :class="{'zoom-in': currentIndex === index, 'zoom-out': currentIndex !== index}">
-            <img :src="image.src" alt="Background Image" class="absolute inset-0 w-full h-full object-cover filter blur-[2px]">
+            <img :src="image.src" alt="Background Image" class="absolute inset-0 w-full h-full object-cover filter blur-[1px]">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
                 <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
