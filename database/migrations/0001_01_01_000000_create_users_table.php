@@ -31,7 +31,7 @@ return new class extends Migration
                     'none'
                 ])
                 ->default('none');
-            $table->string('designation');
+            $table->string('designation')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
