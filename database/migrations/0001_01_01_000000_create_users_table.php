@@ -30,7 +30,7 @@ return new class extends Migration
                     'student',
                     'none'
                 ])
-                ->default('none');
+                ->default('student');
             $table->string('designation')->nullable();
             $table->rememberToken();
             $table->timestamps();

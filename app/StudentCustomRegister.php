@@ -8,7 +8,6 @@ use Filament\Facades\Filament;
 use Filament\Http\Responses\Auth\Contracts\RegistrationResponse;
 use Filament\Pages\Auth\Register;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\ValidationException;
 
 class StudentCustomRegister extends Register
 {

@@ -27,6 +27,7 @@ class StudentPanelProvider extends PanelProvider
             ->id('student')
             ->path('student')
             ->registration(StudentCustomRegister::class)
+            ->passwordReset()
             ->emailVerification()
             ->login()
             ->colors([
