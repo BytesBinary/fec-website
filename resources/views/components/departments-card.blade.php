@@ -17,7 +17,7 @@
             <p class="font-bold text-3xl text-center mb-4 text-gray-800" data-aos="fade-up" data-aos-delay="200">
                {!!$name!!}</p>
             <hr class="w-full h-1 mx-auto bg-emerald-300 rounded" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-actions mt-6 flex justify-center" data-aos="fade-left" data-aos-delay="200">
+            <div class="card-actions mt-6 flex justify-center" data-aos="fade-up" data-aos-delay="200">
                 <button onclick="window.location.href='#'" type="button"
                     class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                     <span class="text-xl text-gray-800">Explore</span>
@@ -43,7 +43,7 @@
                 {{ $description }}
             </p>
 
-            <div class="card-actions mt-6 flex justify-center" data-aos="fade-left" data-aos-delay="200">
+            <div class="card-actions mt-6 flex justify-center" data-aos="fade-up" data-aos-delay="200">
                 <button onclick="window.location.href='{{ $url }}'" type="button"
                     class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                     <span class="text-xl text-gray-800">Explore</span>
