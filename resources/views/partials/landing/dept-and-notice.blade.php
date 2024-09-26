@@ -128,9 +128,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="absolute bottom-4 left-1/2 w-1/2 text-center transform -translate-x-1/2  bg-gradient-to-r from-lime-500 to-emerald-500 hover:bg-gradient-to-l text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-lime-500 hover:cursor-pointer hover:to-emerald-500 transition duration-300 ease-in-out">
-                    <a href="#">All Notices  </a>
-                </div>
+            </div>
+            <div class="card-actions mt-6 flex justify-center" data-aos="fade-left" data-aos-delay="200">
+                <button onclick="window.location.href='#'" type="button"
+                        class="w-full max-w-xs bg-gradient-to-r from-lime-300 to-emerald-400 text-white hover:bg-gradient-to-l hover:from-lime-300 hover:to-emerald-400 rounded-lg py-1 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg hover:cursor-pointer">
+                    <span class="text-gray-900">View All</span>
+                    <x-svg-icon.external-url />
+                </button>
             </div>
         </div>
 
