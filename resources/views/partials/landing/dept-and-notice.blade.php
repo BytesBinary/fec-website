@@ -5,7 +5,7 @@
                 Departments
             </p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down">
-            <div class="swiper-container">
+            <div class="swiper-container-department-page">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <x-departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg"

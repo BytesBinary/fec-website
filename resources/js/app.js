@@ -19,8 +19,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 // Swiper Initialization
-// Swiper Initialization
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container-department-page', {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,

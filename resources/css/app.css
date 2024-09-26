@@ -107,11 +107,11 @@ Landing Page CSS
 /*
  * HomePage Notices
  */
-
 .notice-wrapper {
     display: flex;
     flex-direction: column;
     animation: scrollUp 10s linear infinite;
+    animation-play-state: running; /* Ensures animation starts running */
 }
 
 @keyframes scrollUp {
@@ -122,3 +122,9 @@ Landing Page CSS
         transform: translateY(-100%);
     }
 }
+
+/* Pause animation on hover */
+.notice-wrapper:hover {
+    animation-play-state: paused; /* Stops the animation */
+}
+
