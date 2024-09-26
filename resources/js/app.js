@@ -19,6 +19,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 // Swiper Initialization
+// Swiper Initialization
 const swiper = new Swiper('.swiper-container', {
     effect: "coverflow",
     grabCursor: true,
@@ -33,10 +34,11 @@ const swiper = new Swiper('.swiper-container', {
     keyboard: {
         enabled: true
     },
-    mousewheel: {
-        thresholdDelta: 70
-    },
     loop: true,
+    autoplay: {
+        delay: 2000, // Set the delay time between slides (in ms)
+        disableOnInteraction: false // Keep autoplay running even after user interaction
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -46,7 +48,7 @@ const swiper = new Swiper('.swiper-container', {
             slidesPerView: 2
         },
         768: {
-            slidesPerView: 1
+            slidesPerView: 2
         },
         1024: {
             slidesPerView: 2
@@ -56,7 +58,4 @@ const swiper = new Swiper('.swiper-container', {
         }
     }
 });
-
-
-
 
