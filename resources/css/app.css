@@ -103,3 +103,22 @@ Landing Page CSS
     text-align: center;
     width: 100%;
 }
+
+/*
+ * HomePage Notices
+ */
+
+.notice-wrapper {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 10s linear infinite;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
