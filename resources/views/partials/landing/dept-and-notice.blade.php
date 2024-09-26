@@ -42,7 +42,7 @@
                 Notices
             </p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down" />
-            <div class="relative rounded-lg overflow-hidden h-[500px] mx-auto">
+            <div class="relative rounded-lg overflow-hidden h-auto mx-auto">
                 <!-- Notice Container -->
                 <div class="overflow-hidden relative h-full">
                     <div class="notice-wrapper space-y-4 animate-scroll p-3">
