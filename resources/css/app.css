@@ -22,23 +22,12 @@ body {
 
 /* Add custom Swiper styles (optional) */
 .swiper-container {
-    width: 100%;        /* Full width container */
-    height: 400px;      /* Set height for the swiper */
+    width: 100%;
+    text-align: center;
     overflow: hidden;   /* Ensure no overflow */
 }
 
 .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;       /* Set width of each slide */
-    height: 300px;      /* Set height of each slide */
-    transition: transform 0.3s ease-in-out;  /* Smooth transition for hover effect */
+    text-align: center;
+    width: 100%;
 }
-
-.swiper-slide img {
-    width: 100%;        /* Ensure the image takes full width of the slide */
-    height: 100%;       /* Ensure the image takes full height of the slide */
-    object-fit: cover;  /* Cover the entire slide without stretching */
-    border-radius: 10px; /* Optional: add some border radius to the images */
-}
-/* Other custom styles */

@@ -14,32 +14,47 @@ const lightbox = GLightbox({
 });
 
 import Alpine from 'alpinejs';
+import {EffectCoverflow} from "swiper/modules";
 window.Alpine = Alpine;
 Alpine.start();
 
 // Swiper Initialization
 const swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
+    effect: "coverflow",
     grabCursor: true,
-    centeredSlides: true,  // Keep the center slide visible
-    slidesPerView: 3,      // Show three slides (left, center, right)
-    spaceBetween: 30,      // Space between slides
-    loop: true,            // Enable looping for continuous sliding
+    centeredSlides: true,
     coverflowEffect: {
-        rotate: -30,        // Rotate the slides slightly for the 3D effect
-        stretch: 0,        // No stretching
-        depth: 200,        // Set depth to make the effect more prominent
-        modifier: 1,       // Control the intensity of the effect
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true
     },
+    keyboard: {
+        enabled: true
+    },
+    mousewheel: {
+        thresholdDelta: 70
+    },
+    loop: true,
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true,    // Allow pagination to be clickable
+        el: ".swiper-pagination",
+        clickable: true
     },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    slideToClickedSlide: true,          // Click slide to make it active
+    breakpoints: {
+        640: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 1
+        },
+        1024: {
+            slidesPerView: 2
+        },
+        1560: {
+            slidesPerView: 3
+        }
+    }
 });
 
 

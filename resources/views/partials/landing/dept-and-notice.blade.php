@@ -7,22 +7,46 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="{{asset('images/BytesBinary.png')}}" alt="Image 1">
+                        <x-departments-card
+                            name="Computer Science & Engineering"
+                            image="images/card/cse-dept.jpg"
+                            url="#"
+                        />
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{asset('images/BytesBinary.png')}}" alt="Image 2">
+                        <x-departments-card
+                            name="Computer Science & Engineering"
+                            image="images/card/cse-dept.jpg"
+                            url="#"
+                        />
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{asset('images/BytesBinary.png')}}" alt="Image 3">
+                        <x-departments-card
+                            name="Computer Science & Engineering"
+                            image="images/card/cse-dept.jpg"
+                            url="#"
+                        />
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{asset('images/BytesBinary.png')}}" alt="Image 1">
+                        <x-departments-card
+                            name="Computer Science & Engineering"
+                            image="images/card/cse-dept.jpg"
+                            url="#"
+                        />
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{asset('images/BytesBinary.png')}}" alt="Image 2">
+                        <x-departments-card
+                            name="Computer Science & Engineering"
+                            image="images/card/cse-dept.jpg"
+                            url="#"
+                        />
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{asset('images/BytesBinary.png')}}" alt="Image 3">
+                        <x-departments-card
+                            name="Computer Science & Engineering"
+                            image="images/card/cse-dept.jpg"
+                            url="#"
+                        />
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
