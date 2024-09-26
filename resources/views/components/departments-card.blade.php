@@ -39,7 +39,7 @@
             <hr class="w-48 h-1 mx-auto bg-emerald-300 rounded" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Description: The flex-grow here ensures the text expands without affecting the button placement -->
-            <p class="text-justify mt-5 text-gray-600 flex-grow" data-aos="fade-right" data-aos-delay="200">
+            <p class="text-justify mt-5 text-gray-600 flex-grow" data-aos="fade-up" data-aos-delay="200">
                 {{ $description }}
             </p>
 

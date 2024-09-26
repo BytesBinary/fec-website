@@ -10,7 +10,11 @@ AOS.init({
 });
 
 const lightbox = GLightbox({
-    selector: '.glightbox'
+    selector: '.glightbox',
+    touchNavigation: true, // Add touch navigation for mobile support
+    loop: true,            // Enable looping through images
+    zoomable: true,        // Allow zooming on images
+    autoplayVideos: true   // In case you have videos in the future
 });
 
 import Alpine from 'alpinejs';
@@ -57,4 +61,30 @@ const swiper = new Swiper('.swiper-container-department-page', {
         }
     }
 });
+
+const swipers = new Swiper('.swiper-container-gallery', {
+    loop: true,                    // Enable continuous loop mode
+    autoplay: {
+        delay: 3000,               // Set autoplay delay (3 seconds)
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {                 // Responsive breakpoints
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+    }
+})
 
