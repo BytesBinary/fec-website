@@ -16,6 +16,7 @@
     "dependencies": {
         "alpinejs": "^3.14.1",
         "aos": "^2.3.4",
-        "glightbox": "^3.3.0"
+        "glightbox": "^3.3.0",
+        "swiper": "^11.1.14"
     }
 }
