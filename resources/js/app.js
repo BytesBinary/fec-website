@@ -50,7 +50,7 @@ const swiper = new Swiper('.swiper-container-department-page', {
             slidesPerView: 2
         },
         1024: {
-            slidesPerView: 3
+            slidesPerView: 2
         },
         1560: {
             slidesPerView: 3

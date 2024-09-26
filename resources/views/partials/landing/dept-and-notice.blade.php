@@ -5,32 +5,33 @@
                 Departments
             </p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down">
-            <div class="swiper-container-department-page">
+            <div class="swiper-container swiper-container-department-page">
                 <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <x-departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg"
-                            url="#" is-home-page="true" />
+                        <x-departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
                     </div>
+                    <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <x-departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg"
-                            url="#" is-home-page="true" />
+                        <x-departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
                     </div>
+                    <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <x-departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg"
-                            url="#" is-home-page="true" />
+                        <x-departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
                     </div>
+                    <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <x-departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg"
-                            url="#" is-home-page="true" />
+                        <x-departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
                     </div>
+                    <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <x-departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg"
-                            url="#" is-home-page="true" />
+                        <x-departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
                     </div>
+                    <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <x-departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg"
-                            url="#" is-home-page="true" />
+                        <x-departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
                     </div>
+                    <!-- More slides as needed... -->
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -41,7 +42,7 @@
                 Notices
             </p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down" />
-            <div class="relative bg-gray-100 rounded-lg overflow-hidden h-[510px]">
+            <div class="relative bg-lime-50 rounded-lg overflow-hidden h-[510px] mx-auto">
                 <!-- Notice Container -->
                 <div class="overflow-hidden relative h-full">
                     <div class="notice-wrapper space-y-4 animate-scroll p-3">

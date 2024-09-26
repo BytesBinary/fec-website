@@ -92,17 +92,20 @@ Landing Page CSS
     animation: zoomIn 2s ease forwards; /* Increased duration for smoother zoom-in */
 }
 
-/* Add custom Swiper styles (optional) */
+/* Ensure Swiper is responsive and doesn't overflow */
 .swiper-container {
     width: 100%;
     text-align: center;
-    overflow: hidden;   /* Ensure no overflow */
+    overflow: hidden;
+    padding: 0;  /* Remove any padding that might affect responsiveness */
 }
 
 .swiper-slide {
     text-align: center;
-    width: 100%;
+    width: auto; /* Adjust slide width for better responsiveness */
+    flex-shrink: 0; /* Prevent slides from shrinking on smaller screens */
 }
+
 
 /*
  * HomePage Notices
