@@ -42,54 +42,96 @@
                 Notices
             </p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down" />
-            <div class="relative bg-lime-50 rounded-lg overflow-hidden h-[510px] mx-auto">
+            <div class="relative rounded-lg overflow-hidden h-[500px] mx-auto">
                 <!-- Notice Container -->
                 <div class="overflow-hidden relative h-full">
                     <div class="notice-wrapper space-y-4 animate-scroll p-3">
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 1: New event coming up!</a>
+                        <div class="flex items-center bg-lime-200 text- p-2 rounded-lg">
+                            <div class="flex flex-col items-center px-4 border-r-2 border-white">
+                                <span class="text-xl font-bold">17</span>
+                                <span class="text-sm">SEP</span>
+                            </div>
+                            <div class="ml-4 flex-grow text-sm">
+                                ২০২৩-২০২৪ (জুলাই-ডিসেম্বর) শিক্ষাবর্ষে ইনস্টিটিউট অফ ইংলিশ এন্ড আধার ল্যাংগুয়েজ এ ভর্তি বিজ্ঞপ্তি
+                            </div>
+                            <div class="ml-4">
+                                <a href="path-to-file.pdf" download class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="black">
+                                        <path fill-rule="evenodd" d="M12 16a1 1 0 01-.707-.293l-3.5-3.5a1 1 0 111.414-1.414L11 12.586V4a1 1 0 112 0v8.586l1.793-1.793a1 1 0 011.414 1.414l-3.5 3.5A1 1 0 0112 16zm-6 2a1 1 0 100 2h12a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 2: Meeting tomorrow at 10 AM</a>
+                        <div class="flex items-center bg-lime-200 text- p-2 rounded-lg">
+                            <div class="flex flex-col items-center px-4 border-r-2 border-white">
+                                <span class="text-xl font-bold">17</span>
+                                <span class="text-sm">SEP</span>
+                            </div>
+                            <div class="ml-4 flex-grow text-sm">
+                                ২০২৩-২০২৪ (জুলাই-ডিসেম্বর) শিক্ষাবর্ষে ইনস্টিটিউট অফ ইংলিশ এন্ড আধার ল্যাংগুয়েজ এ ভর্তি বিজ্ঞপ্তি
+                            </div>
+                            <div class="ml-4">
+                                <a href="path-to-file.pdf" download class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="black">
+                                        <path fill-rule="evenodd" d="M12 16a1 1 0 01-.707-.293l-3.5-3.5a1 1 0 111.414-1.414L11 12.586V4a1 1 0 112 0v8.586l1.793-1.793a1 1 0 011.414 1.414l-3.5 3.5A1 1 0 0112 16zm-6 2a1 1 0 100 2h12a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 3: Assignment submission extended</a>
+                        <div class="flex items-center bg-lime-200 text- p-2 rounded-lg">
+                            <div class="flex flex-col items-center px-4 border-r-2 border-white">
+                                <span class="text-xl font-bold">17</span>
+                                <span class="text-sm">SEP</span>
+                            </div>
+                            <div class="ml-4 flex-grow text-sm">
+                                ২০২৩-২০২৪ (জুলাই-ডিসেম্বর) শিক্ষাবর্ষে ইনস্টিটিউট অফ ইংলিশ এন্ড আধার ল্যাংগুয়েজ এ ভর্তি বিজ্ঞপ্তি
+                            </div>
+                            <div class="ml-4">
+                                <a href="path-to-file.pdf" download class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="black">
+                                        <path fill-rule="evenodd" d="M12 16a1 1 0 01-.707-.293l-3.5-3.5a1 1 0 111.414-1.414L11 12.586V4a1 1 0 112 0v8.586l1.793-1.793a1 1 0 011.414 1.414l-3.5 3.5A1 1 0 0112 16zm-6 2a1 1 0 100 2h12a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 4: Holidays announced for next
-                                week</a>
+                        <div class="flex items-center bg-lime-200 text- p-2 rounded-lg">
+                            <div class="flex flex-col items-center px-4 border-r-2 border-white">
+                                <span class="text-xl font-bold">17</span>
+                                <span class="text-sm">SEP</span>
+                            </div>
+                            <div class="ml-4 flex-grow text-sm">
+                                ২০২৩-২০২৪ (জুলাই-ডিসেম্বর) শিক্ষাবর্ষে ইনস্টিটিউট অফ ইংলিশ এন্ড আধার ল্যাংগুয়েজ এ ভর্তি বিজ্ঞপ্তি
+                            </div>
+                            <div class="ml-4">
+                                <a href="path-to-file.pdf" download class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="black">
+                                        <path fill-rule="evenodd" d="M12 16a1 1 0 01-.707-.293l-3.5-3.5a1 1 0 111.414-1.414L11 12.586V4a1 1 0 112 0v8.586l1.793-1.793a1 1 0 011.414 1.414l-3.5 3.5A1 1 0 0112 16zm-6 2a1 1 0 100 2h12a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 5: New project deadline is next
-                                Monday</a>
-                        </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 6: Team meeting at 3 PM today</a>
-                        </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 7: New library timings from next
-                                week</a>
-                        </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 8: Graduation ceremony dates
-                                announced</a>
-                        </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 9: Sports event registration opens
-                                tomorrow</a>
-                        </div>
-                        <div class="notice py-2 mx-2 text-lg bg-white border px-3 rounded-lg shadow-lg">
-                            <a class="hover:text-blue-500" href=""> Notice 10: Office hours updated for next
-                                week</a>
+                        <div class="flex items-center bg-lime-200 text- p-2 rounded-lg">
+                            <div class="flex flex-col items-center px-4 border-r-2 border-white">
+                                <span class="text-xl font-bold">17</span>
+                                <span class="text-sm">SEP</span>
+                            </div>
+                            <div class="ml-4 flex-grow text-sm">
+                                ২০২৩-২০২৪ (জুলাই-ডিসেম্বর) শিক্ষাবর্ষে ইনস্টিটিউট অফ ইংলিশ এন্ড আধার ল্যাংগুয়েজ এ ভর্তি বিজ্ঞপ্তি
+                            </div>
+                            <div class="ml-4">
+                                <a href="path-to-file.pdf" download class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="black">
+                                        <path fill-rule="evenodd" d="M12 16a1 1 0 01-.707-.293l-3.5-3.5a1 1 0 111.414-1.414L11 12.586V4a1 1 0 112 0v8.586l1.793-1.793a1 1 0 011.414 1.414l-3.5 3.5A1 1 0 0112 16zm-6 2a1 1 0 100 2h12a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="absolute bottom-4 left-1/2 w-[91%] text-center transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out">
-                    <a href="#">View more</a>
+                <div class="absolute bottom-4 left-1/2 w-1/2 text-center transform -translate-x-1/2  bg-gradient-to-r from-lime-500 to-emerald-500 hover:bg-gradient-to-l text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-lime-500 hover:cursor-pointer hover:to-emerald-500 transition duration-300 ease-in-out">
+                    <a href="#">All Notices  </a>
                 </div>
             </div>
-
         </div>
 
     </div>
