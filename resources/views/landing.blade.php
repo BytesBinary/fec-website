@@ -8,6 +8,8 @@
     @include('partials.landing.short-details')
     @include('partials.landing.about')
     @include('partials.landing.key-features')
+    @include('partials.landing.dept-and-notice')
+    @include('partials.landing.alumni')
     {{-- @include('partials.landing.alumni') --}}
     @include('partials.landing.fec-website-linking')
 @endsection

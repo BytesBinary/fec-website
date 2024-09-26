@@ -5,6 +5,7 @@
 @import "tailwindcss/utilities";
 @import "glightbox/dist/css/glightbox.min.css";
 @import 'aos/dist/aos.css';
+@import 'swiper/swiper-bundle.css'; /* Add this for Swiper styles */
 
 :root {
     --default-font: "Poppins", sans-serif ;
@@ -14,8 +15,7 @@
     --secondary-deep-color: #f97316;
     --secondary-light-color: #facc15;
     --text-color: #212121;
-
-  }
+}
 
 body {
     font-family: 'Poppins', sans-serif !important;
@@ -92,6 +92,14 @@ Landing Page CSS
     animation: zoomIn 2s ease forwards; /* Increased duration for smoother zoom-in */
 }
 
-.zoom-out {
-    animation: zoomOut 2s ease forwards; /* Increased duration for smoother zoom-out */
+/* Add custom Swiper styles (optional) */
+.swiper-container {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;   /* Ensure no overflow */
+}
+
+.swiper-slide {
+    text-align: center;
+    width: 100%;
 }
