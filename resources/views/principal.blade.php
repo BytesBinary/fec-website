@@ -3,7 +3,7 @@
 @section('title', 'Principal - FEC')
 
 @section('content')
-<div id="about" class=" bg-white overflow-hidden mt-0 mb-20 lg:my-20  lg:flex justify-end lg:mr-7 ">
+<div id="about" class=" bg-white overflow-hidden mt-0 mb-20 lg:my-20 flex-col-reverse flex lg:flex-row justify-end lg:mr-7 ">
     <div class="max-w-6xl  bg-lime-100 rounded-3xl shadow-2xl p-6 lg:flex border-t-4 lg:border-l-4 lg:border-t-0 border-emerald-500">
         <!-- Image Section -->
         <div class="flex lg:flex-col lg:w-1/4 gap-4">
@@ -34,11 +34,11 @@
             <!-- Action Buttons -->
         </div>
     </div>
-    <div class="flex flex-col space-y-3 mt-6">
-        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold rounded-lg rounded-l-none shadow-md hover:bg-yellow-600">Full Biography</a>
-        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold rounded-lg rounded-l-none shadow-md hover:bg-yellow-600">Short Biography</a>
-        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold rounded-l-none rounded-lg shadow-md hover:bg-yellow-600">Achivements</a>
-        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold rounded-l-none rounded-lg shadow-md hover:bg-yellow-600">Google Scholar</a>
+    <div class="p-3 lg:p-0 text-center grid grid-cols-2 gap-2 lg:flex lg:flex-col lg:space-y-3 lg:mt-6">
+        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold rounded-lg  lg:rounded-l-none shadow-md hover:bg-yellow-600">Full Biography</a>
+        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold rounded-lg  lg:rounded-l-none shadow-md hover:bg-yellow-600">Short Biography</a>
+        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold  lg:rounded-l-none rounded-lg shadow-md hover:bg-yellow-600">Achivements</a>
+        <a href="#" class="px-4 py-2 bg-secondColor text-center text-white font-semibold  lg:rounded-l-none rounded-lg shadow-md hover:bg-yellow-600">Google Scholar</a>
     </div>
 
 </div>
