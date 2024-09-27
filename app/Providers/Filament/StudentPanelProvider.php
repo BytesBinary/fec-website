@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Http\Middleware\StudentPanelAccess;
 use App\StudentCustomRegister;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -56,6 +57,7 @@ class StudentPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                StudentPanelAccess::class,
             ]);
     }
 }
