@@ -6,7 +6,7 @@
             </p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down">
             <div class="swiper-container swiper-container-department-page">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper mb-10">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <x-departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
