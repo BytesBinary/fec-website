@@ -3,8 +3,8 @@
 @section('title', 'Principal - FEC')
 
 @section('content')
-<div id="about" class=" bg-white overflow-hidden mt-0 mb-20 lg:my-20  lg:flex justify-end lg:mr-7">
-    <div class="max-w-6xl  bg-lime-100 rounded-lg shadow-2xl p-6 lg:flex  ">
+<div id="about" class=" bg-white overflow-hidden mt-0 mb-20 lg:my-20  lg:flex justify-end lg:mr-7 ">
+    <div class="max-w-6xl  bg-lime-100 rounded-lg shadow-2xl p-6 lg:flex border-t-4 lg:border-l-4 lg:border-t-0 border-emerald-500">
         <!-- Image Section -->
         <div class="flex lg:flex-col lg:w-1/4 gap-4">
             <img class="h-auto w-2/4 lg:w-full object-cover object-top rounded-lg shadow-md" src="{{asset('images/administration/principal.jpg')}}" alt="Principal Image">
