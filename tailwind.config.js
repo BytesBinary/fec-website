@@ -15,6 +15,7 @@ export default {
                 bgColor: "#abef5f",
                 bgColorLighter: "#c6f28a",
                 bgColorDarker: "#8bd746",
+                secondColor: "#f97316",
                 txtColor: "#212121",
                 borderColor: "#a1a1a1",
             },
