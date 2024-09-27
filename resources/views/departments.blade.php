@@ -5,7 +5,7 @@
 @section('content')
     <div class="flex justify-center items-center">
         <div class="container p-8 mx-auto mt-16 mb-10 bg-white rounded-sm shadow-lg shadow-gray-200">
-            <h1 class="text-center text-5xl font-extrabold text-gray-800 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="text-center text-5xl font-extrabold text-green-900 mb-5" data-aos="fade-up" data-aos-delay="100">
                 Departments
             </h1>
             <hr class="h-1 w-48 mx-auto my-4 bg-emerald-500 rounded mb-12" data-aos="fade-up" data-aos-delay="200">
