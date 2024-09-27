@@ -51,13 +51,13 @@
         </button>
         <div x-show="currentDropdown === 'administration'" class="absolute left-0 mt-2 w-48 bg-lime-50 rounded shadow-lg" x-transition>
             <a href="{{route('principal')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Principal</a>
-            <a href="{{route('dept-head-cse')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of CSE</a>
-            <a href="{{route('dept-head-eee')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of EEE</a>
-            <a href="{{route('dept-head-ce')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of CE</a>
-            <a href="{{route('dept-head-non-tech')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of Non-Tech</a>
+            <a href="{{route('dept-cse')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of CSE</a>
+            <a href="{{route('dept-eee')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of EEE</a>
+            <a href="{{route('dept-ce')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of CE</a>
+            <a href="{{route('dept-non-tech')}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter">Department Head Of Non-Tech</a>
         </div>
     </div>
-    
+
     <!-- Links Dropdown -->
     <div class="relative" @mouseover="currentDropdown = 'links'" @mouseleave="currentDropdown = null">
         <button :class="{'bg-lime-50': currentDropdown === 'links', 'hover:bg-lime-50': currentDropdown !== 'links'}" class="flex items-center  px-3 py-2 rounded">

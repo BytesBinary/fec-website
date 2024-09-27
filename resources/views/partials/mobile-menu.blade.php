@@ -53,10 +53,10 @@
             </button>
             <div x-show="currentDropdown === 'administration'" class="bg-gray-400">
                 <a href="{{route('principal')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Principal</a>
-                <a href="{{route('dept-head-cse')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of CSE</a>
-                <a href="{{route('dept-head-eee')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of EEE</a>
-                <a href="{{route('dept-head-ce')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of CE</a>
-                <a href="{{route('dept-head-non-tech')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of Non-Tech</a>
+                <a href="{{route('dept-cse')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of CSE</a>
+                <a href="{{route('dept-eee')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of EEE</a>
+                <a href="{{route('dept-ce')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of CE</a>
+                <a href="{{route('dept-non-tech')}}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Department Head Of Non-Tech</a>
                 <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Board Members</a>
             </div>
 
