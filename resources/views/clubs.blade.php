@@ -6,10 +6,10 @@
     <div class="container mx-auto my-5 p-5 px-10 bg-white shadow-lg shadow-gray-500 mb-16 rounded">
         <h1 class="text-5xl font-bold text-center pt-10">Clubs</h1>
         <hr class="w-48 h-1 mx-auto my-2 bg-gray-600 mb-16 border-0 rounded md:my-10">
-        
+
         <div class="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mb-16">
             {{-- Card 1: Research & Innovation Center --}}
-            <div class="flex flex-col w-full my-3 items-center bg-white shadow-gray-500 rounded-lg hover:scale-105 duration-150 hover:cursor-pointer shadow-2xl md:flex-row" data-aos="fade-right">
+            <div class="flex flex-col w-full my-3 items-center bg-white shadow-gray-500 rounded-lg hover:scale-105 duration-150 hover:cursor-pointer shadow-2xl md:flex-row" data-aos="fade-up">
                 <img class="object-cover mx-3 w-full h-80 rounded-t-lg md:w-80 md:h-auto md:rounded-l-lg" src="images/card/cse-dept.jpg" alt="Research & Innovation Center Image">
                 <div class="flex flex-col justify-between p-6 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Research & Innovation Center</h5>
@@ -45,7 +45,7 @@
             </div>
 
             {{-- Card 3: FEC Photographic Club --}}
-            <div class="flex flex-col w-full my-3 items-center bg-white shadow-gray-500 rounded-lg hover:scale-105 duration-150 hover:cursor-pointer shadow-2xl md:flex-row" data-aos="fade-left">
+            <div class="flex flex-col w-full my-3 items-center bg-white shadow-gray-500 rounded-lg hover:scale-105 duration-150 hover:cursor-pointer shadow-2xl md:flex-row" data-aos="fade-up">
                 <img class="object-cover mx-3 w-full h-80 rounded-t-lg md:w-80 md:h-auto md:rounded-l-lg" src="images/card/photography.jpg" alt="Photographic Club Image">
                 <div class="flex flex-col justify-between p-6 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">FEC Photographic Club</h5>
@@ -81,7 +81,7 @@
             </div>
 
             {{-- Card 5: FEC Professionals Club --}}
-            <div class="flex flex-col w-full my-3 items-center bg-white shadow-gray-500 rounded-lg hover:scale-105 duration-150 hover:cursor-pointer shadow-2xl md:flex-row" data-aos="fade-left">
+            <div class="flex flex-col w-full my-3 items-center bg-white shadow-gray-500 rounded-lg hover:scale-105 duration-150 hover:cursor-pointer shadow-2xl md:flex-row" data-aos="fade-up">
                 <img class="object-cover mx-3 w-full h-80 rounded-t-lg md:w-80 md:h-auto md:rounded-l-lg" src="images/card/professionals.jpg" alt="Professionals Club Image">
                 <div class="flex flex-col justify-between p-6 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">FEC Professionals Club</h5>
