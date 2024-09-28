@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\NoticesResource\Pages;
+namespace App\Filament\Admin\NoticesResource\Pages;
 
-use App\Filament\Resources\NoticesResource;
-use App\Models\Department;
+use App\Filament\Admin\NoticesResource;
 use App\Models\Notice;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
