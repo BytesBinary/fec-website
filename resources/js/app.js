@@ -64,6 +64,7 @@ const swiper = new Swiper('.swiper-container-department-page', {
 
 const swipers = new Swiper('.swiper-container-gallery', {
     loop: true,                    // Enable continuous loop mode
+    spaceBetween : 0,
     autoplay: {
         delay: 3000,               // Set autoplay delay (3 seconds)
         disableOnInteraction: false
@@ -75,15 +76,12 @@ const swipers = new Swiper('.swiper-container-gallery', {
     breakpoints: {                 // Responsive breakpoints
         640: {
             slidesPerView: 2,
-            spaceBetween: 20,
         },
         768: {
             slidesPerView: 3,
-            spaceBetween: 30,
         },
         1024: {
             slidesPerView: 4,
-            spaceBetween: 40,
         },
     }
 })
