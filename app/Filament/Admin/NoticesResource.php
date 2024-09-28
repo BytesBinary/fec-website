@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin;
 
 use App\Filament\Resources\NoticesResource\Pages;
 use App\Filament\Resources\NoticesResource\RelationManagers;
 use App\Models\Notice;
-use App\Models\Notices;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -73,9 +72,9 @@ class NoticesResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListNotices::route('/'),
-            'create' => Pages\CreateNotices::route('/create'),
-            'edit' => Pages\EditNotices::route('/{record}/edit'),
+            'index' => \App\Filament\Admin\NoticesResource\Pages\ListNotices::route('/'),
+            'create' => \App\Filament\Admin\NoticesResource\Pages\CreateNotices::route('/create'),
+            'edit' => \App\Filament\Admin\NoticesResource\Pages\EditNotices::route('/{record}/edit'),
         ];
     }
 }
