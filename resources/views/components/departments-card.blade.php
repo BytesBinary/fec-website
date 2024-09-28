@@ -14,10 +14,10 @@
                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
         </figure>
         <div class="flex flex-col flex-grow p-6 rounded-b-lg">
-            <p class="font-bold text-3xl text-center mb-4 text-gray-800" data-aos="fade-up" data-aos-delay="200">
+            <p class="font-bold text-3xl text-center mb-4 text-gray-800">
                {!!$name!!}</p>
             <hr class="w-full h-1 mx-auto bg-emerald-300 rounded" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-actions mt-6 flex justify-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-actions mt-6 flex justify-center">
                 <button onclick="window.location.href='#'" type="button"
                     class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                     <span class="text-xl text-gray-800">Explore</span>
@@ -34,16 +34,16 @@
                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
         </figure>
         <div class="flex flex-col flex-grow p-6 rounded-b-lg">
-            <p class="font-bold text-3xl text-center mb-4 text-gray-800" data-aos="fade-up" data-aos-delay="200">
+            <p class="font-bold text-3xl text-center mb-4 text-gray-800">
                 {!! $name !!}</p>
             <hr class="w-48 h-1 mx-auto bg-emerald-300 rounded" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Description: The flex-grow here ensures the text expands without affecting the button placement -->
-            <p class="text-justify mt-5 text-gray-600 flex-grow" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-justify mt-5 text-gray-600 flex-grow">
                 {{ $description }}
             </p>
 
-            <div class="card-actions mt-6 flex justify-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-actions mt-6 flex justify-center" >
                 <button onclick="window.location.href='{{ $url }}'" type="button"
                     class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                     <span class="text-xl text-gray-800">Explore</span>

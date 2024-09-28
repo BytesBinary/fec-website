@@ -23,7 +23,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 // Swiper Initialization
-const swiper = new Swiper('.swiper-container-department-page', {
+const departmentSwiper = new Swiper('.swiper-container-department-page', {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -44,7 +44,8 @@ const swiper = new Swiper('.swiper-container-department-page', {
     },
     pagination: {
         el: ".swiper-pagination",
-        clickable: true
+        clickable: true,
+        dynamicBullets: true,
     },
     breakpoints: {
         640: {
@@ -62,8 +63,9 @@ const swiper = new Swiper('.swiper-container-department-page', {
     }
 });
 
-const swipers = new Swiper('.swiper-container-gallery', {
+const gallerySwiper = new Swiper('.swiper-container-gallery', {
     loop: true,                    // Enable continuous loop mode
+    spaceBetween : 0,
     autoplay: {
         delay: 3000,               // Set autoplay delay (3 seconds)
         disableOnInteraction: false
@@ -71,20 +73,47 @@ const swipers = new Swiper('.swiper-container-gallery', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        dynamicBullets: true,
     },
     breakpoints: {                 // Responsive breakpoints
         640: {
             slidesPerView: 2,
-            spaceBetween: 20,
         },
         768: {
             slidesPerView: 3,
-            spaceBetween: 30,
         },
         1024: {
             slidesPerView: 4,
-            spaceBetween: 40,
         },
     }
-})
+});
+
+const clubsPageSwiper = new Swiper('.clubs-page-swiper', {
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    fadeEffect: true,
+    spaceBetween: 25,
+    autoplay: {
+        delay: 2000,               // Set autoplay delay (3 seconds)
+        disableOnInteraction: false
+    },
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    }
+});
 
