@@ -17,7 +17,7 @@
                         name="Computer Science & Engineering"
                         image="images/card/cse-dept.jpg"
                         description="Unleash your creativity with Computer Science and Engineering! CSE is at the forefront of innovation, combining theory and practice to develop cutting-edge software and hardware solutions. From artificial intelligence and cybersecurity to data science and cloud computing, this field equips you with the skills to tackle complex problems and drive technological advancements. Join us and explore the limitless possibilities of computer science!"
-                        url="{{route('dept-cse')}}"
+                        url="{{route('departments.cse-department')}}"
                     />
                 </div>
 
@@ -27,7 +27,7 @@
                         name="Electrical & Electronics Engineering"
                         image="images/card/cse-dept.jpg"
                         description="Explore the power of innovation with Electrical and Electronics Engineering! EEE focuses on the design, development, and maintenance of electrical systems and electronic devices. From circuit design and power generation to robotics and telecommunications, this field combines engineering principles with cutting-edge technology. Gain the skills to tackle complex electrical challenges."
-                        url="{{route('dept-eee')}}"
+                        url="{{route('departments.eee-department')}}"
                     />
                 </div>
 
@@ -37,7 +37,7 @@
                         name="Civil Engineering"
                         image="images/card/cse-dept.jpg"
                         description="Build the future with Civil Engineering! CE involves the design, construction, and maintenance of infrastructure such as bridges, roads, and buildings. This field blends engineering principles with architectural creativity to create safe, sustainable, and functional structures. From urban planning and structural analysis to environmental impact and project management, equip yourself with the expertise to shape the world around you."
-                        url="{{route('dept-ce')}}"
+                        url="{{route('departments.ce-department')}}"
                     />
                 </div>
 
