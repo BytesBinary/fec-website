@@ -4,16 +4,13 @@
 
 @section('content')
     @if( !$notices->isEmpty() )
-        <div class="container mx-auto p-5 my-3 shadow-lg shadow-gray-500 bg-gray-100 rounded"
+        <div class="container mx-auto p-5 mb-3 shadow-lg shadow-gray-500 bg-gray-100 rounded"
              x-data="noticeBoard({{ json_encode($notices->first()->id) }}, '{{ json_encode($notices->first()->title) }}', '{{ asset('storage/' . $notices->first()->pdf ) }}')">
-            <x-breadcrumb :links="[
-            ['label' => 'Home', 'url' => '/', 'icon' => 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z', 'active' => false],
-            ['label' => 'Notices', 'icon' => 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z']
-         ]"/>
-            <h1 class="text-2xl font-bold mb-2">Notice Board</h1>
+
+            <h1 class="text-4xl font-bold mb-6 text-center  p-3 rounded-lg">Notice Board</h1>
             <!-- Search Bar -->
             <div class="mb-4">
-                <input type="text" placeholder="Search by title..." class="w-full p-2 bg-white border rounded"
+                <input type="text" placeholder="Search by title..." class="w-full p-2 bg-white border border-gray-400 rounded"
                        x-model="searchQuery"
                        @input="filterNotices" />
             </div>
@@ -22,8 +19,8 @@
                 <div class="col-span-1 cursor-pointer">
                     <ul class="space-y-4">
                         <template x-for="(notice, index) in filteredNotices" :key="notice.id">
-                            <li :class="currentId === notice.id ? 'bg-gray-200' : 'bg-white'"
-                                class="p-4 rounded-lg shadow hover:bg-gray-300"
+                            <li :class="currentId === notice.id ? 'bg-cyan-200' : 'bg-cyan-50'"
+                                class="p-4 rounded-lg shadow hover:bg-cyan-300"
                                 @click="changeNotice(notice.id, notice.title, notice.pdf)">
                                 <a href="#" class="text-md font-semibold" x-text="notice.title"></a>
                                 <p class="text-sm text-gray-600" x-text="formatDate(notice.publish_date)"></p>

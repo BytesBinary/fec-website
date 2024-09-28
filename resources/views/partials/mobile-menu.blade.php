@@ -1,6 +1,6 @@
 <!-- drawer component -->
 <div x-show="open" class="md:hidden" @click.away="open = false">
-    <div class="fixed inset-y-0 left-0 w-1/2 bg-gradient-to-b from-gray-600 via-slate-600 to-gray-800 text-white transform transition-transform off-canvas-enter-active off-canvas-leave-active" x-show="open" x-transition:enter="off-canvas-enter" x-transition:leave="off-canvas-leave-to">
+    <div class="fixed inset-y-0 left-0 w-3/4 bg-gradient-to-b from-gray-600 via-slate-600 to-gray-800 text-white transform transition-transform off-canvas-enter-active off-canvas-leave-active" x-show="open" x-transition:enter="off-canvas-enter" x-transition:leave="off-canvas-leave-to">
         <div class="flex justify-between items-center p-4 border-b border-txtColor">
             {{-- <h2 class="text-lg font-semibold">Faridpur Engineering College</h2> --}}
             <div class="flex items-center gap-1"><img src="{{asset('images/FEClogo.png')}}" alt="" class="w-12 h-12">

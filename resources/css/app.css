@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.maateen.me/solaiman-lipi/font.css');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "glightbox/dist/css/glightbox.min.css";
 @import 'aos/dist/aos.css';
+@import 'swiper/swiper-bundle.css'; /* Add this for Swiper styles */
 
 :root {
     --default-font: "Poppins", sans-serif ;
@@ -12,12 +14,15 @@
     --primary-color: #abef5f;
     --secondary-deep-color: #f97316;
     --secondary-light-color: #facc15;
-    --text-color: #212121;
-
-  }
+    --test-color: #ffa800;
+ }
 
 body {
     font-family: 'Poppins', sans-serif !important;
+}
+
+.bangla-font {
+    font-family: 'SolaimanLipi', Arial, sans-serif !important;
 }
 
 /*
@@ -87,6 +92,18 @@ Landing Page CSS
     animation: zoomIn 2s ease forwards; /* Increased duration for smoother zoom-in */
 }
 
-.zoom-out {
-    animation: zoomOut 2s ease forwards; /* Increased duration for smoother zoom-out */
+/* Ensure Swiper is responsive and doesn't overflow */
+.swiper-container {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;  /* Remove any padding that might affect responsiveness */
 }
+
+.swiper-slide {
+    text-align: center;
+    width: auto; /* Adjust slide width for better responsiveness */
+    flex-shrink: 0; /* Prevent slides from shrinking on smaller screens */
+}
+
+
