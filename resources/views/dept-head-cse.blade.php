@@ -14,8 +14,7 @@
             <nav class="mt-4 mx-auto">
                 <a href="/" class="block px-4 py-2 text-gray-700 rounded transition duration-300">Home</a>
 
-                <button @click="currentDropdown = currentDropdown === 'academics' ? null : 'academics'"
-                    class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
+                <button @click="currentDropdown = currentDropdown === 'academics' ? null : 'academics'" class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
                     Academics
                     <x-svg-icon.drop-down-icon />
                 </button>
@@ -26,8 +25,7 @@
                     <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Student Statistics</a>
                 </div>
 
-                <button @click="currentDropdown = currentDropdown === 'research' ? null : 'research'"
-                    class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
+                <button @click="currentDropdown = currentDropdown === 'research' ? null : 'research'" class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
                     Researches & Events
                     <x-svg-icon.drop-down-icon />
                 </button>
@@ -37,8 +35,7 @@
                     <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Events</a>
                 </div>
 
-                <button @click="currentDropdown = currentDropdown === 'campus_life' ? null : 'campus_life'"
-                    class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
+                <button @click="currentDropdown = currentDropdown === 'campus_life' ? null : 'campus_life'" class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
                     Campus Life
                     <x-svg-icon.drop-down-icon />
                 </button>
@@ -48,8 +45,7 @@
                     <a href="{{ route('clubs') }}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Clubs</a>
                 </div>
 
-                <button @click="currentDropdown = currentDropdown === 'administration' ? null : 'administration'"
-                    class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
+                <button @click="currentDropdown = currentDropdown === 'administration' ? null : 'administration'" class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
                     Administration
                     <x-svg-icon.drop-down-icon />
                 </button>
@@ -62,8 +58,7 @@
                     <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Board Members</a>
                 </div>
 
-                <button @click="currentDropdown = currentDropdown === 'links' ? null : 'links'"
-                    class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
+                <button @click="currentDropdown = currentDropdown === 'links' ? null : 'links'" class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 rounded transition duration-300">
                     Links
                     <x-svg-icon.drop-down-icon />
                 </button>
@@ -89,8 +84,7 @@
                 Join us to innovate and shape the future of technology!
             </p>
             <div class="text-center mt-8">
-                <a href="/dept/eecs/learn-more"
-                    class="inline-block px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-300">
+                <a href="/dept/eecs/learn-more" class="inline-block px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-300">
                     Learn More
                 </a>
             </div>
@@ -164,4 +158,3 @@
                         </li>
                     </ul>
                 </nav> --}}
-
