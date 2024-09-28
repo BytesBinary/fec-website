@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Settings;
 
 use App\Filament\Resources\DepartmentResource\Pages;
 use App\Filament\Resources\DepartmentResource\RelationManagers;
+use App\Filament\Resources\Settings;
 use App\Models\Department;
-use Filament\Actions\Action;
-use Filament\Actions\CreateAction;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\RichEditor;
 use Illuminate\Support\Str;
 
 class DepartmentResource extends Resource
@@ -24,6 +23,8 @@ class DepartmentResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
     protected static ?string $navigationGroup = 'Settings';
+
+    protected static ?int $navigationSort = 22;
 
     public static function form(Form $form): Form
     {
@@ -99,9 +100,9 @@ class DepartmentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListDepartments::route('/'),
-            'create' => Pages\CreateDepartment::route('/create'),
-            'edit' => Pages\EditDepartment::route('/{record}/edit'),
+            'index' => \App\Filament\Admin\Settings\DepartmentResource\Pages\ListDepartments::route('/'),
+            'create' => \App\Filament\Admin\Settings\DepartmentResource\Pages\CreateDepartment::route('/create'),
+            'edit' => \App\Filament\Admin\Settings\DepartmentResource\Pages\EditDepartment::route('/{record}/edit'),
         ];
     }
 }

@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Settings;
 
 use App\Filament\Resources\CourseResource\Pages;
 use App\Filament\Resources\CourseResource\RelationManagers;
+use App\Filament\Resources\Settings;
 use App\Models\Course;
+use App\Models\Department;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Form;
@@ -13,7 +15,6 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
 class CourseResource extends Resource
@@ -24,6 +25,8 @@ class CourseResource extends Resource
 
     protected static ?string $navigationGroup = 'Settings';
 
+    protected static ?int $navigationSort = 23;
+
     public static function form(Form $form): Form
     {
         return $form
@@ -33,7 +36,6 @@ class CourseResource extends Resource
                     ->maxLength(255)
                     ->placeholder('Course Title')
                     ->label('Course Title')
-                    ->columnSpan('full')
                     ->live(true)
                     ->afterStateUpdated(function(Set $set, $state){
                         $set('slug', Str::slug($state));
@@ -48,6 +50,9 @@ class CourseResource extends Resource
                         column:'slug',
                         ignoreRecord: true,
                     ),
+                Forms\Components\Select::make('department')
+                    ->required()
+                    ->options(Department::all()->pluck('short_title', 'slug')),
                 Forms\Components\Select::make('semester')
                     ->required()
                     ->options([
@@ -81,6 +86,14 @@ class CourseResource extends Resource
                     ->label('Course Slug')
                     ->searchable()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('department')
+                    ->label('Department')
+                    ->searchable()
+                    ->sortable()
+                    ->formatStateUsing(function ($state, $record) {
+                        $department = Department::where('slug', $record->department)->firstOrFail();
+                        return $department->short_title;
+                    }),
                 Tables\Columns\TextColumn::make('semester')
                     ->label('Semester')
                     ->searchable()
@@ -140,9 +153,9 @@ class CourseResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCourses::route('/'),
-            'create' => Pages\CreateCourse::route('/create'),
-            'edit' => Pages\EditCourse::route('/{record}/edit'),
+            'index' => \App\Filament\Admin\Settings\CourseResource\Pages\ListCourses::route('/'),
+            'create' => \App\Filament\Admin\Settings\CourseResource\Pages\CreateCourse::route('/create'),
+            'edit' => \App\Filament\Admin\Settings\CourseResource\Pages\EditCourse::route('/{record}/edit'),
         ];
     }
 }

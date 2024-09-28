@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\CourseResource\Pages;
+namespace App\Filament\Admin\Settings\CourseResource\Pages;
 
-use App\Filament\Resources\CourseResource;
+use App\Filament\Admin\Settings\CourseResource;
 use App\Models\Course;
 use Filament\Actions;
-use Filament\Forms\Components\Tabs;
 use Filament\Resources\Components\Tab;
 use Filament\Resources\Pages\ListRecords;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\DesignationResource\Pages;
+namespace App\Filament\Admin\Settings\DesignationResource\Pages;
 
-use App\Filament\Resources\DesignationResource;
+use App\Filament\Admin\Settings\DesignationResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 

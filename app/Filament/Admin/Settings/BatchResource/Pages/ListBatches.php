@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Filament\Resources\BatchResource\Pages;
+namespace App\Filament\Admin\Settings\BatchResource\Pages;
 
-use App\Filament\Resources\BatchResource;
+use App\Filament\Admin\Settings\BatchResource;
 use App\Models\Batch;
-use App\Models\Department;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Resources\Pages\ListRecords\Tab;

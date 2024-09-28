@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Settings;
 
 use App\Filament\Resources\DesignationResource\Pages;
 use App\Filament\Resources\DesignationResource\RelationManagers;
+use App\Filament\Resources\Settings;
 use App\Models\Designation;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DesignationResource extends Resource
 {
@@ -20,6 +19,8 @@ class DesignationResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-arrow-path-rounded-square';
 
     protected static ?string $navigationGroup = 'Settings';
+
+    protected static ?int $navigationSort = 21;
 
     public static function form(Form $form): Form
     {
@@ -65,9 +66,9 @@ class DesignationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListDesignations::route('/'),
-            'create' => Pages\CreateDesignation::route('/create'),
-            'edit' => Pages\EditDesignation::route('/{record}/edit'),
+            'index' => \App\Filament\Admin\Settings\DesignationResource\Pages\ListDesignations::route('/'),
+            'create' => \App\Filament\Admin\Settings\DesignationResource\Pages\CreateDesignation::route('/create'),
+            'edit' => \App\Filament\Admin\Settings\DesignationResource\Pages\EditDesignation::route('/{record}/edit'),
         ];
     }
 }

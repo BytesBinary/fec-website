@@ -1,22 +1,17 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Settings;
 
 use App\Filament\Resources\BatchResource\Pages;
 use App\Filament\Resources\BatchResource\RelationManagers;
+use App\Filament\Resources\Settings;
 use App\Models\Batch;
-use Filament\Actions\ForceDeleteAction;
-use Filament\Actions\RestoreAction;
-use Filament\Forms;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BatchResource extends Resource
 {
@@ -25,6 +20,8 @@ class BatchResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $navigationGroup = 'Settings';
+
+    protected static ?int $navigationSort = 20;
 
     public static function form(Form $form): Form
     {
@@ -99,9 +96,9 @@ class BatchResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBatches::route('/'),
-            'create' => Pages\CreateBatch::route('/create'),
-            'edit' => Pages\EditBatch::route('/{record}/edit'),
+            'index' => \App\Filament\Admin\Settings\BatchResource\Pages\ListBatches::route('/'),
+            'create' => \App\Filament\Admin\Settings\BatchResource\Pages\CreateBatch::route('/create'),
+            'edit' => \App\Filament\Admin\Settings\BatchResource\Pages\EditBatch::route('/{record}/edit'),
         ];
     }
 }
