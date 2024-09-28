@@ -14,7 +14,7 @@
                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
         </figure>
         <div class="flex flex-col flex-grow p-6 rounded-b-lg">
-            <p class="font-bold text-3xl text-center mb-4 text-gray-800" data-aos="fade-up" data-aos-delay="200">
+            <p class="font-bold text-3xl text-center mb-4 text-gray-800">
                {!!$name!!}</p>
             <hr class="w-full h-1 mx-auto bg-emerald-300 rounded" data-aos="fade-up" data-aos-delay="200">
             <div class="card-actions mt-6 flex justify-center" data-aos="fade-up" data-aos-delay="200">
@@ -34,7 +34,7 @@
                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
         </figure>
         <div class="flex flex-col flex-grow p-6 rounded-b-lg">
-            <p class="font-bold text-3xl text-center mb-4 text-gray-800" data-aos="fade-up" data-aos-delay="200">
+            <p class="font-bold text-3xl text-center mb-4 text-gray-800">
                 {!! $name !!}</p>
             <hr class="w-48 h-1 mx-auto bg-emerald-300 rounded" data-aos="fade-up" data-aos-delay="200">
 
