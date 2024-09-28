@@ -12,7 +12,7 @@ class AcademicsController extends Controller
     {
         $notices = Notice::where('type', 'common')
                     ->orderBy('created_at', 'asc')
-                    ->paginate(30);
+                    ->paginate(15);
 
         return view('notices', [
             'notices' => $notices,
