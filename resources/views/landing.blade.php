@@ -3,6 +3,7 @@
 @section('title', 'Home - FEC')
 
 @section('content')
+
     @include('partials.landing.hero')
     @include('partials.landing.administration')
     @include('partials.landing.dept-and-notice')
