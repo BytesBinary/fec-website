@@ -15,6 +15,7 @@ class Course extends Model
         'description',
         'semester',
         'slug',
+        'department',
         'enrolled_teacher_id'
     ];
 }

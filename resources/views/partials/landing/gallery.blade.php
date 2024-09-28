@@ -1,6 +1,5 @@
-<div class="swiper-container swiper-container-gallery">
-    <div class="swiper-wrapper">
-
+<div class="swiper-container swiper-container-gallery py-10">
+    <div class="swiper-wrapper mb-10">
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -12,7 +11,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -24,7 +22,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -36,7 +33,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -48,7 +44,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -60,7 +55,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -72,7 +66,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -84,7 +77,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -96,7 +88,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -108,7 +99,6 @@
                 </figure>
             </div>
         </div>
-
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
@@ -120,7 +110,8 @@
                 </figure>
             </div>
         </div>
-
-
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
 </div>
