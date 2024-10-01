@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LandingPageController::class, 'index'])->name('landing');
 
 Route::get('/notices', [AcademicsController::class , 'notices'])->name('notices');
-Route::get('/departments', [AcademicsController::class , 'departments'])->name('departments');
 
 Route::get('/discover-fec', [CampusLifeController::class , 'discoverFec'])->name('discover-fec');
 Route::get('/clubs',[CampusLifeController::class,'clubs'])->name('clubs');

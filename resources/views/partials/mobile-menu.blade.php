@@ -22,9 +22,29 @@
             </button>
             <div x-show="currentDropdown === 'academics'" class="bg-gray-400">
                 <a href="{{ route('notices') }}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Notices</a>
-                <a href="{{ route('departments') }}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Departments</a>
                 <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Library</a>
                 <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Student Statistics</a>
+            </div>
+
+            <button @click="currentDropdown = currentDropdown === 'administration' ? null : 'administration'" class="w-full text-left px-4 py-2 flex justify-between">
+                Administration
+                <x-svg-icon.drop-down-icon />
+            </button>
+            <div x-show="currentDropdown === 'administration'" class="bg-gray-400">
+                <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Principal</a>
+                <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Head Of CSE</a>
+                <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Head Of EEE</a>
+                <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Head Of CE</a>
+            </div>
+
+            <button @click="currentDropdown = currentDropdown === 'departments' ? null : 'departments'" class="w-full text-left px-4 py-2 flex justify-between">
+                Departments
+                <x-svg-icon.drop-down-icon />
+            </button>
+            <div x-show="currentDropdown === 'departments'" class="bg-gray-400">
+                <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Computer Science & Engineering</a>
+                <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Electrical & Electronics Engineering</a>
+                <a href="#" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Civil Engineering</a>
             </div>
 
             <button @click="currentDropdown = currentDropdown === 'research' ? null : 'research'" class="w-full text-left px-4 py-2 flex justify-between">

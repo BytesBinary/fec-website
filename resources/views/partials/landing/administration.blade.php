@@ -6,7 +6,7 @@
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded" data-aos="fade-down">
             <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4 hover:cursor-pointer" data-aos="fade-up">
                 <div class="flex justify-center transform transition duration-300 hover:shadow-2xl" data-aos="fade-up"
-                    data-aos-delay="200">
+                    data-aos-delay="200" onclick="window.location.href='{{route('principal')}}'">
                     <div class="max-w-[18rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden h-[28rem]">
                         <img class="w-full h-56 object-cover" src="{{asset('images/administration/principal.jpg')}}"
                             alt="Principal Image">
@@ -43,7 +43,7 @@
             </div>
 
             <div class="grid gap-6 grid-cols-1 mt-10 pb-5 lg:grid-cols-3">
-                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="window.location.href=''">
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
                         <img class="w-full h-56 object-cover" src="{{asset("images/administration/cse-head.jpg")}}"
@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-down" data-aos-delay="200">
+                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-down" data-aos-delay="200" onclick="window.location.href=''">
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
                         <img class="w-full h-56 object-cover" src="{{asset("images/administration/eee-head.jpg")}}"
@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex justify-center hover:cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="window.location.href=''">
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[]">
                         <img class="w-full h-56 object-cover" src="{{asset("images/administration/ce-head.jpg")}}"

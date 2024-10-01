@@ -39,8 +39,8 @@
                     <x-svg-icon.drop-down-icon />
                 </button>
                 <div x-show="currentDropdown === 'administration'" class="bg-orange-100 p-2 rounded">
-                    <a href="{{ route('dept-head-cse') }}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Incourse</a>
-                    <a href="{{ route('dept-head-eee') }}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Semester Final</a>
+                    <a href="" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Incourse</a>
+                    <a href="" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor">Semester Final</a>
                 </div>
 
                 <a href="#" class="block px-4 py-2 text-gray-700 rounded transition duration-300">Semester Plan</a>

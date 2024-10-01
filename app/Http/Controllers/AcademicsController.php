@@ -18,8 +18,4 @@ class AcademicsController extends Controller
             'notices' => $notices,
         ]);
     }
-
-    public function departments() {
-        return view('departments');
-    }
 }
