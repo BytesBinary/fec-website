@@ -2,7 +2,6 @@
 
 namespace App\Providers\Filament;
 
-use App\Http\Middleware\PrincipalPanelAccess;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -19,23 +18,24 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
-class PrincipalPanelProvider extends PanelProvider
+class UserPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->id('principal')
-            ->path('principal')
+            ->default()
+            ->id('user')
+            ->path('user')
             ->login()
             ->colors([
-                'primary' => Color::Cyan,
+                'primary' => Color::Amber,
             ])
-            ->discoverResources(in: app_path('Filament/Principal'), for: 'App\\Filament\\Principal')
-            ->discoverPages(in: app_path('Filament/Principal/Pages'), for: 'App\\Filament\\Principal\\Pages')
+            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
+            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
                 Pages\Dashboard::class,
             ])
-            ->discoverWidgets(in: app_path('Filament/Principal/Widgets'), for: 'App\\Filament\\Principal\\Widgets')
+            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
@@ -53,7 +53,6 @@ class PrincipalPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-                PrincipalPanelAccess::class
-            ], isPersistent: true);
+            ]);
     }
 }
