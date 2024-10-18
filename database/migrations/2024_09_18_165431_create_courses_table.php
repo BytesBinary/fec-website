@@ -12,13 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('title');
-            $table->string('slug')->unique();
+            $table->string('code');
             $table->longText('description')->nullable();
             $table->string('department');
+            $table->enum('type',['theory','lab','thesis']);
+            $table->string('credit');
             $table->enum('semester',['1st','2nd','3rd', '4th', '5th', '6th', '7th', '8th']);
-            $table->bigInteger('enrolled_teacher_id')->nullable();
+            $table->uuid('assigned_teacher_id')->foreign('id')->on('users')->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();
         });

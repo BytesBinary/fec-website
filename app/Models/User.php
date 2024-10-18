@@ -2,43 +2,35 @@
 
 namespace App\Models;
 
- use Illuminate\Contracts\Auth\MustVerifyEmail;
+use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
+use Filament\Models\Contracts\FilamentUser;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
+use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements FilamentUser, MustVerifyEmail
 {
-    use HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    use HasFactory, Notifiable, HasPanelShield, HasRoles, softDeletes;
+    protected $primaryKey = 'id';
+    protected $keyType = 'string';
+    public $incrementing = false;
     protected $fillable = [
         'name',
         'email',
         'password',
-        'role',
-        'slug'
+        'designation',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [
@@ -46,4 +38,17 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+     protected static function boot() : void {
+         parent::boot();
+         static::creating(function ($model) {
+             if( empty($model->{$model->getKeyName()}) ) {
+                 $model->{$model->getKeyName()} = Str::uuid()->toString();
+             }
+         });
+     }
+
+     public function courses() : HasMany
+     {
+            return $this->hasMany(Course::class, 'assigned_teacher_id', 'id');
+     }
 }

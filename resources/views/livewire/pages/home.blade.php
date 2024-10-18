@@ -1,0 +1,11 @@
+<div>
+{{--    @livewire('partials.home.hero')--}}
+    @livewire('partials.home.administration')
+    @livewire('partials.home.department-and-notice')
+    @livewire('partials.home.clubs')
+    @livewire('partials.home.short-details')
+    @livewire('partials.home.about')
+    @livewire('partials.home.research-events')
+    @livewire('partials.home.linking')
+    @livewire('partials.home.gallery')
+</div>
