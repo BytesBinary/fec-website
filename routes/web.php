@@ -18,7 +18,6 @@ use App\Livewire\Pages\Departments\Ce;
 use App\Livewire\Pages\Departments\Cse;
 use App\Livewire\Pages\Departments\Eee;
 use App\Livewire\Pages\Home;
-use App\Livewire\Pages\Sabit;
 use Illuminate\Support\Facades\Route;
 
 // Home Route
