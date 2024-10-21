@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-layouts.app :title="$title ?? ''">
     <div class="flex">
         <x-partials.subpage-navigation :route-key="$routeKey" :page="$page" :menu="$menu" />
         <!-- Main Content -->

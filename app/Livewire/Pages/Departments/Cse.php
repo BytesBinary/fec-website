@@ -2,11 +2,13 @@
 
 namespace App\Livewire\Pages\Departments;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class Cse extends Component
 {
     public $department = 'cse';
+    #[Title('Computer Science and Engineering')]
     public function render()
     {
         return view('livewire.pages.department')

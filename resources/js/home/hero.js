@@ -4,7 +4,7 @@ document.addEventListener("livewire:navigated", function() {
     new Swiper(".swiper-container-hero-section", {
         loop: true,
         centeredSlides: true,
-        grabCursor: false,
+        grabCursor: true,
         autoplay: {
             delay: 2000,               // Set autoplay delay (3 seconds)
             disableOnInteraction: false
