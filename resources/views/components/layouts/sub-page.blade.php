@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="flex">
-        <x-partials.subpage-navigation :department="$department" />
+        <x-partials.subpage-navigation :route-key="$routeKey" :page="$page" :menu="$menu" />
         <!-- Main Content -->
         <div class="w-3/4 p-4">
             {{$slot}}

@@ -121,7 +121,7 @@ return [
             'isDropdown' => false,
         ],
     ],
-    'departments' => [
+    'department' => [
         'cse' => [
             'about' => [
                 'title' => 'About',

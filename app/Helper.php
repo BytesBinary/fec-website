@@ -85,3 +85,14 @@ if( ! function_exists('get_readable_classname') ) {
         return Str::headline(Str::plural(class_basename($class)));
     }
 }
+
+if( ! function_exists('get_sub_page_layout_data') ) {
+    function get_sub_page_layout_data( $routeKey, $routeValue )
+    {
+        return [
+            'routeKey' => $routeKey,
+            'page' => $routeValue,
+            'menu' => $routeKey.'.'.$routeValue,
+        ];
+    }
+}
