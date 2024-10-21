@@ -18,6 +18,8 @@ use App\Livewire\Pages\Departments\Ce;
 use App\Livewire\Pages\Departments\Cse;
 use App\Livewire\Pages\Departments\Eee;
 use App\Livewire\Pages\Home;
+use App\Livewire\Partials\Department\About;
+use App\Livewire\Partials\Department\Events as DeptEvents;
 use Illuminate\Support\Facades\Route;
 
 // Home Route
@@ -56,3 +58,6 @@ Route::prefix('campus-life')->group(function (){
 Route::get('/admission', Admission::class)->name('admission');
 // Alumni Route
 Route::get('/alumni', Alumni::class)->name('alumni');
+
+Route::get('/departments/{department}/about',About::class)->name('dept.about');
+Route::get('/departments/{department}/events', DeptEvents::class)->name('dept.events');
