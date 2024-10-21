@@ -1,7 +1,11 @@
 {
-  "_vendor-B19ufRjH.js": {
-    "file": "assets/vendor-B19ufRjH.js",
-    "name": "vendor"
+  "__commonjsHelpers-Cpj98o6Y.js": {
+    "file": "assets/_commonjsHelpers-Cpj98o6Y.js",
+    "name": "_commonjsHelpers"
+  },
+  "_swiper-core-t8X2LVUi.js": {
+    "file": "assets/swiper-core-t8X2LVUi.js",
+    "name": "swiper-core"
   },
   "resources/css/app.css": {
     "file": "assets/app-D_BUa_-t.css",
@@ -9,12 +13,40 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-Dddlv-OB.js",
+    "file": "assets/app-DurdhSnb.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "imports": [
-      "_vendor-B19ufRjH.js"
+      "__commonjsHelpers-Cpj98o6Y.js"
+    ]
+  },
+  "resources/js/home/clubs.js": {
+    "file": "assets/clubs-CkmV5vHa.js",
+    "name": "clubs",
+    "src": "resources/js/home/clubs.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-core-t8X2LVUi.js"
+    ]
+  },
+  "resources/js/home/departments.js": {
+    "file": "assets/departments-BhqS0_6l.js",
+    "name": "departments",
+    "src": "resources/js/home/departments.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-core-t8X2LVUi.js"
+    ]
+  },
+  "resources/js/home/gallery.js": {
+    "file": "assets/gallery-ciB4ieCo.js",
+    "name": "gallery",
+    "src": "resources/js/home/gallery.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-core-t8X2LVUi.js",
+      "__commonjsHelpers-Cpj98o6Y.js"
     ]
   }
 }

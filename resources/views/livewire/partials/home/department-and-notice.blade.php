@@ -1,10 +1,10 @@
 <div class="container mx-auto pt-5 px-5 pb-10 my-10">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div class="col-span-1 lg:col-span-2 w-full">
-            <p class="text-center mb-8 text-3xl md:text-5xl font-bold " data-aos="fade-up">
+            <p class="text-center mb-8 text-3xl md:text-5xl font-bold " >
                 Departments
             </p>
-            <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down">
+            <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" >
             <div class="swiper-container swiper-container-department-page">
                 <div class="swiper-wrapper mb-10">
                     <!-- Slide 1 -->
@@ -38,10 +38,10 @@
         </div>
 
         <div class="w-full col-span-1">
-            <p class="text-center mb-8 text-3xl md:text-5xl font-bold " data-aos="fade-up">
+            <p class="text-center mb-8 text-3xl md:text-5xl font-bold " >
                 Notices
             </p>
-            <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10" data-aos="fade-down" />
+            <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10"  />
             <div class="relative rounded-lg overflow-hidden h-auto mx-auto">
                 <!-- Notice Container -->
                 <div class="overflow-hidden relative h-full">
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-actions mt-6 flex justify-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-actions mt-6 flex justify-center"  >
                 <button onclick="window.location.href='#'" type="button"
                         class="w-full max-w-xs bg-gradient-to-r from-lime-300 to-emerald-400 text-white hover:bg-gradient-to-l hover:from-lime-300 hover:to-emerald-400 rounded-lg py-1 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg hover:cursor-pointer">
                     <span class="text-gray-900">View All</span>
@@ -140,3 +140,6 @@
 
     </div>
 </div>
+@push('scripts')
+    @vite(['resources/js/home/departments.js'])
+@endpush

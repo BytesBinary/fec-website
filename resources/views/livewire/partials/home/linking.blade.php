@@ -1,8 +1,8 @@
 <section class="container mx-auto p-8 bangla-font">
-    <h1 class="text-center text-5xl mb-5" data-aos="fade-up">অনলাইন সেবা সমূহ</h1>
-    <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded" data-aos="fade-down">
+    <h1 class="text-center text-5xl mb-5" >অনলাইন সেবা সমূহ</h1>
+    <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded" >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -92,7 +92,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -110,7 +110,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -128,7 +128,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -146,7 +146,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -164,7 +164,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->
@@ -182,7 +182,7 @@
             </div>
         </div>
 
-        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500"  >
             <!-- Card Content -->
             <div class="flex items-center space-x-4">
                 <!-- Image -->

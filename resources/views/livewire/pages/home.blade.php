@@ -1,5 +1,5 @@
 <div>
-{{--    @livewire('partials.home.hero')--}}
+    @livewire('partials.home.hero')
     @livewire('partials.home.administration')
     @livewire('partials.home.department-and-notice')
     @livewire('partials.home.clubs')

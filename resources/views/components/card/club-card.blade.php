@@ -7,7 +7,7 @@
     'group' => 'Add a location here',
     'email' => 'ajdmjakiurrahman1234@gmail.com'
 ])
-<div class="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+<div class="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" >
     <div class="relative">
         <img class="w-full h-40 object-cover" src="{{asset($logo)}}" alt="Club Logo">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
@@ -18,8 +18,8 @@
 
     <!-- Club Info Section -->
     <div class="p-6">
-        <h3 class="text-xl font-bold text-gray-800" data-aos="fade-down">{{$fullName}}</h3>
-        <p class="text-gray-600 mt-2" data-aos="fade-up">{{$description}}</p>
+        <h3 class="text-xl font-bold text-gray-800" >{{$fullName}}</h3>
+        <p class="text-gray-600 mt-2" >{{$description}}</p>
 
         <!-- Contact or Buttons -->
         <div class="mt-4 flex justify-between items-center">
