@@ -61,3 +61,4 @@ Route::get('/alumni', Alumni::class)->name('alumni');
 
 Route::get('/departments/{department}/about',About::class)->name('dept.about');
 Route::get('/departments/{department}/events', DeptEvents::class)->name('dept.events');
+Route::get('/departments/{department}/gallery', DeptEvents::class)->name('dept.gallery');

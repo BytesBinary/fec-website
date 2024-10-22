@@ -132,6 +132,11 @@ return [
                 'title' => 'Events',
                 'route' => 'dept.events',
                 'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'dept.gallery',
+                'isDropdown' => false,
             ]
         ],
         'eee' => [

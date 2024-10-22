@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0fbab67d-4bb8-4385-bfb5-2ef406f932bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Livewire/Pages/Departments/Cse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Livewire/Pages/Departments/Cse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Livewire/Pages/Departments/Eee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Livewire/Pages/Departments/Eee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/home/hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/home/hero.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/layouts/sub-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/layouts/sub-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pages/departments/ce.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pages/departments/cse.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pages/departments/eee.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +244,8 @@
       <workItem from="1729141861890" duration="46668000" />
       <workItem from="1729376426389" duration="589000" />
       <workItem from="1729501636460" duration="242000" />
+      <workItem from="1729581594475" duration="2298000" />
+      <workItem from="1729620109565" duration="1120000" />
     </task>
     <servers />
   </component>
