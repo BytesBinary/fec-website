@@ -1,6 +1,6 @@
 <div>
     <h1 class="text-center w-full text-4xl font-extrabold text-green-900 mb-5" data-aos="fade-up" data-aos-delay="100">
-        Welcome to the Department of {{$department}}
+        Welcome to the Department of {{$cardTitle}}
     </h1>
     <hr class="h-1 w-full mx-auto my-4 bg-emerald-500 rounded mb-12" data-aos="fade-up" data-aos-delay="200">
     <p class="text-center text-gray-700 mb-4 text-lg">
