@@ -19,7 +19,12 @@ use App\Livewire\Pages\Departments\Cse;
 use App\Livewire\Pages\Departments\Eee;
 use App\Livewire\Pages\Home;
 use App\Livewire\Partials\Department\About;
+use App\Livewire\Partials\Department\AcademicCalender;
 use App\Livewire\Partials\Department\Events as DeptEvents;
+use App\Livewire\Partials\Department\Gallery;
+use App\Livewire\Partials\Department\IncourseRoutine;
+use App\Livewire\Partials\Department\SemesterRoutine;
+
 use Illuminate\Support\Facades\Route;
 
 // Home Route
@@ -61,4 +66,10 @@ Route::get('/alumni', Alumni::class)->name('alumni');
 
 Route::get('/departments/{department}/about',About::class)->name('dept.about');
 Route::get('/departments/{department}/events', DeptEvents::class)->name('dept.events');
-Route::get('/departments/{department}/gallery', DeptEvents::class)->name('dept.gallery');
+Route::get('/departments/{department}/gallery', Gallery::class)->name('dept.gallery');
+Route::get('/departments/{department}/academic-calender', AcademicCalender::class)->name('dept.academic-calender');
+Route::get('/departments/{department}/incourse-routine', IncourseRoutine::class)->name('dept.incourse-routine');
+Route::get('/departments/{department}/semester-routine', SemesterRoutine::class)->name('dept.semester-routine');
+
+
+
