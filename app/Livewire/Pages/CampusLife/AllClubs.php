@@ -4,10 +4,10 @@ namespace App\Livewire\Pages\CampusLife;
 
 use Livewire\Component;
 
-class Clubs extends Component
+class AllClubs extends Component
 {
     public function render()
     {
-        return view('livewire.pages.campus-life.clubs');
+        return view('livewire.pages.campus-life.all-clubs');
     }
 }
