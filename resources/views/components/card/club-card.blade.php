@@ -23,8 +23,8 @@
 
         <!-- Contact or Buttons -->
         <div class="mt-4 flex justify-between items-center">
-            <a href="{{$url}}"><button class="bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded transition-colors duration-200">Join Now</button></a>
-            <a href="{{$url}}"><button class="text-yellow-500 hover:text-yellow-600 font-bold transition-colors duration-200">Learn More</button></a>
+            <a href="{{$url}}" wire:navigate><button class="bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded transition-colors duration-200">Join Now</button></a>
+            <a href="{{$url}}" wire:navigate><button class="text-yellow-500 hover:text-yellow-600 font-bold transition-colors duration-200">Learn More</button></a>
         </div>
     </div>
 
