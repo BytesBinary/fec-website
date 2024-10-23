@@ -7,3 +7,4 @@ $menus = config('menu.'.$menu);
     @endforeach
 </nav>
 
+    
