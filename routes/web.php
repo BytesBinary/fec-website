@@ -29,7 +29,12 @@ use App\Livewire\Pages\Clubs\IslamicDawah;
 use App\Livewire\Pages\Clubs\BaniArchana;
 use App\Livewire\Pages\Clubs\Professionals;
 use App\Livewire\Pages\Clubs\Fecrsg;
+use App\Livewire\Partials\Department\AcademicCalender;
 use App\Livewire\Partials\Department\Events as DeptEvents;
+use App\Livewire\Partials\Department\Gallery;
+use App\Livewire\Partials\Department\IncourseRoutine;
+use App\Livewire\Partials\Department\SemesterRoutine;
+
 use Illuminate\Support\Facades\Route;
 
 // Home Route
@@ -84,3 +89,8 @@ Route::get('campus-life/club/islamic-dawah',IslamicDawah::class)->name('islamic-
 Route::get('campus-life/club/bani-archana',BaniArchana::class)->name('bani-archana');
 Route::get('campus-life/club/professionals',Professionals::class)->name('professionals');
 Route::get('campus-life/club/fecrsg',Fecrsg::class)->name('fecrsg');
+
+Route::get('/departments/{department}/gallery', Gallery::class)->name('dept.gallery');
+Route::get('/departments/{department}/academic-calender', AcademicCalender::class)->name('dept.academic-calender');
+Route::get('/departments/{department}/incourse-routine', IncourseRoutine::class)->name('dept.incourse-routine');
+Route::get('/departments/{department}/semester-routine', SemesterRoutine::class)->name('dept.semester-routine');

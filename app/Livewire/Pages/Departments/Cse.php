@@ -8,10 +8,11 @@ use Livewire\Component;
 class Cse extends Component
 {
     public $department = 'cse';
+    public $cardTitle = 'Computer Science and Engineering';
     #[Title('Computer Science and Engineering')]
     public function render()
     {
         return view('livewire.pages.department')
-            ->layout('components.layouts.sub-page', get_sub_page_layout_data('department',$this->department));
+            ->layout('components.layouts.sub-page', get_sub_page_layout_data('department',$this->department, $this->cardTitle));
     }
 }

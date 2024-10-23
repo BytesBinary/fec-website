@@ -137,7 +137,48 @@ return [
                 'title' => 'Gallery',
                 'route' => 'dept.gallery',
                 'isDropdown' => false,
-            ]
+            ],
+            'academic-calender' => [
+                'title' => 'Academic Calender',
+                'route' => 'dept.academic-calender',
+                'isDropdown' => false,
+            ],
+            'incourse-routine' => [
+                'title' => 'Incourse Routine',
+                'route' => 'dept.incourse-routine',
+                'isDropdown' => false,
+            ],
+            'semester-routine' => [
+                'title' => 'Semester Routine',
+                'route' => 'dept.semester-routine',
+                'isDropdown' => false,
+            ],
+            // 'semester-plan' => [
+            //     'title' => 'Semester Plan',
+            //     'route' => '',
+            //     'isDropdown' => true,
+            //     'dropdowns' => [
+            //         'academic-calender' => [
+            //             'title' => 'Academic Calender',
+            //             'route' => 'academic-calender'
+            //         ],
+            //     ],
+            // ],
+            // 'routine' => [
+            //     'title' => 'Routine',
+            //     'route' => '',
+            //     'isDropdown' => true,
+            //     'dropdowns' => [
+            //         'incourse-routine' => [
+            //             'title' => 'Incourse Routine',
+            //             'route' => 'incourse-routine',
+            //         ],
+            //         'semester-routine' => [
+            //             'title' => 'Semester Routine',
+            //             'route' => 'semester-routine',
+            //         ]
+            //     ]
+            // ],
         ],
         'eee' => [
             'about' => [
@@ -149,7 +190,27 @@ return [
                 'title' => 'Events',
                 'route' => 'dept.events',
                 'isDropdown' => false,
-            ]
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'dept.gallery',
+                'isDropdown' => false,
+            ],
+            'academic-calender' => [
+                'title' => 'Academic Calender',
+                'route' => 'dept.academic-calender',
+                'isDropdown' => false,
+            ],
+            'incourse-routine' => [
+                'title' => 'Incourse Routine',
+                'route' => 'dept.incourse-routine',
+                'isDropdown' => false,
+            ],
+            'semester-routine' => [
+                'title' => 'Semester Routine',
+                'route' => 'dept.semester-routine',
+                'isDropdown' => false,
+            ],
         ],
         'ce' => [
             'about' => [
@@ -161,7 +222,27 @@ return [
                 'title' => 'Events',
                 'route' => 'dept.events',
                 'isDropdown' => false,
-            ]
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'dept.gallery',
+                'isDropdown' => false,
+            ],
+            'academic-calender' => [
+                'title' => 'Academic Calender',
+                'route' => 'dept.academic-calender',
+                'isDropdown' => false,
+            ],
+            'incourse-routine' => [
+                'title' => 'Incourse Routine',
+                'route' => 'dept.incourse-routine',
+                'isDropdown' => false,
+            ],
+            'semester-routine' => [
+                'title' => 'Semester Routine',
+                'route' => 'dept.semester-routine',
+                'isDropdown' => false,
+            ],
         ],
     ]
 ];

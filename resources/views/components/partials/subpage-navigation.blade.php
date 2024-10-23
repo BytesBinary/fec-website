@@ -1,12 +1,10 @@
 @php
 $menus = config('menu.'.$menu);
 @endphp
-<div class="w-1/4 bg-gray-200 p-4 h-screen">
-    <ul>
-        @foreach($menus as $menu)
-            <li class="mb-2">
-                <a href="{{route($menu['route'],[$routeKey=>$page])}}" wire:navigate>{{$menu['title']}}</a>
-            </li>
-        @endforeach
-    </ul>
-</div>
+<nav class="mt-4 mx-auto">
+    @foreach($menus as $menu)
+        <a href="{{route($menu['route'],[$routeKey=>$page])}}" class="block px-4 py-2 text-md text-gray-700 hover:background:" wire:navigate>{{$menu['title']}}</a>
+    @endforeach
+</nav>
+
+    
