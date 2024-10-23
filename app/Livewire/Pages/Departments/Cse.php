@@ -12,6 +12,6 @@ class Cse extends Component
     public function render()
     {
         return view('livewire.pages.department')
-            ->layout('components.layouts.sub-page', get_sub_page_layout_data('department',$this->department));
+            ->layout('components.layouts.sub-page', get_sub_page_layout_data('department',$this->department, 'Computer Science and Engineering'));
     }
 }
