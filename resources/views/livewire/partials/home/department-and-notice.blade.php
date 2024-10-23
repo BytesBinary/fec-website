@@ -9,27 +9,27 @@
                 <div class="swiper-wrapper mb-10">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
+                        <x-card.departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg" url="{{route('cse')}}" wire:navigate.prevent is-home-page="true" />
                     </div>
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
+                        <x-card.departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg" url="{{route('eee')}}" wire:navigate.prevent is-home-page="true" />
                     </div>
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
+                        <x-card.departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg" url="{{route('ce')}}" wire:navigate.prevent is-home-page="true" />
                     </div>
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
+                        <x-card.departments-card name="Computer Science & Engineering" image="images/card/cse-dept.jpg" url="{{route('cse')}}" wire:navigate.prevent is-home-page="true" />
                     </div>
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
+                        <x-card.departments-card name="Electrical & Electronics Engineering" image="images/card/cse-dept.jpg" url="{{route('eee')}}" wire:navigate.prevent is-home-page="true" />
                     </div>
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg" url="#" is-home-page="true" />
+                        <x-card.departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg" url="{{route('ce')}}" wire:navigate.prevent is-home-page="true" />
                     </div>
                     <!-- More slides as needed... -->
                 </div>

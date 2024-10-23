@@ -5,8 +5,8 @@
                 Administration</p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded" >
             <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4 hover:cursor-pointer" >
-                <div class="flex justify-center transform transition duration-300 hover:shadow-2xl"
-                      onclick="window.location.href='{{route('principal')}}'">
+                <a href="{{route('principal')}}" wire:navigate>
+                <div class="flex justify-center transform transition duration-300 hover:shadow-2xl">
                     <div class="max-w-[18rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden h-[28rem]">
                         <img class="w-full h-56 object-cover" src="{{asset('images/administration/principal.jpg')}}"
                              alt="Principal Image">
@@ -18,6 +18,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
                 <div class="lg:col-span-3 flex" >
                     <div
                         class="w-full bg-green-50 shadow-xl rounded-lg overflow-scroll lg:overflow-hidden md:overflow-hidden transform transition duration-300 hover:shadow-2xl h-[28rem] flex flex-col justify-between">
@@ -42,7 +43,8 @@
             </div>
 
             <div class="grid gap-6 grid-cols-1 mt-10 pb-5 lg:grid-cols-3">
-                <div class="flex justify-center hover:cursor-pointer"   onclick="window.location.href=''">
+                <a href="{{route('dept-head-cse')}}" wire:navigate>
+                <div class="flex justify-center hover:cursor-pointer" >
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
                         <img class="w-full h-56 object-cover" src="{{asset("images/administration/cse-head.jpg")}}"
@@ -55,7 +57,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center hover:cursor-pointer"   onclick="window.location.href=''">
+                </a>
+
+                <a href="{{route('dept-head-eee')}}" wire:navigate>
+                <div class="flex justify-center hover:cursor-pointer" >
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
                         <img class="w-full h-56 object-cover" src="{{asset("images/administration/eee-head.jpg")}}"
@@ -68,7 +73,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center hover:cursor-pointer"   onclick="window.location.href=''">
+                </a>
+                <a href="{{route('dept-head-ce')}}" wire:navigate>
+                <div class="flex justify-center hover:cursor-pointer" >
                     <div
                         class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[]">
                         <img class="w-full h-56 object-cover" src="{{asset("images/administration/ce-head.jpg")}}"
@@ -81,6 +88,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
     </div>
