@@ -1,5 +1,5 @@
 <div>
-     <!-- Main Events Section -->
+<!-- Main Events Section -->
 <section class="bg-gray-50 py-12">
     <div class="container mx-auto px-4 lg:px-8">
         <!-- Section Header -->
