@@ -10,7 +10,7 @@
     <!-- Content -->
     <div class="relative z-10 flex justify-center items-center h-full">
         <div class="container grid grid-cols-1 lg:grid-cols-4 gap-6">
-            <x-card.short-details />
+            <x-card.short-details :details="$details" />
         </div>
     </div>
 </div>

@@ -17,7 +17,7 @@
                         participate in groundbreaking research, and innovate future solutions.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('ric')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'ric'])}}" wire:navigate>
                             <button
                                 class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                                 <span class="text-xl text-gray-800">View Club</span>
@@ -41,7 +41,7 @@
                         methodologies to keep digital spaces secure.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('feccpc')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'feccpc'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -66,7 +66,7 @@
                         Prepare yourself for real-life challenges.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">Ric
-                        <a href="{{route('fecsa')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'fecsa'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -91,7 +91,7 @@
                         creative vision with the FEC Photographic Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('fecpc')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'fecpc'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -115,7 +115,7 @@
                         creative vision with the FEC Programming Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('fecpc2')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'fecpc2'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -139,7 +139,7 @@
                         confidently with the FEC Debating Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('debating')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'debating'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -163,7 +163,7 @@
                         creative vision with the FEC Islamic Dawah and Research Center Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('islamic-dawah')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'islamic-dawah'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -187,7 +187,7 @@
                         creative vision with the FEC Bani Archana Committee Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('bani-archana')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'bani-archana'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -211,7 +211,7 @@
                         successful career with the FEC Professionals Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('professionals')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'professionals'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
@@ -235,7 +235,7 @@
                         Prepare yourself for real-life challenges.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('fecrsg')}}" wire:navigate>
+                        <a href="{{route('single-club',['name'=>'fecrsg'])}}" wire:navigate>
                         <button
                             class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>

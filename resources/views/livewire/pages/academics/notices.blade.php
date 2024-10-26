@@ -4,8 +4,7 @@
         <!-- Search Bar -->
         <div class="mb-4">
             <input type="text" placeholder="Search by title..."
-                   class="w-full p-2 bg-white border border-gray-400 rounded"
-                   x-model="searchQuery" @input="filterNotices" />
+                   class="w-full p-2 bg-white border border-gray-400 rounded" />
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-0 lg:gap-4">

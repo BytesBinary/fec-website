@@ -1,26 +1,5 @@
 @props([
-    'details' => array(
-        [
-            'name' => 'Established',
-            'url' => 'images/establish.png',
-            'number' => '2010',
-        ],
-        [
-            'name' => 'Students',
-            'url' => 'images/students.png',
-            'number' => '800',
-        ],
-        [
-            'name' => 'Departments',
-            'url' => 'images/building.png',
-            'number' => '3',
-        ],
-        [
-            'name' => 'Faculty Members',
-            'url' => 'images/faculty-members.png',
-            'number' => '30',
-        ]
-    )
+    'details' => []
 ])
 
 @foreach ($details as $detail)

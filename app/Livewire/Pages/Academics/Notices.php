@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages\Academics;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class Notices extends Component
@@ -9,6 +10,7 @@ class Notices extends Component
     public $notices = [];
     public $currentTitle;
     public $currentPdf;
+    #[Title('Notices')]
     public function mount()
     {
         $this->notices = [
