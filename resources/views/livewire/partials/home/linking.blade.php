@@ -3,7 +3,7 @@
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
 
-        @foreach ($GovtCards as $card)
+        @foreach ($govtCards as $card)
             <div class="rounded-lg p-6 bg-zinc-50 shadow-2xl shadow-gray-500">
                 <!-- Card Content -->
                 <div class="flex items-center space-x-4">

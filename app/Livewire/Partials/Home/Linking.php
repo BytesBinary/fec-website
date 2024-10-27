@@ -6,11 +6,11 @@ use Livewire\Component;
 
 class Linking extends Component
 {
-    public $GovtCards = [];
+    public $govtCards = [];
 
     public function mount()
     {
-        $this->GovtCards = [
+        $this->govtCards = [
             [
                 'title' => 'সেবা প্রদান প্রতিশ্রুতি (সিটিজেন চার্টার)',
                 'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/1a2dcdcd_a3fa_4bbf_8ef7_ef2913090081/2024-01-02-16-27-422b9a6dbe1e1b352d85150cfc1a5b20.png',
@@ -132,7 +132,7 @@ class Linking extends Component
 
         ];
     }
-    
+
     public function render()
     {
         return view('livewire.partials.home.linking');
