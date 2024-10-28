@@ -20,7 +20,7 @@ return new class extends Migration
             $table->enum('type',['theory','lab','thesis']);
             $table->string('credit');
             $table->enum('semester',['1st','2nd','3rd', '4th', '5th', '6th', '7th', '8th']);
-            $table->uuid('assigned_teacher_id')->foreign('id')->on('users')->cascadeOnDelete();
+            $table->string('assigned_teachers_ids')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -46,9 +46,4 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
              }
          });
      }
-
-     public function courses() : HasMany
-     {
-            return $this->hasMany(Course::class, 'assigned_teacher_id', 'id');
-     }
 }

@@ -3,9 +3,19 @@
 namespace App\Providers\Filament;
 
 use App\CustomRegistration;
+use App\Filament\Resources\ManageCourses\AssigneeCourseResource;
+use App\Filament\Resources\ManageCourses\CourseResource;
+use App\Filament\Resources\Settings\AcademicSessionResource;
+use App\Filament\Resources\Settings\BatchResource;
+use App\Filament\Resources\Settings\DepartmentResource;
+use App\Filament\Resources\Settings\DesignationResource;
+use App\Filament\Resources\Shield\RoleResource;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationBuilder;
+use Filament\Navigation\NavigationGroup;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -43,6 +53,10 @@ class UserPanelProvider extends PanelProvider
             ->pages([
                 Pages\Dashboard::class,
             ])
+            ->navigationGroups([
+                'Manage Courses',
+                'Settings',
+            ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
@@ -63,7 +77,7 @@ class UserPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+                FilamentShieldPlugin::make(),
             ]);
     }
 }

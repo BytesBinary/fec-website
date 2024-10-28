@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\CourseResource\Pages;
+namespace App\Filament\Resources\ManageCourses\CourseResource\Pages;
 
-use App\Filament\Resources\CourseResource;
+use App\Filament\Resources\ManageCourses\CourseResource;
 use App\Models\Course;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;

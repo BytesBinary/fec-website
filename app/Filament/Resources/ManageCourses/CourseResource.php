@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\ManageCourses;
 
-use App\Filament\Resources\CourseResource\Pages;
-use App\Filament\Resources\CourseResource\RelationManagers;
+use App\Filament\Resources\ManageCourses\CourseResource\Pages;
 use App\Models\Course;
 use App\Models\Department;
-use App\Models\User;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -19,7 +17,8 @@ use Filament\Tables\Table;
 class CourseResource extends Resource
 {
     protected static ?string $model = Course::class;
-
+    protected static ?string $navigationGroup = "Manage Courses";
+    protected static ?string $label = "Courses";
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form
@@ -63,11 +62,6 @@ class CourseResource extends Resource
                         '8th' => '8th',
                     ])
                     ->required(),
-                Select::make('assigned_teacher_id')
-                    ->label('Assigned Teacher')
-                    ->options(fn () => User::where('designation', 'teacher')->get()->pluck('name', 'id'))
-                    ->searchable()
-                    ->columnSpan('full'),
                 RichEditor::make('description')
                     ->label('Course Description')
                     ->columnSpan('full'),
@@ -82,12 +76,6 @@ class CourseResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->label('Course Title'),
-                TextColumn::make('user.name') // This assumes the relation is named 'teacher'
-                    ->label('Assigned Teacher')
-                    ->sortable()
-                    ->searchable()
-                    ->badge(),
-
                 TextColumn::make('department')
                     ->searchable()
                     ->sortable()

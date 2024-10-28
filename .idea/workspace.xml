@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0fbab67d-4bb8-4385-bfb5-2ef406f932bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pages/departments/ce.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pages/departments/cse.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pages/departments/eee.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource/Pages/CreateCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource/Pages/CreateCourse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource/Pages/EditCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource/Pages/EditCourse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource/Pages/ListCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource/Pages/ListCourses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/Filament/UserPanelProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/Filament/UserPanelProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_09_18_165431_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_09_18_165431_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,8 +234,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
-        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
       </set>
     </attachedChunks>
   </component>
@@ -246,6 +252,7 @@
       <workItem from="1729501636460" duration="242000" />
       <workItem from="1729581594475" duration="2298000" />
       <workItem from="1729620109565" duration="1120000" />
+      <workItem from="1730143286718" duration="6600000" />
     </task>
     <servers />
   </component>
