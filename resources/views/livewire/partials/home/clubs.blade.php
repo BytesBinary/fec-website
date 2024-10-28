@@ -5,35 +5,35 @@
         <div class="swiper-wrapper mb-10">
             <div class="swiper-slide">
                 <x-card.club-card logo="{{asset('images/club/ric.jpg')}}" short-name="RIC" full-name="Research and Innovation Center"
-                             description="At RIC FEC, we cultivate a culture of innovation, motivation, and leadership among engineers and aspiring researchers." url="{{route('single-club',['name'=>'ric'])}} "/>
+                             description="The Research and Innovation Center at Faridpur Engineering College helps students and teachers work on new ideas and technology projects. " url="{{route('single-club',['name'=>'ric'])}} "/>
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="images/BytesBinary.png" short-name="FECCPC" full-name="Faridpur Engineering College Cyber Protector Club"
-                             description="This is a honourable club of faridpur engineering college. Please explore it by clicking the explore button." url="{{route('single-club',['name'=>'feccpc'])}}" />
+                             description="The Cyber Protector Club is a group focused on learning about cybersecurity and protecting digital information." url="{{route('single-club',['name'=>'feccpc'])}}" />
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="{{asset('images/club/fecsa.jpg')}}" short-name="FECSA" full-name="Faridpur Engineering College Sports Association"
-                             description="This is a honourable club of faridpur engineering college. Please explore it by clicking the explore button." url="{{route('single-club',['name'=>'fecsa'])}}" />
+                             description="The FECSA is dedicated to organizes events, tournaments, and practice sessions across various sports, including cricket, football, badminton, and more." url="{{route('single-club',['name'=>'fecsa'])}}" />
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="{{asset('images/club/photography.jpg')}}" short-name="FECPC" full-name="Faridpur Engineering College Photographic Club"
-                             description="This is a honourable club of faridpur engineering college. Please explore it by clicking the explore button." url="{{route('single-club',['name'=>'feccpc'])}}" />
+                             description="FECPC brings together students passionate about capturing moments and exploring creativity through photography." url="{{route('single-club',['name'=>'fecpc'])}}" />
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="{{asset('images/club/programming.jpg')}}" short-name="FECPC" full-name="Faridpur Engineering College Programming Club"
-                             description="This is a honourable club of faridpur engineering college. Please explore it by clicking the explore button." url="{{route('single-club',['name'=>'fecpc2'])}}" />
+                             description="FECPC is a community for students interested in coding, problem-solving, and software development. " url="{{route('single-club',['name'=>'fecpc2'])}}" />
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="images/BytesBinary.png" short-name="FECSDC" full-name="Faridpur Engineering College Software Development Club"
-                             description="This is a honourable club of faridpur engineering college. Please explore it by clicking the explore button." url="#" />
+                             description="The Software Development Club at Faridpur Engineering College is a group for students passionate about creating software solutions." url="#" />
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="{{asset('images/club/fecrdc.jpg')}}" short-name="FECIDRC" full-name="Faridpur Engineering College Islamic Dawah and Research Center"
-                             description="This is a honourable club of faridpur engineering college. Please explore it by clicking the explore button." url="{{route('single-club',['name'=>'islamic-dawah'])}}" />
+                             description="FECIDRC is dedicated to promoting & organizing discussions, lectures, and study sessions, focusing on Islamic teachings & ethics" url="{{route('single-club',['name'=>'islamic-dawah'])}}" />
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="{{asset('images/club/professionals.jpg')}}" short-name="FECCP" full-name="Faridpur Engineering College Club of Professionals"
-                             description="This is a honourable club of faridpur engineering college. Please explore it by clicking the explore button." url="{{route('single-club',['name'=>'professionals'])}}" />
+                             description="The Club of Professionals organizes workshops, guest lectures, and networking events featuring industry experts and alumni" url="{{route('single-club',['name'=>'professionals'])}}" />
             </div>
             <div class="swiper-slide">
                 <x-card.club-card logo="images/BytesBinary.png" short-name="FECBAC" full-name="Faridpur Engineering College Bani Archana Committee"
