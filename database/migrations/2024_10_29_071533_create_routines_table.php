@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('routines', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->uuid('teacher_id');
-            $table->uuid('course_id')->foreign('id')->on('courses');
+            $table->uuid('teacher_id')->nullable();
+            $table->uuid('course_id')->foreign('id')->on('courses')->nullable();
             $table->string('department');
             $table->string('semester');
-            $table->string('class_time');
+            $table->string('day')->nullable();
+            $table->string('time')->nullable();
             $table->timestamps();
         });
     }

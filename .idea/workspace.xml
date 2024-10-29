@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0fbab67d-4bb8-4385-bfb5-2ef406f932bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource/Pages/CreateAssigneeCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/CreateAssigneeCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource/Pages/EditAssigneeCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/EditAssigneeCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource/Pages/ListAssigneeCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/ListAssigneeCourses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/Filament/UserPanelProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/Filament/UserPanelProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_16_125738_add_themes_settings_to_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/UserResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Routine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Routine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_29_071533_create_routines_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_29_071533_create_routines_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +247,7 @@
       <workItem from="1729581594475" duration="2298000" />
       <workItem from="1729620109565" duration="1120000" />
       <workItem from="1730143286718" duration="6767000" />
-      <workItem from="1730182569289" duration="7445000" />
+      <workItem from="1730182569289" duration="19205000" />
     </task>
     <servers />
   </component>

@@ -17,7 +17,8 @@ class Routine extends Model
         'course_id',
         'department',
         'semester',
-        'class_time',
+        'time',
+        'day'
     ];
 
     public function routine() : BelongsTo
