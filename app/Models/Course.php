@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
@@ -27,6 +28,11 @@ class Course extends Model
         'department',
         'assigned_teachers_ids',
     ];
+
+    public function routine() : HasMany
+    {
+        return $this->hasMany(Routine::class, 'id');
+    }
 
     protected static function boot() {
          parent::boot();

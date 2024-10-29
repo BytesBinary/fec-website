@@ -3,7 +3,7 @@
 namespace App\Providers\Filament;
 
 use App\CustomRegistration;
-use App\Filament\Resources\ManageCourses\AssigneeCourseResource;
+use App\Filament\Resources\ManageCourses\AssigneeTeacherResource;
 use App\Filament\Resources\ManageCourses\CourseResource;
 use App\Filament\Resources\Settings\AcademicSessionResource;
 use App\Filament\Resources\Settings\BatchResource;
@@ -55,6 +55,7 @@ class UserPanelProvider extends PanelProvider
             ])
             ->navigationGroups([
                 'Manage Courses',
+                'Tools',
                 'Settings',
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')

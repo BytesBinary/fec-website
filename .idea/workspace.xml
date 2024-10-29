@@ -6,15 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0fbab67d-4bb8-4385-bfb5-2ef406f932bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource/Pages/CreateCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource/Pages/CreateCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource/Pages/EditCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource/Pages/EditCourse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CourseResource/Pages/ListCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/CourseResource/Pages/ListCourses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource/Pages/CreateAssigneeCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/CreateAssigneeCourse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource/Pages/EditAssigneeCourse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/EditAssigneeCourse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeCourseResource/Pages/ListAssigneeCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/ListAssigneeCourses.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/Filament/UserPanelProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/Filament/UserPanelProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_09_18_165431_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_09_18_165431_create_courses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_16_125738_add_themes_settings_to_users_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +250,8 @@
       <workItem from="1729501636460" duration="242000" />
       <workItem from="1729581594475" duration="2298000" />
       <workItem from="1729620109565" duration="1120000" />
-      <workItem from="1730143286718" duration="6600000" />
+      <workItem from="1730143286718" duration="6767000" />
+      <workItem from="1730182569289" duration="7445000" />
     </task>
     <servers />
   </component>
