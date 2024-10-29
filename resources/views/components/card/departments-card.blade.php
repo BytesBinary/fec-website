@@ -17,8 +17,8 @@
            {!!$name!!}</p>
         <hr class="w-full h-1 mx-auto bg-emerald-300 rounded"  >
         <div class="card-actions mt-6 flex justify-center">
-            <button onclick="window.location.href='#'" type="button"
-                class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+            <button href='{!!$url!!}' type="button"
+                class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg" wire:navigate>
                 <span class="text-xl text-gray-800">Explore</span>
                 <x-svg-icon.external-url />
             </button>
