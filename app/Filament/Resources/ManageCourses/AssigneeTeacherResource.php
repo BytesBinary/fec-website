@@ -21,8 +21,6 @@ class AssigneeTeacherResource extends Resource
     protected static ?string $label = "Assignee Teachers";
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
 
-
-
     public static function form(Form $form): Form
     {
         return $form
@@ -49,8 +47,11 @@ class AssigneeTeacherResource extends Resource
                     ->label("Assigned Teachers")
                     ->badge()
                     ->formatStateUsing(function (string $state): string {
-                        $name = User::find($state)['name'];
-                        return $name;
+                        $teacher = User::find($state);
+                        if( $teacher ) {
+                            return $teacher['name'];
+                        }
+                        return 'Teacher Not Found';
                     })
                     ->color('success')
                     ->sortable()
