@@ -1,20 +1,53 @@
 {
-  "_vendor-B19ufRjH.js": {
-    "file": "assets/vendor-B19ufRjH.js",
-    "name": "vendor"
+  "_swiper-bundle-CUnLjt9d.js": {
+    "file": "assets/swiper-bundle-CUnLjt9d.js",
+    "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-D_BUa_-t.css",
+    "file": "assets/app-CPY-dFyg.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-Dddlv-OB.js",
+    "file": "assets/app-DYBQowRy.js",
     "name": "app",
     "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/home/clubs.js": {
+    "file": "assets/clubs-wijQ-XkP.js",
+    "name": "clubs",
+    "src": "resources/js/home/clubs.js",
     "isEntry": true,
     "imports": [
-      "_vendor-B19ufRjH.js"
+      "_swiper-bundle-CUnLjt9d.js"
+    ]
+  },
+  "resources/js/home/departments.js": {
+    "file": "assets/departments-CZGfUQVV.js",
+    "name": "departments",
+    "src": "resources/js/home/departments.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-bundle-CUnLjt9d.js"
+    ]
+  },
+  "resources/js/home/gallery.js": {
+    "file": "assets/gallery-8ak7Sm-e.js",
+    "name": "gallery",
+    "src": "resources/js/home/gallery.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-bundle-CUnLjt9d.js"
+    ]
+  },
+  "resources/js/home/hero.js": {
+    "file": "assets/hero-DPLQkquz.js",
+    "name": "hero",
+    "src": "resources/js/home/hero.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-bundle-CUnLjt9d.js"
     ]
   }
 }

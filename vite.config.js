@@ -4,25 +4,17 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: [
+                'resources/css/app.css',
+                'resources/js/app.js',
+                'resources/js/home/clubs.js',
+                'resources/js/home/departments.js',
+                'resources/js/home/gallery.js',
+                'resources/js/home/hero.js',
+            ],
             refresh: true,
         }),
     ],
     build: {
-        minify: true,
-        sourcemap: false,
-
-        rollupOptions: {
-            output:{
-                manualChunks: (path)=>{
-                    if (path.includes("codemirror")) {
-                        return 'codemirror';
-                    }
-                    if( path.includes('node_modules') ) {
-                        return 'vendor';
-                    }
-                }
-            }
-        }
     }
 });

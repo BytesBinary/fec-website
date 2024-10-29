@@ -85,3 +85,38 @@ if( ! function_exists('get_readable_classname') ) {
         return Str::headline(Str::plural(class_basename($class)));
     }
 }
+
+if( ! function_exists('get_sub_page_layout_data') ) {
+    function get_sub_page_layout_data( $routeKey, $routeValue, $cardTitle = '', $mainContentCss = '', $sideNavCss ='' )
+    {
+        $cardRoute = '';
+        if( empty($cardTitle) ) {
+            switch($routeValue) {
+                case 'cse':
+                    $cardTitle = 'Computer Science And Engineering';
+                    $cardRoute = 'cse';
+                    break;
+                case 'eee':
+                    $cardTitle = 'Electrical & Electronics Engineering';
+                    $cardRoute = 'eee';
+                    break;
+                case 'ce':
+                    $cardTitle = 'Civil Engineering';
+                    $cardRoute = 'ce';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        return [
+            'routeKey' => $routeKey,
+            'page' => $routeValue,
+            'menu' => $routeKey.'.'.$routeValue,
+            'cardTitle' => $cardTitle,
+            'mainContentCss' => $mainContentCss,
+            'sideNavCss' => $sideNavCss,
+            'cardRoute' => $cardRoute,
+        ];
+    }
+}

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
@@ -15,6 +16,9 @@ class Course extends Model
     protected $primaryKey = 'id';
     protected $keyType = 'string';
     public $incrementing = false;
+    protected $casts = [
+        'assigned_teachers_ids' => 'array',
+    ];
     protected $fillable = [
         'title',
         'description',
@@ -22,8 +26,13 @@ class Course extends Model
         'credit',
         'semester',
         'department',
-        'assigned_teacher_id',
+        'assigned_teachers_ids',
     ];
+
+    public function routine() : HasMany
+    {
+        return $this->hasMany(Routine::class, 'id');
+    }
 
     protected static function boot() {
          parent::boot();
@@ -32,10 +41,5 @@ class Course extends Model
                  $model->{$model->getKeyName()} = Str::uuid()->toString();
              }
          });
-    }
-
-    public function user() : BelongsTo
-    {
-        return $this->belongsTo(User::class, 'assigned_teacher_id', 'id');
     }
 }

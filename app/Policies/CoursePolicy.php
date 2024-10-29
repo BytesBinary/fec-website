@@ -15,7 +15,7 @@ class CoursePolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_course');
+        return $user->can('view_any_manage::courses::course');
     }
 
     /**
@@ -23,7 +23,7 @@ class CoursePolicy
      */
     public function view(User $user, Course $course): bool
     {
-        return $user->can('view_course');
+        return $user->can('view_manage::courses::course');
     }
 
     /**
@@ -31,7 +31,7 @@ class CoursePolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_course');
+        return $user->can('create_manage::courses::course');
     }
 
     /**
@@ -39,7 +39,7 @@ class CoursePolicy
      */
     public function update(User $user, Course $course): bool
     {
-        return $user->can('update_course');
+        return $user->can('update_manage::courses::course');
     }
 
     /**
@@ -47,7 +47,7 @@ class CoursePolicy
      */
     public function delete(User $user, Course $course): bool
     {
-        return $user->can('delete_course');
+        return $user->can('delete_manage::courses::course');
     }
 
     /**
@@ -55,7 +55,7 @@ class CoursePolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_course');
+        return $user->can('delete_any_manage::courses::course');
     }
 
     /**
@@ -63,7 +63,7 @@ class CoursePolicy
      */
     public function forceDelete(User $user, Course $course): bool
     {
-        return $user->can('force_delete_course');
+        return $user->can('force_delete_manage::courses::course');
     }
 
     /**
@@ -71,7 +71,7 @@ class CoursePolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_course');
+        return $user->can('force_delete_any_manage::courses::course');
     }
 
     /**
@@ -79,7 +79,7 @@ class CoursePolicy
      */
     public function restore(User $user, Course $course): bool
     {
-        return $user->can('restore_course');
+        return $user->can('restore_manage::courses::course');
     }
 
     /**
@@ -87,7 +87,7 @@ class CoursePolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_course');
+        return $user->can('restore_any_manage::courses::course');
     }
 
     /**
@@ -95,7 +95,7 @@ class CoursePolicy
      */
     public function replicate(User $user, Course $course): bool
     {
-        return $user->can('replicate_course');
+        return $user->can('replicate_manage::courses::course');
     }
 
     /**
@@ -103,6 +103,6 @@ class CoursePolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_course');
+        return $user->can('reorder_manage::courses::course');
     }
 }

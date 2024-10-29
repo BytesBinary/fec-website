@@ -1,9 +1,9 @@
 <div class="landing-about container mx-auto pt-5 px-5 pb-10 my-10">
-    <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" data-aos="fade-up">About Us</p>
+    <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" >About Us</p>
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <!-- Text Section -->
-        <div class="w-full p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer rounded-lg" data-aos="fade-up">
+        <div class="w-full p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer rounded-lg" >
             <p class="md:text-md text-gray-800 text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maiores quidem dignissimos consectetur. In molestias adipisci, eaque corrupti exercitationem cupiditate obcaecati. Asperiores ipsum facilis eos. Nemo asperiores eligendi perspiciatis numquam.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reiciendis eveniet nesciunt voluptas, nobis non perferendis cupiditate consectetur voluptates odit eos quia facilis officiis eius molestias quis corrupti repudiandae! Tempora.
@@ -21,7 +21,7 @@
         </div>
 
         <!-- Image Section with Background Image and Overlay -->
-        <div class="relative w-full h-96 bg-cover bg-center p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer bg-rounded" style="background-image: url('{{ asset('images/gallery/3.jpg') }}');" data-aos="fade-up">
+        <div class="relative w-full h-96 bg-cover bg-center p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer bg-rounded" style="background-image: url('{{ asset('images/gallery/3.jpg') }}');" >
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
                 <!-- Play Button with Animation -->

@@ -6,7 +6,6 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "aos": "^2.3.4",
         "autoprefixer": "^10.4.20",
         "axios": "^1.6.4",
         "glightbox": "^3.3.0",

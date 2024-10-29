@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ $title ?? 'Page Title' }}</title>
         @vite(['resources/css/app.css'])
+        @stack('styles')
     </head>
     <body>
         <x-partials.header/>
@@ -12,6 +13,7 @@
         {{ $slot }}
         <x-partials.footer/>
         @vite(['resources/js/app.js'])
+        @stack('scripts')
     </body>
 </html>
 
