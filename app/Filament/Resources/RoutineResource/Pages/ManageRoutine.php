@@ -6,6 +6,7 @@ use App\Filament\Resources\RoutineResource;
 use App\Models\Course;
 use App\Models\Routine;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
@@ -74,6 +75,14 @@ class ManageRoutine extends Page implements HasForms
         Routine::create($details);
         $redirect_url = RoutineResource::getUrl('manage', ['department' => $details['department'], 'semester' => $details['semester']]);
         return redirect($redirect_url);
+    }
+
+    public function download() : \Symfony\Component\HttpFoundation\StreamedResponse
+    {
+        $pdf = PDF::loadView('filament.resources.routine-resource.pages.partials.routine-table', ['routines' => $this->routines]);;
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->stream();
+        },"routine-{$this->department}-{$this->semester}.pdf");
     }
 
     public function form(Form $form): Form
