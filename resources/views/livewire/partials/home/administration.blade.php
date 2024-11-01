@@ -34,7 +34,7 @@
                                 Faridpur town. Faridpur Engineering College is a mainstream government undergraduate
                                 college in engineering disciplines and is affiliated with the University of Dhaka under
                                 the Faculty of Engineering & Technology...
-                                <a href="{{ route('principal') }}"
+                                <a href="{{ route('principal') }}" wire:navigate
                                    class="text-green-800 font-semibold hover:underline">Read More</a>
                             </p>
                         </div>
