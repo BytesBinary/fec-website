@@ -14,7 +14,7 @@
         </x-partials.desktop-menu>
     </div>
     <x-partials.mobile-menu>
-        @foreach($menus as &$menu)
+        @foreach($menus as $key=>$menu)
             <x-menu
                 :mobile="true"
                 :isDropdown="$menu['isDropdown']"
