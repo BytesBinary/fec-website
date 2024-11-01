@@ -14,7 +14,7 @@
     </figure>
     <div class="flex flex-col flex-grow p-6 rounded-b-lg">
         <p class="font-bold text-3xl text-center mb-4 text-gray-800">
-           {!!$name!!}</p>
+           {{$name}}</p>
         <hr class="w-full h-1 mx-auto bg-emerald-300 rounded"  >
         <div class="card-actions mt-6 flex justify-center">
             <button href='{!!$url!!}' type="button"
