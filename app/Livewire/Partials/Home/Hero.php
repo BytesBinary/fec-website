@@ -14,17 +14,20 @@ class Hero extends Component
             [
                 'src' => asset('images/hero-img.jpg'),
                 'title' => 'Welcome to Faridpur Engineering College',
-                'description' => 'A Place to learn and Grow.'
+                'description' => 'A Place to learn and Grow.',
+                'style' => ''
             ],
             [
                 'src' => asset('images/hero-img1.jpg'),
                 'title' => 'Explore New Opportunities',
-                'description' => 'Join us in our journey.'
+                'description' => 'Join us in our journey.',
+                'style' => ''
             ],
             [
                 'src' => asset('images/hero-bg2.jpg'),
                 'title' => 'Innovative Learning',
-                'description' => 'Embrace the future of education.'
+                'description' => 'Embrace the future of education.',
+                'style' => ''
             ]
         ];
     }
