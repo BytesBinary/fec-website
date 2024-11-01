@@ -6,11 +6,11 @@ use Livewire\Component;
 
 class Gallery extends Component
 {
-    public $Galleries = [];
+    public $galleries = [];
 
     public function mount()
     {
-        $this->Galleries = [
+        $this->galleries = [
             [
                 'src'=>'images/gallery/1.jpg'
             ],
