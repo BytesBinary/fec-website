@@ -77,7 +77,7 @@
                 <a href="{{route('dept-head-ce')}}" wire:navigate>
                 <div class="flex justify-center hover:cursor-pointer" >
                     <div
-                        class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[]">
+                        class="max-w-[20rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 h-[23rem]">
                         <img class="w-full h-56 object-cover" src="{{asset("images/administration/ce-head.jpg")}}"
                              alt="Image of Md. Rayhan Khan Apu">
                         <div class="p-6">
