@@ -17,9 +17,9 @@
                         participate in groundbreaking research, and innovate future solutions.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'ric'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'ric'])}}" wire:navigate>
                             <button
-                                class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                                class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                                 <span class="text-xl text-gray-800">View Club</span>
                                 <x-svg-icon.external-url />
                             </button>
@@ -41,9 +41,9 @@
                         methodologies to keep digital spaces secure.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'feccpc'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'feccpc'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -65,10 +65,10 @@
                         Embark on adventures, learn leadership, and engage in community service with the FEC Sports Association.
                         Prepare yourself for real-life challenges.
                     </p>
-                    <div class="card-actions mt-auto flex justify-center">Ric
-                        <a href="{{route('single-club',['name'=>'fecsa'])}}" wire:navigate>
+                    <div class="card-actions mt-auto flex justify-center">
+                        <a class="w-full" href="{{route('single-club',['name'=>'fecsa'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -91,9 +91,9 @@
                         creative vision with the FEC Photographic Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'fecpc'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'fecpc'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -115,9 +115,9 @@
                         creative vision with the FEC Programming Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'fecpc2'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'fecpc2'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -139,9 +139,9 @@
                         confidently with the FEC Debating Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'debating'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'debating'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -163,9 +163,9 @@
                         creative vision with the FEC Islamic Dawah and Research Center Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'islamic-dawah'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'islamic-dawah'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -187,9 +187,9 @@
                         creative vision with the FEC Bani Archana Committee Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'bani-archana'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'bani-archana'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -211,9 +211,9 @@
                         successful career with the FEC Professionals Club.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'professionals'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'professionals'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
@@ -235,9 +235,9 @@
                         Prepare yourself for real-life challenges.
                     </p>
                     <div class="card-actions mt-auto flex justify-center">
-                        <a href="{{route('single-club',['name'=>'fecrsg'])}}" wire:navigate>
+                        <a class="w-full" href="{{route('single-club',['name'=>'fecrsg'])}}" wire:navigate>
                         <button
-                            class="btn w-full max-w-xs bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
+                            class="btn w-full max-w-md bg-gradient-to-r from-lime-500 to-emerald-500 text-white hover:bg-gradient-to-l hover:from-lime-600 hover:to-emerald-600 rounded-lg py-3 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg">
                             <span class="text-xl text-gray-800">View Club</span>
                             <x-svg-icon.external-url />
                         </button>
