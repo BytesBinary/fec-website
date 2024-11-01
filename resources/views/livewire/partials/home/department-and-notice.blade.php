@@ -56,14 +56,11 @@
                     <div class="notice-wrapper space-y-4 animate-scroll p-3">
 
                         @foreach (array_slice($notices, 0, 5) as $notice)
-                            @php
-                            $date = $this->getDayAndMonth($notice['date']);
-                            @endphp
 
                             <div class="flex items-center bg-lime-200 text- p-2 rounded-lg">
                                 <div class="flex flex-col items-center px-4 border-r-2 border-white">
-                                    <span class="text-xl font-bold">{{ $date['day'] }}</span>
-                                    <span class="text-sm">{{ strtoupper(substr($date['month'], 0, 3)) }}</span>
+                                    <span class="text-xl font-bold">{{ $notice['date']['day'] }}</span>
+                                    <span class="text-sm">{{ strtoupper(substr($notice['date']['month'], 0, 3)) }}</span>
                                 </div>
                                 <div class="ml-4 flex-grow text-sm">
                                     {{ $notice['title'] }}
