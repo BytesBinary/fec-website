@@ -1,3 +1,19 @@
 <div>
-    This is admission page
+    <div class="container mx-auto my-5 p-5 px-10 bg-white shadow-gray-500 mb-16 rounded">
+        <div class="bg-gradient-to-r from-green-200 to-lime-200 border-2 border-dashed border-gray-500 rounded-lg p-8 max-w-lg mx-auto text-center">
+            <h2 class="text-red-700 text-3xl font-extrabold mb-6">
+                ভর্তি প্রক্রিয়া বন্ধ রয়েছে
+            </h2>
+            <div class="text-lg">
+                <p class="mb-4">
+                    <span class="font-semibold">ভর্তি শুরু হয়েছিল:</span>
+                    <span class="text-red-700 font-bold ml-2">01 October 2024</span>
+                </p>
+                <p>
+                    <span class="font-semibold">ভর্তি শেষ হয়েছিল:</span>
+                    <span class="text-red-700 font-bold ml-2">01 November 2024</span>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
