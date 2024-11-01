@@ -29,7 +29,7 @@
                             </p>
                             <p class="mt-3 md:text-lg text-green-900 text-justify">
                                 {{ substr($principal['message'], 331) }}
-                                <a href="{{ route('principal') }}" class="text-green-800 font-semibold hover:underline">Read More</a>
+                                <a href="{{ route('principal') }}" class="text-green-800 font-semibold hover:underline" wire:navigate >Read More</a>
                             </p>
                         </div>
                     </div>
