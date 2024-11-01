@@ -8,7 +8,6 @@
         <div class="swiper-container swiper-container-event-section">
             <div class="swiper-wrapper mb-10">
                 @foreach ($events as $event)
-                @php ray($event) @endphp
                     <div class="swiper-slide">
                         <x-card.research-card
                             image="{{ $event['image'] }}"
