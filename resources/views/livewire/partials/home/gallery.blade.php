@@ -1,7 +1,7 @@
 <div class="swiper-container swiper-container-gallery py-10">
     <div class="swiper-wrapper mb-10">
 
-        @foreach ($Galleries as $gallery)
+        @foreach ($galleries as $gallery)
         <div class="swiper-slide">
             <div class="relative">
                 <figure class="overflow-hidden">
