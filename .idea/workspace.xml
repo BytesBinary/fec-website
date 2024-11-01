@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fbab67d-4bb8-4385-bfb5-2ef406f932bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/filament/resources/routine-resource/pages/partials/routine-table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/AssigneeIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/ManageAsigneeTeachers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/filament/resources/manage-courses/assignee-teacher-resource/pages/assignee-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/filament/resources/manage-courses/assignee-teacher-resource/pages/manage-asignee-teachers.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fec.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/RoutineResource/Pages/ManageRoutine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/RoutineResource/Pages/ManageRoutine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/providers.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/providers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/filament/resources/routine-resource/pages/manage-routine.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/filament/resources/routine-resource/pages/manage-routine.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/CreateAssigneeCourse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/EditAssigneeCourse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/ManageCourses/AssigneeTeacherResource/Pages/ListAssigneeCourses.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/partials/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/partials/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/filament/resources/routine-resource/pages/partials/routine-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/filament/resources/routine-resource/pages/partials/routine-table.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,6 +264,12 @@
       <workItem from="1730143286718" duration="6767000" />
       <workItem from="1730182569289" duration="19205000" />
       <workItem from="1730255624914" duration="1626000" />
+      <workItem from="1730274065637" duration="2953000" />
+      <workItem from="1730291614903" duration="5000" />
+      <workItem from="1730309768248" duration="609000" />
+      <workItem from="1730380383385" duration="608000" />
+      <workItem from="1730451480610" duration="921000" />
+      <workItem from="1730483685228" duration="601000" />
     </task>
     <servers />
   </component>

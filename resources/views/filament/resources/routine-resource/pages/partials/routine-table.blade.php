@@ -22,16 +22,6 @@
         color: white;
     }
 </style>
-<h1>List of courses</h1>
-<ul>
-    @foreach($courses as $course)
-{{--        @php dd($course) @endphp--}}
-        <li>
-            {{$course['code']}} = {{$course['title']}}
-        </li>
-@endforeach
-</ul>
-
 <div style="overflow-x: auto">
 <table id="routine">
 <tr>
@@ -82,7 +72,7 @@
     <td class="px-6 py-4">
         @if(array_key_exists('8:50',$routine))
             @php
-                $routineData = current($routine['8:00']);
+                $routineData = current($routine['8:50']);
             @endphp
             {{$routineData['course_code']}} - {{$routineData['teacher_name']}}
         @else
@@ -92,7 +82,7 @@
     <td class="px-6 py-4">
         @if(array_key_exists('9:40',$routine))
             @php
-                $routineData = current($routine['8:00']);
+                $routineData = current($routine['9:40']);
             @endphp
             {{$routineData['course_code']}} - {{$routineData['teacher_name']}}
         @else
@@ -102,7 +92,7 @@
     <td class="px-6 py-4">
         @if(array_key_exists('10:30',$routine))
             @php
-                $routineData = current($routine['8:00']);
+                $routineData = current($routine['10:30']);
             @endphp
             {{$routineData['course_code']}} - {{$routineData['teacher_name']}}
         @else
@@ -112,7 +102,7 @@
     <td class="px-6 py-4">
         @if(array_key_exists('11:20',$routine))
             @php
-                $routineData = current($routine['8:00']);
+                $routineData = current($routine['11:20']);
             @endphp
             {{$routineData['course_code']}} - {{$routineData['teacher_name']}}
         @else
@@ -122,7 +112,7 @@
     <td class="px-6 py-4">
         @if(array_key_exists('12:10',$routine))
             @php
-                $routineData = current($routine['8:00']);
+                $routineData = current($routine['12:10']);
             @endphp
             {{$routineData['course_code']}} - {{$routineData['teacher_name']}}
         @else
@@ -132,7 +122,7 @@
     <td class="px-6 py-4">
         @if(array_key_exists('1:00',$routine))
             @php
-                $routineData = current($routine['8:00']);
+                $routineData = current($routine['1:00']);
             @endphp
             {{$routineData['course_code']}} - {{$routineData['teacher_name']}}
         @else
@@ -142,7 +132,7 @@
     <td class="px-6 py-4">
         @if(array_key_exists('2:00',$routine))
             @php
-                $routineData = current($routine['8:00']);
+                $routineData = current($routine['2:00']);
             @endphp
             {{$routineData['course_code']}} - {{$routineData['teacher_name']}}
         @else
