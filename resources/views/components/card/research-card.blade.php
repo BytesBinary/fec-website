@@ -1,5 +1,5 @@
 @props([
-    'image' => 'images/research/research.png',
+    'image' => '',
     'title' => '',
     'description' => '',
     'date'=>'',

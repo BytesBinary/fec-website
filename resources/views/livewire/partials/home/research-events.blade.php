@@ -5,13 +5,13 @@
         </h2>
         <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 
-        <div class="swiper-container swiper-container-department-page">
+        <div class="swiper-container swiper-container-event-section">
             <div class="swiper-wrapper mb-10">
                 @foreach ($events as $event)
-               {{-- @php dd($event) @endphp --}}
+                @php ray($event) @endphp
                     <div class="swiper-slide">
                         <x-card.research-card
-                            {{-- image = "{{ $event['image'] }}" --}}
+                            image="{{ $event['image'] }}"
                             title="{{ $event['title'] }}"
                             description="{{ $event['description'] }}"
                             date="{{ $event['date'] }}"
@@ -30,12 +30,12 @@
         </h2>
         <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 
-        <div class="swiper-container swiper-container-department-page">
+        <div class="swiper-container swiper-container-research-section">
             <div class="swiper-wrapper mb-10">
                 @foreach ($publications as $publication)
                     <div class="swiper-slide">
                         <x-card.research-card
-                            {{-- image = "{{ $publication['image'] }}" --}}
+                            image="{{ $publication['image'] }}"
                             title="{{ $publication['title'] }}"
                             description="{{ $publication['description'] }}"
                             date="{{ $publication['date'] }}"
@@ -50,5 +50,6 @@
 </div>
 
 @push('scripts')
-    @vite(['resources/js/home/departments.js'])
+    @vite(['resources/js/home/research.js'])
+    @vite(['resources/js/home/event.js'])
 @endpush
