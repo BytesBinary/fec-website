@@ -5,7 +5,7 @@
                 Departments
             </p>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
-            <div class="swiper-container swiper-container-department-page">
+            <div class="swiper-container swiper-container-coverflow-section">
                 <div class="swiper-wrapper mb-10">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
