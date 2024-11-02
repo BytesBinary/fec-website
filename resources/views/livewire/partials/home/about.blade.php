@@ -3,12 +3,12 @@
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <!-- Text Section -->
-        <div class="w-full p-5 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer rounded-lg" >
+        <div class="w-full p-6 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer rounded-lg" >
             <p class="md:text-md text-gray-800 text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maiores quidem dignissimos consectetur. In molestias adipisci, eaque corrupti exercitationem cupiditate obcaecati. Asperiores ipsum facilis eos. Nemo asperiores eligendi perspiciatis numquam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reiciendis eveniet nesciunt voluptas, nobis non perferendis cupiditate consectetur voluptates odit eos quia facilis officiis eius molestias quis corrupti repudiandae! Tempora.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quod, animi laboriosam quasi odit quibusdam fugit minima nesciunt nostrum, rem maxime neque repellat omnis eius. Repellendus hic esse facilis ullam!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Faridpur Engineering College (FEC) is a public undergraduate college in Faridpur, Bangladesh.The college is just 2.7 km away from Faridpur city Located at Dr. Kazi Motaher Hossain Road, Char Kamalapur, Baitul Aman, Faridpur. <br>
+                <br>
+                Construction of the Education Engineering Department began in 2005, financed by the government of Bangladesh. The main work was completed in 2010, while the electricity and water connections were finished in 2013 <br><br>
+                The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. <br>
             </p>
             <a href="" class="block mt-4">
                 <div class="flex justify-center">

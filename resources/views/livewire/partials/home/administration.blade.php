@@ -8,11 +8,11 @@
                 <a href="{{route('principal')}}" wire:navigate>
                 <div class="flex justify-center transform transition duration-300 hover:shadow-2xl">
                     <div class="max-w-[18rem] w-full bg-green-50 shadow-xl rounded-lg overflow-hidden h-[28rem]">
-                        <img class="w-full h-56 object-cover" src="{{asset('images/administration/principal.jpg')}}"
+                        <img class="w-full h-56 object-cover" src="{{asset('images/administration/principal.png')}}"
                              alt="Principal Image">
                         <div class="p-6">
                             <hr class="border-green-300">
-                            <h2 class="text-2xl font-semibold text-green-800">Prof. Dr. Engr. Md. Mizanur Rahman</h2>
+                            <h2 class="text-2xl font-semibold text-green-800">Prof. Md. Alamgir Hossain</h2>
                             <p class="text-green-600 mt-2">Principal</p>
                             <hr class="border-green-300">
                         </div>
@@ -34,7 +34,7 @@
                                 Faridpur town. Faridpur Engineering College is a mainstream government undergraduate
                                 college in engineering disciplines and is affiliated with the University of Dhaka under
                                 the Faculty of Engineering & Technology...
-                                <a href="{{ route('principal') }}"
+                                <a href="{{ route('principal') }}" wire:navigate
                                    class="text-green-800 font-semibold hover:underline">Read More</a>
                             </p>
                         </div>
