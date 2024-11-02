@@ -1,7 +1,6 @@
 import Swiper from "swiper/bundle";
-import {EffectCoverflow} from "swiper/modules";
 document.addEventListener("livewire:navigated", function() {
-    new Swiper('.swiper-container-department-page', {
+    new Swiper('.swiper-container-coverflow-section', {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,

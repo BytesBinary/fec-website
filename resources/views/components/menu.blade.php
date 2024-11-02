@@ -20,7 +20,7 @@
                 {{$title}}
                 <x-svg-icon.drop-down-icon />
             </button>
-            <div x-show="currentDropdown === '{{$slug}}'" class="absolute left-0 mt-2 w-48 bg-lime-50 rounded shadow-lg" x-transition>
+            <div x-show="currentDropdown === '{{$slug}}'" class="absolute left-0 mt-2 w-48 bg-lime-50 rounded shadow-lg z-10" x-transition>
                 @foreach($dropdowns as $dropdown)
                     <a href="{{isset($dropdown['route']) ? route($dropdown['route']) : ''}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter" wire:navigate>{{$dropdown['title']}}</a>
                 @endforeach

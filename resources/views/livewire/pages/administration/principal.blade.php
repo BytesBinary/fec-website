@@ -3,9 +3,9 @@
     <div class="max-w-6xl bg-lime-100 rounded-3xl shadow-2xl p-6 lg:flex border-t-4 lg:border-l-4 lg:border-t-0 border-emerald-500 w-full ">
         <!-- Image Section -->
         <div class="flex lg:flex-col lg:w-1/4 gap-4">
-            <img class="h-auto w-2/4 lg:w-full object-cover object-top rounded-lg shadow-md" src="{{asset('images/administration/principal.jpg')}}" alt="Principal Image">
+            <img class="h-auto w-2/4 lg:w-full object-cover object-top rounded-lg shadow-md" src="{{asset('images/administration/principal.png')}}" alt="Principal Image">
             <div>
-                <h1 class="text-3xl font-extrabold text-gray-900 mt-6">Prof. Dr. Engr. Md. Mizanur Rahman</h1>
+                <h1 class="text-3xl font-extrabold text-gray-900 mt-6">Prof. Md. Alamgir Hossain</h1>
                 <h3 class="text-xl text-gray-700">Principal</h3>
                 <h4 class="text-md text-gray-500 mb-4">Faridpur Engineering College</h4>
             </div>
