@@ -21,54 +21,6 @@ class AssigneeTeacherResource extends Resource
     protected static ?string $label = "Assignee Teachers";
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                Select::make('assigned_teachers_ids')
-                    ->label('Assignee Teachers')
-                    ->multiple()
-                    ->options(fn () => User::where('designation', 'teacher')->get()->pluck('name', 'id'))
-                    ->required(),
-            ]);
-    }
-
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns([
-                TextColumn::make('title')
-                    ->sortable()
-                    ->searchable(),
-                TextColumn::make('code')
-                    ->sortable()
-                    ->searchable(),
-                TextColumn::make('assigned_teachers_ids')
-                    ->label("Assigned Teachers")
-                    ->badge()
-                    ->formatStateUsing(function (string $state): string {
-                        $teacher = User::find($state);
-                        if( $teacher ) {
-                            return $teacher['name'];
-                        }
-                        return 'Teacher Not Found';
-                    })
-                    ->color('success')
-                    ->sortable()
-                    ->searchable(),
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                Tables\Actions\EditAction::make()
-                    ->label('Assignee Teachers'),
-            ])
-            ->bulkActions([
-                //
-            ]);
-    }
-
     public static function getRelations(): array
     {
         return [
@@ -84,9 +36,8 @@ class AssigneeTeacherResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAssigneeCourses::route('/'),
-            'create' => Pages\CreateAssigneeCourse::route('/create'),
-            'edit' => Pages\EditAssigneeCourse::route('/{record}/edit'),
+            'index' => Pages\AssigneeIndex::route('/'),
+            'manage' => Pages\ManageAsigneeTeachers::route('/manage/{department}/{semester}')
         ];
     }
 }

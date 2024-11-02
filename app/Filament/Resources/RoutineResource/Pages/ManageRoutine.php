@@ -33,11 +33,16 @@ class ManageRoutine extends Page implements HasForms
     public string $department;
     public string $semester;
     public array $routines;
+    public array $courses;
 
     public function mount($department, $semester) : void
     {
         $this->department = $department;
         $this->semester = $semester;
+        $this->courses = Course::where('department', $department)
+            ->where('semester', $semester)
+            ->get()
+            ->toArray();
         $this->routines = Routine::where('semester', $semester)
             ->where('department', $department)
             ->orderByRaw("FIELD(day, 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday')")
@@ -63,7 +68,6 @@ class ManageRoutine extends Page implements HasForms
                 return $organizedByTime;
             })
             ->toArray();
-        ray($this->routines);
     }
 
     public function saveDetails() : Redirector

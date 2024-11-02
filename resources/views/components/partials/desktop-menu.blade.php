@@ -1,5 +1,5 @@
 <!-- Desktop Menu -->
-<div class="hidden md:flex flex-wrap space-x-4">
+<div class="hidden md:flex flex-wrap space-x-4 z-10">
     {{$slot}}
 </div>
 
@@ -18,4 +18,4 @@
 </button>
 
 <!-- Overlay when the offcanvas menu is open -->
-<div x-show="open" class="fixed inset-0 bg-black bg-opacity-50 z-5" click="open = false" x-transition></div>
+<div x-show="open" class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-5" click="open = false" x-transition></div>
