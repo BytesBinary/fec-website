@@ -4,7 +4,7 @@
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-D-mZIrc2.css",
+    "file": "assets/app-P3qTwfcA.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -24,7 +24,7 @@
     ]
   },
   "resources/js/home/departments.js": {
-    "file": "assets/departments-CZGfUQVV.js",
+    "file": "assets/departments-CMw9J_Rs.js",
     "name": "departments",
     "src": "resources/js/home/departments.js",
     "isEntry": true,
