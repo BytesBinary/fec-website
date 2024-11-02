@@ -11,8 +11,6 @@ export default defineConfig({
                 'resources/js/home/departments.js',
                 'resources/js/home/gallery.js',
                 'resources/js/home/hero.js',
-                'resources/js/home/research.js',
-                'resources/js/home/event.js',
             ],
             refresh: true,
         }),

@@ -5,7 +5,7 @@
         </h2>
         <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 
-        <div class="swiper-container swiper-container-event-section">
+        <div class="swiper-container swiper-container-coverflow-section">
             <div class="swiper-wrapper mb-10">
                 @foreach ($events as $event)
                     <div class="swiper-slide">
@@ -20,7 +20,7 @@
 
         <div class="card-actions mt-8 mb-4 flex justify-center">
             <button href='{{ route('events') }}' type="button"
-                class="w-full max-w-xs bg-gradient-to-r from-lime-300 to-emerald-400 text-white hover:bg-gradient-to-l hover:from-lime-300 hover:to-emerald-400 rounded-lg py-4 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg hover:cursor-pointer"
+                class="flex items-center justify-center space-x-2 w-1/4 text-white py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer"
                 wire:navigate>
                 <span class="text-gray-900 text-xl">View More</span>
                 <x-svg-icon.external-url />
@@ -35,7 +35,7 @@
         </h2>
         <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 
-        <div class="swiper-container swiper-container-research-section">
+        <div class="swiper-container swiper-container-coverflow-section">
             <div class="swiper-wrapper mb-10">
                 @foreach ($publications as $publication)
                     <div class="swiper-slide">
@@ -50,7 +50,7 @@
 
         <div class="card-actions mt-8 mb-4 flex justify-center">
             <button href='{{ route('publications') }}' type="button"
-                class="w-full max-w-xs bg-gradient-to-r from-lime-300 to-emerald-400 text-white hover:bg-gradient-to-l hover:from-lime-300 hover:to-emerald-400 rounded-lg py-4 transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg hover:cursor-pointer"
+                class="flex items-center justify-center space-x-2 w-1/4 text-white py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer"
                 wire:navigate>
                 <span class="text-gray-900 text-xl">View More</span>
                 <x-svg-icon.external-url />
@@ -61,6 +61,5 @@
 </div>
 
 @push('scripts')
-    @vite(['resources/js/home/research.js'])
-    @vite(['resources/js/home/event.js'])
+    @vite(['resources/js/home/departments.js'])
 @endpush
