@@ -120,3 +120,11 @@ if( ! function_exists('get_sub_page_layout_data') ) {
         ];
     }
 }
+
+if( ! function_exists('get_card_class_of_student_staticstics') ) {
+    function get_card_class_of_student_staticstics ( $index ) {
+        $class = ((($index / 4) % 2 === 0) === ($index % 2 === 0)) ? 'bg-lime-50' : 'bg-white';
+        $default = 'shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300';
+        return "$class $default";
+    }
+}
