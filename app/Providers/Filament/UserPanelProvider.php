@@ -3,19 +3,10 @@
 namespace App\Providers\Filament;
 
 use App\CustomRegistration;
-use App\Filament\Resources\ManageCourses\AssigneeTeacherResource;
-use App\Filament\Resources\ManageCourses\CourseResource;
-use App\Filament\Resources\Settings\AcademicSessionResource;
-use App\Filament\Resources\Settings\BatchResource;
-use App\Filament\Resources\Settings\DepartmentResource;
-use App\Filament\Resources\Settings\DesignationResource;
-use App\Filament\Resources\Shield\RoleResource;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Navigation\NavigationBuilder;
-use Filament\Navigation\NavigationGroup;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
