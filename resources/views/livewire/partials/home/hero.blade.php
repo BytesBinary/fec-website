@@ -9,11 +9,11 @@
                         class="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out">
                         <img src="{{ $image['src'] }}" alt="Background Image" class="absolute inset-0 w-full h-full object-cover filter blur-[2px]">
                         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center" >
                             <div class="{{$image['style']}} z-10 flex flex-col justify-center items-center h-full">
                                 <h1 class="text-5xl font-bold leading-tight mb-4 " style="color: whitesmoke ">{{ $image['title'] }}</h1>
                                 <p class="text-xl text-gray-300 mb-8">{{ $image['description'] }}</p>
-                                <a href="#administration" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 mt-5 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
+                                <a href="#administration" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 mt-5 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg" style="display: {{ $image['button'] }}" >Get Started</a>
                             </div>
                         </div>
                     </div>
