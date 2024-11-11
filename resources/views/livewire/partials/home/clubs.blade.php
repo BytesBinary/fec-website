@@ -3,7 +3,6 @@
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
     <div class="swiper clubs-page-swiper mt-10">
         <div class="swiper-wrapper mb-10">
-
             @foreach ($clubs as $club)
                 <div class="swiper-slide">
                     <x-card.club-card
@@ -14,7 +13,6 @@
                      url="{{ $club['url'] }}" />
                 </div>
             @endforeach
-
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>

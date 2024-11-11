@@ -16,12 +16,12 @@
             <h3 class="font-bold mb-3 text-xl text-center">QUICK LINKS</h3>
             <div class="border border-gray-600 w-1/4 mx-auto"></div>
             <ul class="grid grid-cols-3 gap-2 text-center mt-8">
-                <li><a href="#" class="hover:text-gray-400 transition">Accreditation</a></li>
-                <li><a href="#" class="hover:text-gray-400 transition">Calendar</a></li>
-                <li><a href="#" class="hover:text-gray-400 transition">Campus Directories</a></li>
-                <li><a href="#" class="hover:text-gray-400 transition">Help Desk</a></li>
-                <li><a href="#" class="hover:text-gray-400 transition">Library</a></li>
-                <li><a href="#" class="hover:text-gray-400 transition">Email</a></li>
+                <li><a href="{{ route('events') }}" class="hover:text-gray-400 transition" wire:navigate>Events</a></li>
+                <li><a href="{{ route('student-statistics') }}" class="hover:text-gray-400 transition" wire:navigate>Students Statistics</a></li>
+                <li><a href="{{ route('notices') }}" class="hover:text-gray-400 transition" >Notice</a></li>
+                <li><a href="{{ route('clubs') }}" class="hover:text-gray-400 transition" wire:navigate>Clubs</a></li>
+                <li><a href="{{ route('library') }}" class="hover:text-gray-400 transition" wire:navigate>Library</a></li>
+                <li><a href="{{ route('admission') }}" class="hover:text-gray-400 transition" wire:navigate>Admission</a></li>
             </ul>
         </div>
 
