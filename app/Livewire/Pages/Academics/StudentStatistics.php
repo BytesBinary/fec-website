@@ -3,11 +3,13 @@
 namespace App\Livewire\Pages\Academics;
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
 class StudentStatistics extends Component
 {
+  
     public $statistics;
-
+    #[Title('Student Statistics')]
     public function mount() {
         $this->statistics = array(
             [
@@ -51,6 +53,7 @@ class StudentStatistics extends Component
                 'description' => 'Published in the last year',
             ]);
     }
+
     public function render()
     {
         return view('livewire.pages.academics.student-statistics');
