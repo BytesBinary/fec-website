@@ -17,7 +17,7 @@
                         <p class="text-gray-600 mt-2">Join us for a conference featuring keynote speakers and innovators in the tech industry.</p>
                         <div class="flex items-center justify-between mt-4">
                             <span class="text-gray-500 text-sm">March 5, 2024</span>
-                            <a href="#" class="text-blue-600 hover:underline">Learn More</a>
+                            <a href="{{route('event')}}" class="text-blue-600 hover:underline" wire:navigate>Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                         <p class="text-gray-600 mt-2">Compete in a 48-hour coding marathon and showcase your programming skills to win exciting prizes.</p>
                         <div class="flex items-center justify-between mt-4">
                             <span class="text-gray-500 text-sm">April 12-14, 2024</span>
-                            <a href="#" class="text-blue-600 hover:underline">Learn More</a>
+                            <a href="{{route('event')}}" class="text-blue-600 hover:underline" wire:navigate>Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         <p class="text-gray-600 mt-2">A hands-on workshop covering the basics and applications of artificial intelligence and machine learning.</p>
                         <div class="flex items-center justify-between mt-4">
                             <span class="text-gray-500 text-sm">May 20, 2024</span>
-                            <a href="#" class="text-blue-600 hover:underline">Learn More</a>
+                            <a href="{{route('event')}}" class="text-blue-600 hover:underline" wire:navigate>Learn More</a>
                         </div>
                     </div>
                 </div>
