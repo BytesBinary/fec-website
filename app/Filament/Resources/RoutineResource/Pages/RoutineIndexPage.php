@@ -20,7 +20,7 @@ class RoutineIndexPage extends Page implements HasForms
 
     protected static string $resource = RoutineResource::class;
 
-    protected static string $view = 'filament.resources.routine-resource.pages.routine-index-page';
+    protected static string $view = 'filament.manage-routines.routine-index-page';
 
     public ?array $data = [];
 

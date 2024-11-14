@@ -1,0 +1,108 @@
+.routine-header {
+    text-align: center;
+    margin-top: 40px;
+    line-height: 12px;
+}
+.routine-header h2 {
+    font-size: 26px;
+}
+.routine-table-container p {
+    margin-left: 80px;
+}
+.routine-effective-date {
+    margin-top: -40px;
+}
+.routine-table-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.routine-table {
+    width: 90%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.routine-table th,
+td {
+    border: 1px solid black;
+    padding: 0 4px;
+    text-align: center;
+}
+.routine-table th {
+    background-color: #fcf4d0;
+    padding: 15px;
+}
+.routine-bold {
+    font-weight: bold;
+}
+.routine-lunch-break {
+    writing-mode: vertical-lr;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+.routine-subject-cell {
+    height: 50px;
+}
+.routine-last {
+    width: 300px;
+}
+.routine-footer-container {
+    width: 90%;
+    margin-top: -20px;
+}
+.routine-course-teacher-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 5px;
+}
+.routine-signature-container {
+    display: flex;
+    justify-content: space-between;
+    line-height: 4px;
+}
+.routine-signature {
+    text-align: center;
+}
+.button-1 {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+    background-color: #F082AC;
+}
+@media print {
+    @page {
+        size: landscape;
+        margin: 0mm 0mm !important;
+    }
+    .routine-no-print {
+        display: none;
+    }
+}
+
+

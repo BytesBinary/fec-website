@@ -17,7 +17,7 @@ class AssigneeIndex extends Page implements HasForms
 
     protected static string $resource = AssigneeTeacherResource::class;
 
-    protected static string $view = 'filament.resources.manage-courses.assignee-teacher-resource.pages.assignee-index';
+    protected static string $view = 'filament.manage-courses.assignee-index';
 
     public ?array $data = [];
 
