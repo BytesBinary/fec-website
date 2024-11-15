@@ -43,12 +43,13 @@
         }
         .signature {
             text-align: center;
-            font-size: 12px;
+            font-size: 15px;
             line-height: 5px;
             margin-top: 50px;
         }
         .course-list {
-            font-size: 13px;
+            font-size: 15px;
+            line-height: 6px;
         }
         @page {
             size: landscape;
@@ -108,7 +109,7 @@
 
 <p style="font-size: 16px; "><strong>List of Courses</strong></p>
 @foreach($courses as $chunk)
-    <div class="col-print-4 course-list">
+    <div class="col-print-{{(count($courses) > 1) ? '4' : '8'}} course-list">
         @foreach($chunk as $course)
             <p>{{ $course['title'] }} <b>({{ $course['code'] }})</b></p>
         @endforeach

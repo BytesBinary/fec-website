@@ -118,6 +118,13 @@ class ManageRoutine extends Page
                 })
                 ->pluck('name', 'id')
                 ->toArray();
+            if( empty( $teachers ) ) {
+                Notification::make()
+                    ->warning()
+                    ->duration(5000)
+                    ->title(__('No Teacher Available'))
+                    ->send();
+            }
             $this->routinesData[$day][$time]['course'][$course[1]]['teachers'] = $teachers;
         }
     }
@@ -162,7 +169,7 @@ class ManageRoutine extends Page
         $pdf = PDF::loadView('filament.manage-routines.download-routine',
             [
                 'routines' => $this->routines,
-                'courses'  => array_chunk($this->courses,7),
+                'courses'  => array_chunk($this->courses,10),
                 'details'  => [
                     'department' => $this->department,
                     'semester'   => $this->semester,
