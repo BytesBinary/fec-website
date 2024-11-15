@@ -24,7 +24,7 @@ class RoutineIndexPage extends Page implements HasForms
 
     public ?array $data = [];
 
-    public function goToManagePage() : \Illuminate\Http\RedirectResponse
+    public function goToManagePage()
     {
         if( ! isset($this->data['department']) || ! isset($this->data['semester']) ) {
             return redirect()->back();
