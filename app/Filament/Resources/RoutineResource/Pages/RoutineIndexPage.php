@@ -24,8 +24,11 @@ class RoutineIndexPage extends Page implements HasForms
 
     public ?array $data = [];
 
-    public function goToManagePage() : Redirector
+    public function goToManagePage() : \Illuminate\Http\RedirectResponse
     {
+        if( ! isset($this->data['department']) || ! isset($this->data['semester']) ) {
+            return redirect()->back();
+        }
         $department = $this->data['department'];
         $semester = $this->data['semester'];
         $redirect_url = RoutineResource::getUrl('manage', ['department' => $department, 'semester' => $semester]);
