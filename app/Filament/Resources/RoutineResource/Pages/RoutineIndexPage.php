@@ -20,12 +20,15 @@ class RoutineIndexPage extends Page implements HasForms
 
     protected static string $resource = RoutineResource::class;
 
-    protected static string $view = 'filament.resources.routine-resource.pages.routine-index-page';
+    protected static string $view = 'filament.manage-routines.routine-index-page';
 
     public ?array $data = [];
 
-    public function goToManagePage() : Redirector
+    public function goToManagePage()
     {
+        if( ! isset($this->data['department']) || ! isset($this->data['semester']) ) {
+            return redirect()->back();
+        }
         $department = $this->data['department'];
         $semester = $this->data['semester'];
         $redirect_url = RoutineResource::getUrl('manage', ['department' => $department, 'semester' => $semester]);

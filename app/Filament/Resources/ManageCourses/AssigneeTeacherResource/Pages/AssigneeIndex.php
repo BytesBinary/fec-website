@@ -17,12 +17,15 @@ class AssigneeIndex extends Page implements HasForms
 
     protected static string $resource = AssigneeTeacherResource::class;
 
-    protected static string $view = 'filament.resources.manage-courses.assignee-teacher-resource.pages.assignee-index';
+    protected static string $view = 'filament.manage-courses.assignee-index';
 
     public ?array $data = [];
 
     public function goToManagePage()
     {
+        if( !isset($this->data['department'])|| ! isset($this->data['semester']) ) {
+            return redirect()->back();
+        }
         $department = $this->data['department'];
         $semester = $this->data['semester'];
         $redirect_url = AssigneeTeacherResource::getUrl('manage', ['department' => $department, 'semester' => $semester]);
