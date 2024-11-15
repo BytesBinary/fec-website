@@ -18,7 +18,7 @@
     margin: 20px 0;
 }
 .routine-table-container .routine-table {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
     font-size: 14px;
 }
@@ -64,36 +64,12 @@
 .routine-table-container .routine-signature {
     text-align: center;
 }
-.routine-save-btn .button-1 {
-    margin-top: 25px;
-    background-color: #EA4C89;
-    border-radius: 8px;
-    border-style: none;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    height: 40px;
-    line-height: 20px;
-    list-style: none;
-    outline: none;
-    padding: 10px 16px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    transition: color 100ms;
-    vertical-align: baseline;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-}
-
 .routine-save-btn .button-1:hover,
 .routine-save-btn .button-1:focus {
     background-color: #F082AC;
+}
+.routine-save-btn .btn-of-download-routine {
+    background-color: #2959da;
 }
 @media print {
     @page {

@@ -1,12 +1,6 @@
 <x-filament-panels::page>
+{{--    Form--}}
     <form wire:submit.prevent="saveRoutine">
-        <div>
-            @if (session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-            @endif
-        </div>
         <div class="routine-table-container">
             <table class="routine-table">
                 <tr>
@@ -57,10 +51,14 @@
                 @endforeach
             </table>
         </div>
-        <div class="routine-save-btn flex flex-row justify-center">
-            <button type="submit" class="button-1">Save</button>
+        <div class="routine-save-btn flex flex-row justify-center mt-3">
+            <button type="submit" class="btn-of-download-routine px-6 text-white py-1 rounded-lg">Save</button>
         </div>
     </form>
+    <div class="flex justify-end">
+        <button type="submit" class="bg-primary-600 px-3 py-2 text-white rounded-xl" wire:click="download"> Click Download Routine </button>
+    </div>
+{{--   Table--}}
     <div class="routine-table-container">
         <table class="routine-table">
             <tr>
@@ -73,11 +71,11 @@
                 <th class="table-head" >6<br />12:10-13:00</th>
                 <th class="table-head" >8<br />14:00-17:00</th>
             </tr>
-            @foreach($routines as $key => $routine)
+            @foreach($routines as $day => $routine)
                 <tr>
-                    <td class="table-data"  class="routine-bold">{{ $key }}</td>
+                    <td class="table-data routine-bold">{{ $day }}</td>
                     @foreach($routine as $time => $course)
-                        <td class="table-data"  class="routine-subject-cell max-w-sm">
+                        <td class="table-data routine-subject-cell">
                         @foreach($course as $final_course)
                                 <div class="routine-subject">
                                     <span class="routine-subject-title">{{ $final_course['course_code']  }}</span>
@@ -90,4 +88,5 @@
                 </tr>
             @endforeach
         </table>
+    </div>
 </x-filament-panels::page>

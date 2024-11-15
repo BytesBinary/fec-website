@@ -159,8 +159,15 @@ class ManageRoutine extends Page
 
     public function download(): \Symfony\Component\HttpFoundation\StreamedResponse
     {
-        $pdf = PDF::loadView('filament.resources.routine-resource.pages.partials.routine-table',
-            ['routines' => $this->routines]);;
+        $pdf = PDF::loadView('filament.manage-routines.download-routine',
+            [
+                'routines' => $this->routines,
+                'courses'  => array_chunk($this->courses,7),
+                'details'  => [
+                    'department' => $this->department,
+                    'semester'   => $this->semester,
+                ]
+            ]);;
         return response()->streamDownload(function () use ($pdf) {
             echo $pdf->stream();
         }, "routine-{$this->department}-{$this->semester}.pdf");
