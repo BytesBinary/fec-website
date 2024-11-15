@@ -128,3 +128,9 @@ if( ! function_exists('get_card_class_of_student_staticstics') ) {
         return "$class $default";
     }
 }
+
+if( ! function_exists('get_event_slug') ) {
+    function get_event_slug ( $title ) {
+        return Str::slug( $title );
+    }
+}
