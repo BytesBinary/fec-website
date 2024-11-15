@@ -1,70 +1,71 @@
-.routine-header {
+.routine-table-container .routine-header {
     text-align: center;
     margin-top: 40px;
     line-height: 12px;
 }
-.routine-header h2 {
+.routine-table-container .routine-header h2 {
     font-size: 26px;
 }
-.routine-table-container p {
+.routine-table-container .routine-table-container p {
     margin-left: 80px;
 }
-.routine-effective-date {
+.routine-table-container .routine-effective-date {
     margin-top: -40px;
 }
-.routine-table-container {
+.routine-table-container .routine-table-container {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
-.routine-table {
+.routine-table-container .routine-table {
     width: 90%;
     border-collapse: collapse;
     font-size: 14px;
 }
-.routine-table th,
-td {
+.routine-table-container .routine-table .table-head,
+.table-data {
     border: 1px solid black;
     padding: 0 4px;
     text-align: center;
 }
-.routine-table th {
+.routine-table-container .routine-table .table-head {
     background-color: #fcf4d0;
     padding: 15px;
 }
-.routine-bold {
+.routine-table-container .routine-bold {
     font-weight: bold;
 }
-.routine-lunch-break {
+.routine-table-container .routine-lunch-break {
     writing-mode: vertical-lr;
     background-color: #f0f0f0;
     font-weight: bold;
 }
-.routine-subject-cell {
+.routine-table-container .routine-subject-cell {
     height: 50px;
 }
-.routine-last {
+.routine-table-container .routine-last {
     width: 300px;
 }
-.routine-footer-container {
+.routine-table-container .routine-footer-container {
     width: 90%;
     margin-top: -20px;
 }
-.routine-course-teacher-container {
+.routine-table-container .routine-course-teacher-container {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
     line-height: 5px;
 }
-.routine-signature-container {
+.routine-table-container .routine-signature-container {
     display: flex;
     justify-content: space-between;
     line-height: 4px;
 }
-.routine-signature {
+.routine-table-container .routine-signature {
     text-align: center;
 }
-.button-1 {
+.routine-save-btn .button-1 {
+    margin-top: 25px;
     background-color: #EA4C89;
     border-radius: 8px;
     border-style: none;
@@ -78,7 +79,6 @@ td {
     height: 40px;
     line-height: 20px;
     list-style: none;
-    margin: 0;
     outline: none;
     padding: 10px 16px;
     position: relative;
@@ -91,8 +91,8 @@ td {
     touch-action: manipulation;
 }
 
-.button-1:hover,
-.button-1:focus {
+.routine-save-btn .button-1:hover,
+.routine-save-btn .button-1:focus {
     background-color: #F082AC;
 }
 @media print {
@@ -100,7 +100,7 @@ td {
         size: landscape;
         margin: 0mm 0mm !important;
     }
-    .routine-no-print {
+    .routine-table-container .routine-no-print {
         display: none;
     }
 }

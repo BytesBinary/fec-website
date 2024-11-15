@@ -32,9 +32,9 @@ class ManageRoutine extends Page
         '8:50' => '8:50',
         '9:40' => '9:40',
         '10:30' => '10:30',
-        '11:20' => '11:2',
+        '11:20' => '11:20',
         '12:10' => '12:10',
-        '14:00' => '14:00'
+        '14:00' => '14:00',
     ];
     public array $processRoutine;
 
@@ -49,8 +49,14 @@ class ManageRoutine extends Page
             ->get()
             ->toArray();
 
-        $this->routines = Routine::where('semester', $semester)
-            ->where('department', $department)
+        $this->routines = $this->getRoutine();
+        $this->processData();
+    }
+
+    public function getRoutine()
+    {
+        $routine = Routine::where('semester', $this->semester)
+            ->where('department', $this->department)
             ->orderByRaw("FIELD(day, 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday')")
             ->orderBy('time')
             ->get()
@@ -62,7 +68,7 @@ class ManageRoutine extends Page
                 }
 
                 foreach ($dayGroup as $routine) {
-                    $timeKey = date('g:i', strtotime($routine->time));
+                    $timeKey = $routine->time;
                     $course = Course::find($routine->course_id);
                     $teacher = User::find($routine->teacher_id);
                     $routine->course_title = $course->title;
@@ -74,7 +80,16 @@ class ManageRoutine extends Page
                 return $organizedByTime;
             })
             ->toArray();
-        $this->processData();
+
+        foreach ( $this->days as $day ) {
+            foreach ( $this->times as $time ) {
+                if( ! isset($routine[$day][$time]) ) {
+                    $routine[$day][$time] = [];
+                }
+            }
+        }
+
+        return $routine;
     }
 
     public function processData(): void
@@ -101,22 +116,31 @@ class ManageRoutine extends Page
     public function loadAvailableTeachers($day, $time, $course): void
     {
         $course = explode(',', $course);
-        $assignedTeachers = Course::find($course[0])->assigned_teachers_ids;
-        $assignedTeachers = explode(',', $assignedTeachers);
-        $teachers = User::whereIn('id', $assignedTeachers)
-            ->whereNotIn('id', function ($query) use ($day, $time) {
-                $query->select('teacher_id')
-                    ->from('routines')
-                    ->where('day', $day)
-                    ->where('time', $time);
-            })
-            ->pluck('name', 'id')
-            ->toArray();
-        $this->processRoutine[$day][$time]['course'][$course[1]]['teachers'] = $teachers;
+        if( ! empty($course) ){
+            $have_course = Course::find($course[0]);
+            if( ! $have_course ) {
+                return;
+            }
+            $assignedTeachers = $have_course->assigned_teachers_ids;
+            $assignedTeachers = explode(',', $assignedTeachers);
+            $teachers = User::whereIn('id', $assignedTeachers)
+                ->whereNotIn('id', function ($query) use ($day, $time) {
+                    $query->select('teacher_id')
+                        ->from('routines')
+                        ->where('day', $day)
+                        ->where('time', $time);
+                })
+                ->pluck('name', 'id')
+                ->toArray();
+            $this->processRoutine[$day][$time]['course'][$course[1]]['teachers'] = $teachers;
+        }
     }
 
     public function saveRoutine(): void
     {
+        if( empty($this->data['routine']) ) {
+            return;
+        }
         foreach ($this->data['routine'] as $day => $times) {
             foreach ($times as $time => $details) {
                 $courseId = $details['course'] ?? null;
@@ -140,6 +164,8 @@ class ManageRoutine extends Page
                 }
             }
         }
+
+        $this->routines = $this->getRoutine();
 
         // Optional: Display a success message
         session()->flash('message', 'Routine saved successfully!');

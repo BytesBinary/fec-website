@@ -23,6 +23,9 @@ class AssigneeIndex extends Page implements HasForms
 
     public function goToManagePage()
     {
+        if( !isset($this->data['department'])|| ! isset($this->data['semester']) ) {
+            return redirect()->back();
+        }
         $department = $this->data['department'];
         $semester = $this->data['semester'];
         $redirect_url = AssigneeTeacherResource::getUrl('manage', ['department' => $department, 'semester' => $semester]);
