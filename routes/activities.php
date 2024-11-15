@@ -10,4 +10,5 @@ Route::prefix('activities')->group(function (){
     Route::get('/researches', Researches::class)->name('researches');
     Route::get('/events', Events::class)->name('events');
     Route::get('/event',EventPage::class)->name('event');
+    Route::get('/event/',EventPage::class)->name('event');
 });
