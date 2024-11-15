@@ -11,17 +11,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Event Card -->
                 <x-card.events-card title="Computer Science & Engineering" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('cse') }}" wire:navigate is-home-page="true" />
+                url="{{ route('event') }}" wire:navigate is-home-page="true" />
                 <x-card.events-card title="Computer Science & Engineering" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('cse') }}" wire:navigate is-home-page="true" />
+                url="{{ route('event') }}" wire:navigate is-home-page="true" />
                 <x-card.events-card title="Computer Science & Engineering" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('cse') }}" wire:navigate is-home-page="true" />
+                url="{{ route('event') }}" wire:navigate is-home-page="true" />
                 <x-card.events-card title="Computer Science & Engineering" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('cse') }}" wire:navigate is-home-page="true" />
+                url="{{ route('event') }}" wire:navigate is-home-page="true" />
                 <x-card.events-card title="Computer Science & Engineering" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('cse') }}" wire:navigate is-home-page="true" />
+                url="{{ route('event') }}" wire:navigate is-home-page="true" />
                 <x-card.events-card title="Computer Science & Engineering" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('cse') }}" wire:navigate is-home-page="true" />
+                url="{{ route('event') }}" wire:navigate is-home-page="true" />
             </div>
         </div>
     </section>
