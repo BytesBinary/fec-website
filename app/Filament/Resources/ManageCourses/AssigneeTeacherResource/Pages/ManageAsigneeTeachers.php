@@ -12,6 +12,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Pages\Page;
 
 class ManageAsigneeTeachers extends Page implements HasForms
@@ -49,7 +50,7 @@ class ManageAsigneeTeachers extends Page implements HasForms
             ->toArray();
     }
 
-    public function getFormActions()
+    public function getFormActions(): array
     {
         return [
             Action::make('save')
@@ -61,13 +62,24 @@ class ManageAsigneeTeachers extends Page implements HasForms
     public function saveDetails(): void
     {
         foreach ($this->data['assignee_teachers'] as $teacher ) {
-            if( empty($teacher['teacher']) ) {
+            if( empty($teacher['course']) ) {
                 continue;
             }
             $course = Course::find($teacher['course']);
+            if( empty($teacher['teacher']) ) {
+                $course->assigned_teachers_ids = '';
+                $course->update();
+                continue;
+            }
             $course->assigned_teachers_ids = implode(',', $teacher['teacher']);
-            $course->save();
+            $course->update();
         }
+
+        Notification::make()
+            ->success()
+            ->duration(2000)
+            ->title(__('Teacher Assignee Details Updated Successfully'))
+            ->send();
     }
 
     public function form(Form $form) : Form

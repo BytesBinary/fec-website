@@ -1,5 +1,12 @@
 <x-filament-panels::page>
     <form wire:submit.prevent="saveRoutine">
+        <div>
+            @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            @endif
+        </div>
         <div class="routine-table-container">
             <table class="routine-table">
                 <tr>
@@ -12,7 +19,7 @@
                     <th class="table-head" >6<br />12:10-13:00</th>
                     <th class="table-head" >8<br />14:00-17:00</th>
                 </tr>
-                @foreach($processRoutine as $key => $routine)
+                @foreach($routinesData as $key => $routine)
                     <tr>
                         <td class="table-data"  class="routine-bold">{{ $key }}</td>
                         @foreach($routine as $time => $course)
@@ -22,7 +29,7 @@
                                         wire:model="data.routine.{{ $key }}.{{ $time }}.course"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                     <option value="">Select A Course</option>
-                                    @foreach($processRoutine[$key][$time] as $courses)
+                                    @foreach($routinesData[$key][$time] as $courses)
                                         @foreach($courses as $index => $course)
                                             @if(isset($course['id']))
                                                 <option value="{{ $course['id'] }},{{ $index }}">{{ $course['title'] }}</option>
@@ -33,7 +40,7 @@
                                 <select name="routine[{{ $key }}][{{ $time }}][course][teacher]"
                                         wire:model="data.routine.{{ $key }}.{{ $time }}.teacher"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    @foreach($processRoutine[$key][$time] as $courses)
+                                    @foreach($routinesData[$key][$time] as $courses)
                                         <option value="">Select A Teacher</option>
                                         @foreach($courses as $index => $course)
                                             @if(isset($course['teachers']))
@@ -54,7 +61,6 @@
             <button type="submit" class="button-1">Save</button>
         </div>
     </form>
-
     <div class="routine-table-container">
         <table class="routine-table">
             <tr>
@@ -67,7 +73,6 @@
                 <th class="table-head" >6<br />12:10-13:00</th>
                 <th class="table-head" >8<br />14:00-17:00</th>
             </tr>
-            @php ray($routines) @endphp
             @foreach($routines as $key => $routine)
                 <tr>
                     <td class="table-data"  class="routine-bold">{{ $key }}</td>

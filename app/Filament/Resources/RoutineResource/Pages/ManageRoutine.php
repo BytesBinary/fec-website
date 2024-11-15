@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\Routine;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Filament\Notifications\Notification;
 use Filament\Resources\Pages\Page;
 
 class ManageRoutine extends Page
@@ -20,37 +21,22 @@ class ManageRoutine extends Page
     public string $semester;
     public array $routines;
     public array $courses;
-    public array $days = [
-        'Sunday' => 'Sunday',
-        'Monday' => 'Monday',
-        'Tuesday' => 'Tuesday',
-        'Wednesday' => 'Wednesday',
-        'Thursday' => 'Thursday',
-    ];
-    public array $times = [
-        '8:00' => '8:00',
-        '8:50' => '8:50',
-        '9:40' => '9:40',
-        '10:30' => '10:30',
-        '11:20' => '11:20',
-        '12:10' => '12:10',
-        '14:00' => '14:00',
-    ];
-    public array $processRoutine;
+    public array $days;
+    public array $times;
+    public array $routinesData;
 
     public function mount($department, $semester): void
     {
         $this->department = $department;
         $this->semester = $semester;
-
-        // Fetch courses
+        $this->days = config('admin-panel.working_days');
+        $this->times = config('admin-panel.class_times');
+        $this->routines = $this->getRoutine();
+        $this->processRoutines();
         $this->courses = Course::where('department', $department)
             ->where('semester', $semester)
             ->get()
             ->toArray();
-
-        $this->routines = $this->getRoutine();
-        $this->processData();
     }
 
     public function getRoutine()
@@ -92,11 +78,11 @@ class ManageRoutine extends Page
         return $routine;
     }
 
-    public function processData(): void
+    public function processRoutines(): void
     {
         foreach ( $this->days as $day ) {
             foreach ( $this->times as $time ) {
-                $this->processRoutine[$day][$time] = [
+                $this->routinesData[$day][$time] = [
                     'course' =>
                         Course::where('department', $this->department)
                             ->where('semester', $this->semester)
@@ -132,7 +118,7 @@ class ManageRoutine extends Page
                 })
                 ->pluck('name', 'id')
                 ->toArray();
-            $this->processRoutine[$day][$time]['course'][$course[1]]['teachers'] = $teachers;
+            $this->routinesData[$day][$time]['course'][$course[1]]['teachers'] = $teachers;
         }
     }
 
@@ -148,7 +134,6 @@ class ManageRoutine extends Page
                 $courseId = ( null !== $courseId ) ? explode(',', $courseId)[0] : null;
 
                 if ($courseId && $teacherId) {
-                    // Save routine to the database or update an existing one
                     Routine::updateOrCreate(
                         [
                             'day' => $day,
@@ -164,11 +149,12 @@ class ManageRoutine extends Page
                 }
             }
         }
-
         $this->routines = $this->getRoutine();
-
-        // Optional: Display a success message
-        session()->flash('message', 'Routine saved successfully!');
+        Notification::make()
+            ->success()
+            ->duration(2000)
+            ->title(__('Routine Updated Successfully'))
+            ->send();
     }
 
     public function download(): \Symfony\Component\HttpFoundation\StreamedResponse
