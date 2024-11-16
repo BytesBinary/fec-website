@@ -1,5 +1,4 @@
 <div>
-
     <body class = "bg-gray-100">
         <!-- Top Navigation -->
         <div class = "w-[90%] mx-auto my-6">
