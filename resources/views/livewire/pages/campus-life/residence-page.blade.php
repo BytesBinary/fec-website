@@ -1,162 +1,145 @@
-<div>
-    <body class="bg-gray-100">
-        <div class="w-[90%] mx-auto my-6">
+<div class="mx-auto w-3/4">
 
-            <!-- South Hall Overview -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h1 class="text-2xl font-bold text-blue-600 text-center">
-                    Welcome to South Hall
+    <body class="bg-gray-100 m-0">
+        <!-- Header Section for South Hall -->
+        <div class="bg-white p-4 md:p-6 mt-5 shadow-md flex flex-col md:flex-row items-center justify-between rounded-lg space-y-4 md:space-y-0">
+            <!-- Hall Image -->
+            <div class="flex-shrink-0">
+                <img src="{{ asset('images/halls/southhall.jpg') }}" alt="South Hall"
+                    class="w-30 h-28 mr-4 ml-5 rounded-sm shadow-md hover:scale-105 transition transform duration-300 ease-out">
+            </div>
+
+            <!-- Hall Title & Details -->
+            <div class="flex-1 mx-4 text-center md:text-left">
+                <h1 class="text-lg md:text-2xl ml-7 font-bold text-gray-900 leading-snug">
+                    South Hall
                 </h1>
-                <p class="text-gray-600 text-center mt-3">
-                    South Hall is a well-equipped residence hall offering comfortable and spacious living for students. With a capacity of 160 seats, the hall includes essential amenities like a kitchen, reading room, and a dedicated guest room, ensuring a pleasant and productive stay.
-                </p>
+                <p class="text-sm text-gray-600 italic ml-7 ">Innovating Student Living</p>
+                <div class="flex flex-col lg:flex-row justify-center lg:justify-start space-y-2 md:space-y-4 lg:space-x-4 mt-3">
+                    <!-- Interested Section -->
+                    <div class="flex items-center bg-gray-200 justify-center rounded p-2 px-4 ml-7 shadow-md hover:shadow-md transition">
+                        <img src="{{ asset('images/halls/seats.png') }}" alt="Seating Capacity"
+                            class="h-6 w-6 mr-2">
+                        <p class="text-sm text-gray-800">160 Seats</p>
+                    </div>
+
+                    <!-- Dining Section -->
+                    <div class="flex items-center bg-gray-200 justify-center rounded p-2 px-4 shadow-md hover:shadow-md transition">
+                        <img src="{{ asset('images/halls/dining.png') }}" alt="Dining Facilities"
+                            class="h-6 w-6 mr-2">
+                        <p class="text-sm text-gray-800">3 Meals a Day</p>
+                    </div>
+
+                    <!-- Guest Room Section -->
+                    <div class="flex items-center bg-gray-200 justify-center rounded p-2 px-4 shadow-md hover:shadow-md transition">
+                        <img src="{{ asset('images/halls/guestroom.png') }}" alt="Guest Room"
+                            class="h-6 w-6 mr-2">
+                        <p class="text-sm text-gray-800">Dedicated Reading Room</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Hall Features -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-
-                <!-- 160 Seats Section -->
-                <div class="bg-blue-50 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-lg font-bold text-blue-600">160 Seats</h3>
-                    <p class="text-gray-600 mt-3">
-                        The hall offers spacious seating for 160 residents, providing a conducive environment for study and social activities.
-                    </p>
-                    <img src="https://via.placeholder.com/300x200.png?text=160+Seats" alt="160 Seats" class="mt-4 w-full h-auto rounded-md shadow-md">
-                </div>
-
-                <!-- Kitchen Section -->
-                <div class="bg-yellow-50 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-lg font-bold text-yellow-600">Kitchen</h3>
-                    <p class="text-gray-600 mt-3">
-                        The hall features a fully equipped kitchen for residents to prepare their meals. It includes modern cooking facilities to cater to all needs.
-                    </p>
-                    <img src="https://via.placeholder.com/300x200.png?text=Kitchen" alt="Kitchen" class="mt-4 w-full h-auto rounded-md shadow-md">
-                </div>
-
-                <!-- Reading Room Section -->
-                <div class="bg-green-50 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-lg font-bold text-green-600">Reading Room</h3>
-                    <p class="text-gray-600 mt-3">
-                        A quiet and peaceful reading room is available for residents to focus on their academic work and personal studies.
-                    </p>
-                    <img src="https://via.placeholder.com/300x200.png?text=Reading+Room" alt="Reading Room" class="mt-4 w-full h-auto rounded-md shadow-md">
-                </div>
-
-                <!-- Dining Facilities Section -->
-                <div class="bg-orange-50 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-lg font-bold text-orange-600">Dining Facilities</h3>
-                    <p class="text-gray-600 mt-3">
-                        Residents enjoy 3 meals a day, with a variety of options to cater to different tastes and dietary preferences.
-                    </p>
-                    <img src="https://via.placeholder.com/300x200.png?text=Dining+Facilities" alt="Dining Facilities" class="mt-4 w-full h-auto rounded-md shadow-md">
-                </div>
-
-                <!-- Guest Room Section -->
-                <div class="bg-pink-50 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-lg font-bold text-pink-600">Guest Room</h3>
-                    <p class="text-gray-600 mt-3">
-                        South Hall provides a dedicated guest room for visitors, ensuring comfort and privacy for guests.
-                    </p>
-                    <img src="https://via.placeholder.com/300x200.png?text=Guest+Room" alt="Guest Room" class="mt-4 w-full h-auto rounded-md shadow-md">
-                </div>
-
+            <!-- Registration Section -->
+            <div class="flex-shrink-0">
+                <button class="bg-orange-500 text-white font-medium py-3 px-6 mr-5 rounded shadow-md hover:bg-orange-600 transition hover:shadow-lg text-sm">
+                    Register Now
+                </button>
             </div>
-
         </div>
 
-            <!-- Top Navigation -->
-                <!-- Welcome Section -->
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h1 class="text-2xl font-bold text-blue-600 text-center">
-                        South Hall
-                    </h1>
-                    <p class="text-gray-600 text-center mt-3">
-                        Welcome to South Hall, part of our vibrant student residence campus. This hall is designed with the comfort
-                        and convenience of students in mind, offering essential amenities and a supportive environment for academic
-                        and personal growth.
-                    </p>
-                </div>
+        <!-- Main Content -->
+        <div class="flex flex-col lg:flex-row mx-auto p-4 md:p-8 gap-4">
+            <!-- Hall Banner -->
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition w-full lg:w-2/3 order-2 lg:order-1">
+                <img src="{{ asset('images/halls/banner.jpg') }}" alt="South Hall Banner"
+                    class="w-full h-72 object-cover rounded-md mb-4">
+                <p class="text-center text-xs text-gray-500 italic mb-4">"Empowering Students for a Bright Future"</p>
 
-                <!-- Campus Overview Section -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-8">
-                    <h2 class="text-xl font-semibold text-blue-600">Campus Overview</h2>
-                    <p class="text-gray-600 mt-3">
-                        All departments are housed in a multi-story building on a campus of approximately 12 acres. The campus includes:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 mt-3">
-                        <li>An administrative building</li>
-                        <li>Three faculty buildings</li>
-                        <li>A cafeteria</li>
-                        <li>A bank</li>
-                        <li>A post office</li>
-                        <li>A library</li>
-                        <li>An auditorium</li>
-                    </ul>
-                    <p class="text-gray-600 mt-3">
-                        Three residence halls provide student accommodation:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600">
-                        <li>One hall for women (Female Hall)</li>
-                        <li>Two halls for men (South Hall and North Hall)</li>
+                <!-- About South Hall -->
+                <h2 class="text-lg md:text-xl font-semibold text-gray-900 mb-3">About South Hall</h2>
+                <p class="text-gray-600 text-sm mb-2">
+                    South Hall offers top-tier accommodations with modern amenities for 160 students. The hall features a fully equipped kitchen, a reading room, and 3 nutritious meals a day to ensure a comfortable and balanced lifestyle for its residents. Additionally, a guest room is available for visitors.
+                </p>
+
+                <!-- Facilities -->
+                <div class="mb-6">
+                    <h3 class="text-md font-semibold text-gray-800 mb-2">Key Facilities</h3>
+                    <ul class="list-disc ml-5 text-gray-600 text-sm">
+                        <li>Fully Equipped Kitchen</li>
+                        <li>Comfortable Study & Reading Rooms</li>
+                        <li>3 Meals per Day (Breakfast, Lunch, Dinner)</li>
+                        <li>Guest Room for Visitors</li>
                     </ul>
                 </div>
 
-                <!-- Hall Capacity Section -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-8">
-                    <h2 class="text-xl font-semibold text-blue-600">Hall Capacity</h2>
-                    <p class="text-gray-600 mt-3">
-                        Below is the accommodation capacity for the various halls on the campus:
-                    </p>
-                    <table class="min-w-full table-auto mt-3 border-collapse">
-                        <thead>
-                            <tr>
-                                <th class="px-6 py-3 border-b text-left text-gray-700 font-semibold">Name of Hall</th>
-                                <th class="px-6 py-3 border-b text-left text-gray-700 font-semibold">Capacity</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-gray-50">
-                                <td class="px-6 py-4 text-gray-600">South Hall (Bongobondhu Sheikh Mujibur Rahman Hall)</td>
-                                <td class="px-6 py-4 text-gray-600">160</td>
-                            </tr>
-                            <tr class="bg-white">
-                                <td class="px-6 py-4 text-gray-600">North Hall (Palli Kabi Jasimuddin Hall)</td>
-                                <td class="px-6 py-4 text-gray-600">160</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="px-6 py-4 text-gray-600">Female Hall</td>
-                                <td class="px-6 py-4 text-gray-600">96</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Gallery -->
+                <div class="mb-6">
+                    <h3 class="text-md font-semibold text-gray-800 mb-2">Gallery</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <img src="{{ asset('images/halls/readingroom.jpg') }}" alt="Reading Room" class="w-full h-auto rounded-md shadow-md">
+                        <img src="{{ asset('images/halls/kitchen.jpg') }}" alt="Kitchen" class="w-full h-auto rounded-md shadow-md">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Date & Time Section -->
+            <div class="flex flex-col gap-4 w-full lg:w-1/3 order-1 lg:order-2">
+                <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <h3 class="font-semibold text-gray-800 text-lg mb-3">Check-in Time</h3>
+                    <p class="text-sm text-gray-600 mb-4">Check-in: Monday to Friday | 9:00 AM - 5:00 PM</p>
+                    <a href="calendar-link" class="text-blue-500 text-sm hover:underline transition">Add to Calendar</a>
                 </div>
 
-                <!-- Additional Information Section -->
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-8">
-                    <h2 class="text-xl font-semibold text-blue-600">Facilities and Services</h2>
-                    <p class="text-gray-600 mt-3">
-                        South Hall provides an array of amenities designed for the comfort and well-being of its residents:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 mt-3">
-                        <li>24/7 security</li>
-                        <li>Study rooms</li>
-                        <li>Common areas for recreation</li>
-                        <li>Fully equipped dining hall</li>
-                        <li>In-house laundry services</li>
-                        <li>Free Wi-Fi across the campus</li>
-                    </ul>
-                    <p class="text-gray-600 mt-3">
-                        Additionally, the hall is located in close proximity to several key campus facilities, including:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600">
-                        <li>The library for academic research</li>
-                        <li>The cafeteria offering a range of food options</li>
-                        <li>The bank and post office for financial and postal services</li>
-                    </ul>
+                <!-- Location Section -->
+                <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <h3 class="font-semibold text-gray-800 text-lg mb-3">Location</h3>
+                    <p class="text-sm text-gray-600 mb-4">South Hall, Main Campus, University XYZ</p>
+                    <a href="map-link" class="text-blue-500 text-sm hover:underline transition">View on Map</a>
                 </div>
 
+                <!-- Contact for Any Query Section -->
+                <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <h3 class="font-semibold text-gray-800 text-lg mb-3">Administration</h3>
+                    <div class="bg-gray-100 p-3 mb-3 rounded-md shadow-md hover:shadow-lg">
+                        <div class="flex items-center mt-4">
+                            <img src="{{ asset('images/host1.jpg') }}" alt="Host Image"
+                                class="w-12 h-12 rounded-full mr-4 border-2 border-orange-500">
+                            <div>
+                                <p class="text-gray-700 font-semibold">Alex Morgan</p>
+                                <p class="text-sm text-gray-600">Hall Provost</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-600">
+                                <strong>Email:</strong> <a href="mailto:alexmorgan@university.com" class="text-blue-500 hover:underline">alexmorgan@university.com</a>
+                            </p>
+                            <p class="text-sm text-gray-600 mt-1">
+                                <strong>Phone:</strong> <a href="tel:+1234567890" class="text-blue-500 hover:underline">+1 234-567-890</a>
+                            </p>
+                        </div>
+                    </div>
 
-
+                    <!-- Another Contact -->
+                    <div class="bg-gray-100 p-3 rounded-md shadow-md hover:shadow-lg">
+                        <div class="flex items-center mt-4">
+                            <img src="{{ asset('images/host2.jpg') }}" alt="Host Image"
+                                class="w-12 h-12 rounded-full mr-4 border-2 border-orange-500">
+                            <div>
+                                <p class="text-gray-700 font-semibold">Taylor Swift</p>
+                                <p class="text-sm text-gray-600">Hall Accountant</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-600">
+                                <strong>Email:</strong> <a href="mailto:taylor.swift@university.com" class="text-blue-500 hover:underline">taylor.swift@university.com</a>
+                            </p>
+                            <p class="text-sm text-gray-600 mt-1">
+                                <strong>Phone:</strong> <a href="tel:+1234567891" class="text-blue-500 hover:underline">+1 234-567-891</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
-
 </div>
