@@ -50,6 +50,9 @@
             <!-- Event Banner -->
             <div
                 class="bg-white p-4 rounded-lg shadow-lg shadow-gray-400 hover:shadow-xl transition w-full lg:w-2/3 order-2 lg:order-1">
+                {{-- <h1 class="text-lg md:text-3xl text-center  font-bold text-gray-900 leading-snug mb-6 mt-2 ">
+                    Tech Innovators Summit 2025
+                </h1> --}}
                 <img src="{{ asset('images/gallery/10.jpg') }}" alt="Event Banner"
                     class="w-full h-72 object-cover rounded-md mb-4">
                 <p class="text-center text-sm text-gray-600 italic mb-4">"Empowering Innovators for a Sustainable
