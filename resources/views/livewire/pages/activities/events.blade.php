@@ -8,13 +8,13 @@
             </div>
 
             <!-- Event Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 place-items-center md:gap-x-10 md:place-items-stretch md:grid-cols-2 lg:grid-cols-3 gap-8 lg;gap-x-10">
                 <!-- Event Card -->
-                <x-card.events-card title="Disco Diwane" pic="images/club/ric.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
+                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
                 url="{{ route('event',['slug' => 'ric']) }}" wire:navigate is-home-page="true" />
-                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.JULY.2024" location="Baitul Aman"
+                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
                 url="{{ route('event',['slug' => 'ffff']) }}" wire:navigate is-home-page="true" />
-                <x-card.events-card title="Disco Diwane" pic="images/club/programming.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
+                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
                 url="{{ route('event',['slug' => 'aaa']) }}" wire:navigate is-home-page="true" />
                 <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
                 url="{{ route('event',['slug' => 'dddd']) }}" wire:navigate is-home-page="true" />
