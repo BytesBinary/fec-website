@@ -14,17 +14,7 @@
             </div>
 
             <!-- Menu Section -->
-            <div class = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                <!-- About Section -->
-                <div href  = "{{ route('residence', 'about') }}"
-                    class = "group bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition hover:cursor-pointer"wire:navigate>
-                    <h3 class = "text-lg font-bold text-blue-600 group-hover:text-blue-800">About FEC Halls</h3>
-                    <ul class = "mt-3 text-gray-600 text-sm space-y-2">
-                        <li class = "hover:text-gray-800">Statistics</li>
-                        <li class = "hover:text-gray-800">Facilities</li>
-                    </ul>
-                </div>
-
+            <div class = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                 <!-- South Hall Section -->
                 <div href="{{route('residence','south-hall')}}"
                  class = "bg-orange-50 p-6 rounded-lg shadow-md hover:shadow-lg transition hover:cursor-pointer " wire:navigate>
