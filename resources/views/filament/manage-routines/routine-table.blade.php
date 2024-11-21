@@ -17,6 +17,19 @@
                     <td class="table-data routine-subject-cell">
                         @foreach($course as $final_course)
                             <div class="routine-subject">
+                                <button
+                                    style="background-color: red; margin: 3px;"
+                                    wire:click="deleteRoutine('{{ $day }}', '{{ $time }}')"
+                                    class="routine-delete-button w-8 h-8 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-full shadow-lg transition duration-300"
+                                    title="Delete Routine"
+                                >
+                                    <div wire:loading wire:target="deleteRoutine" class="mb-1">
+                                        <x-filament::loading-indicator class="h-5 w-5" />
+                                    </div>
+                                    <div wire.loading.remove>
+                                        &#10005;
+                                    </div>
+                                </button>
                                 <span class="routine-subject-title">{{ $final_course['course_code']  }}</span>
                                 <br/>
                                 (<span class="routine-subject-teacher" style="font-weight: bold">{{ $final_course['teacher_name'] }}</span>)
