@@ -1,29 +1,37 @@
 <div class="mx-auto w-full md:w-3/4 lg:w-4/5 p-3">
     <div class="bg-white m-0">
         <!-- Header Section -->
-        <div class="bg-white pt-3 md:p-4 mt-5 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+        <div class="bg-white pt-3 md:p-4 mt-5 flex flex-col md:flex-row items-center justify-between md:space-y-0 w-full">
             <div class="flex-1 text-center md:text-left mb-6">
                 <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
                     Tech Innovators Summit 2025
                 </h1>
-                <p class="text-lg text-gray-600 italic">Innovating the Future Together</p>
-                <div class="flex flex-col lg:flex-row justify-center lg:justify-start lg:items-center mt-5 space-y-4 lg:space-x-4">
+                <p class="text-md text-gray-600 italic">Innovating the Future Together</p>
+                <div class="flex flex-row justify-center sm:justify-start items-center mt-1 space-y-4 lg:space-x-4">
                     <div class="flex items-center bg-gray-200 hover:bg-gray-300 rounded px-2 py-2 mt-4">
-                        <img src="{{ asset('images/event/leadership.png') }}" alt="people interested" class="size-5 mr-2">
+                        <img src="{{ asset('images/event/leadership.png') }}" alt="people interested" class="size-5 ml-1">
                         <p class="text-sm text-gray-800">1,200+ Interested</p>
                     </div>
-                    <button class="flex items-center bg-orange-100 text-orange-600 rounded shadow-sm hover:shadow-md hover:bg-orange-200 p-2 px-4">
+                    <button class="flex items-center lg:bg-orange-100 lg:text-orange-600 rounded lg:shadow-sm lg:hover:shadow-md lg:hover:bg-orange-200 p-2 px-2 lg:px-4 ml-2 lg:ml-0">
                         <img src="{{ asset('images/event/star.png') }}" alt="Interested" class="h-5 w-5 mr-2">
-                        <span class="text-sm">Interested</span>
+                        <span class="hidden lg:flex text-sm">Interested</span>
                     </button>
-                    <button class="flex items-center bg-blue-100 text-blue-600 rounded shadow-sm hover:shadow-md hover:bg-blue-200 p-2 px-4">
+                    <button class="flex items-center lg:bg-blue-100 lg:text-blue-600 rounded lg:shadow-sm lg:hover:shadow-md lg:hover:bg-blue-200 p-2 px-[2px] lg:px-4">
                         <img src="{{ asset('images/event/share.png') }}" alt="Share" class="h-5 w-5 mr-2">
-                        <span class="text-sm">Share</span>
+                        <span class="hidden lg:flex text-sm">Share</span>
                     </button>
+                </div>
+                <div class="flex flex-row lg:hidden justify-between mt-8">
+                    <div class="text-xl text-black">
+                        <span>10 December 2024</span>
+                    </div>
+                <button class="font-medium rounded text-orange-600 text-xl underline underline-offset-4">
+                    Register Now
+                </button>
                 </div>
             </div>
             <div>
-                <button class="bg-orange-500 text-white font-medium py-3 px-6 rounded shadow-md hover:bg-orange-600 hover:shadow-lg text-sm">
+                <button class="bg-orange-500 text-white hidden lg:flex font-medium py-3 px-6 rounded shadow-md hover:bg-orange-600 hover:shadow-lg text-sm">
                     Register Now
                 </button>
             </div>
