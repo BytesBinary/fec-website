@@ -50,15 +50,6 @@ class ManageAsigneeTeachers extends Page implements HasForms
             ->toArray();
     }
 
-    public function getFormActions(): array
-    {
-        return [
-            Action::make('save')
-                ->label('Save Details')
-                ->submit('save'),
-        ];
-    }
-
     public function saveDetails(): void
     {
         foreach ($this->data['assignee_teachers'] as $teacher ) {
@@ -75,11 +66,7 @@ class ManageAsigneeTeachers extends Page implements HasForms
             $course->update();
         }
 
-        Notification::make()
-            ->success()
-            ->duration(2000)
-            ->title(__('Teacher Assignee Details Updated Successfully'))
-            ->send();
+        send_notification('success', '2000', 'Teacher Assignee Details Updated Successfully');
     }
 
     public function form(Form $form) : Form
@@ -117,5 +104,14 @@ class ManageAsigneeTeachers extends Page implements HasForms
                             ])
                     ])
             ])->statePath('data');
+    }
+
+    public function getFormActions(): array
+    {
+        return [
+            Action::make('save')
+                ->label('Save Details')
+                ->submit('save'),
+        ];
     }
 }

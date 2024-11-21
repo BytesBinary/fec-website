@@ -98,9 +98,9 @@ class Routine extends Model
                                 if( isset($course->assigned_teachers_ids) ) {
                                     $teachers = explode(',', $course->assigned_teachers_ids);
                                     foreach ($teachers as $teacher) {
-                                        $teacher = User::find($teacher)->toArray();
+                                        $teacher = User::find($teacher);
                                         if( $teacher ) {
-                                            $modifyCourse['teachers'][] = $teacher;
+                                            $modifyCourse['teachers'][] = $teacher->toArray();
                                         }
                                     }
                                 }

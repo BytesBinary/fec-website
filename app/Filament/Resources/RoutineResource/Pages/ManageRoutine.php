@@ -34,7 +34,7 @@ class ManageRoutine extends Page implements HasForms
     public array $routinesData;
     public bool $showRoutineDetails = false;
 
-    public function showRoutine()
+    public function showRoutine(): void
     {
         $this->department = $this->data['department'];
         $this->semester = $this->data['semester'];
@@ -92,8 +92,19 @@ class ManageRoutine extends Page implements HasForms
                 }
             }
         }
-        send_notification('success', '2000', 'Routine Updated Successfully');
         $this->routines = Routine::getRoutineByDayTime( $this->department, $this->semester, $this->days, $this->times, false );
+        send_notification('success', '2000', 'Routine Updated Successfully');
+    }
+
+    public function deleteRoutine( $day, $time ) : void
+    {
+        Routine::where('day', $day)
+            ->where('time', $time)
+            ->where('department', $this->department)
+            ->where('semester', $this->semester)
+            ->delete();
+        $this->routines[$day][$time] = [];
+        send_notification('success', '2000', 'Routine Deleted Successfully');
     }
 
     public function download(): \Symfony\Component\HttpFoundation\StreamedResponse

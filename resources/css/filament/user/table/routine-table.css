@@ -21,6 +21,7 @@
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
+    overflow-x: scroll;
 }
 .routine-table-container .routine-table .table-head,
 .table-data {
