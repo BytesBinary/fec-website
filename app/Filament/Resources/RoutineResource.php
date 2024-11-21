@@ -22,8 +22,7 @@ class RoutineResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\RoutineIndexPage::route('/'),
-            'manage' => Pages\ManageRoutine::route('/manage/{department}/{semester}'),
+            'index' => Pages\ManageRoutine::route('/'),
         ];
     }
 }

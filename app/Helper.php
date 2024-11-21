@@ -1,5 +1,6 @@
 <?php
 
+use Filament\Notifications\Notification;
 use Filament\Resources\Components\Tab;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
@@ -126,5 +127,16 @@ if( ! function_exists('get_card_class_of_student_staticstics') ) {
         $class = ((($index / 4) % 2 === 0) === ($index % 2 === 0)) ? 'bg-lime-50' : 'bg-white';
         $default = 'shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300';
         return "$class $default";
+    }
+}
+
+if( ! function_exists('send_notification') ) {
+    function send_notification( $type, $duration, $title ): void
+    {
+        Notification::make()
+            ->$type()
+            ->duration($duration)
+            ->title($title)
+            ->send();
     }
 }
