@@ -3,10 +3,15 @@
         <!-- Header Section -->
         <div class="bg-white pt-3 md:p-4 mt-5 flex flex-col md:flex-row items-center justify-between md:space-y-0 w-full">
             <div class="flex-1 text-center md:text-left mb-6">
-                <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                <h1 class="text-2xl text-wrap md:text-3xl font-bold text-gray-900 leading-snug">
                     Tech Innovators Summit 2025
                 </h1>
                 <p class="text-md text-gray-600 italic">Innovating the Future Together</p>
+
+                <div class="text-lg text-black mt-3 lg:hidden">
+                    <span>10 December 2024</span>
+                </div>
+
                 <div class="flex flex-row justify-center sm:justify-start items-center mt-1 space-y-4 lg:space-x-4">
                     <div class="flex items-center bg-gray-200 hover:bg-gray-300 rounded px-2 py-2 mt-4">
                         <img src="{{ asset('images/event/leadership.png') }}" alt="people interested" class="size-5 ml-1">
@@ -20,14 +25,9 @@
                         <img src="{{ asset('images/event/share.png') }}" alt="Share" class="h-5 w-5 mr-2">
                         <span class="hidden lg:flex text-sm">Share</span>
                     </button>
-                </div>
-                <div class="flex flex-row lg:hidden justify-between mt-8">
-                    <div class="text-xl text-black">
-                        <span>10 December 2024</span>
-                    </div>
-                <button class="font-medium rounded text-orange-600 text-xl underline underline-offset-4">
-                    Register Now
-                </button>
+                    <button class="flex lg:hidden ml-3 font-medium rounded text-orange-600 text-lg underline underline-offset-4">
+                        Register Now
+                    </button>
                 </div>
             </div>
             <div>
