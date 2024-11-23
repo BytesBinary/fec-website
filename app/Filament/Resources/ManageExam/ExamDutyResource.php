@@ -74,7 +74,7 @@ class ExamDutyResource extends Resource
                         TextEntry::make('exam_type_id')
                             ->label('Exam Type')
                             ->formatStateUsing(fn(string $state) => ExamType::find($state)->type),
-                        TextEntry::make('Department')
+                        TextEntry::make('department')
                             ->label('Department'),
                         TextEntry::make('batch')
                             ->label('Batch')
