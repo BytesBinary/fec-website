@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 
+use Database\Seeders\CourseSeeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,6 +19,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             ShieldSeeder::class,
+            CourseSeeder::class,
         ]);
         User::factory()->create([
             'name' => 'admin',
