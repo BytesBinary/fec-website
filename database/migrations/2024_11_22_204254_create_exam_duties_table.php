@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('exam_name');
             $table->string('semester');
             $table->string('batch');
+            $table->string('department');
             $table->string('exam_year');
             $table->longText('duty_details');
             $table->softDeletes();

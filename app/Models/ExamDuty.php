@@ -19,11 +19,17 @@ class ExamDuty extends Model
         'exam_type_id',
         'semester',
         'batch',
+        'department',
         'exam_year',
         'duty_details',
     ];
 
-    protected static function boot() {
+    protected $casts = [
+        'duty_details' => 'array', // Automatically handles JSON encoding/decoding
+    ];
+
+    protected static function boot(): void
+    {
         parent::boot();
         static::creating(function ($model) {
             if( empty($model->{$model->getKeyName()}) ) {

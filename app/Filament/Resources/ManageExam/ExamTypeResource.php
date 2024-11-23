@@ -36,6 +36,7 @@ class ExamTypeResource extends Resource
                 Tables\Columns\TextColumn::make('type')
                     ->label('Type'),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
