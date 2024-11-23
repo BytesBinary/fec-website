@@ -1,8 +1,8 @@
 <body class="bg-gray-100 m-0">
     <div class="lg:w-3/4 mx-auto">
         <!-- Section with Background Image -->
-        <section class="relative bg-gradient-to-r from-blue-500 to-green-500 text-white py-8 mt-5 shadow-lg">
-            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <section class="relative bg-gradient-to-r from-blue-500 to-green-500 rounded-lg text-white py-8 mt-5 shadow-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
             <div class="relative container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
                 <div class="text-center md:text-left">
                     <h1 class="text-5xl font-extrabold mb-4">South Hall</h1>
@@ -19,7 +19,7 @@
         </section>
 
         <!-- Main Content -->
-        <div class="flex flex-col md:flex-col shadow-lg lg:flex-row mt-5 bg-white">
+        <div class="flex flex-col md:flex-col shadow-lg rounded-t-lg lg:flex-row mt-5 bg-white">
             <!-- About Section -->
             <div class="p-4 flex-1 px-6">
                 <h2 class="text-2xl font-semibold text-gray-900 mb-3">About South Hall</h2>

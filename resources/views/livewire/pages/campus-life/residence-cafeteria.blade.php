@@ -7,12 +7,12 @@
                     Welcome to FEC Residence
                 </h1>
                 <p class="text-xl md:text-xl text-white mt-4 md:mt-6 leading-relaxed">
-                    Discover top-tier living with our thoughtfully designed halls of residence. Your comfort, our priority.
+                    Discover top-tier living with our thoughtfully designed halls <br> of residence. Your comfort, our priority.
                 </p>
             </div>
             <div class="relative mt-6 md:mt-0 md:absolute md:-right-16 w-[80%] md:w-[50%] h-[200px] md:h-[120%] bg-orange-600 rounded-full overflow-hidden shadow-md flex items-center justify-center">
                 <img src="{{ asset('images/pngwing.com.png') }}" alt="Welcome"
-                     class="w-[10rem] h-[10rem] object-cover opacity-90">
+                     class="w-[19rem] h-[19rem] object-cover opacity-90">
             </div>
 
         </div>
