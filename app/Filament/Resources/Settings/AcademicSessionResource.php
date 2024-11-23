@@ -48,6 +48,7 @@ class AcademicSessionResource extends Resource
                     ->label('Updated At')
                     ->sortable(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

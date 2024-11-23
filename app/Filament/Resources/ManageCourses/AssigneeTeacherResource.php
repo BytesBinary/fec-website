@@ -48,6 +48,7 @@ class AssigneeTeacherResource extends Resource
                     ->searchable()
                     ->sortable(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 Filter::make('1st Semester')
                     ->query(fn ($query) => $query->where('semester', '1st')),

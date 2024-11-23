@@ -5,6 +5,7 @@ namespace App\Filament\Resources\ManageExam\ExamDutyResource\Pages;
 use App\Filament\Resources\ManageExam\ExamDutyResource;
 use App\Models\Batch;
 use App\Models\Course;
+use App\Models\Department;
 use App\Models\ExamDuty;
 use App\Models\ExamHall;
 use App\Models\ExamType;
@@ -12,6 +13,7 @@ use App\Models\User;
 use Filament\Actions\Action;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -29,37 +31,37 @@ class CreateExamDuty extends Page implements HasForms
     protected static string $view = 'filament.manage-exams.create-exam-duty';
 
     public ?array $data = [];
+    private string $record = '';
 
-    public function mount( $record = '' )
+    public function mount( $record = '' ) : void
     {
         if( ! empty($record) ) {
-            $examDuty = ExamDuty::find($record);
-            $this->data = [
-                'exam_name' => $examDuty->exam_name,
-                'exam_type_id' => $examDuty->exam_type_id,
-                'semester' => $examDuty->semester,
-                'batch' => $examDuty->batch,
-                'exam_year' => $examDuty->exam_year,
-                'duties' => json_decode($examDuty->duty_details, true),
-            ];
-            $this->form->fill($this->data);
+            $data = ExamDuty::find($record)->toArray();
+            $this->form->fill($data);
         }
     }
 
     public function saveOrUpdate(): void
     {
-        $examDuty = ExamDuty::updateOrCreate([
-            'exam_name' => $this->data['exam_name'],
-            'exam_type_id' => $this->data['exam_type_id'],
-            'semester' => $this->data['semester'],
-            'batch' => $this->data['batch'],
-            'exam_year' => $this->data['exam_year'],
-        ],
-        [
-            'duty_details' => json_encode($this->data['duties']),
-        ]);
+        $this->data = $this->form->getState();
 
-        send_notification('success', 5000,'Exam Duty has been created successfully!');
+        if( isset($this->data['id']) && ! empty($this->data['id']) ) {
+            $id = $this->data['id'];
+            unset($this->data['id']);
+            $details = ExamDuty::updateOrCreate(
+                ['id' => $id],
+                $this->data
+            );
+            $this->data['id'] = $details->id;
+            send_notification('success', 5000,'Exam Duty has been updated successfully!');
+        } else {
+            unset($this->data['id']);
+            $details = ExamDuty::create($this->data);
+            $this->data['id'] = $details->id;
+            send_notification('success', 5000,'Exam Duty has been created successfully!');
+        }
+
+        redirect(self::$resource::getUrl('view', ['record' => $this->data['id']]));
     }
 
     public function form(Form $form): Form
@@ -70,6 +72,7 @@ class CreateExamDuty extends Page implements HasForms
                 Grid::make('core')
                     ->columns(3)
                     ->schema([
+                        Hidden::make('id'),
                         TextInput::make('exam_name')
                             ->label('Exam Name')
                             ->placeholder('Enter a exam name')
@@ -93,14 +96,18 @@ class CreateExamDuty extends Page implements HasForms
                             ->required(),
                         Select::make('batch')
                             ->label('Batch')
-                            ->options(Batch::all()->pluck('name', 'id')->toArray())
+                            ->options(Batch::all()->pluck('number', 'id')->toArray())
+                            ->required(),
+                        Select::make('department')
+                            ->label('Department')
+                            ->options(Department::all()->pluck('short_title', 'short_title')->toArray())
                             ->required(),
                         TextInput::make('exam_year')
                             ->label('Exam Year')
                             ->placeholder('Enter a exam year')
                             ->required(),
                     ]),
-                Repeater::make('duties')
+                Repeater::make('duty_details')
                     ->schema([
                        Grid::make()
                         ->columns(5)

@@ -38,6 +38,7 @@ class ExamHallResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->label('Name'),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
