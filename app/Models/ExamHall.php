@@ -15,7 +15,7 @@ class ExamHall extends Model
     protected $keyType = 'string';
     public $incrementing = false;
     protected $fillable = [
-        'exam_name',
+        'name',
     ];
 
     protected static function boot() {

@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Course;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class CourseSeeder extends Seeder
 {
@@ -339,9 +338,7 @@ class CourseSeeder extends Seeder
 
         ];
         foreach ($courses as $course) {
-            DB::table('courses')->insert([
-                $course
-            ]);
+            Course::create($course);
         }
     }
 }

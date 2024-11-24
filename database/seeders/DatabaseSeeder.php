@@ -20,26 +20,14 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ShieldSeeder::class,
             CourseSeeder::class,
+            SettingsSeeder::class,
         ]);
         User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@fec.com',
             'password' => bcrypt('admin'),
         ]);
-        $this->create_designations();
         $this->run_command();
-    }
-
-    public function create_designations()
-    {
-        Designation::factory()->createMany([
-            ['designation' => 'Teacher'],
-            ['designation' => 'Student'],
-            ['designation' => 'Principal'],
-            ['designation' => 'Department_Head'],
-            ['designation' => 'Lab_In_Charge'],
-            ['designation' => 'Librarian'],
-        ]);
     }
 
     public function run_command()
