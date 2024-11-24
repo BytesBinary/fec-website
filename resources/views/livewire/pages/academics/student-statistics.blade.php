@@ -109,6 +109,19 @@
             {{-- -------------------------------------------------------------------- --}}
 
         </div>
+        <div class="border ring-2 hover:ring-4 hover:ring-purple-600 bg-purple-200 rounded-tl-3xl rounded-br-3xl mt-10">
+            <div class="p-6 flex flex-col gap-5">
+            <h2 class="text-left font-medium tracking-wide text-xl md:text-2xl">
+                Engineers like to solve problems. If there are no problems handily available, they will create their own problems. - Scott Adams
+            </h2>
+            <h2 class="text-left font-medium tracking-wide text-xl md:text-2xl">
+                Engineering is achieving function while avoiding failure. - Henry Petroski
+            </h2>
+            <h2 class="text-left font-medium tracking-wide text-xl md:text-2xl">
+                Engineering or technology is all about using the power of science to make life better for people, to reduce cost, to improve comfort, to improve productivity, etc.” – N. R. Narayana Murthy
+            </h2>
+        </div>
+        </div>
 
     </div>
 </div>
