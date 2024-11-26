@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 if( ! function_exists('create_model_tabs') ) {
-    function create_model_tabs( Model $model, array $attributes = [] ) : array
+    function create_model_tabs( Model $model, array $attributes = [], string $modelName = '' ) : array
     {
         $default = array(
-            'all' => get_readable_classname($model),
+            'all' => empty($modelName) ? get_readable_classname($model) : $modelName,
             'archived' => 'Trash',
         );
         $attributes = array_merge($default, $attributes);
@@ -155,6 +155,60 @@ if( ! function_exists('get_card_class_of_student_staticstics') ) {
 if( ! function_exists('get_event_slug') ) {
     function get_event_slug ( $title ) {
         return Str::slug( $title );
+    }
+}
+
+if( ! function_exists( 'create_unique_post_slug' ) ) {
+    function create_unique_post_slug( string $slug )
+    {
+        $slug = Str::slug($slug);
+        $count = \App\Models\Post::where('post_slug', $slug)->count();
+        if( $count > 0 ) {
+            $slug = $slug . '-' . $count;
+        }
+        return $slug;
+    }
+}
+
+if( ! function_exists('create_or_update_post_meta') ) {
+    function create_or_update_post_meta( $post_id, $meta_key, $meta_value )
+    {
+        if( is_array($post_id) || is_object($post_id) ) {
+            $post_id = $post_id->id;
+        }
+        $meta = \App\Models\PostMeta::where('post_id', $post_id)
+            ->where('meta_key', $meta_key)
+            ->first();
+
+        if( is_array($meta_value) ) {
+            $meta_value = json_encode($meta_value, true);
+        }
+
+        if( $meta ) {
+            return $meta->update(['meta_value' => $meta_value]);
+        } else {
+            return \App\Models\PostMeta::create([
+                'post_id' => $post_id,
+                'meta_key' => $meta_key,
+                'meta_value' => $meta_value,
+            ]);
+        }
+    }
+}
+
+if( ! function_exists( 'get_post_meta' ) ) {
+    function get_post_meta( $post_id, $meta_key ) {
+        $meta = \App\Models\PostMeta::where('post_id', $post_id)
+            ->where('meta_key', $meta_key)
+            ->first();
+        if( $meta ) {
+            $decoded = json_decode($meta->meta_value, true);
+            if( json_last_error() === JSON_ERROR_NONE ) {
+                return $decoded;
+            }
+            return $meta->meta_value;
+        }
+        return null;
     }
 }
 
