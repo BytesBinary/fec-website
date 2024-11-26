@@ -1,4 +1,4 @@
-<div x-data="{ isMobile: window.innerWidth < 768 }" x-init="window.addEventListener('resize', () => isMobile = window.innerWidth < 768)" class="bg-gradient-to-b from-gray-600 via-slate-600 to-gray-800 text-white p-4 hidden md:flex items-center justify-between relative overflow-hidden">
+<div x-data="{ isMobile: window.innerWidth < 768 }" x-init="window.addEventListener('resize', () => isMobile = window.innerWidth < 768)" class="hidden overflow-hidden relative justify-between items-center p-4 text-white bg-gradient-to-b from-gray-600 to-gray-800 via-slate-600 md:flex">
     <!-- Left: University Logo -->
     <div class="flex items-center">
         <img src="{{asset('images/logo.png')}}" alt="University Logo" class="h-24">
