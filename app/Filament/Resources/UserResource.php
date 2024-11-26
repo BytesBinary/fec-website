@@ -76,6 +76,7 @@ class UserResource extends Resource
                     ->searchable()
                     ->sortable(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->modifyQueryUsing(function (Builder $query) {
                 return $query->where('id', '!=', auth()->id());
             })

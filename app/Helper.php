@@ -1,5 +1,6 @@
 <?php
 
+use Filament\Notifications\Notification;
 use Filament\Resources\Components\Tab;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
@@ -33,7 +34,7 @@ if( ! function_exists('create_model_tabs') ) {
 }
 
 if( ! function_exists('create_table_actions') ) {
-    function create_table_actions( $extraActions = [] ) : array
+    function create_table_actions( $extraActions = [], $removeActions = [] ) : array
     {
         $actions = [
             Filament\Tables\Actions\EditAction::make()
@@ -43,6 +44,27 @@ if( ! function_exists('create_table_actions') ) {
             Filament\Tables\Actions\ForceDeleteAction::make()
                 ->label('Permanently Delete'),
         ];
+
+        if( $removeActions ) {
+            foreach( $removeActions as $action ) {
+                switch ( $action ) {
+                    case 'edit':
+                        unset($actions[0]);
+                        break;
+                    case 'delete':
+                        unset($actions[1]);
+                        break;
+                    case 'restore':
+                        unset($actions[2]);
+                        break;
+                    case 'forceDelete':
+                        unset($actions[3]);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
 
         if( $extraActions ) {
             $actions = array_merge( $actions, $extraActions );
@@ -129,8 +151,20 @@ if( ! function_exists('get_card_class_of_student_staticstics') ) {
     }
 }
 
+
 if( ! function_exists('get_event_slug') ) {
     function get_event_slug ( $title ) {
         return Str::slug( $title );
+    }
+}
+
+if( ! function_exists('send_notification') ) {
+    function send_notification( $type, $duration, $title ): void
+    {
+        Notification::make()
+            ->$type()
+            ->duration($duration)
+            ->title($title)
+            ->send();
     }
 }

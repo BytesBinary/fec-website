@@ -16,9 +16,7 @@ class Course extends Model
     protected $primaryKey = 'id';
     protected $keyType = 'string';
     public $incrementing = false;
-    protected $casts = [
-        'assigned_teachers_ids' => 'array',
-    ];
+
     protected $fillable = [
         'title',
         'description',
