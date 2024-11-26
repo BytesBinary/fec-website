@@ -1,7 +1,6 @@
 <div>
     <div class="container mx-auto p-8">
         <h2 class="text-3xl font-semibold text-center mb-8">University Student Statistics</h2>
-
         <div class="grid grid-cols-1 md:grid-cols-2 lg:p-14 gap-6">
             @foreach ($statistics as $index => $stat)
                 {{-- <div class="{{get_card_class_of_student_staticstics($index)}}"> --}}
@@ -122,7 +121,6 @@
             </h2>
         </div>
         </div>
-
     </div>
 </div>
 

@@ -47,6 +47,7 @@ class UserPanelProvider extends PanelProvider
             ])
             ->navigationGroups([
                 'Manage Courses',
+                'Manage Exams',
                 'Tools',
                 'Settings',
             ])

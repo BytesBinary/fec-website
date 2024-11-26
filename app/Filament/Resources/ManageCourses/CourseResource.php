@@ -100,6 +100,7 @@ class CourseResource extends Resource
                     ->sortable()
                     ->label('Semester'),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 Filter::make('1st Semester')
                     ->query(fn ($query) => $query->where('semester', '1st')),
