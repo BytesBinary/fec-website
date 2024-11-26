@@ -21,8 +21,8 @@
             <!-- Content -->
             <div class="container flex relative flex-col justify-between items-center px-6 mx-auto md:flex-row">
                 <div class="text-center md:text-left">
-                    <h1 class="mb-4 text-5xl font-extrabold">South Hall</h1>
-                    <p class="text-lg italic">Empowering Students for a Bright Future</p>
+                    <h1 class="mb-4 text-5xl font-extrabold">{{$hallName}}</h1>
+                    <p class="text-lg italic">{{ $viewData['nav']['slogan'] }}</p>
                 </div>
                 <div class="flex mt-6 space-x-4 md:mt-0">
                     <a href="#housing"
