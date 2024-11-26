@@ -4,12 +4,12 @@
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DCqMzIsK.css",
+    "file": "assets/app-QQvMnKpX.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/filament/user/theme.css": {
-    "file": "assets/theme-2-ysZVPf.css",
+    "file": "assets/theme-RM-VWCjD.css",
     "src": "resources/css/filament/user/theme.css",
     "isEntry": true
   },
@@ -50,6 +50,15 @@
     "file": "assets/hero-DPLQkquz.js",
     "name": "hero",
     "src": "resources/js/home/hero.js",
+    "isEntry": true,
+    "imports": [
+      "_swiper-bundle-CUnLjt9d.js"
+    ]
+  },
+  "resources/js/residence.js": {
+    "file": "assets/residence-BXBb1udg.js",
+    "name": "residence",
+    "src": "resources/js/residence.js",
     "isEntry": true,
     "imports": [
       "_swiper-bundle-CUnLjt9d.js"

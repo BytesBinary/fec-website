@@ -182,6 +182,7 @@ class ResidencePage extends Component
             ]
         ];
     }
+
     public function render()
     {
         return view('livewire.pages.campus-life.residence-page');

@@ -1,8 +1,6 @@
 <body class="m-0 bg-gray-100">
     <div class="mx-auto lg:w-3/4">
         <!-- Section with Background Image -->
-
-        {{-- option 1 --}}
         <section
             class="overflow-hidden relative py-10 mt-5 text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-lg shadow-2xl">
             <!-- Abstract Design -->
@@ -23,39 +21,6 @@
                 <div class="text-center md:text-left">
                     <h1 class="mb-4 text-5xl font-extrabold">{{$hallName}}</h1>
                     <p class="text-lg italic">{{ $viewData['nav']['slogan'] }}</p>
-                </div>
-                <div class="flex mt-6 space-x-4 md:mt-0">
-                    <a href="#housing"
-                        class="px-6 py-3 font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">Housing
-                        & Dining</a>
-                    <a href="#facilities"
-                        class="px-6 py-3 font-medium text-white bg-green-600 rounded-lg shadow-lg hover:bg-green-700">Facilities</a>
-                </div>
-            </div>
-        </section>
-
-
-        {{-- option 2 --}}
-
-        <section
-            class="overflow-hidden relative py-10 mt-5 text-white bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-lg shadow-2xl">
-            <!-- Abstract Design -->
-            <div class="absolute inset-0">
-                <!-- Layered Abstract Shapes -->
-                <div class="absolute top-0 left-16 w-72 h-72 bg-pink-800 opacity-30 transform rotate-45"></div>
-                <div class="absolute w-96 h-96 bg-white opacity-10 transform rotate-[60deg] top-10 right-20"></div>
-                <div class="absolute bottom-0 left-10 w-80 h-80 bg-orange-500 opacity-40 transform rotate-12"></div>
-                <div class="absolute w-60 h-60 bg-blue-700 opacity-25 transform rotate-[45deg] bottom-5 right-16"></div>
-            </div>
-
-            <!-- Black Transparent Overlay -->
-            <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>
-
-            <!-- Content -->
-            <div class="container flex relative flex-col justify-between items-center px-6 mx-auto md:flex-row">
-                <div class="text-center md:text-left">
-                    <h1 class="mb-4 text-5xl font-extrabold">South Hall</h1>
-                    <p class="text-lg italic">Empowering Students for a Bright Future</p>
                 </div>
                 <div class="flex mt-6 space-x-4 md:mt-0">
                     <a href="#housing"
