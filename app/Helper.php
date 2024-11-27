@@ -1,14 +1,15 @@
 <?php
 
+use Filament\Notifications\Notification;
 use Filament\Resources\Components\Tab;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 if( ! function_exists('create_model_tabs') ) {
-    function create_model_tabs( Model $model, array $attributes = [] ) : array
+    function create_model_tabs( Model $model, array $attributes = [], string $modelName = '' ) : array
     {
         $default = array(
-            'all' => get_readable_classname($model),
+            'all' => empty($modelName) ? get_readable_classname($model) : $modelName,
             'archived' => 'Trash',
         );
         $attributes = array_merge($default, $attributes);
@@ -33,7 +34,7 @@ if( ! function_exists('create_model_tabs') ) {
 }
 
 if( ! function_exists('create_table_actions') ) {
-    function create_table_actions( $extraActions = [] ) : array
+    function create_table_actions( $extraActions = [], $removeActions = [] ) : array
     {
         $actions = [
             Filament\Tables\Actions\EditAction::make()
@@ -43,6 +44,27 @@ if( ! function_exists('create_table_actions') ) {
             Filament\Tables\Actions\ForceDeleteAction::make()
                 ->label('Permanently Delete'),
         ];
+
+        if( $removeActions ) {
+            foreach( $removeActions as $action ) {
+                switch ( $action ) {
+                    case 'edit':
+                        unset($actions[0]);
+                        break;
+                    case 'delete':
+                        unset($actions[1]);
+                        break;
+                    case 'restore':
+                        unset($actions[2]);
+                        break;
+                    case 'forceDelete':
+                        unset($actions[3]);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
 
         if( $extraActions ) {
             $actions = array_merge( $actions, $extraActions );
@@ -123,8 +145,80 @@ if( ! function_exists('get_sub_page_layout_data') ) {
 
 if( ! function_exists('get_card_class_of_student_staticstics') ) {
     function get_card_class_of_student_staticstics ( $index ) {
-        $class = ((($index / 4) % 2 === 0) === ($index % 2 === 0)) ? 'bg-lime-50' : 'bg-white';
+        $class = ($index % 2 === 0) ? 'bg-lime-100' : 'bg-white';
         $default = 'shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300';
         return "$class $default";
+    }
+}
+
+
+if( ! function_exists('get_event_slug') ) {
+    function get_event_slug ( $title ) {
+        return Str::slug( $title );
+    }
+}
+
+if( ! function_exists( 'create_unique_post_slug' ) ) {
+    function create_unique_post_slug( string $slug )
+    {
+        $slug = Str::slug($slug);
+        $count = \App\Models\Post::where('post_slug', $slug)->count();
+        if( $count > 0 ) {
+            $slug = $slug . '-' . $count;
+        }
+        return $slug;
+    }
+}
+
+if( ! function_exists('create_or_update_post_meta') ) {
+    function create_or_update_post_meta( $post_id, $meta_key, $meta_value )
+    {
+        if( is_array($post_id) || is_object($post_id) ) {
+            $post_id = $post_id->id;
+        }
+        $meta = \App\Models\PostMeta::where('post_id', $post_id)
+            ->where('meta_key', $meta_key)
+            ->first();
+
+        if( is_array($meta_value) ) {
+            $meta_value = json_encode($meta_value, true);
+        }
+
+        if( $meta ) {
+            return $meta->update(['meta_value' => $meta_value]);
+        } else {
+            return \App\Models\PostMeta::create([
+                'post_id' => $post_id,
+                'meta_key' => $meta_key,
+                'meta_value' => $meta_value,
+            ]);
+        }
+    }
+}
+
+if( ! function_exists( 'get_post_meta' ) ) {
+    function get_post_meta( $post_id, $meta_key ) {
+        $meta = \App\Models\PostMeta::where('post_id', $post_id)
+            ->where('meta_key', $meta_key)
+            ->first();
+        if( $meta ) {
+            $decoded = json_decode($meta->meta_value, true);
+            if( json_last_error() === JSON_ERROR_NONE ) {
+                return $decoded;
+            }
+            return $meta->meta_value;
+        }
+        return null;
+    }
+}
+
+if( ! function_exists('send_notification') ) {
+    function send_notification( $type, $duration, $title ): void
+    {
+        Notification::make()
+            ->$type()
+            ->duration($duration)
+            ->title($title)
+            ->send();
     }
 }

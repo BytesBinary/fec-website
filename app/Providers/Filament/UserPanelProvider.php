@@ -39,6 +39,7 @@ class UserPanelProvider extends PanelProvider
                 'success' => Color::Green,
                 'danger' => Color::Red,
             ])
+            ->viteTheme('resources/css/filament/user/theme.css')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
@@ -46,6 +47,7 @@ class UserPanelProvider extends PanelProvider
             ])
             ->navigationGroups([
                 'Manage Courses',
+                'Manage Exams',
                 'Tools',
                 'Settings',
             ])
