@@ -4,13 +4,8 @@ namespace App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
 
 use App\Filament\Resources\ResidenceAndCafeteriaResource;
 use App\Models\Post;
-use Faker\Provider\Text;
 use Filament\Actions\Action;
-use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -19,10 +14,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Resources\Pages\Page;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
-use Ramsey\Uuid\Type\Time;
 
 class CreateResidence extends Page implements HasForms
 {
