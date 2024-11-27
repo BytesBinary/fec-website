@@ -2,12 +2,14 @@
 
 namespace App\Livewire\Pages\Academics;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class StudentStatistics extends Component
 {
     public $statistics;
 
+    #[Title('Student Statistics')]
     public function mount() {
         $this->statistics = array(
             [

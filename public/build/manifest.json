@@ -4,12 +4,12 @@
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-QQvMnKpX.css",
+    "file": "assets/app-CBwl3eo2.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/filament/user/theme.css": {
-    "file": "assets/theme-RM-VWCjD.css",
+    "file": "assets/theme-DiP2Iq42.css",
     "src": "resources/css/filament/user/theme.css",
     "isEntry": true
   },
