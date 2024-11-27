@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 
+use Database\Seeders\CourseSeeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,28 +17,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            ShieldSeeder::class,
-        ]);
         User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@fec.com',
+            'designation' => 'super_admin',
             'password' => bcrypt('admin'),
         ]);
-        $this->create_designations();
-        $this->run_command();
-    }
-
-    public function create_designations()
-    {
-        Designation::factory()->createMany([
-            ['designation' => 'Teacher'],
-            ['designation' => 'Student'],
-            ['designation' => 'Principal'],
-            ['designation' => 'Department_Head'],
-            ['designation' => 'Lab_In_Charge'],
-            ['designation' => 'Librarian'],
+        $this->call([
+            ShieldSeeder::class,
+            CourseSeeder::class,
+            SettingsSeeder::class,
+            ResidenceSeeder::class,
         ]);
+        $this->run_command();
     }
 
     public function run_command()
