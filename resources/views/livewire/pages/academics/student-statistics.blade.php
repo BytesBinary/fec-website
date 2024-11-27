@@ -1,14 +1,9 @@
 <div>
-    <div class="container mx-auto p-8">
+    <div class="container mx-auto p-8 bg-gray-100">
 
         <h2 class="text-4xl lg:text-6xl font-extrabold text-center mb-5 relative text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-indigo-700 to-purple-700">
             University Student Statistics
         </h2>
-
-
-
-
-
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:p-14 lg:pt-10 gap-6">
             @foreach ($statistics as $stat)
@@ -31,7 +26,6 @@
         </div>
 
 
-
         <div class="relative border-8 border-transparent rounded-[40px] overflow-hidden mt-8 lg:mx-11">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-blue-700 opacity-80"></div>
             <div class="absolute inset-0 bg-black opacity-40 backdrop-blur-lg"></div>
@@ -44,14 +38,12 @@
 
             <div class="p-12 flex flex-col gap-8 relative z-10">
                 <h2
-                    class="text-left font-extrabold text-3xl md:text-4xl text-transparent bg-clip-text text-neutral-900 transition-all duration-500 ease-in-out transform hover:scale-[1.03]">
+                    class="text-left font-extrabold text-3xl md:text-4xl bg-clip-text text-neutral-900 transition-all duration-500 ease-in-out transform hover:scale-[1.03]">
                     “Engineers like to solve problems. If there are none, Create one !”
                     <span class="block mt-4 text-xl text-slate-700 font-semibold">- Abdullah Al Rafi</span>
                 </h2>
             </div>
         </div>
-
-
 
 
     </div>
