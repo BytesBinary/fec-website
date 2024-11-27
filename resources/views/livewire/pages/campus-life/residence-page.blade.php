@@ -124,46 +124,18 @@
                 <p class="mb-6 text-lg text-gray-700">
                     Contact for any Queries
                 </p>
+                {{-- @php
+                    dd($residence)
+                @endphp --}}
                 <!-- Contact 1 -->
-                <div class="p-4 mb-4 bg-gray-100 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
-                    <div class="flex items-center">
-                        <img src="{{ asset('images/host1.jpg') }}" alt="Host Image"
-                            class="mr-4 w-14 h-14 rounded-full border-2 border-orange-500">
-                        <div>
-                            <p class="text-lg font-semibold text-gray-800">Alex Morgan</p>
-                            <p class="text-gray-600 text-md">Hall Provost</p>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-gray-600"><strong>Email:</strong> <a href="mailto:alexmorgan@university.com"
-                                class="text-blue-500 hover:underline">alexmorgan@university.com</a></p>
-                        <p class="mt-1 text-gray-600"><strong>Phone:</strong> <a href="tel:+1234567890"
-                                class="text-blue-500 hover:underline">+1 234-567-890</a></p>
-                    </div>
-                </div>
-
-                <!-- Contact 2 -->
-                <div class="p-4 bg-gray-100 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
-                    <div class="flex items-center">
-                        <img src="{{ asset('images/host2.jpg') }}" alt="Host Image"
-                            class="mr-4 w-14 h-14 rounded-full border-2 border-orange-500">
-                        <div>
-                            <p class="text-lg font-semibold text-gray-800">Taylor Swift</p>
-                            <p class="text-gray-600 text-md">Hall Accountant</p>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-gray-600"><strong>Email:</strong> <a href="mailto:taylor.swift@university.com"
-                                class="text-blue-500 hover:underline">taylor.swift@university.com</a></p>
-                        <p class="mt-1 text-gray-600"><strong>Phone:</strong> <a href="tel:+1234567891"
-                                class="text-blue-500 hover:underline">+1 234-567-891</a></p>
-                    </div>
-                </div>
+               @foreach ($residence['administration'] as $admin)
+                   <x-card.admin-card 
+                    :name="$admin['name']"
+                    :position="$admin['position']"
+                    :email="$admin['email']"
+                    :phone="$admin['phone_number']" />
+               @endforeach
             </div>
         </div>
     </div>
 </body>
-
-@push('scripts')
-    @vite(['resources/js/residence.js'])
-@endpush

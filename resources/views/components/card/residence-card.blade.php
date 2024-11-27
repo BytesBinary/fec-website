@@ -5,13 +5,15 @@
     'slogan' => '',
 ])
 <a href="{{ $route }}" wire:navigate
-   class="relative bg-gradient-to-br from-green-100 via-green-50 to-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition overflow-hidden cursor-pointer">
+class="flex overflow-hidden relative flex-col items-center p-4 bg-gradient-to-br  {{($card%3===1) ? 'from-green-100 via-green-50 to-white' : (($card%3===2) ? 'from-orange-100 via-orange-50 to-white' : 'from-pink-100 via-pink-50 to-white') }} rounded-xl shadow-lg md:flex-row md:p-12">
+
     <div class="z-10 w-full">
-        <h3 class="text-xl md:text-2xl font-bold text-green-800 drop-shadow-md">{{$title}}</h3>
-        <p class="text-2xl md:text-3xl font-extrabold text-green-600 mt-4 drop-shadow-md">{{$slogan}}</p>
+        
+        <h3 class="text-xl font-bold text-green-800 drop-shadow-md md:text-2xl">{{$title}}</h3>
+        <p class="mt-4 text-xl font-extrabold text-green-600 drop-shadow-md md:text-3xl">{{$slogan}}</p>
     </div>
     <!-- Decorative Bubbles -->
-    <div class="absolute top-4 right-4 flex flex-wrap gap-2">
+    <div class="flex absolute top-4 right-4 flex-wrap gap-2">
         <div
             class="w-6 h-6 {{($card%3===1) ? 'bg-green-300' : (($card%3===2) ? 'bg-orange-300' : 'bg-pink-300') }} rounded-full opacity-50"></div>
         <div
@@ -26,5 +28,5 @@
             class="w-3 h-3 {{($card%3===1) ? 'bg-purple-500' : (($card%3===2) ? 'bg-yellow-500' : 'bg-green-500') }} rounded-full opacity-70"></div>
     </div>
     <!-- Bottom Half-Circle -->
-    <div class="absolute -bottom-7 -right-7 w-24 h-24 bg-green-200 rounded-full shadow-inner"></div>
+    <div class="absolute -right-7 -bottom-7 w-24 h-24 rounded-full shadow-inner {{($card%3===1) ? 'bg-green-200' : (($card%3===2) ? 'bg-orange-200' : 'bg-pink-200') }}"></div>
 </a>

@@ -1,12 +1,12 @@
-<div class="mt-10 lg:w-3/4 mx-auto">
+<div class="mx-auto mt-10 lg:w-3/4">
     <!-- Welcome Section -->
     <div class="mx-4 my-6">
-        <div class="relative flex flex-col md:flex-row items-center p-4 md:p-12 bg-gradient-to-br from-orange-600 via-orange-400 to-orange-300 rounded-xl shadow-lg overflow-hidden">
-            <div class="z-10 md:w-2/3 w-full text-center md:text-left">
-                <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
+        <div class="flex overflow-hidden relative flex-col items-center p-4 bg-gradient-to-br from-orange-600 via-orange-400 to-orange-300 rounded-xl shadow-lg md:flex-row md:p-12">
+            <div class="z-10 w-full text-center md:w-2/3 md:text-left">
+                <h1 class="text-3xl font-extrabold leading-tight text-white drop-shadow-lg md:text-6xl">
                     Welcome to FEC Residence
                 </h1>
-                <p class="text-xl md:text-xl text-white mt-4 md:mt-6 leading-relaxed">
+                <p class="mt-4 text-xl leading-relaxed text-white md:text-xl md:mt-6">
                     Discover top-tier living with our thoughtfully designed halls <br> of residence. Your comfort, our priority.
                 </p>
             </div>
@@ -19,7 +19,7 @@
     </div>
 
     <!-- Cards Section -->
-    <div class="mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 mt-12 mb-10">
+    <div class="grid grid-cols-1 gap-6 mx-4 mt-12 mb-10 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
         @foreach($residences as $residence)
             <x-card.residence-card :card="$loop->iteration" route="{{ route('residence', ['name' => $residence['post_slug']]) }}" :title="$residence['post_title']" :slogan="$residence['slogan']" />
         @endforeach
