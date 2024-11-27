@@ -68,6 +68,8 @@ class CreateResidence extends Page implements HasForms
         create_or_update_post_meta( $this->record, 'facilities', $this->data['facilities'] ?? []);
         // create the post meta for administration
         create_or_update_post_meta( $this->record, 'administration', $this->data['administration'] ?? []);
+        // creat the post meta for map url
+        create_or_update_post_meta( $this->record, 'map_url', $this->data['map_url'] ?? []);
 
         send_notification('success', 5000, 'Residence Updated Successfully.');
 
@@ -101,6 +103,8 @@ class CreateResidence extends Page implements HasForms
         create_or_update_post_meta( $post, 'facilities', $this->data['facilities'] ?? []);
         // create the post meta for administration
         create_or_update_post_meta( $post, 'administration', $this->data['administration'] ?? []);
+        // creat the post meta for map url
+        create_or_update_post_meta( $post, 'map_url', $this->data['map_url'] ?? []);
 
         send_notification('success', 5000, 'Residence Created Successfully.');
 
@@ -123,9 +127,13 @@ class CreateResidence extends Page implements HasForms
                             ->placeholder('e.g. Improvise your knowledge')
                             ->label('Enter a short sentence about Residence')
                             ->required(),
+                        TextInput::make('map_url')
+                            ->label('Map URL')
+                            ->url()
+                            ->placeholder('e.g. https://maps.google.com')
+                            ->required(),
                         Textarea::make('post_content')
                             ->label('Write about the residence : ')
-                            ->columnSpanFull()
                             ->placeholder('Start writing here')
                             ->rows(10)
                             ->required(),
