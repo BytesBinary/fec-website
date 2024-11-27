@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
@@ -13,8 +15,7 @@ class ResidenceSeeder extends Seeder
      */
     public function run(): void
     {
-        $residence = array
-        (
+        $residences = array(
             [
                 "post_title" => "South Hall",
                 "post_type" => "fec_residence",
@@ -134,10 +135,7 @@ class ResidenceSeeder extends Seeder
                         )
 
                 ),
-            "map_url" => array
-                (
-                    "map_url"=>"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7295.764987821575!2d89.81057262399037!3d23.58367601330285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe110d1a13e337%3A0x102eb00f0c0babc8!2sFaridpur%20Engineering%20College!5e0!3m2!1sen!2sbd!4v1699892045567!5m2!1sen!2sbd",
-                ),
+            "map_url" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7295.764987821575!2d89.81057262399037!3d23.58367601330285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe110d1a13e337%3A0x102eb00f0c0babc8!2sFaridpur%20Engineering%20College!5e0!3m2!1sen!2sbd!4v1699892045567!5m2!1sen!2sbd",
             ],
             [
                 "housing_details" => Array
@@ -229,10 +227,7 @@ class ResidenceSeeder extends Seeder
                             "phone_number" => "+8801800000000",
                         ),
                 ),
-            "map_url" => array
-                (
-                    "map_url"=>"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7295.764987821575!2d89.81057262399037!3d23.58367601330285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe110d1a13e337%3A0x102eb00f0c0babc8!2sFaridpur%20Engineering%20College!5e0!3m2!1sen!2sbd!4v1699892045567!5m2!1sen!2sbd",
-                ),
+            "map_url" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7295.764987821575!2d89.81057262399037!3d23.58367601330285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe110d1a13e337%3A0x102eb00f0c0babc8!2sFaridpur%20Engineering%20College!5e0!3m2!1sen!2sbd!4v1699892045567!5m2!1sen!2sbd",
             ],
             [
                 "housing_details" => array
@@ -324,12 +319,16 @@ class ResidenceSeeder extends Seeder
                             "phone_number" => "+8801800000000",
                         ),
                 ),
-            "map_url" => array
-                (
-                    "map_url"=>"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7295.764987821575!2d89.81057262399037!3d23.58367601330285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe110d1a13e337%3A0x102eb00f0c0babc8!2sFaridpur%20Engineering%20College!5e0!3m2!1sen!2sbd!4v1699892045567!5m2!1sen!2sbd",
-                ),
+            "map_url" => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7295.764987821575!2d89.81057262399037!3d23.58367601330285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe110d1a13e337%3A0x102eb00f0c0babc8!2sFaridpur%20Engineering%20College!5e0!3m2!1sen!2sbd!4v1699892045567!5m2!1sen!2sbd",
             ],
         );
 
+        foreach ( $residences as $key=>$residence ) {
+            $residence['post_author'] = User::where('designation', 'super_admin')->first()->id;
+            $post = Post::create($residence);
+            foreach ( $residence_meta[$key] as $meta_key => $meta_value ) {
+                create_or_update_post_meta( $post->id, $meta_key, $meta_value );
+            }
+        }
     }
 }

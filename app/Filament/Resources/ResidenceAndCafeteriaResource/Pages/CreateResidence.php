@@ -41,6 +41,7 @@ class CreateResidence extends Page implements HasForms
             $post['dining_schedule'] = get_post_meta( $record, 'dining_schedule' );
             $post['facilities'] = get_post_meta( $record, 'facilities' );
             $post['administration'] = get_post_meta( $record, 'administration' );
+            $post['map_url'] = get_post_meta( $record, 'map_url' );
             $this->form->fill($post);
         }
     }

@@ -18,6 +18,7 @@ class ResidencePage extends Component
                 $data->dining_schedule = get_post_meta($data->id, 'dining_schedule');
                 $data->facilities = get_post_meta($data->id, 'facilities');
                 $data->administration = get_post_meta($data->id, 'administration');
+                $data->map_url = get_post_meta($data->id, 'map_url');
 
                 return $data;
             })
@@ -27,11 +28,10 @@ class ResidencePage extends Component
         } else {
             return redirect()->route('residence-cafeteria');
         }
-//        dd($this->residence);
     }
 
     public function render()
     {
-        return view('livewire.pages.campus-life.residence-page');
+        return view('livewire.pages.campus-life.residence-page')->title($this->residence['post_title']);
     }
 }
