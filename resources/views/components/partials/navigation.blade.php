@@ -15,6 +15,7 @@
     </div>
     <x-partials.mobile-menu>
         @foreach($menus as $key=>$menu)
+        <div class="border-t border-gray-100 hover:bg-bgColorLighter hover:text-black">
             <x-menu
                 :mobile="true"
                 :isDropdown="$menu['isDropdown']"
@@ -22,6 +23,7 @@
                 :slug="$key"
                 :route="$menu['route']"
                 title="{{$menu['title']}}" />
+        </div>
         @endforeach
     </x-partials.mobile-menu>
 </nav>
