@@ -124,26 +124,23 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             @endif
-            @if( ! empty($residence['administration']) )
-                <!-- Contact Section -->
-                <div class="p-6 bg-white">
-                    <h3 class="mb-4 text-2xl font-semibold text-gray-800">Administration</h3>
-                    <p class="mb-6 text-lg text-gray-700">
-                        Contact for any Queries
-                    </p>
-                    {{-- @php
-                        dd($residence)
-                    @endphp --}}
-                    <!-- Contact 1 -->
-                    @foreach ($residence['administration'] as $admin)
-                        <x-card.admin-card
-                            :name="$admin['name']"
-                            :position="$admin['position']"
-                            :email="$admin['email']"
-                            :phone="$admin['phone_number']" />
-                    @endforeach
-                </div>
-            @endif
+            <!-- Contact Section -->
+            <div class="p-6 bg-white">
+                @if( ! empty($residence['administration']) )
+                        <h3 class="mb-4 text-2xl font-semibold text-gray-800">Administration</h3>
+                        <p class="mb-6 text-lg text-gray-700">
+                            Contact for any Queries
+                        </p>
+                        <!-- Contact 1 -->
+                        @foreach ($residence['administration'] as $admin)
+                            <x-card.admin-card
+                                :name="$admin['name']"
+                                :position="$admin['position']"
+                                :email="$admin['email']"
+                                :phone="$admin['phone_number']" />
+                        @endforeach
+                @endif
+            </div>
         </div>
     </div>
 </body>
