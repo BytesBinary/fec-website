@@ -227,22 +227,6 @@ class CreateResidence extends Page implements HasForms
                                     ->required(),
                             ])->columns(2)
                     ]),
-
-                // Section Gallery
-                Section::make('Gallery')
-                    ->schema([
-                        FileUpload::make('gallery')
-                            ->hint('You can upload multiple images.')
-                            ->hintColor('primary')
-                            ->image()
-                            ->imageResizeMode('cover')
-                            ->imageCropAspectRatio('16:9')
-                            ->disk('public')
-                            ->directory('residence/gallery')
-                            ->visibility('public')
-                            ->reorderable()
-                            ->multiple(),
-                    ])
             ])
             ->statePath('data');
     }

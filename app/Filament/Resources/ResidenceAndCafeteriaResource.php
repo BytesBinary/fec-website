@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
 use App\Models\Post;
+use App\Models\User;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -32,9 +33,15 @@ class ResidenceAndCafeteriaResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('post_title')
+                    ->badge()
                     ->label('Residence Title'),
-                TextColumn::make('post_content')
-                    ->label('Description'),
+                TextColumn::make('post_type')
+                    ->label('Residence Type'),
+                TextColumn::make('post_author')
+                    ->formatStateUsing(function ($state) {
+                        return User::find($state)->first()->name;
+                    })
+                    ->label('Residence Author'),
             ])
             ->filters([
                 //
