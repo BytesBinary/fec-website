@@ -18,9 +18,11 @@
                                 <p class="text-sm text-gray-600">{{$notice['date']}}</p>
                             </div>
                             <!-- Download icon (only visible on mobile) -->
+                            <a href="{{asset($notice['path'])}}" download class="flex items-center">
                             <div class="lg:hidden">
                                 <x-svg-icon.download />
                             </div>
+                            </a>
                         </li>
                     @endforeach
                 </ul>
