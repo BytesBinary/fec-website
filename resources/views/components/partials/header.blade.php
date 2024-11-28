@@ -2,7 +2,7 @@
     <!-- Left: University Logo -->
     <div class="flex justify-center md:justify-start items-center gap-2">
         <img src="{{ asset('images/logo.png') }}" alt="University Logo" class="h-16 md:h-20">
-        <h1 class="text-2xl md:text-4xl font-extrabold uppercase">Faridpur Engineering College</h1>
+        <h1 class="text-xl md:text-3xl font-extrabold uppercase">Faridpur Engineering College</h1>
     </div>
 
     <!-- Middle: Gmail and Call Buttons -->
