@@ -20,7 +20,7 @@
         </div>
 
         <div class="card-actions mt-8 mb-4 flex justify-center">
-            <a href="{{ route('events') }} wire:navigate"
+            <a href="{{ route('events') }} " wire:navigate
                 class="flex items-center justify-center space-x-2 w-1/2 md:w-1/3 lg:w-1/4 text-white py-3 px-6 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 hover:cursor-pointer">
                 <span class="text-white text-sm lg:text-lg font-semibold">View More</span>
                 <x-svg-icon.external-url class="w-6 h-6 text-gray-900" />
@@ -50,7 +50,7 @@
         </div>
 
         <div class="card-actions mt-8 mb-4 flex justify-center">
-            <a href="{{ route('events') }} wire:navigate"
+            <a href="{{ route('researches') }}" wire:navigate
                 class="flex items-center justify-center space-x-2 w-1/2 md:w-1/3 lg:w-1/4 text-white py-3 px-6 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 hover:cursor-pointer">
                 <span class="text-white text-sm lg:text-lg font-semibold">View More</span>
                 <x-svg-icon.external-url class="w-6 h-6 text-gray-900" />
