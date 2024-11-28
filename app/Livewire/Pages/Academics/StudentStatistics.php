@@ -2,12 +2,14 @@
 
 namespace App\Livewire\Pages\Academics;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class StudentStatistics extends Component
 {
     public $statistics;
 
+    #[Title('Student Statistics')]
     public function mount() {
         $this->statistics = array(
             [
@@ -31,19 +33,9 @@ class StudentStatistics extends Component
                 'description' => 'Average across departments',
             ],
             [
-                'title' => 'Employment Rate',
-                'value' => '90%',
-                'description' => 'Graduates employed within 6 months',
-            ],
-            [
                 'title' => 'Average GPA',
                 'value' => '3.4',
                 'description' => 'Overall GPA across all programs',
-            ],
-            [
-                'title' => 'International Students',
-                'value' => '1,200',
-                'description' => 'Representing 50+ countries',
             ],
             [
                 'title' => 'Research Publications',
