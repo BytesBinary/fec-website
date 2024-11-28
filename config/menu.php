@@ -79,7 +79,7 @@ return [
             'isDropdown' => true,
             'dropdowns' => [
                 'researches' => [
-                    'title' => 'Researches',
+                    'title' => 'Researches & Publications',
                     'route' => 'researches'
                 ],
                 'events' => [

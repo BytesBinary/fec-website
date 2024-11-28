@@ -32,7 +32,7 @@
 
     <section class="mt-5 mb-5">
         <h2 class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold">
-            Research & Publications
+            Researches & Publications
         </h2>
         <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 

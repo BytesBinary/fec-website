@@ -29,14 +29,7 @@
         </div>
 
         <!-- Content Section -->
-        <div class="relative bg-gradient-to-br from-gray-50 via-white to-gray-200 p-8 lg:p-6 lg:space-y-3 h-full flex flex-col justify-between space-y-6">
-            <!-- Abstract Background -->
-
-            <div class="absolute inset-0">
-                <div class="absolute top-2 right-2  w-48 h-48 bg-gradient-to-r from-teal-400 to-blue-400 opacity-30 rounded-full blur-2xl"></div>
-                <div class="absolute bottom-3 left-16 w-48 h-48 bg-gradient-to-bl from-violet-400 to-pink-400 opacity-30 rounded-full blur-2xl"></div>
-                <div class="absolute left-4 w-48 h-48 bg-gradient-to-bl from-violet-400 to-lime-400 opacity-30 rounded-full blur-2xl "></div>
-            </div>
+        <div class="relative bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 p-8 lg:p-6 lg:space-y-3 h-full flex flex-col justify-between space-y-6">
 
             <!-- Title and Location -->
             <div class="text-center">
