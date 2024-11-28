@@ -1,7 +1,7 @@
 @props([
     'pic' => '',
     'title' => '',
-    'date' => '', // Ensure this is in a parsable format like "YYYY-MM-DD HH:MM:SS"
+    'date' => '',
     'url' => '',
     'location' => '',
     'interestCount' => 0,
@@ -31,9 +31,11 @@
         <!-- Content Section -->
         <div class="relative bg-gradient-to-br from-gray-50 via-white to-gray-200 p-8 space-y-6">
             <!-- Abstract Background -->
+
             <div class="absolute inset-0">
-                <div class="absolute top-2 right-2 w-36 h-36 bg-gradient-to-r from-teal-400 to-blue-400 opacity-30 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-4 left-4 w-56 h-56 bg-gradient-to-bl from-yellow-300 to-pink-400 opacity-30 rounded-full blur-2xl"></div>
+                <div class="absolute top-2 right-2  w-48 h-48 bg-gradient-to-r from-teal-400 to-blue-400 opacity-30 rounded-full blur-2xl"></div>
+                <div class="absolute bottom-3 left-16 w-48 h-48 bg-gradient-to-bl from-violet-400 to-pink-400 opacity-30 rounded-full blur-2xl"></div>
+                <div class="absolute left-4 w-48 h-48 bg-gradient-to-bl from-violet-400 to-lime-400 opacity-30 rounded-full blur-2xl "></div>
             </div>
 
             <!-- Title and Location -->

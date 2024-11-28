@@ -9,6 +9,7 @@
 
 <div class="flex flex-col w-full max-w-4xl mx-auto my-6 items-center bg-gradient-to-br from-white via-gray-100 to-gray-50 shadow-lg rounded-lg hover:cursor-pointer md:flex-row relative overflow-hidden">
     <!-- Abstract Background Shapes -->
+    
     <div class="absolute inset-0 z-0">
         <!-- Gradient Circular Blobs -->
         <div class="absolute -top-10 left-16 w-32 md:w-40 h-32 md:h-40 bg-gradient-to-br from-blue-400 to-teal-500 opacity-30 rounded-full blur-3xl"></div>
@@ -42,12 +43,31 @@
                 class="w-full max-w-md bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 text-white
                 hover:from-blue-600 hover:to-pink-600 hover:shadow-lg rounded-full py-2 sm:py-3 flex items-center justify-center
                 space-x-4 shadow-md transition-all duration-300 ease-in-out">
-                <svg class="w-5 sm:w-6 h-5 sm:h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M3 10h11M9 21l-6-6 6-6M21 4h-7m7 0l-3 3m3-3l-3-3" />
-                </svg>
                 <!-- Button Text -->
                 <span class="text-sm sm:text-base md:text-lg font-semibold">Explore Now</span>
+
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-white sm:w-7 sm:h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+            >
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M10 8l4 4-4 4"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
             </button>
         </div>
     </div>
