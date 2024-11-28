@@ -13,7 +13,7 @@ class ResidenceCafeteria extends Component
     public array $residences;
     public function mount()
     {
-        $this->residences = Post::where('post_type', 'fec_residence')
+        $this->residences = Post::where('post_type', 'residence')
             ->get()
             ->map(function ($data){
                 $data->slogan = get_post_meta($data->id,'residence_slogan');

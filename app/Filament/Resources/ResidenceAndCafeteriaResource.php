@@ -20,17 +20,10 @@ class ResidenceAndCafeteriaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                //
-            ]);
-    }
-
     public static function table(Table $table): Table
     {
         return $table
+            ->query(Post::query()->where('post_type', 'residence'))
             ->columns([
                 TextColumn::make('post_title')
                     ->badge()

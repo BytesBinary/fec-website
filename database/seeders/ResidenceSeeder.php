@@ -18,7 +18,7 @@ class ResidenceSeeder extends Seeder
         $residences = array(
             [
                 "post_title" => "South Hall",
-                "post_type" => "fec_residence",
+                "post_type" => "residence",
                 "post_status" => "publish",
                 "post_category" => "residence",
                 "post_slug" => "south-hall",
@@ -26,7 +26,7 @@ class ResidenceSeeder extends Seeder
             ],
             [
                 "post_title" => "North Hall",
-                "post_type" => "fec_residence",
+                "post_type" => "residence",
                 "post_status" => "publish",
                 "post_category" => "residence",
                 "post_slug" => "north-hall",
@@ -34,7 +34,7 @@ class ResidenceSeeder extends Seeder
             ],
             [
                 "post_title" => "Fazilatunnesa Hall",
-                "post_type" => "fec_residence",
+                "post_type" => "residence",
                 "post_status" => "publish",
                 "post_category" => "residence",
                 "post_slug" => "fazilatun Nesa-hall",
