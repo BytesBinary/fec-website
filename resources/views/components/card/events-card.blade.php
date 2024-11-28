@@ -7,41 +7,74 @@
     'interestCount' => 0,
 ])
 
-<div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-200 flex flex-col delay-100 hover:scale-[1.03] shadowm-md shadow-slate-400 min-w-[365px] lg:min-w-[300px] max-w-[370px] max-h-[480px] mb-10">
-    <!-- Header Image and Main Info -->
-    <div class="p-2 bg-slate-100">
-        <div class="w-full">
-            <img class="w-full max-h-[240px]" src="{{ asset($pic) }}" alt="Event pic">
-            <div class="bg-slate-300 w-full">
-                <h3 class="pl-4 pt-2 text-lg font-semibold tracking-tight">09 DECEMBER 2024</h3>
-                <h2 class="text-xl font-semibold text-sky-950 hover:text-blue-900 transition-colors duration-200 pl-4">
-                    {{ $title }}</h2>
-                <p class="text-sm text-gray-700 py-1 pl-4">{{ $location }}</p>
+<div class="flex flex-wrap justify-center gap-6 p-6">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[400px] max-w-[400px] mx-auto overflow-hidden relative">
+        <!-- Event Image -->
+        <div class="relative">
+            <img class="w-full h-56 object-cover hover:scale-105 overflow-hidden duration-300" src="{{ asset($pic) }}" alt="Event Image">
+            <!-- Timer Badge -->
+            <div class="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-indigo-500 text-white px-4 py-2 rounded-full shadow-md flex items-center text-xs font-bold">
+                <svg class="w-5 h-5 text-white " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                </svg>
 
-                <div class="flex gap-8 flex-nowrap pl-4 pr-3">
-                    <div class='inline-block mt-2 rounded-md shadow-sm p-1 shadow-slate-600'>
-                        <span class="text-sm text-blue-800 cursor-pointer flex items-center p-[2px] gap-[2px] font-semibold">
-                            <x-svg-icon.star></x-svg-icon.star>
-                            {{ $interestCount }} interested
-                        </span>
-                    </div>
-                    <div id="timer-{{ $attributes->get('id') }}" class="mt-2 text-[15px] text-sky-950 font-medium tracking-tight p-1">
-                        <span id="days-{{ $attributes->get('id') }}">0</span>D
-                        <span id="hours-{{ $attributes->get('id') }}">0</span>Hr
-                        <span id="minutes-{{ $attributes->get('id') }}">0</span>Min
-                        <span id="seconds-{{ $attributes->get('id') }}">0</span>S
-                    </div>
+                <span id="timer-{{ $attributes->get('id') }}" class="tracking-wide">
+                    <span id="days-{{ $attributes->get('id') }}">0</span>D
+                    <span id="hours-{{ $attributes->get('id') }}">0</span>H
+                    <span id="minutes-{{ $attributes->get('id') }}">0</span>M
+                    <span id="seconds-{{ $attributes->get('id') }}">0</span>S
+                </span>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="relative bg-gradient-to-br from-gray-50 via-white to-gray-200 p-8 space-y-6">
+            <!-- Abstract Background -->
+            <div class="absolute inset-0">
+                <div class="absolute top-2 right-2 w-36 h-36 bg-gradient-to-r from-teal-400 to-blue-400 opacity-30 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-4 left-4 w-56 h-56 bg-gradient-to-bl from-yellow-300 to-pink-400 opacity-30 rounded-full blur-2xl"></div>
+            </div>
+
+            <!-- Title and Location -->
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-900">
+                    {{ $title }}
+                </h2>
+                <p class="text-base font-medium text-gray-600 mt-2">
+                    {{ $location }}
+                </p>
+            </div>
+
+            <!-- Date and Interested Section -->
+            <div class="flex justify-between items-center text-sm font-semibold text-blue-800 mt-4">
+                <!-- Event Date -->
+                <div class="flex items-center space-x-2 text-gray-600">
+                    <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                    </svg>
+
+                    <span>09 DECEMBER 2024</span>
                 </div>
-                <div class="w-full p-2 pt-4 flex">
-                    <a href="{{ $url }}" class="mx-auto text-center w-[70%] bg-sky-950 hover:bg-sky-900 text-white py-2 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg" wire:navigate>
-                        Learn more
-                    </a>
+
+                <!-- Interested Section -->
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 .587l3.668 7.568L24 9.743l-6 5.857L19.335 24 12 20.354 4.665 24 6 15.6l-6-5.857 8.332-1.588L12 .587z" />
+                    </svg>
+                    <span>{{ $interestCount }} Interested</span>
                 </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="pt-4">
+                <a href="{{ $url }}" class="block text-center text-sm font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" wire:navigate>
+                    Learn More
+                </a>
             </div>
         </div>
     </div>
 </div>
-
 {{-- JavaScript event timer --}}
 
 <script>
