@@ -9,23 +9,24 @@
             <div class="swiper-wrapper mb-10">
                 @foreach ($events as $event)
                     <div class="swiper-slide">
-                        <x-card.research-card image="{{ $event['image'] }}" title="{{ $event['title'] }}"
-                            description="{{ $event['description'] }}" date="{{ $event['date'] }}"
-                            url="{{ $event['url'] }}" />
+                        <x-card.events-card title="{{ $event['title'] }}" pic="{{ asset('images/gallery/4.jpg') }}"
+                            date="{{ $event['date'] }}" location="{{ $event['location'] }}" url="{{ $event['url'] }}"
+                            is-home-page="true" />
                     </div>
                 @endforeach
+
             </div>
             <div class="swiper-pagination"></div>
         </div>
 
         <div class="card-actions mt-8 mb-4 flex justify-center">
-            <button href='{{ route('events') }}' type="button"
-                class="flex items-center justify-center space-x-2 w-1/4 text-white py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer"
-                wire:navigate>
-                <span class="text-gray-900 text-xl">View More</span>
-                <x-svg-icon.external-url />
-            </button>
+            <a href="{{ route('events') }}"
+                class="flex items-center justify-center space-x-2 w-1/2 md:w-1/3 lg:w-1/4 text-white py-3 px-6 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 hover:cursor-pointer">
+                <span class="text-white text-sm lg:text-lg font-semibold">View More</span>
+                <x-svg-icon.external-url class="w-6 h-6 text-gray-900" />
+            </a>
         </div>
+
 
     </section>
 
@@ -49,14 +50,12 @@
         </div>
 
         <div class="card-actions mt-8 mb-4 flex justify-center">
-            <button href='{{ route('researches') }}' type="button"
-                class="flex items-center justify-center space-x-2 w-1/4 text-white py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer"
-                wire:navigate>
-                <span class="text-gray-900 text-xl">View More</span>
-                <x-svg-icon.external-url />
-            </button>
+            <a href="{{ route('events') }}"
+                class="flex items-center justify-center space-x-2 w-1/2 md:w-1/3 lg:w-1/4 text-white py-3 px-6 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 hover:cursor-pointer">
+                <span class="text-white text-sm lg:text-lg font-semibold">View More</span>
+                <x-svg-icon.external-url class="w-6 h-6 text-gray-900" />
+            </a>
         </div>
-
     </section>
 </div>
 
