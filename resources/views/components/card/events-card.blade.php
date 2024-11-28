@@ -7,9 +7,9 @@
     'interestCount' => 0,
 ])
 
-<div class="flex flex-wrap justify-center gap-6 p-6">
+<div class="flex flex-wrap justify-center gap-6 lg:gap-4 p-6">
     <!-- Card 1 -->
-    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[400px] max-w-[400px] mx-auto overflow-hidden relative">
+    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[95%] lg:w-[35%] min-w-[310px] max-w-[400px] mx-auto overflow-hidden relative">
         <!-- Event Image -->
         <div class="relative">
             <img class="w-full h-56 object-cover hover:scale-105 overflow-hidden duration-300" src="{{ asset($pic) }}" alt="Event Image">
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Content Section -->
-        <div class="relative bg-gradient-to-br from-gray-50 via-white to-gray-200 p-8 space-y-6">
+        <div class="relative bg-gradient-to-br from-gray-50 via-white to-gray-200 p-8 lg:p-6 lg:space-y-3 h-full flex flex-col justify-between space-y-6">
             <!-- Abstract Background -->
 
             <div class="absolute inset-0">
@@ -40,10 +40,10 @@
 
             <!-- Title and Location -->
             <div class="text-center">
-                <h2 class="text-2xl font-bold text-gray-900">
+                <h2 class="text-2xl font-bold text-gray-900 text-wrap">
                     {{ $title }}
                 </h2>
-                <p class="text-base font-medium text-gray-600 mt-2">
+                <p class="text-base font-medium text-gray-600 mt-2 text-wrap">
                     {{ $location }}
                 </p>
             </div>
@@ -56,7 +56,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
                     </svg>
 
-                    <span>09 DECEMBER 2024</span>
+                    <span>09 DEC 2024</span>
                 </div>
 
                 <!-- Interested Section -->
