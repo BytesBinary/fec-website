@@ -7,7 +7,7 @@
 
 
 
-<div class="flex flex-col w-full max-w-4xl mx-auto my-6 items-center bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 shadow-lg rounded-lg hover:cursor-pointer md:flex-row relative overflow-hidden">
+<div class="flex flex-col w-full max-w-4xl mx-auto my-6 items-center bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 shadow-lg rounded-lg  md:flex-row relative overflow-hidden">
     <!-- Image -->
     <img class="object-cover w-full h-48 sm:h-64 md:w-80 lg:w-[45%] md:h-auto rounded-t-lg md:rounded-l-lg hover:scale-105 duration-300 overflow-hidden"
          src="{{ asset($image) }}" alt="{{ $title }}">
