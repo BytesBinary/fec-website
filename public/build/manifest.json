@@ -4,12 +4,12 @@
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-C-EBjQoa.css",
+    "file": "assets/app-DXh9-yNi.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/filament/user/theme.css": {
-    "file": "assets/theme-DiP2Iq42.css",
+    "file": "assets/theme-2-ysZVPf.css",
     "src": "resources/css/filament/user/theme.css",
     "isEntry": true
   },
@@ -47,7 +47,7 @@
     ]
   },
   "resources/js/home/hero.js": {
-    "file": "assets/hero-DPLQkquz.js",
+    "file": "assets/hero-BK-pMRqs.js",
     "name": "hero",
     "src": "resources/js/home/hero.js",
     "isEntry": true,
