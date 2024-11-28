@@ -31,17 +31,17 @@
 
     <section class="mt-5 mb-5">
         <h2 class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold">
-            Publications
+            Research & Publications
         </h2>
         <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 
         <div class="swiper-container swiper-container-coverflow-section">
             <div class="swiper-wrapper mb-10">
-                @foreach ($publications as $publication)
+                @foreach ($researches as $research)
                     <div class="swiper-slide">
-                        <x-card.research-card image="{{ $publication['image'] }}" title="{{ $publication['title'] }}"
-                            description="{{ $publication['description'] }}" date="{{ $publication['date'] }}"
-                            url="{{ $publication['url'] }}" />
+                        <x-card.research-card image="{{ $research['image'] }}" title="{{ $research['title'] }}"
+                            description="{{ $research['description'] }}" date="{{ $research['date'] }}"
+                            url="{{ $research['url'] }}" />
                     </div>
                 @endforeach
             </div>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="card-actions mt-8 mb-4 flex justify-center">
-            <button href='{{ route('publications') }}' type="button"
+            <button href='{{ route('researches') }}' type="button"
                 class="flex items-center justify-center space-x-2 w-1/4 text-white py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer"
                 wire:navigate>
                 <span class="text-gray-900 text-xl">View More</span>

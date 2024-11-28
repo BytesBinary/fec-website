@@ -78,10 +78,6 @@ return [
             'route' => '',
             'isDropdown' => true,
             'dropdowns' => [
-                'publications' => [
-                    'title' => 'Publications',
-                    'route' => 'publications'
-                ],
                 'researches' => [
                     'title' => 'Researches',
                     'route' => 'researches'

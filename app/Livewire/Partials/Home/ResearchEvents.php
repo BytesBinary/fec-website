@@ -7,7 +7,7 @@ use Livewire\Component;
 class ResearchEvents extends Component
 {
     public $events = [];
-    public $publications = [];
+    public $researches = [];
     public function mount(){
         $this->events = [
             [
@@ -47,7 +47,7 @@ class ResearchEvents extends Component
             ]
         ];
 
-        $this->publications = [
+        $this->researches = [
             [
                 'image' => 'images/research/research.png',
                 'title' => 'The Future of Quantum Computing',
