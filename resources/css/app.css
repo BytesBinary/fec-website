@@ -112,7 +112,7 @@ Landing Page CSS
 
 /* post fonts */
 .swiper-container-hero-section .swiper-button-next,.swiper-button-prev{
-    color: rgba(236, 118, 254, 0.252);
+    color: transparent;
 }
 @media (max-width: 768px) {
     .swiper-container-hero-section .swiper-button-next,.swiper-button-prev {

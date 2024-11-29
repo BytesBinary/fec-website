@@ -1,5 +1,5 @@
 <!-- Desktop Menu -->
-<div class="hidden md:flex flex-wrap space-x-4 z-10">
+<div class="hidden md:flex flex-wrap  z-10 items-center justify-center lg:space-x-4">
     {{$slot}}
 </div>
 
