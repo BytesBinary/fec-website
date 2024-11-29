@@ -41,16 +41,16 @@
         <hr class="p-[1px] bg-gray-200">
 
         <!-- Footer: Date & Button -->
-        <div class="flex items-center justify-end">
+        <div class="flex items-center justify-between">
             <!-- Date -->
-            {{-- <span class="text-gray-700 text-sm font-medium flex items-center">
-                Date : {{ $date }}
-            </span> --}}
+            <span class="text-gray-700 text-sm font-medium flex items-center">
+                Published Date : {{ $date }}
+            </span>
 
             <!-- Learn More Button -->
             <a href="{{ $url }}"
-                class="bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
-                Learn More →
+                class="text-black font-semibold px-6 rounded-lg transition-transform transform hover:scale-105 after:content-['→'] after:text-xl">
+                Learn More
             </a>
         </div>
     </div>
