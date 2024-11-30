@@ -16,7 +16,7 @@
     </div>
 
     <!-- Content Section -->
-    <div class="p-6 space-y-3 lg:space-y-4 text-left h-[19rem]">
+    <div class="p-6 text-left h-[19rem] flex flex-col justify-evenly">
         <!-- Title -->
         <div class="">
         <h3 class="text-xl lg:text-2xl font-extrabold text-gray-900 transition-colors duration-300 hover:bg-gradient-to-r hover:from-purple-700 hover:via-indigo-600 hover:to-blue-600 hover:text-transparent hover:bg-clip-text">
@@ -25,12 +25,12 @@
         </div>
 
         <!-- Description -->
-        <p class="text-gray-600 text-sm leading-relaxed">
+        <p class="text-gray-600 lg:text-xs text-sm leading-relaxed">
             {{ $description }}
         </p>
 
         <!-- Author Information -->
-        <div class="flex items-center gap-4 mt-4">
+        <div class="flex items-center gap-4 mt-4 mb-1">
             <img src="{{ asset($image) }}" alt="Author Name"
                 class="size-8 lg:size-12 rounded-full object-cover shadow-md ring-2 ring-indigo-600">
             <p class=" text-md lg:text-lg font-medium text-gray-800">
@@ -38,7 +38,7 @@
             </p>
         </div>
 
-        <hr class="p-[1px] bg-gray-200">
+        <hr class="p-[1px] bg-gray-200 mt-1">
 
         <!-- Footer: Date & Button -->
         <div class="flex items-center justify-between w-full">
