@@ -9,14 +9,19 @@
 
 <div class="flex flex-wrap justify-center gap-6 lg:gap-4 p-6">
     <!-- Card 1 -->
-    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[95%] lg:w-[35%] min-w-[310px] max-w-[400px] mx-auto overflow-hidden relative">
+    <div
+        class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[350px] mx-auto overflow-hidden relative">
         <!-- Event Image -->
         <div class="relative">
-            <img class="w-full h-56 object-cover hover:scale-105 overflow-hidden duration-300" src="{{ asset($pic) }}" alt="Event Image">
+            <img class="w-full h-56 object-cover hover:scale-105 overflow-hidden duration-300" src="{{ asset($pic) }}"
+                alt="Event Image">
             <!-- Timer Badge -->
-            <div class="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-indigo-500 text-white px-4 py-2 rounded-full shadow-md flex items-center text-xs font-bold">
-                <svg class="w-5 h-5 text-white " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            <div
+                class="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-indigo-500 text-white px-4 py-2 rounded-full shadow-md flex items-center text-xs font-bold">
+                <svg class="w-5 h-5 text-white " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
                 </svg>
 
                 <span id="timer-{{ $attributes->get('id') }}" class="tracking-wide">
@@ -29,7 +34,8 @@
         </div>
 
         <!-- Content Section -->
-        <div class="relative bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 p-8 lg:p-6 lg:space-y-3 h-full flex flex-col justify-between space-y-6">
+        <div
+            class="relative bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 p-8 lg:p-6 lg:space-y-3 h-[19rem] flex flex-col justify-between space-y-6">
 
             <!-- Title and Location -->
             <div class="text-center">
@@ -45,8 +51,10 @@
             <div class="flex justify-between items-center text-sm font-semibold text-blue-800 mt-4">
                 <!-- Event Date -->
                 <div class="flex items-center space-x-2 text-gray-600">
-                    <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                    <svg class=" w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
                     </svg>
 
                     <span>09 DEC 2024</span>
@@ -54,8 +62,10 @@
 
                 <!-- Interested Section -->
                 <div class="flex items-center space-x-2">
-                    <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 .587l3.668 7.568L24 9.743l-6 5.857L19.335 24 12 20.354 4.665 24 6 15.6l-6-5.857 8.332-1.588L12 .587z" />
+                    <svg class="block w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 .587l3.668 7.568L24 9.743l-6 5.857L19.335 24 12 20.354 4.665 24 6 15.6l-6-5.857 8.332-1.588L12 .587z" />
                     </svg>
                     <span>{{ $interestCount }} Interested</span>
                 </div>
@@ -63,8 +73,10 @@
 
             <!-- Action Button -->
             <div class="pt-4">
-                <a href="{{ $url }}" class="block text-center text-sm font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" wire:navigate>
-                    Learn More
+                <a href="{{ $url }}" wire:navigate>
+                   <button class=" text-center text-sm  mx-auto font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 px-[6rem] rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        Learn More
+                   </button>
                 </a>
             </div>
         </div>
