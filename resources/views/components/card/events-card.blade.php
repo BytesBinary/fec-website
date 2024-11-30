@@ -9,7 +9,7 @@
 
 <div class="flex flex-wrap justify-center gap-6 lg:gap-4 p-6">
     <!-- Card 1 -->
-    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[95%] lg:w-[35%] min-w-[310px] max-w-[400px] mx-auto overflow-hidden relative">
+    <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[95%] lg:w-[35%] min-w-[400px] max-w-[500px] mx-auto overflow-hidden relative">
         <!-- Event Image -->
         <div class="relative">
             <img class="w-full h-56 object-cover hover:scale-105 overflow-hidden duration-300" src="{{ asset($pic) }}" alt="Event Image">
