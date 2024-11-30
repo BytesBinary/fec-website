@@ -94,7 +94,15 @@ class ResearchEvents extends Component
                 'date' => '19 DECEMBER 2025',
                 'url' => route('event', ['slug' => 'cloud-computing-conference']),
             ],
+            [
+                'image' => 'images/research/research.png',
+                'title' => 'Science Fair',
+                'location' => 'Expo Center, City Square',
+                'date' => '15 JANUARY 2025',
+                'url' => route('event', ['slug' => 'science-fair']),
+            ],
         ];
+
 
 
         $this->researches = [
