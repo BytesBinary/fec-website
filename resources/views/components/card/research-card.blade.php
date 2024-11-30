@@ -6,7 +6,7 @@
     'url' => '#',
 ])
 
-<div class=" w-[80%] lg:w-[400px] bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform group hover:scale-[1.02] hover:shadow-md hover:shadow-gray-400 duration-300">
+<div class=" w-[350px] bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform group hover:scale-[1.02] hover:shadow-md hover:shadow-gray-400 duration-300">
     <!-- Image Section -->
     <div class="relative">
         <img src="{{ asset($image) }}" alt="Card Image"
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Content Section -->
-    <div class="p-6 space-y-3 lg:space-y-4 text-left">
+    <div class="p-6 space-y-3 lg:space-y-4 text-left h-[19rem]">
         <!-- Title -->
         <div class="">
         <h3 class="text-xl lg:text-2xl font-extrabold text-gray-900 transition-colors duration-300 hover:bg-gradient-to-r hover:from-purple-700 hover:via-indigo-600 hover:to-blue-600 hover:text-transparent hover:bg-clip-text">

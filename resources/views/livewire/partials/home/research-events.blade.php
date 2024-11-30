@@ -1,18 +1,22 @@
 <div>
     <section class="mb-10">
-        <div class="landing-about container mx-auto pt-5 px-5 pb-10 my-10">
+        <div class="landing-about mx-auto pt-5 pb-10 my-10">
             <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Upcoming Events</p>
             <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
             <div class="swiper clubs-page-swiper mt-10">
                 <div class="swiper-wrapper mb-10">
                     @foreach ($events as $event)
                         <div class="swiper-slide">
-                            <x-card.events-card title="{{ $event['title'] }}" pic="{{ asset('images/gallery/4.jpg') }}"
-                                date="{{ $event['date'] }}" location="{{ $event['location'] }}" url="{{ $event['url'] }}" />
+                            <x-card.events-card
+                                title="{{$event['title']}}"
+                                pic="{{asset('images/gallery/2.jpg')}}"
+                                date="{{$event['date']}}"
+                                location="{{$event['location']}}"
+                                url="{{ $event['url'] }}"
+                                is-home-page="true"/>
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -29,7 +33,7 @@
     </section>
 
     <section class="mb-10">
-        <div class="landing-about container mx-auto pt-5 px-5 pb-10 my-10">
+        <div class="landing-about mx-auto pt-5 pb-10 my-10">
             <h2 class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold">
                 Researches & Publications
             </h2>
