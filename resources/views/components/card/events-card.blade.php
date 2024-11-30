@@ -29,7 +29,7 @@
         </div>
 
         <!-- Content Section -->
-        <div class="relative bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 p-8 lg:p-6 lg:space-y-3 h-full flex flex-col justify-between space-y-6">
+        <div class="relative bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 p-8 lg:p-6 lg:space-y-3 h-[16rem] flex flex-col justify-between space-y-6">
 
             <!-- Title and Location -->
             <div class="text-center">
@@ -45,7 +45,7 @@
             <div class="flex justify-between items-center text-sm font-semibold text-blue-800 mt-4">
                 <!-- Event Date -->
                 <div class="flex items-center space-x-2 text-gray-600">
-                    <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="block w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
                     </svg>
 
@@ -54,7 +54,7 @@
 
                 <!-- Interested Section -->
                 <div class="flex items-center space-x-2">
-                    <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="block w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 .587l3.668 7.568L24 9.743l-6 5.857L19.335 24 12 20.354 4.665 24 6 15.6l-6-5.857 8.332-1.588L12 .587z" />
                     </svg>
                     <span>{{ $interestCount }} Interested</span>
@@ -63,7 +63,7 @@
 
             <!-- Action Button -->
             <div class="pt-4">
-                <a href="{{ $url }}" class="block text-center text-sm font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" wire:navigate>
+                <a href="{{ $url }}" wire:navigate class="block text-center text-sm font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" >
                     Learn More
                 </a>
             </div>

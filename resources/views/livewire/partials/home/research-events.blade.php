@@ -3,7 +3,7 @@
         <div class="landing-about container mx-auto pt-5 px-5 pb-10 my-10">
             <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Upcoming Events</p>
             <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
-            <div class="swiper event-research-page-swiper mt-10">
+            <div class="swiper clubs-page-swiper mt-10">
                 <div class="swiper-wrapper mb-10">
                     @foreach ($events as $event)
                         <div class="swiper-slide">
@@ -35,7 +35,7 @@
             </h2>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 
-            <div class="swiper event-research-page-swiper mt-10">
+            <div class="swiper clubs-page-swiper mt-10">
                 <div class="swiper-wrapper mb-10">
                     @foreach ($researches as $research)
                         <div class="swiper-slide">
@@ -63,5 +63,5 @@
 
 
 @push('scripts')
-    @vite(['resources/js/home/departments.js'])
+    @vite(['resources/js/home/clubs.js'])
 @endpush
