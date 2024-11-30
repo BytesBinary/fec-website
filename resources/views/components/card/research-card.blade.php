@@ -16,7 +16,7 @@
     </div>
 
     <!-- Content Section -->
-    <div class="p-6 text-left h-[19rem] flex flex-col justify-evenly">
+    <div class="p-6 text-left h-[18rem] flex flex-col justify-between">
         <!-- Title -->
         <div class="">
         <h3 class="text-xl lg:text-2xl font-extrabold text-gray-900 transition-colors duration-300 hover:bg-gradient-to-r hover:from-purple-700 hover:via-indigo-600 hover:to-blue-600 hover:text-transparent hover:bg-clip-text">
@@ -38,10 +38,10 @@
             </p>
         </div>
 
-        <hr class="p-[1px] bg-gray-200 mt-1">
+        <hr class="p-[1px] bg-gray-200 mt-2">
 
         <!-- Footer: Date & Button -->
-        <div class="flex items-center justify-between w-full">
+        <div class="flex items-center justify-between w-full mt-2">
             <!-- Date -->
             <span class="text-gray-700 text-xs lg:text-md font-medium flex items-center">
                 Published Date : {{ $date }}
