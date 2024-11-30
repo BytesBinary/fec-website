@@ -3,7 +3,7 @@
     {{$slot}}
 </div>
 
-<div class="md:hidden flex items-center gap-6">
+<div class="ml-3 md:hidden flex items-center gap-2">
     <img src="{{asset('images/FEClogo.png')}}" alt="" class="w-12 h-12">
     {{-- <h2 class="text-txtColor text-2xl font-semibold">FEC</h2> --}}
     <h2 class="text-lg font-semibold">Faridpur Engineering College</h2>
