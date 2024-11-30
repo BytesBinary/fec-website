@@ -1,9 +1,9 @@
 <!-- Desktop Menu -->
-<div class="hidden md:flex flex-wrap space-x-4 z-10">
+<div class="hidden md:flex flex-wrap  z-10 items-center justify-center lg:space-x-4">
     {{$slot}}
 </div>
 
-<div class="md:hidden flex items-center gap-6">
+<div class="ml-3 md:hidden flex items-center gap-2">
     <img src="{{asset('images/FEClogo.png')}}" alt="" class="w-12 h-12">
     {{-- <h2 class="text-txtColor text-2xl font-semibold">FEC</h2> --}}
     <h2 class="text-lg font-semibold">Faridpur Engineering College</h2>

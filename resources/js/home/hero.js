@@ -4,15 +4,11 @@ document.addEventListener("livewire:navigated", function() {
     new Swiper(".swiper-container-hero-section", {
         loop: true,
         centeredSlides: true,
-        grabCursor: true,
+        allowTouchMove: false,
+        grabCursor: false,
         autoplay: {
-            delay: 2000,               // Set autoplay delay (3 seconds)
+            delay: 3000,               // Set autoplay delay (3 seconds)
             disableOnInteraction: false
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
         },
         navigation: {
             nextEl: ".swiper-button-next",
