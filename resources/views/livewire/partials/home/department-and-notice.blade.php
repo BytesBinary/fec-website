@@ -66,7 +66,7 @@
                                     {{ $notice['title'] }}
                                 </div>
                                 <div class="ml-4">
-                                    <a href="path-to-file.pdf" download class="flex items-center">
+                                    <a href="{{asset($notice['pdf'])}}" download class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
                                             fill="black">
                                             <path fill-rule="evenodd"

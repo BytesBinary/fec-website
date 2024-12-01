@@ -4,10 +4,11 @@ namespace App\Livewire\Pages\Activities;
 
 use Livewire\Component;
 
-class Publications extends Component
+class Demo extends Component
 {
+    public $club ='demo';
     public function render()
     {
-        return view('livewire.pages.activities.publications');
+        return view('livewire.pages.activities/researches');
     }
 }
