@@ -45,62 +45,6 @@ class ResearchEvents extends Component
                 'date' => '30 MAY 2025',
                 'url' => route('event', ['slug' => 'sustainable-energy-workshop']),
             ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Quantum Computing Summit',
-                'location' => 'QuantumLab, New York',
-                'date' => '15 JUNE 2025',
-                'url' => route('event', ['slug' => 'quantum-computing-summit']),
-            ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Blockchain Expo 2025',
-                'location' => 'Blockchain Hall, London',
-                'date' => '5 JULY 2025',
-                'url' => route('event', ['slug' => 'blockchain-expo']),
-            ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Cybersecurity Conference 2025',
-                'location' => 'CyberSec Arena, Berlin',
-                'date' => '20 AUGUST 2025',
-                'url' => route('event', ['slug' => 'cybersecurity-conference']),
-            ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Mobile App Development Bootcamp',
-                'location' => 'DevZone, Los Angeles',
-                'date' => '10 SEPTEMBER 2025',
-                'url' => route('event', ['slug' => 'mobile-app-development']),
-            ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Tech for Good Summit',
-                'location' => 'TechPark, San Francisco',
-                'date' => '22 OCTOBER 2025',
-                'url' => route('event', ['slug' => 'tech-for-good']),
-            ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Artificial Intelligence in Healthcare',
-                'location' => 'MedTech Forum, Boston',
-                'date' => '11 NOVEMBER 2025',
-                'url' => route('event', ['slug' => 'ai-in-healthcare']),
-            ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Cloud Computing Conference',
-                'location' => 'CloudWorld, Sydney',
-                'date' => '19 DECEMBER 2025',
-                'url' => route('event', ['slug' => 'cloud-computing-conference']),
-            ],
-            [
-                'image' => 'images/research/research.png',
-                'title' => 'Science Fair',
-                'location' => 'Expo Center, City Square',
-                'date' => '15 JANUARY 2025',
-                'url' => route('event', ['slug' => 'science-fair']),
-            ],
         ];
 
 

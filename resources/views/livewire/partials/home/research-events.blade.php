@@ -1,9 +1,9 @@
-<div>
+<div class="container mx-auto pt-5 px-5 pb-10 my-10">
     <section class="mb-10">
         <div class="landing-about mx-auto pt-5 pb-10 my-10">
             <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Upcoming Events</p>
             <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
-            <div class="swiper clubs-page-swiper mt-10">
+            <div class="swiper swiper-container clubs-page-swiper mt-10">
                 <div class="swiper-wrapper mb-10">
                     @foreach ($events as $event)
                         <div class="swiper-slide">
@@ -17,7 +17,6 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
 
@@ -39,18 +38,19 @@
             </h2>
             <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded mb-10">
 
-            <div class="swiper clubs-page-swiper mt-10">
+            <div class="swiper swiper-container clubs-page-swiper mt-10">
                 <div class="swiper-wrapper mb-10">
                     @foreach ($researches as $research)
                         <div class="swiper-slide">
-                            <x-card.research-card image="{{ $research['image'] }}" title="{{ $research['title'] }}"
-                                description="{{ $research['description'] }}" date="{{ $research['date'] }}"
+                            <x-card.research-card
+                                image="{{ $research['image'] }}"
+                                title="{{ $research['title'] }}"
+                                description="{{ $research['description'] }}"
+                                date="{{ $research['date'] }}"
                                 url="{{ $research['url'] }}" />
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
             <div class="card-actions mt-8 mb-4 flex justify-center">
@@ -62,7 +62,6 @@
             </div>
         </div>
     </section>
-
 </div>
 
 

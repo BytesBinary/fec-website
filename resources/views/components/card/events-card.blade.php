@@ -8,7 +8,6 @@
 ])
 
 <div class="flex flex-wrap justify-center gap-6 lg:gap-4 p-6">
-    <!-- Card 1 -->
     <div
         class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[350px] mx-auto overflow-hidden relative">
         <!-- Event Image -->
@@ -83,7 +82,6 @@
     </div>
 </div>
 {{-- JavaScript event timer --}}
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const targetDate = new Date("{{ $date }}").getTime();

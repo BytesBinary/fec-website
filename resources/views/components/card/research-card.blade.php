@@ -6,7 +6,7 @@
     'url' => '#',
 ])
 
-<div class=" w-[350px] bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform group hover:scale-[1.02] hover:shadow-md hover:shadow-gray-400 duration-300">
+<div class=" w-[400px] bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform group hover:scale-[1.02] hover:shadow-md hover:shadow-gray-400 duration-300">
     <!-- Image Section -->
     <div class="relative">
         <img src="{{ asset($image) }}" alt="Card Image"
