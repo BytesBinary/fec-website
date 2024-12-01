@@ -12,7 +12,7 @@ class Hero extends Component
     {
         $this->images = [
             [
-                'src' => asset('images/hero-img.jpg'),
+                'src' => asset('images/hero-img1.jpg'),
                 'title' => 'Welcome to Faridpur Engineering College',
                 'description' => 'A Place to learn and Grow.',
                 'style' => 'absolute',
@@ -24,7 +24,7 @@ class Hero extends Component
                 'style' => 'absolute bottom-0 left-0 px-6 py-7 my-5'
             ],
             [
-                'src' => asset('images/hero-bg2.jpg'),
+                'src' => asset('images/hero-img1.jpg'),
                 'title' => 'For the bold minds and boundless dreams',
                 'description' => 'Embrace the future of education.',
                 'style' => 'absolute bottom-0 left-0 px-6 py-7 my-5'
