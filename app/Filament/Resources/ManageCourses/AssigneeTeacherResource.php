@@ -50,6 +50,12 @@ class AssigneeTeacherResource extends Resource
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
+                Filter::make('cse')
+                    ->query(fn ($query) => $query->where('department', 'CSE')),
+                Filter::make('eee')
+                    ->query(fn ($query) => $query->where('department', 'EEE')),
+                Filter::make('ce')
+                    ->query(fn ($query) => $query->where('department', 'Civil')),
                 Filter::make('1st Semester')
                     ->query(fn ($query) => $query->where('semester', '1st')),
                 Filter::make('2nd Semester')
@@ -73,7 +79,7 @@ class AssigneeTeacherResource extends Resource
                     ->icon('heroicon-o-pencil')
                     ->url(fn ($record) => static::getUrl('edit', ['record' => $record])),
             ],['edit','delete']))
-            ->bulkActions(create_table_bulk_actions());
+            ->bulkActions(create_table_bulk_actions([],[],['restore','forceDelete', 'delete']));
     }
 
     public static function getRelations(): array
