@@ -11,7 +11,7 @@
                 <div class="flex gap-3 mt-5">
                     <img src="{{ asset('images/BytesBinary.png') }}" alt="prof" class="size-12 rounded-[50%] object-cover">
                     <div class="justify-start">
-                        <h3 class="text-start font-semibold">Saniad Islam</h3>
+                        <h3 class="text-start font-semibold">Alex Morgan</h3>
                         <p class="text-start text-gray-700">10/12/2024</p>
                     </div>
                 </div>

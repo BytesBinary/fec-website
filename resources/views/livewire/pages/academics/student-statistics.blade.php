@@ -39,8 +39,8 @@
             <div class="p-12 flex flex-col gap-8 relative z-10">
                 <h2
                     class="text-left font-extrabold text-3xl md:text-4xl bg-clip-text text-neutral-900 transition-all duration-500 ease-in-out transform hover:scale-[1.03]">
-                    “Engineers like to solve problems. If there are none, find one, Learn & Earn !”
-                    <span class="block mt-4 text-xl text-slate-700 font-semibold">- Abdullah Al Rafi</span>
+                    “Engineering is the closest thing to magic that exists in the world."
+                    <span class="block mt-4 text-xl text-slate-700 font-semibold">-Elon Musk</span>
                 </h2>
             </div>
         </div>

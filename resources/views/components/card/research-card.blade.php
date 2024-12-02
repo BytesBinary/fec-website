@@ -18,7 +18,7 @@
     <!-- Content Section -->
     <div class="p-6 text-left h-[18rem] flex flex-col justify-between">
         <!-- Title -->
-        <div class="">
+        <div>
         <h3 class="text-xl lg:text-2xl font-extrabold text-gray-900 transition-colors duration-300 hover:bg-gradient-to-r hover:from-purple-700 hover:via-indigo-600 hover:to-blue-600 hover:text-transparent hover:bg-clip-text">
             {{ $title }}
         </h3>
@@ -34,7 +34,7 @@
             <img src="{{ asset($image) }}" alt="Author Name"
                 class="size-8 lg:size-12 rounded-full object-cover shadow-md ring-2 ring-indigo-600">
             <p class=" text-md lg:text-lg font-medium text-gray-800">
-                Saniad Islam
+                Tanjim Hasan
             </p>
         </div>
 
