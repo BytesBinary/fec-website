@@ -92,13 +92,20 @@ class Routine extends Model
                                     ->where('time', $time);
                             })
                             ->get()
-                            ->map(function($course){
+                            ->map(function($course) use($day, $time){
                                 $modifyCourse = $course->toArray();
                                 $modifyCourse['teachers'] = [];
                                 if( isset($course->assigned_teachers_ids) ) {
                                     $teachers = explode(',', $course->assigned_teachers_ids);
                                     foreach ($teachers as $teacher) {
                                         $teacher = User::find($teacher);
+                                        $is_exist = Routine::where('teacher_id', $teacher->id)
+                                            ->where('day', $day)
+                                            ->where('time', $time)
+                                            ->first();
+                                        if( ! empty($is_exist) ) {
+                                            continue;
+                                        }
                                         if( $teacher ) {
                                             $modifyCourse['teachers'][] = $teacher->toArray();
                                         }

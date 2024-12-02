@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
         $this->call([
             ShieldSeeder::class,
+            UserSeeder::class,
             CourseSeeder::class,
             SettingsSeeder::class,
             ResidenceSeeder::class,

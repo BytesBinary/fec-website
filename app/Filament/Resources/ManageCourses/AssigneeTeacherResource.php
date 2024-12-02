@@ -23,6 +23,7 @@ class AssigneeTeacherResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->query(Course::query()->where('assigned_teachers_ids', '!=', null))
             ->columns([
                 TextColumn::make('title')
                     ->searchable()

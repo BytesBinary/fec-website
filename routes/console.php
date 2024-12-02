@@ -20,16 +20,13 @@ Artisan::command('db:set', function () {
 
     $ans = $this->confirm('Do you want to seed the shield and assign role ?');
     if ($ans) {
-        try {
-            Artisan::call('shield:generate', ['--all' => true]);
-            Artisan::call('shield:super-admin');
-            $this->alert('Role assigned to the super admin.');
-            $this->table(['name', 'email'], [
-                User::where('designation', 'super_admin')->first()->only(['name', 'email'])
-            ]);
-        } catch (\Exception $e) {
-            $this->error('Shield generation or role assignment failed.');
-        }
+        $user = User::where('designation', 'super_admin')->first()->only(['id','name', 'email']);
+        Artisan::call('shield:generate', ['--all' => true,'--panel' => 'user']);
+        Artisan::call('shield:super-admin', ['--user' => $user['id']]);
+        $this->alert('Role assigned to the super admin.');
+        $this->table(['id','name', 'email'], [
+           $user
+        ]);
     } else {
         $this->alert('Shield Seeding Skipped. You will be unable to log in to the admin panel.');
     }

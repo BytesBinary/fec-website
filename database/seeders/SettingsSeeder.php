@@ -45,6 +45,7 @@ class SettingsSeeder extends Seeder
             ['designation' => 'Lab_In_Charge'],
             ['designation' => 'Librarian'],
         ];
+
         foreach ( $designations as $designation ) {
             Designation::create($designation);
         }
