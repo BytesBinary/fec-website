@@ -4,7 +4,7 @@
             <!-- Sidebar Menu -->
             <div class="w-full mx-auto mb-10 col-span-1 rounded-lg p-5 border {{!empty($sideNavCss) ? $sideNavCss : 'bg-lime-50 shadow-md border-gray-200'}}">
                 <h2 class="text-xl font-bold text-gray-600 hover:text-blue-700 transition duration-300 mb-4">
-                    <a href="{{!empty($cardRoute) ? route($cardRoute) : '#'}}" wire:navigate>{{$cardTitle}}</a>
+                    <a href="{{!empty($cardRoute) ? $cardRoute : '#'}}" wire:navigate>{{$cardTitle}}</a>
                 </h2>
                 <hr class="border-gray-300 mb-4">
             <x-partials.subpage-navigation :route-key="$routeKey" :page="$page" :menu="$menu" />

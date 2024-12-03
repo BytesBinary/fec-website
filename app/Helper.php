@@ -135,20 +135,51 @@ if( ! function_exists('get_sub_page_layout_data') ) {
             switch($routeValue) {
                 case 'cse':
                     $cardTitle = 'Computer Science And Engineering';
-                    $cardRoute = 'cse';
+                    $cardRoute = route('cse');
                     break;
                 case 'eee':
                     $cardTitle = 'Electrical & Electronics Engineering';
-                    $cardRoute = 'eee';
+                    $cardRoute = route('eee');
                     break;
                 case 'ce':
                     $cardTitle = 'Civil Engineering';
-                    $cardRoute = 'ce';
+                    $cardRoute = route('ce');
                     break;
                 case 'non-tech':
                     $cardTitle = 'Non-Tech';
-                    $cardRoute = 'non-tech';
+                    $cardRoute = route('non-tech');
                     break;
+                case 'ric':
+                    $cardTitle = 'Research & Innovation Center';
+                    $cardRoute = route('single-club', ['club' => 'ric']);
+                    break;
+                case 'feccpc':
+                    $cardTitle = 'Cyber Protector Club';
+                    $cardRoute = route('single-club', ['club' => 'feccpc']);
+                case 'fecsa':
+                    $cardTitle = 'Sports Association';
+                    $cardRoute = route('single-club',['club' => 'fecsa']);
+                case 'fecpc':
+                    $cardTitle = 'Photographic Club';
+                    $cardRoute = route('single-club',['club' => 'fecpc']);
+                case 'fecpc2':
+                    $cardTitle = 'Programming Club';
+                    $cardRoute = route('single-club',['club' => 'fecpc2']);
+                case 'debating':
+                    $cardTitle = 'Debating Club';
+                    $cardRoute = route('single-club',['club' => 'debating']);
+                case 'islamic-dawah':
+                    $cardTitle = 'Islamic Research & Dawah Center';
+                    $cardRoute = route('single-club',['club' => 'islamic-dawah']);
+                case 'bani-archana':
+                    $cardTitle = 'Bani Archana';
+                    $cardRoute = route('single-club',['club' => 'bani-archana']);
+                case 'professionals':
+                    $cardTitle = 'Club of Professionals';
+                    $cardRoute = route('single-club',['club' => 'professionals']);
+                case 'fecrsg' :
+                    $cardTitle = 'Rover Scouting Club';
+                    $cardRoute = route('single-club',['club' => 'fecrsg']);
                 default:
                     break;
             }

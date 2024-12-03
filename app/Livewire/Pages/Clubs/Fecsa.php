@@ -6,11 +6,11 @@ use Livewire\Component;
 
 class Fecsa extends Component
 {
-    public $card_title='Sports Association';
+    public $cardTitle='Sports Association';
     public $club='sports';
     public function render()
     {
         return view('livewire.pages.campus-life/club')
-            ->layout('components.layouts.sub-page', get_sub_page_layout_data('club',$this->club, $this->card_title));;
+            ->layout('components.layouts.sub-page', get_sub_page_layout_data('club',$this->club, $this->cardTitle));;
     }
 }

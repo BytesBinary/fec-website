@@ -543,6 +543,33 @@ return [
                 'isDropdown' => false,
             ]
         ],
+        'islamic-dawah' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
 
 
     ]
