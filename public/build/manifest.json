@@ -4,20 +4,28 @@
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-5NvOEeX9.css",
+    "file": "assets/app-BHQscAvm.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/filament/user/theme.css": {
-    "file": "assets/theme-DiP2Iq42.css",
+    "file": "assets/theme-CZmZY7ZW.css",
     "src": "resources/css/filament/user/theme.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DYBQowRy.js",
+    "file": "assets/app-D5_0CCBU.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "resources/js/home/clubs.js",
+      "resources/js/home/departments.js",
+      "resources/js/home/gallery.js",
+      "resources/js/home/hero.js",
+      "resources/js/residence.js",
+      "_swiper-bundle-CUnLjt9d.js"
+    ]
   },
   "resources/js/home/clubs.js": {
     "file": "assets/clubs-D3HG8wlN.js",
