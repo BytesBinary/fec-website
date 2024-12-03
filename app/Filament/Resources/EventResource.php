@@ -6,6 +6,7 @@ use App\Filament\Resources\EventResource\Pages;
 use App\Models\Post;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 class EventResource extends Resource
@@ -23,7 +24,16 @@ class EventResource extends Resource
         return $table
             ->query(Post::query()->where('post_type', 'event'))
             ->columns([
-                //
+                TextColumn::make('post_title')
+                    ->label('Event Title'),
+                TextColumn::make('post_type')
+                    ->label('Event Type'),
+                TextColumn::make('post_category')
+                    ->label('Event Category'),
+                TextColumn::make('created_at')
+                    ->label('Created At'),
+                TextColumn::make('updated_at')
+                    ->label('Updated At'),
             ])
             ->filters([
                 //
