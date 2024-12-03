@@ -21,7 +21,7 @@ class EventResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->query(Post::query()->where('post_type', 'x'))
+            ->query(Post::query()->where('post_type', 'event'))
             ->columns([
                 //
             ])
@@ -44,7 +44,7 @@ class EventResource extends Resource
         return [
             'index' => Pages\ListEvents::route('/'),
             'create' => Pages\CreateEvent::route('/create'),
-            'edit' => Pages\EditEvent::route('/{record}/edit'),
+            'edit' => Pages\CreateEvent::route('/{record}/edit'),
         ];
     }
 }

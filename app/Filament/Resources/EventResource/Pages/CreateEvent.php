@@ -36,6 +36,50 @@ class CreateEvent extends Page implements HasForms
 
     public string $record;
 
+    public function mount( $record = '' )
+    {
+        $this->record = $record;
+
+        if( $this->record ) {
+            $event = Post::where('id', $record)->first()->toArray();
+            $event_details = get_post_meta( $record, 'event_details' );
+            $event['basic_details'] = [
+                'post_title' => $event['post_title'],
+                'short_description' => $event_details['short_description'],
+                'registration_url' => $event_details['registration_url'],
+                'event_date' => $event_details['event_date'],
+                'event_location' => $event_details['event_location'],
+                'feature_image' => $event_details['feature_image'],
+            ];
+            $event['event_description'] = $event['post_content'];
+            $event['segments'] = get_post_meta( $record, 'event_segments' );
+            $event['contact_details'] = get_post_meta( $record, 'contact_details' );
+            $this->form->fill($event);
+        }
+    }
+
+    public function updateEvent()
+    {
+        // Update post
+        Post::where('id', $this->record)
+            ->update([
+                'post_title' => $this->basic_details['post_title'],
+                'post_content' => $this->event_description,
+
+            ]);
+        create_or_update_post_meta($this->record, 'event_details', [
+            'short_description' => $this->basic_details['short_description'],
+            'registration_url' => $this->basic_details['registration_url'],
+            'event_date' => $this->basic_details['event_date'],
+            'event_location' => $this->basic_details['event_location'],
+            'feature_image' => $this->basic_details['feature_image'],
+        ]);
+        create_or_update_post_meta($this->record, 'event_segments', $this->segments);
+        create_or_update_post_meta($this->record, 'contact_details', $this->contact_details);
+        send_notification('success', '5000', 'Residence updated successfully');
+    }
+
+
     public function createEvent()
     {
         $this->validate();
@@ -75,6 +119,8 @@ class CreateEvent extends Page implements HasForms
         ]);
         create_or_update_post_meta($event, 'event_segments', $this->segments);
         create_or_update_post_meta($event, 'contact_details', $this->contact_details);
+
+        send_notification('success', '5000', 'Event created successfully');
     }
 
     public function form(Form $form) : Form
