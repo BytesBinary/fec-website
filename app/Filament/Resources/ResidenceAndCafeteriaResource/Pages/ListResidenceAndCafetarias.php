@@ -20,6 +20,9 @@ class ListResidenceAndCafetarias extends ListRecords
 
     public function getTabs() : array
     {
-        return create_model_tabs(new Post(), [], 'Residence');
+        return create_model_tabs(new Post(),[],'Residences',[
+            'all' => Post::where('post_type', 'residence')->count(),
+            'archived' => Post::where('post_type', 'residence')->onlyTrashed()->count(),
+        ]);
     }
 }
