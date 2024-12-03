@@ -40,16 +40,21 @@ class CreateEvent extends Page implements HasForms
     {
         $this->validate();
 
-        $eventDate = \Carbon\Carbon::parse($this->basic_details['event_date'])->format('Y-m-d');
-
         if ($this->basic_details['feature_image']) {
-            $imagePath = "event/{$eventDate}/hello.png";
+            $eventDate = \Carbon\Carbon::parse($this->basic_details['event_date'])->format('Y-m-d');
 
-            $uploadedFile = $this->basic_details['feature_image'];
-            $savedPath = $uploadedFile->storeAs('public', $imagePath);
+            $file = current($this->basic_details['feature_image']);
+
+            $fileExtension = $file->getClientOriginalExtension();
+            $uniqueFileName = uniqid('event_', true) . '.' . $fileExtension;
+
+            $imagePath = "event/{$eventDate}/{$uniqueFileName}";
+
+            $savedPath = $file->storeAs('public', $imagePath);
 
             $this->basic_details['feature_image'] = str_replace('public/', '', $savedPath);
         }
+
 
         $event = Post::create([
             'post_title' => $this->basic_details['post_title'],
@@ -126,6 +131,7 @@ class CreateEvent extends Page implements HasForms
                     ->columns(1)
                     ->schema([
                        Repeater::make('segments')
+                           ->columns(2)
                             ->schema([
                                 TextInput::make('segment_title')
                                     ->label('Segment Title')
