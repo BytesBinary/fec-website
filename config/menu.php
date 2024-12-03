@@ -128,6 +128,11 @@ return [
                 'route' => 'dept.about',
                 'isDropdown' => false,
             ],
+            'student-stats' => [
+                'title' => 'Student Statistics',
+                'route' => 'dept.student-stats',
+                'isDropdown' => false,
+            ],
             'events' => [
                 'title' => 'Events',
                 'route' => 'dept.events',
@@ -153,6 +158,7 @@ return [
                 'route' => 'dept.semester-routine',
                 'isDropdown' => false,
             ],
+
             // 'semester-plan' => [
             //     'title' => 'Semester Plan',
             //     'route' => '',
@@ -186,6 +192,11 @@ return [
                 'route' => 'dept.about',
                 'isDropdown' => false,
             ],
+            'student-stats' => [
+                'title' => 'Student Statistics',
+                'route' => 'dept.student-stats',
+                'isDropdown' => false,
+            ],
             'events' => [
                 'title' => 'Events',
                 'route' => 'dept.events',
@@ -211,11 +222,17 @@ return [
                 'route' => 'dept.semester-routine',
                 'isDropdown' => false,
             ],
+
         ],
         'ce' => [
             'about' => [
                 'title' => 'About',
                 'route' => 'dept.about',
+                'isDropdown' => false,
+            ],
+            'student-stats' => [
+                'title' => 'Student Statistics',
+                'route' => 'dept.student-stats',
                 'isDropdown' => false,
             ],
             'events' => [
@@ -248,6 +265,11 @@ return [
             'about' => [
                 'title' => 'About',
                 'route' => 'dept.about',
+                'isDropdown' => false,
+            ],
+            'student-stats' => [
+                'title' => 'Student Statistics',
+                'route' => 'dept.student-stats',
                 'isDropdown' => false,
             ],
             'events' => [

@@ -10,6 +10,7 @@ use App\Livewire\Partials\Department\Events as DeptEvents;
 use App\Livewire\Partials\Department\Gallery;
 use App\Livewire\Partials\Department\IncourseRoutine;
 use App\Livewire\Partials\Department\SemesterRoutine;
+use App\Livewire\Partials\Department\Studentstats;
 
 Route::prefix('departments')->group(function (){
     Route::get('/cse',Cse::class)->name('cse');
@@ -22,4 +23,5 @@ Route::prefix('departments')->group(function (){
     Route::get('{department}/academic-calender', AcademicCalender::class)->name('dept.academic-calender');
     Route::get('{department}/incourse-routine', IncourseRoutine::class)->name('dept.incourse-routine');
     Route::get('{department}/semester-routine', SemesterRoutine::class)->name('dept.semester-routine');
+    Route::get('{department}/student-stats', Studentstats::class)->name('dept.student-stats');
 });
