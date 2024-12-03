@@ -298,5 +298,14 @@ return [
                 'isDropdown' => false,
             ],
         ],
+    ],
+    'club' => [
+        'bani-archana' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+        ]
     ]
 ];
