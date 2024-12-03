@@ -34,7 +34,7 @@
 
         <!-- Content Section -->
         <div
-            class="relative bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 p-8 lg:p-6 lg:space-y-6 h-[18rem] flex flex-col justify-between space-y-6">
+            class="relative bg-gradient-to-br from-blue-100 via-emerald-50 to-blue-100 p-8 lg:p-6 lg:space-y-3 h-[19rem] flex flex-col justify-between space-y-6">
 
             <!-- Title and Location -->
             <div class="text-center">
@@ -73,7 +73,7 @@
             <!-- Action Button -->
             <div>
                 <a href="{{ $url }}" wire:navigate>
-                   <button class=" text-center text-sm  mx-auto font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 px-[6rem] rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                   <button class=" text-center text-sm  mx-auto font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 w-full rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         Learn More
                    </button>
                 </a>

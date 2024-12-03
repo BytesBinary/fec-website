@@ -20,7 +20,7 @@
                     </div>
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg"
+                        <x-card.departments-card name="Civil Engineering" image="images/card/cse-dept.jpg"
                             url="{{ route('ce') }}" is-home-page="true" />
                     </div>
                     <!-- Slide 1 -->
@@ -36,7 +36,7 @@
                     </div>
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <x-card.departments-card name="Civil <br> Engineering" image="images/card/cse-dept.jpg"
+                        <x-card.departments-card name="Civil Engineering" image="images/card/cse-dept.jpg"
                             url="{{ route('ce') }}" is-home-page="true" />
                     </div>
                     <!-- More slides as needed... -->
