@@ -6,6 +6,7 @@
                 <h2 class="text-4xl font-bold text-gray-800">Upcoming Events</h2>
                 <p class="text-gray-600 mt-4 max-w-xl mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque, nisi optio, repellat voluptate iste eaque inventore soluta assumenda est, repudiandae fugit. Fugiat nemo rem facere nobis sequi! Deserunt, culpa.</p>
             </div>
+            @php dd($events) @endphp
 
             <!-- Event Cards -->
             <div class="grid grid-cols-1 place-items-center md:gap-x-10 md:place-items-stretch md:grid-cols-2 lg:grid-cols-3 gap-8 lg;gap-x-10">
