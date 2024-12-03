@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 if( ! function_exists('create_model_tabs') ) {
-    function create_model_tabs( Model $model, array $attributes = [], string $modelName = '' ) : array
+    function create_model_tabs( Model $model, array $attributes = [], string $modelName = '', array $customCount = [] ) : array
     {
         $default = array(
             'all' => empty($modelName) ? get_readable_classname($model) : $modelName,
@@ -19,11 +19,11 @@ if( ! function_exists('create_model_tabs') ) {
         foreach( $attributes as $attribute => $value ) {
             switch ( $attribute ) {
                 case 'all':
-                    $tabs[$attribute] = Tab::make($value)->badge($model::count());
+                    $tabs[$attribute] = Tab::make($value)->badge((!empty($customCount) ? $customCount['all'] : $model::count()));
                     break;
                 case 'archived':
                     $tabs[$attribute] = Tab::make($value)
-                        ->badge($model::onlyTrashed()->count())
+                        ->badge((!empty($customCount) ? $customCount['archived'] : $model::onlyTrashed()->count()))
                         ->modifyQueryUsing(fn ($query) => $query->onlyTrashed());
                     break;
                 default:

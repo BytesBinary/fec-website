@@ -20,6 +20,9 @@ class ListEvents extends ListRecords
 
     public function getTabs() : array
     {
-        return create_model_tabs(new Post());
+        return create_model_tabs(new Post(),[],'Events',[
+            'all' => Post::where('post_type', 'event')->count(),
+            'archived' => Post::where('post_type', 'event')->onlyTrashed()->count(),
+        ]);
     }
 }
