@@ -13,7 +13,7 @@
             <a href="" class="block mt-4">
                 <div class="flex justify-center">
                     <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer" type="button">
-                        <span class="text-base">Read More</span>
+                        <span class="text-base"><a href="/about-us">Read More</a></span>
                         <x-svg-icon.external-url class="w-5 h-5" />
                     </button>
                 </div>
