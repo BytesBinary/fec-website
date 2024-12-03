@@ -7,3 +7,8 @@ document.addEventListener("livewire:navigated", function() {
 });
 
 
+import './home/clubs';
+import './home/departments';
+import './home/gallery';
+import './home/hero';
+import './home/research';
