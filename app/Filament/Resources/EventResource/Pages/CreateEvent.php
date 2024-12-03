@@ -60,6 +60,7 @@ class CreateEvent extends Page implements HasForms
 
     public function updateEvent()
     {
+        $this->validate();
         // Update post
         Post::where('id', $this->record)
             ->update([
@@ -143,6 +144,7 @@ class CreateEvent extends Page implements HasForms
                         TextInput::make('registration_url')
                             ->label('Registration URL')
                             ->url()
+                            ->required()
                             ->placeholder('Enter the registration URL'),
                         DateTimePicker::make('event_date')
                             ->label('Event Date')
