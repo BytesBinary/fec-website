@@ -12,3 +12,4 @@ import './home/departments';
 import './home/gallery';
 import './home/hero';
 import './home/research';
+import './residence';

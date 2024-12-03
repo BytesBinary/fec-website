@@ -61,7 +61,3 @@
         <div class="swiper-button-prev hover:text-yellow-400 transition duration-300"></div>
     </div>
 </div>
-
-@push('scripts')
-    @vite(['resources/js/home/hero.js'])
-@endpush

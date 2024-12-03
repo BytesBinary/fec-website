@@ -21,7 +21,3 @@
         @endforeach
     </div>
 </div>
-
-@push('scripts')
-    @vite(['resources/js/home/gallery.js'])
-@endpush

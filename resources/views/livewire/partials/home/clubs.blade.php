@@ -19,6 +19,3 @@
         <div class="swiper-pagination"></div>
     </div>
 </div>
-@push('scripts')
-    @vite(['resources/js/home/clubs.js'])
-@endpush

@@ -64,7 +64,3 @@
     </section>
 </div>
 
-
-@push('scripts')
-    @vite(['resources/js/home/clubs.js'])
-@endpush

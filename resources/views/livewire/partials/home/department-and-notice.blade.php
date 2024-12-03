@@ -92,6 +92,3 @@
 
     </div>
 </div>
-@push('scripts')
-    @vite(['resources/js/home/departments.js'])
-@endpush
