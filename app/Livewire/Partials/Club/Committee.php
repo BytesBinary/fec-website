@@ -4,7 +4,7 @@ namespace App\Livewire\Partials\Club;
 
 use Livewire\Component;
 
-class About extends Component
+class Committee extends Component
 {
     public $club;
 
@@ -18,7 +18,7 @@ class About extends Component
 
     public function render()
     {
-        return view('livewire.partials.club.about')
+        return view('livewire.partials.club.committee')
         ->layout('components.layouts.sub-page', get_sub_page_layout_data('club',$this->club));
 
     }

@@ -306,6 +306,244 @@ return [
                 'route' => 'club.about',
                 'isDropdown' => false,
             ],
-        ]
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ],
+        ],
+        'ric' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+        'feccpc' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+        'debating' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+        'fecsa'  => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+        'fecpc' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+        'fecpc2'  => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+        'professionals' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+        'fecrsg'  => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'club.about',
+                'isDropdown' => false,
+            ],
+            'committee' => [
+                'title' => 'Committee',
+                'route' => 'club.committee',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'club.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'club.gallery',
+                'isDropdown' => false,
+            ],
+            'member_form' => [
+                'title' => 'Be a member',
+                'route' => 'club.member-form',
+                'isDropdown' => false,
+            ]
+        ],
+
+
     ]
 ];
