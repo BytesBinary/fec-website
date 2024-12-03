@@ -22,6 +22,9 @@ class About extends Component
             case 'ce':
                 $this->cardTitle = 'Civil Engineering';
                 break;
+            case 'non-tech':
+                $this->cardTitle = 'Non-Tech';
+                break;
             default:
                 break;
         }

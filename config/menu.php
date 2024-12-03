@@ -70,6 +70,10 @@ return [
                     'title' => 'Civil Engineering',
                     'route' => 'ce'
                 ],
+                'non-tech' => [
+                    'title' => 'Non-Tech',
+                    'route' => 'non-tech'
+                ],
             ],
         ],
         // Activities Page
@@ -209,6 +213,38 @@ return [
             ],
         ],
         'ce' => [
+            'about' => [
+                'title' => 'About',
+                'route' => 'dept.about',
+                'isDropdown' => false,
+            ],
+            'events' => [
+                'title' => 'Events',
+                'route' => 'dept.events',
+                'isDropdown' => false,
+            ],
+            'gallery' => [
+                'title' => 'Gallery',
+                'route' => 'dept.gallery',
+                'isDropdown' => false,
+            ],
+            'academic-calender' => [
+                'title' => 'Academic Calender',
+                'route' => 'dept.academic-calender',
+                'isDropdown' => false,
+            ],
+            'incourse-routine' => [
+                'title' => 'Incourse Routine',
+                'route' => 'dept.incourse-routine',
+                'isDropdown' => false,
+            ],
+            'semester-routine' => [
+                'title' => 'Semester Routine',
+                'route' => 'dept.semester-routine',
+                'isDropdown' => false,
+            ],
+        ],
+        'non-tech' => [
             'about' => [
                 'title' => 'About',
                 'route' => 'dept.about',

@@ -145,6 +145,10 @@ if( ! function_exists('get_sub_page_layout_data') ) {
                     $cardTitle = 'Civil Engineering';
                     $cardRoute = 'ce';
                     break;
+                case 'non-tech':
+                    $cardTitle = 'Non-Tech';
+                    $cardRoute = 'non-tech';
+                    break;
                 default:
                     break;
             }
