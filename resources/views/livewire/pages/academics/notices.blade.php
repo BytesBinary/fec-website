@@ -18,9 +18,11 @@
                                 <p class="text-sm text-gray-600">{{$notice['date']}}</p>
                             </div>
                             <!-- Download icon (only visible on mobile) -->
+                            <a href="{{asset($notice['path'])}}" download class="flex items-center">
                             <div class="lg:hidden">
                                 <x-svg-icon.download />
                             </div>
+                            </a>
                         </li>
                     @endforeach
                 </ul>
@@ -31,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="col-span-3 invisible lg:visible">
+            <div class="col-span-3 hidden lg:block">
                 <div class="bg-white p-4 rounded-lg shadow">
                     <h2 class="text-xl font-semibold mb-4">{{$currentTitle}}</h2>
                     <embed src="{{$currentPdf}}" type="application/pdf" class="w-full h-screen" />

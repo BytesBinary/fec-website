@@ -17,10 +17,8 @@ use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\Page;
 
-class ManageRoutine extends Page implements HasForms
+class ManageRoutine extends Page
 {
-    use InteractsWithForms;
-
     protected static string $resource = RoutineResource::class;
 
     protected static string $view = 'filament.manage-routines.manage-routine';
@@ -33,16 +31,19 @@ class ManageRoutine extends Page implements HasForms
     public array $times;
     public array $routinesData;
     public bool $showRoutineDetails = false;
+    public array $selected = [];
 
-    public function showRoutine(): void
+    public function mount( $department = '', $semester = '' ): void
     {
-        $this->department = $this->data['department'];
-        $this->semester = $this->data['semester'];
+        if( empty( $department ) || empty( $semester ) ) {
+            redirect(RoutineResource::getUrl('index'));
+        }
+        $this->department = $department;
+        $this->semester = $semester;
         $this->days = config('admin-panel.working_days');
         $this->times = config('admin-panel.class_times');
         $this->routines = Routine::getRoutineByDayTime( $this->department, $this->semester, $this->days, $this->times, false );
         $this->routinesData = Routine::getRoutineByDayTime($this->department, $this->semester, $this->days, $this->times);
-        // show the routine
         $this->showRoutineDetails = true;
     }
 
@@ -54,14 +55,10 @@ class ManageRoutine extends Page implements HasForms
             if( ! $have_course ) {
                 return;
             }
-            $isAvailable = Routine::where('teacher_id', $course[2])
-                ->where('course_id', $course[0])
-                ->where('day', $day)
-                ->where('time', $time)
-                ->exists();
-            if( $isAvailable ) {
-                send_notification('warning', '5000', 'Teacher Already Scheduled To Same Time');
-            }
+            $this->selected[$day][$time] = [
+                'course' => $have_course->title,
+                'teacher' => User::find($course[2])->name,
+            ];
         }
     }
 
@@ -77,7 +74,7 @@ class ManageRoutine extends Page implements HasForms
                 $teacherId = $details[2];
 
                 if ($courseId && $teacherId) {
-                    $update = Routine::updateOrCreate(
+                    Routine::updateOrCreate(
                         [
                             'day' => $day,
                             'time' => $time,
@@ -125,42 +122,5 @@ class ManageRoutine extends Page implements HasForms
         return response()->streamDownload(function () use ($pdf) {
             echo $pdf->stream();
         }, "routine-{$this->department}-{$this->semester}.pdf");
-    }
-
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                Grid::make()
-                    ->label('Routine')
-                    ->columns(2)
-                    ->schema([
-                        Select::make('department')
-                            ->options(Department::all()->pluck('short_title', 'short_title'))
-                            ->required(),
-                        Select::make('semester')
-                            ->options([
-                                '1st' => '1st',
-                                '2nd' => '2nd',
-                                '3rd' => '3rd',
-                                '4th' => '4th',
-                                '5th' => '5th',
-                                '6th' => '6th',
-                                '7th' => '7th',
-                                '8th' => '8th',
-                            ])
-                            ->required(),
-                    ]),
-            ])
-            ->statePath('data');
-    }
-
-    public function getFormActions() : array
-    {
-        return [
-            Action::make('submit')
-                ->label('Submit')
-                ->submit('submit'),
-        ];
     }
 }

@@ -16,6 +16,11 @@
                     <td class="table-data"  class="routine-bold">{{ $day }}</td>
                     @foreach($routine as $time => $course)
                         <td class="table-data"  class="routine-subject-cell max-w-sm">
+                            <div>
+                                @isset($selected[$day][$time])
+                                    <p class="text-sm font-bold text-justify">{{ $selected[$day][$time]['course'] }} - ({{ $selected[$day][$time]['teacher']  }})</p>
+                                @endisset
+                            </div>
                             <select name="routine[{{ $day }}][{{ $time }}][course]"
                                     wire:change="checkTeacherSchedule('{{ $day }}', '{{ $time }}', $event.target.value)"
                                     wire:model="data.routine.{{ $day }}.{{ $time }}.course"
@@ -27,7 +32,7 @@
                                             @foreach($course['teachers'] as $teacher)
                                                 @if(isset($teacher['id']))
                                                     @php ray($course['id'], $index, $teacher['id']) @endphp
-                                                    <option value="{{ $course['id'] }},{{ $index }},{{$teacher['id']}}">{{ $course['title'] }} - <b>({{$teacher['name']}})</b></option>
+                                                    <option value="{{ $course['id'] }},{{ $index }},{{$teacher['id']}}">{{ $course['title'] }} ({{$course['credit']}}) ({{$course['code']}})  - <b>({{$teacher['name']}})</b></option>
                                                 @endif
                                             @endforeach
                                         @endif

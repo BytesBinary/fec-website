@@ -31,9 +31,9 @@
             {{$title}}
             <x-svg-icon.drop-down-icon />
         </button>
-        <div x-show="currentDropdown === '{{$slug}}'" class="bg-gray-400">
+        <div x-show="currentDropdown === '{{$slug}}'" class="bg-[#282828] border-gray-100">
             @foreach($dropdowns as $dropdown)
-                <a href="{{ isset($dropdown['route']) ? route($dropdown['route']) : '' }}" class="block px-8 py-2 text-md hover:bg-bgColorLighter text-txtColor" wire:navigate>{{$dropdown['title']}}</a>
+                <a href="{{ isset($dropdown['route']) ? route($dropdown['route']) : '' }}" class="block px-8 py-2 text-md hover:bg-bgColorLighter hover:text-black border-t border-gray-100 text-gray-100" wire:navigate>- {{$dropdown['title']}}</a>
             @endforeach
         </div>
     @endif

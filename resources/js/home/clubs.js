@@ -1,5 +1,4 @@
 import Swiper from "swiper/bundle";
-import {EffectCoverflow} from "swiper/modules";
 document.addEventListener("livewire:navigated", function() {
     new Swiper('.clubs-page-swiper', {
         loop: true,
@@ -7,9 +6,9 @@ document.addEventListener("livewire:navigated", function() {
         centeredSlides: true,
         slidesPerView: "auto",
         fadeEffect: true,
-        spaceBetween: 25,
+        spaceBetween: 40,
         autoplay: {
-            delay: 2000,               // Set autoplay delay (3 seconds)
+            delay: 3000,
             disableOnInteraction: false
         },
         coverflowEffect: {

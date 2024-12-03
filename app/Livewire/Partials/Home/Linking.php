@@ -12,6 +12,16 @@ class Linking extends Component
     {
         $this->govtCards = [
             [
+                'title' => 'প্রশাসন/কলেজ সম্পর্কিত',
+                'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/a628dde3_77c8_4fce_bb60_426b0e02ae41/2022-11-06-06-22-b5b94b90a8ec2da29d4dc4381d8a7d27.png',
+                'sub_links' => [
+                    ['title' => 'অধ্যক্ষ', 'url' => 'https://fec.ac.bd/site/page/ab84623f-fdc9-4465-a915-270e5673633d/%E0%A6%85%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B7'],
+                    ['title' => 'শিক্ষক-কর্মকর্তাবৃন্দ সকল', 'url' => 'https://fec.ac.bd/site/view/officer_list_category/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A6%BE%E0%A6%B8%E0%A6%A8/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%95-%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AC%E0%A7%83%E0%A6%A8%E0%A7%8D%E0%A6%A6-%E0%A6%B8%E0%A6%95%E0%A6%B2-'],
+                    ['title' => 'কর্মচারীবৃন্দ সকল', 'url' => 'https://fec.ac.bd/site/view/staff_list/%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%9A%E0%A6%BE%E0%A6%B0%E0%A7%80%E0%A6%AC%E0%A7%83%E0%A6%A8%E0%A7%8D%E0%A6%A6-%E0%A6%B8%E0%A6%95%E0%A6%B2-'],
+                    ['title' => 'সংক্ষিপ্ত পরিচিতি', 'url' => 'https://fec.ac.bd/site/page/ebd9afbb-6f83-4254-a5e0-5ce4a395b837/%E0%A6%B8%E0%A6%82%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%A4-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A6%BF'],
+                ],
+            ],
+            [
                 'title' => 'সেবা প্রদান প্রতিশ্রুতি (সিটিজেন চার্টার)',
                 'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/1a2dcdcd_a3fa_4bbf_8ef7_ef2913090081/2024-01-02-16-27-422b9a6dbe1e1b352d85150cfc1a5b20.png',
                 'sub_links' => [
@@ -19,6 +29,36 @@ class Linking extends Component
                     ['title' => 'ফোকাল পয়েন্ট কর্মকর্তা', 'url' => 'https://fec.ac.bd/site/page/3ed546c1-aad2-470e-a48e-663f8099de3a/%E0%A6%AB%E0%A7%8B%E0%A6%95%E0%A6%BE%E0%A6%B2-%E0%A6%AA%E0%A7%9F%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE'],
                     ['title' => 'কর্ম-পরিকল্পনা ও মূল্যায়ন প্রতিবেদনসমূহ', 'url' => 'https://fec.ac.bd/site/page/5add84b5-b55b-424c-9bd7-148c3c3b5e6b/%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%95%E0%A6%B2%E0%A7%8D%E0%A6%AA%E0%A6%A8%E0%A6%BE-%E0%A6%93-%E0%A6%AE%E0%A7%82%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A7%9F%E0%A6%A8-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A6%A8%E0%A6%B8%E0%A6%AE%E0%A7%82%E0%A6%B9'],
                     ['title' => 'আইন/বিধি/নীতিমালা/পরিপত্র', 'url' => 'https://cabinet.gov.bd/site/page/10117079-8a4a-4743-99b6-1dd9c1230a07/%E0%A6%86%E0%A6%87%E0%A6%A8-%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF-%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A6%BE-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE---%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%AA%E0%A6%A8'],
+                ],
+            ],
+            [
+                'title' => 'সিভিল ইঞ্জিনিয়ারিং',
+                'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/76b6a175_eca7_49ee_b75e_524ccc568dba/2020-12-29-21-25-a81df4517661cb6156c16a5529a00add.jpg',
+                'sub_links' => [
+                    ['title' => 'শিক্ষক/কর্মকর্তাবৃন্দ', 'url' => 'https://fec.ac.bd/site/page/a33a65f5-ef7d-4656-8499-3de40f767df6/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%95-%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AC%E0%A7%83%E0%A6%A8%E0%A7%8D%E0%A6%A6'],
+                    ['title' => 'ছাত্র/ছাত্রীদের তথ্য', 'url' => 'https://fec.ac.bd/site/page/80335bcd-73d3-4ad3-ae5b-38d7a6205156/%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0-%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%A4%E0%A6%A5%E0%A7%8D%E0%A6%AF'],
+                    ['title' => 'অনলাইন ক্লাশরুটিন/ক্লাশরুটিন', 'url' => 'https://fec.ac.bd/site/page/0a727444-baa1-40f2-a146-d3e4d5873b5f/%E0%A6%85%E0%A6%A8%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B6%E0%A6%B0%E0%A7%81%E0%A6%9F%E0%A6%BF%E0%A6%A8-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B6%E0%A6%B0%E0%A7%81%E0%A6%9F%E0%A6%BF%E0%A6%A8'],
+                    ['title' => 'পরীক্ষার সময়সূচি', 'url' => 'https://fec.ac.bd/site/page/1ad03fc9-bacb-44f7-ae89-9ff3faedefc7/%E0%A6%AA%E0%A6%B0%E0%A7%80%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A6%AE%E0%A7%9F%E0%A6%B8%E0%A7%82%E0%A6%9A%E0%A6%BF'],
+                ],
+            ],
+            [
+                'title' => 'ইলেকট্রিক্যাল এন্ড ইলেকট্রনিক ইঞ্জিনিয়ারিং',
+                'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/e2f2ace8_dc90_4aae_ad1d_2ae781e7dc86/2020-12-29-21-28-6dd3d21d9252fed9b8a807035d288183.jpg',
+                'sub_links' => [
+                    ['title' => 'শিক্ষক/কর্মকর্তাবৃন্দ', 'url' => 'https://fec.ac.bd/site/page/c82ac2c2-92ec-4cd1-b0ed-44a8851583f0/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%95-%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AC%E0%A7%83%E0%A6%A8%E0%A7%8D%E0%A6%A6'],
+                    ['title' => 'ছাত্র/ছাত্রীদের তথ্য', 'url' => 'https://fec.ac.bd/site/page/0f177a3a-f551-4ffb-b277-d5a9e9f0886b/%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0-%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%A4%E0%A6%A5%E0%A7%8D%E0%A6%AF'],
+                    ['title' => 'অনলাইন ক্লাশরুটিন/ক্লাশরুটিন', 'url' => 'https://fec.ac.bd/site/page/86f4232e-96f7-40fb-b8bb-1ce404ecdc77/%E0%A6%85%E0%A6%A8%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B6%E0%A6%B0%E0%A7%81%E0%A6%9F%E0%A6%BF%E0%A6%A8-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B6%E0%A6%B0%E0%A7%81%E0%A6%9F%E0%A6%BF%E0%A6%A8'],
+                    ['title' => 'পরীক্ষার সময়সূচি', 'url' => 'https://fec.ac.bd/site/page/cac98d7e-61c0-46a0-93e3-a3446415a4d7/%E0%A6%AA%E0%A6%B0%E0%A7%80%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A6%AE%E0%A7%9F%E0%A6%B8%E0%A7%82%E0%A6%9A%E0%A6%BF'],
+                ],
+            ],
+            [
+                'title' => 'কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং',
+                'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/4bf917f6_108c_4230_b651_372e76e2af31/2020-12-29-21-36-23f2bdaa7abc7b808da2c9627b1b12e8.jpg',
+                'sub_links' => [
+                    ['title' => 'শিক্ষক/কর্মকর্তাবৃন্দ', 'url' => 'https://fec.ac.bd/site/page/ac27f910-1d88-4009-afab-a45a05f71924/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%95-%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AC%E0%A7%83%E0%A6%A8%E0%A7%8D%E0%A6%A6'],
+                    ['title' => 'ছাত্র/ছাত্রীদের তথ্য', 'url' => 'https://fec.ac.bd/site/page/cfc741d6-267a-42ee-96fe-802466e2cfe1/%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0-%E0%A6%9B%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%A4%E0%A6%A5%E0%A7%8D%E0%A6%AF'],
+                    ['title' => 'অনলাইন ক্লাশরুটিন/ক্লাশরুটিন', 'url' => 'https://fec.ac.bd/site/page/88606c0e-395f-486d-a933-c01da405e70d/%E0%A6%85%E0%A6%A8%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B6%E0%A6%B0%E0%A7%81%E0%A6%9F%E0%A6%BF%E0%A6%A8-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B6%E0%A6%B0%E0%A7%81%E0%A6%9F%E0%A6%BF%E0%A6%A8'],
+                    ['title' => 'পরীক্ষার সময়সূচি', 'url' => 'https://fec.ac.bd/site/page/26f02a34-3f51-4a99-9c53-8b88c3a4795c/%E0%A6%AA%E0%A6%B0%E0%A7%80%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A6%AE%E0%A7%9F%E0%A6%B8%E0%A7%82%E0%A6%9A%E0%A6%BF'],
                 ],
             ],
             [
@@ -33,7 +73,7 @@ class Linking extends Component
             ],
             [
                 'title' => 'বার্ষিক কর্মসম্পাদন ব্যবস্থাপনা',
-                'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/e23e2f4b_f966_4b52_afb0_c74735970411/2020-12-29-22-24-1e5fa633f11fa884220e48d2df3e429b.jp',
+                'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/e23e2f4b_f966_4b52_afb0_c74735970411/2020-12-29-22-24-1e5fa633f11fa884220e48d2df3e429b.jpg',
                 'sub_links' => [
                     ['title' => 'এপিএ নির্দেশিকা/নীতিমালা', 'url' => 'https://fec.ac.bd/site/page/ce329b2f-b5e5-4d85-a452-741b1423d15d/%E0%A6%8F%E0%A6%AA%E0%A6%BF%E0%A6%8F-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE-%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A6%BE'],
                     ['title' => 'এপিএ কর্ম-পরিকল্পনা','url' => 'https://fec.ac.bd/site/page/caae10c2-7ce0-4ab7-812f-b556808fc85a/%E0%A6%8F%E0%A6%AA%E0%A6%BF%E0%A6%8F-%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%95%E0%A6%B2%E0%A7%8D%E0%A6%AA%E0%A6%A8%E0%A6%BE'],
@@ -120,7 +160,7 @@ class Linking extends Component
             ],
             [
                 'title' => 'বিবিধ/সামাজিক মাধ্যম',
-                'src' => 'ttps://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/c06da106_f993_480f_800a_b6891ec23230/2021-05-31-15-03-9a64a0b1440670bd902ed72680aeb8bc.png',
+                'src' => 'https://fec.ac.bd/sites/default/files/files/fec.portal.gov.bd/front_service_box/c06da106_f993_480f_800a_b6891ec23230/2021-05-31-15-03-9a64a0b1440670bd902ed72680aeb8bc.png',
                 'sub_links' => [
                     ['title' => 'ফোকাল পয়েন্ট তালিকা','url' => 'https://fec.ac.bd/site/page/3ed546c1-aad2-470e-a48e-663f8099de3a/%E0%A6%AB%E0%A7%8B%E0%A6%95%E0%A6%BE%E0%A6%B2-%E0%A6%AA%E0%A7%9F%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F-%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE'],
                     ['title'=>'উত্তম চর্চা','url'=>'https://fec.ac.bd/site/page/e901ce92-170e-4ee6-a055-6501995caa61/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%AE-%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%9A%E0%A6%BE'],

@@ -1,16 +1,4 @@
 <x-filament-panels::page>
-
-    <x-filament-panels::form wire:submit="showRoutine">
-        {{$this->form}}
-        <x-filament-panels::form.actions
-            :actions="$this->getFormActions()"/>
-    </x-filament-panels::form>
-
-    <!-- Loader --->
-    <div wire:loading wire:target="showRoutine" class="mb-1">
-        <x-filament::loading-indicator class="h-10 w-10" />
-    </div>
-
     @if($showRoutineDetails)
         @include('filament.manage-routines.routine-form')
         <div class="flex justify-end">
