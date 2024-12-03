@@ -10,7 +10,7 @@
                 Construction of the Education Engineering Department began in 2005, financed by the government of Bangladesh. The main work was completed in 2010, while the electricity and water connections were finished in 2013 <br><br>
                 The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. <br>
             </p>
-            <a href="" class="block mt-4">
+            <a href="{{route('about-us')}}" wire:navigate class="block mt-4">
                 <div class="flex justify-center">
                     <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer" type="button">
                         <span class="text-base">Read More</span>
