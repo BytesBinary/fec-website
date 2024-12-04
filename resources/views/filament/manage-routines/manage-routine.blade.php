@@ -6,5 +6,4 @@
         </div>
         @include('filament.manage-routines.routine-table')
     @endif
-
 </x-filament-panels::page>

@@ -72,7 +72,7 @@
 
             <!-- Action Button -->
             <div>
-                <a href="{{ $url }}" wire:navigate>
+                <a href="{{ route('event', ['slug' => $url ]) }}" wire:navigate>
                    <button class=" text-center text-sm  mx-auto font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 py-3 w-full rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         Learn More
                    </button>

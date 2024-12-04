@@ -20,7 +20,7 @@
                                 <button
                                     style="background-color: red; margin: 1px;"
                                     wire:click="deleteRoutine('{{ $day }}', '{{ $time }}')"
-                                    class="routine-delete-button w-4 h-4 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-full shadow-lg transition duration-300"
+                                    class="routine-delete-button w-6 h-6 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-full shadow-lg transition duration-300"
                                     title="Delete Routine"
                                 >
                                     <div wire.loading.remove>

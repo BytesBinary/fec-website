@@ -17,6 +17,8 @@ class ExamDuty extends Model
     protected $fillable = [
         'exam_name',
         'exam_type_id',
+        'start_time',
+        'end_time',
         'semester',
         'batch',
         'department',

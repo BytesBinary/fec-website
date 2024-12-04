@@ -7,7 +7,6 @@ use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
-    public static $teachers = [];
 
     /**
      * Run the database seeds.
@@ -16,7 +15,7 @@ class UserSeeder extends Seeder
     {
         $teachers = [
             [
-                'name' => 'Md. Sumon Reza',
+                'name' => 'Md. Suman Reza',
                 'designation' => 'Teacher',
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
@@ -34,7 +33,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('password'),
             ],
             [
-                'name' => 'Md. Shah Jahan Molla',
+                'name' => 'Md. Shah Jamal Molla',
                 'designation' => 'Teacher',
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
@@ -76,7 +75,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('password'),
             ],
             [
-                'name' => 'Mohammad Shamsul Alam',
+                'name' => 'Mohammad Shamsul Islam',
                 'designation' => 'Teacher',
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
@@ -91,7 +90,6 @@ class UserSeeder extends Seeder
 
         foreach ( $teachers as $teacher ) {
             $teacher = User::create($teacher);
-            self::$teachers['name'] = $teacher->id;
         }
     }
 }

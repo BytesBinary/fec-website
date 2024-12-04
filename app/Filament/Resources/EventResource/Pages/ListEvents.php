@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\EventResource\Pages;
 
 use App\Filament\Resources\EventResource;
+use App\Models\Post;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
@@ -15,5 +16,13 @@ class ListEvents extends ListRecords
         return [
             Actions\CreateAction::make(),
         ];
+    }
+
+    public function getTabs() : array
+    {
+        return create_model_tabs(new Post(),[],'Events',[
+            'all' => Post::where('post_type', 'event')->count(),
+            'archived' => Post::where('post_type', 'event')->onlyTrashed()->count(),
+        ]);
     }
 }

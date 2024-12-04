@@ -88,7 +88,6 @@ class AllClubs extends Component
 
     public function render()
     {
-        // dd($this->clubs);
         return view('livewire.pages.campus-life.all-clubs');
     }
 }

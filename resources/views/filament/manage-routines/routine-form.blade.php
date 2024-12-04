@@ -17,9 +17,9 @@
                     @foreach($routine as $time => $course)
                         <td class="table-data"  class="routine-subject-cell max-w-sm">
                             <div>
-                                @isset($selected[$day][$time])
-                                    <p class="text-sm font-bold text-justify">{{ $selected[$day][$time]['course'] }} - ({{ $selected[$day][$time]['teacher']  }})</p>
-                                @endisset
+                                @if(!empty($selected[$day][$time]))
+                                    <p class="text-sm font-bold text-justify">{{ $selected[$day][$time]['code'] }} ({{$selected[$day][$time]['credit']}}) - ({{ $selected[$day][$time]['teacher']  }})</p>
+                                @endif
                             </div>
                             <select name="routine[{{ $day }}][{{ $time }}][course]"
                                     wire:change="checkTeacherSchedule('{{ $day }}', '{{ $time }}', $event.target.value)"
@@ -31,8 +31,7 @@
                                         @if(isset($course['teachers']))
                                             @foreach($course['teachers'] as $teacher)
                                                 @if(isset($teacher['id']))
-                                                    @php ray($course['id'], $index, $teacher['id']) @endphp
-                                                    <option value="{{ $course['id'] }},{{ $index }},{{$teacher['id']}}">{{ $course['title'] }} ({{$course['credit']}}) ({{$course['code']}})  - <b>({{$teacher['name']}})</b></option>
+                                                    <option value="{{ $course['id'] }},{{ $index }},{{$teacher['id']}}">{{$course['code']}} ({{$course['credit']}})  - ({{$teacher['name']}})</option>
                                                 @endif
                                             @endforeach
                                         @endif
