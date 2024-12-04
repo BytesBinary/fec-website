@@ -18,7 +18,7 @@ class CustomRegistration extends Register
         return $form
             ->schema([
                 TextInput::make('name')
-                    ->label('Username')
+                    ->label('Name')
                     ->required(),
                 TextInput::make('email')
                     ->label('Email')
