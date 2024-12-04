@@ -15,8 +15,9 @@
                 <!-- Event Card -->
                 @foreach ($events as $event)
                     <x-card.events-card :title="$event['post_title']" pic="{{ asset('storage/'.$event['event_details']['feature_image']) }}"
-                    date="10 JANUARY 2025" location="Dhaka Convention Center, Bangladesh"
-                    url="{{ route('event', ['slug' => 'tech-conference-2025']) }}" wire:navigate is-home-page="true" />
+                    :date="$event['event_details']['event_date']" :location="$event['event_details']['event_location']"
+                    :url="$event['post_slug']" wire:navigate :is-home-page="true" />
+
                 @endforeach
             </div>
         </div>
