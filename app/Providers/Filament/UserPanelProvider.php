@@ -36,8 +36,10 @@ class UserPanelProvider extends PanelProvider
                 'primary' => Color::Amber,
                 'secondary' => Color::Gray,
                 'warning' => Color::Orange,
-                'success' => Color::Green,
-                'danger' => Color::Red,
+                'success' => Color::Emerald,
+                'danger' => Color::Rose,
+                'gray' => Color::Gray,
+                'info' => Color::Blue,
             ])
             ->viteTheme('resources/css/filament/user/theme.css')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
