@@ -53,12 +53,17 @@ class ManageRoutine extends Page
         if( ! empty($course) ){
             $have_course = Course::find($course[0]);
             if( ! $have_course ) {
+                $this->selected[$day][$time] = "";
                 return;
             }
             $this->selected[$day][$time] = [
-                'course' => $have_course->title,
+                'code' => $have_course->code,
+                'credit' => $have_course->credit,
                 'teacher' => User::find($course[2])->name,
             ];
+        }
+        else{
+            $this->selected[$day][$time] = "";
         }
     }
 
@@ -70,6 +75,11 @@ class ManageRoutine extends Page
         foreach ($this->data['routine'] as $day => $times) {
             foreach ($times as $time => $details) {
                 $details = explode(',', $details['course']);
+
+                if( empty($details) || count($details) < 3 ) {
+                    continue;
+                }
+
                 $courseId = $details[0];
                 $teacherId = $details[2];
 
