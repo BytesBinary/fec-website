@@ -5,6 +5,7 @@ use App\Models\PostMeta;
 use Filament\Notifications\Notification;
 use Filament\Resources\Components\Tab;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 if( ! function_exists('create_model_tabs') ) {
@@ -236,5 +237,22 @@ if( ! function_exists('send_notification') ) {
             ->duration($duration)
             ->title($title)
             ->send();
+    }
+}
+
+if( ! function_exists('can_access_resource') ) {
+    function can_access_resource( $designation ) : bool
+    {
+        if( ! is_array($designation) ) {
+            return (Auth::user()->designation === $designation);
+        }
+
+        foreach($designation as $des) {
+            if( Auth::user()->designation === $des ) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
