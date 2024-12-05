@@ -50,4 +50,9 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
      {
          return $this->hasMany(Post::class, 'post_author');
      }
+
+     public function user_metas() : HasMany
+     {
+         return $this->hasMany(UserMeta::class, 'user_id');
+     }
 }
