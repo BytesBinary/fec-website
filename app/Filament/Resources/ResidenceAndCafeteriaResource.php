@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
+use App\Filament\Resources\ResidenceAndCafeteriaResource\Pages;
 use App\Models\Post;
 use App\Models\User;
 use Filament\Forms\Form;
