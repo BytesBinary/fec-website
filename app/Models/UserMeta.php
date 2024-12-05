@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
 class UserMeta extends Model
 {
@@ -20,6 +21,15 @@ class UserMeta extends Model
         'meta_key',
         'meta_value',
     ];
+
+    protected static function boot() : void {
+        parent::boot();
+        static::creating(function ($model) {
+            if( empty($model->{$model->getKeyName()}) ) {
+                $model->{$model->getKeyName()} = Str::uuid()->toString();
+            }
+        });
+    }
 
     public function users() : BelongsTo
     {
