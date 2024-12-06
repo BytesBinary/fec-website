@@ -20,6 +20,11 @@ class AssigneeTeacherResource extends Resource
     protected static ?string $label = "Assignee Teachers";
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
 
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
+
     public static function table(Table $table): Table
     {
         return $table

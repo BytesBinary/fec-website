@@ -324,7 +324,7 @@ class ResidenceSeeder extends Seeder
         );
 
         foreach ( $residences as $key=>$residence ) {
-            $residence['post_author'] = User::where('designation', 'super_admin')->first()->id;
+            $residence['post_author'] = User::where('designation', 'Programmer')->first()->id;
             $post = Post::create($residence);
             foreach ( $residence_meta[$key] as $meta_key => $meta_value ) {
                 create_or_update_post_meta( $post->id, $meta_key, $meta_value );

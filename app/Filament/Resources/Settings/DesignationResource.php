@@ -22,6 +22,10 @@ class DesignationResource extends Resource
     protected static ?string $navigationGroup = 'Settings';
     protected static ?string $navigationIcon = 'heroicon-o-arrow-path-rounded-square';
 
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
     public static function form(Form $form): Form
     {
         return $form
