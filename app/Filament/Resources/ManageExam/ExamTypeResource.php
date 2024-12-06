@@ -19,6 +19,11 @@ class ExamTypeResource extends Resource
     protected static ?string $label = "Exam Types";
     protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
 
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
+
     public static function form(Form $form): Form
     {
         return $form

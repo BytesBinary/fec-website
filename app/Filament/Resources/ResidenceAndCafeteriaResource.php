@@ -5,20 +5,22 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
 use App\Models\Post;
 use App\Models\User;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 class ResidenceAndCafeteriaResource extends Resource
 {
     protected static ?string $model = Post::class;
-
     protected static ?string $navigationLabel = 'Residence & Cafeteria';
     protected static ?string $modelLabel = 'Residence';
 
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
+
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
 
     public static function table(Table $table): Table
     {

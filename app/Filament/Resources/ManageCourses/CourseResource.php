@@ -21,6 +21,11 @@ class CourseResource extends Resource
     protected static ?string $label = "Courses";
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
+
     public static function form(Form $form): Form
     {
         return $form

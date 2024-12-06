@@ -88,8 +88,22 @@ class UserSeeder extends Seeder
             ],
         ];
 
+        $programmers = [
+            [
+                'name' => 'admin',
+                'email' => 'admin@fec.com',
+                'designation' => 'Programmer',
+                'email_verified_at' => now(),
+                'password' => bcrypt('admin'),
+            ]
+        ];
+
         foreach ( $teachers as $teacher ) {
-            $teacher = User::create($teacher);
+            User::create($teacher);
+        }
+
+        foreach ( $programmers as $programmer ) {
+            User::create($programmer);
         }
     }
 }
