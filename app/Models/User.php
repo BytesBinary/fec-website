@@ -13,9 +13,9 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements FilamentUser, MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory, Notifiable, HasPanelShield, HasRoles, softDeletes;
+    use HasFactory, Notifiable, softDeletes;
     protected $primaryKey = 'id';
     protected $keyType = 'string';
     public $incrementing = false;
