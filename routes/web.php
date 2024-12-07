@@ -14,6 +14,8 @@ Route::get('/admission', Admission::class)->name('admission');
 Route::get('/about-us', AboutUs::class)->name('about-us');
 // Alumni Route
 Route::get('/alumni', Alumni::class)->name('alumni');
+// Authentication Routes
+Route::view('/verification-pending', 'auth.verification-pending')->name('verification.pending');
 // Academics Routes
 require_once __DIR__ . '/academics.php';
 // Administration Routes
