@@ -3,11 +3,13 @@
 namespace App\Providers\Filament;
 
 use App\CustomRegistration;
+use App\Filament\Pages\EditProfile;
 use App\Http\Middleware\UserAuth;
 use App\Http\Middleware\VerifyUser;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\MenuItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -19,6 +21,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class UserPanelProvider extends PanelProvider
@@ -53,14 +56,13 @@ class UserPanelProvider extends PanelProvider
                 'Settings',
             ])
             ->userMenuItems([
-//                'profile' => MenuItem::make()
-//                    ->label(fn() => auth()->user()->name)
-//                    ->url(fn (): string => EditProfilePage::getUrl())
-//                    ->icon('heroicon-m-user-circle')
-//                    //If you are using tenancy need to check with the visible method where ->company() is the relation between the user and tenancy model as you called
-//                    ->visible(function (): bool {
-//                        return Auth::check();
-//                    }),
+                'profile' => MenuItem::make()
+                    ->label(fn() => auth()->user()->name)
+                    ->url(fn (): string => EditProfile::getUrl())
+                    ->icon('heroicon-m-user-circle')
+                    ->visible(function (): bool {
+                        return Auth::check();
+                    }),
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
