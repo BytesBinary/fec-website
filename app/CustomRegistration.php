@@ -2,14 +2,17 @@
 
 namespace App;
 
-
+use App\Models\Designation;
+use Closure;
 use DanHarrin\LivewireRateLimiting\Exceptions\TooManyRequestsException;
 use Filament\Events\Auth\Registered;
 use Filament\Facades\Filament;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Http\Responses\Auth\Contracts\RegistrationResponse;
 use Filament\Pages\Auth\Register;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 
 class CustomRegistration extends Register
 {
@@ -18,15 +21,28 @@ class CustomRegistration extends Register
         return $form
             ->schema([
                 TextInput::make('name')
-                    ->label('Username')
+                    ->label('Name')
+                    ->placeholder('Enter Your Name')
                     ->required(),
                 TextInput::make('email')
                     ->label('Email')
-                    ->email()
-                    ->required()
-                    ->rule('regex:/^[\w\.-]+@(fec\.edu\.bd|fec\.ac\.bd)$/')
-                    ->helperText('Please use your fec educational email address.')
-                    ->unique('users', 'email'),
+                    ->placeholder('Enter Your Email')
+                    ->unique('users', 'email')
+                    ->required(),
+                Select::make('designation')
+                    ->label('Designation')
+                    ->placeholder('Select Designation')
+                    ->options(Designation::all()->pluck('designation', 'designation')->toArray())
+                    ->reactive()
+                    ->required(),
+                TextInput::make('short_name')
+                    ->label('Short Name')
+                    ->placeholder('Enter Your Short Name')
+                    ->unique('users', 'short_name')
+                    ->visible(function (Get $get) {
+                        return $get('designation') !== 'Student';
+                    })
+                    ->required(),
                 $this->getPasswordFormComponent(),
                 $this->getPasswordConfirmationFormComponent(),
             ])
@@ -36,7 +52,7 @@ class CustomRegistration extends Register
     public function register(): ?RegistrationResponse
     {
         try {
-            $this->rateLimit(2);
+            $this->rateLimit(10);
         } catch (TooManyRequestsException $exception) {
             $this->getRateLimitedNotification($exception)?->send();
 
@@ -64,8 +80,6 @@ class CustomRegistration extends Register
         });
 
         event(new Registered($user));
-
-        $this->sendEmailVerificationNotification($user);
 
         Filament::auth()->login($user);
 
