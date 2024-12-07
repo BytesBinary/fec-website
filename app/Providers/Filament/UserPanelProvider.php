@@ -3,11 +3,13 @@
 namespace App\Providers\Filament;
 
 use App\CustomRegistration;
+use App\Filament\Pages\EditProfile;
 use App\Http\Middleware\UserAuth;
 use App\Http\Middleware\VerifyUser;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\MenuItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -19,6 +21,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class UserPanelProvider extends PanelProvider
@@ -51,6 +54,15 @@ class UserPanelProvider extends PanelProvider
                 'Manage Exams',
                 'Tools',
                 'Settings',
+            ])
+            ->userMenuItems([
+                'profile' => MenuItem::make()
+                    ->label(fn() => auth()->user()->name)
+                    ->url(fn (): string => EditProfile::getUrl())
+                    ->icon('heroicon-m-user-circle')
+                    ->visible(function (): bool {
+                        return Auth::check();
+                    }),
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
