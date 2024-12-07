@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
 use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -11,11 +11,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
-use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements FilamentUser, MustVerifyEmail
+class User extends Authenticatable
 {
-    use HasFactory, Notifiable, HasPanelShield, HasRoles, softDeletes;
+    use HasFactory, Notifiable, softDeletes;
     protected $primaryKey = 'id';
     protected $keyType = 'string';
     public $incrementing = false;
@@ -24,10 +23,13 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
         'email',
         'password',
         'designation',
+        'short_name',
+        'is_admin_verified',
     ];
 
     protected $hidden = [
         'password',
+        'is_admin_verified',
         'remember_token',
     ];
 
@@ -45,6 +47,11 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
                  $model->{$model->getKeyName()} = Str::uuid()->toString();
              }
          });
+        static::saving(function ($user) {
+            if ($user->is_admin_verified && !$user->email_verified_at) {
+                $user->email_verified_at = now();
+        }
+    });
      }
      public function posts(): HasMany
      {

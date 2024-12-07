@@ -44,6 +44,7 @@ class SettingsSeeder extends Seeder
             ['designation' => 'Department_Head'],
             ['designation' => 'Lab_In_Charge'],
             ['designation' => 'Librarian'],
+            ['designation' => 'Programmer'],
         ];
 
         foreach ( $designations as $designation ) {

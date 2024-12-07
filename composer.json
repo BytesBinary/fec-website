@@ -7,7 +7,6 @@
     "require": {
         "php": "^8.2",
         "barryvdh/laravel-dompdf": "^3.0",
-        "bezhansalleh/filament-shield": "^3.2",
         "filament/filament": "^3.2",
         "joaopaulolndev/filament-edit-profile": "^1.0",
         "laravel/framework": "^11.0",
