@@ -24,6 +24,14 @@
                     <p class="mt-2 text-gray-600">
                         Your account is pending for admin approval. Admin will manually verify your account and then you will able to login to the panel.
                     </p>
+                    <form method="POST" action="{{ route('verification.logout') }}" class="mt-6">
+                        @csrf
+                        <button
+                            type="submit"
+                            class="w-full bg-red-500 hover:bg-red-600 text-white font-medium text-sm px-6 py-3 rounded-lg shadow-md transition">
+                            Logout
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

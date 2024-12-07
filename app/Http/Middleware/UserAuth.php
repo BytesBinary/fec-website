@@ -16,7 +16,7 @@ class UserAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if( Auth::user()->email_verified_at === null ) {
+        if( Auth::user()->email_verified_at === null || ! (Auth::user()->is_admin_verified ) ) {
             return redirect()->route('verification.pending');
         }
         return $next($request);

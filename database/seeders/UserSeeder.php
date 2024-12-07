@@ -94,6 +94,7 @@ class UserSeeder extends Seeder
                 'email' => 'admin@fec.com',
                 'designation' => 'Programmer',
                 'email_verified_at' => now(),
+                'is_admin_verified' => true,
                 'password' => bcrypt('admin'),
             ]
         ];
