@@ -1,14 +1,14 @@
 <div class="routine-table-container">
     <table class="routine-table">
         <tr>
-            <th class="table-head" >Day</th>
-            <th class="table-head" >1<br />08:00-08:50</th>
-            <th class="table-head" >2<br />08:50-09:40</th>
-            <th class="table-head" >3<br />09:40-10:30</th>
-            <th class="table-head" >4<br />10:30-11:20</th>
-            <th class="table-head" >5<br />11:20-12:10</th>
-            <th class="table-head" >6<br />12:10-13:00</th>
-            <th class="table-head" >8<br />14:00-17:00</th>
+            <th class="table-head dark:text-black" >Day</th>
+            <th class="table-head dark:text-black" >1<br />08:00-08:50</th>
+            <th class="table-head dark:text-black" >2<br />08:50-09:40</th>
+            <th class="table-head dark:text-black" >3<br />09:40-10:30</th>
+            <th class="table-head dark:text-black" >4<br />10:30-11:20</th>
+            <th class="table-head dark:text-black" >5<br />11:20-12:10</th>
+            <th class="table-head dark:text-black" >6<br />12:10-13:00</th>
+            <th class="table-head dark:text-black" >8<br />14:00-17:00</th>
         </tr>
         @foreach($routines as $day => $routine)
             <tr>

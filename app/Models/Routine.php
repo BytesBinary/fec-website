@@ -99,6 +99,9 @@ class Routine extends Model
                                     $teachers = explode(',', $course->assigned_teachers_ids);
                                     foreach ($teachers as $teacher) {
                                         $teacher = User::find($teacher);
+                                        if( ! $teacher ) {
+                                            continue;
+                                        }
                                         $is_exist = Routine::where('teacher_id', $teacher->id)
                                             ->where('day', $day)
                                             ->where('time', $time)

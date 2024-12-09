@@ -22,6 +22,10 @@ class DepartmentResource extends Resource
     protected static ?string $navigationGroup = 'Settings';
     protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
     public static function form(Form $form): Form
     {
         return $form

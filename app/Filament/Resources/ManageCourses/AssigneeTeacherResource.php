@@ -21,6 +21,11 @@ class AssigneeTeacherResource extends Resource
     protected static ?int $navigationSort = 2;
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
 
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
+
     public static function table(Table $table): Table
     {
         return $table
