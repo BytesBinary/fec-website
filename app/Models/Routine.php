@@ -123,4 +123,45 @@ class Routine extends Model
 
         return $routinesData;
     }
+
+    public static function getTeacherPersonalRoutine( $formData )
+    {
+        $times = config('admin-panel.class_times');
+        $days = config('admin-panel.working_days');
+        $routine = Routine::where('teacher_id', $formData['teacher_id'])
+            ->where('semester', $formData['semester'])
+            ->where('department', $formData['department'])
+            ->orderByRaw("FIELD(day, 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday')")
+            ->orderBy('time')
+            ->get()
+            ->groupBy('day')
+            ->map(function ($dayGroup) use ($times) {
+                $organizedByTime = [];
+                foreach ($times as $time => $label) {
+                    $organizedByTime[$time] = [];
+                }
+
+                foreach ($dayGroup as $routine) {
+                    $timeKey = $routine->time;
+                    $course = Course::find($routine->course_id);
+                    $routine->course_title = $course->title;
+                    $routine->course_code = $course->code;
+                    $routine->teacher_name = User::find($routine->teacher_id)->name;
+                    $organizedByTime[$timeKey][] = $routine->toArray();
+                }
+
+                return $organizedByTime;
+            })
+            ->toArray();
+
+        foreach ( $days as $day ) {
+            foreach ( $times as $time ) {
+                if( ! isset($routine[$day][$time]) ) {
+                    $routine[$day][$time] = [];
+                }
+            }
+        }
+
+        return $routine;
+    }
 }

@@ -3,19 +3,16 @@
 namespace App\Filament\Resources\ManageRoutine;
 
 use App\Filament\Resources\ManageRoutine\RoutineReportResource\Pages;
-use App\Filament\Resources\ManageRoutine\RoutineReportResource\RelationManagers;
 use App\Models\ManageRoutine\RoutineReport;
-use Filament\Forms;
+use App\Models\Routine;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class RoutineReportResource extends Resource
 {
-    protected static ?string $model = RoutineReport::class;
+    protected static ?string $model = Routine::class;
 
     protected static ?string $navigationGroup = 'Manage Routine';
 
@@ -23,14 +20,10 @@ class RoutineReportResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
+    public static function can( string $action, $record = "" ): bool
     {
-        return $form
-            ->schema([
-                //
-            ]);
+        return can_access_resource('Programmer');
     }
-
     public static function table(Table $table): Table
     {
         return $table
@@ -60,8 +53,7 @@ class RoutineReportResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListRoutineReports::route('/'),
-            'create' => Pages\CreateRoutineReport::route('/create'),
+            'index' => Pages\CreateRoutineReport::route('/'),
             'edit' => Pages\EditRoutineReport::route('/{record}/edit'),
         ];
     }

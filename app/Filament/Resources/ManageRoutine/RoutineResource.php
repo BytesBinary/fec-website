@@ -3,8 +3,6 @@
 namespace App\Filament\Resources\ManageRoutine;
 
 use App\Filament\Resources\ManageRoutine;
-use App\Filament\Resources\RoutineResource\Pages;
-use App\Filament\Resources\RoutineResource\RelationManagers;
 use App\Models\Routine;
 use Filament\Resources\Resource;
 
