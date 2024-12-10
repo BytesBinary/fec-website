@@ -49,7 +49,14 @@ class CreateRoutineReport extends Page implements HasForms
                 'department' => $this->department,
                 'semester' => $this->semester,
             ]);
+        } else {
+            $this->showReport = false;
         }
+    }
+
+    public function deleteRoutine(){
+        send_notification('warning', 3000, 'You can not delete routine from here.');
+        return false;
     }
 
     public function downloadRoutine(){
@@ -68,6 +75,19 @@ class CreateRoutineReport extends Page implements HasForms
             echo $pdf->stream();
         }, "routine-{$this->department}-{$this->semester}-{$this->teacher_id}.pdf");
     }
+
+    public function downloadCreditHistory(){
+        $pdf = Pdf::loadView('filament.routine-reports.download-credit-report',
+            [
+                'department' => $this->department,
+                'semester' => $this->semester,
+                'credit_history' => $this->credit_history,
+            ]);
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->stream();
+        }, "routine-{$this->department}-{$this->semester}.pdf");
+    }
+
 
     public function form( Form $form ) : Form
     {
@@ -103,15 +123,17 @@ class CreateRoutineReport extends Page implements HasForms
                         'credit_history' => 'Credit History',
                     ])
                     ->required()
+                    ->reactive()
                     ->statePath('report_type'),
                 Select::make('teacher_id')
                     ->label('Teacher')
                     ->searchable()
                     ->options(
-                        User::where('designation','Teacher')->pluck('name', 'id')->toArray()
+                        User::where('designation', 'Teacher')->pluck('name', 'id')->toArray()
                     )
                     ->required()
-                    ->statePath('teacher_id'),
+                    ->statePath('teacher_id')
+                    ->visible(fn (callable $get) => $get('report_type') === 'personal_routine'),
             ]);
     }
 

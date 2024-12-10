@@ -164,4 +164,23 @@ class Routine extends Model
 
         return $routine;
     }
+
+    public static function getTeacherCreditHistory( $data ) {
+        $credits = Routine::select('teacher_id')
+            ->join('courses', 'courses.id', '=', 'routines.course_id') // Join with the courses table
+            ->where('routines.department', $data['department'])
+            ->where('routines.semester', $data['semester'])
+            ->selectRaw('SUM(courses.credit) as total_credit, teacher_id') // Calculate total credits
+            ->groupBy('teacher_id') // Group by teacher_id
+            ->orderBy('teacher_id') // Optional: Order by teacher_id
+            ->get()
+            ->map(function($credit){
+                $teacher = User::find($credit->teacher_id);
+                $credit->teacher_name = $teacher->name;
+                return $credit;
+            })
+            ->toArray();
+
+        return $credits;
+    }
 }
