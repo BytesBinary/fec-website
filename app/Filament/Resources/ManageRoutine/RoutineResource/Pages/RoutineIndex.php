@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\RoutineResource\Pages;
+namespace App\Filament\Resources\ManageRoutine\RoutineResource\Pages;
 
-use App\Filament\Resources\RoutineResource;
+use App\Filament\Resources\ManageRoutine\RoutineResource;
 use App\Models\Department;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Grid;

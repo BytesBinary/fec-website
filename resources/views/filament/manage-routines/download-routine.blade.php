@@ -72,7 +72,7 @@
 <div class="header">
     <h2>{{$details['department']}} Class Routine</h2>
     <h1>Faridpur Engineering College, Faridpur</h1>
-    <h2>( {{$details['semester']}} Semester )</h2>
+    <h2>( {{$details['semester']}} Semester ) - ( @isset($user_details['name']) {{$user_details['name']}} @endisset )</h2>
 </div>
 <div class="table-container">
     <table>
@@ -111,7 +111,7 @@
 @foreach($courses as $chunk)
     <div class="col-print-{{(count($courses) > 1) ? '4' : '8'}} course-list">
         @foreach($chunk as $course)
-            <p>{{ $course['title'] }} <b>({{ $course['code'] }})</b></p>
+            <p>{{ $course['title'] ?? ''}} <b>({{ $course['code'] ?? '' }})</b></p>
         @endforeach
     </div>
 @endforeach

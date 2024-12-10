@@ -19,6 +19,7 @@ class CourseResource extends Resource
     protected static ?string $model = Course::class;
     protected static ?string $navigationGroup = "Manage Courses";
     protected static ?string $label = "Courses";
+    protected static ?int $navigationSort = 1;
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function can( string $action, $record="" ) : bool

@@ -18,6 +18,7 @@ class AssigneeTeacherResource extends Resource
     protected static ?string $slug  = "manage-courses/assignee-teachers";
     protected static ?string $navigationGroup = "Manage Courses";
     protected static ?string $label = "Assignee Teachers";
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
 
     public static function can( string $action, $record="" ) : bool
