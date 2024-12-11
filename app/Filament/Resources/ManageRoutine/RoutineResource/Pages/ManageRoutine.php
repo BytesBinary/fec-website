@@ -1,20 +1,12 @@
 <?php
 
-namespace App\Filament\Resources\RoutineResource\Pages;
+namespace App\Filament\Resources\ManageRoutine\RoutineResource\Pages;
 
-use App\Filament\Resources\RoutineResource;
+use App\Filament\Resources\ManageRoutine\RoutineResource;
 use App\Models\Course;
-use App\Models\Department;
 use App\Models\Routine;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
-use Filament\Actions\Action;
-use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
-use Filament\Notifications\Notification;
 use Filament\Resources\Pages\Page;
 
 class ManageRoutine extends Page
