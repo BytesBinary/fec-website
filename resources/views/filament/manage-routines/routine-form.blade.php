@@ -2,20 +2,25 @@
     <div class="routine-table-container">
         <table class="routine-table">
             <tr>
-                <th class="table-head" >Day</th>
-                <th class="table-head" >1<br />08:00-08:50</th>
-                <th class="table-head" >2<br />08:50-09:40</th>
-                <th class="table-head" >3<br />09:40-10:30</th>
-                <th class="table-head" >4<br />10:30-11:20</th>
-                <th class="table-head" >5<br />11:20-12:10</th>
-                <th class="table-head" >6<br />12:10-13:00</th>
-                <th class="table-head" >8<br />14:00-17:00</th>
+                <th class="table-head dark:text-black" >Day</th>
+                <th class="table-head dark:text-black" >1<br />08:00-08:50</th>
+                <th class="table-head dark:text-black" >2<br />08:50-09:40</th>
+                <th class="table-head dark:text-black" >3<br />09:40-10:30</th>
+                <th class="table-head dark:text-black" >4<br />10:30-11:20</th>
+                <th class="table-head dark:text-black" >5<br />11:20-12:10</th>
+                <th class="table-head dark:text-black" >6<br />12:10-13:00</th>
+                <th class="table-head dark:text-black" >8<br />14:00-17:00</th>
             </tr>
             @foreach($routinesData as $day => $routine)
                 <tr>
                     <td class="table-data"  class="routine-bold">{{ $day }}</td>
                     @foreach($routine as $time => $course)
                         <td class="table-data"  class="routine-subject-cell max-w-sm">
+                            <div>
+                                @if(!empty($selected[$day][$time]))
+                                    <p class="text-sm font-bold text-justify">{{ $selected[$day][$time]['code'] }} ({{$selected[$day][$time]['credit']}}) - ({{ $selected[$day][$time]['teacher']  }})</p>
+                                @endif
+                            </div>
                             <select name="routine[{{ $day }}][{{ $time }}][course]"
                                     wire:change="checkTeacherSchedule('{{ $day }}', '{{ $time }}', $event.target.value)"
                                     wire:model="data.routine.{{ $day }}.{{ $time }}.course"
@@ -26,8 +31,7 @@
                                         @if(isset($course['teachers']))
                                             @foreach($course['teachers'] as $teacher)
                                                 @if(isset($teacher['id']))
-                                                    @php ray($course['id'], $index, $teacher['id']) @endphp
-                                                    <option value="{{ $course['id'] }},{{ $index }},{{$teacher['id']}}">{{ $course['title'] }} - <b>({{$teacher['name']}})</b></option>
+                                                    <option value="{{ $course['id'] }},{{ $index }},{{$teacher['id']}}">{{$course['code']}} ({{$course['credit']}})  - ({{$teacher['name']}})</option>
                                                 @endif
                                             @endforeach
                                         @endif

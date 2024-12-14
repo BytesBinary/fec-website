@@ -82,7 +82,7 @@ class CreateResidence extends Page implements HasForms
         $this->validate();
         $post = Post::create([
             'post_title' => $this->data['post_title'],
-            'post_type' => 'fec_residence',
+            'post_type' => 'residence',
             'post_status' => 'publish',
             'post_category' => 'residence',
             'post_author' => Auth::user()->id,

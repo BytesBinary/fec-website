@@ -1,4 +1,4 @@
-<div class="landing-about container mx-auto pt-5 px-5 pb-10 my-10">
+<div class="landing-about container mx-auto pt-16 px-5 pb-10 mb-10" id="about">
     <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" >About Us</p>
     <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -10,10 +10,10 @@
                 Construction of the Education Engineering Department began in 2005, financed by the government of Bangladesh. The main work was completed in 2010, while the electricity and water connections were finished in 2013 <br><br>
                 The academic activities of the college are managed under the Faculty of Engineering and Technology of Dhaka University and the administrative activities under the Directorate of Technical Education. <br>
             </p>
-            <a href="" class="block mt-4">
+            <a href="{{route('about-us')}}" wire:navigate class="block mt-4">
                 <div class="flex justify-center">
                     <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer" type="button">
-                        <span class="text-base">Read More</span>
+                        <span class="text-base"><a href="/about-us">Read More</a></span>
                         <x-svg-icon.external-url class="w-5 h-5" />
                     </button>
                 </div>

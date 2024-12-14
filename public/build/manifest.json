@@ -4,12 +4,12 @@
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-VxsU8pkS.css",
+    "file": "assets/app-BMy-f5od.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/filament/user/theme.css": {
-    "file": "assets/theme-DiP2Iq42.css",
+    "file": "assets/theme-BdjUohhd.css",
     "src": "resources/css/filament/user/theme.css",
     "isEntry": true
   },
@@ -20,7 +20,7 @@
     "isEntry": true
   },
   "resources/js/home/clubs.js": {
-    "file": "assets/clubs-wijQ-XkP.js",
+    "file": "assets/clubs-D3HG8wlN.js",
     "name": "clubs",
     "src": "resources/js/home/clubs.js",
     "isEntry": true,
@@ -47,7 +47,7 @@
     ]
   },
   "resources/js/home/hero.js": {
-    "file": "assets/hero-DPLQkquz.js",
+    "file": "assets/hero-BK-pMRqs.js",
     "name": "hero",
     "src": "resources/js/home/hero.js",
     "isEntry": true,

@@ -78,19 +78,23 @@ class ManageAsigneeTeachers extends Page implements HasForms
                         Grid::make()
                             ->columns(2)
                             ->schema([
-                                Select::make('course')
+                               Select::make('course')
                                     ->options(function () {
                                         $courses = Course::where('department', $this->department)
                                             ->where('semester', $this->semester)
                                             ->get()
-                                            ->pluck('title', 'id');
+                                            ->mapWithKeys(function ($course) {
+                                                return [
+                                                    $course->id => "{$course->title} ({$course->code})"
+                                                ];
+                                            });
 
                                         return $courses;
                                     })
                                     ->label('Select a Course')
                                     ->searchable()
                                     ->required(),
-                                Select::make('teacher')
+                               Select::make('teacher')
                                     ->options(function () {
                                         $users = User::where('designation', 'teacher')
                                             ->get()

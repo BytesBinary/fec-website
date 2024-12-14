@@ -4,24 +4,21 @@
             <!-- Section Header -->
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-gray-800">Upcoming Events</h2>
-                <p class="text-gray-600 mt-4 max-w-xl mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque, nisi optio, repellat voluptate iste eaque inventore soluta assumenda est, repudiandae fugit. Fugiat nemo rem facere nobis sequi! Deserunt, culpa.</p>
+                <p class="text-gray-600 mt-4 max-w-xl mx-auto">Discover the latest events happening around you. Join us
+                    and make unforgettable memories while exploring exciting opportunities to learn and connect.</p>
             </div>
+            {{-- @php dd($events) @endphp --}}
 
             <!-- Event Cards -->
-            <div class="grid grid-cols-1 place-items-center md:gap-x-10 md:place-items-stretch md:grid-cols-2 lg:grid-cols-3 gap-8 lg;gap-x-10">
+            <div
+                class="grid grid-cols-1 place-items-center md:gap-x-10 md:place-items-stretch md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Event Card -->
-                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('event',['slug' => 'ric']) }}" wire:navigate is-home-page="true" />
-                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('event',['slug' => 'ffff']) }}" wire:navigate is-home-page="true" />
-                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('event',['slug' => 'aaa']) }}" wire:navigate is-home-page="true" />
-                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('event',['slug' => 'dddd']) }}" wire:navigate is-home-page="true" />
-                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('event',['slug' => 'rrr']) }}" wire:navigate is-home-page="true" />
-                <x-card.events-card title="Disco Diwane" pic="images/club/professionals.jpg" date="09.DECEMBER.2024" location="Baitul Aman"
-                url="{{ route('event',['slug' => 'rieererc']) }}" wire:navigate is-home-page="true" />
+                @foreach ($events as $event)
+                    <x-card.events-card :title="$event['post_title']" pic="{{ asset('storage/'.$event['event_details']['feature_image']) }}"
+                    :date="$event['event_details']['event_date']" :location="$event['event_details']['event_location']"
+                    :url="$event['post_slug']" wire:navigate :is-home-page="true" />
+
+                @endforeach
             </div>
         </div>
     </section>

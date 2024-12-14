@@ -5,6 +5,7 @@ namespace App\Filament\Resources\ManageExam;
 use App\Filament\Resources\ManageExam\ExamDutyResource\Pages;
 use App\Models\Batch;
 use App\Models\Course;
+use App\Models\Department;
 use App\Models\ExamDuty;
 use App\Models\ExamHall;
 use App\Models\ExamType;
@@ -29,6 +30,10 @@ class ExamDutyResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
     public static function table(Table $table): Table
     {
         return $table
@@ -38,19 +43,46 @@ class ExamDutyResource extends Resource
                 TextColumn::make('exam_type_id')
                     ->badge()
                     ->color('primary')
-                    ->formatStateUsing(fn(string $state) => ExamType::find($state)->type)
+                    ->formatStateUsing(function(string $state){
+                        $states = str_replace(['[', ']', '"'], '', $state);
+                        $states = explode(',', $states);
+                        $examType = '';
+                        foreach ($states as $state) {
+                            $examType .= ExamType::find($state)->type . (end($states) === $state ? '' : ',');
+                        }
+                        return $examType;
+                    })
                     ->label('Exam Type'),
                 TextColumn::make('semester')
+                    ->badge('secondary')
+                    ->formatStateUsing(function(string $state){
+                        $state = str_replace(['[', ']', '"'], '', $state);
+                        return $state;
+                    })
                     ->label('Semester'),
                 TextColumn::make('batch')
                     ->badge()
                     ->color('danger')
-                    ->formatStateUsing(fn(string $state) => Batch::find($state)->number)
+                    ->formatStateUsing(function(string $state){
+                        $states = str_replace(['[', ']', '"'], '', $state);
+                        $states = explode(',', $states);
+                        $batch = '';
+                        foreach ($states as $state) {
+                            $batch .= Batch::find($state)->number . (end($states) === $state ? '' : ',');
+                        }
+                        return $batch;
+                    })
                     ->label('Batch'),
                 TextColumn::make('exam_year')
+                    ->badge('primary')
                     ->label('Exam Year'),
                 TextColumn::make('department')
-                    ->label('Department'),
+                    ->label('Department')
+                    ->badge('secondary')
+                    ->formatStateUsing(function(string $state){
+                        $state = str_replace(['[', ']', '"'], '', $state);
+                        return $state;
+                    }),
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
@@ -60,59 +92,6 @@ class ExamDutyResource extends Resource
                 Tables\Actions\ViewAction::make(),
             ]))
             ->bulkActions(create_table_bulk_actions());
-    }
-
-    public static function infolist( Infolist $infolist ): Infolist
-    {
-        return $infolist
-            ->schema([
-                Section::make('General Information')
-                    ->columns(3)
-                    ->schema([
-                        TextEntry::make('exam_name')
-                            ->label('Exam Name'),
-                        TextEntry::make('exam_type_id')
-                            ->label('Exam Type')
-                            ->formatStateUsing(fn(string $state) => ExamType::find($state)->type),
-                        TextEntry::make('department')
-                            ->label('Department'),
-                        TextEntry::make('batch')
-                            ->label('Batch')
-                            ->formatStateUsing(fn(string $state) => Batch::find($state)->number),
-                        TextEntry::make('semester')
-                            ->label('Semester'),
-                        TextEntry::make('exam_year')
-                            ->label('Exam Year'),
-                    ]),
-                Section::make('Exam Details')
-                    ->label('Exam Duty Details')
-                    ->columns(1)
-                    ->schema([
-                        RepeatableEntry::make('duty_details')
-                            ->label('')
-                            ->schema([
-                                InfolistGrid::make()
-                                    ->columns(5)
-                                    ->schema([
-                                    TextEntry::make('date')
-                                        ->label('Date')
-                                        ->formatStateUsing(fn(string $state) => date('F j, Y', strtotime($state))),
-                                    TextEntry::make('exam_hall')
-                                        ->label('Exam Hall')
-                                        ->formatStateUsing(fn(string $state) => ExamHall::find($state)?->name ?? 'N/A'),
-                                    TextEntry::make('course')
-                                        ->label('Course')
-                                        ->formatStateUsing(fn(string $state) => Course::find($state)?->title ?? 'N/A'),
-                                    TextEntry::make('supervisor')
-                                        ->label('Supervisor')
-                                        ->formatStateUsing(fn(string $state) => User::find($state)?->name ?? 'N/A'),
-                                    TextEntry::make('invigilator')
-                                        ->label('Invigilator')
-                                        ->formatStateUsing(fn(string $state) => User::find($state)?->name ?? 'N/A'),
-                                    ]),
-                            ]),
-                        ]),
-            ]);
     }
 
     public static function getRelations(): array

@@ -1,12 +1,15 @@
 <?php
 
+use App\Models\Post;
+use App\Models\PostMeta;
 use Filament\Notifications\Notification;
 use Filament\Resources\Components\Tab;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 if( ! function_exists('create_model_tabs') ) {
-    function create_model_tabs( Model $model, array $attributes = [], string $modelName = '' ) : array
+    function create_model_tabs( Model $model, array $attributes = [], string $modelName = '', array $customCount = [] ) : array
     {
         $default = array(
             'all' => empty($modelName) ? get_readable_classname($model) : $modelName,
@@ -17,11 +20,11 @@ if( ! function_exists('create_model_tabs') ) {
         foreach( $attributes as $attribute => $value ) {
             switch ( $attribute ) {
                 case 'all':
-                    $tabs[$attribute] = Tab::make($value)->badge($model::count());
+                    $tabs[$attribute] = Tab::make($value)->badge((!empty($customCount) ? $customCount['all'] : $model::count()));
                     break;
                 case 'archived':
                     $tabs[$attribute] = Tab::make($value)
-                        ->badge($model::onlyTrashed()->count())
+                        ->badge((!empty($customCount) ? $customCount['archived'] : $model::onlyTrashed()->count()))
                         ->modifyQueryUsing(fn ($query) => $query->onlyTrashed());
                     break;
                 default:
@@ -45,7 +48,7 @@ if( ! function_exists('create_table_actions') ) {
                 ->label('Permanently Delete'),
         ];
 
-        if( $removeActions ) {
+        if( ! empty($removeActions) ) {
             foreach( $removeActions as $action ) {
                 switch ( $action ) {
                     case 'edit':
@@ -75,7 +78,7 @@ if( ! function_exists('create_table_actions') ) {
 }
 
 if( ! function_exists('create_table_bulk_actions') ) {
-    function create_table_bulk_actions( $extraBulkActions = [], $extraActions = [] ) : array
+    function create_table_bulk_actions( $extraBulkActions = [], $extraActions = [], $removeActions = [] ) : array
     {
         $bulkActions = [
             Filament\Tables\Actions\DeleteBulkAction::make(),
@@ -83,6 +86,23 @@ if( ! function_exists('create_table_bulk_actions') ) {
             Filament\Tables\Actions\ForceDeleteBulkAction::make()
                 ->label("Permanently Delete"),
         ];
+        if( ! empty($removeActions) ) {
+            foreach( $removeActions as $action ) {
+                switch ( $action ) {
+                    case 'delete':
+                        unset($bulkActions[0]);
+                        break;
+                    case 'restore':
+                        unset($bulkActions[1]);
+                        break;
+                    case 'forceDelete':
+                        unset($bulkActions[2]);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
         if( $extraBulkActions ) {
             $bulkActions = array_merge( $bulkActions, $extraBulkActions );
         }
@@ -144,25 +164,19 @@ if( ! function_exists('get_sub_page_layout_data') ) {
 }
 
 if( ! function_exists('get_card_class_of_student_staticstics') ) {
-    function get_card_class_of_student_staticstics ( $index ) {
+    function get_card_class_of_student_staticstics ( $index ): string
+    {
         $class = ($index % 2 === 0) ? 'bg-lime-100' : 'bg-white';
         $default = 'shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300';
         return "$class $default";
     }
 }
 
-
-if( ! function_exists('get_event_slug') ) {
-    function get_event_slug ( $title ) {
-        return Str::slug( $title );
-    }
-}
-
 if( ! function_exists( 'create_unique_post_slug' ) ) {
-    function create_unique_post_slug( string $slug )
+    function create_unique_post_slug( string $slug ): string
     {
         $slug = Str::slug($slug);
-        $count = \App\Models\Post::where('post_slug', $slug)->count();
+        $count = Post::where('post_slug', $slug)->count();
         if( $count > 0 ) {
             $slug = $slug . '-' . $count;
         }
@@ -173,10 +187,13 @@ if( ! function_exists( 'create_unique_post_slug' ) ) {
 if( ! function_exists('create_or_update_post_meta') ) {
     function create_or_update_post_meta( $post_id, $meta_key, $meta_value )
     {
-        if( is_array($post_id) || is_object($post_id) ) {
+        if( is_array($post_id) ) {
+            $post_id = $post_id['id'];
+        }
+        if( is_object($post_id) ) {
             $post_id = $post_id->id;
         }
-        $meta = \App\Models\PostMeta::where('post_id', $post_id)
+        $meta = PostMeta::where('post_id', $post_id)
             ->where('meta_key', $meta_key)
             ->first();
 
@@ -187,7 +204,7 @@ if( ! function_exists('create_or_update_post_meta') ) {
         if( $meta ) {
             return $meta->update(['meta_value' => $meta_value]);
         } else {
-            return \App\Models\PostMeta::create([
+            return PostMeta::create([
                 'post_id' => $post_id,
                 'meta_key' => $meta_key,
                 'meta_value' => $meta_value,
@@ -198,7 +215,7 @@ if( ! function_exists('create_or_update_post_meta') ) {
 
 if( ! function_exists( 'get_post_meta' ) ) {
     function get_post_meta( $post_id, $meta_key ) {
-        $meta = \App\Models\PostMeta::where('post_id', $post_id)
+        $meta = PostMeta::where('post_id', $post_id)
             ->where('meta_key', $meta_key)
             ->first();
         if( $meta ) {
@@ -220,5 +237,22 @@ if( ! function_exists('send_notification') ) {
             ->duration($duration)
             ->title($title)
             ->send();
+    }
+}
+
+if( ! function_exists('can_access_resource') ) {
+    function can_access_resource( $designation ) : bool
+    {
+        if( ! is_array($designation) ) {
+            return (Auth::user()->designation === $designation);
+        }
+
+        foreach($designation as $des) {
+            if( Auth::user()->designation === $des ) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

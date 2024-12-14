@@ -14,8 +14,8 @@ class Administration extends Component
     public function mount()
     {
         $this->principal = [
-            'image' => asset('images/administration/principal.jpg'),
-            'name' => 'Prof. Dr. Engr. Md. Mizanur Rahman',
+            'image' => asset('images/administration/principal.png'),
+            'name' => 'Prof. Md. Alamgir Hossain',
             'title' => 'Principal',
             'message' => " It is my pleasure to introduce my heart-touching engineering institution “The Faridpur Engineering College,” which has been on its journey since 2010. Its short form is FEC, whereas the Bangla pronunciation is “ফরিদপুর ইঞ্জিনিয়ারিং কলেজ (ফইক).
                               The college is situated nearby Baitul Aman Bazar, about three km from the heart of Faridpur town. Faridpur Engineering College is a mainstream government undergraduate college in engineering disciplines and is affiliated with the University of Dhaka under the Faculty of Engineering & Technology..."

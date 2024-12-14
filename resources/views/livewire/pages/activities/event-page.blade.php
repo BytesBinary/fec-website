@@ -1,17 +1,20 @@
 <div class="mx-auto w-full md:w-3/5 lg:w-3/5 p-3 text-cng">
     <div class="bg-white m-0 leading-normal">
         <!-- Header Section -->
+        @php
+            dd($event)
+        @endphp
         <div class="bg-white pt-0 lg:pt-3 md:p-4 lg:pb-0 mt-3 flex flex-col justify-between md:space-y-0 w-full">
             <div class="flex-1 text-center md:text-left mb-5 pl-5 md:pl-0 lg:pl-0 pr-5 lg:pr-0">
                 <h1 class="text-3xl text-wrap md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-snug text-left">
-                    {{ $eventDetails['title'] }}
+                    {{ $event['post_title'] }}
                 </h1>
-                <p class="text-lg mt-3 text-gray-700 italic text-left">{{ $eventDetails['subtitle'] }}</p>
+                <p class="text-lg mt-3 text-gray-700 italic text-left">{{ $event['subtitle'] }}</p>
 
                 <div class="flex gap-3 mt-5">
                     <img src="{{ asset('images/BytesBinary.png') }}" alt="prof" class="size-12 rounded-[50%] object-cover">
                     <div class="justify-start">
-                        <h3 class="text-start font-semibold">Saniad Islam</h3>
+                        <h3 class="text-start font-semibold">Alex Morgan</h3>
                         <p class="text-start text-gray-700">10/12/2024</p>
                     </div>
                 </div>
@@ -46,10 +49,10 @@
         <div class="flex flex-col mx-auto lg:gap-1">
             <div class="bg-white p-4 w-full order-1">
                 <img src="{{ asset('images/gallery/10.jpg') }}" alt="Event Banner" class="w-full h-72 object-cover rounded-md mb-4">
-                <p class="text-center text-sm text-gray-600 italic mb-6">{{ $eventDetails['motto'] }}</p>
+                <p class="text-center text-sm text-gray-600 italic mb-6">{{ $event['motto'] }}</p>
                 <h2 class="text-xl md:text-3xl font-semibold text-gray-900 mb-3">About the Event</h2>
                 <p class="text-gray-900 text-md lg:text-lg tracking-wide mb-2">
-                    {{ $eventDetails['about'] }}
+                    {{ $event['about'] }}
                 </p>
                 <div class="mb-6">
                     <h3 class="text-lg lg:text-xl font-semibold text-black mb-2">Categories</h3>

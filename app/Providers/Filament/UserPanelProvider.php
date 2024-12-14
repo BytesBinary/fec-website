@@ -3,7 +3,8 @@
 namespace App\Providers\Filament;
 
 use App\CustomRegistration;
-use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use App\Http\Middleware\UserAuth;
+use App\Http\Middleware\VerifyUser;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -29,7 +30,6 @@ class UserPanelProvider extends PanelProvider
             ->id('user')
             ->path('user')
             ->registration(CustomRegistration::class)
-            ->emailVerification()
             ->login()
             ->passwordReset()
             ->colors([
@@ -46,7 +46,9 @@ class UserPanelProvider extends PanelProvider
                 Pages\Dashboard::class,
             ])
             ->navigationGroups([
+                'Manage User',
                 'Manage Courses',
+                'Manage Routine',
                 'Manage Exams',
                 'Tools',
                 'Settings',
@@ -69,9 +71,10 @@ class UserPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                UserAuth::class,
             ])
             ->plugins([
-                FilamentShieldPlugin::make(),
+                // Add your plugins here
             ]);
     }
 }

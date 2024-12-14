@@ -18,7 +18,7 @@ class ResidenceSeeder extends Seeder
         $residences = array(
             [
                 "post_title" => "South Hall",
-                "post_type" => "fec_residence",
+                "post_type" => "residence",
                 "post_status" => "publish",
                 "post_category" => "residence",
                 "post_slug" => "south-hall",
@@ -26,7 +26,7 @@ class ResidenceSeeder extends Seeder
             ],
             [
                 "post_title" => "North Hall",
-                "post_type" => "fec_residence",
+                "post_type" => "residence",
                 "post_status" => "publish",
                 "post_category" => "residence",
                 "post_slug" => "north-hall",
@@ -34,7 +34,7 @@ class ResidenceSeeder extends Seeder
             ],
             [
                 "post_title" => "Fazilatunnesa Hall",
-                "post_type" => "fec_residence",
+                "post_type" => "residence",
                 "post_status" => "publish",
                 "post_category" => "residence",
                 "post_slug" => "fazilatun Nesa-hall",
@@ -324,7 +324,7 @@ class ResidenceSeeder extends Seeder
         );
 
         foreach ( $residences as $key=>$residence ) {
-            $residence['post_author'] = User::where('designation', 'super_admin')->first()->id;
+            $residence['post_author'] = User::where('designation', 'Programmer')->first()->id;
             $post = Post::create($residence);
             foreach ( $residence_meta[$key] as $meta_key => $meta_value ) {
                 create_or_update_post_meta( $post->id, $meta_key, $meta_value );

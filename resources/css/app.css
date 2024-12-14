@@ -109,3 +109,13 @@ Landing Page CSS
 .text-cng{
     font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol ;
 }
+
+/* post fonts */
+.swiper-container-hero-section .swiper-button-next,.swiper-button-prev{
+    color: transparent;
+}
+@media (max-width: 768px) {
+    .swiper-container-hero-section .swiper-button-next,.swiper-button-prev {
+        display: none;
+    }
+}

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('exam_duties', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('start_time');
+            $table->string('end_time');
             $table->string('exam_type_id');
             $table->string('exam_name');
             $table->string('semester');

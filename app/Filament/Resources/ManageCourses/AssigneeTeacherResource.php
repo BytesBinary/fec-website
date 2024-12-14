@@ -18,11 +18,18 @@ class AssigneeTeacherResource extends Resource
     protected static ?string $slug  = "manage-courses/assignee-teachers";
     protected static ?string $navigationGroup = "Manage Courses";
     protected static ?string $label = "Assignee Teachers";
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
+
+    public static function can( string $action, $record="" ) : bool
+    {
+        return can_access_resource( 'Programmer' );
+    }
 
     public static function table(Table $table): Table
     {
         return $table
+            ->query(Course::query()->where('assigned_teachers_ids', '!=', null))
             ->columns([
                 TextColumn::make('title')
                     ->searchable()
@@ -50,6 +57,12 @@ class AssigneeTeacherResource extends Resource
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
+                Filter::make('cse')
+                    ->query(fn ($query) => $query->where('department', 'CSE')),
+                Filter::make('eee')
+                    ->query(fn ($query) => $query->where('department', 'EEE')),
+                Filter::make('ce')
+                    ->query(fn ($query) => $query->where('department', 'Civil')),
                 Filter::make('1st Semester')
                     ->query(fn ($query) => $query->where('semester', '1st')),
                 Filter::make('2nd Semester')
@@ -73,7 +86,7 @@ class AssigneeTeacherResource extends Resource
                     ->icon('heroicon-o-pencil')
                     ->url(fn ($record) => static::getUrl('edit', ['record' => $record])),
             ],['edit','delete']))
-            ->bulkActions(create_table_bulk_actions());
+            ->bulkActions(create_table_bulk_actions([],[],['restore','forceDelete', 'delete']));
     }
 
     public static function getRelations(): array
