@@ -13,7 +13,6 @@ use App\Models\User;
 use Filament\Actions\Action;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -21,7 +20,6 @@ use Filament\Forms\Components\TimePicker;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
-use Filament\Forms\Get;
 use Filament\Resources\Pages\Page;
 
 class CreateExamDuty extends Page implements HasForms
@@ -31,25 +29,35 @@ class CreateExamDuty extends Page implements HasForms
     protected static string $resource = ExamDutyResource::class;
 
     protected static string $view = 'filament.manage-exams.create-exam-duty';
+
     public $exam_name;
+
     public $exam_type_id;
+
     public $semester;
+
     public $batch;
+
     public $department;
+
     public $exam_year;
+
     public $duty_details = [];
+
     public $start_time;
+
     public $end_time;
+
     public string $record = '';
 
-    public function mount( $record = '' ) : void
+    public function mount($record = ''): void
     {
-        if( ! empty($record) ) {
+        if (! empty($record)) {
             $this->record = $record;
             $data = ExamDuty::find($record)->toArray();
-            $data['semester']= json_decode($data['semester'], true);
+            $data['semester'] = json_decode($data['semester'], true);
             $data['batch'] = json_decode($data['batch'], true);
-            $data['department']= json_decode($data['department'], true);
+            $data['department'] = json_decode($data['department'], true);
             $data['duty_details'] = json_decode($data['duty_details'], true);
             $this->form->fill($data);
         }
@@ -74,7 +82,8 @@ class CreateExamDuty extends Page implements HasForms
         send_notification('success', 5000, 'Exam Duty created successfully!');
     }
 
-    public function updateExamDuty(){
+    public function updateExamDuty()
+    {
         $this->validate();
 
         ExamDuty::find($this->record)->update([
@@ -96,124 +105,127 @@ class CreateExamDuty extends Page implements HasForms
     {
         return
             $form
-            ->schema([
-                Grid::make('core')
-                    ->columns(3)
-                    ->schema([
-                        TextInput::make('exam_name')
-                            ->label('Exam Name')
-                            ->placeholder('Enter a exam name')
-                            ->required()
-                            ->statePath('exam_name'),
-                        Select::make('exam_type_id')
-                            ->label('Exam Type')
-                            ->options(ExamType::all()->pluck('type', 'id')->toArray())
-                            ->required()
-                            ->statePath('exam_type_id'),
-                        Select::make('semester')
-                            ->label('Semester')
-                            ->multiple()
-                            ->options([
-                                '1st' => '1st Semester',
-                                '2nd' => '2nd Semester',
-                                '3rd' => '3rd Semester',
-                                '4th' => '4th Semester',
-                                '5th' => '5th Semester',
-                                '6th' => '6th Semester',
-                                '7th' => '7th Semester',
-                                '8th' => '8th Semester',
-                            ])
-                            ->reactive()
-                            ->required()
-                            ->statePath('semester'),
-                        Select::make('batch')
-                            ->label('Batch')
-                            ->options(Batch::all()->pluck('number', 'id')->toArray())
-                            ->required()
-                            ->multiple()
-                            ->statePath('batch'),
-                        Select::make('department')
-                            ->label('Department')
-                            ->reactive()
-                            ->multiple()
-                            ->options(Department::all()->pluck('short_title', 'short_title')->toArray())
-                            ->required()
-                            ->statePath('department'),
-                        TextInput::make('exam_year')
-                            ->label('Exam Year')
-                            ->placeholder('Enter a exam year')
-                            ->required()
-                            ->statePath('exam_year'),
-                        TimePicker::make('start_time')
-                            ->label('Start Time')
-                            ->required()
-                            ->statePath('start_time'),
-                        TimePicker::make('end_time')
-                            ->label('End Time')
-                            ->required()
-                            ->statePath('end_time'),
-                    ]),
-                Repeater::make('duty_details')
-                    ->schema([
-                       Grid::make()
-                        ->columns(5)
+                ->schema([
+                    Grid::make('core')
+                        ->columns(3)
                         ->schema([
-                            DatePicker::make('date')
-                                ->label('Date')
-                                ->required(),
-                            Select::make('exam_hall')
-                                ->label('Exam Hall')
-                                ->searchable()
+                            TextInput::make('exam_name')
+                                ->label('Exam Name')
+                                ->placeholder('Enter a exam name')
+                                ->required()
+                                ->statePath('exam_name'),
+                            Select::make('exam_type_id')
+                                ->label('Exam Type')
+                                ->options(ExamType::all()->pluck('type', 'id')->toArray())
+                                ->required()
+                                ->statePath('exam_type_id'),
+                            Select::make('semester')
+                                ->label('Semester')
                                 ->multiple()
-                                ->options(ExamHall::all()->pluck('name', 'id')->toArray())
-                                ->required(),
-                            Select::make('course')
-                                ->label('Course')
-                                ->searchable()
+                                ->options([
+                                    '1st' => '1st Semester',
+                                    '2nd' => '2nd Semester',
+                                    '3rd' => '3rd Semester',
+                                    '4th' => '4th Semester',
+                                    '5th' => '5th Semester',
+                                    '6th' => '6th Semester',
+                                    '7th' => '7th Semester',
+                                    '8th' => '8th Semester',
+                                ])
+                                ->reactive()
+                                ->required()
+                                ->statePath('semester'),
+                            Select::make('batch')
+                                ->label('Batch')
+                                ->options(Batch::all()->pluck('number', 'id')->toArray())
+                                ->required()
                                 ->multiple()
-                                ->options(function () {
-                                    if( empty($this->department) || empty($this->semester) ) {
-                                        send_notification('danger', 5000, 'Please select department and semester first!');
-                                        return [];
-                                    }
-                                    return Course::query()
-                                        ->whereIn('department', $this->department)
-                                        ->whereIn('semester', $this->semester)
-                                        ->pluck('title', 'id')
-                                        ->toArray();
-                                })
-                                ->required(),
-                            Select::make('supervisor')
-                                ->label('Supervisor')
-                                ->searchable()
+                                ->statePath('batch'),
+                            Select::make('department')
+                                ->label('Department')
+                                ->reactive()
                                 ->multiple()
-                                ->options(User::where('designation', 'teacher')->pluck('name', 'id')->toArray())
-                                ->required(),
-                            Select::make('invigilator')
-                                ->label('Invigilator')
-                                ->searchable()
-                                ->multiple()
-                                ->options(User::where('designation', 'teacher')->pluck('name', 'id')->toArray())
-                                ->required(),
-                        ])
-                    ])->statePath('duty_details'),
-        ]);
+                                ->options(Department::all()->pluck('short_title', 'short_title')->toArray())
+                                ->required()
+                                ->statePath('department'),
+                            TextInput::make('exam_year')
+                                ->label('Exam Year')
+                                ->placeholder('Enter a exam year')
+                                ->required()
+                                ->statePath('exam_year'),
+                            TimePicker::make('start_time')
+                                ->label('Start Time')
+                                ->required()
+                                ->statePath('start_time'),
+                            TimePicker::make('end_time')
+                                ->label('End Time')
+                                ->required()
+                                ->statePath('end_time'),
+                        ]),
+                    Repeater::make('duty_details')
+                        ->schema([
+                            Grid::make()
+                                ->columns(5)
+                                ->schema([
+                                    DatePicker::make('date')
+                                        ->label('Date')
+                                        ->required(),
+                                    Select::make('exam_hall')
+                                        ->label('Exam Hall')
+                                        ->searchable()
+                                        ->multiple()
+                                        ->options(ExamHall::all()->pluck('name', 'id')->toArray())
+                                        ->required(),
+                                    Select::make('course')
+                                        ->label('Course')
+                                        ->searchable()
+                                        ->multiple()
+                                        ->options(function () {
+                                            if (empty($this->department) || empty($this->semester)) {
+                                                send_notification('danger', 5000, 'Please select department and semester first!');
+
+                                                return [];
+                                            }
+
+                                            return Course::query()
+                                                ->whereIn('department', $this->department)
+                                                ->whereIn('semester', $this->semester)
+                                                ->pluck('title', 'id')
+                                                ->toArray();
+                                        })
+                                        ->required(),
+                                    Select::make('supervisor')
+                                        ->label('Supervisor')
+                                        ->searchable()
+                                        ->multiple()
+                                        ->options(User::where('designation', 'teacher')->pluck('name', 'id')->toArray())
+                                        ->required(),
+                                    Select::make('invigilator')
+                                        ->label('Invigilator')
+                                        ->searchable()
+                                        ->multiple()
+                                        ->options(User::where('designation', 'teacher')->pluck('name', 'id')->toArray())
+                                        ->required(),
+                                ]),
+                        ])->statePath('duty_details'),
+                ]);
     }
 
-    public function getFormActions( $action = "save" ) : array
+    public function getFormActions($action = 'save'): array
     {
         $actions = [
             'save' => [
                 Action::make('Save')
                     ->label('Save Exam Duty')
-                    ->action('createExamDuty')
+                    ->action('createExamDuty'),
             ],
             'update' => [
                 Action::make('Update')
                     ->label('Update Exam Duty')
-                    ->action('updateExamDuty')
-            ]
+                    ->action('updateExamDuty'),
+            ],
         ];
+
         return $actions[$action];
     }
 }

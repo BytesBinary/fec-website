@@ -5,8 +5,6 @@ namespace App\Filament\Resources\ManageRoutine;
 use App\Filament\Resources\ManageRoutine\RoutineReportResource\Pages;
 use App\Models\Routine;
 use Filament\Resources\Resource;
-use Filament\Tables;
-use Filament\Tables\Table;
 
 class RoutineReportResource extends Resource
 {
@@ -16,11 +14,11 @@ class RoutineReportResource extends Resource
 
     protected static ?int $navigationSort = 3;
 
-    protected static ?string $navigationLabel = "Generate Routine Report";
+    protected static ?string $navigationLabel = 'Generate Routine Report';
 
     protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
 
-    public static function can(string $action, $record = ""): bool
+    public static function can(string $action, $record = ''): bool
     {
         return can_access_resource('Programmer');
     }
@@ -28,8 +26,7 @@ class RoutineReportResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\CreateRoutineReport::route('/'),
-            'edit' => Pages\EditRoutineReport::route('/{record}/edit'),
+            'index' => Pages\ManageRoutineReport::route('/'),
         ];
     }
 }
