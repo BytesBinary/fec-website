@@ -4,7 +4,6 @@ namespace App\Providers\Filament;
 
 use App\CustomRegistration;
 use App\Http\Middleware\UserAuth;
-use App\Http\Middleware\VerifyUser;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
