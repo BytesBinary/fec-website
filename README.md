@@ -56,3 +56,5 @@ Password: admin
 3. [Tailwind CSS](https://tailwindcss.com)
 4. [Alpine.js](https://alpinejs.dev)
 5. [Filament](https://filamentphp.com)
+
+#### All rights reserved by BytesBinary 
