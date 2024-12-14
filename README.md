@@ -57,4 +57,4 @@ Password: admin
 4. [Alpine.js](https://alpinejs.dev)
 5. [Filament](https://filamentphp.com)
 
-#### All rights reserved by BytesBinary
+#### All rights reserved by BytesBinary 
