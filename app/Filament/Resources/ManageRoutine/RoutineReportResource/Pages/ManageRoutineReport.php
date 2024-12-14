@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\ManageRoutine\RoutineReportResource\Pages;
 
 use App\Filament\Resources\ManageRoutine\RoutineReportResource;
-use App\Models\Course;
 use App\Models\Department;
 use App\Models\Routine;
 use App\Models\User;
@@ -15,7 +14,7 @@ use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Resources\Pages\Page;
 
-class CreateRoutineReport extends Page implements HasForms
+class ManageRoutineReport extends Page implements HasForms
 {
     use InteractsWithForms;
 
@@ -24,17 +23,24 @@ class CreateRoutineReport extends Page implements HasForms
     protected static string $view = 'filament.routine-reports.report-generation-form';
 
     public string $department;
+
     public string $semester;
+
     public string $report_type;
+
     public string $teacher_id;
+
     public bool $showReport = false;
+
     public ?array $routines = [];
+
     public ?array $credit_history = [];
 
-    public function generate() {
+    public function generate()
+    {
         $this->validate();
 
-        if( $this->report_type === 'personal_routine' ) {
+        if ($this->report_type === 'personal_routine') {
             $this->showReport = true;
             $this->credit_history = [];
             $this->routines = Routine::getTeacherPersonalRoutine([
@@ -42,7 +48,7 @@ class CreateRoutineReport extends Page implements HasForms
                 'semester' => $this->semester,
                 'teacher_id' => $this->teacher_id,
             ]);
-        } else if( $this->report_type === 'credit_history' ) {
+        } elseif ($this->report_type === 'credit_history') {
             $this->showReport = true;
             $this->routines = [];
             $this->credit_history = Routine::getTeacherCreditHistory([
@@ -54,42 +60,47 @@ class CreateRoutineReport extends Page implements HasForms
         }
     }
 
-    public function deleteRoutine(){
+    public function deleteRoutine()
+    {
         send_notification('warning', 3000, 'You can not delete routine from here.');
+
         return false;
     }
 
-    public function downloadRoutine(){
+    public function downloadRoutine()
+    {
         $user_details = User::find($this->teacher_id);
         $pdf = Pdf::loadView('filament.manage-routines.download-routine',
             [
                 'routines' => $this->routines,
                 'courses' => [],
                 'user_details' => $user_details,
-                'details'  => [
+                'details' => [
                     'department' => $this->department,
-                    'semester'   => $this->semester,
-                ]
-            ]);;
+                    'semester' => $this->semester,
+                ],
+            ]);
+
         return response()->streamDownload(function () use ($pdf) {
             echo $pdf->stream();
         }, "routine-{$this->department}-{$this->semester}-{$this->teacher_id}.pdf");
     }
 
-    public function downloadCreditHistory(){
+    public function downloadCreditHistory()
+    {
         $pdf = Pdf::loadView('filament.routine-reports.download-credit-report',
             [
                 'department' => $this->department,
                 'semester' => $this->semester,
                 'credit_history' => $this->credit_history,
             ]);
+
         return response()->streamDownload(function () use ($pdf) {
             echo $pdf->stream();
         }, "routine-{$this->department}-{$this->semester}.pdf");
     }
 
-
-    public function form( Form $form ) : Form
+    public function form(Form $form): Form
     {
         return $form
             ->columns(2)

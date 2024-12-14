@@ -7,7 +7,6 @@ use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
-
     /**
      * Run the database seeds.
      */
@@ -96,14 +95,14 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'is_admin_verified' => true,
                 'password' => bcrypt('admin'),
-            ]
+            ],
         ];
 
-        foreach ( $teachers as $teacher ) {
+        foreach ($teachers as $teacher) {
             User::create($teacher);
         }
 
-        foreach ( $programmers as $programmer ) {
+        foreach ($programmers as $programmer) {
             User::create($programmer);
         }
     }
