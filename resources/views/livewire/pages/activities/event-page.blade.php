@@ -8,10 +8,10 @@
                     class="text-3xl text-wrap md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-snug text-left">
                     {{$event['post_title']}}
                 </h1>
-                <p class="text-lg mt-3 text-gray-700 italic text-left">Innovating the Future Together</p>
+                <p class="text-lg mt-3 text-gray-700 italic text-left">{{ $event['event_details']['short_description']}}</p>
 
                 <div class="flex gap-3 mt-5">
-                    <img src="{{ asset('images/BytesBinary.png') }}" alt="prof"
+                    <img src="{{ asset('images/demo-profile.jpg') }}" alt="prof"
                         class="size-12 rounded-[50%] object-cover">
                     <div class="justify-start">
                         <h3 class="text-start font-semibold">
@@ -85,7 +85,6 @@
                         <p class="text-sm text-gray-600 mb-4">
                             {{ \Carbon\Carbon::parse($event['event_details']['event_date'])->isoFormat('dddd, MMM D, YYYY | h:mm A') }}
                         </p>
-                        <a href="calendar-link" class="text-blue-500 text-sm hover:underline">Add to Calendar</a>
                     </div>
                     <div class="bg-white p-4">
                         <h3 class="font-semibold text-gray-800 text-lg mb-3">Location</h3>
@@ -99,23 +98,24 @@
 
                         @foreach ($event['contact_details'] as $contact)
                         <div class="bg-gray-200 p-3 mb-3 rounded-md shadow-md hover:shadow-lg lg:w-[48%]">
-                            <div class="flex items-center mt-4">
-                                <img src="{{ asset('images/BytesBinary.png') }}" alt="Host Image"
+                            <div class="flex items-start mt-4 pl-3">
+                                <img src="{{ asset('images/demo-profile.jpg') }}" alt="Host Image"
                                     class="w-12 h-12 rounded-full mr-4 border-2 border-orange-500">
-                                <div>
+                                <div class="px-2">
                                     <p class="text-gray-700 font-semibold">{{$contact['contact_name']}}</p>
                                     <p class="text-sm text-gray-600">{{$contact['designation']}}</p>
+                                    <div class="mt-2 text-sm text-gray-600">
+                                        <p><strong>Email:</strong> <a href="mailto:{{$contact['contact_email']}}"
+                                                class="text-blue-500 hover:underline">{{$contact['contact_email']}}</a></p>
+                                        <p class="mt-1"><strong>Phone:</strong> <a href="tel:{{$contact['contact_phone']}}"
+                                                class="text-blue-500 hover:underline">{{$contact['contact_phone']}}</a></p>
+                                        <p class="mt-1"><strong>WhatsApp:</strong> <a href="https://wa.me/{{$contact['contact_phone']}}"
+                                                class="text-blue-500 hover:underline">{{$contact['contact_phone']}}</a></p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mt-4 text-sm text-gray-600">
-                                <p><strong>Email:</strong> <a href="mailto:{{$contact['contact_email']}}"
-                                        class="text-blue-500 hover:underline">{{$contact['contact_email']}}</a></p>
-                                <p class="mt-1"><strong>Phone:</strong> <a href="tel:{{$contact['contact_phone']}}"
-                                        class="text-blue-500 hover:underline">{{$contact['contact_phone']}}</a></p>
-                                <p class="mt-1"><strong>WhatsApp:</strong> <a href="https://wa.me/{{$contact['contact_phone']}}
-                                        class="text-blue-500 hover:underline">{{$contact['contact_phone']}}</a></p>
-                            </div>
                         </div>
+
                         @endforeach
 
                     </div>
