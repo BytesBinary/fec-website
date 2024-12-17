@@ -18,6 +18,11 @@ class RoutineResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-check';
 
+    public static function can(string $action, $resource = null): bool
+    {
+        return can_access_resource('Programmer');
+    }
+
     public static function getPages(): array
     {
         return [
