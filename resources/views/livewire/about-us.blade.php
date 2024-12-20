@@ -2,7 +2,6 @@
   <!-- About Us Section -->
   <section class="w-full lg:w-[80%] mx-auto p-6 mt-4">
     <h1 class="text-4xl lg:text-5xl font-bold text-center mb-8">About Us</h1>
-
     <div class="p-4">
         <h2 class="text-xl text-justify">Faridpur Engineering College (FEC) stands as a beacon of academic excellence and technical innovation in Bangladesh. Situated in the heart of Faridpur, the college plays a pivotal role in nurturing the next generation of engineers who are equipped to meet the challenges of an ever-evolving technological landscape. Since its establishment in [2010], the college has been steadfast in it's mission to contribute to national development by producing skilled and competent graduates.</h2>
     </div>

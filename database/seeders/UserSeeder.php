@@ -103,7 +103,7 @@ class UserSeeder extends Seeder
         }
 
         foreach ($programmers as $programmer) {
-            User::create($programmer);
+            $user = User::create($programmer);
         }
     }
 }

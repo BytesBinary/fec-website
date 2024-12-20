@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
+namespace App\Filament\Resources\ResidenceAndCafeteriaResource\Pages;
 
 use App\Filament\Resources\ResidenceAndCafeteriaResource;
 use Filament\Actions;

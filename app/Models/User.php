@@ -32,7 +32,11 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->is_admin_verified && $this->email_verified_at;
+        if (! $this->is_admin_verified || ! $this->email_verified_at) {
+            return false;
+        }
+
+        return true;
     }
 
     protected $hidden = [

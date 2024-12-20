@@ -3,31 +3,25 @@
 namespace App\Filament\Resources\Settings;
 
 use App\Filament\Resources\Settings\BatchResource\Pages;
-use App\Filament\Resources\Settings\BatchResource\RelationManagers;
 use App\Models\AcademicSession;
 use App\Models\Batch;
-use Filament\Forms;
+use App\Traits\HasResourceAccess;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BatchResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Batch::class;
 
     protected static ?string $navigationGroup = 'Settings';
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
-    public static function can( string $action, $record="" ) : bool
-    {
-        return can_access_resource( 'Programmer' );
-    }
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     public static function form(Form $form): Form
     {
@@ -49,7 +43,7 @@ class BatchResource extends Resource
                     ->label('Batch session')
                     ->required()
                     ->unique('batches', 'session', ignoreRecord: true)
-                    ->options(AcademicSession::all()->pluck('session_year', 'session_year'))
+                    ->options(AcademicSession::all()->pluck('session_year', 'session_year')),
             ]);
     }
 
