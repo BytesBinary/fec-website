@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
+namespace App\Filament\Resources\ResidenceAndCafeteriaResource\Pages;
 
 use App\Filament\Resources\ResidenceAndCafeteriaResource;
 use App\Models\Post;
@@ -25,23 +25,24 @@ class CreateResidence extends Page implements HasForms
     protected static string $view = 'filament.manage-residence.create-residence';
 
     public ?array $data;
+
     public string $record = '';
 
-    public function mount( $record = '' )
+    public function mount($record = '')
     {
         $this->record = $record;
 
-        if( $this->record ) {
+        if ($this->record) {
             $post = Post::where('id', $record)->first()->toArray();
-            $housing_details = get_post_meta( $record, 'housing_details' );
+            $housing_details = get_post_meta($record, 'housing_details');
             $post['total_room'] = $housing_details['total_room'];
             $post['capacity'] = $housing_details['total_capacity'];
             $post['occupied'] = $housing_details['total_occupied'];
-            $post['residence_slogan'] = get_post_meta( $record, 'residence_slogan' );
-            $post['dining_schedule'] = get_post_meta( $record, 'dining_schedule' );
-            $post['facilities'] = get_post_meta( $record, 'facilities' );
-            $post['administration'] = get_post_meta( $record, 'administration' );
-            $post['map_url'] = get_post_meta( $record, 'map_url' );
+            $post['residence_slogan'] = get_post_meta($record, 'residence_slogan');
+            $post['dining_schedule'] = get_post_meta($record, 'dining_schedule');
+            $post['facilities'] = get_post_meta($record, 'facilities');
+            $post['administration'] = get_post_meta($record, 'administration');
+            $post['map_url'] = get_post_meta($record, 'map_url');
             $this->form->fill($post);
         }
     }
@@ -51,26 +52,26 @@ class CreateResidence extends Page implements HasForms
         // Update post
         Post::where('id', $this->record)
             ->update([
-            'post_title' => $this->data['post_title'],
-            'post_content' => $this->data['post_content']
-        ]);
+                'post_title' => $this->data['post_title'],
+                'post_content' => $this->data['post_content'],
+            ]);
         // create the housing details post meta
-        create_or_update_post_meta( $this->record, 'housing_details',
+        create_or_update_post_meta($this->record, 'housing_details',
             [
                 'total_room' => $this->data['total_room'],
                 'total_capacity' => $this->data['capacity'],
                 'total_occupied' => $this->data['occupied'],
             ]);
         // create the post meta for residence_slogan
-        create_or_update_post_meta( $this->record, 'residence_slogan', $this->data['residence_slogan'] ?? []);
+        create_or_update_post_meta($this->record, 'residence_slogan', $this->data['residence_slogan'] ?? []);
         // create the post meta for dining schedule
-        create_or_update_post_meta( $this->record, 'dining_schedule', $this->data['dining_schedule'] ?? []);
+        create_or_update_post_meta($this->record, 'dining_schedule', $this->data['dining_schedule'] ?? []);
         // create the post meta for facilities
-        create_or_update_post_meta( $this->record, 'facilities', $this->data['facilities'] ?? []);
+        create_or_update_post_meta($this->record, 'facilities', $this->data['facilities'] ?? []);
         // create the post meta for administration
-        create_or_update_post_meta( $this->record, 'administration', $this->data['administration'] ?? []);
+        create_or_update_post_meta($this->record, 'administration', $this->data['administration'] ?? []);
         // creat the post meta for map url
-        create_or_update_post_meta( $this->record, 'map_url', $this->data['map_url'] ?? []);
+        create_or_update_post_meta($this->record, 'map_url', $this->data['map_url'] ?? []);
 
         send_notification('success', 5000, 'Residence Updated Successfully.');
 
@@ -87,32 +88,32 @@ class CreateResidence extends Page implements HasForms
             'post_category' => 'residence',
             'post_author' => Auth::user()->id,
             'post_slug' => create_unique_post_slug($this->data['post_title']),
-            'post_content' => $this->data['post_content']
+            'post_content' => $this->data['post_content'],
         ]);
         // create the housing details post meta
-        create_or_update_post_meta( $post, 'housing_details',
-        [
-            'total_room' => $this->data['total_room'],
-            'total_capacity' => $this->data['capacity'],
-            'total_occupied' => $this->data['occupied'],
-        ]);
+        create_or_update_post_meta($post, 'housing_details',
+            [
+                'total_room' => $this->data['total_room'],
+                'total_capacity' => $this->data['capacity'],
+                'total_occupied' => $this->data['occupied'],
+            ]);
         // create the post meta for residence_slogan
-        create_or_update_post_meta( $post, 'residence_slogan', $this->data['residence_slogan'] ?? []);
+        create_or_update_post_meta($post, 'residence_slogan', $this->data['residence_slogan'] ?? []);
         // create the post meta for dining schedule
-        create_or_update_post_meta( $post, 'dining_schedule', $this->data['dining_schedule'] ?? []);
+        create_or_update_post_meta($post, 'dining_schedule', $this->data['dining_schedule'] ?? []);
         // create the post meta for facilities
-        create_or_update_post_meta( $post, 'facilities', $this->data['facilities'] ?? []);
+        create_or_update_post_meta($post, 'facilities', $this->data['facilities'] ?? []);
         // create the post meta for administration
-        create_or_update_post_meta( $post, 'administration', $this->data['administration'] ?? []);
+        create_or_update_post_meta($post, 'administration', $this->data['administration'] ?? []);
         // creat the post meta for map url
-        create_or_update_post_meta( $post, 'map_url', $this->data['map_url'] ?? []);
+        create_or_update_post_meta($post, 'map_url', $this->data['map_url'] ?? []);
 
         send_notification('success', 5000, 'Residence Created Successfully.');
 
         return redirect(ResidenceAndCafeteriaResource::getUrl('index'));
     }
 
-    public function form( Form $form ) : Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -184,7 +185,7 @@ class CreateResidence extends Page implements HasForms
                                     ->placeholder('Meat, Curry, Vegetables')
                                     ->label('Food details of the meal')
                                     ->required(),
-                            ])->columns(2)
+                            ])->columns(2),
                     ]),
 
                 // Facilities Section
@@ -201,7 +202,7 @@ class CreateResidence extends Page implements HasForms
                                     ->placeholder('e.g. Equipped with modern appliances and managed by professional cooks to ensure quality.')
                                     ->label('Simple description about the facilities')
                                     ->required(),
-                            ])->columns(2)
+                            ])->columns(2),
                     ]),
 
                 // Administration Section
@@ -226,26 +227,27 @@ class CreateResidence extends Page implements HasForms
                                     ->placeholder('e.g. 01XXXXXXX')
                                     ->label('Enter the mobile number')
                                     ->required(),
-                            ])->columns(2)
+                            ])->columns(2),
                     ]),
             ])
             ->statePath('data');
     }
 
-    public function getFormActions( $action = "save" ) : array
+    public function getFormActions($action = 'save'): array
     {
         $actions = [
             'save' => [
                 Action::make('Save')
                     ->label('Save Residence')
-                    ->action('createResidence')
+                    ->action('createResidence'),
             ],
             'update' => [
                 Action::make('Update')
                     ->label('Update Residence')
-                    ->action('updateResidence')
-            ]
+                    ->action('updateResidence'),
+            ],
         ];
+
         return $actions[$action];
     }
 }

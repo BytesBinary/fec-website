@@ -4,10 +4,13 @@ namespace App\Filament\Resources\ManageRoutine;
 
 use App\Filament\Resources\ManageRoutine\RoutineReportResource\Pages;
 use App\Models\Routine;
+use App\Traits\HasResourceAccess;
 use Filament\Resources\Resource;
 
 class RoutineReportResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Routine::class;
 
     protected static ?string $navigationGroup = 'Manage Routine';
@@ -17,11 +20,6 @@ class RoutineReportResource extends Resource
     protected static ?string $navigationLabel = 'Generate Routine Report';
 
     protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
-
-    public static function can(string $action, $record = ''): bool
-    {
-        return can_access_resource('Programmer');
-    }
 
     public static function getPages(): array
     {

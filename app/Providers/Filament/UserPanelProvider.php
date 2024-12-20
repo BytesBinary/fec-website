@@ -2,7 +2,8 @@
 
 namespace App\Providers\Filament;
 
-use App\CustomRegistration;
+use App\Classes\CustomLogin;
+use App\Classes\CustomRegistration as ClassesCustomRegistration;
 use App\Http\Middleware\UserAuth;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -28,8 +29,8 @@ class UserPanelProvider extends PanelProvider
             ->default()
             ->id('user')
             ->path('user')
-            ->registration(CustomRegistration::class)
-            ->login()
+            ->registration(ClassesCustomRegistration::class)
+            ->login(CustomLogin::class)
             ->passwordReset()
             ->colors([
                 'primary' => Color::Amber,
@@ -49,8 +50,9 @@ class UserPanelProvider extends PanelProvider
                 'Manage Courses',
                 'Manage Routine',
                 'Manage Exams',
-                'Tools',
                 'Settings',
+                'Tools',
+                'Roles',
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([

@@ -2,25 +2,25 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
+use App\Filament\Resources\ResidenceAndCafeteriaResource\Pages;
 use App\Models\Post;
 use App\Models\User;
+use App\Traits\HasResourceAccess;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 class ResidenceAndCafeteriaResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Post::class;
+
     protected static ?string $navigationLabel = 'Residence & Cafeteria';
+
     protected static ?string $modelLabel = 'Residence';
 
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
-
-    public static function can( string $action, $record="" ) : bool
-    {
-        return can_access_resource( 'Programmer' );
-    }
 
     public static function table(Table $table): Table
     {
@@ -43,13 +43,6 @@ class ResidenceAndCafeteriaResource extends Resource
             ])
             ->actions(create_table_actions())
             ->bulkActions(create_table_bulk_actions());
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

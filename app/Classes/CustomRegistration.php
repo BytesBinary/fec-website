@@ -1,22 +1,20 @@
 <?php
 
-namespace App;
+namespace App\Classes;
 
 use App\Models\Designation;
-use Closure;
 use DanHarrin\LivewireRateLimiting\Exceptions\TooManyRequestsException;
 use Filament\Events\Auth\Registered;
-use Filament\Facades\Filament;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Http\Responses\Auth\Contracts\RegistrationResponse;
-use Filament\Pages\Auth\Register;
 use Filament\Forms\Form;
 use Filament\Forms\Get;
+use Filament\Http\Responses\Auth\Contracts\RegistrationResponse;
+use Filament\Pages\Auth\Register;
 
 class CustomRegistration extends Register
 {
-    public function form(Form $form) : Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -80,10 +78,6 @@ class CustomRegistration extends Register
         });
 
         event(new Registered($user));
-
-        Filament::auth()->login($user);
-
-        session()->regenerate();
 
         return app(RegistrationResponse::class);
     }

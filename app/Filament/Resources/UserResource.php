@@ -5,33 +5,27 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\UserResource\Pages;
 use App\Models\Designation;
 use App\Models\User;
+use App\Traits\HasResourceAccess;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Resources\Resource;
-use Filament\Support\Colors\Color;
-use Filament\Tables\Actions\Action;
 use Filament\Tables\Actions\BulkAction;
-use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
-
-    public static function can( string $action, $record="" ) : bool
-    {
-        return can_access_resource( 'Programmer' );
-    }
 
     public static function form(Form $form): Form
     {
@@ -44,7 +38,7 @@ class UserResource extends Resource
                 TextInput::make('email')
                     ->label('Email')
                     ->placeholder('Enter Your Email')
-                    ->unique('users', 'email', ignoreRecord:true)
+                    ->unique('users', 'email', ignoreRecord: true)
                     ->required(),
                 Select::make('designation')
                     ->label('Designation')
@@ -55,7 +49,7 @@ class UserResource extends Resource
                 TextInput::make('short_name')
                     ->label('Short Name')
                     ->placeholder('Enter Your Short Name')
-                    ->unique('users', 'short_name', ignoreRecord:true)
+                    ->unique('users', 'short_name', ignoreRecord: true)
                     ->visible(function (Get $get) {
                         return $get('designation') !== 'Student';
                     })
@@ -108,7 +102,7 @@ class UserResource extends Resource
                             $record->is_admin_verified = true;
                             $record->save();
                         }
-                        send_notification( 'success', 2000, 'Users verify successfully' );
+                        send_notification('success', 2000, 'Users verify successfully');
                     })
                     ->requiresConfirmation()
                     ->color('success')
@@ -121,7 +115,7 @@ class UserResource extends Resource
                             $record->email_verified_at = null;
                             $record->save();
                         }
-                        send_notification( 'success', 5000, 'Users unverified successfully' );
+                        send_notification('success', 5000, 'Users unverified successfully');
                     })
                     ->requiresConfirmation()
                     ->color('warning')
@@ -145,10 +139,11 @@ class UserResource extends Resource
         ];
     }
 
-    private static function getFilters( array $default_filters = [] ) {
+    private static function getFilters(array $default_filters = [])
+    {
         $desigantions = Designation::all()->toArray();
 
-        foreach( $desigantions as $desigantion ) {
+        foreach ($desigantions as $desigantion) {
             $default_filters[] = Filter::make($desigantion['designation'])
                 ->query(fn ($query) => $query->where('designation', $desigantion['designation']));
         }

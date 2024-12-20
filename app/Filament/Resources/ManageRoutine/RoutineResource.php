@@ -4,10 +4,13 @@ namespace App\Filament\Resources\ManageRoutine;
 
 use App\Filament\Resources\ManageRoutine;
 use App\Models\Routine;
+use App\Traits\HasResourceAccess;
 use Filament\Resources\Resource;
 
 class RoutineResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Routine::class;
 
     protected static ?string $navigationGroup = 'Manage Routine';
