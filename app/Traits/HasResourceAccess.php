@@ -2,7 +2,6 @@
 
 namespace App\Traits;
 
-use App\Models\Designation;
 use App\Models\ResourceHasAccess;
 
 trait HasResourceAccess
@@ -14,7 +13,7 @@ trait HasResourceAccess
 
     private function hasAccess($resource): bool
     {
-        $designation = auth()->user()->designation;
+        $designation_id = auth()->user()->designation;
         $resourceAccesses = ResourceHasAccess::where('resource_class', $resource)->get();
         if ($resourceAccesses->isEmpty()) {
             return false;
@@ -23,7 +22,7 @@ trait HasResourceAccess
         foreach ($resourceAccesses as $access) {
             $roles = json_decode($access->role_ids, true);
             if (! is_array($roles)) {
-                $haveAccess = $this->haveAccess($roles, $designation);
+                $haveAccess = $this->haveAccess($roles, $designation_id);
                 if ($haveAccess) {
                     return true;
                 } else {
@@ -31,7 +30,7 @@ trait HasResourceAccess
                 }
             }
             foreach ($roles as $role) {
-                $haveAccess = $this->haveAccess($role, $designation);
+                $haveAccess = $this->haveAccess($role, $designation_id);
                 if ($haveAccess) {
                     return true;
                 }
@@ -41,14 +40,8 @@ trait HasResourceAccess
         return false;
     }
 
-    private function haveAccess($role, $designation): bool
+    private function haveAccess($role, $designation_id): bool
     {
-        $user_designation = Designation::find($role);
-        if (! $user_designation) {
-            return false;
-        }
-        if ($user_designation->designation == $designation) {
-            return true;
-        }
+        return $role === $designation_id;
     }
 }
