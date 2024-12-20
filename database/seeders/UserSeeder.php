@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Designation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -15,73 +16,73 @@ class UserSeeder extends Seeder
         $teachers = [
             [
                 'name' => 'Md. Suman Reza',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Md. Rasel Ahmed',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Md. Zillur Rahman',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Md. Shah Jamal Molla',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Zannatun Naeem',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Chandra Mohan Halder',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Sameya Akter',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Md. Rany Ahmed',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Ayesha Akter',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Afia Begum',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Mohammad Shamsul Islam',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
             [
                 'name' => 'Md. Tuhin Reza',
-                'designation' => 'Teacher',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
@@ -91,7 +92,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'admin',
                 'email' => 'admin@fec.com',
-                'designation' => 'Programmer',
+                'designation' => Designation::where('designation', 'Programmer')->first()->id,
                 'email_verified_at' => now(),
                 'is_admin_verified' => true,
                 'password' => bcrypt('admin'),
@@ -103,7 +104,7 @@ class UserSeeder extends Seeder
         }
 
         foreach ($programmers as $programmer) {
-            $user = User::create($programmer);
+            User::create($programmer);
         }
     }
 }

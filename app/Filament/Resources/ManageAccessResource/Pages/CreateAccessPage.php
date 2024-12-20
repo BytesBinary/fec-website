@@ -44,8 +44,11 @@ class CreateAccessPage extends Page implements HasForms
     public function filForm()
     {
         $data = ResourceHasAccess::find($this->record);
-        $this->resource_class = $data->resource_class;
-        $this->role_ids = json_decode($data->role_ids);
+        $role_ids = (is_array($data->role_ids)) ? $data->role_ids : json_decode($data->role_ids, true);
+        $this->form->fill([
+            'resource_class' => $data->resource_class,
+            'role_ids' => $role_ids,
+        ]);
     }
 
     public function createOrUpdate()

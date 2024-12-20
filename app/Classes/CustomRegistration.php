@@ -30,7 +30,7 @@ class CustomRegistration extends Register
                 Select::make('designation')
                     ->label('Designation')
                     ->placeholder('Select Designation')
-                    ->options(Designation::all()->pluck('designation', 'designation')->toArray())
+                    ->options(Designation::all()->pluck('designation', 'id')->toArray())
                     ->reactive()
                     ->required(),
                 TextInput::make('short_name')
