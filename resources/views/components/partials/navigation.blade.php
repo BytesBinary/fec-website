@@ -12,7 +12,7 @@
                     title="{{$menu['title']}}" />
             @endforeach
         </x-partials.desktop-menu>
-    </div>
+    </div> <h1> hello world </h1>
     <x-partials.mobile-menu>
         @foreach($menus as $key=>$menu)
         <div class="border-t border-gray-100 hover:bg-bgColorLighter hover:text-black">
