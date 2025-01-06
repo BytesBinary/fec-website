@@ -1,37 +1,81 @@
-<div class="relative bg-gradient-to-tr from-teal-600 via-blue-800 to-gray-900 pt-1 text-white px-6 md:flex md:items-center md:justify-between shadow-xl hidden">
-    <!-- Left: University Logo and Title -->
-    <div class="relative flex items-center gap-4 z-10">
-        <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-t from-[#abef5f] via-lime-200 to-teal-100 rounded-[30px] rounded-bl-none rounded-br-none  flex items-center justify-center shadow-lg">
-            <img src="{{ asset('images/logo.png') }}" alt="University Logo" class="h-9 mt-1 md:h-12">
+<div class="bg-blue-900 text-white text-sm">
+    <div class="container mx-auto flex items-center justify-between py-2 px-4">
+        <!-- Social Links -->
+        <div class="flex items-center space-x-4">
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
         </div>
-        <h1 class="hidden lg:block text-xl md:text-2xl font-bold uppercase tracking-wide text-white drop-shadow-lg">
-            Faridpur Engineering College
-        </h1>
-        <h1 class="hidden md:block lg:hidden text-xl md:text-2xl font-bold uppercase tracking-wide text-white drop-shadow-lg">
-            FEC
-        </h1>
+
+        <!-- Top Bar Links -->
+        <div class="flex items-center space-x-6">
+            <a href="#" class="hover:text-gray-300">Careers</a>
+            <a href="#" class="hover:text-gray-300">Help Desk</a>
+            <a href="#" class="hover:text-gray-300">Login</a>
+        </div>
     </div>
+</div>
 
-    <!-- Right: Contact Actions -->
-    <div class="relative mt-4 md:mt-0 flex flex-col md:flex-row items-center gap-2 z-10">
-        <!-- Gmail Button -->
-        <a href="mailto:info@fec.edu.bd" aria-label="Email Faridpur Engineering College"
-            class="flex items-center gap-1 px-3 py-1 text-xs bg-white text-red-700 rounded-full shadow-md hover:bg-red-600 hover:text-white transition duration-300">
-            <x-svg-icon.email></x-svg-icon.email>
-            Email
-        </a>
+<!-- Header Section -->
+<div class="bg-blue-800 text-white">
+    <div class="container mx-auto flex items-center justify-between py-4 px-4">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <div class="w-6 h-6 bg-yellow-500"></div>
+            <span class="font-bold text-lg">BYRON.</span>
+        </div>
 
-        <!-- Call Button -->
-        <a href="tel:+8801234567890" aria-label="Call Faridpur Engineering College"
-            class="flex items-center gap-1 px-3 py-1 text-xs bg-white text-teal-700 rounded-full shadow-md hover:bg-teal-600 hover:text-white transition duration-300">
-            <x-svg-icon.phone></x-svg-icon.phone>
-            Call
-        </a>
+        <!-- Contact Info -->
+        <div class="hidden md:flex items-center space-x-6">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-phone-alt text-yellow-500"></i>
+                <span>(+1) 212-946-2707</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-envelope text-yellow-500"></i>
+                <span>info@ByronCo.com</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-map-marker-alt text-yellow-500"></i>
+                <span>112 W 34th St, NYC</span>
+            </div>
+        </div>
 
-        <!-- Address -->
-        <div class="text-center text-xs text-gray-300">
-            <p>Dr. Kaji Motaher Hossain Road</p>
-            <p>Komolapur, Faridpur - 7800</p>
+        <!-- Button -->
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 py-2 px-4 rounded">
+            Theme Docs
+        </button>
+    </div>
+</div>
+
+<!-- Navigation Bar -->
+<div class="bg-white shadow-md">
+    <div class="container mx-auto flex items-center justify-between py-2 px-4">
+        <!-- Navigation Links -->
+        <div class="flex items-center space-x-6">
+            <div class="relative group">
+                <a href="#" class="hover:text-blue-900">Home</a>
+                <div class="absolute left-0 hidden group-hover:block bg-white border shadow-lg mt-2">
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sub Item 1</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sub Item 2</a>
+                </div>
+            </div>
+            <a href="#" class="hover:text-blue-900">About</a>
+            <a href="#" class="hover:text-blue-900">Services</a>
+            <a href="#" class="hover:text-blue-900">Projects</a>
+            <a href="#" class="hover:text-blue-900">News</a>
+            <a href="#" class="hover:text-blue-900">Shop</a>
+            <a href="#" class="hover:text-blue-900">Contact</a>
+        </div>
+
+        <!-- Cart and Search -->
+        <div class="flex items-center space-x-4">
+            <a href="#" class="relative">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="absolute top-0 right-0 text-xs bg-green-500 text-white rounded-full w-4 h-4 flex items-center justify-center">0</span>
+            </a>
+            <a href="#"><i class="fas fa-search"></i></a>
         </div>
     </div>
 </div>

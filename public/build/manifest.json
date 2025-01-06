@@ -1,67 +1,62 @@
 {
-  "_swiper-bundle-CUnLjt9d.js": {
-    "file": "assets/swiper-bundle-CUnLjt9d.js",
+  "_swiper-bundle-gA8vv5XH.js": {
+    "file": "assets/swiper-bundle-gA8vv5XH.js",
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BMy-f5od.css",
+    "file": "assets/app-CmWNzB2F.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
-  "resources/css/filament/user/theme.css": {
-    "file": "assets/theme-BdjUohhd.css",
-    "src": "resources/css/filament/user/theme.css",
-    "isEntry": true
-  },
   "resources/js/app.js": {
-    "file": "assets/app-DYBQowRy.js",
+    "file": "assets/app-CW1eL58A.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/js/home/clubs.js": {
-    "file": "assets/clubs-D3HG8wlN.js",
+    "file": "assets/clubs-BGj3Ql7U.js",
     "name": "clubs",
     "src": "resources/js/home/clubs.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-CUnLjt9d.js"
+      "_swiper-bundle-gA8vv5XH.js"
     ]
   },
   "resources/js/home/departments.js": {
-    "file": "assets/departments-CMw9J_Rs.js",
+    "file": "assets/departments-5c3wLAc5.js",
     "name": "departments",
     "src": "resources/js/home/departments.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-CUnLjt9d.js"
+      "_swiper-bundle-gA8vv5XH.js"
     ]
   },
   "resources/js/home/gallery.js": {
-    "file": "assets/gallery-8ak7Sm-e.js",
+    "file": "assets/gallery-D8AywSCC.js",
     "name": "gallery",
     "src": "resources/js/home/gallery.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-CUnLjt9d.js"
+      "_swiper-bundle-gA8vv5XH.js"
     ]
   },
   "resources/js/home/hero.js": {
-    "file": "assets/hero-BK-pMRqs.js",
+    "file": "assets/hero-Dtfvi_zB.js",
     "name": "hero",
     "src": "resources/js/home/hero.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-CUnLjt9d.js"
+      "_swiper-bundle-gA8vv5XH.js"
     ]
   },
   "resources/js/residence.js": {
-    "file": "assets/residence-BXBb1udg.js",
+    "file": "assets/residence-woxgcmi6.js",
     "name": "residence",
     "src": "resources/js/residence.js",
     "isEntry": true,
     "imports": [
-      "_swiper-bundle-CUnLjt9d.js"
+      "_swiper-bundle-gA8vv5XH.js"
     ]
   }
 }

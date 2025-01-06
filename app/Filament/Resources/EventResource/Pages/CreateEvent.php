@@ -5,11 +5,9 @@ namespace App\Filament\Resources\EventResource\Pages;
 use App\Filament\Resources\EventResource;
 use App\Models\Post;
 use Filament\Actions\Action;
-use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -29,20 +27,24 @@ class CreateEvent extends Page implements HasForms
     protected static string $view = 'filament.manage-events.create-event';
 
     public ?array $basic_details = [];
+
     public string $event_description = '';
+
     public ?array $segments = [];
+
     public ?array $contact_details = [];
+
     public ?array $event = [];
 
     public string $record;
 
-    public function mount( $record = '' )
+    public function mount($record = '')
     {
         $this->record = $record;
 
-        if( $this->record ) {
+        if ($this->record) {
             $event = Post::where('id', $record)->first()->toArray();
-            $event_details = get_post_meta( $record, 'event_details' );
+            $event_details = get_post_meta($record, 'event_details');
             $event['basic_details'] = [
                 'post_title' => $event['post_title'],
                 'short_description' => $event_details['short_description'],
@@ -52,8 +54,8 @@ class CreateEvent extends Page implements HasForms
                 'feature_image' => $event_details['feature_image'],
             ];
             $event['event_description'] = $event['post_content'];
-            $event['segments'] = get_post_meta( $record, 'event_segments' );
-            $event['contact_details'] = get_post_meta( $record, 'contact_details' );
+            $event['segments'] = get_post_meta($record, 'event_segments');
+            $event['contact_details'] = get_post_meta($record, 'contact_details');
             $this->form->fill($event);
         }
     }
@@ -80,7 +82,6 @@ class CreateEvent extends Page implements HasForms
         send_notification('success', '5000', 'Residence updated successfully');
     }
 
-
     public function createEvent()
     {
         $this->validate();
@@ -91,7 +92,7 @@ class CreateEvent extends Page implements HasForms
             $file = current($this->basic_details['feature_image']);
 
             $fileExtension = $file->getClientOriginalExtension();
-            $uniqueFileName = uniqid('event_', true) . '.' . $fileExtension;
+            $uniqueFileName = uniqid('event_', true).'.'.$fileExtension;
 
             $imagePath = "event/{$eventDate}/{$uniqueFileName}";
 
@@ -99,7 +100,6 @@ class CreateEvent extends Page implements HasForms
 
             $this->basic_details['feature_image'] = str_replace('public/', '', $savedPath);
         }
-
 
         $event = Post::create([
             'post_title' => $this->basic_details['post_title'],
@@ -124,11 +124,11 @@ class CreateEvent extends Page implements HasForms
         send_notification('success', '5000', 'Event created successfully');
     }
 
-    public function form(Form $form) : Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
-               Section::make('Basic Details')
+                Section::make('Basic Details')
                     ->columns(2)
                     ->schema([
                         TextInput::make('post_title')
@@ -178,8 +178,8 @@ class CreateEvent extends Page implements HasForms
                     ->label('Event Segments')
                     ->columns(1)
                     ->schema([
-                       Repeater::make('segments')
-                           ->columns(2)
+                        Repeater::make('segments')
+                            ->columns(2)
                             ->schema([
                                 TextInput::make('segment_title')
                                     ->label('Segment Title')
@@ -215,25 +215,26 @@ class CreateEvent extends Page implements HasForms
                                     ->tel()
                                     ->required()
                                     ->placeholder('Enter the phone number of the contact person'),
-                            ])->statePath('contact_details')
-                    ])
+                            ])->statePath('contact_details'),
+                    ]),
             ]);
     }
 
-    public function getFormActions( $action = "save" ) : array
+    public function getFormActions($action = 'save'): array
     {
         $actions = [
             'save' => [
                 Action::make('Save')
                     ->label('Save Event')
-                    ->action('createEvent')
+                    ->action('createEvent'),
             ],
             'update' => [
                 Action::make('Update')
                     ->label('Update Event')
-                    ->action('updateEvent')
-            ]
+                    ->action('updateEvent'),
+            ],
         ];
+
         return $actions[$action];
     }
 }
