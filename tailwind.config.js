@@ -6,5 +6,12 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
-    theme: {},
+    theme: {
+        extend:{
+            colors:{
+                deepBlue: "#030F27",
+
+            }
+        }
+    },
 };
