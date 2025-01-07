@@ -43,7 +43,11 @@
                 <p class="text-sm mr-3">info@ByronCo.com</p>
             </span>
             <span class="flex">
-                <svg class="w-4 h-4 mr-1 translate-y-[2px] fill-[#add8e6]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"/></svg>
+                <svg class="w-4 h-4 mr-1 translate-y-[2px] fill-[#add8e6]" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+                </svg>
                 <p class="text-sm">112 W 34th St, NYC</p>
             </span>
         </div>
@@ -67,58 +71,8 @@
 
         <!-- Login Button -->
         <button
-            class="px-8 py-2 border-2 border-yellow-500 text-yellow-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
+            class="hidden md:block px-8 py-2 border-2 border-yellow-500 text-yellow-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
             Login
         </button>
     </div>
-</div>
-
-<!-- Menu Links -->
-<nav
-    class="hidden container w-[1170px] mx-auto bg-white text-gray-800 px-4 py-7 rounded shadow-lg md:flex justify-evenly text-lg md:text-base md:shadow-lg -translate-y-8">
-    <a href="#" class="hover:text-blue-500">Home</a>
-    <ul
-        class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Main</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Construction</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Engineering</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Factory</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Architecture</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Industrial</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Handyman</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Building</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Renewable Energy</a>
-        </li>
-    </ul>
-    </li>
-
-    <li><a href="#" class="text-gray-800 hover:text-yellow-500">About</a></li>
-    <li><a href="#" class="text-gray-800 hover:text-yellow-500">Services</a></li>
-    <li><a href="#" class="text-gray-800 hover:text-yellow-500">Projects</a></li>
-    <li><a href="#" class="text-gray-800 hover:text-yellow-500">News</a></li>
-    </ul>
-    <a href="#" class="hover:text-blue-500">About</a>
-    <a href="#" class="hover:text-blue-500">Services</a>
-    <a href="#" class="hover:text-blue-500">Projects</a>
-    <a href="#" class="hover:text-blue-500">News</a>
-    <a href="#" class="hover:text-blue-500">Shop</a>
-    <a href="#" class="hover:text-blue-500">Contact</a>
-</nav>
 </div>

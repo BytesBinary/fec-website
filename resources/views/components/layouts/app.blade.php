@@ -12,8 +12,8 @@
 <body>
     <x-partials.header />
     <x-partials.navigation />
-{{--    {{ $slot }}--}}
-{{--    <x-partials.footer />--}}
+    {{ $slot }}
+    <x-partials.footer />
     @vite(['resources/js/app.js'])
     @stack('scripts')
 </body>

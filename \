@@ -1,6 +1,6 @@
 <!-- Menu Links -->
 <nav
-    class="hidden container w-[1170px] mx-auto bg-white text-gray-800 px-4 py-7 rounded shadow-lg md:flex justify-evenly text-lg md:text-base md:shadow-lg z-50 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    class="hidden container w-[1170px] mx-auto bg-white text-gray-800 px-4 py-7 rounded shadow-lg md:flex justify-evenly text-lg md:text-base md:shadow-lg z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-8">
     <a href="#" class="hover:text-blue-500">Home</a>
     <a href="#" class="hover:text-blue-500">About</a>
     <a href="#" class="hover:text-blue-500">Services</a>
