@@ -55,7 +55,7 @@
 </div>
 
 <!-- Main Navigation -->
-<div class="bg-deepBlue text-white px-5">
+<div class="bg-deepBlue text-white px-5 pb-3">
     <div class="container w-[1170px] mx-auto flex justify-between items-center py-8">
         <!-- Logo and Address -->
         <div class="flex items-center space-x-4 md:-translate-y-3">
