@@ -9,20 +9,20 @@
 
 @if(!$isDropdown)
     @if(!$mobile)
-        <a href="{{route($route)}}" class="hover:bg-lime-50 px-3 py-2 rounded" wire:navigate>{{$title}}</a>
+        <a href="{{route($route)}}" class="hover:bg-[#f5ad0d] px-3 py-2 rounded" wire:navigate>{{$title}}</a>
     @else
         <a href="{{route($route)}}" class="block px-4 py-2" wire:navigate>{{$title}}</a>
     @endif
 @else
     @if(!$mobile)
         <div class="relative" @mouseover="currentDropdown = '{{$slug}}'" @mouseleave="currentDropdown = null">
-            <button :class="{'bg-lime-50': currentDropdown === '{{$slug}}', 'hover:bg-lime-50': currentDropdown !== '{{$slug}}'}" class="flex items-center  px-3 py-2 rounded">
+            <button :class="{'bg-[#f5ad0d]': currentDropdown === '{{$slug}}', 'hover:bg-[#f5ad0d]': currentDropdown !== '{{$slug}}'}" class="flex items-center  px-3 py-2 rounded">
                 {{$title}}
                 <x-svg-icon.drop-down-icon />
             </button>
-            <div x-show="currentDropdown === '{{$slug}}'" class="absolute left-0 mt-2 w-48 bg-lime-50 rounded shadow-lg z-10" x-transition>
+            <div x-show="currentDropdown === '{{$slug}}'" class="absolute left-0 mt-2 w-48 bg-lime-500 rounded shadow-lg z-10" x-transition>
                 @foreach($dropdowns as $dropdown)
-                    <a href="{{isset($dropdown['route']) ? route($dropdown['route']) : ''}}" class="block px-4 py-2 text-sm hover:bg-bgColorLighter" wire:navigate>{{$dropdown['title']}}</a>
+                    <a href="{{isset($dropdown['route']) ? route($dropdown['route']) : ''}}" class="block px-4 py-2 text-sm hover:bg-sky-950 hover:text-white" wire:navigate>{{$dropdown['title']}}</a>
                 @endforeach
             </div>
         </div>
