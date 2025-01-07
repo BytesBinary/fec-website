@@ -1,6 +1,6 @@
 <!-- Top Bar -->
-<div class="w-full bg-deepBlue text-white border-b border-blue-400">
-    <div class="hidden container w-[1170px] mx-auto lg:flex items-center justify-between px-4 lg:px-0 py-3">
+<div class="w-full bg-deepBlue text-white border-b border-blue-400 border-opacity-75">
+    <div class="hidden container w-[1170px] mx-auto lg:flex items-center justify-between px-4 lg:px-0 py-3 opacity-75">
         <!-- Social Icons -->
         <div class="flex items-center space-x-6 px-2">
             <svg class="w-5 h-5 fill-[#add8e6]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
