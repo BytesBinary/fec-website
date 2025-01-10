@@ -1,6 +1,8 @@
 <!-- Top Bar -->
+@php $menus = config('menu.main_menu') @endphp
 <div class="w-full bg-deepBlue text-white border-b border-blue-400 border-opacity-75">
-    <div class="hidden container lg:w-[1170px] mx-auto lg:flex items-center justify-between px-4 lg:px-0 py-3 opacity-75">
+    <div
+        class="hidden container lg:w-[1170px] mx-auto lg:flex items-center justify-between px-4 lg:px-0 py-3 opacity-75">
         <!-- Social Icons -->
         <div class="flex items-center space-x-6 px-2">
             <svg class="w-4 h-4 fill-[#add8e6]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -74,5 +76,15 @@
             class="hidden md:block px-8 py-2 border-2 border-yellow-500 text-yellow-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
             Login
         </button>
+
+        <!-- Mobile Menu Button -->
+        <x-partials.mobile-menu>
+            @foreach ($menus as $key => $menu)
+                <div class="border-t border-gray-100 hover:bg-bgColorLighter hover:text-black">
+                    <x-menu :mobile="true" :isDropdown="$menu['isDropdown']" :dropdowns="$menu['isDropdown'] ? $menu['dropdowns'] : []" :slug="$key" :route="$menu['route']"
+                        title="{{ $menu['title'] }}" />
+                </div>
+            @endforeach
+        </x-partials.mobile-menu>
     </div>
 </div>
