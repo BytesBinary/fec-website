@@ -52,7 +52,7 @@
                     <!-- Dropdown Button -->
                     <button
                         @click="currentDropdown = (currentDropdown === '{{ $slug }}' ? null : '{{ $slug }}')"
-                        class="w-full text-left px-4 py-2 flex justify-between items-center bg-[#030f27] text-gray-100 rounded-md transition duration-300 ease-in-out">
+                        class="w-full text-left px-4 py-2 flex justify-between items-center bg-[#030f27] text-white rounded-md transition duration-300 ease-in-out">
                         {{ $title }}
                         <x-svg-icon.drop-down-icon />
                     </button>
@@ -69,7 +69,7 @@
                         style="display: none;" wire:ignore>
                         @foreach ($dropdowns as $dropdown)
                             <a href="{{ isset($dropdown['route']) ? route($dropdown['route']) : '#' }}"
-                                class="block px-6 py-3 text-md text-gray-100 hover:text-gray-300 border-t border-gray-600 first:border-t-0 transition duration-300 ease-in-out"
+                                class="block px-6 py-3 text-md text-white hover:text-[#f5ad0d] border-t border-gray-600 first:border-t-0 transition duration-300 ease-in-out"
                                 wire:navigate>
                                 - {{ $dropdown['title'] }}
                             </a>

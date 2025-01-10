@@ -81,7 +81,7 @@
         <div class="lg:hidden overflow-y-auto z-50">
             <x-partials.mobile-menu>
                 @foreach ($menus as $key => $menu)
-                    <div class="border-t border-gray-400 border-opacity-50 hover:text-gray-200">
+                    <div class="border-t border-gray-400 border-opacity-50 hover:text-[#f5ad0d]">
                         <x-menu :mobile="true" :isDropdown="$menu['isDropdown']" :dropdowns="$menu['isDropdown'] ? $menu['dropdowns'] : []" :slug="$key"
                             :route="$menu['route']" :title="$menu['title']" />
                     </div>
