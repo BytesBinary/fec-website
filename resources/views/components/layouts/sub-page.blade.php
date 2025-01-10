@@ -1,9 +1,9 @@
 <x-layouts.app :title="$title ?? ''">
-    <div class="container mx-auto mt-10 lg:mt-28 w-full bg-[url({{asset("common-background.jpeg")}})]">
+    <div class="container mx-auto mt-10 lg:mt-28 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-6">
             <!-- Sidebar Menu -->
-            <div class="w-full mx-auto mb-10 col-span-1 rounded-lg p-5 border {{!empty($sideNavCss) ? $sideNavCss : 'bg-deepBlue shadow-md border-blue-200'}}">
-                <h2 class="text-xl font-bold text-gray-200 hover:text-[#f5ad0d] transition duration-300 mb-4">
+            <div class="w-full mx-auto mb-10 col-span-1 rounded-lg p-5 border {{!empty($sideNavCss) ? $sideNavCss : 'bg-[#f2f0fe] shadow-md border-blue-200'}}">
+                <h2 class="text-xl font-bold text-deepBlue hover:text-[#f5ad0d] transition duration-300 mb-4">
                     <a href="{{!empty($cardRoute) ? route($cardRoute) : '#'}}" wire:navigate>{{$cardTitle}}</a>
                 </h2>
                 <hr class="border-blue-300 mb-4">
