@@ -4,7 +4,7 @@
             <p class="text-center mb-8 text-3xl md:text-5xl font-bold text-green-900">
                 Administration
             </p>
-            <hr class="w-48 h-1 mx-auto bg-green-400 border-0 rounded">
+            <hr class="w-48 h-1 mx-auto bg-blue-600 border-0 rounded">
 
             <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4 hover:cursor-pointer">
                 <a href="{{ route('principal') }}" wire:navigate>
