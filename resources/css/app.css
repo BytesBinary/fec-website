@@ -6,116 +6,116 @@
 @import "glightbox/dist/css/glightbox.min.css";
 @import 'swiper/swiper-bundle.css'; /* Add this for Swiper styles */
 
-/*:root {*/
-/*    --default-font: "Poppins", sans-serif ;*/
-/*    --heading-font: "Poppins",  sans-serif;*/
-/*    --nav-font: "Poppins",  sans-serif;*/
-/*    --primary-color: #abef5f;*/
-/*    --secondary-deep-color: #f97316;*/
-/*    --secondary-light-color: #facc15;*/
-/*    --test-color: #ffa800;*/
-/*}*/
+:root {
+    --default-font: "Poppins", sans-serif ;
+    --heading-font: "Poppins",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+    --primary-color: #abef5f;
+    --secondary-deep-color: #f97316;
+    --secondary-light-color: #facc15;
+    --test-color: #ffa800;
+}
 
-/*body {*/
-/*    font-family: 'Poppins', sans-serif !important;*/
-/*}*/
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
 
-/*.bangla-font {*/
-/*    font-family: 'SolaimanLipi', Arial, sans-serif !important;*/
-/*}*/
+.bangla-font {
+    font-family: 'SolaimanLipi', Arial, sans-serif !important;
+}
 
-/*!**/
-/*Off Canvas CSS*/
-/* *!*/
+/*
+Off Canvas CSS
+ */
 
-/*.off-canvas-enter-active, .off-canvas-leave-active {*/
-/*    transition: transform 0.3s ease-in-out;*/
-/*}*/
-/*.off-canvas-enter, .off-canvas-leave-to {*/
-/*    transform: translateX(-100%);*/
-/*}*/
+.off-canvas-enter-active, .off-canvas-leave-active {
+    transition: transform 0.3s ease-in-out;
+}
+.off-canvas-enter, .off-canvas-leave-to {
+    transform: translateX(-100%);
+}
 
-/*!**/
-/*Landing Page CSS*/
-/* *!*/
+/*
+Landing Page CSS
+ */
 
-/*.landing-about .pulse {*/
-/*    animation: hero-section-animation 3s linear infinite*/
-/*}*/
+.landing-about .pulse {
+    animation: hero-section-animation 3s linear infinite
+}
 
-/*.landing-about .pulse svg {*/
-/*    font-size: 28px;*/
-/*}*/
+.landing-about .pulse svg {
+    font-size: 28px;
+}
 
-/*@keyframes hero-section-animation {*/
-/*    0% {*/
-/*        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);*/
-/*    }*/
+@keyframes hero-section-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
 
-/*    40% {*/
-/*        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7);*/
-/*    }*/
+    40% {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
 
-/*    80% {*/
-/*        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);*/
-/*    }*/
+    80% {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
 
-/*    100% {*/
-/*        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);*/
-/*    }*/
-/*}*/
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+}
 
-/*@keyframes zoomIn {*/
-/*    0% {*/
-/*        transform: scale(1.2);*/
-/*        opacity: 1;*/
-/*    }*/
-/*    100% {*/
-/*        transform: scale(1);*/
-/*        opacity: 1;*/
-/*    }*/
-/*}*/
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
-/*@keyframes zoomOut {*/
-/*    0% {*/
-/*        transform: scale(1.2);*/
-/*        opacity: 1;*/
-/*    }*/
-/*    100% {*/
-/*        transform: scale(1);*/
-/*        opacity: 1;*/
-/*    }*/
-/*}*/
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
-/*.zoom-in {*/
-/*    animation: zoomIn 2s ease forwards; !* Increased duration for smoother zoom-in *!*/
-/*}*/
+.zoom-in {
+    animation: zoomIn 2s ease forwards; /* Increased duration for smoother zoom-in */
+}
 
-/*!* Ensure Swiper is responsive and doesn't overflow *!*/
-/*.swiper-container {*/
-/*    width: 100%;*/
-/*    text-align: center;*/
-/*    overflow: hidden;*/
-/*    padding: 0;  !* Remove any padding that might affect responsiveness *!*/
-/*}*/
+/* Ensure Swiper is responsive and doesn't overflow */
+.swiper-container {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;  /* Remove any padding that might affect responsiveness */
+}
 
-/*.swiper-slide {*/
-/*    text-align: center;*/
-/*    width: auto; !* Adjust slide width for better responsiveness *!*/
-/*    flex-shrink: 0; !* Prevent slides from shrinking on smaller screens *!*/
-/*}*/
+.swiper-slide {
+    text-align: center;
+    width: auto; /* Adjust slide width for better responsiveness */
+    flex-shrink: 0; /* Prevent slides from shrinking on smaller screens */
+}
 
-/*!* post fonts *!*/
-/*.text-cng{*/
-/*    font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol ;*/
-/*}*/
+/* post fonts */
+.text-cng{
+    font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol ;
+}
 
-/*!* post fonts *!*/
-/*.swiper-container-hero-section .swiper-button-next,.swiper-button-prev{*/
-/*    color: transparent;*/
-/*}*/
-/*@media (max-width: 768px) {*/
-/*    .swiper-container-hero-section .swiper-button-next,.swiper-button-prev {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
+/* post fonts */
+.swiper-container-hero-section .swiper-button-next,.swiper-button-prev{
+    color: transparent;
+}
+@media (max-width: 768px) {
+    .swiper-container-hero-section .swiper-button-next,.swiper-button-prev {
+        display: none;
+    }
+}
