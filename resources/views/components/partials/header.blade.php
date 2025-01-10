@@ -22,7 +22,7 @@
             <div class="hidden md:flex space-x-10 border-r border-x-blue-300 px-6 border-l">
                 <a href="#" class="hover:text-blue-500">Careers</a>
                 <a href="#" class="hover:text-blue-500">Help Desk</a>
-                <a href="#" class="hover:text-blue-500">Login</a>
+                <a href="#" class="hover:text-blue-500">Alumni</a>
             </div>
         </div>
 
@@ -57,10 +57,10 @@
 </div>
 
 <!-- Main Navigation -->
-<div class="bg-deepBlue text-white px-5 pb-3">
-    <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 md:py-8 lg:py-8">
+<div class="bg-deepBlue text-white px-5 lg:pb-3">
+    <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 lg:py-8">
         <!-- Logo and Address -->
-        <div class="flex items-center space-x-4 md:-translate-y-3">
+        <div class="flex items-center space-x-4 lg:-translate-y-3">
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-2">
                 <img src="{{ asset('images/FEClogo.png') }}" alt="Byron Logo" class="h-12 md:h-14">
@@ -73,18 +73,23 @@
 
         <!-- Login Button -->
         <button
-            class="hidden md:block px-8 py-2 border-2 border-yellow-500 text-yellow-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
+            class="hidden lg:block px-8 py-2 border-2 border-yellow-500 text-yellow-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
             Login
         </button>
 
         <!-- Mobile Menu Button -->
-        <x-partials.mobile-menu>
-            @foreach ($menus as $key => $menu)
-                <div class="border-t border-gray-100 hover:bg-bgColorLighter hover:text-black">
-                    <x-menu :mobile="true" :isDropdown="$menu['isDropdown']" :dropdowns="$menu['isDropdown'] ? $menu['dropdowns'] : []" :slug="$key" :route="$menu['route']"
-                        title="{{ $menu['title'] }}" />
-                </div>
-            @endforeach
-        </x-partials.mobile-menu>
+        <div class="lg:hidden overflow-y-auto z-50">
+            <x-partials.mobile-menu>
+                @foreach ($menus as $key => $menu)
+                    <div class="border-t border-gray-400 border-opacity-50 hover:text-gray-200">
+                        <x-menu :mobile="true"
+                                :isDropdown="$menu['isDropdown']"
+                                :dropdowns="$menu['isDropdown'] ? $menu['dropdowns'] : []"
+                                :slug="$key" :route="$menu['route']"
+                                :title="$menu['title']" />
+                    </div>
+                @endforeach
+            </x-partials.mobile-menu>
+        </div>
     </div>
 </div>

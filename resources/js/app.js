@@ -17,7 +17,7 @@ function navBarSticky(){
     const navBar = document.getElementById('navBar');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 10) {
+        if (window.scrollY > 15) {
             navBar.classList.remove('top-28','translate-y-8');
             navBar.classList.add('top-3');
         } else {

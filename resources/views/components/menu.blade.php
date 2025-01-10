@@ -44,17 +44,39 @@
 
         </div>
     @else
-        <button @click="currentDropdown = currentDropdown === '{{ $slug }}' ? null : '{{ $slug }}'"
-            class="w-full text-left px-4 py-2 flex justify-between">
-            {{ $title }}
-            <x-svg-icon.drop-down-icon />
-        </button>
-        <div x-show="currentDropdown === '{{ $slug }}'" class="bg-[#282828] border-gray-100">
-            @foreach ($dropdowns as $dropdown)
-                <a href="{{ isset($dropdown['route']) ? route($dropdown['route']) : '' }}"
-                    class="block px-8 py-2 text-lg hover:bg-bgColorLighter hover:text-black border-t border-gray-100 text-gray-100"
-                    wire:navigate>- {{ $dropdown['title'] }}</a>
-            @endforeach
-        </div>
+        @if (!empty($dropdowns))
+            <div x-data="{ currentDropdown: null }" class="relative">
+                <!-- Container for Scrollable Sections -->
+                <div
+                    class="max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800">
+                    <!-- Dropdown Button -->
+                    <button
+                        @click="currentDropdown = (currentDropdown === '{{ $slug }}' ? null : '{{ $slug }}')"
+                        class="w-full text-left px-4 py-2 flex justify-between items-center bg-[#030f27] text-gray-100 rounded-md transition duration-300 ease-in-out">
+                        {{ $title }}
+                        <x-svg-icon.drop-down-icon />
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div x-show="currentDropdown === '{{ $slug }}'"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform scale-100"
+                        x-transition:enter-end="opacity-100 transform scale-100"
+                        x-transition:leave="transition ease-in duration-300"
+                        x-transition:leave-start="opacity-100 transform scale-100"
+                        x-transition:leave-end="opacity-0 transform scale-95"
+                        class="bg-[#08142b] border-t border-gray-600 shadow-md overflow-hidden z-20"
+                        style="display: none;" wire:ignore>
+                        @foreach ($dropdowns as $dropdown)
+                            <a href="{{ isset($dropdown['route']) ? route($dropdown['route']) : '#' }}"
+                                class="block px-6 py-3 text-md text-gray-100 hover:text-gray-300 border-t border-gray-600 first:border-t-0 transition duration-300 ease-in-out"
+                                wire:navigate>
+                                - {{ $dropdown['title'] }}
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
     @endif
 @endif
