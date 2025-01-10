@@ -9,7 +9,7 @@
     @stack('styles')
 </head>
 
-<body>
+<body class="bg-[url({{asset("common-background.jpeg")}})]">
     <x-partials.header />
     <x-partials.navigation />
     {{ $slot }}

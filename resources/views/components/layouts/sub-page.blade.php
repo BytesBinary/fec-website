@@ -1,5 +1,5 @@
 <x-layouts.app :title="$title ?? ''">
-    <div class="container mx-auto mt-10 lg:mt-28 w-full">
+    <div class="container mx-auto mt-10 lg:mt-28 w-full bg-[url({{asset("common-background.jpeg")}})]">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-6">
             <!-- Sidebar Menu -->
             <div class="w-full mx-auto mb-10 col-span-1 rounded-lg p-5 border {{!empty($sideNavCss) ? $sideNavCss : 'bg-deepBlue shadow-md border-blue-200'}}">
