@@ -1,6 +1,6 @@
 <!-- Top Bar -->
 <div class="w-full bg-deepBlue text-white border-b border-blue-400 border-opacity-75">
-    <div class="hidden container w-[1170px] mx-auto lg:flex items-center justify-between px-4 lg:px-0 py-3 opacity-75">
+    <div class="hidden container lg:w-[1170px] mx-auto lg:flex items-center justify-between px-4 lg:px-0 py-3 opacity-75">
         <!-- Social Icons -->
         <div class="flex items-center space-x-6 px-2">
             <svg class="w-4 h-4 fill-[#add8e6]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -56,7 +56,7 @@
 
 <!-- Main Navigation -->
 <div class="bg-deepBlue text-white px-5 pb-3">
-    <div class="container w-[1170px] mx-auto flex justify-between items-center py-8">
+    <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-8">
         <!-- Logo and Address -->
         <div class="flex items-center space-x-4 md:-translate-y-3">
             <!-- Logo -->
