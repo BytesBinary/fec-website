@@ -17,12 +17,12 @@ function navBarSticky(){
     const navBar = document.getElementById('navBar');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            navBar.classList.remove('absolute', 'left-1/2', 'transform', '-translate-x-1/2', '-translate-y-1/2');
-            navBar.classList.add('sticky', 'top-2');
+        if (window.scrollY > 10) {
+            navBar.classList.remove('top-28','translate-y-8');
+            navBar.classList.add('top-3');
         } else {
-            navBar.classList.remove('sticky', 'top-2');
-            navBar.classList.add('absolute', 'left-1/2', 'transform', '-translate-x-1/2', '-translate-y-1/2');
+            navBar.classList.remove('top-3');
+            navBar.classList.add('top-28','translate-y-8');
         }
     });
 }
