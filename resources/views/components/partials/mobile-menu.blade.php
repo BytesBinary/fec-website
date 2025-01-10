@@ -8,7 +8,7 @@
 
     <!-- Drawer -->
     <div x-show="open"
-        class="fixed inset-y-0 left-0 w-64 md:w-80 bg-deepBlue text-white text-lg shadow-lg z-50 transition-all delay-300 ease-in"
+        class="fixed inset-y-0 left-0 w-64 md:w-80 bg-deepBlue text-white text-lg shadow-lg z-50 transition-all delay-300 ease-in overflow-y-auto"
         @click.away="open = false">
         <!-- Close button -->
         <div class="flex justify-between p-4">
