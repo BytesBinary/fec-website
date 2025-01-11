@@ -7,5 +7,5 @@
     @livewire('partials.home.about')
     @livewire('partials.home.research-events')
     @livewire('partials.home.linking')
-    {{--   @livewire('partials.home.gallery') --}}
+      {{-- @livewire('partials.home.gallery') --}}
 </div>

@@ -1,6 +1,6 @@
 <div>
-<div x-data="{ activeSection: 'overview' }" id="about" class="bg-white overflow-hidden mt-0 mb-20 lg:my-20 flex-col-reverse flex lg:flex-row justify-center lg:ml-20">
-    <div class="max-w-6xl bg-lime-100 rounded-3xl shadow-2xl p-6 lg:flex border-t-4 lg:border-l-4 lg:border-t-0 border-emerald-500 w-full ">
+<div x-data="{ activeSection: 'overview' }" id="about" class="overflow-hidden mt-10 mb-20 lg:my-24 flex-col-reverse flex lg:flex-row justify-center lg:ml-20">
+    <div class="max-w-6xl bg-[#f2f0fe] rounded-3xl shadow-2xl p-6 lg:flex border-t-4 lg:border-l-4 lg:border-t-0 border-emerald-500 w-full ">
         <!-- Image Section -->
         <div class="flex lg:flex-col lg:w-1/4 gap-4">
             <img class="h-auto w-2/4 lg:w-full object-cover object-top rounded-lg shadow-md" src="{{asset('images/administration/principal.png')}}" alt="Principal Image">
