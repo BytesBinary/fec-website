@@ -10,7 +10,7 @@
             <x-partials.subpage-navigation :route-key="$routeKey" :page="$page" :menu="$menu" />
             </div>
             <!-- Main Content -->
-            <div class="w-full mb-10 lg:col-span-3 col-span-3 p-8 border rounded-lg {{!empty($mainContentCss) ? $mainContentCss : 'bg-[#f2f0ef] shadow-md border-gray-200'}}">
+            <div class="w-full mb-10 lg:col-span-3 col-span-3 p-8 border rounded-lg {{!empty($mainContentCss) ? $mainContentCss : 'bg-[#f2f0fe] shadow-md border-gray-200'}}">
                 {{$slot}}
             </div>
         </div>
