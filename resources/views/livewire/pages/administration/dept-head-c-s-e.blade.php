@@ -16,7 +16,7 @@
             </div>
 
             <!-- Main Content -->
-            <div x-show="currentSection === 'about'" class="w-full mb-10 lg:col-span-3 col-span-3 bg-white rounded-lg shadow-md border border-gray-200">
+            <div x-show="currentSection === 'about'" class="w-full mb-10 lg:col-span-3 col-span-3 bg-white rounded-3xl shadow-md border border-gray-200">
                 <div class="rounded-3xl shadow-2xl p-6 lg:border-l-4 lg:border-r-4 lg:border-t-0 border-blue-400">
                     <div class="flex w-3/4 mx-auto gap-6 justify-center items-center">
                         <img class="h-auto w-1/5 object-cover object-top rounded-lg shadow-md" src="{{ asset('images/administration/cse-head.jpg') }}" alt="Principal Image">
