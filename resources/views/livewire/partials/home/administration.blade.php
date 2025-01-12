@@ -4,7 +4,7 @@
             <p class="text-center mb-8 text-3xl md:text-5xl font-bold text-deepBlue">
                 Administration
             </p>
-            <hr class="w-48 h-1 mx-auto bg-deepBlue border-0 rounded">
+            <hr class="w-48 h-1 mx-auto bg-blue-400 border-0 rounded">
 
             <div class="grid gap-6 grid-cols-1 mt-10 lg:grid-cols-4 hover:cursor-pointer">
                 <a href="{{ route('principal') }}" wire:navigate>
@@ -29,7 +29,7 @@
                             </p>
                             <p class="mt-3 md:text-lg text-deepBlue text-justify">
                                 {{ substr($principal['message'], 331) }}
-                                <a href="{{ route('principal') }}" class="text-deepBlue font-semibold hover:underline" wire:navigate >Read More</a>
+                                <a href="{{ route('principal') }}" class="text-blue-400 hover:text-[#f5ad0d] font-semibold hover:underline" wire:navigate >Read More</a>
                             </p>
                         </div>
                     </div>

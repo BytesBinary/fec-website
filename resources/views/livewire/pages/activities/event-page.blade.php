@@ -1,4 +1,4 @@
-<div class="mx-auto w-full md:w-3/5 lg:w-3/5 p-3 text-cng">
+<div class="mx-auto mt-24 mb-20 w-full md:w-3/5 lg:w-3/5 p-3 text-cng">
     <div class="bg-white m-0 leading-normal">
         <!-- Header Section -->
         @php

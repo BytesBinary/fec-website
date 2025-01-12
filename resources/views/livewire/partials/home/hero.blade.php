@@ -39,7 +39,7 @@
                     <!-- Primary Button -->
 
                     <a href="#gallery"
-                        class="inline-block border-2 border-yellow-400 text-yellow-400 py-3 px-10 rounded-lg text-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition duration-300 hidden lg:block">Explore
+                        class="md:inline-block border-2 border-yellow-400 text-yellow-400 py-3 px-10 rounded-lg text-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition duration-300 hidden lg:block">Explore
                         Now</span>
                     </a>
                 </div>
