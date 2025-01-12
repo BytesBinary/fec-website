@@ -15,7 +15,7 @@ class EventPage extends Component
             ->get()
             ->map(function ($data){
                 $segments = get_post_meta($data->id,'event_segments');
-                $data->event_details = get_post_meta($data->id,'even_details');
+                $data->event_details = get_post_meta($data->id,'event_details');
                 $data->event_segments = !empty($segments) ? current($segments) : [];
                 $data->contact_details = get_post_meta($data->id,'contact_details');
                 return $data;
@@ -27,7 +27,10 @@ class EventPage extends Component
             return redirect()->route('residence-cafeteria');
         }
     }
-
+    public function redirectTo($url)
+    {
+        return redirect()->to($url);
+    }
     public function render()
     {
         return view('livewire.pages.activities.event-page');
