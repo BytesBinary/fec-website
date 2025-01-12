@@ -110,12 +110,7 @@ return [
             'route' => 'admission',
             'isDropdown' => false,
         ],
-        // Alumni Page
-        'alumni' => [
-            'title' => 'Alumni',
-            'route' => 'alumni',
-            'isDropdown' => false,
-        ],
+       
     ],
     'department' => [
         'cse' => [

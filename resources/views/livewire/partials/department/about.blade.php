@@ -1,6 +1,6 @@
 <div>
     <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-800">About {{$cardTitle}}</h2>
+        <h2 class="text-4xl font-bold text-deepBlue">About {{$cardTitle}}</h2>
         <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Faridpur Engineering College (FEC) provides a world-class educational experience in the field of Computer Science and Engineering. Our department is committed to academic excellence, fostering innovation, and nurturing future technology leaders.</p>
     </div>
 

@@ -1,0 +1,1 @@
+import{S as e}from"./swiper-bundle-gA8vv5XH.js";document.addEventListener("livewire:navigated",function(){new e(".swiper-container-hero-section",{loop:!0,centeredSlides:!0,allowTouchMove:!1,grabCursor:!1,autoplay:{delay:3e3,disableOnInteraction:!1},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})});
