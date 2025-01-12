@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ManageExam;
 
 use App\Filament\Resources\ManageExam\ExamTypeResource\Pages;
 use App\Models\ExamType;
+use App\Traits\HasResourceAccess;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,11 +13,14 @@ use Filament\Tables\Table;
 
 class ExamTypeResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = ExamType::class;
 
-    protected static ?string $navigationGroup = "Manage Exams";
+    protected static ?string $navigationGroup = 'Manage Exams';
 
-    protected static ?string $label = "Exam Types";
+    protected static ?string $label = 'Exam Types';
+
     protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
 
     public static function form(Form $form): Form

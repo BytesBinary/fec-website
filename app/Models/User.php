@@ -2,32 +2,46 @@
 
 namespace App\Models;
 
-use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
 use Filament\Models\Contracts\FilamentUser;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
-use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements FilamentUser, MustVerifyEmail
+class User extends Authenticatable implements FilamentUser
 {
-    use HasFactory, Notifiable, HasPanelShield, HasRoles, softDeletes;
+    use HasFactory, Notifiable, softDeletes;
+
     protected $primaryKey = 'id';
+
     protected $keyType = 'string';
+
     public $incrementing = false;
+
     protected $fillable = [
         'name',
         'email',
         'password',
         'designation',
+        'short_name',
+        'is_admin_verified',
     ];
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        if (! $this->is_admin_verified || ! $this->email_verified_at) {
+            return false;
+        }
+
+        return true;
+    }
 
     protected $hidden = [
         'password',
+        'is_admin_verified',
         'remember_token',
     ];
 
@@ -38,16 +52,24 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
             'password' => 'hashed',
         ];
     }
-     protected static function boot() : void {
-         parent::boot();
-         static::creating(function ($model) {
-             if( empty($model->{$model->getKeyName()}) ) {
-                 $model->{$model->getKeyName()} = Str::uuid()->toString();
-             }
-         });
-     }
-     public function posts(): HasMany
-     {
-         return $this->hasMany(Post::class, 'post_author');
-     }
+
+    protected static function boot(): void
+    {
+        parent::boot();
+        static::creating(function ($model) {
+            if (empty($model->{$model->getKeyName()})) {
+                $model->{$model->getKeyName()} = Str::uuid()->toString();
+            }
+        });
+        static::saving(function ($user) {
+            if ($user->is_admin_verified && ! $user->email_verified_at) {
+                $user->email_verified_at = now();
+            }
+        });
+    }
+
+    public function posts(): HasMany
+    {
+        return $this->hasMany(Post::class, 'post_author');
+    }
 }

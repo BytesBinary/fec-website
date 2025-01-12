@@ -3,23 +3,22 @@
 namespace App\Filament\Resources\Settings;
 
 use App\Filament\Resources\Settings\DesignationResource\Pages;
-use App\Filament\Resources\Settings\DesignationResource\RelationManagers;
 use App\Models\Designation;
-use Filament\Forms;
+use App\Traits\HasResourceAccess;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DesignationResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Designation::class;
 
     protected static ?string $navigationGroup = 'Settings';
+
     protected static ?string $navigationIcon = 'heroicon-o-arrow-path-rounded-square';
 
     public static function form(Form $form): Form

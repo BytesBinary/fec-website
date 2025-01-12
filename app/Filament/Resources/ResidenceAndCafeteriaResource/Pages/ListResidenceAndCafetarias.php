@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\ResidenceAndCafetariaResource\Pages;
+namespace App\Filament\Resources\ResidenceAndCafeteriaResource\Pages;
 
 use App\Filament\Resources\ResidenceAndCafeteriaResource;
 use App\Models\Post;
@@ -18,9 +18,9 @@ class ListResidenceAndCafetarias extends ListRecords
         ];
     }
 
-    public function getTabs() : array
+    public function getTabs(): array
     {
-        return create_model_tabs(new Post(),[],'Residences',[
+        return create_model_tabs(new Post, [], 'Residences', [
             'all' => Post::where('post_type', 'residence')->count(),
             'archived' => Post::where('post_type', 'residence')->onlyTrashed()->count(),
         ]);

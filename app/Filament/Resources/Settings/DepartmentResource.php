@@ -3,23 +3,23 @@
 namespace App\Filament\Resources\Settings;
 
 use App\Filament\Resources\Settings\DepartmentResource\Pages;
-use App\Filament\Resources\Settings\DepartmentResource\RelationManagers;
 use App\Models\Department;
-use Filament\Forms;
+use App\Traits\HasResourceAccess;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DepartmentResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Department::class;
+
     protected static ?string $navigationGroup = 'Settings';
+
     protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
     public static function form(Form $form): Form

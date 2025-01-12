@@ -3,9 +3,9 @@
 namespace App\Filament\Resources\ManageCourses;
 
 use App\Filament\Resources\ManageCourses\AssigneeTeacherResource\Pages;
-use App\Filament\Resources\ManageCourses\AssigneeTeacherResource\RelationManagers;
 use App\Models\Course;
 use App\Models\User;
+use App\Traits\HasResourceAccess;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
@@ -14,10 +14,18 @@ use Filament\Tables\Table;
 
 class AssigneeTeacherResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Course::class;
-    protected static ?string $slug  = "manage-courses/assignee-teachers";
-    protected static ?string $navigationGroup = "Manage Courses";
-    protected static ?string $label = "Assignee Teachers";
+
+    protected static ?string $slug = 'manage-courses/assignee-teachers';
+
+    protected static ?string $navigationGroup = 'Manage Courses';
+
+    protected static ?string $label = 'Assignee Teachers';
+
+    protected static ?int $navigationSort = 2;
+
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
 
     public static function table(Table $table): Table
@@ -42,6 +50,7 @@ class AssigneeTeacherResource extends Resource
                     ->formatStateUsing(function ($state) {
                         $teacherIds = explode(',', $state);
                         $teacherNames = User::whereIn('id', $teacherIds)->pluck('name')->toArray();
+
                         return implode(', ', $teacherNames);
                     })
                     ->badge()
@@ -79,8 +88,8 @@ class AssigneeTeacherResource extends Resource
                     ->label('Edit Assignee')
                     ->icon('heroicon-o-pencil')
                     ->url(fn ($record) => static::getUrl('edit', ['record' => $record])),
-            ],['edit','delete']))
-            ->bulkActions(create_table_bulk_actions([],[],['restore','forceDelete', 'delete']));
+            ], ['edit', 'delete']))
+            ->bulkActions(create_table_bulk_actions([], [], ['restore', 'forceDelete', 'delete']));
     }
 
     public static function getRelations(): array
@@ -100,7 +109,7 @@ class AssigneeTeacherResource extends Resource
         return [
             'index' => Pages\ListAssigneeTeachers::route('/'),
             'edit' => Pages\EditAssigneeTeacher::route('/edit/{record}'),
-            'create' => Pages\ManageAsigneeTeachers::route('/create/{department}/{semester}')
+            'create' => Pages\ManageAsigneeTeachers::route('/create/{department}/{semester}'),
         ];
     }
 }

@@ -4,13 +4,15 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\EventResource\Pages;
 use App\Models\Post;
+use App\Traits\HasResourceAccess;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 class EventResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = Post::class;
 
     protected static ?string $navigationLabel = 'Events';

@@ -20,6 +20,9 @@ class ListUsers extends ListRecords
 
     public function getTabs() : array
     {
-        return create_model_tabs(new User());
+        return create_model_tabs(new User(),[],'',[
+            'all' => User::count()-1,
+            'archived' => User::onlyTrashed()->count(),
+        ]);
     }
 }

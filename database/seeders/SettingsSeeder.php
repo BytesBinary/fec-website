@@ -6,7 +6,8 @@ use App\Models\AcademicSession;
 use App\Models\Batch;
 use App\Models\Department;
 use App\Models\Designation;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\ResourceHasAccess;
+use Filament\Facades\Filament;
 use Illuminate\Database\Seeder;
 
 class SettingsSeeder extends Seeder
@@ -19,24 +20,24 @@ class SettingsSeeder extends Seeder
         /**
          * Create Academic Sessions and Batches
          */
-         $sessions = "2023-2024,2022-2023,2021-2022,2020-2021,2019-2020";;
-         $batch = 11;
-         foreach ( explode(',', $sessions) as $session ) {
-             $details = AcademicSession::create([
-                 'session_year' => $session,
-             ]);
-             if( $details ) {
-                 Batch::create([
-                     'number' => $batch,
-                     'session' => $details->session_year,
-                 ]);
-             }
-             $batch--;
-         }
+        $sessions = '2023-2024,2022-2023,2021-2022,2020-2021,2019-2020';
+        $batch = 11;
+        foreach (explode(',', $sessions) as $session) {
+            $details = AcademicSession::create([
+                'session_year' => $session,
+            ]);
+            if ($details) {
+                Batch::create([
+                    'number' => $batch,
+                    'session' => $details->session_year,
+                ]);
+            }
+            $batch--;
+        }
 
-         /**
-          * Create Designations
-          */
+        /**
+         * Create Designations
+         */
         $designations = [
             ['designation' => 'Teacher'],
             ['designation' => 'Student'],
@@ -44,10 +45,19 @@ class SettingsSeeder extends Seeder
             ['designation' => 'Department_Head'],
             ['designation' => 'Lab_In_Charge'],
             ['designation' => 'Librarian'],
+            ['designation' => 'Programmer'],
         ];
 
-        foreach ( $designations as $designation ) {
-            Designation::create($designation);
+        foreach ($designations as $designation) {
+            $designation = Designation::create($designation)->toArray();
+            if ($designation['designation'] === 'Programmer') {
+                foreach (Filament::getResources() as $resource) {
+                    ResourceHasAccess::create([
+                        'resource_class' => $resource,
+                        'role_ids' => json_encode($designation['id'], true),
+                    ]);
+                }
+            }
         }
 
         $departments = [
@@ -62,10 +72,10 @@ class SettingsSeeder extends Seeder
             [
                 'title' => 'Civil Engineering',
                 'short_title' => 'CE',
-            ]
+            ],
         ];
 
-        foreach ( $departments as $department ) {
+        foreach ($departments as $department) {
             Department::create($department);
         }
     }

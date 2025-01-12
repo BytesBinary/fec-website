@@ -3,8 +3,8 @@
 namespace App\Filament\Resources\ManageExam;
 
 use App\Filament\Resources\ManageExam\ExamHallResource\Pages;
-use App\Filament\Resources\ManageExam\ExamHallResource\RelationManagers;
 use App\Models\ExamHall;
+use App\Traits\HasResourceAccess;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,13 @@ use Filament\Tables\Table;
 
 class ExamHallResource extends Resource
 {
+    use HasResourceAccess;
+
     protected static ?string $model = ExamHall::class;
 
-    protected static ?string $navigationGroup = "Manage Exams";
+    protected static ?string $navigationGroup = 'Manage Exams';
 
-    protected static ?string $label = "Exam Halls";
+    protected static ?string $label = 'Exam Halls';
 
     protected static ?string $navigationIcon = 'heroicon-o-home-modern';
 
