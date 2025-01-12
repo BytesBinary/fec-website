@@ -4,11 +4,11 @@
         <div class="bg-white pt-0 lg:pt-3 md:p-4 lg:pb-0 mt-3 flex flex-col justify-between md:space-y-0 w-full">
             <div class="flex-1 text-center md:text-left mb-5 pl-5 md:pl-0 lg:pl-0 pr-5 lg:pr-0">
                 <h1
-
                     class="text-3xl text-wrap md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-snug text-left">
-                    {{$event['post_title']}}
+                    {{ $event['post_title'] }}
                 </h1>
-                <p class="text-lg mt-3 text-gray-700 italic text-left">{{ $event['event_details']['short_description']}}</p>
+                <p class="text-lg mt-3 text-gray-700 italic text-left">{{ $event['event_details']['short_description'] }}
+                </p>
 
                 <div class="flex gap-3 mt-5">
                     <img src="{{ asset('images/demo-profile.jpg') }}" alt="prof"
@@ -17,7 +17,8 @@
                         <h3 class="text-start font-semibold">
                             {{ reset($event['contact_details'])['contact_name'] }}
                         </h3>
-                            <p class="text-start text-gray-700">{{ \Carbon\Carbon::parse($event['created_at'])->format('d F Y') }}
+                        <p class="text-start text-gray-700">
+                            {{ \Carbon\Carbon::parse($event['created_at'])->format('d F Y') }}
                         </p>
                     </div>
                 </div>
@@ -56,22 +57,22 @@
         <!-- Main Content -->
         <div class="flex flex-col mx-auto lg:gap-1">
             <div class="bg-white p-4 w-full order-2 lg:order-1">
-                <img src="{{ asset('storage/'.$event['event_details']['feature_image']) }}" alt="Event Banner"
+                <img src="{{ asset('storage/' . $event['event_details']['feature_image']) }}" alt="Event Banner"
                     class="w-full h-72 object-cover rounded-md mb-4">
-                <p class="text-center text-sm text-gray-600 italic mb-6">{{ $event['event_details']['short_description']}}</p>
-                <h2 class="text-xl md:text-3xl font-semibold text-gray-900 mb-3">About the Event</h2>
+                <p class="text-center text-sm text-gray-600 italic mb-6">
+                    {{ $event['event_details']['short_description'] }}</p>
                 <p class="text-gray-900 text-md lg:text-lg tracking-wide mb-2">
-                   {!!$event['post_content']!!}
+                    {!! $event['post_content'] !!}
                 </p>
 
                 <div class="mb-6">
                     <h3 class="text-lg lg:text-xl font-semibold text-black mb-2">Segments</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         @foreach ($event['event_segments'] as $segments)
-                        <div class="bg-gray-200 p-3 rounded-md shadow-md hover:shadow-lg">
-                            <h4 class="font-semibold text-gray-800">{{$segments['segment_title']}}</h4>
-                            <p class="text-sm text-gray-700">{{$segments['segment_description']}}</p>
-                        </div>
+                            <div class="bg-gray-200 p-3 rounded-md shadow-md hover:shadow-lg">
+                                <h4 class="font-semibold text-gray-800">{{ $segments['segment_title'] }}</h4>
+                                <p class="text-sm text-gray-700">{{ $segments['segment_description'] }}</p>
+                            </div>
                         @endforeach
 
                     </div>
@@ -88,7 +89,7 @@
                     </div>
                     <div class="bg-white p-4">
                         <h3 class="font-semibold text-gray-800 text-lg mb-3">Location</h3>
-                        <p class="text-sm text-gray-600 mb-4">{{$event['event_details']['event_location']}}</p>
+                        <p class="text-sm text-gray-600 mb-4">{{ $event['event_details']['event_location'] }}</p>
                         {{-- <a href="map-link" class="text-blue-500 text-sm hover:underline">View on Map</a> --}}
                     </div>
                 </div>
@@ -97,25 +98,29 @@
                     <div class="lg:flex lg:justify-between w-full">
 
                         @foreach ($event['contact_details'] as $contact)
-                        <div class="bg-gray-200 p-3 mb-3 rounded-md shadow-md hover:shadow-lg lg:w-[48%]">
-                            <div class="flex items-start mt-4 pl-3">
-                                <img src="{{ asset('images/demo-profile.jpg') }}" alt="Host Image"
-                                    class="w-12 h-12 rounded-full mr-4 border-2 border-orange-500">
-                                <div class="px-2">
-                                    <p class="text-gray-700 font-semibold">{{$contact['contact_name']}}</p>
-                                    <p class="text-sm text-gray-600">{{$contact['designation']}}</p>
-                                    <div class="mt-2 text-sm text-gray-600">
-                                        <p><strong>Email:</strong> <a href="mailto:{{$contact['contact_email']}}"
-                                                class="text-blue-500 hover:underline">{{$contact['contact_email']}}</a></p>
-                                        <p class="mt-1"><strong>Phone:</strong> <a href="tel:{{$contact['contact_phone']}}"
-                                                class="text-blue-500 hover:underline">{{$contact['contact_phone']}}</a></p>
-                                        <p class="mt-1"><strong>WhatsApp:</strong> <a href="https://wa.me/{{$contact['contact_phone']}}"
-                                                class="text-blue-500 hover:underline">{{$contact['contact_phone']}}</a></p>
+                            <div class="bg-gray-200 p-3 mb-3 rounded-md shadow-md hover:shadow-lg lg:w-[48%]">
+                                <div class="flex items-start mt-4 pl-3">
+                                    <img src="{{ asset('images/demo-profile.jpg') }}" alt="Host Image"
+                                        class="w-12 h-12 rounded-full mr-4 border-2 border-orange-500">
+                                    <div class="px-2">
+                                        <p class="text-gray-700 font-semibold">{{ $contact['contact_name'] }}</p>
+                                        <p class="text-sm text-gray-600">{{ $contact['designation'] }}</p>
+                                        <div class="mt-2 text-sm text-gray-600">
+                                            <p><strong>Email:</strong> <a href="mailto:{{ $contact['contact_email'] }}"
+                                                    class="text-blue-500 hover:underline">{{ $contact['contact_email'] }}</a>
+                                            </p>
+                                            <p class="mt-1"><strong>Phone:</strong> <a
+                                                    href="tel:{{ $contact['contact_phone'] }}"
+                                                    class="text-blue-500 hover:underline">{{ $contact['contact_phone'] }}</a>
+                                            </p>
+                                            <p class="mt-1"><strong>WhatsApp:</strong> <a
+                                                    href="https://wa.me/{{ $contact['contact_phone'] }}"
+                                                    class="text-blue-500 hover:underline">{{ $contact['contact_phone'] }}</a>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
                         @endforeach
 
                     </div>
