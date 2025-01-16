@@ -3,7 +3,7 @@
     <!-- Button to toggle the drawer -->
     <button @click="open = true"
         class="lg:hidden px-4 py-2 border-2 border-[#f5ad0d] text-[#f5ad0d] rounded hover:bg-[#f5ad0d] hover:text-white transition-all delay-300 ease-in">
-        Open Menu
+        Menu
     </button>
 
     <!-- Drawer -->

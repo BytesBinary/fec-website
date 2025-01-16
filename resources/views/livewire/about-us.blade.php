@@ -1,6 +1,6 @@
-<div class="bg-white text-gray-800">
+<div class="bg-white text-gray-800 pt-20 pb-8">
   <!-- About Us Section -->
-  <section class="w-full lg:w-[80%] mx-auto p-6 mt-4">
+  <div class="w-full lg:w-[80%] mx-auto p-6">
     <h1 class="text-4xl lg:text-5xl font-bold text-center mb-8">About Us</h1>
     <div class="p-4">
         <h2 class="text-xl text-justify">Faridpur Engineering College (FEC) stands as a beacon of academic excellence and technical innovation in Bangladesh. Situated in the heart of Faridpur, the college plays a pivotal role in nurturing the next generation of engineers who are equipped to meet the challenges of an ever-evolving technological landscape. Since its establishment in [2010], the college has been steadfast in it's mission to contribute to national development by producing skilled and competent graduates.</h2>
@@ -49,5 +49,5 @@
             Faridpur Engineering College stands out as a center of academic and technical excellence, offering not only comprehensive undergraduate programs but also exceptional facilities that support hands-on learning. The college is equipped with state-of-the-art laboratories in all departments, enabling students to gain practical experience and develop skills essential for solving real-world problems.Beyond academics, the college promotes a vibrant student life through various clubs and extracurricular activities. These clubs provide opportunities for students to engage in innovation, leadership, and teamwork while fostering creativity and community service.FEC operates with a clear vision to modernize engineering education, develop skilled human resources, and contribute to national progress. Its mission focuses on ensuring quality education through robust curricula, setting high standards, and fostering continuous improvement. With a commitment to these ideals, Faridpur Engineering College continues to prepare its graduates to lead in a dynamic, technology-driven world, contributing to a prosperous and "Smart Bangladesh."
         </p>
     </div>
-  </section>
+  </div>
 </div>
