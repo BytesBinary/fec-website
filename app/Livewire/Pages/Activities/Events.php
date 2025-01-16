@@ -4,9 +4,11 @@ namespace App\Livewire\Pages\Activities;
 
 use App\Models\Post;
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
 class Events extends Component
 {
+    #[Title('Upcoming Events')]
 
     public array $events;
     public function mount()

@@ -4,9 +4,12 @@ namespace App\Livewire\Pages\Activities;
 
 use App\Models\Post;
 use Livewire\Component;
+use Livewire\Attributes\Title;
+
 
 class EventPage extends Component
 {
+    #[Title('FEC | Event')]
     public array $event;
     public function mount($slug)
     {

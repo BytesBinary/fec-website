@@ -10,7 +10,7 @@ class Notices extends Component
     public $notices = [];
     public $currentTitle;
     public $currentPdf;
-    #[Title('Notices')]
+    #[Title('FEC | Notices')]
     public function mount()
     {
         $this->notices = [
