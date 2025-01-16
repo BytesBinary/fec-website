@@ -1,5 +1,5 @@
 <div>
-    <div class="container mx-auto p-5 mb-3 shadow-lg shadow-gray-500 bg-gray-100 rounded">
+    <div class="container mx-auto mt-24 p-5 mb-20 shadow-lg shadow-gray-500 bg-gray-100 rounded">
         <h1 class="text-4xl font-bold mb-6 text-center  p-3 rounded-lg">Notice Board</h1>
         <!-- Search Bar -->
         <div class="mb-4">

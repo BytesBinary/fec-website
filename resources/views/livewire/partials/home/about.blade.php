@@ -1,6 +1,6 @@
 <div class="landing-about container mx-auto pt-16 px-5 pb-10 mb-10" id="about">
-    <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950" >About Us</p>
-    <hr class="w-48 h-1 mx-auto bg-gray-400 border-0 rounded dark:bg-gray-700">
+    <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-deepBlue" >About Us</p>
+    <hr class="w-48 h-1 mx-auto bg-blue-400 rounded mb-10">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <!-- Text Section -->
         <div class="w-full p-6 bg-zinc-50 shadow-2xl shadow-gray-500 mt-5 hover:shadow-gray-700 hover:cursor-pointer rounded-lg" >
@@ -12,8 +12,8 @@
             </p>
             <a href="{{route('about-us')}}" wire:navigate class="block mt-4">
                 <div class="flex justify-center">
-                    <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300 hover:cursor-pointer" type="button">
-                        <span class="text-base"><a href="/about-us">Read More</a></span>
+                    <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-400 text-white rounded-lg shadow-md transition duration-300 hover:cursor-pointer">
+                        <span class="text-base">Read More</span>
                         <x-svg-icon.external-url class="w-5 h-5" />
                     </button>
                 </div>
@@ -25,7 +25,7 @@
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
                 <!-- Play Button with Animation -->
-                <a href="https://www.youtube.com/watch?v=_H9B4iynTY0" class="glightbox pulse p-4 bg-yellow-400 text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 active:scale-90 active:shadow-inner">
+                <a href="https://www.youtube.com/watch?v=_H9B4iynTY0" class="glightbox pulse p-4 bg-[#f5ac0dca] text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 active:scale-90 active:shadow-inner">
                     <!-- Heroicon Play Icon -->
                     <x-svg-icon.play-button class="size-10" />
                 </a>

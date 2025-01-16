@@ -44,13 +44,6 @@ class EventResource extends Resource
             ->bulkActions(create_table_bulk_actions());
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
     public static function getPages(): array
     {
         return [

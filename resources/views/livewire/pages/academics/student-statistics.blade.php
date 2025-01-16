@@ -1,5 +1,5 @@
 <div>
-    <div class="container mx-auto p-8 bg-gray-100">
+    <div class="container mx-auto mt-24 p-8 bg-gray-100">
 
         <h2 class="text-4xl lg:text-6xl font-extrabold text-center mb-5 relative text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-indigo-700 to-purple-700">
             University Student Statistics

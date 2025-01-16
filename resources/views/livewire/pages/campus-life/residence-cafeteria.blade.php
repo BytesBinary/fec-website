@@ -1,4 +1,4 @@
-<div class="mx-auto mt-10 lg:w-3/4">
+<div class="mx-auto mt-10 lg:mt-20 lg:w-3/4">
     <!-- Welcome Section -->
     <div class="mx-4 my-6">
         <div class="flex overflow-hidden relative flex-col items-center p-4 bg-gradient-to-br from-orange-600 via-orange-400 to-orange-300 rounded-xl shadow-lg md:flex-row md:p-12">

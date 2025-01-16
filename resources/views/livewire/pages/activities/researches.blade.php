@@ -1,4 +1,4 @@
-<div class="bg-gray-100">
+<div class="bg-gray-100 mt-24 mb-20">
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto p-8">
         <!-- Section Title -->
