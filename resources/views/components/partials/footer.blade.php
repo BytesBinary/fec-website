@@ -5,9 +5,9 @@
             <p class="text-center mt-8">Dr. Kaji Motaher Hossain Road <br>
                 Komolapur, Baitul Aman, Faridpur - 7800</p>
             <div class="mt-4 flex justify-center space-x-4">
-                <a href=""><img src="{{asset('images/facebook.png')}}" alt="Facebook Icon" class="w-6 h-6"></a>
-                <a href="#"><img src="{{asset('images/email.png')}}" alt="Twitter Icon" class="w-6 h-6"></a>
-                <a href="#"><img src="{{asset('images/youtube.png')}}" alt="YouTube Icon" class="w-6 h-6"></a>
+                <a href="https://www.facebook.com/FECOfficial.2010"><img src="{{asset('images/logo/facebook.svg')}}" alt="Facebook Icon" class="w-4 h-4"></a>
+                <a href="#"><img src="{{asset('images/logo/email.svg')}}" alt="Email Icon" class="w-4 h-4"></a>
+                <a href="https://www.youtube.com/channel/UCAcokm1IWMtk09AoiWMI8dw"><img src="{{asset('images/logo/youtube.svg')}}" alt="YouTube Icon" class="w-5 h-5"></a>
             </div>
         </div>
 
@@ -39,8 +39,8 @@
     <div
         class="container mx-auto mt-8 flex flex-col lg:flex-row justify-between items-center border-t border-gray-600 pt-4">
         <div class="text-base text-gray-400 text-center sm:text-left flex items-center">
-            <img src="{{asset('images/BytesBinary.png')}}" alt="College Logo" class="w-7 h-7 mr-2 rounded-full">
-            &copy; 2024 BytesBinary. All rights reserved.
+            <img src="{{asset('images/BytesBinary.png')}}" alt="College Logo" class="w-6 h-6 mr-2 rounded-full">
+            &copy; 2024 &nbsp<a href="#" class="text-red-400 hover:text-blue-500">BytesBinary</a>. All rights reserved.
         </div>
         <div class="mt-2 sm:mt-4">
             <a href="#" class="hover:text-gray-200 transition">About Us</a> |
