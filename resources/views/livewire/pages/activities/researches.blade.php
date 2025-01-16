@@ -1,6 +1,9 @@
-<div class="bg-gray-100 mt-24 mb-20">
+<div>
+    <x-card.coming-soon>
+
+    </x-card.coming-soon>
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto p-8">
+    {{-- <main class="max-w-7xl mx-auto p-8">
         <!-- Section Title -->
         <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Researches</h2>
 
@@ -42,5 +45,5 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main> --}}
 </div>
