@@ -12,7 +12,7 @@
         class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 flex flex-col w-[350px] mx-auto overflow-hidden relative">
         <!-- Event Image -->
         <div class="relative">
-            <img class="w-full h-56 object-cover hover:scale-105 overflow-hidden duration-300" src="{{ asset($pic) }}"
+            <img class="w-full h-56 object-cover hover:scale-105 overflow-hidden duration-300" src="{{ asset('storage/' .$pic) }}"
                 alt="Event Image">
             <!-- Timer Badge -->
             <div

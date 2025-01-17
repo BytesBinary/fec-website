@@ -5,14 +5,17 @@
             <hr class="w-48 h-1 mx-auto bg-blue-400 rounded">
             <div class="swiper swiper-container clubs-page-swiper mt-10">
                 <div class="swiper-wrapper mb-10">
+                    {{-- @php
+                        dd($events)
+                    @endphp --}}
                     @foreach ($events as $event)
                         <div class="swiper-slide">
                             <x-card.events-card
-                                title="{{$event['title']}}"
-                                pic="{{asset('images/gallery/2.jpg')}}"
-                                date="{{$event['date']}}"
-                                location="{{$event['location']}}"
-                                url="{{ $event['url'] }}"
+                                title="{{$event['post_title']}}"
+                                pic="{{$event['event_details']['feature_image']}}"
+                                date="{{$event['event_details']['event_date']}}"
+                                location="{{$event['event_details']['event_location']}}"
+                                url="{{ $event['post_slug'] }}"
                                 is-home-page="true"/>
                         </div>
                     @endforeach

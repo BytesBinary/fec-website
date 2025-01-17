@@ -74,7 +74,6 @@
                                 <p class="text-sm text-gray-700">{{ $segments['segment_description'] }}</p>
                             </div>
                         @endforeach
-
                     </div>
                 </div>
             </div>
@@ -122,7 +121,6 @@
                                 </div>
                             </div>
                         @endforeach
-
                     </div>
                 </div>
             </div>
