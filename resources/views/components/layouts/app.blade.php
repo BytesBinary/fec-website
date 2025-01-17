@@ -9,7 +9,7 @@
     @stack('styles')
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-200 custom-scrollbar">
     <x-partials.header />
     <x-partials.navigation />
     {{ $slot }}

@@ -5,10 +5,10 @@
     'slogan' => '',
 ])
 <a href="{{ $route }}" wire:navigate
-class="flex overflow-hidden relative flex-col items-center p-4 bg-gradient-to-br  {{($card%3===1) ? 'from-green-100 via-green-50 to-white' : (($card%3===2) ? 'from-orange-100 via-orange-50 to-white' : 'from-pink-100 via-pink-50 to-white') }} rounded-xl shadow-lg md:flex-row md:p-12">
+class="flex overflow-hidden hover:scale-105 transition-transform duration-300 relative flex-col items-center p-4 bg-gradient-to-br  {{($card%3===1) ? 'from-green-100 via-green-50 to-white' : (($card%3===2) ? 'from-orange-100 via-orange-50 to-white' : 'from-pink-100 via-pink-50 to-white') }} rounded-xl shadow-lg md:flex-row md:p-12">
 
     <div class="z-10 w-full">
-        
+
         <h3 class="text-xl font-bold text-green-800 drop-shadow-md md:text-2xl">{{$title}}</h3>
         <p class="mt-4 text-xl font-extrabold text-green-600 drop-shadow-md md:text-3xl">{{$slogan}}</p>
     </div>

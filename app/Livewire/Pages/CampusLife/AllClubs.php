@@ -3,11 +3,13 @@
 namespace App\Livewire\Pages\CampusLife;
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
 
 
 class AllClubs extends Component
 {
+    #[Title('FEC | Clubs')]
     public $clubs = [];
     public function mount()
     {
