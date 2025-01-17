@@ -9,7 +9,6 @@ use Livewire\Attributes\Title;
 
 class EventPage extends Component
 {
-    #[Title('FEC | Event')]
     public array $event;
     public function mount($slug)
     {
@@ -27,7 +26,7 @@ class EventPage extends Component
         if( ! empty( $this->event ) ) {
             $this->event = current($this->event);
         } else {
-            return redirect()->route('residence-cafeteria');
+            return redirect()->route('events');
         }
     }
     public function redirectTo($url)
@@ -36,6 +35,7 @@ class EventPage extends Component
     }
     public function render()
     {
-        return view('livewire.pages.activities.event-page');
+        return view('livewire.pages.activities.event-page')
+            ->layout('components.layouts.app', ['title' => $this->event['post_title']]);
     }
 }
