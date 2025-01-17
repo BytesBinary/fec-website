@@ -3,9 +3,11 @@
 namespace App\Livewire\Pages\Clubs;
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
 class Professionals extends Component
 {
+    #[Title('FEC | Club of Professionals')]
     public $club ='Professionals';
     public function render()
     {
