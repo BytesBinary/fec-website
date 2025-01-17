@@ -110,7 +110,7 @@ return [
             'route' => 'admission',
             'isDropdown' => false,
         ],
-       
+
     ],
     'department' => [
         'cse' => [
