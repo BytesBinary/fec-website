@@ -1,4 +1,4 @@
-<div class="mx-auto mt-24 mb-20 w-full md:w-3/5 lg:w-3/5 p-3 text-cng">
+<div class="mx-auto lg:pt-24 pb-20 w-full lg:w-[1050px] p-3 text-cng">
     <div class="bg-white m-0 leading-normal">
         <!-- Header Section -->
         <div class="bg-white pt-0 lg:pt-3 md:p-4 lg:pb-0 mt-3 flex flex-col justify-between md:space-y-0 w-full">
