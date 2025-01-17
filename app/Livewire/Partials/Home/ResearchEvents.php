@@ -9,8 +9,7 @@ class ResearchEvents extends Component
 {
     public array $events;
     public $researches = [];
-
-    public function render()
+    public function mount()
     {
         $this->events = Post::where('post_type', 'event')
             ->take(5)
@@ -21,6 +20,10 @@ class ResearchEvents extends Component
                 return $data;
             })
             ->toArray();
+    }
+
+    public function render()
+    {
         return view('livewire.partials.home.research-events');
     }
 }
