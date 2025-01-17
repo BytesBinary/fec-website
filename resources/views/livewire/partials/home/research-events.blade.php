@@ -13,7 +13,7 @@
                             <x-card.events-card
                                 title="{{$event['post_title']}}"
                                 pic="{{$event['event_details']['feature_image']}}"
-                                date="{{$event['event_details']['event_date']}}"
+                                date="{{ \Carbon\Carbon::parse($event['event_details']['event_date'])->isoFormat('dddd, MMM D, YYYY') }}"
                                 location="{{$event['event_details']['event_location']}}"
                                 url="{{ $event['post_slug'] }}"
                                 is-home-page="true"/>
@@ -43,6 +43,9 @@
 
             <div class="swiper swiper-container clubs-page-swiper mt-10">
                 <div class="swiper-wrapper mb-10">
+                    {{-- <x-card.coming-soon>
+
+                    </x-card.coming-soon> --}}
                     @foreach ($researches as $research)
                         <div class="swiper-slide">
                             <x-card.research-card

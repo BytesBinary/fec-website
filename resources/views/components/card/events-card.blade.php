@@ -56,7 +56,7 @@
                             d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
                     </svg>
 
-                    <span>09 DEC 2024</span>
+                    <span>{{$date}}</span>
                 </div>
 
                 <!-- Interested Section -->
@@ -84,7 +84,7 @@
 {{-- JavaScript event timer --}}
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const targetDate = new Date("{{ $date }}").getTime();
+        const targetDate = new Date("{{ $date }}");
         const timerId = "{{ $attributes->get('id') }}";
 
         function updateTimer() {
