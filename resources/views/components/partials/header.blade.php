@@ -50,7 +50,7 @@
 </div>
 
 <!-- Main Navigation -->
-<div class="bg-deepBlue text-white px-5 lg:pb-3">
+{{-- <div class="bg-deepBlue text-white px-5 lg:pb-3">
     <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 lg:py-8">
         <!-- Logo and Address -->
         <div class="flex items-center space-x-4 lg:-translate-y-3">
@@ -70,6 +70,35 @@
         </button>
 
         <!-- Mobile Menu Button -->
+        <div class="lg:hidden overflow-y-auto z-50">
+            <x-partials.mobile-menu>
+                @foreach ($menus as $key => $menu)
+                    <div class="border-t border-gray-400 border-opacity-50 hover:text-[#f5ad0d]">
+                        <x-menu :mobile="true" :isDropdown="$menu['isDropdown']" :dropdowns="$menu['isDropdown'] ? $menu['dropdowns'] : []" :slug="$key"
+                            :route="$menu['route']" :title="$menu['title']" />
+                    </div>
+                @endforeach
+            </x-partials.mobile-menu>
+        </div>
+    </div>
+</div> --}}
+<div class="bg-deepBlue text-white px-5 lg:pb-3">
+    <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 lg:py-8">
+        <!-- Logo and Address -->
+        <div class="flex items-center space-x-4 lg:-translate-y-3">
+            <a href="/" wire:navigate class="flex items-center space-x-2">
+                <picture>
+                    <source srcset="{{ asset('images/FEClogo.png') }}" type="image/webp">
+                    <img src="{{ asset('images/FEClogo.png') }}" alt="FEC Logo" class="h-12 md:h-14" loading="lazy">
+                </picture>
+                <h1 class="hidden md:block text-3xl font-bold">Faridpur Engineering College</h1>
+            </a>
+        </div>
+        <!-- Login Button -->
+        <button class="hidden lg:block px-8 py-2 border-2 border-yellow-500 text-yellow-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
+            Login
+        </button>
+        <!-- Mobile Menu -->
         <div class="lg:hidden overflow-y-auto z-50">
             <x-partials.mobile-menu>
                 @foreach ($menus as $key => $menu)
