@@ -22,10 +22,6 @@ return [
                     'title' => 'Library',
                     'route' => 'library'
                 ],
-                'student-statistics' => [
-                    'title' => 'Student Statistics',
-                    'route' => 'student-statistics'
-                ],
             ]
         ],
         // Administration Page
