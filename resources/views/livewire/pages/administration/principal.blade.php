@@ -1,4 +1,4 @@
-<div class="pt-32 lg:pt-5">
+<div>
 <div x-data="{ activeSection: 'overview' }" id="about" class="overflow-hidden mt-10 mb-20 lg:my-24 flex-col-reverse flex lg:flex-row justify-center lg:ml-20">
     <div class="max-w-6xl bg-[#f2f0fe] rounded-3xl shadow-2xl p-6 lg:flex border-t-4 lg:border-l-4 lg:border-t-0 border-emerald-500 w-full ">
         <!-- Image Section -->

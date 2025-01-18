@@ -1,5 +1,5 @@
-<div class="mt-40 lg:mt-0">
-    <div x-data="{ currentSection: 'about' }" class="container mx-auto mt-24 mb-20 w-full">
+<div>
+    <div x-data="{ currentSection: 'about' }" class="container mx-auto mt-8 lg:mt-24 mb-20 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-6">
             <!-- Sidebar Menu -->
             <div class="w-full mx-auto mb-10 col-span-1 bg-[#f2f0fe] rounded-lg shadow-md p-5 border border-gray-200">
