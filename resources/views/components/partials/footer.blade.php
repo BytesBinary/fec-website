@@ -225,14 +225,14 @@
 
                 <!-- College Logo -->
                 <div class="col-span-8 flex justify-center order-1">
-                    <img src="{{ asset('images/FEClogo.png') }}" alt="FEC Logo" class="max-h-36">
+                    <img src="{{ asset('images/logo/FEClogo.png') }}" alt="FEC Logo" class="max-h-36">
                 </div>
 
                 <!-- Footer Bottom Section -->
                 <div
                     class="col-span-8 order-3 flex flex-col items-center text-center text-gray-400 border-t border-gray-600 pt-6">
                     <div class="flex items-center space-x-2">
-                        <img src="{{ asset('images/BytesBinary.png') }}" alt="BytesBinary Logo" class="w-10 h-10">
+                        <img src="{{ asset('images/logo/bytesbinary.png') }}" alt="BytesBinary Logo" class="w-10 h-10">
                         <span class="flex-col text-start items-center">
                             All rights reserved.
                             Copyright &copy; 2024

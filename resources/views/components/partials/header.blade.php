@@ -56,7 +56,7 @@
         <div class="flex items-center space-x-4 lg:-translate-y-3">
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-2">
-                <img src="{{ asset('images/FEClogo.png') }}" alt="Byron Logo" class="h-12 md:h-14">
+                <img src="{{ asset('images/logo/FEClogo.png') }}" alt="Byron Logo" class="h-12 md:h-14">
                 <h1 class="block lg:hidden text-3xl font-bold">FEC</h1>
                 <!-- Full Text for Small Screens -->
                 <h1 class="hidden lg:block text-3xl font-bold">Faridpur Engineering College</h1>

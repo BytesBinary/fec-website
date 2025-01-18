@@ -18,7 +18,7 @@ class Clubs extends Component
                 'url' => route('single-club', ['name' => 'ric']),
             ],
             [
-                'logo' => asset('images/BytesBinary.png'),
+                'logo' => asset('images/club/cyber.jpeg'),
                 'short_name' => 'FECCPC',
                 'full_name' => 'Faridpur Engineering College Cyber Protector Club',
                 'description' => 'This is a honourable club of Faridpur Engineering College. Please explore it by clicking the explore button.',
@@ -46,7 +46,7 @@ class Clubs extends Component
                 'url' => route('single-club', ['name' => 'fecpc2']),
             ],
             [
-                'logo' => asset('images/BytesBinary.png'),
+                'logo' => asset('images/club/sdc.jpeg'),
                 'short_name' => 'FECSDC',
                 'full_name' => 'Faridpur Engineering College Software Development Club',
                 'description' => 'This is a honourable club of Faridpur Engineering College. Please explore it by clicking the explore button.',
@@ -67,14 +67,14 @@ class Clubs extends Component
                 'url' => route('single-club', ['name' => 'professionals']),
             ],
             [
-                'logo' => asset('images/BytesBinary.png'),
+                'logo' => asset('images/club/bani.jpg'),
                 'short_name' => 'FECBAC',
                 'full_name' => 'Faridpur Engineering College Bani Archana Committee',
                 'description' => 'This is a honourable club of Faridpur Engineering College. Please explore it by clicking the explore button.',
                 'url' => route('single-club', ['name' => 'bani-archana']),
             ],
             [
-                'logo' => asset('images/BytesBinary.png'),
+                'logo' => asset('images/club/rover.png'),
                 'short_name' => 'FECRSG',
                 'full_name' => 'Faridpur Engineering College Rover Scout Group',
                 'description' => 'This is a honourable club of Faridpur Engineering College. Please explore it by clicking the explore button.',

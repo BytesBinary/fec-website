@@ -24,7 +24,7 @@ class AllClubs extends Component
                 [
                     'title' => 'FEC Cyber Protector Club',
                     'short_des' => 'Learn and practice the latest in cybersecurity strategies, ethical hacking, and protection methodologies to keep digital spaces secure.',
-                    'image' => asset('images/card/cyber-protector.jpg'),
+                    'image' => asset('images/club/cyber.jpeg'),
                     'route' => 'feccpc',
 
                 ],
@@ -52,7 +52,7 @@ class AllClubs extends Component
                 [
                     'title' => 'FEC Debating Club',
                     'short_des' => 'Hone your public speaking skills, engage in competitive debates, and develop the ability to argue confidently with the FEC Debating Club.',
-                    'image' => asset('images/card/debate.jpg'),
+                    'image' => asset('images/club/debate.png'),
                     'route' => 'debating',
 
                 ],
@@ -66,7 +66,7 @@ class AllClubs extends Component
                 [
                     'title' => 'FEC Bani Archana Committee',
                     'short_des' => 'Collaborate and contribute to cultural activities and community events with the FEC Bani Archana Committee.',
-                    'image' => '#', // Update with correct image path if available
+                    'image' => 'images/club/bani.jpg',
                     'route' => 'bani-archana',
 
                 ],
@@ -80,7 +80,7 @@ class AllClubs extends Component
                 [
                     'title' => 'FEC Rover Scout',
                     'short_des' => 'Embark on adventures, learn leadership, and engage in community service with the FEC Rover Scout. Prepare yourself for real-life challenges.',
-                    'image' => asset('images/card/roverscout.jpg'),
+                    'image' => asset('images/club/rover.png'),
                     'route' => 'fecrsg',
 
                 ],
