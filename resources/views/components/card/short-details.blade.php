@@ -11,8 +11,8 @@
     <!-- Text container -->
     <div class="text-center text-gray-800">
         <!-- Count-up animation -->
-        <p class="font-bold text-3xl text-yellow-500">{{ $detail['number'] }}</p>
-        <p class="text-xl text-white">{{ $detail['name'] }}</p>
+        <p class="font-bold text-3xl text-[#f5ad0d]">{{ $detail['number'] }}</p>
+        <p class="text-xl text-black">{{ $detail['name'] }}</p>
     </div>
 </div>
 @endforeach
