@@ -11,13 +11,13 @@
 
     <!-- Button to toggle the drawer -->
     <button @click="open = true"
-            class="lg:hidden px-4 z-1 py-2 border-2 border-[#f5ad0d] text-[#f5ad0d] rounded hover:bg-[#f5ad0d] hover:text-white transition-all delay-300 ease-in">
+            class="lg:hidden px-4 z-40 py-2 top-8 border-2 border-[#f5ad0d] text-[#f5ad0d] rounded hover:bg-[#f5ad0d] hover:text-white transition-all delay-300 ease-in">
         Menu
     </button>
 
     <!-- Drawer -->
     <div x-show="open"
-    class="custom-scrollbar fixed inset-y-0 left-0 w-64 md:w-80 bg-deepBlue text-white text-lg shadow-lg z-50 transition-all delay-300 ease-in overflow-y-auto"
+    class="custom-scrollbar z-50 pt-16 fixed inset-y-0 left-0 w-64 md:w-80 bg-deepBlue text-white text-lg shadow-lg transition-all delay-300 ease-in overflow-y-auto"
     @click.away="open = false">
 
         <!-- Close button -->
