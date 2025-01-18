@@ -1,6 +1,6 @@
 <!-- Top Bar -->
 @php $menus = config('menu.main_menu') @endphp
-<div class="w-full lg:block bg-deepBlue text-white border-b border-blue-400 border-opacity-75 fixed top-0 z-40 lg:relative">
+<div class="w-full lg:block bg-deepBlue text-white border-b border-blue-400 border-opacity-75">
     <div class="container lg:w-[1170px] mx-auto lg:flex items-center justify-between px-4 lg:px-0 sm:py-2 md:py-3 opacity-75">
         <!-- Social Icons -->
         <div class="flex justify-center items-center space-x-6 px-2">
@@ -49,20 +49,53 @@
     </div>
 </div>
 
-<div class="bg-deepBlue text-white px-5 lg:pb-3 z-30 fixed top-6 md:top-10 lg:top-0 w-full lg:relative">
-    <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 lg:py-8 overflow-x-hidden">
+<!-- Main Navigation -->
+{{-- <div class="bg-deepBlue text-white px-5 lg:pb-3">
+    <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 lg:py-8">
+        <!-- Logo and Address -->
+        <div class="flex items-center space-x-4 lg:-translate-y-3">
+            <!-- Logo -->
+            <a href="/" wire:navigate class="flex items-center space-x-2">
+                <img src="{{ asset('images/FEClogo.png') }}" alt="Byron Logo" class="h-12 md:h-14">
+                <h1 class="block md:hidden text-3xl font-bold">FEC</h1>
+                <!-- Full Text for Small Screens -->
+                <h1 class="hidden md:block text-3xl font-bold">Faridpur Engineering College</h1>
+            </a>
+        </div>
+
+        <!-- Login Button -->
+        <button
+            class="hidden lg:block px-8 py-2 border-2 border-yellow-500 text-yellow-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
+            Login
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden overflow-y-auto z-50">
+            <x-partials.mobile-menu>
+                @foreach ($menus as $key => $menu)
+                    <div class="border-t border-gray-400 border-opacity-50 hover:text-[#f5ad0d]">
+                        <x-menu :mobile="true" :isDropdown="$menu['isDropdown']" :dropdowns="$menu['isDropdown'] ? $menu['dropdowns'] : []" :slug="$key"
+                            :route="$menu['route']" :title="$menu['title']" />
+                    </div>
+                @endforeach
+            </x-partials.mobile-menu>
+        </div>
+    </div>
+</div> --}}
+<div class="bg-deepBlue text-white px-5 lg:pb-3">
+    <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 lg:py-8">
         <!-- Logo and Address -->
         <div class="flex items-center space-x-4 lg:-translate-y-3">
             <a href="/" wire:navigate class="flex items-center space-x-2">
                 <picture>
                     <source srcset="{{ asset('images/FEClogo.png') }}" type="image/webp">
-                    <img src="{{ asset('images/FEClogo.png') }}" alt="FEC Logo" class="h-12 md:h-14 mr-2" loading="lazy">
+                    <img src="{{ asset('images/FEClogo.png') }}" alt="FEC Logo" class="h-12 md:h-14" loading="lazy">
                 </picture>
                 <h1 class="hidden md:block text-3xl font-bold">Faridpur Engineering College</h1>
             </a>
         </div>
         <!-- Login Button -->
-        <button class="hidden lg:block lg:mr-8 px-8 py-2 border-2 border-[#f5ad0d] text-[#f5ad0d] rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
+        <button class="hidden lg:block px-8 py-2 border-2 border-[#f5ad0d] text-[#f5ad0d] rounded hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out text-lg md:-translate-y-3">
             Login
         </button>
         <!-- Mobile Menu -->
