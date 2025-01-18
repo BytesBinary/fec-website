@@ -13,7 +13,7 @@
             </div>
             <!-- Navigation Links -->
             <div class="flex items-center justify-center space-x-10 md:border-r border-x-blue-300 md:px-6 md:border-l">
-                <a href="#" class="hover:text-blue-500">Alumni</a>
+                <a href="/alumni" wire:navigate class="hover:text-blue-500">Alumni</a>
                 <a href="/admission" wire:navigate class="hover:text-blue-500">Admission</a>
                 <a href="/user/login" wire:navigate class="sm:block lg:hidden hover:text-blue-500">Login</a>
             </div>
