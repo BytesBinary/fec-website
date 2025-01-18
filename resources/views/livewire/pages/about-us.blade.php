@@ -1,4 +1,4 @@
-<div class="bg-white text-gray-800 pt-20 pb-8">
+<div class="bg-white text-gray-800 sm:pt-6 lg:pt-24 pb-8">
   <!-- About Us Section -->
   <div class="w-full lg:w-[80%] mx-auto p-6">
     <h1 class="text-4xl lg:text-5xl font-bold text-center mb-8">About Us</h1>

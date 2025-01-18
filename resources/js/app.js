@@ -1,16 +1,31 @@
 import './bootstrap';
+import GLightbox from "glightbox";
 import Alpine from 'alpinejs';
 
-document.addEventListener("livewire:navigated", function() {
-    window.Alpine = Alpine;
-    Alpine.start();
+let lightbox;
+function initLightbox() {
+    if (lightbox) {
+        lightbox.destroy();
+    }
+    lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: false,
+        autoplayVideos: false,
+    });
+}
 
-    // navigation menu
-    navBarSticky();
+function initialize() {
+    initLightbox();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initialize();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("livewire:navigated", () => {
     navBarSticky();
+    initialize();
 });
 
 function navBarSticky(){

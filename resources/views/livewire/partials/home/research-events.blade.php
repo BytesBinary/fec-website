@@ -3,24 +3,16 @@
         <div class="landing-about mx-auto pt-5 pb-10 my-10">
             <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Upcoming Events</p>
             <hr class="w-48 h-1 mx-auto bg-blue-400 rounded">
-            <div class="swiper swiper-container clubs-page-swiper mt-10">
-                <div class="swiper-wrapper mb-10">
-                    {{-- @php
-                        dd($events)
-                    @endphp --}}
+            <div class="mt-10">
+                <div class="mb-10 flex overflow-x-auto custom-scrollbar">
                     @foreach ($events as $event)
-                        <div class="swiper-slide">
-                            <x-card.events-card
-                                title="{{$event['post_title']}}"
-                                pic="{{$event['event_details']['feature_image']}}"
-                                date="{{ \Carbon\Carbon::parse($event['event_details']['event_date'])->isoFormat('dddd, MMM D, YYYY') }}"
-                                location="{{$event['event_details']['event_location']}}"
-                                url="{{ $event['post_slug'] }}"
-                                is-home-page="true"/>
-                        </div>
+                        <x-card.events-card title="{{ $event['post_title'] }}"
+                            pic="{{ $event['event_details']['feature_image'] }}"
+                            date="{{ \Carbon\Carbon::parse($event['event_details']['event_date'])->isoFormat('dddd, MMM D, YYYY') }}"
+                            location="{{ $event['event_details']['event_location'] }}" url="{{ $event['post_slug'] }}"
+                            is-home-page="true" />
                     @endforeach
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
 
             <div class="card-actions mt-8 mb-4 flex justify-center">
@@ -41,23 +33,16 @@
             </h2>
             <hr class="w-48 h-1 mx-auto bg-blue-400 border-0 rounded mb-10">
 
-            <div class="swiper swiper-container clubs-page-swiper mt-10">
-                <div class="swiper-wrapper mb-10">
-                    {{-- <x-card.coming-soon>
-
-                    </x-card.coming-soon> --}}
+            <div class="mt-10">
+                <div class="mb-10 flex overflow-x-auto custom-scrollbar">
                     @foreach ($researches as $research)
-                        <div class="swiper-slide">
-                            <x-card.research-card
-                                image="{{ $research['image'] }}"
-                                title="{{ $research['title'] }}"
-                                description="{{ $research['description'] }}"
-                                date="{{ $research['date'] }}"
-                                url="{{ $research['url'] }}" />
-                        </div>
+                    <div>
+                        <x-card.research-card image="{{ $research['image'] }}" title="{{ $research['title'] }}"
+                            description="{{ $research['description'] }}" date="{{ $research['date'] }}"
+                            url="{{ $research['url'] }}" />
+                    </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
             <div class="card-actions mt-8 mb-4 flex justify-center">
                 <a href="{{ route('researches') }}" wire:navigate
@@ -69,8 +54,3 @@
         </div>
     </section>
 </div>
-
-
-@push('scripts')
-    @vite(['resources/js/home/clubs.js'])
-@endpush

@@ -22,10 +22,6 @@ return [
                     'title' => 'Library',
                     'route' => 'library'
                 ],
-                'student-statistics' => [
-                    'title' => 'Student Statistics',
-                    'route' => 'student-statistics'
-                ],
             ]
         ],
         // Administration Page
@@ -105,9 +101,9 @@ return [
             ]
         ],
         // Admission Page
-        'admission' => [
-            'title' => 'Admission',
-            'route' => 'admission',
+        'about-us' => [
+            'title' => 'About Us',
+            'route' => 'about-us',
             'isDropdown' => false,
         ],
 
