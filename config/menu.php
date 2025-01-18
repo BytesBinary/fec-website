@@ -105,9 +105,9 @@ return [
             ]
         ],
         // Admission Page
-        'admission' => [
-            'title' => 'Admission',
-            'route' => 'admission',
+        'about-us' => [
+            'title' => 'About Us',
+            'route' => 'about-us',
             'isDropdown' => false,
         ],
 

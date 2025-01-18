@@ -23,7 +23,7 @@
         <!-- Close button -->
         <div class="flex justify-between p-4">
             <div class="flex items-center space-x-3">
-                <a href="#" class="flex items-center ml-1 space-x-2">
+                <a href="/" wire:navigate class="flex items-center ml-1 space-x-2">
                     <img src="{{ asset('images/FEClogo.png') }}" alt="FEC Logo" class="h-12 md:h-14">
                 </a>
                 <h1 class="block lg:hidden text-3xl font-bold">FEC</h1>
