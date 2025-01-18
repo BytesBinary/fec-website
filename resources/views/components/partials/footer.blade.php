@@ -232,7 +232,7 @@
                             All rights reserved.
                             Copyright &copy; 2024
                             <br>
-                            <a href="#" class="text-red-400 hover:text-blue-500">BytesBinary</a>.
+                            <a href="https://bytesbinary.top/" class="text-red-400 hover:text-blue-500">BytesBinary</a>.
                         </span>
                     </div>
                 </div>
