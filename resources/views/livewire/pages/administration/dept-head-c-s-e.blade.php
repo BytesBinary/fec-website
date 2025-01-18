@@ -1,4 +1,4 @@
-<div>
+<div class="mt-40 lg:mt-0">
     <div x-data="{ currentSection: 'about' }" class="container mx-auto mt-24 mb-20 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-6">
             <!-- Sidebar Menu -->
@@ -11,7 +11,7 @@
                     <a href="#" @click.prevent="currentSection = 'about'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Department Head</a>
                     <a href="#" @click.prevent="currentSection = 'biography'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Biography</a>
                     <a href="#" @click.prevent="currentSection = 'educational'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Educational Background</a>
-                    <a href="#" @click.prevent="currentSection = 'cse'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Department of CSE</a>
+                    <a href="/departments/cse" wire:navigate class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Department of CSE</a>
                 </nav>
             </div>
 

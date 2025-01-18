@@ -1,4 +1,4 @@
-<div class="landing-about container mx-auto pt-5 px-5 pb-10 my-10">
+<div class="container mx-auto pt-5 md:px-5 pb-10 my-10">
     <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Clubs</p>
     <hr class="w-48 h-1 mx-auto bg-blue-400 border-0 rounded ">
     <div class="swiper clubs-page-swiper mt-10">
