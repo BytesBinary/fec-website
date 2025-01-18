@@ -100,13 +100,12 @@
             <!-- Footer Rights -->
             <div class="col-start-5 col-end-7 flex flex-col items-center justify-center text-gray-400">
                 <div class="flex items-center space-x-2">
-                    <img src="{{ asset('images/BytesBinary.png') }}" alt="BytesBinary Logo" class="w-10 h-10">
+                    <img src="{{ asset('images/logo/BytesBinary.png') }}" alt="BytesBinary Logo" class="w-10 h-10">
                     <span class="flex-col text-start items-center">
                         All rights reserved.
                         Copyright &copy; 2024
                         <br>
                         <a href="#" class="text-red-500 hover:text-blue-500">BytesBinary</a>.
-
                     </span>
                 </div>
             </div>
