@@ -9,23 +9,25 @@
         <!-- Left Column - About Details -->
         <div class="lg:w-1/2 space-y-6">
             <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
-                <h3 class="text-xl font-semibold text-gray-800">Our Mission</h3>
-                <p class="text-gray-600 mt-2">To empower students with knowledge and skills in the domain of Computer Science, preparing them for a successful career and innovation in the tech industry.</p>
+                <h3 class="text-xl font-semibold text-gray-800">About CSE</h3>
+                <p class="text-gray-600 mt-2">Computer Science Engineering is an engineering course that involves several computer science aspects essential for the creation of the computer system. It is a four-year undergraduate engineering course wherein students study computer software & hardware for theoretical & practical knowledge.</p>
             </div>
 
             <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
-                <h3 class="text-xl font-semibold text-gray-800">Core Values</h3>
+                <h3 class="text-xl font-semibold text-gray-800">Subject in CSE Course</h3>
                 <ul class="list-disc ml-6 text-gray-600">
-                    <li>Excellence in education</li>
-                    <li>Innovation in research</li>
-                    <li>Integrity and ethical practice</li>
-                    <li>Collaborative learning</li>
+                    <li>Computer Architecture & Organization</li>
+                    <li>Cloud Computing</li>
+                    <li>Database Management Systems</li>
+                    <li>Operating Systems & Compiler Design</li>
+                    <li>Design & Analysis of Algorithms</li>
+                    <li>Data Structures and Algorithm</li>
                 </ul>
             </div>
 
             <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
                 <h3 class="text-xl font-semibold text-gray-800">Contact Information</h3>
-                <p class="text-gray-600 mt-2">Email: cse@faridpur.edu.bd</p>
+                <p class="text-gray-600 mt-2">E-mail:<a href="mailto:webmaster@example.com"></p>
                 <p class="text-gray-600">Phone: +880 1234 567890</p>
             </div>
         </div>
