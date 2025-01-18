@@ -1,10 +1,27 @@
 import './bootstrap';
+import GLightbox from "glightbox";
 
-document.addEventListener("livewire:navigated", function () {
-    navBarSticky();
+let lightbox;
+
+function initLightbox() {
+    if (lightbox) {
+        lightbox.destroy(); // Destroy previous instances if they exist
+    }
+    lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: false,
+        autoplayVideos: false,
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initLightbox();
 });
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener("livewire:navigated", () => {
     navBarSticky();
+    initLightbox();
 });
 
 function navBarSticky(){
