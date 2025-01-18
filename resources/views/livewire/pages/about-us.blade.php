@@ -28,12 +28,12 @@
         </p>
       </div>
       <div class="image-section">
-        <img src="https://assets.collegedunia.com/public/college_data/images/studyabroad/appImage/college_1090_29-15:00_o-HARVARD-UNIVERSITY-BUILDING-facebook.jpeg" alt="Educational Platform" class="w-full h-80 rounded-lg shadow-lg">
+        <img src="images/hero-img1.jpg" alt="Educational Platform" class="w-full h-80 rounded-lg shadow-lg">
       </div>
     </div>
     <div class="grid md:grid-cols-2 gap-6 items-center mb-8 mt-4 lg:mt-10 p-4">
         <div class="image-section">
-            <img src="https://assets.collegedunia.com/public/college_data/images/studyabroad/appImage/college_1090_29-15:00_o-HARVARD-UNIVERSITY-BUILDING-facebook.jpeg" alt="Educational Platform" class="w-full h-80 rounded-lg shadow-lg">
+            <img src="images/hero-img.jpg" alt="Educational Platform" class="w-full h-80 rounded-lg shadow-lg">
           </div>
         <div class="description">
           <h2 class="text-2xl font-semibold mb-2">Campus Life</h2>
