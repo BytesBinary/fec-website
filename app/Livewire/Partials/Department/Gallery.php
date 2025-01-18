@@ -8,36 +8,27 @@ class Gallery extends Component
 {
     public $department;
     public $dept;
-    public $img1,$img2,$img3,$img4,$img5,$img6;
+    public array $img;
     public function mount($department){
         $this->department = $department;
         switch($department){
             case 'cse':
                 $this->dept='Computer Science and Engineering';
-                $this->img1='images/bg-image.jpg';
-                $this->img2='';
-                $this->img3='';
-                $this->img4='';
-                $this->img5='';
-                $this->img6='';
+                $this->img=[
+                        'Event - 1' => 'images/bg-image.jpg',
+                    ];
                 break;
             case 'eee':
                 $this->dept='Electrical and Electronics Engineering';
-                $this->img1='';
-                $this->img2='';
-                $this->img3='';
-                $this->img4='';
-                $this->img5='';
-                $this->img6='';
+                $this->img=[
+                       'Event - 1' => 'images/bg-image.jpg',
+                ];
                 break;
             case 'ce':
                 $this->dept='Civil Engineering';
-                $this->img1='';
-                $this->img2='';
-                $this->img3='';
-                $this->img4='';
-                $this->img5='';
-                $this->img6='';
+                $this->img=[
+                    'Event - 1' => 'images/bg-image.jpg',
+                ];
                 break;
             default:
                 break;

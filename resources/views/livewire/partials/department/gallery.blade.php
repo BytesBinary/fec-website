@@ -14,52 +14,14 @@
         <!-- Gallery Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Image 1 -->
-            <div class="relative group">
-                <img src="{{asset($img1)}}" alt="Gallery Image 1" class="w-full h-full object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <span class="text-white text-lg font-semibold">Event 1</span>
-                </div>
+          @foreach ($img as $key => $image)
+          <div class="relative group">
+            <img src="{{asset($image)}}" alt="Gallery Image" class="w-full h-full object-cover rounded-lg shadow-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                <span class="text-white text-lg font-semibold">{{$key}}</span>
             </div>
-
-            <!-- Image 2 -->
-            <div class="relative group">
-                <img src="{{asset($img2)}}" alt="Gallery Image 2" class="w-full h-full object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <span class="text-white text-lg font-semibold">Event 2</span>
-                </div>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="relative group">
-                <img src="{{asset($img3)}}" alt="Gallery Image 3" class="w-full h-full object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <span class="text-white text-lg font-semibold">Event 3</span>
-                </div>
-            </div>
-
-            <!-- Image 4 -->
-            <div class="relative group">
-                <img src="{{asset($img4)}}" alt="Gallery Image 4" class="w-full h-full object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <span class="text-white text-lg font-semibold">Event 4</span>
-                </div>
-            </div>
-
-            <!-- Image 5 -->
-            <div class="relative group">
-                <img src="{{asset($img5)}}" alt="Gallery Image 5" class="w-full h-full object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <span class="text-white text-lg font-semibold">Event 5</span>
-                </div>
-            </div>
-
-            <!-- Image 6 -->
-            <div class="relative group">
-                <img src="{{asset($img6)}}" alt="Gallery Image 6" class="w-full h-full object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <span class="text-white text-lg font-semibold">Event 6</span>
-                </div>
-            </div>
+        </div>
+          @endforeach
         </div>
     </div>
 </section>
