@@ -3,11 +3,9 @@ import GLightbox from "glightbox";
 import Alpine from 'alpinejs';
 
 let lightbox;
-
-// Function to initialize GLightbox
 function initLightbox() {
     if (lightbox) {
-        lightbox.destroy(); // Destroy previous instances if they exist
+        lightbox.destroy();
     }
     lightbox = GLightbox({
         selector: '.glightbox',
@@ -17,22 +15,8 @@ function initLightbox() {
     });
 }
 
-// Function to initialize Alpine.js
-function initAlpine() {
-    if (!window.Alpine || !Alpine.initialized) {
-        // Check if Alpine is not initialized and then initialize it
-        window.Alpine = Alpine;
-        Alpine.start();
-        console.log("Alpine.js has been initialized.");
-    } else {
-        console.log("Alpine.js is already initialized.");
-    }
-}
-
-// Initialize both Alpine.js and GLightbox
 function initialize() {
-    initAlpine(); // Ensure Alpine.js is initialized
-    initLightbox(); // Initialize GLightbox
+    initLightbox();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
