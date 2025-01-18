@@ -5,19 +5,19 @@
         <!-- Section Header -->
         <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-gray-800">Upcoming Events</h2>
-            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Explore the exciting events organized by the Computer Science & Engineering department at Faridpur Engineering College.</p>
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Explore the exciting events organized by the {{$dept}} at Faridpur Engineering College.</p>
         </div>
 
         <!-- Event Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Event 1 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="https://via.placeholder.com/400x250" alt="Event 1" class="w-full h-48 object-cover">
+                <img src="{{asset($img)}}" alt="Event 1" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-800">Tech Innovation Conference 2024</h3>
-                    <p class="text-gray-600 mt-2">Join us for a conference featuring keynote speakers and innovators in the tech industry.</p>
+                    <h3 class="text-2xl font-semibold text-gray-800">{{$cardTitle}}</h3>
+                    <p class="text-gray-600 mt-2">{{$cardDesc}}</p>
                     <div class="flex items-center justify-between mt-4">
-                        <span class="text-gray-500 text-sm">March 5, 2024</span>
+                        <span class="text-gray-500 text-sm">{{$date}}</span>
                         <a href="#" class="text-blue-600 hover:underline">Learn More</a>
                     </div>
                 </div>
