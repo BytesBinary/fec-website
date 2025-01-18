@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<div class="sticky top-0 z-50 bg-deepBlue text-white px-5 lg:pb-3">
+<div class="sticky top-0 z-50 bg-deepBlue text-white px-5 lg:pb-3 md:static md:top-auto md:z-0">
     <div class="container lg:w-[1170px] mx-auto flex justify-between items-center py-4 lg:py-8">
         <!-- Logo and Address -->
         <div class="flex items-center space-x-4 lg:-translate-y-3">
