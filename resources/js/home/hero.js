@@ -1,4 +1,5 @@
 import Swiper from "swiper/bundle";
+import GLightbox from "glightbox";
 
 document.addEventListener("livewire:navigated", function() {
     new Swiper(".swiper-container-hero-section", {
