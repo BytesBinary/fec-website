@@ -91,11 +91,11 @@ class UserSeeder extends Seeder
         $programmers = [
             [
                 'name' => 'admin',
-                'email' => 'admin@fec.com',
+                'email' => 'admin@fec.edu.bd',
                 'designation' => Designation::where('designation', 'Programmer')->first()->id,
                 'email_verified_at' => now(),
                 'is_admin_verified' => true,
-                'password' => bcrypt('admin'),
+                'password' => bcrypt('BytesbinaryIsGreat'),
             ],
         ];
 

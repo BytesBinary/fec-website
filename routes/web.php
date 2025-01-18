@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\FilamentLogout;
-use App\Livewire\AboutUs;
+use App\Livewire\Pages\AboutUs;
 use App\Livewire\Pages\Admission;
 use App\Livewire\Pages\Alumni;
 use App\Livewire\Pages\Home;

@@ -4,12 +4,12 @@
     "name": "swiper-bundle"
   },
   "resources/css/app.css": {
-    "file": "assets/app-tu3EOQPn.css",
+    "file": "assets/app-CL71bTyJ.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-BRp35_op.js",
+    "file": "assets/app-BQG2Llie.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
@@ -27,24 +27,6 @@
     "file": "assets/departments-5c3wLAc5.js",
     "name": "departments",
     "src": "resources/js/home/departments.js",
-    "isEntry": true,
-    "imports": [
-      "_swiper-bundle-gA8vv5XH.js"
-    ]
-  },
-  "resources/js/home/gallery.js": {
-    "file": "assets/gallery-D8AywSCC.js",
-    "name": "gallery",
-    "src": "resources/js/home/gallery.js",
-    "isEntry": true,
-    "imports": [
-      "_swiper-bundle-gA8vv5XH.js"
-    ]
-  },
-  "resources/js/home/hero.js": {
-    "file": "assets/hero-Dtfvi_zB.js",
-    "name": "hero",
-    "src": "resources/js/home/hero.js",
     "isEntry": true,
     "imports": [
       "_swiper-bundle-gA8vv5XH.js"

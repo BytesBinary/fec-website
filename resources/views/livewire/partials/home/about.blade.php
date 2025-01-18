@@ -12,7 +12,7 @@
             </p>
             <a href="{{route('about-us')}}" wire:navigate class="block mt-4">
                 <div class="flex justify-center">
-                    <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-400 text-white rounded-lg shadow-md transition duration-300 hover:cursor-pointer">
+                    <button class="flex items-center justify-center space-x-2 w-full py-2 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:to-purple-600 text-white rounded-lg shadow-md transition duration-300 hover:cursor-pointer">
                         <span class="text-base">Read More</span>
                         <x-svg-icon.external-url class="w-5 h-5" />
                     </button>
@@ -25,7 +25,7 @@
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center">
                 <!-- Play Button with Animation -->
-                <a href="https://www.youtube.com/watch?v=_H9B4iynTY0" class="glightbox pulse p-4 bg-[#f5ac0dca] text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 active:scale-90 active:shadow-inner">
+                <a href="https://www.youtube.com/watch?v=_H9B4iynTY0" class="glightbox pulse p-4 bg-purple-600 bg-opacity-70 text-white rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 active:scale-90 active:shadow-inner">
                     <!-- Heroicon Play Icon -->
                     <x-svg-icon.play-button class="size-10" />
                 </a>
