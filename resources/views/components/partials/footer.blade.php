@@ -13,7 +13,8 @@
             <div class="flex flex-col space-y-2 text-end px-6 border-r border-blue-300">
                 <a href="http://tmed.gov.bd/" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="Technical and Madrasa Education">
-                    Technical and Madrasa Education Department                </a>
+                    Technical and Madrasa Education Department
+                </a>
                 <a href="http://www.techedu.gov.bd/" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="Technical Education Directorate">
                     Directorate of Technical Education
@@ -124,19 +125,19 @@
             <div class="flex flex-col text-start space-y-2 px-6 md:border-r border-blue-300">
                 <a href="http://tmed.gov.bd/" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="Technical and Madrasa Education">
-                    কারিগরি ও মাদ্রাসা শিক্ষা বিভাগ
+                    Technical and Madrasa Education Department
                 </a>
                 <a href="http://www.techedu.gov.bd/" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="Technical Education Directorate">
-                    কারিগরি শিক্ষা অধিদপ্তর
+                    Directorate of Technical Education
                 </a>
                 <a href="http://ducmc.com/index.php" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="DU Engineering Colleges">
-                    ঢাকা বিশ্ববিদ্যালয়ের অধিভুক্ত ইঞ্জিনিয়ারিং কলেজ
+                    Engineering College affiliated to Dhaka University
                 </a>
                 <a href="https://fec.ac.bd/site/view/photogallery/-" target="_blank"
                     class="hover:text-gray-400 transition" aria-label="Photo Gallery">
-                    ফটোগ্যালারি
+                    Photo Gallery
                 </a>
             </div>
 
@@ -152,34 +153,29 @@
                         <li>
                             <a href="https://ibas.finance.gov.bd/login" target="_blank"
                                 class="hover:text-gray-400 transition">
-                                আইবাস++
+                                IBAS++
                             </a>
                         </li>
                         <li>
                             <a href="https://www.grs.gov.bd/" target="_blank" class="hover:text-gray-400 transition">
-                                অভিযোগ প্রতিকার ব্যবস্থা
+                                Grievance Redressal System
                             </a>
                         </li>
                         <li>
                             <a href="https://fec.ac.bd/site/page/5124482a-81d6-486a-8f11-fa1d1eb347d3/%E0%A6%85%E0%A6%AD%E0%A6%BF%E0%A6%AF%E0%A7%8B%E0%A6%97-%E0%A6%AC%E0%A6%95%E0%A7%8D%E0%A6%B8"
                                 target="_blank" class="hover:text-gray-400 transition">
-                                অভিযোগ বক্স
+                                Complaint Box
                             </a>
                         </li>
                         <li>
                             <a href="https://fec.ac.bd/site/page/8d4d2b68-f67a-4f87-9e0e-eb2a0d29ee8d/-#"
                                 target="_blank" class="hover:text-gray-400 transition">
-                                যোগাযোগ
+                                Contact
                             </a>
                         </li>
                     </ul>
                 </div>
                 <ul class="grid grid-cols-1 text-left mt-3 pl-6">
-                    <li>
-                        <a href="https://library-fec.ac.bd/" target="_blank" class="hover:text-gray-400 transition">
-                            ই-কেন্দ্রীয় লাইব্রেরি
-                        </a>
-                    </li>
                     <li>
                         <a href="http://dte.gov.bd/dte/#/" target="_blank" class="hover:text-gray-400 transition">
                             HRMIS
@@ -187,12 +183,12 @@
                     </li>
                     <li>
                         <a href="https://mail.fec.ac.bd/" target="_blank" class="hover:text-gray-400 transition">
-                            ওয়েবমেইল
+                            Web Mail
                         </a>
                     </li>
                     <li>
                         <a href="https://gmail.google.com/" target="_blank" class="hover:text-gray-400 transition">
-                            ওয়েবমেইল (শিক্ষার্থী)
+                            Web Mail (Student)
                         </a>
                     </li>
                 </ul>
