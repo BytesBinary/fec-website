@@ -1,5 +1,4 @@
-<div class="mt-24 mb-20">
-    <section class="bg-gray-50 py-12">
+<div class="pt-24 pb-20 bg-gray-50 py-12">
         <div class="container mx-auto px-4 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-12">
@@ -22,5 +21,4 @@
                 @endforeach
             </div>
         </div>
-    </section>
 </div>
