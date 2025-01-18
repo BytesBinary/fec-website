@@ -21,7 +21,7 @@
                 </a>
                 <a href="http://ducmc.com/index.php" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="DU Engineering Colleges">
-                    Engineering College affiliated to Dhaka University
+                    DU affiliated Engineering Colleges
                 </a>
                 <a href="https://fec.ac.bd/site/view/photogallery/-" target="_blank"
                     class="hover:text-gray-400 transition" aria-label="Photo Gallery">
@@ -98,11 +98,9 @@
                 <div class="flex items-center space-x-2">
                     <img src="{{ asset('images/BytesBinary.png') }}" alt="BytesBinary Logo" class="w-10 h-10">
                     <span class="flex-col text-start items-center">
-                        All rights reserved.
                         Copyright &copy; 2024
-                        <br>
                         <a href="#" class="text-red-500 hover:text-blue-500">BytesBinary</a>.
-
+                        <br>All rights reserved.
                     </span>
                 </div>
             </div>
@@ -125,15 +123,15 @@
             <div class="flex flex-col text-start space-y-2 px-6 md:border-r border-blue-300">
                 <a href="http://tmed.gov.bd/" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="Technical and Madrasa Education">
-                    Technical and Madrasa Education Department
+                    TMED
                 </a>
                 <a href="http://www.techedu.gov.bd/" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="Technical Education Directorate">
-                    Directorate of Technical Education
+                    DTE
                 </a>
                 <a href="http://ducmc.com/index.php" target="_blank" class="hover:text-gray-400 transition"
                     aria-label="DU Engineering Colleges">
-                    Engineering College affiliated to Dhaka University
+                    DU affiliated Engineering Colleges
                 </a>
                 <a href="https://fec.ac.bd/site/view/photogallery/-" target="_blank"
                     class="hover:text-gray-400 transition" aria-label="Photo Gallery">
@@ -158,7 +156,7 @@
                         </li>
                         <li>
                             <a href="https://www.grs.gov.bd/" target="_blank" class="hover:text-gray-400 transition">
-                                Grievance Redressal System
+                                GRS
                             </a>
                         </li>
                         <li>
@@ -225,10 +223,10 @@
                     <div class="flex items-center space-x-2">
                         <img src="{{ asset('images/BytesBinary.png') }}" alt="BytesBinary Logo" class="w-10 h-10">
                         <span class="flex-col text-start items-center">
-                            All rights reserved.
                             Copyright &copy; 2024
-                            <br>
                             <a href="#" class="text-red-400 hover:text-blue-500">BytesBinary</a>.
+                            <br>
+                            All rights reserved.
                         </span>
                     </div>
                 </div>
