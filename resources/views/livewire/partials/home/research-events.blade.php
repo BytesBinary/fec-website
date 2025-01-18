@@ -3,13 +3,10 @@
         <div class="landing-about mx-auto pt-5 pb-10 my-10">
             <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Upcoming Events</p>
             <hr class="w-48 h-1 mx-auto bg-blue-400 rounded">
-            <div class="swiper swiper-container clubs-page-swiper mt-10">
-                <div class="swiper-wrapper mb-10">
-                    {{-- @php
-                        dd($events)
-                    @endphp --}}
+            <div class="mt-10">
+                <div class="mb-10">
                     @foreach ($events as $event)
-                        <div class="swiper-slide">
+                        <div>
                             <x-card.events-card
                                 title="{{$event['post_title']}}"
                                 pic="{{$event['event_details']['feature_image']}}"
@@ -41,13 +38,13 @@
             </h2>
             <hr class="w-48 h-1 mx-auto bg-blue-400 border-0 rounded mb-10">
 
-            <div class="swiper swiper-container clubs-page-swiper mt-10">
-                <div class="swiper-wrapper mb-10">
+            <div class="mt-10">
+                <div class="mb-10">
                     {{-- <x-card.coming-soon>
 
                     </x-card.coming-soon> --}}
                     @foreach ($researches as $research)
-                        <div class="swiper-slide">
+                        <div>
                             <x-card.research-card
                                 image="{{ $research['image'] }}"
                                 title="{{ $research['title'] }}"
@@ -57,7 +54,6 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
             <div class="card-actions mt-8 mb-4 flex justify-center">
                 <a href="{{ route('researches') }}" wire:navigate
@@ -69,8 +65,3 @@
         </div>
     </section>
 </div>
-
-
-@push('scripts')
-    @vite(['resources/js/home/clubs.js'])
-@endpush

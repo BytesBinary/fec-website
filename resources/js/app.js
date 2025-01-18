@@ -1,14 +1,8 @@
 import './bootstrap';
-import Alpine from 'alpinejs';
 
-document.addEventListener("livewire:navigated", function() {
-    window.Alpine = Alpine;
-    Alpine.start();
-
-    // navigation menu
+document.addEventListener("livewire:navigated", function () {
     navBarSticky();
 });
-
 document.addEventListener('DOMContentLoaded', () => {
     navBarSticky();
 });
