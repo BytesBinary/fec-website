@@ -4,7 +4,7 @@
             <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Upcoming Events</p>
             <hr class="w-48 h-1 mx-auto bg-blue-400 rounded">
             <div class="mt-10">
-                <div class="mb-10 flex overflow-x-auto custom-scrollbar">
+                <div class="mb-10 grid md:grid-cols-3 justify-items-start">
                     @foreach ($events as $event)
                         <x-card.events-card title="{{ $event['post_title'] }}"
                             pic="{{ $event['event_details']['feature_image'] }}"
