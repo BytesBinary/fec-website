@@ -14,7 +14,7 @@ class ResearchEvents extends Component
     public function mount()
     {
         $this->events = Post::where('post_type', 'event')
-            ->take(3)
+            ->take(4)
             ->get()
             ->map(function ($data) {
                 $data->post_content = '';
