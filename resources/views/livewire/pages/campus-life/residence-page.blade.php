@@ -1,5 +1,5 @@
 <body class="m-0">
-    <div class="mx-auto lg:w-3/4 lg:mt-24">
+    <div class="mx-auto lg:w-3/4 lg:mt-24 mb-6 lg:mb-10">
         <!-- Section with Background Image -->
         <section
             class="overflow-hidden relative py-10 mt-5 text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-md shadow-2xl">
