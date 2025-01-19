@@ -36,11 +36,11 @@
             <div class="mt-10">
                 <div class="mb-10 flex overflow-x-auto custom-scrollbar">
                     @foreach ($researches as $research)
-                    <div>
-                        <x-card.research-card image="{{ $research['image'] }}" title="{{ $research['title'] }}"
-                            description="{{ $research['description'] }}" date="{{ $research['date'] }}"
-                            url="{{ $research['url'] }}" />
-                    </div>
+                        <div>
+                            <x-card.research-card image="{{ $research['image'] }}" title="{{ $research['title'] }}"
+                                description="{{ $research['description'] }}" date="{{ $research['date'] }}"
+                                url="{{ $research['url'] }}" />
+                        </div>
                     @endforeach
                 </div>
             </div>

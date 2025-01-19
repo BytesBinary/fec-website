@@ -2,21 +2,31 @@
 
 namespace App\Livewire\Partials\Home;
 
-use Livewire\Component;
 use App\Models\Post;
+use Livewire\Component;
 
 class ResearchEvents extends Component
 {
     public array $events;
+
     public $researches = [];
+
     public function mount()
     {
         $this->events = Post::where('post_type', 'event')
             ->take(3)
             ->get()
-            ->map(function ($data){
+            ->map(function ($data) {
                 $data->post_content = '';
-                $data->event_details = get_post_meta($data->id,'event_details');
+
+                $eventDetails = get_post_meta($data->id, 'event_details');
+
+                if (is_array($eventDetails['feature_image'])) {
+                    $eventDetails['feature_image'] = current($eventDetails['feature_image']);
+                }
+
+                $data->event_details = $eventDetails;
+
                 return $data;
             })
             ->toArray();
