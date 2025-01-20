@@ -16,5 +16,5 @@
             @endforeach
         </div>
     </div>
-    <x-pagination :paginationLinks="$events->links('pagination::bootstrap-4')" />
+    <x-pagination :paginationLinks="$events->links()" />
 </div>
