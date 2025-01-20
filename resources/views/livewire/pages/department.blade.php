@@ -9,11 +9,4 @@
     <p class="text-center text-gray-600 mb-2">
         Join us to innovate and shape the future of technology!
     </p>
-    <div class="text-center mt-8">
-        <a href="/dept/eecs/learn-more"
-            class="inline-block px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-300">
-            Learn More
-        </a>
-    </div>
-
 </div>
