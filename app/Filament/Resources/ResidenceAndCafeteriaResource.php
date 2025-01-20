@@ -38,6 +38,7 @@ class ResidenceAndCafeteriaResource extends Resource
                     })
                     ->label('Residence Author'),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

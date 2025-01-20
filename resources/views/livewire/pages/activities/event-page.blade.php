@@ -15,7 +15,9 @@
                         class="size-12 rounded-[50%] object-cover">
                     <div class="justify-start">
                         <h3 class="text-start font-semibold">
-                            {{ reset($event['contact_details'])['contact_name'] }}
+                            @if ($event['post_author'])
+                                {{ $event['post_author'] }}
+                            @endif
                         </h3>
                         <p class="text-start text-gray-700">
                             {{ \Carbon\Carbon::parse($event['created_at'])->format('d F Y') }}

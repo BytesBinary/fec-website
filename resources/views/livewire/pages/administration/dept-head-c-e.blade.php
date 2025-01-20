@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ currentSection: 'about' }" class="container mx-auto mt-24 mb-20 w-full">
+    <div x-data="{ currentSection: 'about' }" class="container mx-auto mt-8 lg:mt-24 mb-20 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-6">
             <!-- Sidebar Menu -->
             <div class="w-full mx-auto mb-10 col-span-1 bg-[#f2f0fe] rounded-lg shadow-md p-5 border border-gray-200">
@@ -11,7 +11,7 @@
                     <a href="#" @click.prevent="currentSection = 'about'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded  transition duration-300">Department Head</a>
                     <a href="#" @click.prevent="currentSection = 'biography'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded  transition duration-300">Biography</a>
                     <a href="#" @click.prevent="currentSection = 'educational'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded  transition duration-300">Educational Background</a>
-                    <a href="#" @click.prevent="currentSection = 'cse'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded  transition duration-300">Department of CE</a>
+                    <a href="/departments/ce" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded  transition duration-300">Department of CE</a>
                 </nav>
             </div>
 

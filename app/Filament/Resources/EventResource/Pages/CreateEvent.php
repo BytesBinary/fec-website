@@ -51,7 +51,7 @@ class CreateEvent extends Page implements HasForms
                 'registration_url' => $event_details['registration_url'],
                 'event_date' => $event_details['event_date'],
                 'event_location' => $event_details['event_location'],
-                'feature_image' => $event_details['feature_image'],
+                'feature_image' => ! empty($event_details['feature_image'][0] ?? '') ? $event_details['feature_image'] : '',
             ];
             $event['event_description'] = $event['post_content'];
             $event['segments'] = get_post_meta($record, 'event_segments');
@@ -80,6 +80,8 @@ class CreateEvent extends Page implements HasForms
         create_or_update_post_meta($this->record, 'event_segments', $this->segments);
         create_or_update_post_meta($this->record, 'contact_details', $this->contact_details);
         send_notification('success', '5000', 'Residence updated successfully');
+
+        return redirect(EventResource::getUrl('index'));
     }
 
     public function createEvent()
@@ -122,6 +124,8 @@ class CreateEvent extends Page implements HasForms
         create_or_update_post_meta($event, 'contact_details', $this->contact_details);
 
         send_notification('success', '5000', 'Event created successfully');
+
+        return redirect(EventResource::getUrl('index'));
     }
 
     public function form(Form $form): Form

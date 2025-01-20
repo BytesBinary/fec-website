@@ -1,5 +1,5 @@
 <body class="bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-opacity-30 backdrop-blur-3xl">
-    <div class="mx-auto my-5 px-2 mt-24 mb-20 rounded lg:w-[90%]">
+    <div class="mx-auto my-5 px-2 lg:mt-20 rounded lg:w-[90%]">
         <h1 class="text-5xl font-bold text-center pt-10">Clubs</h1>
         <hr class="w-48 h-1 mx-auto bg-blue-600 mb-16 border-0 rounded md:mb-10 mt-3">
 

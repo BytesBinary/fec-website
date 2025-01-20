@@ -1,4 +1,4 @@
-<div class="mx-auto mt-10 lg:mt-20 lg:w-3/4">
+<div class="mx-auto lg:mt-24 lg:w-3/4">
     <!-- Welcome Section -->
     <div class="mx-4 my-6">
         <div class="flex overflow-hidden relative flex-col items-center p-4 bg-gradient-to-br from-orange-600 via-orange-400 to-orange-300 rounded-xl shadow-lg md:flex-row md:p-12">
@@ -10,7 +10,7 @@
                     Discover top-tier living with our thoughtfully designed halls <br> of residence. Your comfort, our priority.
                 </p>
             </div>
-            <div class="relative mt-6 md:mt-0 md:absolute md:-right-16 w-[80%] md:w-[50%] h-[200px] md:h-[120%] bg-orange-600 rounded-full overflow-hidden shadow-md flex items-center justify-center">
+            <div class="hidden relative mt-6 md:mt-0 md:absolute md:-right-16 w-[80%] md:w-[50%] h-[200px] md:h-[120%] bg-orange-600 rounded-full overflow-hidden shadow-md md:flex items-center justify-center">
                 <img src="{{ asset('images/pngwing.com.png') }}" alt="Welcome"
                      class="w-[19rem] h-[19rem] object-cover opacity-90">
             </div>

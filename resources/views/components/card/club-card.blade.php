@@ -6,7 +6,7 @@
     'url' => '',
     'group' => 'Add a location here',
 ])
-<div class="max-w-sm mx-auto bg-[#f2f0ef] rounded-lg shadow-md overflow-hidden hover:shadow-lg h-[28rem] flex flex-col transition-all duration-300">
+<div class="max-w-[350px] mx-auto bg-[#f2f0ef] rounded-lg shadow-md overflow-hidden hover:shadow-lg h-[28rem] flex flex-col transition-all duration-300">
     <div class="relative flex-grow"> <!-- Allow this section to grow -->
         <img class="w-full h-40 object-cover" src="{{ asset($logo) }}" alt="Club Logo">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>

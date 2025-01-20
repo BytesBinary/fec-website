@@ -8,23 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
-if( ! function_exists('create_model_tabs') ) {
-    function create_model_tabs( Model $model, array $attributes = [], string $modelName = '', array $customCount = [] ) : array
+if (! function_exists('create_model_tabs')) {
+    function create_model_tabs(Model $model, array $attributes = [], string $modelName = '', array $customCount = []): array
     {
-        $default = array(
+        $default = [
             'all' => empty($modelName) ? get_readable_classname($model) : $modelName,
             'archived' => 'Trash',
-        );
+        ];
         $attributes = array_merge($default, $attributes);
         $tabs = [];
-        foreach( $attributes as $attribute => $value ) {
-            switch ( $attribute ) {
+        foreach ($attributes as $attribute => $value) {
+            switch ($attribute) {
                 case 'all':
-                    $tabs[$attribute] = Tab::make($value)->badge((!empty($customCount) ? $customCount['all'] : $model::count()));
+                    $tabs[$attribute] = Tab::make($value)->badge((! empty($customCount) ? $customCount['all'] : $model::count()));
                     break;
                 case 'archived':
                     $tabs[$attribute] = Tab::make($value)
-                        ->badge((!empty($customCount) ? $customCount['archived'] : $model::onlyTrashed()->count()))
+                        ->badge((! empty($customCount) ? $customCount['archived'] : $model::onlyTrashed()->count()))
                         ->modifyQueryUsing(fn ($query) => $query->onlyTrashed());
                     break;
                 default:
@@ -36,8 +36,8 @@ if( ! function_exists('create_model_tabs') ) {
     }
 }
 
-if( ! function_exists('create_table_actions') ) {
-    function create_table_actions( $extraActions = [], $removeActions = [] ) : array
+if (! function_exists('create_table_actions')) {
+    function create_table_actions($extraActions = [], $removeActions = []): array
     {
         $actions = [
             Filament\Tables\Actions\EditAction::make()
@@ -48,9 +48,9 @@ if( ! function_exists('create_table_actions') ) {
                 ->label('Permanently Delete'),
         ];
 
-        if( ! empty($removeActions) ) {
-            foreach( $removeActions as $action ) {
-                switch ( $action ) {
+        if (! empty($removeActions)) {
+            foreach ($removeActions as $action) {
+                switch ($action) {
                     case 'edit':
                         unset($actions[0]);
                         break;
@@ -69,26 +69,26 @@ if( ! function_exists('create_table_actions') ) {
             }
         }
 
-        if( $extraActions ) {
-            $actions = array_merge( $actions, $extraActions );
+        if ($extraActions) {
+            $actions = array_merge($actions, $extraActions);
         }
 
         return $actions;
     }
 }
 
-if( ! function_exists('create_table_bulk_actions') ) {
-    function create_table_bulk_actions( $extraBulkActions = [], $extraActions = [], $removeActions = [] ) : array
+if (! function_exists('create_table_bulk_actions')) {
+    function create_table_bulk_actions($extraBulkActions = [], $extraActions = [], $removeActions = []): array
     {
         $bulkActions = [
             Filament\Tables\Actions\DeleteBulkAction::make(),
             Filament\Tables\Actions\RestoreBulkAction::make(),
             Filament\Tables\Actions\ForceDeleteBulkAction::make()
-                ->label("Permanently Delete"),
+                ->label('Permanently Delete'),
         ];
-        if( ! empty($removeActions) ) {
-            foreach( $removeActions as $action ) {
-                switch ( $action ) {
+        if (! empty($removeActions)) {
+            foreach ($removeActions as $action) {
+                switch ($action) {
                     case 'delete':
                         unset($bulkActions[0]);
                         break;
@@ -103,37 +103,38 @@ if( ! function_exists('create_table_bulk_actions') ) {
                 }
             }
         }
-        if( $extraBulkActions ) {
-            $bulkActions = array_merge( $bulkActions, $extraBulkActions );
+        if ($extraBulkActions) {
+            $bulkActions = array_merge($bulkActions, $extraBulkActions);
         }
         $actions = [
             Filament\Tables\Actions\BulkActionGroup::make($bulkActions),
         ];
 
-        if( $extraActions ) {
-            $actions = array_merge( $actions, $extraActions );
+        if ($extraActions) {
+            $actions = array_merge($actions, $extraActions);
         }
 
         return $actions;
     }
 }
 
-if( ! function_exists('get_readable_classname') ) {
-    function get_readable_classname( $class ) : string
+if (! function_exists('get_readable_classname')) {
+    function get_readable_classname($class): string
     {
-        if( ! is_string($class) ) {
+        if (! is_string($class)) {
             $class = $class::class;
         }
+
         return Str::headline(Str::plural(class_basename($class)));
     }
 }
 
-if( ! function_exists('get_sub_page_layout_data') ) {
-    function get_sub_page_layout_data( $routeKey, $routeValue, $cardTitle = '', $mainContentCss = '', $sideNavCss ='' )
+if (! function_exists('get_sub_page_layout_data')) {
+    function get_sub_page_layout_data($routeKey, $routeValue, $cardTitle = '', $mainContentCss = '', $sideNavCss = '')
     {
         $cardRoute = '';
-        if( empty($cardTitle) ) {
-            switch($routeValue) {
+        if (empty($cardTitle)) {
+            switch ($routeValue) {
                 case 'cse':
                     $cardTitle = 'Computer Science And Engineering';
                     $cardRoute = 'cse';
@@ -163,45 +164,47 @@ if( ! function_exists('get_sub_page_layout_data') ) {
     }
 }
 
-if( ! function_exists('get_card_class_of_student_staticstics') ) {
-    function get_card_class_of_student_staticstics ( $index ): string
+if (! function_exists('get_card_class_of_student_staticstics')) {
+    function get_card_class_of_student_staticstics($index): string
     {
         $class = ($index % 2 === 0) ? 'bg-lime-100' : 'bg-white';
         $default = 'shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300';
+
         return "$class $default";
     }
 }
 
-if( ! function_exists( 'create_unique_post_slug' ) ) {
-    function create_unique_post_slug( string $slug ): string
+if (! function_exists('create_unique_post_slug')) {
+    function create_unique_post_slug(string $post_title): string
     {
-        $slug = Str::slug($slug);
-        $count = Post::where('post_slug', $slug)->count();
-        if( $count > 0 ) {
-            $slug = $slug . '-' . $count;
+        $slug = Str::slug($post_title);
+        $count = Post::where('post_title', $post_title)->count();
+        if ($count > 0) {
+            $slug = $slug.'-'.$count + 1;
         }
+
         return $slug;
     }
 }
 
-if( ! function_exists('create_or_update_post_meta') ) {
-    function create_or_update_post_meta( $post_id, $meta_key, $meta_value )
+if (! function_exists('create_or_update_post_meta')) {
+    function create_or_update_post_meta($post_id, $meta_key, $meta_value)
     {
-        if( is_array($post_id) ) {
+        if (is_array($post_id)) {
             $post_id = $post_id['id'];
         }
-        if( is_object($post_id) ) {
+        if (is_object($post_id)) {
             $post_id = $post_id->id;
         }
         $meta = PostMeta::where('post_id', $post_id)
             ->where('meta_key', $meta_key)
             ->first();
 
-        if( is_array($meta_value) ) {
+        if (is_array($meta_value)) {
             $meta_value = json_encode($meta_value, true);
         }
 
-        if( $meta ) {
+        if ($meta) {
             return $meta->update(['meta_value' => $meta_value]);
         } else {
             return PostMeta::create([
@@ -213,24 +216,27 @@ if( ! function_exists('create_or_update_post_meta') ) {
     }
 }
 
-if( ! function_exists( 'get_post_meta' ) ) {
-    function get_post_meta( $post_id, $meta_key ) {
+if (! function_exists('get_post_meta')) {
+    function get_post_meta($post_id, $meta_key)
+    {
         $meta = PostMeta::where('post_id', $post_id)
             ->where('meta_key', $meta_key)
             ->first();
-        if( $meta ) {
+        if ($meta) {
             $decoded = json_decode($meta->meta_value, true);
-            if( json_last_error() === JSON_ERROR_NONE ) {
+            if (json_last_error() === JSON_ERROR_NONE) {
                 return $decoded;
             }
+
             return $meta->meta_value;
         }
+
         return null;
     }
 }
 
-if( ! function_exists('send_notification') ) {
-    function send_notification( $type, $duration, $title ): void
+if (! function_exists('send_notification')) {
+    function send_notification($type, $duration, $title): void
     {
         Notification::make()
             ->$type()
@@ -240,15 +246,15 @@ if( ! function_exists('send_notification') ) {
     }
 }
 
-if( ! function_exists('can_access_resource') ) {
-    function can_access_resource( $designation ) : bool
+if (! function_exists('can_access_resource')) {
+    function can_access_resource($designation): bool
     {
-        if( ! is_array($designation) ) {
-            return (Auth::user()->designation === $designation);
+        if (! is_array($designation)) {
+            return Auth::user()->designation === $designation;
         }
 
-        foreach($designation as $des) {
-            if( Auth::user()->designation === $des ) {
+        foreach ($designation as $des) {
+            if (Auth::user()->designation === $des) {
                 return true;
             }
         }

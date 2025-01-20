@@ -4,7 +4,7 @@
             <p class="text-center mt-10 mb-8 text-3xl md:text-5xl font-bold text-gray-950">Upcoming Events</p>
             <hr class="w-48 h-1 mx-auto bg-blue-400 rounded">
             <div class="mt-10">
-                <div class="mb-10 flex overflow-x-auto custom-scrollbar">
+                <div class="flex flex-wrap justify-center gap-6">
                     @foreach ($events as $event)
                         <x-card.events-card title="{{ $event['post_title'] }}"
                             pic="{{ $event['event_details']['feature_image'] }}"
@@ -34,13 +34,13 @@
             <hr class="w-48 h-1 mx-auto bg-blue-400 border-0 rounded mb-10">
 
             <div class="mt-10">
-                <div class="mb-10 flex overflow-x-auto custom-scrollbar">
+                <div class="flex flex-wrap justify-center gap-6">
                     @foreach ($researches as $research)
-                    <div>
-                        <x-card.research-card image="{{ $research['image'] }}" title="{{ $research['title'] }}"
-                            description="{{ $research['description'] }}" date="{{ $research['date'] }}"
-                            url="{{ $research['url'] }}" />
-                    </div>
+                        <div>
+                            <x-card.research-card image="{{ $research['image'] }}" title="{{ $research['title'] }}"
+                                description="{{ $research['description'] }}" date="{{ $research['date'] }}"
+                                url="{{ $research['url'] }}" />
+                        </div>
                     @endforeach
                 </div>
             </div>
