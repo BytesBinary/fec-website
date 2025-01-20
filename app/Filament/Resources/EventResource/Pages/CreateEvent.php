@@ -51,7 +51,7 @@ class CreateEvent extends Page implements HasForms
                 'registration_url' => $event_details['registration_url'],
                 'event_date' => $event_details['event_date'],
                 'event_location' => $event_details['event_location'],
-                'feature_image' => $event_details['feature_image'],
+                'feature_image' => ! empty($event_details['feature_image'][0] ?? '') ? $event_details['feature_image'] : '',
             ];
             $event['event_description'] = $event['post_content'];
             $event['segments'] = get_post_meta($record, 'event_segments');
