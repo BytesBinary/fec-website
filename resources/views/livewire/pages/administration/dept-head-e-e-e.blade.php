@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ currentSection: 'about' }" class="container mx-auto mt-24 mb-20 w-full">
+    <div x-data="{ currentSection: 'about' }" class="container mx-auto mt-8 lg:mt-24 mb-20 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-6">
             <!-- Sidebar Menu -->
             <div class="w-full mx-auto mb-10 col-span-1 bg-[#f2f0fe] rounded-lg shadow-md p-5 border border-gray-200">
@@ -11,12 +11,12 @@
                     <a href="#" @click.prevent="currentSection = 'about'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Department Head</a>
                     <a href="#" @click.prevent="currentSection = 'biography'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Biography</a>
                     <a href="#" @click.prevent="currentSection = 'educational'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Educational Background</a>
-                    <a href="#" @click.prevent="currentSection = 'cse'" class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Department of EEE</a>
+                    <a href="/departments/eee" wire:navigate class="block px-4 py-2 text-deepBlue hover:bg-deepBlue hover:text-white hover:rounded transition duration-300">Department of EEE</a>
                 </nav>
             </div>
 
             <!-- Main Content -->
-            <div x-show="currentSection === 'about'" class="w-full mb-10 lg:col-span-3 col-span-3 bg-white rounded-z shadow-md border border-gray-200">
+            <div x-show="currentSection === 'about'" class="w-full mb-10 lg:col-span-3 col-span-3 bg-white rounded-3xl shadow-md border border-gray-200">
                 <div class="rounded-3xl shadow-2xl p-6 lg:border-l-4 lg:border-r-4 lg:border-t-0 border-emerald-600">
                     <div class="flex w-3/4 mx-auto gap-6 justify-center items-center">
                         <img class="h-auto w-1/5 object-cover object-top rounded-lg shadow-md" src="{{ asset('images/administration/eee-head.jpg') }}" alt="Principal Image">

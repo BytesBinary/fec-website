@@ -37,6 +37,7 @@ class EventResource extends Resource
                 TextColumn::make('updated_at')
                     ->label('Updated At'),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

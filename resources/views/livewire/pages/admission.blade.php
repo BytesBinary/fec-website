@@ -6,11 +6,11 @@
             </h2>
             <div class="text-lg">
                 <p class="mb-4">
-                    <span class="font-semibold">Admission Started:</span>
+                    <span class="font-semibold text-deepBlue">Admission Started:</span>
                     <span class="text-red-700 font-bold ml-2">01 October 2024</span>
                 </p>
                 <p>
-                    <span class="font-semibold">Admission Ended:</span>
+                    <span class="font-semibold text-deepBlue">Admission Ended:</span>
                     <span class="text-red-700 font-bold ml-2">01 November 2024</span>
                 </p>
             </div>

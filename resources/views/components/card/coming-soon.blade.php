@@ -8,7 +8,7 @@
       <a href="{{route('home')}}" wire:navigate class="inline-block px-8 py-3 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 rounded-full shadow-lg transition-transform transform hover:scale-105">Return to Home</a>
       <footer class="mt-10 text-sm text-gray-500">
         © 2025 BytesBinary. All rights reserved.
-        <a href="#" wire:navigate class="text-purple-500 hover:underline">Contact Us</a>
+        <a href="https://bytesbinary.top/" wire:navigate class="text-purple-500 hover:underline">Contact Us</a>
       </footer>
     </div>
   </div>

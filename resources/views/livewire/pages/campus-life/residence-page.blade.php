@@ -1,8 +1,8 @@
 <body class="m-0">
-    <div class="mx-auto lg:w-3/4 lg:mt-16">
+    <div class="mx-auto lg:w-3/4 lg:mt-24 mb-6 lg:mb-10">
         <!-- Section with Background Image -->
         <section
-            class="overflow-hidden relative py-10 mt-5 text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-lg shadow-2xl">
+            class="overflow-hidden relative py-10 mt-5 text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-md shadow-2xl">
             <!-- Abstract Design -->
             <div class="absolute inset-0">
                 <!-- Layered Abstract Shapes -->
@@ -14,20 +14,20 @@
             </div>
 
             <!-- Black Transparent Overlay -->
-            <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-40 rounded-md"></div>
 
             <!-- Content -->
-            <div class="container flex relative flex-col justify-between items-center px-6 mx-auto md:flex-row">
-                <div class="text-center md:text-left">
+            <div class="container flex relative flex-col justify-between items-center px-4 mx-auto lg:flex-row">
+                <div class="text-center lg:text-left">
                     <h1 class="mb-4 text-5xl font-extrabold">{{$residence['post_title'] ?? ''}}</h1>
-                    <p class="text-lg italic">{{ $residence['residence_slogan'] ?? '' }}</p>
+                    <p class="text-lg mb-2 italic">{{ $residence['residence_slogan'] ?? '' }}</p>
                 </div>
                 <div class="flex mt-6 space-x-4 md:mt-0">
                     <a href="#housing"
-                        class="px-6 py-3 font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">Housing
+                        class="px-4 py-3 font-medium text-white bg-blue-600 rounded-md shadow-lg hover:bg-blue-700">Housing
                         & Dining</a>
                     <a href="#facilities"
-                        class="px-6 py-3 font-medium text-white bg-green-600 rounded-lg shadow-lg hover:bg-green-700">Facilities</a>
+                        class="px-6 py-3 font-medium text-white bg-green-600 rounded-md shadow-lg hover:bg-green-700">Facilities</a>
                 </div>
             </div>
         </section>
