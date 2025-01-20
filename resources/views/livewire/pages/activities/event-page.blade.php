@@ -17,7 +17,7 @@
                         <h3 class="text-start font-semibold">
                             @php
                                 if (!empty($event['contact_details'])) {
-                                    reset($event['contact_details'])['contact_name'];
+                                    echo reset($event['contact_details'])['contact_name'];
                                 }
                             @endphp </h3>
                         <p class="text-start text-gray-700">
