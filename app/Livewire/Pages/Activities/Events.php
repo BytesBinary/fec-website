@@ -5,17 +5,18 @@ namespace App\Livewire\Pages\Activities;
 use App\Models\Post;
 use Livewire\Attributes\Title;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Events extends Component
 {
-    #[Title('Upcoming Events')]
-    public array $events;
+    use WithPagination;
 
-    public function mount()
+    #[Title('Upcoming Events')]
+    public function render()
     {
-        $this->events = Post::where('post_type', 'event')
-            ->get()
-            ->map(function ($data) {
+        $events = Post::where('post_type', 'event')
+            ->paginate(4)
+            ->through(function ($data) {
                 $data->post_content = '';
 
                 $eventDetails = get_post_meta($data->id, 'event_details');
@@ -27,12 +28,10 @@ class Events extends Component
                 $data->event_details = $eventDetails;
 
                 return $data;
-            })
-            ->toArray();
-    }
+            });
 
-    public function render()
-    {
-        return view('livewire.pages.activities.events');
+        return view('livewire.pages.activities.events', [
+            'events' => $events, // Pass the paginated data directly to the view
+        ]);
     }
 }
