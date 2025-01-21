@@ -9,9 +9,11 @@ class Gallery extends Component
     public $department;
     public $dept;
     public array $img;
-    public function mount($department){
-        $this->department = $department;
-        switch($department){
+
+    public function render()
+    {
+        $this->department = request()->route('department');
+        switch($this->department){
             case 'cse':
                 $this->dept='Computer Science and Engineering';
                 $this->img=[
@@ -33,10 +35,7 @@ class Gallery extends Component
             default:
                 break;
         }
-    }
-    public function render()
-    {
-        return view('livewire.partials.department.gallery')
+        return view('livewire.partials.department.gallery', ['img' => $this->img])
             ->layout('components.layouts.sub-page', get_sub_page_layout_data('department', $this->department));
     }
 }

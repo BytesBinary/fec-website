@@ -31,7 +31,7 @@ class Events extends Component
             });
 
         return view('livewire.pages.activities.events', [
-            'events' => $events, // Pass the paginated data directly to the view
+            'events' => $events, 
         ]);
     }
 }

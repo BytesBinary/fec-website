@@ -8,7 +8,7 @@ class Linking extends Component
 {
     public $govtCards = [];
 
-    public function mount()
+    public function render()
     {
         $this->govtCards = [
             [
@@ -171,10 +171,6 @@ class Linking extends Component
             ],
 
         ];
-    }
-
-    public function render()
-    {
-        return view('livewire.partials.home.linking');
+        return view('livewire.partials.home.linking', ['govtCards' => $this->govtCards]);
     }
 }

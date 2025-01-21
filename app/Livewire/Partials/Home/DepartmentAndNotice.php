@@ -9,9 +9,17 @@ class DepartmentAndNotice extends Component
 {
     public $notices = [];
 
-    public function mount()
+    public function getDayAndMonth($date)
     {
+        $dateObject = new DateTime($date);
+        return [
+            'day' => $dateObject->format('d'),
+            'month' => $dateObject->format('F')
+        ];
+    }
 
+    public function render()
+    {
         $this->notices = [
             [
                 'title' => '২০২৩-২০২৪ (জুলাই-ডিসেম্বর) শিক্ষাবর্ষে ইনস্টিটিউট অফ ইংলিশ এন্ড আধার ল্যাংগুয়েজ এ ভর্তি বিজ্ঞপ্তি',
@@ -39,19 +47,7 @@ class DepartmentAndNotice extends Component
                 'date' => $this->getDayAndMonth('20 November 2023'),
             ],
         ];
-    }
 
-    public function getDayAndMonth($date)
-    {
-        $dateObject = new DateTime($date);
-        return [
-            'day' => $dateObject->format('d'),
-            'month' => $dateObject->format('F')
-        ];
-    }
-
-    public function render()
-    {
-        return view('livewire.partials.home.department-and-notice');
+        return view('livewire.partials.home.department-and-notice',['notices' => $this->notices]);
     }
 }

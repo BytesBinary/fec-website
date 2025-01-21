@@ -8,7 +8,8 @@ class Clubs extends Component
 {
     public $clubs = [];
 
-    public function mount(){
+    public function render()
+    {
         $this->clubs = [
             [
                 'logo' => asset('images/club/ric.jpg'),
@@ -82,9 +83,6 @@ class Clubs extends Component
             ],
         ];
 
-    }
-    public function render()
-    {
-        return view('livewire.partials.home.clubs');
+        return view('livewire.partials.home.clubs',['clubs' => $this -> clubs]);
     }
 }

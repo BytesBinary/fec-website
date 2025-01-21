@@ -11,7 +11,7 @@ class Administration extends Component
     public $principal = [];
     public $departmentHead = [];
 
-    public function mount()
+    public function render()
     {
         $this->principal = [
             'image' => asset('images/administration/principal.png'),
@@ -40,10 +40,6 @@ class Administration extends Component
                 'title' => 'Head of the Dept. CE'
             ],
         ];
-    }
-
-    public function render()
-    {
-        return view('livewire.partials.home.administration');
+        return view('livewire.partials.home.administration' , ['principal' => $this->principal], ['departmentHead' => $this->departmentHead]);
     }
 }
