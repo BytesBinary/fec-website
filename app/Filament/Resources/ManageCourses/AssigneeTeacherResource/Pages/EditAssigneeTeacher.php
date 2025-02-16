@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ManageCourses\AssigneeTeacherResource\Pages;
 
 use App\Filament\Resources\ManageCourses\AssigneeTeacherResource;
 use App\Models\Course;
+use App\Models\Designation;
 use App\Models\User;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Grid;
@@ -73,7 +74,7 @@ class EditAssigneeTeacher extends Page implements HasForms
                         Select::make('assigned_teachers_ids')
                             ->multiple()
                             ->options(function () {
-                                $users = User::where('designation', 'teacher')
+                                $users = User::where('designation', Designation::where('designation', 'Teacher')->first()->id)
                                     ->get()
                                     ->pluck('name', 'id');
 

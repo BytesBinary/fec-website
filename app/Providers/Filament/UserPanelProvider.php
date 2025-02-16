@@ -73,6 +73,7 @@ class UserPanelProvider extends PanelProvider
                 Authenticate::class,
                 UserAuth::class,
             ])
+            ->viteTheme('resources/css/filament/user/theme.css')
             ->plugins([
                 // Add your plugins here
             ]);

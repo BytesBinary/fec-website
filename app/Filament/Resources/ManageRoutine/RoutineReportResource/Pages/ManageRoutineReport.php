@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ManageRoutine\RoutineReportResource\Pages;
 
 use App\Filament\Resources\ManageRoutine\RoutineReportResource;
 use App\Models\Department;
+use App\Models\Designation;
 use App\Models\Routine;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -140,7 +141,7 @@ class ManageRoutineReport extends Page implements HasForms
                     ->label('Teacher')
                     ->searchable()
                     ->options(
-                        User::where('designation', 'Teacher')->pluck('name', 'id')->toArray()
+                        User::where('designation', Designation::where('designation', 'Teacher')->first()->id)->pluck('name', 'id')->toArray()
                     )
                     ->required()
                     ->statePath('teacher_id')

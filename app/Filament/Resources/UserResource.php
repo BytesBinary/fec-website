@@ -75,6 +75,9 @@ class UserResource extends Resource
                     ->sortable(),
                 TextColumn::make('designation')
                     ->label('Designation')
+                    ->formatStateUsing(function ($state) {
+                        return Designation::find($state)->designation;
+                    })
                     ->badge()
                     ->searchable()
                     ->sortable(),

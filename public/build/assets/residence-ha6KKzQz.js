@@ -1,0 +1,1 @@
+import{S as e}from"./swiper-bundle-4gTAd2Fj.js";document.addEventListener("livewire:navigated",function(){new e(".swiper-container-residence",{loop:!0,centeredSlides:!0,grabCursor:!0,autoplay:{delay:2e3,disableOnInteraction:!1},pagination:{el:".swiper-pagination",clickable:!0,dynamicBullets:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})});

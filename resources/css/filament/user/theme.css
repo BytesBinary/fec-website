@@ -1,0 +1,4 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+@import "table/routine-table.css";
+@config 'tailwind.config.js';
+
