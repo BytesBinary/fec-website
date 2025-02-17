@@ -29,7 +29,7 @@
     <!-- Footer: Club Information -->
     <div class="bg-gray-200 px-5 py-4 flex justify-between items-center">
         <div class="text-lg text-gray-500">
-            <a href="{{ $group }}" class="text-blue-900 hover:underline hover:text-[white] hover:bg-purple-700 py-2 px-4 rounded transition-all duration-400">{{ $shortName }}</a>
+            <button class="text-blue-900 hover:underline hover:text-[white] hover:bg-purple-700 py-2 px-4 rounded transition-all duration-400">{{ $shortName }}</button>
         </div>
         <a href="{{ $url }}" wire:navigate>
             <button class="bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:to-purple-600 text-white py-2 px-4 rounded transition duration-400">Join Now</button>

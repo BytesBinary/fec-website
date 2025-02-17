@@ -10,6 +10,7 @@
                             pic="{{ $event['event_details']['feature_image'] }}"
                             date="{{ \Carbon\Carbon::parse($event['event_details']['event_date'])->isoFormat('dddd, MMM D, YYYY') }}"
                             location="{{ $event['event_details']['event_location'] }}" url="{{ $event['post_slug'] }}"
+                            timer-id="{{$loop->iteration}}" />
                             is-home-page="true" />
                     @endforeach
                 </div>

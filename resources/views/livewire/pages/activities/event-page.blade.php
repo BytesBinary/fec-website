@@ -59,7 +59,7 @@
         <!-- Main Content -->
         <div class="flex flex-col mx-auto lg:gap-1">
             <div class="bg-white p-4 w-full order-2 lg:order-1">
-                <img src="{{ asset('storage/' . $event['event_details']['feature_image']) }}" alt="Event Banner"
+                <img src="{{ asset('storage/' . (is_array($event['event_details']['feature_image']) ? current($event['event_details']['feature_image']) : $event['event_details']['feature_image'] ))  }}" alt="Event Banner"
                     class="w-full h-72 object-cover rounded-md mb-4">
                 <p class="text-center text-sm text-gray-600 italic mb-6">
                     {{ $event['event_details']['short_description'] }}</p>

@@ -5,6 +5,7 @@
     'url' => '',
     'location' => '',
     'interestCount' => 0,
+    'timerId' => '',
 ])
 <div
 class="bg-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col w-[350px] mx-auto overflow-hidden relative">
