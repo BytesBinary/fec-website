@@ -6,6 +6,7 @@ use App\Filament\Resources\ManageExam\ExamDutyResource;
 use App\Models\Batch;
 use App\Models\Course;
 use App\Models\Department;
+use App\Models\Designation;
 use App\Models\ExamDuty;
 use App\Models\ExamHall;
 use App\Models\ExamType;
@@ -198,13 +199,13 @@ class CreateExamDuty extends Page implements HasForms
                                         ->label('Supervisor')
                                         ->searchable()
                                         ->multiple()
-                                        ->options(User::where('designation', 'teacher')->pluck('name', 'id')->toArray())
+                                        ->options(User::where('designation', Designation::where('designation', 'Teacher')->first()->id)->pluck('name', 'id')->toArray())
                                         ->required(),
                                     Select::make('invigilator')
                                         ->label('Invigilator')
                                         ->searchable()
                                         ->multiple()
-                                        ->options(User::where('designation', 'teacher')->pluck('name', 'id')->toArray())
+                                        ->options(User::where('designation', Designation::where('designation', 'Teacher')->first()->id)->pluck('name', 'id')->toArray())
                                         ->required(),
                                 ]),
                         ])->statePath('duty_details'),
