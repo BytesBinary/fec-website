@@ -460,7 +460,7 @@ class CourseSeeder extends Seeder
             // Semester VII
             ['title' => 'Artificial Intelligence', 'code' => 'CSE-4101', 'department' => 'CSE', 'type' => 'Theory', 'credit' => '3.0', 'semester' => '7th'],
             ['title' => 'Mathematical and Statistical Analysis for Engineers', 'code' => 'CSE-4102', 'department' => 'CSE', 'type' => 'Theory', 'credit' => '3.0', 'semester' => '7th'],
-            ['title' => 'Entrepreneurship for IT Business', 'code' => 'SS-4103', 'department' => 'SS', 'type' => 'Theory', 'credit' => '2.0', 'semester' => '7th'],
+            ['title' => 'Entrepreneurship for IT Business', 'code' => 'SS-4103', 'department' => 'CSE', 'type' => 'Theory', 'credit' => '2.0', 'semester' => '7th'],
             ['title' => 'Artificial Intelligence Lab', 'code' => 'CSE-4111', 'department' => 'CSE', 'type' => 'Lab', 'credit' => '1.5', 'semester' => '7th'],
             ['title' => 'Internet Programming Lab', 'code' => 'CSE-4113', 'department' => 'CSE', 'type' => 'Lab', 'credit' => '1.5', 'semester' => '7th'],
             ['title' => 'Project', 'code' => 'CSE-4114', 'department' => 'CSE', 'type' => 'Lab', 'credit' => '2.0', 'semester' => '7th'],
@@ -500,9 +500,9 @@ class CourseSeeder extends Seeder
 
 
             // Semester VIII
-            ['title' => 'Economics', 'code' => 'ECO-4201', 'department' => 'ECO', 'type' => 'Theory', 'credit' => '2.0', 'semester' => '8th'],
+            ['title' => 'Economics', 'code' => 'ECO-4201', 'department' => 'CSE', 'type' => 'Theory', 'credit' => '2.0', 'semester' => '8th'],
             ['title' => 'Society and Technology', 'code' => 'CSE-4202', 'department' => 'CSE', 'type' => 'Theory', 'credit' => '2.0', 'semester' => '8th'],
-            ['title' => 'Engineering Ethics', 'code' => 'SS-4203', 'department' => 'SS', 'type' => 'Theory', 'credit' => '2.0', 'semester' => '8th'],
+            ['title' => 'Engineering Ethics', 'code' => 'SS-4203', 'department' => 'CSE', 'type' => 'Theory', 'credit' => '2.0', 'semester' => '8th'],
             ['title' => 'Project', 'code' => 'CSE-4214', 'department' => 'CSE', 'type' => 'Lab', 'credit' => '1.5', 'semester' => '8th'],
 
             // Option-II Courses
