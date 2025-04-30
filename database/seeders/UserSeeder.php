@@ -86,6 +86,66 @@ class UserSeeder extends Seeder
                 'email' => fake()->email,
                 'password' => bcrypt('password'),
             ],
+            [
+                'name' => 'Md. Ekhlas Uddin',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Muhammad Younus Ali',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Md. Fahad Hossain',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Puja Brahma',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Partha Mandal',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Apurbo Biswas',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Foyshal Ahmed',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Md. Afser Jani',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Md. Shihab Uddin',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
+            [
+                'name' => 'Md. Shohanur Ramhan',
+                'designation' => Designation::where('designation', 'Teacher')->first()->id,
+                'email' => fake()->email,
+                'password' => bcrypt('password'),
+            ],
         ];
 
         $programmers = [

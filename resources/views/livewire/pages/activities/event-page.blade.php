@@ -1,5 +1,8 @@
 <div class="mx-auto lg:pt-24 pb-20 w-full lg:w-[1050px] p-3 text-cng">
     <div class="bg-white m-0 leading-normal">
+    @php
+        dd($event)
+    @endphp
         <!-- Header Section -->
         <div class="bg-white pt-0 lg:pt-3 md:p-4 lg:pb-0 mt-3 flex flex-col justify-between md:space-y-0 w-full">
             <div class="flex-1 text-center md:text-left mb-5 pl-5 md:pl-0 lg:pl-0 pr-5 lg:pr-0">
