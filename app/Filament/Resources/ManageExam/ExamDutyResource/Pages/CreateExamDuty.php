@@ -22,6 +22,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Resources\Pages\Page;
+use Illuminate\Support\Facades\DB;
 
 class CreateExamDuty extends Page implements HasForms
 {
@@ -191,7 +192,8 @@ class CreateExamDuty extends Page implements HasForms
                                             return Course::query()
                                                 ->whereIn('department', $this->department)
                                                 ->whereIn('semester', $this->semester)
-                                                ->pluck('title', 'id')
+                                                ->select(DB::raw("id, CONCAT(code, ' : ', title ) as title_code"))
+                                                ->pluck('title_code', 'id')
                                                 ->toArray();
                                         })
                                         ->required(),
