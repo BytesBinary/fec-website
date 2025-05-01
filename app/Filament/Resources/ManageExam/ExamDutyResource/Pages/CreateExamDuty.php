@@ -165,6 +165,7 @@ class CreateExamDuty extends Page implements HasForms
                                 ->statePath('end_time'),
                         ]),
                     Repeater::make('duty_details')
+                        ->reactive()
                         ->schema([
                             Grid::make()
                                 ->columns(5)
@@ -201,14 +202,40 @@ class CreateExamDuty extends Page implements HasForms
                                         ->label('Supervisor')
                                         ->searchable()
                                         ->multiple()
-                                        ->options(User::where('designation', Designation::where('designation', 'Teacher')->first()->id)->pluck('name', 'id')->toArray())
+                                        ->reactive()
+                                        ->options(function () {
+                                            $teacherId = Designation::where('designation', 'Teacher')->first()->id;
+                                            $teachers = User::where('designation', $teacherId)->pluck('name', 'id')->toArray();
+                                            $counts = $this->getTeacherDutyCounts();
+                                    
+                                            foreach ($teachers as $id => $name) {
+                                                if (isset($counts[$id])) {
+                                                    $teachers[$id] = $name . ' (' . $counts[$id] . ')';
+                                                }
+                                            }
+                                    
+                                            return $teachers;
+                                        })
                                         ->required(),
                                     Select::make('invigilator')
                                         ->label('Invigilator')
                                         ->searchable()
                                         ->multiple()
-                                        ->options(User::where('designation', Designation::where('designation', 'Teacher')->first()->id)->pluck('name', 'id')->toArray())
-                                        ->required(),
+                                        ->reactive()
+                                        ->options(function () {
+                                            $teacherId = Designation::where('designation', 'Teacher')->first()->id;
+                                            $teachers = User::where('designation', $teacherId)->pluck('name', 'id')->toArray();
+                                            $counts = $this->getTeacherDutyCounts();
+                                    
+                                            foreach ($teachers as $id => $name) {
+                                                if (isset($counts[$id])) {
+                                                    $teachers[$id] = $name . ' (' . $counts[$id] . ')';
+                                                }
+                                            }
+                                    
+                                            return $teachers;
+                                        })
+                                        ->required(),                                    
                                 ]),
                         ])->statePath('duty_details'),
                 ]);
@@ -231,4 +258,25 @@ class CreateExamDuty extends Page implements HasForms
 
         return $actions[$action];
     }
+
+    public function getTeacherDutyCounts(): array
+    {
+        $counts = [];
+
+        foreach ($this->duty_details ?? [] as $detail) {
+            foreach (['invigilator', 'supervisor'] as $role) {
+                if (!empty($detail[$role]) && is_array($detail[$role])) {
+                    foreach ($detail[$role] as $userId) {
+                        if (! isset($counts[$userId])) {
+                            $counts[$userId] = 0;
+                        }
+                        $counts[$userId]++;
+                    }
+                }
+            }
+        }
+
+        return $counts;
+    }
+
 }
