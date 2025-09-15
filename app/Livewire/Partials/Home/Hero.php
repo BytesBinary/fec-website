@@ -8,7 +8,7 @@ class Hero extends Component
 {
     public $image = [];
 
-    public function mount()
+    public function render()
     {
         $this->image = [
             'src' => asset('images/hero-img1.jpg'),
@@ -16,10 +16,7 @@ class Hero extends Component
             'description' => 'A Place to learn and Grow.',
             'style' => 'absolute',
         ];
-    }
 
-    public function render()
-    {
-        return view('livewire.partials.home.hero');
+        return view('livewire.partials.home.hero', ['image' => $this->image]);
     }
 }

@@ -8,10 +8,10 @@ use Livewire\Attributes\Title;
 class Researches extends Component
 {
     #[Title('FEC | Reasearches')]
-    public $researches=[];
-    public function mount()
+
+    public function render()
     {
-        $this->researches =[
+        $researches =[
             [
                 'image'=>'',
                 'title'=>'Sustainable Energy Solutions',
@@ -34,9 +34,6 @@ class Researches extends Component
                 'url'=>'demo',
             ],
         ];
-    }
-    public function render()
-    {
-        return view('livewire.pages.activities.researches');
+        return view('livewire.pages.activities.researches', compact('researches'));
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Livewire\Pages\Activities;
 
 use App\Models\Post;
@@ -10,9 +9,16 @@ class EventPage extends Component
 {
     public array $event;
 
-    public function mount($slug)
+    public function redirectTo($url)
     {
-        $this->event = Post::where('post_slug', $slug)
+        return redirect()->to($url);
+    }
+
+    public function render()
+    {
+        $slug = request()->route('slug');
+
+        $eventData = Post::where('post_slug', $slug)
             ->where('post_type', 'event')
             ->get()
             ->map(function ($data) {
@@ -25,21 +31,13 @@ class EventPage extends Component
                 return $data;
             })
             ->toArray();
-        if (! empty($this->event)) {
-            $this->event = current($this->event);
-        } else {
-            return redirect()->route('events');
-        }
-    }
 
-    public function redirectTo($url)
-    {
-        return redirect()->to($url);
-    }
-
-    public function render()
-    {
-        return view('livewire.pages.activities.event-page')
+            if (! empty($eventData)) {
+                $this->event = current($eventData);
+            } else {
+                return redirect()->route('events');
+            }
+        return view('livewire.pages.activities.event-page', ['event' => $this->event])
             ->layout('components.layouts.app', ['title' => $this->event['post_title']]);
     }
 }

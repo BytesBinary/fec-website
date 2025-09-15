@@ -7,12 +7,10 @@ use Livewire\Component;
 class IncourseRoutine extends Component
 {
     public $department;
-    public function mount($department)
-    {
-        $this->department = $department;
-    }
+
     public function render()
     {
+        $this->department = request()->route('department');
         return view('livewire.partials.department.incourse-routine')
             ->layout('components.layouts.sub-page', get_sub_page_layout_data('department',$this->department));
     }
